@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright (C) 2016-Today GRAP (http://www.grap.coop)
 # @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
 # Traspassat a Odoo 11 per Batista10 - Marc Tormo
@@ -123,12 +122,9 @@ class ProductMarginClassification(models.Model):
     def _compute_template_different_price_qty(self):
         for classification in self:
             template_vals = classification.template_ids.read(['margin_state'])
-            classification.template_too_cheap_qty = len(list(filter(
-                lambda v: v['margin_state'] == 'too_cheap', template_vals)))
-            classification.template_too_expensive_qty = len(list(filter(
-                lambda v: v['margin_state'] == 'too_expensive', template_vals)))
-            classification.template_correct_price_qty = len(list(filter(
-                lambda v: v['margin_state'] == 'correct', template_vals)))
+            classification.template_too_cheap_qty = len(list([v for v in template_vals if v['margin_state'] == 'too_cheap']))
+            classification.template_too_expensive_qty = len(list([v for v in template_vals if v['margin_state'] == 'too_expensive']))
+            classification.template_correct_price_qty = len(list([v for v in template_vals if v['margin_state'] == 'correct']))
             classification.template_incorrect_price_qty =\
                 classification.template_too_expensive_qty +\
                 classification.template_too_cheap_qty

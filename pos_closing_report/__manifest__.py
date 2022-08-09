@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "Informe de tancament de caixa TPV",
     'summary': """Informe de tancament de caixa TPV""",   

@@ -1,4 +1,3 @@
-# coding: utf-8
 # Copyright (C) 2018 - Today: GRAP (http://www.grap.coop)
 # @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
@@ -27,11 +26,11 @@ class TestProductMarginClassification(common.TransactionCase):
         new_price = round(
             self.too_expensive_product.list_price, self.price_precision)
 
-        self.assertEquals(new_price, 199.95)
+        self.assertEqual(new_price, 199.95)
 
     def test_02_margin_apply_theoretical_price(self):
         """ Apply a margin for all the products of margin classification"""
         self.classification_big_margin.apply_theoretical_price()
 
-        self.assertEquals(
+        self.assertEqual(
             self.classification_big_margin.template_incorrect_price_qty, 0)
