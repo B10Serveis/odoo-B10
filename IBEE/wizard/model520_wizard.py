@@ -10,6 +10,6 @@ class model520_wizard(models.TransientModel):
 
     @api.multi
     def get_report(self):
-        data = {'date_start': self.date_start,'date_end': self.date_end}
+        data = self.env['report.model520_report'].report_values(date_start=self.date_start, date_end=self.date_end)
         return self.env.ref('IBEE.model520_report').report_action(self, data=data)
         

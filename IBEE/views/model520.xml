@@ -3,10 +3,10 @@
     <data>
         <report 
             id="model520_report"
-            model="report.meu_invento.model520_report"
+            model="report.model520_report"
             string="Model 520 IBEE"
             report_type="qweb-html"
-            name="IBEE.report_model520_report"
+            name="IBEE.model520_report_template"
             file="IBEE.model520_report"
             />
     </data>

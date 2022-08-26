@@ -31,4 +31,4 @@
 #
 ###############################################
 
-from . import product, sales
+from . import product, sales, model520

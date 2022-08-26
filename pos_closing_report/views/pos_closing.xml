@@ -5,7 +5,7 @@
             id="pos_closing_report"
             model="report.pos_closing_report.pos_closing_report"
             string="POS Closing Report"
-            report_type="qweb-pdf"
+            report_type="qweb-html"
             name="pos_closing_report.report_pos_closing_report"
             file="pos_closing_report.pos_closing_report"
             />
