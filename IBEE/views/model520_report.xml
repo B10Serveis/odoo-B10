@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    <template id="report_model520_report">
+      <t t-call="web.html_container">
+        <t t-call="web.internal_layout">
+          <div class="page">
+            <div class="text-center">
+              <h2>Model 520 - IBEE</h2>
+            </div>
+            <div><strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/><strong> Date end: </strong><span t-esc="date_end" t-options="{'widget': 'date'}"/></div>
+            <span t-esc="batista10" />
+            <table class="table table-condensed">
+              <thead>
+                <th>Name</th>
+                <th>Data</th>
+                <th>Partner</th>
+                <th>Amount</th>
+                <th class="text-right">Amount</th>
+              </thead>
+              <tbody>
+                <tr t-foreach="invoices" t-as="invoice">
+                  <td>
+                    <span t-esc="invoice['invoice_name']"/>
+                  </td>
+                  <td>
+                    <span t-esc="invoice['invoice_data']" t-options="{'widget': 'date'}"/>
+                  </td>
+                  <td>
+                    <span t-esc="invoice['invoice_partner']"/>
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="invoice['invoice_total']"/>
+                  </td>                  
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </t>
+      </t>
+    </template>
+  </data>
+</odoo>

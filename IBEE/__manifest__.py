@@ -15,5 +15,8 @@
             'views/product_IBEE.xml',
             'views/sale_IBEE.xml',
             'views/invoice_IBEE.xml',
+            'views/model520.xml',
+            'views/model520_report.xml',
+            'wizard/model520_wizard.xml',
     ],
 }

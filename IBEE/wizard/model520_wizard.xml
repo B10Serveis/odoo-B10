@@ -1,0 +1,33 @@
+<odoo>
+    <record model="ir.ui.view" id="model520_report_wizard">
+        <field name="name">Model 520 Wizard</field>
+        <field name="model">model520.wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Contact Sales Report">
+                <group>
+                    <group>
+                        <field name="date_start"/>
+                    </group>
+                    <group>
+                        <field name="date_end"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_model520_report_wizard"
+                name="Model 520 IBEE Report"
+                res_model="model520.wizard"
+                view_mode="form"
+                target="new"/>
+
+    <menuitem action="action_model520_report_wizard"
+              id="menu_model520_report_wizard"
+              parent="account_tax_balance.menu_tax_balances"/>
+</odoo>
