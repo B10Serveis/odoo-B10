@@ -26,22 +26,27 @@ class model520(models.AbstractModel):
 
         date_start = fields.Datetime.to_datetime(date_start)
         date_end = fields.Datetime.to_datetime(date_end)
-
+   
+       
+        invoices_linies = self.env['account.invoice.line'].search([
+            ('invoice_id.date_invoice', '>=', date_start),
+            ('invoice_id.date_invoice', '<=', date_end),
+            ])
         
-        invoices = self.env['account.invoice'].search([
-            ('date_invoice', '>=', date_start),
-            ('date_invoice', '<=', date_end),
-            ], order='name asc')
+        IBEE8 = 0
+        
+        for invoice in invoices_linies:
+            IBEE8 += invoice.IBEE_invoice
+            
         
         return {
             'date_start': date_start,
             'date_end': date_end,
-            'invoices': [{
-                'invoice_id' : invoice.id,
-                'invoice_name' : invoice.name,
-                'invoice_data' : invoice.date_invoice,
-                'invoice_partner' : invoice.partner_id.name,
-                'invoice_total' : invoice.amount_total,              
-                } for invoice in invoices],
+            'invoices_linies': [{
+                'ID' : linies.id,
+                'IBEE' : linies.IBEE_invoice,
+                'name' : linies.partner_id.name,                         
+                } for linies in invoices_linies],
+            'IBEE8' : IBEE8,
             }
         

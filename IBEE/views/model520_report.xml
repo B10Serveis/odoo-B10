@@ -7,31 +7,29 @@
             <div class="text-center">
               <h2>Model 520 - IBEE</h2>
             </div>
-            <div><strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/><strong> Date end: </strong><span t-esc="date_end" t-options="{'widget': 'date'}"/></div>
+            <div>
+            	<strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/>
+            	<strong> Date end: </strong><span t-esc="date_end" t-options="{'widget': 'date'}"/>
+            	<strong> IBEE Total: </strong><span t-esc="IBEE8"/>
+            </div>
             <span t-esc="batista10" />
             <table class="table table-condensed">
               <thead>
-                <th>Name</th>
-                <th>Data</th>
-                <th>Partner</th>
-                <th>Amount</th>
-                <th class="text-right">Amount</th>
+                <th>ID</th>
+                <th>IBEE</th>
+                <th>name</th>
               </thead>
               <tbody>
-                <tr t-foreach="invoices" t-as="invoice">
+                <tr t-foreach="invoices_linies" t-as="lines">
                   <td>
-                    <span t-esc="invoice['invoice_name']"/>
+                    <span t-esc="lines['ID']"/>
                   </td>
                   <td>
-                    <span t-esc="invoice['invoice_data']" t-options="{'widget': 'date'}"/>
+                    <span t-esc="lines['IBEE']"/>
                   </td>
                   <td>
-                    <span t-esc="invoice['invoice_partner']"/>
+                    <span t-esc="lines['name']"/>
                   </td>
-                  <td class="text-right">
-                    <span t-esc="invoice['invoice_total']"/>
-                  </td>                  
-                  
                 </tr>
               </tbody>
             </table>
