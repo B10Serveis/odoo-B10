@@ -26,7 +26,8 @@ class model520(models.AbstractModel):
 
         date_start = fields.Datetime.to_datetime(date_start)
         date_end = fields.Datetime.to_datetime(date_end)
-   
+        
+        company_id = self.env.user.company_id   
        
         invoices_linies = self.env['account.invoice.line'].search([
             ('invoice_id.date_invoice', '>=', date_start),
@@ -40,6 +41,13 @@ class model520(models.AbstractModel):
             
         
         return {
+            'NIF': company_id.vat,
+            'name': company_id.name,
+            'street': company_id.street,
+            'codpostal': company_id.zip,
+            'pais': company_id.country_id.name,
+            'provincia': company_id.state_id.name,
+            'municipi': company_id.city,
             'date_start': date_start,
             'date_end': date_end,
             'invoices_linies': [{

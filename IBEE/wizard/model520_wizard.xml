@@ -26,8 +26,11 @@
                 res_model="model520.wizard"
                 view_mode="form"
                 target="new"/>
+                
+    <menuitem id="IBEE_menu" parent="account.menu_finance_reports" />
 
     <menuitem action="action_model520_report_wizard"
               id="menu_model520_report_wizard"
-              parent="account_tax_balance.menu_tax_balances"/>
+              parent="IBEE_menu"
+              />
 </odoo>

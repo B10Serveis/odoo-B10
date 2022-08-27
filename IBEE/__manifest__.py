@@ -7,7 +7,7 @@
     'author': 'Marc Tormo - Batista10',
     'website': "https://github.com/B10Serveis/Odoo-addons/IBEE",
     'depends': ['account', 'product', 'sale'],
-    'version': '12.0.0.1.0',
+    'version': '12.0.0.0.2',
     'license': 'AGPL-3', 
     'application': True,
     'category': 'Account',
@@ -17,6 +17,6 @@
             'views/invoice_IBEE.xml',
             'views/model520.xml',
             'views/model520_report.xml',
-            'wizard/model520_wizard.xml',
+            'wizard/model520_wizard.xml'
     ],
 }

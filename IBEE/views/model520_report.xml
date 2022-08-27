@@ -7,32 +7,65 @@
             <div class="text-center">
               <h2>Model 520 - IBEE</h2>
             </div>
-            <div>
-            	<strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/>
-            	<strong> Date end: </strong><span t-esc="date_end" t-options="{'widget': 'date'}"/>
-            	<strong> IBEE Total: </strong><span t-esc="IBEE8"/>
+            <div class="row">
+            	<span>Dades del presentador</span>
             </div>
-            <span t-esc="batista10" />
+            <div class="row">
+            	<div class="col-4"><strong>NIF:</strong></div>
+            	<div class="col-8"><strong>Cognoms i Nom/Raó Social:</strong></div>
+            </div>
+            <div class="row">
+            	<div class="col-4"><span t-esc="NIF" /></div>
+            	<div class="col-8"><span t-esc="name" /></div>
+            </div>
+            <div class="row">
+            	<div class="col-12"><strong>Adreça:</strong></div>            	
+            </div>
+            <div class="row">
+            	<div class="col-12"><span t-esc="street" /></div>            	
+            </div>
+            <div class="row">
+            	<div class="col-2"><strong>Codi Postal:</strong></div>
+            	<div class="col-2"><strong>País:</strong></div>
+            	<div class="col-4"><strong>Provincia:</strong></div>
+            	<div class="col-4"><strong>Municipi:</strong></div>
+            </div>
+            <div class="row">
+            	<div class="col-2"><span t-esc="codpostal" /></div>
+            	<div class="col-2"><span t-esc="pais" /></div>
+            	<div class="col-4"><span t-esc="provincia" /></div>
+            	<div class="col-4"><span t-esc="municipi" /></div>
+            </div>
+            <hr/>
             <table class="table table-condensed">
               <thead>
-                <th>ID</th>
-                <th>IBEE</th>
-                <th>name</th>
+                <th></th>
+                <th>>8 gr de sucre</th>
+                <th>Entre 5 i 8 gr de sucre</th>
               </thead>
               <tbody>
-                <tr t-foreach="invoices_linies" t-as="lines">
-                  <td>
-                    <span t-esc="lines['ID']"/>
-                  </td>
-                  <td>
-                    <span t-esc="lines['IBEE']"/>
-                  </td>
-                  <td>
-                    <span t-esc="lines['name']"/>
-                  </td>
-                </tr>
+              	<tr>
+              		<td><strong>Base Imposable</strong></td>
+              		<td><strong>a</strong><span t-esc="IBEE8"/> litres</td>
+              		<td><strong>b</strong><span t-esc="IBEE8"/> litres</td>
+              	</tr>
+              	<tr>
+              		<td><strong>Tipus de gravamen</strong></td>
+              		<td><strong>a</strong><span t-esc="IBEE8"/> €/l</td>
+              		<td><strong>b</strong><span t-esc="IBEE8"/> €/l</td>
+              	</tr>
+              	<tr>
+              		<td><strong>Quota tributària</strong></td>
+              		<td><strong>a</strong><span t-esc="IBEE8"/> €</td>
+              		<td><strong>b</strong><span t-esc="IBEE8"/> €</td>
+              	</tr>
+              	<tr>
+              		<td><strong>Quota Total</strong></td>
+              		<td><span t-esc="IBEE8"/> €</td>
+              		<td></td>
+              	</tr>
               </tbody>
-            </table>
+            </table>            
           </div>
         </t>
       </t>
