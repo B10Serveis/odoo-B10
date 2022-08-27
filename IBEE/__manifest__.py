@@ -4,10 +4,10 @@
 {
     'name': 'IBEE',
     'summary': 'IBEE - Impost Begudes Ensucrades Envasades',
-    'author': 'Marc Tormo - Batista10',
-    'website': "https://github.com/B10Serveis/Odoo-addons/IBEE",
+    'author': 'Batista10',
+    'website': "https://github.com/B10Serveis/odoo-B10/tree/12.0/IBEE",
     'depends': ['account', 'product', 'sale'],
-    'version': '12.0.0.0.2',
+    'version': '12.0.0.1.0',
     'license': 'AGPL-3', 
     'application': True,
     'category': 'Account',

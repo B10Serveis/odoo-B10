@@ -40,28 +40,28 @@
             <table class="table table-condensed">
               <thead>
                 <th></th>
-                <th>>8 gr de sucre</th>
+                <th>> 8 gr de sucre</th>
                 <th>Entre 5 i 8 gr de sucre</th>
               </thead>
               <tbody>
               	<tr>
               		<td><strong>Base Imposable</strong></td>
               		<td><strong>a</strong><span t-esc="IBEE8"/> litres</td>
-              		<td><strong>b</strong><span t-esc="IBEE8"/> litres</td>
+              		<td><strong>b</strong><span t-esc="IBEE5"/> litres</td>
               	</tr>
               	<tr>
               		<td><strong>Tipus de gravamen</strong></td>
-              		<td><strong>a</strong><span t-esc="IBEE8"/> €/l</td>
-              		<td><strong>b</strong><span t-esc="IBEE8"/> €/l</td>
+              		<td><strong>a</strong> 0,15 €/l</td>
+              		<td><strong>b</strong> 0,10 €/l</td>
               	</tr>
               	<tr>
               		<td><strong>Quota tributària</strong></td>
-              		<td><strong>a</strong><span t-esc="IBEE8"/> €</td>
-              		<td><strong>b</strong><span t-esc="IBEE8"/> €</td>
+              		<td><strong>a</strong><span t-esc="quota_IBEE8"/> €</td>
+              		<td><strong>b</strong><span t-esc="quota_IBEE5"/> €</td>
               	</tr>
               	<tr>
               		<td><strong>Quota Total</strong></td>
-              		<td><span t-esc="IBEE8"/> €</td>
+              		<td><span t-esc="total"/> €</td>
               		<td></td>
               	</tr>
               </tbody>

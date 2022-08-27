@@ -35,10 +35,18 @@ class model520(models.AbstractModel):
             ])
         
         IBEE8 = 0
+        IBEE5 = 0
         
         for invoice in invoices_linies:
-            IBEE8 += invoice.IBEE_invoice
-            
+            if invoice.product_id.IBEE == '0.15':
+                IBEE8 += invoice.product_id.litres_IBEE * invoice.quantity
+            if invoice.product_id.IBEE == '0.1':
+                IBEE5 += invoice.product_id.litres_IBEE * invoice.quantity
+        
+        quota_IBEE8 = IBEE8 * 0.15    
+        quota_IBEE5 = IBEE5 * 0.1
+        
+        total = quota_IBEE5 + quota_IBEE8
         
         return {
             'NIF': company_id.vat,
@@ -48,13 +56,10 @@ class model520(models.AbstractModel):
             'pais': company_id.country_id.name,
             'provincia': company_id.state_id.name,
             'municipi': company_id.city,
-            'date_start': date_start,
-            'date_end': date_end,
-            'invoices_linies': [{
-                'ID' : linies.id,
-                'IBEE' : linies.IBEE_invoice,
-                'name' : linies.partner_id.name,                         
-                } for linies in invoices_linies],
-            'IBEE8' : IBEE8,
+            'IBEE8' : round(IBEE8,2),
+            'IBEE5' : round(IBEE5,2),
+            'quota_IBEE8' : round(quota_IBEE8,2),
+            'quota_IBEE5' : round(quota_IBEE5,2),
+            'total' : total,                                 
             }
         

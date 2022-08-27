@@ -27,10 +27,6 @@
                 view_mode="form"
                 target="new"/>
                 
-    <menuitem id="IBEE_menu" parent="account.menu_finance_reports" />
-
-    <menuitem action="action_model520_report_wizard"
-              id="menu_model520_report_wizard"
-              parent="IBEE_menu"
-              />
+    <menuitem id="IBEE_menu" parent="account.menu_finance_reports" name="IBEE"/>
+    <menuitem action="action_model520_report_wizard" id="menu_model520_report_wizard" parent="IBEE_menu" name="Model 520"/>
 </odoo>
