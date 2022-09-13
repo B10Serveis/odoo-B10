@@ -5,7 +5,7 @@
             id="model520_report"
             model="report.model520_report"
             string="Model 520 IBEE"
-            report_type="qweb-html"
+            report_type="qweb-pdf"
             name="IBEE.model520_report_template"
             file="IBEE.model520_report"
             />

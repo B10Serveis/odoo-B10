@@ -2,42 +2,79 @@
   <data>
     <template id="model520_report_template">
       <t t-call="web.html_container">
-        <t t-call="web.internal_layout">
-          <div class="page">
-            <div class="text-center">
-              <h2>Model 520 - IBEE</h2>
+        <t t-call="web.internal_layout">      
+          <header>
+            <div class="row">
+              <div class="col-5" style="border: 2px solid #d0a791;  padding-left: 0px;border-right:2px solid white;">            
+               <img src='/IBEE/static/description/cat.png'
+                        style="height: 145px;" />
+              </div>
+            <div class="col-5" style="background-color: #d0a791; padding: 2em;padding-bottom: 0px;padding-right: 0px;padding-left: 1em;padding-top: 2em; border-right: 1px white; "  >     
+            <center><strong><h4 style="margin-top: 22px;">Impost sobre begudes ensucrades envasades</h4></strong></center><br/>
+             <strong><h6 style="text-align: right;padding-right: 6px;margin-bottom: 0px;">CPR:9055050</h6></strong>
+            </div>
+            <div class="col-2" style="  border: 2px solid #d0a791; border-left: 10px solid white;background-color: #d0a791; border-bottom-width: 0px;border-top-width: 0px;padding-right: 0px;padding-left: 0px;">     
+              
+               <center><img src='/IBEE/static/description/cat1.png'
+                        style="height: 145px;" /></center>
+              </div>
+            </div>
+             
+          </header>
+         <article>
+          
+            <div class="row">
+              <div class="col-6" style="border-width:2px; border-style: dashed; padding:70px; padding-top:3px; margin-top: 3px;"></div>
+              <div class="col-6">Espai reservat per a l'Administració</div>
+            </div>
+
+            <div class="row" >
+              <div class="col-6" style= "background-color: #d0a791;">Subjecte passiu</div>
+              <div class="col-6"></div>
+              
             </div>
             <div class="row">
-            	<span>Dades del presentador</span>
+            <div class="col-6" style="border: 2px solid black; padding: 1em;border-right: white; border-top: white;border-bottom-width: 2px;padding-bottom: 0px;padding-right: 0px;padding-left: 0px;">
+                               
+                
+            	<div style="padding-left: 1em"><strong>NIF: </strong><span t-esc="NIF" /></div>
+            	<div style="padding-left: 1em"><strong>Cognoms i Nom/Raó Social: </strong><span t-esc="name" /></div>
+              <div style="padding-left: 1em"><strong>Adreça: </strong><span t-esc="street" /> </div>      	
+              <div style="padding-left: 1em"><strong>Codi Postal: </strong> <span t-esc="codpostal" />  </div>
+            	<div style="padding-left: 1em"><strong>País: </strong>  <span t-esc="pais" /> </div>
+            	<div style="padding-left: 1em"><strong>Provincia: </strong>  <span t-esc="provincia" />  </div>
+            	<div style="padding-left: 1em"><strong>Municipi: </strong>  <span t-esc="municipi" /></div>
+              <div class="col-12" style="border: 2px solid black; margin-left:auto; background-color:#d0a791; border-right: white;border-left: white;border-bottom: white;">
+
+              <div>Autoliquidació</div> 
+
+
+
             </div>
-            <div class="row">
-            	<div class="col-4"><strong>NIF:</strong></div>
-            	<div class="col-8"><strong>Cognoms i Nom/Raó Social:</strong></div>
             </div>
-            <div class="row">
-            	<div class="col-4"><span t-esc="NIF" /></div>
-            	<div class="col-8"><span t-esc="name" /></div>
+            
+            <div class="col-6" style="border: 2px solid black; ">
+                  <div class="row" style="background-color:#e7c7b6; padding: 1em;">
+                    
+
+                    <div class="col-6"><strong>Exercici: </strong></div>
+                    <div class="col-6"><strong>Periode: </strong></div>
+                 
+                </div>
+
+
+
+                    <div class="row">
+                    <div class="col-12" style="background-color:white; border: 1px solid black; border-top: white;">
+
+                    </div>
+                  </div>
+                  
             </div>
-            <div class="row">
-            	<div class="col-12"><strong>Adreça:</strong></div>            	
-            </div>
-            <div class="row">
-            	<div class="col-12"><span t-esc="street" /></div>            	
-            </div>
-            <div class="row">
-            	<div class="col-2"><strong>Codi Postal:</strong></div>
-            	<div class="col-2"><strong>País:</strong></div>
-            	<div class="col-4"><strong>Provincia:</strong></div>
-            	<div class="col-4"><strong>Municipi:</strong></div>
-            </div>
-            <div class="row">
-            	<div class="col-2"><span t-esc="codpostal" /></div>
-            	<div class="col-2"><span t-esc="pais" /></div>
-            	<div class="col-4"><span t-esc="provincia" /></div>
-            	<div class="col-4"><span t-esc="municipi" /></div>
-            </div>
-            <hr/>
-            <table class="table table-condensed">
+          </div>
+          <div class="row">
+          <div class="col-12" style="border: 1px solid black; background-color:#e7c7b6; margin:auto; border-top: white;">
+            <table class="table table-condensed" >
               <thead>
                 <th></th>
                 <th>> 8 gr de sucre</th>
@@ -45,19 +82,19 @@
               </thead>
               <tbody>
               	<tr>
-              		<td><strong>Base Imposable</strong></td>
-              		<td><strong>a</strong><span t-esc="IBEE8"/> litres</td>
-              		<td><strong>b</strong><span t-esc="IBEE5"/> litres</td>
+              		<td><strong>Base Imposable_ _ _ _ _ _ _ _ _ _ _1</strong></td>
+              		<td><strong>a  </strong><span t-esc="IBEE8"/> litres</td>
+              		<td><strong>b  </strong><span t-esc="IBEE5"/> litres</td>
               	</tr>
               	<tr>
-              		<td><strong>Tipus de gravamen</strong></td>
-              		<td><strong>a</strong> 0,15 €/l</td>
-              		<td><strong>b</strong> 0,10 €/l</td>
+              		<td><strong>Tipus de gravamen_ _ _ _ _  _ _ _ _2</strong></td>
+              		<td><strong>a  </strong> 0,15 €/l</td>
+              		<td><strong>b  </strong> 0,10 €/l</td>
               	</tr>
               	<tr>
-              		<td><strong>Quota tributària</strong></td>
-              		<td><strong>a</strong><span t-esc="quota_IBEE8"/> €</td>
-              		<td><strong>b</strong><span t-esc="quota_IBEE5"/> €</td>
+              		<td><strong>Quota tributària_ _ _ _ _  _ _ _ _ _ _3</strong></td>
+              		<td><strong>a  </strong><span t-esc="quota_IBEE8"/> €</td>
+              		<td><strong>b  </strong><span t-esc="quota_IBEE5"/> €</td>
               	</tr>
               	<tr>
               		<td><strong>Quota Total</strong></td>
@@ -65,8 +102,10 @@
               		<td></td>
               	</tr>
               </tbody>
-            </table>            
+            </table>
+            </div>            
           </div>
+          </article>
         </t>
       </t>
     </template>
