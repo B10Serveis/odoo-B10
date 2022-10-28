@@ -1,0 +1,31 @@
+{
+    "name": "Estandard - Dissenys",
+    "summary": """Personalització Dissenys Bten""",
+    "author": "Batista10",
+    "website": "https://www.batista10.cat",
+    "category": "Personalization",
+    "version": "14.0.1.0.0",
+    "depends": [
+        "base",
+        "account_payment_partner",
+        "sale",
+        "sale_order_report_product_image",
+        "stock",
+        "state_original_name",
+        "sale_management",
+        "state_original_name"
+    ],
+    "license": "AGPL-3",
+    "application": True,
+    "data": [
+        "views/pressupost_Bten.xml",
+        "views/report_pressupost_Bten.xml",
+        "views/factura_Bten.xml",
+        "views/report_factura_Bten.xml",
+        "views/comanda_Bten.xml",
+        "views/report_comanda_Bten.xml",
+        "views/pressupost_st_Bten.xml",
+        "views/report_pressupost_st_Bten.xml",
+        "views/show_product_image.xml",
+    ],
+}
