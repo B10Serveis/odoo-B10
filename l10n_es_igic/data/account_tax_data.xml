@@ -22,7 +22,7 @@
             (0,0, {
                 'factor_percent': 100,
                 'repartition_type': 'tax',
-                'account_id': ref('account_igic_4777'),
+                'account_id': ref('l10n_es_igic.account_igic_4777'),
             }),
 
         ]"/>
@@ -35,7 +35,7 @@
             (0,0, {
                 'factor_percent': 100,
                 'repartition_type': 'tax',
-                'account_id': ref('account_igic_4777'),
+                'account_id': ref('l10n_es_igic.account_igic_4777'),
             }),
         ]"/>
     </record>
