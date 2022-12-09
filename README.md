@@ -5,3 +5,4 @@ Projectes:
 * Hide Cost: Amaga costos per usuaris
 * Pos Closing Report: Informe de tancament de caixes TPV
 * Adaptació per a IGIC de canaries
+* Dissenys genèrics B10
