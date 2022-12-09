@@ -1,0 +1,330 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Dissenys_generics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-09 07:21+0000\n"
+"PO-Revision-Date: 2022-12-09 08:30+0100\n"
+"Last-Translator: Marc Tormo i Bochaca <batista10.info@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ca_ES\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "<span>S/N: </span>"
+msgstr "<span>N/S: </span>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "<strong>Amount Due</strong>"
+msgstr "<strong>Import a pagar</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "<strong>Invoice</strong>"
+msgstr "<strong>Factura</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "<strong>ProForma Invoice</strong>"
+msgstr "<strong>Factura Proforma</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+msgid "<strong>Quotation</strong>"
+msgstr "<strong>Pressupost</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+msgid "<strong>Sale Order</strong>"
+msgstr "<strong>Commanda de venda</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Subtotal</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid ""
+"According to the GDPR, we inform you that we will process your personal "
+"data in order to carry out administrative, accounting and fiscal "
+"management. Data\n"
+"proportionately, the time required by a legal obligation will be retained "
+"and will not be transferred to third parties except legal provision "
+"required, or if necessary, prior consent of\n"
+"The interested party. It will be able to exercise the following rights on "
+"its personal data: right of access, rectification, erasure, oblate, "
+"limitation, opposition, portability and to withdraw the\n"
+"consent given, to the address indicated in this document. In addition, it "
+"will be able to contact the competent supervisory authority in the field "
+"of data protection by\n"
+"get additional information or file a complaint."
+msgstr ""
+"D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades "
+"personals amb la finalitat de realitzar la gestió administrativa, "
+"comptable i fiscal. Les dades\n"
+"proporcionades es conservaran el temps exigible per una obligació legal i "
+"no seran cedides a tercers excepte previsió legal exigible, o en el seu "
+"cas, previ consentiment de\n"
+"l’interessat. Podrà exercir els següents drets sobre les seves dades "
+"personals: dret d’accés, rectificació, supressió, oblit, limitació, "
+"oposició, portabilitat i a retirar el\n"
+"consentiment prestat, a l’adreça assenyalada en el present document. A "
+"més, podrà adreçar-se a l’autoritat de Control competent en matèria de "
+"Protecció de Dades per\n"
+"obtenir informació addicional o presentar una reclamació."
+
+#. module: Dissenys_generics
+#: model:ir.actions.report,name:Dissenys_generics.comanda_batista
+msgid "Comanda Estandard"
+msgstr "Comanda Estandard"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Description"
+msgstr "Descripció"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Disc.(%)"
+msgstr "Desc.(%)"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nom a mostrar"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Email:"
+msgstr "Correu:"
+
+#. module: Dissenys_generics
+#: model:ir.actions.report,name:Dissenys_generics.factura_batista
+msgid "Factura Estandard"
+msgstr "Factura Estandard"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "IBAN:"
+msgstr "IBAN:"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Invoice Date:"
+msgstr "Data Factura:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Invoice:"
+msgstr "Factura"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Última modificació el"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+msgid "Order Date:"
+msgstr "Data Comanda:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+msgid "Order:"
+msgstr "Comanda:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Paid on"
+msgstr "Pagat el"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Payment Method:"
+msgstr "Forma de pagament:"
+
+#. module: Dissenys_generics
+#: model:ir.actions.report,name:Dissenys_generics.pressupost_batista
+msgid "Pressupost Estandard"
+msgstr "Pressupost Estandard"
+
+#. module: Dissenys_generics
+#: model:ir.actions.report,name:Dissenys_generics.pressupost_st_batista
+msgid "Pressupost Estandard S/T"
+msgstr "Pressupost Estandard S/T"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Price"
+msgstr "Preu"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "ProForma Date:"
+msgstr "Data Proforma:"
+
+#. module: Dissenys_generics
+#: model:ir.actions.report,name:Dissenys_generics.proforma_batista
+msgid "ProForma Estandard"
+msgstr "ProForma Estandard"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "ProForma:"
+msgstr "Proforma:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Quantity"
+msgstr "Quantitat"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+msgid "Quotation Date:"
+msgstr "Data Pressupost:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+msgid "Quotation:"
+msgstr "Pressupost:"
+
+#. module: Dissenys_generics
+#: model:ir.model,name:Dissenys_generics.model_sale_order
+msgid "Sales Order"
+msgstr "Comanda de venda"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__show_product_image
+msgid "Show product image"
+msgstr "Mostrar imatge del producte"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+msgid ""
+"Sign and stamp this quotation to accept it. A valid quotation for 15 days "
+"from the date of the quotation."
+msgstr ""
+"Signeu i segelleu aquest pressupost per acceptar-lo. Aquest pressupost és "
+"vàlid durant 15 dies a partir de la data del pressupost."
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+msgid "Signature and Stamp for acceptance"
+msgstr "Signatura i segell per l'acceptació"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "TIN:"
+msgstr "NIF:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Tel:"
+msgstr "Tel:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Term:"
+msgstr "Termini:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Unit Price"
+msgstr "Preu Unitari"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "VAT:"
+msgstr "IVA:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "on"
+msgstr "de"
