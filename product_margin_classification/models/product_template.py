@@ -42,6 +42,6 @@ class ProductTemplate(models.Model):
     )
 
     # Custom Section
-    @api.multi
+    # @api.multi
     def use_theoretical_price(self):
         self.mapped("product_variant_ids").use_theoretical_price()

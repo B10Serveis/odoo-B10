@@ -110,7 +110,7 @@ class ProductMarginClassification(models.Model):
                     precision_digits=precision) == 0:
                 raise ValidationError(_("-100 is not a valid Markup."))
 
-    @api.multi
+    # @api.multi
     def _inverse_profit_margin(self):
         pass
 
@@ -180,21 +180,21 @@ class ProductMarginClassification(models.Model):
                 raise ValidationError(_("Price Rounding can not be null."))
 
     # Custom Section
-    @api.multi
+    # @api.multi
     def _apply_theoretical_price(self, state_list):
         products = self.mapped("product_ids").filtered(
             lambda x: x.margin_state in state_list
         )
         products.use_theoretical_price()
 
-    @api.multi
+    # @api.multi
     def apply_theoretical_price(self):
         self._apply_theoretical_price(["too_cheap", "too_expensive"])
 
-    @api.multi
+    # @api.multi
     def apply_theoretical_price_too_cheap(self):
         self._apply_theoretical_price(["too_cheap"])
 
-    @api.multi
+    # @api.multi
     def apply_theoretical_price_too_expensive(self):
         self._apply_theoretical_price(["too_expensive"])

@@ -97,7 +97,7 @@ class Productproduct(models.Model):
             product.theoretical_difference = difference
 
     # Custom Section
-    @api.multi
+    # @api.multi
     def use_theoretical_price(self):
         for product in self:
             product.lst_price = product.theoretical_price
