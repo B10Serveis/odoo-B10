@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_factura_inherit_print_group"
+            inherit_id="Dissenys_generics.report_factura_batista_document">
+
+            <!-- Modifica tota la taula -->
+            <xpath expr="//div[2]/table"
+                position="replace">
+
+                <table class="table table-condensed table-striped">
+                    <!-- Comprovació si hi ha algun descompte -->
+                    <t t-set="is_discount"
+                        t-value="0" />
+                    <t t-foreach="doc.invoice_line_ids"
+                        t-as="line">
+                        <t t-if="line.discount">
+                            <t t-set="is_discount"
+                                t-value="1" />
+                        </t>
+                    </t>
+
+                    <!-- Subtotal del print_group -->
+                    <t t-set="tot_print_group"
+                        t-value="0" />
+
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th class="text-right">Quantity</th>
+                            <th class="text-right">Unit Price</th>
+                            <th t-if="is_discount"
+                                class="text-right">Disc.(%)</th>
+                            <th class="text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="order_tbody">
+                        <tr t-foreach="doc.invoice_line_ids"
+                            t-as="line">
+                            <t t-if="not line.display_type">
+
+                                <t t-if="not line.product_id.print_group">
+                                    <!-- Si la linia NO és print_group -->
+                                    <td>
+                                        <span t-field="line.name"/>
+                                        <br/>
+                                        <data inherit_id="account.report_invoice_document">
+                                            <xpath expr="//div[@id='total']"
+                                                position="after">
+                                                <t t-set="lot_values"
+                                                    t-value="o._get_invoiced_lot_values()"/>
+                                                <t t-if="lot_values">
+                                                    <t t-set="i"
+                                                        t-value="0"/>
+                                                    <t t-foreach="lot_values"
+                                                        t-as="snln_line">
+                                                        <t t-if="line.product_id.display_name==snln_line['product_name']">
+                                                            <!-- Si és el 1r SN -->
+                                                            <t t-if="i==0">
+                                                                <span>S/N: </span>
+                                                                <t t-esc="snln_line['lot_name']"/>
+                                                            </t>
+                                                            <!-- Si no és el 1r SN -->
+                                                            <t t-if="i>0">
+                                                                <span>, </span>
+                                                                <t t-esc="snln_line['lot_name']"/>
+                                                            </t>
+                                                            <!-- Cada SN -->
+                                                            <t t-set="i"
+                                                                t-value="i+1"/>
+                                                        </t>
+                                                    </t>
+                                                </t>
+                                            </xpath>
+                                        </data>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="line.quantity" />
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="line.price_unit"
+                                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}' />
+                                    </td>
+                                    <td t-if="is_discount"
+                                        class="text-right">
+                                        <span t-field="line.discount" />
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="line.price_subtotal"
+                                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}' />
+                                    </td>
+                                </t>
+                                <t t-if="line.product_id.print_group">
+                                    <!-- Si la linia ÉS print_group -->
+                                    <t t-set="tot_print_group"
+                                        t-value="tot_print_group + line.price_subtotal" />
+                                </t>
+                            </t>
+
+                            <t t-if="line.display_type == 'line_section'">
+                                <td name="td_section_line"
+                                    colspan="99"
+                                    style=" background-color: rgba(0, 0, 0, 0.1);">
+                                    <span t-field="line.name"
+                                        style="font-weight: bold;" />
+                                </td>
+                                <t t-set="current_section"
+                                    t-value="l" />
+                                <t t-set="current_subtotal"
+                                    t-value="0" />
+                            </t>
+                            <t t-if="line.display_type == 'line_note'">
+                                <td name="td_note_line"
+                                    colspan="99"
+                                    style=" background-color: rgba(0, 0, 0, 0.02);">
+                                    <span t-field="line.name"
+                                        style="font-style: oblique;" />
+                                </td>
+                            </t>
+                        </tr>
+
+                        <!-- Secció amb els totals dels articles agrupats -->
+                        <tr t-if="tot_print_group > 0">
+                            <t t-if="doc.print_group_description">
+                                <td name="td_name"
+                                    class="text-left">
+                                    <span t-field="doc.print_group_description"/>
+                                </td>
+                            </t>
+                            <t t-if="not doc.print_group_description">
+                                <td name="td_name"
+                                    class="text-right">
+                                    <span>Materials varis</span>
+                                </td>
+                            </t>
+                            <td name="td_quantity"
+                                class="text-right">
+                                <span>1,00</span>
+                            </td>
+                            <td name="td_priceunit"
+                                class="text-right">
+                                <span t-esc="tot_print_group"
+                                    t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                            </td>
+                            <td class="text-right"
+                                groups="product.group_discount_per_so_line">
+                                <span></span>
+                            </td>
+                            <td name="td_subtotal"
+                                class="text-right o_price_total">
+                                <span t-esc="float(tot_print_group)"
+                                    t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

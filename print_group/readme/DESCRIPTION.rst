@@ -1,0 +1,1 @@
+Modifica els dissenys generics de B10 per agrupar productes en una sola linia
