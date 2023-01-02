@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="comanda_batista"
+			model="sale.order"
+			string="Comanda Estandard"
+			report_type="qweb-pdf"
+			name="Dissenys_generics.report_comanda_batista"
+			file="Dissenys_generics.report_comanda_batista"
+			attachment_use = "False" />
+	</data>
+</odoo>
