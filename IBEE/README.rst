@@ -36,6 +36,12 @@ Registre de Versions
 * [ADD] Calcular impost en commades i factures.   
 * [ADD] Informe de Model 520.   
 
+12.0.0.1.1 (03/01/2023)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Dependencia de Dissenys_generics.   
+* [ADD] Inerit de Dissenys_generics per mostrar-hi els valord d'IBEE si n'hi ha.    
+
 Roadmap   
 =======   
 

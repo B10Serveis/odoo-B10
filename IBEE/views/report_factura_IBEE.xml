@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_factura_inherit_ibee"
+            inherit_id="Dissenys_generics.report_factura_batista_document">
+
+            <!-- Comprova si hi ha IBEE i suma total -->
+            <xpath expr="//div[2]/table/thead"
+                position="before">
+                <t t-set="total_IBEE"
+                    t-value="0"/>
+                <t t-foreach="doc.invoice_line_ids"
+                    t-as="l">
+                    <t t-if="l.IBEE_invoice">
+                        <t t-set="total_IBEE"
+                            t-value="total_IBEE + l.IBEE_invoice"/>
+                    </t>
+                </t>
+            </xpath>
+
+            <!-- Si hi ha IBEE mostrar columna  -->
+            <xpath expr="//div[2]/table/thead/tr/th[4]"
+                position="after">
+                <th t-if="total_IBEE > 0"
+                    class="text-right">
+                    IBEE
+                </th>
+            </xpath>
+
+            <!-- Si hi ha IBEE mostrar valor en linia  -->
+            <xpath expr="//div[2]/table/tbody/tr/t/td[4]"
+                position="after">
+                <th t-if="total_IBEE > 0"
+                    class="text-right">
+                    <t t-if="l.IBEE_invoice">
+                        <span t-esc="l.IBEE_invoice"
+                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </t>
+                </th>
+            </xpath>
+
+            <!-- Si hi ha  IBEE mostrar a taula Totals  -->
+            <xpath expr="//div[2]/div[2]/div/div[2]/div/div/div/table/t"
+                position="after">
+                <tr t-if="total_IBEE > 0"
+                    class="text-left">
+                    <td name="td_IBEE_label">
+                        <strong>IBEE</strong>
+                    </td>
+                    <td name="td_IBEE_total"
+                        class="text-right">
+                        <span t-esc="total_IBEE"
+                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </td>
+                </tr>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

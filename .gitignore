@@ -1,7 +1,5 @@
-Dissenys_generics/__pycache__/__init__.cpython-39.pyc
-Dissenys_generics/models/__pycache__/__init__.cpython-39.pyc
-Dissenys_generics/models/__pycache__/models.cpython-39.pyc
-Dissenys_generics/models/__pycache__/__init__.cpython-37.pyc
-Dissenys_generics/models/__pycache__/models.cpython-37.pyc
-state_original_name/models/__pycache__/__init__.cpython-37.pyc
-state_original_name/models/__pycache__/state_original_name.cpython-37.pyc
+Dissenys_generics/__pycache__/*
+Dissenys_generics/models/__pycache__/*
+state_original_name/models/__pycache__/*
+IBEE/models/__pycache__/*
+IBEE/wizard/__pycache__/*
