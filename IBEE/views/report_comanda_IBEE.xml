@@ -40,7 +40,7 @@
             </xpath>
 
             <!-- Si hi ha  IBEE mostrar a taula Totals  -->
-            <xpath expr="//div[2]/div[2]/div/div[2]/div/div/div/table/t/tr[1]"
+            <xpath expr="//div[2]/div[2]/div/div[2]/div/div/div/table/t"
                 position="after">
                 <tr t-if="total_IBEE > 0"
                     class="text-left">
