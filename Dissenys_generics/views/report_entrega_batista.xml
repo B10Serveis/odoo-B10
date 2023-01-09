@@ -38,10 +38,12 @@
                             t-value="res_company"/>
                     </t>
                     <!-- Capçalera -->
-                    <div class="row">
+                    <div class="row"
+                        id="b10_header">
 
                         <!-- Logo esquerra -->
-                        <div class="col-6">
+                        <div class="col-6"
+                            id="b10_header_left">
                             <img t-att-src="image_data_uri(doc.company_id.logo)"
                                 style="max-width: 150px"/>
                         </div>
@@ -49,6 +51,7 @@
 
                         <!-- Dades Empresa dreta-->
                         <div class="col-6"
+                            id="b10_header_right"
                             style="padding:15px; padding-left:30px; margin-left:70px;">
                             <p style="margin-bottom: 0; color:gray; font-size:0.75em;">
                                 <strong>
@@ -93,11 +96,13 @@
                     style="margin-bottom:1em; padding-top:40px;">
 
                     <!-- Client i Document -->
-                    <div class="row">
-                        <!-- Columna dreta -->
-                        <div class="col-6">
+                    <div class="row"
+                        id="b10_docinfo">
+                        <!-- Columna esquerra -->
+                        <div class="col-6"
+                            id="b10_docinfo_left">
 
-                            <!-- Dades entrega dreta -->
+                            <!-- Dades entrega -->
                             <span t-if="doc.name">
                                 <h5 style="border-bottom: 1px solid #c1c1c1; ">
                                     <strong>STOCK PICKING</strong>
@@ -122,6 +127,7 @@
 
                         <!-- Columna dreta-->
                         <div class="col-5 offset-1"
+                            id="b10_docinfo_right"
                             style="margin-left:70px;">
                             <!-- Dades Client -->
                             <h5>
@@ -163,7 +169,8 @@
                 </div>
 
                 <!-- Linies Entrega -->
-                <table class="table table-condensed table-striped table-sm">
+                <table class="table table-condensed table-striped table-sm"
+                    id="b10_linetable">
                     <thead>
                         <tr>
                             <th class="text-right">CODE</th>
@@ -195,7 +202,8 @@
                 <hr></hr>
 
                 <!-- Totals -->
-                <div class="row">
+                <div class="row"
+                    id="b10_totaltable">
                     <p style="font-size:14px !important; margin-left:15px;">
                         <br></br>
                         <span t-if="doc.scheduled_date">Date delivered: <span t-field="doc.scheduled_date"
@@ -211,7 +219,8 @@
 
             <!-- Footer -->
             <div class="footer">
-                <div class="row">
+                <div class="row"
+                    id="b10_footer">
 
                     <div class="col-12">
                         <div class="last-page">
