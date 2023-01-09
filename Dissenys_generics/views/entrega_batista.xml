@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="entrega_batista"
+			model="stock.picking"
+			string="Entrega Estandard"
+			report_type="qweb-pdf"
+			name="Dissenys_generics.report_entrega_batista"
+			file="Dissenys_generics.report_entrega_batista"
+			
+			attachment_use = "False" />
+	</data>
+</odoo>

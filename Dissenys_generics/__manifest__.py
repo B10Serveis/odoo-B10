@@ -29,5 +29,7 @@
         "views/show_product_image.xml",
         "views/proforma_batista.xml",
         "views/report_proforma_batista.xml",
+        "views/entrega_batista.xml",
+        "views/report_entrega_batista.xml",
     ],
 }
