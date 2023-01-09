@@ -36,14 +36,17 @@
 							t-value="res_company" />
 					</t>
 					<!-- Capçalera -->
-					<div class="row">
+					<div class="row"
+						id="b10_header">
 						<!-- Logo esquerra -->
-						<div class="col-6">
+						<div class="col-6"
+							id="b10_header_left">
 							<img t-att-src="image_data_uri(doc.company_id.logo)"
 								style="max-width: 150px" />
 						</div>
 						<!-- Dades Empresa dreta -->
 						<div class="col-6"
+							id="b10_header_right"
 							style="padding:15px; padding-left:30px; margin-left:200px;">
 							<p style="margin-bottom: 0; color:gray; font-size:0.75em;">
 								<strong>
@@ -91,10 +94,12 @@
 				<div class="container"
 					style="margin-bottom:1em; padding-top:40px;">
 					<!-- Client i Document -->
-					<div class="row">
-						<!-- Columna dreta -->
-						<div class="col-6">
-							<!-- Dades Comanda dreta -->
+					<div class="row"
+						id="b10_docinfo">
+						<!-- Columna esquerra -->
+						<div class="col-6"
+							id="b10_docinfo_left">
+							<!-- Dades Comanda -->
 							<span t-if="doc.name">
 								<h5 style="border-bottom: 1px solid #c1c1c1; ">
 									<strong>Sale Order</strong>
@@ -128,6 +133,7 @@
 						</div>
 						<!-- Columna dreta -->
 						<div class="col-5 offset-1"
+							id="b10_docinfo_right"
 							style="margin-left:200px;">
 							<!-- Dades Client -->
 							<h5>
@@ -175,7 +181,8 @@
 					</div>
 				</div>
 				<!-- Linies Pressupost -->
-				<table class="table table-condensed table-striped">
+				<table class="table table-condensed table-striped"
+					id="b10_linetable">
 					<!-- Comprovació si hi ha algun descompte -->
 					<t t-set="is_discount"
 						t-value="0" />
@@ -255,6 +262,7 @@
 				<div class="page"
 					style="page-break-inside:avoid;">
 					<div class="row"
+						id="b10_totaltable"
 						style="margin-left: 0px ">
 						<div class="col-6">
 							<t t-if="doc.note">
@@ -317,7 +325,8 @@
 			</div>
 			<!-- Footer -->
 			<div class="footer">
-				<div class="row">
+				<div class="row"
+					id="b10_footer">
 					<div class="col-12">
 						<div class="last-page">
 							<div style="clear:left; display:block; color:gray; font-size:0.75em; text-align: center;">
