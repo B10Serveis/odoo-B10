@@ -101,13 +101,13 @@
                             id="b10_docinfo_left">
 
                             <!-- Dades Comanda -->
-                            <span t-if="doc.name">
+                            <span>
                                 <h5 style="border-bottom: 1px solid #c1c1c1; ">
                                     <strong>Invoice</strong>
                                 </h5>
                             </span>
                             <p style="margin-bottom: 0;">
-                                <span t-if="doc.name">Invoice: <span t-field="doc.name"/>
+                                <span t-if="doc.invoice_number">Invoice: <span t-field="doc.invoice_number"/>
                                 </span>
                             </p>
                             <p style="margin-bottom: 0;">
