@@ -2,10 +2,11 @@
 <odoo>
     <data>
         <template id="report_factura_inherit_ibee"
-            inherit_id="Dissenys_generics.report_factura_batista_document">
+            inherit_id="Dissenys_generics.report_factura_batista_document"
+            priority="100">
 
             <!-- Comprova si hi ha IBEE i suma total -->
-            <xpath expr="//div[2]/table/thead"
+            <xpath expr="//table[@id='b10_linetable']/thead"
                 position="before">
                 <t t-set="total_IBEE"
                     t-value="0"/>
