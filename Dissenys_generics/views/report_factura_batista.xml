@@ -103,15 +103,25 @@
                             <!-- Dades Comanda -->
                             <span>
                                 <h5 style="border-bottom: 1px solid #c1c1c1; ">
-                                    <strong>Invoice</strong>
+                                    <span t-if="o.amount_total_signed >= 0">
+                                        <strong>Invoice</strong>
+                                    </span>
+                                    <span t-if="not o.amount_total_signed >= 0">
+                                        <strong>Factura d'abonament</strong>
+                                    </span>
                                 </h5>
                             </span>
                             <p style="margin-bottom: 0;">
-                                <span t-if="doc.invoice_number">Invoice: <span t-field="doc.invoice_number"/>
+                                <span t-if="doc.invoice_number and o.amount_total_signed >= 0">Invoice: <span t-field="doc.invoice_number"/>
+                                </span>
+                                <span t-if="doc.invoice_number and not o.amount_total_signed >= 0">Factura d'abonament: <span t-field="doc.invoice_number"/>
                                 </span>
                             </p>
                             <p style="margin-bottom: 0;">
-                                <span t-if="doc.date_invoice">Invoice Date: <span t-field="doc.date_invoice"
+                                <span t-if="doc.date_invoice and o.amount_total_signed >= 0">Invoice Date: <span t-field="doc.date_invoice"
+                                    t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
+                                </span>
+                                <span t-if="doc.date_invoice and not o.amount_total_signed >= 0">Data Abonament: <span t-field="doc.date_invoice"
                                     t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
                                 </span>
                             </p>
@@ -240,7 +250,7 @@
                                     <span t-field="l.discount"/>
                                 </td>
                                 <td class="text-right">
-                                    <span t-field="l.price_subtotal"
+                                    <span t-field="l.price_subtotal_signed"
                                         t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;doc.currency_id&quot;}"/>
                                 </td>
                             </t>
@@ -296,7 +306,7 @@
                                                     <strong>Subtotal</strong>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="o.amount_untaxed"/>
+                                                    <span t-field="o.amount_untaxed_signed"/>
                                                 </td>
                                             </tr>
                                             <t t-foreach="o.amount_by_group"
@@ -307,6 +317,7 @@
                                                             <span t-esc="amount_by_group[0]"/>
                                                         </td>
                                                         <td class="text-right o_price_total">
+                                                            -                                                            
                                                             <span t-esc="amount_by_group[3]" />
                                                         </td>
                                                     </t>
@@ -318,6 +329,7 @@
                                                             </span>
                                                         </td>
                                                         <td class="text-right o_price_total">
+                                                            -                                                            
                                                             <span t-esc="amount_by_group[3]"/>
                                                         </td>
                                                     </t>
@@ -328,7 +340,7 @@
                                                     <strong>Total</strong>
                                                 </td>
                                                 <td class="text-right">
-                                                    <span t-field="o.amount_total"/>
+                                                    <span t-field="o.amount_total_signed"/>
                                                 </td>
                                             </tr>
                                         </table>
