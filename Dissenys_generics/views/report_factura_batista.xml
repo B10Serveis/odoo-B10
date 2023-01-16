@@ -92,7 +92,7 @@
             <!-- Page -->
             <div class="article">
                 <div class="container"
-                    style="margin-bottom:1em; padding-top:40px;">
+                    style="margin-bottom:0; padding-top:30px;">
                     <!-- Client i Document -->
                     <div class="row"
                         id="b10_docinfo">
