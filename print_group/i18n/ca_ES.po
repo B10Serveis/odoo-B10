@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* print_group
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-19 10:29+0000\n"
+"PO-Revision-Date: 2023-01-19 11:31+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ca_ES\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+msgid "<span>, </span>"
+msgstr ""
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "<span>1,00</span>"
+msgstr ""
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "<span>Materials varis</span>"
+msgstr ""
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+msgid "<span>S/N: </span>"
+msgstr ""
+
+#. module: print_group
+#: model:ir.model.fields,field_description:print_group.field_product_product__print_group
+#: model:ir.model.fields,field_description:print_group.field_product_template__print_group
+msgid "Agrupar productes"
+msgstr ""
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.view_form_print_group_invoice_inherited
+#: model_terms:ir.ui.view,arch_db:print_group.view_form_print_group_sales_inherited
+msgid "Descripció productes agrupats"
+msgstr ""
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "Description"
+msgstr "Descripció"
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "Disc.(%)"
+msgstr "Desc.(%)"
+
+#. module: print_group
+#: model:ir.model,name:print_group.model_account_move
+msgid "Journal Entry"
+msgstr "Assentament comptable"
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "Price"
+msgstr "Preu"
+
+#. module: print_group
+#: model:ir.model,name:print_group.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producte"
+
+#. module: print_group
+#: model:ir.model.fields,field_description:print_group.field_account_bank_statement_line__print_group_description
+#: model:ir.model.fields,field_description:print_group.field_account_move__print_group_description
+#: model:ir.model.fields,field_description:print_group.field_account_payment__print_group_description
+#: model:ir.model.fields,field_description:print_group.field_sale_order__print_group_description
+msgid "Project Task Description"
+msgstr "Descripció Grup"
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "Quantity"
+msgstr "Quantitat"
+
+#. module: print_group
+#: model:ir.model,name:print_group.model_sale_order
+msgid "Sales Order"
+msgstr "Comanda de venda"
+
+#. module: print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_comanda_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_factura_inherit_print_group
+#: model_terms:ir.ui.view,arch_db:print_group.report_pressupost_inherit_print_group
+msgid "Unit Price"
+msgstr "Preu unit."
