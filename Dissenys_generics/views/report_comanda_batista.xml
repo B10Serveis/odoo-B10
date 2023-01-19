@@ -47,7 +47,7 @@
 						<!-- Dades Empresa dreta -->
 						<div class="col-6"
 							id="b10_header_right"
-							style="padding:15px; padding-left:30px; margin-left:200px;">
+							style="padding:15px; padding-left:30px;">
 							<p style="margin-bottom: 0; color:gray; font-size:0.75em;">
 								<strong>
 									<span t-if="company.name"
@@ -132,9 +132,9 @@
 							</p>
 						</div>
 						<!-- Columna dreta -->
-						<div class="col-5 offset-1"
-							id="b10_docinfo_right"
-							style="margin-left:200px;">
+						<div class="col-6"
+							style="margin-left: 20px;"
+							id="b10_docinfo_right">
 							<!-- Dades Client -->
 							<h5>
 								<strong>
