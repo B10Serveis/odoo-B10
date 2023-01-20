@@ -42,7 +42,7 @@
 						<div class="col-6"
 							id="b10_header_left">
 							<img t-att-src="image_data_uri(doc.company_id.logo)"
-								style="max-width: 250px; max-heigth: 300px" />
+								style="max-width: 200px; max-height: 150px;"/>
 						</div>
 						<!-- Dades Empresa -->
 						<div class="col-6"
