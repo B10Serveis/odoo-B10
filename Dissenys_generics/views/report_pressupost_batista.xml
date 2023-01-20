@@ -24,7 +24,8 @@
             <t t-set="doc"
                 t-value="doc.with_context({'lang':doc.partner_id.lang})" />
             <!-- Header -->
-            <div class="header">
+            <div class="header"
+                style="overflow: hidden;">
                 <div class="first-page">
                     <!-- Multicompany -->
                     <t t-if="not o and doc">
@@ -41,19 +42,19 @@
                     </t>
                     <!-- Capçalera -->
                     <div class="row"
-                        id="b10_header">
+                        id="b10_header"
+                        style="overflow: hidden;">
                         <!-- Logo esquerra -->
                         <div class="col-6"
                             id="b10_header_left">
                             <img t-att-src="image_data_uri(doc.company_id.logo)"
-                                style="max-width: 250px; max-heigth: 300px"/>
+                                style="max-width: 200px; max-height: 150px;"/>
                         </div>
 
                         <!-- Dades Empresa -->
                         <div class="col-6"
                             id="b10_header_right"
-                            style="padding:15px; padding-left:30px;
-                        margin-left:70px;">
+                            style="padding:15px; padding-left:30px;">
                             <p style="margin-bottom: 0; color:gray; font-size:0.75em;">
                                 <strong>
                                     <span t-if="company.name"
