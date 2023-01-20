@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_comanda_inherit_PuntoVerde"
+            inherit_id="Dissenys_generics.report_comanda_batista_document"
+            priority="100">
+
+            <!-- Comprova si hi ha PuntoVerde i suma total -->
+            <xpath expr="//div[2]/table/thead"
+                position="before">
+                <t t-set="total_PuntoVerde"
+                    t-value="0"/>
+                <t t-foreach="doc.order_line"
+                    t-as="l">
+                    <t t-if="l.PuntoVerde_sale">
+                        <t t-set="total_PuntoVerde"
+                            t-value="total_PuntoVerde + l.PuntoVerde_sale"/>
+                    </t>
+                </t>
+            </xpath>
+
+            <!-- Si hi ha PuntoVerde mostrar columna  -->
+            <xpath expr="//div[2]/table/thead/tr/th[4]"
+                position="after">
+                <th t-if="total_PuntoVerde > 0"
+                    class="text-right">
+                    PuntoVerde
+                </th>
+            </xpath>
+
+            <!-- Si hi ha PuntoVerde mostrar valor en linia  -->
+            <xpath expr="//div[2]/table/tbody/tr/t/td[4]"
+                position="after">
+                <th t-if="total_PuntoVerde > 0"
+                    class="text-right">
+                    <t t-if="l.PuntoVerde_sale">
+                        <span t-esc="l.PuntoVerde_sale"
+                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </t>
+                </th>
+            </xpath>
+
+            <!-- Si hi ha  PuntoVerde mostrar a taula Totals  -->
+            <xpath expr="//div[2]/div[2]/div/div[2]/div/div/div/table/t"
+                position="after">
+                <tr t-if="total_PuntoVerde > 0"
+                    class="text-left">
+                    <td name="td_PuntoVerde_label">
+                        <strong>PuntoVerde</strong>
+                    </td>
+                    <td name="td_PuntoVerde_total"
+                        class="text-right">
+                        <span t-esc="total_PuntoVerde"
+                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                    </td>
+                </tr>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
