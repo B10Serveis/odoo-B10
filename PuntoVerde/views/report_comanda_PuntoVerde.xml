@@ -24,7 +24,7 @@
                 position="after">
                 <th t-if="total_PuntoVerde > 0"
                     class="text-right">
-                    PuntoVerde
+                    Punt Verd
                 </th>
             </xpath>
 
@@ -46,7 +46,7 @@
                 <tr t-if="total_PuntoVerde > 0"
                     class="text-left">
                     <td name="td_PuntoVerde_label">
-                        <strong>PuntoVerde</strong>
+                        <strong>Punt Verd</strong>
                     </td>
                     <td name="td_PuntoVerde_total"
                         class="text-right">
