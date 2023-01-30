@@ -19,7 +19,7 @@ Changelog
 Bug Tracker
 ===========
 
-Do not contact contributors directly about support or help with technical issues.
+Do not contact contributors directly for support or help with technical issues.
 
 Credits
 =======
@@ -33,7 +33,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
-
+* Joan LLimiñana <joan@batista10.cat> (https://www.batista10.cat)
 
 Other credits
 ~~~~~~~~~~~~~
