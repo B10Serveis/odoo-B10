@@ -5,7 +5,7 @@ This module add a new model 'Margin Classifications' linked to Product Templates
 A margin classification has a 'Profit Margin' field and extra fields to manage
 computation method, like in Pricelist Item model (Markup Rate, Rounding and Surcharge fields)
 
-If product has a margin classification defined and the theoretical price is
+If a product has a margin classification defined and the theoretical price is
 not the same as the sale price, an extra field 'Theoretical Price' is
 displayed, based on the Margin Classification and a button is available to
 change sale price.
@@ -21,7 +21,7 @@ Three buttons are available to apply theoretical prices:
 
 .. image:: ../static/description/margin_classification_form.png
 
-User can so see easily products with incorrect margins in the tree views, and in the menu:
+User can so see easily products with incorrect margins in the tree view, and in the menu:
 
 .. image:: ../static/description/margin_classification_tree.png
 
@@ -30,6 +30,6 @@ and [Profit Margin](https://en.wikipedia.org/wiki/Profit_margin) concepts.
 
 You could be interested by native Pricelist functionalities, setting sale
 prices based on Cost prices. The main problem of this design is that sale price
-change automaticaly when cost price changes, that is not desired in some user
-cases. For exemple, if you have a shop, you want to changes sale prices when
-customers is not in the shop, and after having changed labels in the shop.
+change automatically when cost price changes, that is not desired in some user
+cases. For example, if you have a shop, you want to change sale prices when
+customers are not in the shop, and after having changed labels in the shop.
