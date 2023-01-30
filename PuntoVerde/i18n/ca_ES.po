@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-30 09:58+0000\n"
-"PO-Revision-Date: 2023-01-30 11:01+0100\n"
+"PO-Revision-Date: 2023-01-30 11:26+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_comanda_inherit_PuntoVerde
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_pressupost_inherit_PuntoVerde
 msgid "<strong>Punt Verd</strong>"
-msgstr ""
+msgstr "<strong>Punt Verd i R.P.</strong>"
 
 #. module: PuntoVerde
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_factura_inherit_PuntoVerde
@@ -51,14 +51,14 @@ msgstr "Plantilla de producte"
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_comanda_inherit_PuntoVerde
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_pressupost_inherit_PuntoVerde
 msgid "Punt Verd"
-msgstr ""
+msgstr "Punt Verd i R.P."
 
 #. module: PuntoVerde
 #: model:ir.model.fields,field_description:PuntoVerde.field_account_invoice_line__PuntoVerde_invoice
 #: model:ir.model.fields,field_description:PuntoVerde.field_sale_order_line__PuntoVerde_sale
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_proforma_inherit_PuntoVerde
 msgid "PuntoVerde"
-msgstr "Punt Verd"
+msgstr "Punt Verd i R.P."
 
 #. module: PuntoVerde
 #: model_terms:ir.ui.view,arch_db:PuntoVerde.report_factura_inherit_PuntoVerde
