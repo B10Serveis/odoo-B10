@@ -24,7 +24,7 @@
                 position="after">
                 <th t-if="total_PuntoVerde > 0"
                     class="text-right">
-                    PuntoVerde
+                    PuntoVerde y R.P.
                 </th>
             </xpath>
 
@@ -35,7 +35,8 @@
                     class="text-right">
                     <t t-if="l.PuntoVerde_invoice">
                         <span t-esc="l.PuntoVerde_invoice"
-                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'
+                            style="font-weight: normal;"/>
                     </t>
                 </th>
             </xpath>
