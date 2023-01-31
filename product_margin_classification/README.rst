@@ -48,7 +48,7 @@ Three buttons are available to apply theoretical prices:
 
 .. image:: https://raw.githubusercontent.com/OCA/sale-workflow/10.0/product_margin_classification/static/description/margin_classification_form.png
 
-User can so see easily products with incorrect margins in the tree views, and in the menu:
+User can so see easily products with incorrect margins in the tree view, and in the menu:
 
 .. image:: https://raw.githubusercontent.com/OCA/sale-workflow/10.0/product_margin_classification/static/description/margin_classification_tree.png
 
@@ -57,9 +57,9 @@ and [Profit Margin](https://en.wikipedia.org/wiki/Profit_margin) concepts.
 
 You could be interested by native Pricelist functionalities, setting sale
 prices based on Cost prices. The main problem of this design is that sale price
-change automaticaly when cost price changes, that is not desired in some user
-cases. For exemple, if you have a shop, you want to changes sale prices when
-customers is not in the shop, and after having changed labels in the shop.
+change automatically when cost price changes, that is not desired in some user
+cases. For example, if you have a shop, you want to change sale prices when
+customers are not in the shop, and after having changed labels in the shop.
 
 **Table of contents**
 
@@ -79,11 +79,11 @@ Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/sale-workflow/issues>`_.
-In case of trouble, please check there if your issue has already been reported.
-If you spotted it first, help us smashing it by providing a detailed and welcomed
+In case of trouble, please check if your issue has already been reported.
+If you spotted it first, help us fix it by providing a detailed and welcomed
 `feedback <https://github.com/OCA/sale-workflow/issues/new?body=module:%20product_margin_classification%0Aversion:%2010.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
-Do not contact contributors directly about support or help with technical issues.
+Do not contact contributors directly for support or help with technical issues.
 
 Credits
 =======
@@ -99,6 +99,7 @@ Contributors
 * Sylvain LE GAL <https://twitter.com/legalsylvain>
 * Marc Poch Mallandrich <mpoch@planetatic.com>
 * Marc Tormo <marc@batista10.cat>
+* Joan LLimiñana <joan@batista10.cat> (https://www.batista10.cat)
 
 Maintainers
 ~~~~~~~~~~~
