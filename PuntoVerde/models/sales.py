@@ -14,7 +14,7 @@ class sale_order_line_PuntoVerde(models.Model):
             Line_PuntoVerde = float(
                 line.product_id.PuntoVerde) * line.product_uom_qty
             price = (line.price_unit *
-                     (1 - (line.discount or 0.0) / 100.0)) + Line_PuntoVerde
+                     (1 - (line.discount or 0.0) / 100.0)) + line.product_id.PuntoVerde
             taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty,
                                             product=line.product_id, partner=line.order_id.partner_shipping_id)
             line.update({
@@ -79,7 +79,7 @@ class account_invoice_line_PuntoVerde(models.Model):
         self.PuntoVerde_invoice = PuntoVerde
         currency = self.invoice_id and self.invoice_id.currency_id or None
         price = (self.price_unit *
-                 (1 - (self.discount or 0.0) / 100.0)) + PuntoVerde
+                 (1 - (self.discount or 0.0) / 100.0)) + self.product_id.PuntoVerde
         taxes = False
         if self.invoice_line_tax_ids:
             taxes = self.invoice_line_tax_ids.compute_all(
