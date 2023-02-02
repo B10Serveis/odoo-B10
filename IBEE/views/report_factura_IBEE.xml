@@ -35,7 +35,8 @@
                     class="text-right">
                     <t t-if="l.IBEE_invoice">
                         <span t-esc="l.IBEE_invoice"
-                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'
+                            style="font-weight: normal;"/>
                     </t>
                 </th>
             </xpath>
