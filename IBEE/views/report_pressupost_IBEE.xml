@@ -2,7 +2,8 @@
 <odoo>
     <data>
         <template id="report_pressupost_inherit_ibee"
-            inherit_id="Dissenys_generics.report_pressupost_batista_document">
+            inherit_id="Dissenys_generics.report_pressupost_batista_document priority="
+            20"">
 
             <!-- Comprova si hi ha IBEE i suma total -->
             <xpath expr="//div[2]/table/thead"

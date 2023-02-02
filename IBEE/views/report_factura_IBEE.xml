@@ -3,7 +3,7 @@
     <data>
         <template id="report_factura_inherit_ibee"
             inherit_id="Dissenys_generics.report_factura_batista_document"
-            priority="100">
+            priority="20">
 
             <!-- Comprova si hi ha IBEE i suma total -->
             <xpath expr="//table[@id='b10_linetable']/thead"
