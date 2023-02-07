@@ -95,7 +95,8 @@ class account_invoice_line_PuntoVerde(models.Model):
         currency = self.invoice_id and self.invoice_id.currency_id or None
         price = (self.price_unit *
                  (1 - (self.discount or 0.0) / 100.0)) + self.product_id.PuntoVerde
-        price = price + IBEE
+        price = price + self.product_id.litres_IBEE * \
+            float(self.product_id.IBEE)
         taxes = False
         if self.invoice_line_tax_ids:
             taxes = self.invoice_line_tax_ids.compute_all(
