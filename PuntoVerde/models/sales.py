@@ -21,7 +21,9 @@ class sale_order_line_PuntoVerde(models.Model):
 
             price = (line.price_unit *
                      (1 - (line.discount or 0.0) / 100.0)) + line.product_id.PuntoVerde
-            price = price + Line_IBEE
+            price = price + line.product_id.litres_IBEE * \
+                float(line.product_id.IBEE)
+
             taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty,
                                             product=line.product_id, partner=line.order_id.partner_shipping_id)
             line.update({
