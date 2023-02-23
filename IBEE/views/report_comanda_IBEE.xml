@@ -41,21 +41,7 @@
                 </th>
             </xpath>
 
-            <!-- Si hi ha  IBEE mostrar a taula Totals  -->
-            <xpath expr="//div[2]/div[2]/div/div[2]/div/div/div/table/t"
-                position="after">
-                <tr t-if="total_IBEE > 0"
-                    class="text-left">
-                    <td name="td_IBEE_label">
-                        <strong>IBEE</strong>
-                    </td>
-                    <td name="td_IBEE_total"
-                        class="text-right">
-                        <span t-esc="total_IBEE"
-                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
-                    </td>
-                </tr>
-            </xpath>
+
 
         </template>
     </data>
