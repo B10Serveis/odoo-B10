@@ -41,21 +41,7 @@
                 </th>
             </xpath>
 
-            <!-- Si hi ha  PuntoVerde mostrar a taula Totals  -->
-            <xpath expr="//div[2]/div[2]/div/div[2]/div/div/div/table/t"
-                position="after">
-                <tr t-if="total_PuntoVerde > 0"
-                    class="text-left">
-                    <td name="td_PuntoVerde_label">
-                        <strong>PuntoVerde</strong>
-                    </td>
-                    <td name="td_PuntoVerde_total"
-                        class="text-right">
-                        <span t-esc="total_PuntoVerde"
-                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
-                    </td>
-                </tr>
-            </xpath>
+
 
         </template>
     </data>
