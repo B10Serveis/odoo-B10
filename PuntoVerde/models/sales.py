@@ -4,26 +4,22 @@ from odoo import models, fields, api
 class sale_order_line_PuntoVerde(models.Model):
     _inherit = 'sale.order.line'
 
-    PuntoVerde_sale = fields.Float(
-        string='PuntoVerde', compute='_compute_amount')
+    PuntoVerde_sale = fields.Float(string='PuntoVerde', compute='_compute_amount')
 
     IBEE_sale = fields.Float(string='IBEE', compute='_compute_amount')
 
     @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id')
     def _compute_amount(self):
-        Line_PuntoVerde = 0.0
-        Line_IBEE = 0.0
+        
         for line in self:
-            Line_PuntoVerde = float(
-                line.product_id.PuntoVerde) * line.product_uom_qty
-            Line_IBEE = line.product_id.litres_IBEE * \
-                float(line.product_id.IBEE) * line.product_uom_qty
-
-            price = (line.price_unit *
-                     (1 - (line.discount or 0.0) / 100.0)) + line.product_id.PuntoVerde
-            price = price + line.product_id.litres_IBEE * \
-                float(line.product_id.IBEE)
-
+            IBEE_unit=line.product_id.litres_IBEE * float(line.product_id.IBEE)
+            PuntoVerde_unit=float(line.product_id.PuntoVerde)
+            
+            Line_PuntoVerde = PuntoVerde_unit * line.product_uom_qty
+            Line_IBEE = IBEE_unit * line.product_uom_qty
+            
+            price = (line.price_unit * (1 - (line.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
+            
             taxes = line.tax_id.compute_all(price, line.order_id.currency_id, line.product_uom_qty,
                                             product=line.product_id, partner=line.order_id.partner_shipping_id)
             line.update({
@@ -78,8 +74,7 @@ class sale_order_line_PuntoVerde(models.Model):
 class account_invoice_line_PuntoVerde(models.Model):
     _inherit = 'account.invoice.line'
 
-    PuntoVerde_invoice = fields.Float(
-        string='PuntoVerde', compute='_compute_price')
+    PuntoVerde_invoice = fields.Float(string='PuntoVerde', compute='_compute_price')
     IBEE_invoice = fields.Float(string='IBEE', compute='_compute_price')
 
     @api.one
@@ -87,18 +82,14 @@ class account_invoice_line_PuntoVerde(models.Model):
                  'product_id', 'invoice_id.partner_id', 'invoice_id.currency_id', 'invoice_id.company_id',
                  'invoice_id.date_invoice', 'invoice_id.date')
     def _compute_price(self):
-        PuntoVerde = float(self.product_id.PuntoVerde) * self.quantity
-        self.PuntoVerde_invoice = PuntoVerde
-
-        IBEE = self.product_id.litres_IBEE * \
-            float(self.product_id.IBEE) * self.quantity
-        self.IBEE_invoice = IBEE
+        IBEE_unit=self.product_id.litres_IBEE * float(self.product_id.IBEE)
+        PuntoVerde_unit=float(self.product_id.PuntoVerde)
+        
+        self.PuntoVerde_invoice = PuntoVerde_unit * self.quantity
+        self.IBEE_invoice = IBEE_unit * self.quantity
 
         currency = self.invoice_id and self.invoice_id.currency_id or None
-        price = (self.price_unit *
-                 (1 - (self.discount or 0.0) / 100.0)) + self.product_id.PuntoVerde
-        price = price + self.product_id.litres_IBEE * \
-            float(self.product_id.IBEE)
+        price = (self.price_unit * (1 - (self.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
         taxes = False
         if self.invoice_line_tax_ids:
             taxes = self.invoice_line_tax_ids.compute_all(
