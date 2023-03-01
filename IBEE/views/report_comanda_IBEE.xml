@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="report_comanda_inherit_ibee"
-            inherit_id="Dissenys_generics.report_comanda_batista_document"
-            priority="20">
+        <template id="report_comanda_inherit_ibee" inherit_id="Dissenys_generics.report_comanda_batista_document" priority="20">
 
             <!-- Comprova si hi ha IBEE i suma total -->
-            <xpath expr="//div[2]/table/thead"
-                position="before">
-                <t t-set="total_IBEE"
-                    t-value="0"/>
-                <t t-foreach="doc.order_line"
-                    t-as="l">
+            <xpath expr="//div[2]/table/thead" position="before">
+                <t t-set="total_IBEE" t-value="0"/>
+                <t t-set="total_PuntoVerde" t-value="0"/>
+                <t t-foreach="doc.order_line" t-as="l">
                     <t t-if="l.IBEE_sale">
-                        <t t-set="total_IBEE"
-                            t-value="total_IBEE + l.IBEE_sale"/>
+                        <t t-set="total_IBEE" t-value="total_IBEE + l.IBEE_sale"/>
+                    </t>
+                    <t t-if="l.PuntoVerde_sale">
+                        <t t-set="total_PuntoVerde" t-value="total_PuntoVerde + l.PuntoVerde_sale"/>
                     </t>
                 </t>
             </xpath>
 
             <!-- Si hi ha IBEE mostrar columna  -->
-            <xpath expr="//div[2]/table/thead/tr/th[4]"
-                position="after">
-                <th t-if="total_IBEE > 0"
-                    class="text-right">
-                    IBEE
-                </th>
+            <xpath expr="//div[2]/table/thead/tr/th[4]" position="after">
+                <th t-if="total_IBEE > 0" class="text-right">IBEE</th>
+                <th t-if="total_PuntoVerde > 0" class="text-right">Punt Verd</th>
             </xpath>
 
             <!-- Si hi ha IBEE mostrar valor en linia  -->
-            <xpath expr="//div[2]/table/tbody/tr/t/td[4]"
-                position="after">
-                <th t-if="total_IBEE > 0"
-                    class="text-right">
+            <xpath expr="//div[2]/table/tbody/tr/t/td[4]" position="after">
+                <th t-if="total_IBEE > 0" class="text-right">
                     <t t-if="l.IBEE_sale">
-                        <span t-esc="l.IBEE_sale"
-                            t-options='{"widget": "monetary", "display_currency": doc.currency_id}'
-                            style="font-weight: normal;"/>
+                        <span t-esc="l.IBEE_sale" t-options='{"widget": "monetary", "display_currency": doc.currency_id}' style="font-weight: normal;"/>
+                    </t>
+                </th>
+                <th t-if="total_PuntoVerde > 0" class="text-right">
+                    <t t-if="l.PuntoVerde_sale">
+                        <span t-esc="l.PuntoVerde_sale" t-options='{"widget": "monetary", "display_currency": doc.currency_id}' style="font-weight: normal;"/>
                     </t>
                 </th>
             </xpath>
-
-
 
         </template>
     </data>

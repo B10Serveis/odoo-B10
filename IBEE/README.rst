@@ -42,12 +42,19 @@ Registre de Versions
 * [ADD] Dependencia de Dissenys_generics.   
 * [ADD] Inerit de Dissenys_generics per mostrar-hi els valord d'IBEE si n'hi ha.    
 
+12.0.0.2.0 (01/03/2023)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Unificació de IBEE amb mòdul de punt verd   
+* [FIX] Afegir punt verd al còmput de comandes cap a factura 
+* [FIX] Calcular correctament els impostos en factures 
+
 Roadmap   
 =======   
 
 * Model 520 funcionant amb el mòdul date_range   
 * Exportació a excel del Model 520   
-* Valors dels impostos configurables de cara a futurs canvis de preus   
+  
 
 Registre d'errors
 =================   

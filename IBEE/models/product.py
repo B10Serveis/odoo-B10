@@ -6,3 +6,4 @@ class product(models.Model):
 
     IBEE = fields.Selection((('0','Exempt'),('0.1','0.1'),('0.15','0.15')),'IBEE', default='0')
     litres_IBEE = fields.Float('Litres x Unitat', default=0)
+    PuntoVerde = fields.Float('Punt Verd', default=0, digits=(12, 3))

@@ -7,7 +7,7 @@
     'author': 'Batista10',
     'website': "https://github.com/B10Serveis/odoo-B10/tree/12.0/IBEE",
     'depends': ['account', 'product', 'sale', 'Dissenys_generics'],
-    'version': '12.0.0.1.1',
+    'version': '12.0.0.2.0',
     'license': 'AGPL-3',
     'application': True,
     'category': 'Account',

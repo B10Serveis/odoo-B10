@@ -5,7 +5,6 @@ class sale_order_line_IBEE(models.Model):
     _inherit = 'sale.order.line'
 
     PuntoVerde_sale = fields.Float(string='PuntoVerde', compute='_compute_amount')
-
     IBEE_sale = fields.Float(string='IBEE', compute='_compute_amount')
 
     @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id')
@@ -39,8 +38,7 @@ class sale_order_line_IBEE(models.Model):
         """
         self.ensure_one()
         res = {}
-        product = self.product_id.with_context(
-            force_company=self.company_id.id)
+        product = self.product_id.with_context(force_company=self.company_id.id)
         account = product.property_account_income_id or product.categ_id.property_account_income_categ_id
 
         if not account and self.product_id:
@@ -66,6 +64,7 @@ class sale_order_line_IBEE(models.Model):
             'analytic_tag_ids': [(6, 0, self.analytic_tag_ids.ids)],
             'display_type': self.display_type,
             'IBEE_invoice': self.IBEE_sale,
+            'PuntoVerde_invoice': self.PuntoVerde_sale,
         }
         return res
 
@@ -91,10 +90,8 @@ class account_invoice_line_IBEE(models.Model):
         price = (self.price_unit * (1 - (self.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
         taxes = False
         if self.invoice_line_tax_ids:
-            taxes = self.invoice_line_tax_ids.compute_all(
-                price, currency, self.quantity, product=self.product_id, partner=self.invoice_id.partner_id)
-        self.price_subtotal = price_subtotal_signed = taxes[
-            'total_excluded'] if taxes else self.quantity * price
+            taxes = self.invoice_line_tax_ids.compute_all(price, currency, self.quantity, product=self.product_id, partner=self.invoice_id.partner_id)
+        self.price_subtotal = price_subtotal_signed = taxes['total_excluded'] if taxes else self.quantity * price
         self.price_total = taxes['total_included'] if taxes else self.price_subtotal
         if self.invoice_id.currency_id and self.invoice_id.currency_id != self.invoice_id.company_id.currency_id:
             currency = self.invoice_id.currency_id
@@ -103,3 +100,30 @@ class account_invoice_line_IBEE(models.Model):
                 price_subtotal_signed, self.invoice_id.company_id.currency_id, self.company_id or self.env.user.company_id, date or fields.Date.today())
         sign = self.invoice_id.type in ['in_refund', 'out_refund'] and -1 or 1
         self.price_subtotal_signed = price_subtotal_signed * sign
+
+class account_invoice_line_IBEE(models.Model):
+    _inherit = 'account.invoice'
+            
+    @api.multi
+    def get_taxes_values(self):
+        
+        tax_grouped = {}
+        round_curr = self.currency_id.round
+        for line in self.invoice_line_ids:
+            IBEE_unit=line.product_id.litres_IBEE * float(line.product_id.IBEE)
+            PuntoVerde_unit=float(line.product_id.PuntoVerde)
+            if not line.account_id or line.display_type:
+                continue
+            price_unit = (line.price_unit * (1 - (line.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
+            taxes = line.invoice_line_tax_ids.compute_all(price_unit, self.currency_id, line.quantity, line.product_id, self.partner_id)['taxes']
+            for tax in taxes:
+                val = self._prepare_tax_line_vals(line, tax)
+                key = self.env['account.tax'].browse(tax['id']).get_grouping_key(val)
+
+                if key not in tax_grouped:
+                    tax_grouped[key] = val
+                    tax_grouped[key]['base'] = round_curr(val['base'])
+                else:
+                    tax_grouped[key]['amount'] += val['amount']
+                    tax_grouped[key]['base'] += round_curr(val['base'])
+        return tax_grouped

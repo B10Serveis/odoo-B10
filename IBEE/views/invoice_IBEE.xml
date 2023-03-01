@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="/form/sheet/notebook/page/field[@name='invoice_line_ids']/tree/field[@name='price_total']" position="before">
                     <field name="IBEE_invoice"/>
+                    <field name="PuntoVerde_invoice"/>
                 </xpath>                 
             </field>
         </record>        

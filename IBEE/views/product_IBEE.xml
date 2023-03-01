@@ -9,6 +9,7 @@
                 <xpath expr="//field[@name='taxes_id']" position="after">
                     <field name="IBEE"/>
                     <field name="litres_IBEE" />
+                    <field name="PuntoVerde"/>
                 </xpath>                
             </field>
         </record>
