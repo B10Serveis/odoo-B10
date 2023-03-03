@@ -1,4 +1,6 @@
 from odoo import models, fields, api
+from functools import partial
+from odoo.tools.misc import formatLang
 
 
 class sale_order_line_IBEE(models.Model):
@@ -72,27 +74,31 @@ class SaleOrder(models.Model):
     _inherit = 'sale.order'
     
     @api.multi
-    def _get_tax_amount_by_group(self):
-        self.ensure_one()
-        res = {}
-        for line in self.order_line:
-            IBEE_unit=line.product_id.litres_IBEE * float(line.product_id.IBEE)
-            PuntoVerde_unit=float(line.product_id.PuntoVerde)
-            
-            price = (line.price_unit * (1 - (line.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
-
-            taxes = line.tax_id.compute_all(price, quantity=line.product_uom_qty,product=line.product_id,partner=self.partner_shipping_id)['taxes']
-            for tax in line.tax_id:
-                group = tax.tax_group_id
-                res.setdefault(group, 0.0)
-                for t in taxes:
-                    if (t['id'] == tax.id or
-                            t['id'] in tax.children_tax_ids.ids):
-                        res[group] += t['amount']
-        res = sorted(list(res.items()), key=lambda l: l[0].sequence)
-        res = [(l[0].name, l[1]) for l in res]
-        return res
-    
+    def _amount_by_group(self):
+        for order in self:
+            currency = order.currency_id or order.company_id.currency_id
+            fmt = partial(formatLang, self.with_context(lang=order.partner_id.lang).env, currency_obj=currency)
+            res = {}
+            for line in order.order_line:
+                IBEE_unit=line.product_id.litres_IBEE * float(line.product_id.IBEE)
+                PuntoVerde_unit=float(line.product_id.PuntoVerde)
+                
+                price_reduce = (line.price_unit * (1 - (line.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
+                taxes = line.tax_id.compute_all(price_reduce, quantity=line.product_uom_qty, product=line.product_id, partner=order.partner_shipping_id)['taxes']
+                for tax in line.tax_id:
+                    group = tax.tax_group_id
+                    res.setdefault(group, {'amount': 0.0, 'base': 0.0})
+                    for t in taxes:
+                        if t['id'] == tax.id or t['id'] in tax.children_tax_ids.ids:
+                            res[group]['amount'] += t['amount']
+                            res[group]['base'] += t['base']
+            res = sorted(res.items(), key=lambda l: l[0].sequence)
+            order.amount_by_group = [(
+                l[0].name, l[1]['amount'], l[1]['base'],
+                fmt(l[1]['amount']), fmt(l[1]['base']),
+                len(res),
+            ) for l in res]
+   
     @api.multi
     def action_invoice_create(self, grouped=False, final=False):
         invoice_ids = super(SaleOrder, self).action_invoice_create(
