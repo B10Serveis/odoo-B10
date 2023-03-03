@@ -67,7 +67,42 @@ class sale_order_line_IBEE(models.Model):
             'PuntoVerde_invoice': self.PuntoVerde_sale,
         }
         return res
+    
+class SaleOrder(models.Model):
+    _inherit = 'sale.order'
+    
+    @api.multi
+    def _get_tax_amount_by_group(self):
+        self.ensure_one()
+        res = {}
+        for line in self.order_line:
+            IBEE_unit=line.product_id.litres_IBEE * float(line.product_id.IBEE)
+            PuntoVerde_unit=float(line.product_id.PuntoVerde)
+            
+            price = (line.price_unit * (1 - (line.discount or 0.0) / 100.0)) + PuntoVerde_unit + IBEE_unit
 
+            taxes = line.tax_id.compute_all(price, quantity=line.product_uom_qty,product=line.product_id,partner=self.partner_shipping_id)['taxes']
+            for tax in line.tax_id:
+                group = tax.tax_group_id
+                res.setdefault(group, 0.0)
+                for t in taxes:
+                    if (t['id'] == tax.id or
+                            t['id'] in tax.children_tax_ids.ids):
+                        res[group] += t['amount']
+        res = sorted(list(res.items()), key=lambda l: l[0].sequence)
+        res = [(l[0].name, l[1]) for l in res]
+        return res
+    
+    @api.multi
+    def action_invoice_create(self, grouped=False, final=False):
+        invoice_ids = super(SaleOrder, self).action_invoice_create(
+            grouped=grouped, final=final
+        )
+        invoices = self.env['account.invoice'].browse(invoice_ids)
+        for inv in invoices:
+            inv._onchange_invoice_line_ids()
+        return invoice_ids
+    
 
 class account_invoice_line_IBEE(models.Model):
     _inherit = 'account.invoice.line'
@@ -101,7 +136,7 @@ class account_invoice_line_IBEE(models.Model):
         sign = self.invoice_id.type in ['in_refund', 'out_refund'] and -1 or 1
         self.price_subtotal_signed = price_subtotal_signed * sign
 
-class account_invoice_line_IBEE(models.Model):
+class account_invoice_IBEE(models.Model):
     _inherit = 'account.invoice'
             
     @api.multi
