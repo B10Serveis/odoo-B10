@@ -19,14 +19,14 @@ class Reportposreportclosing(models.AbstractModel):
         today = user_tz.localize(fields.Datetime.from_string(fields.Date.context_today(self)))
         today = today.astimezone(pytz.timezone('UTC'))
         if date_ini:
-            date_ini = fields.Datetime.from_string(date_ini)
+            date_ini = datetime.datetime.strptime(date_ini, '%Y-%m-%d')
         else:
-            date_ini = today
+            date_ini = datetime(today.year,today.month,today.day)
 
         if date_fi:
-            date_fi = fields.Datetime.from_string(date_fi)
+            date_fi = datetime.datetime.strptime(date_fi, '%Y-%m-%d') + datetime.timedelta(days=1, seconds=-1)
         else:
-            date_fi = today + timedelta(days=1, seconds=-1)
+            date_fi = datetime(today.year,today.month,today.day) + datetime.timedelta(days=1, seconds=-1)
 
         date_fi = max(date_fi, date_ini)
 
@@ -36,14 +36,14 @@ class Reportposreportclosing(models.AbstractModel):
         session_ids = self.env['pos.session'].search([
             ('start_at', '>=', date_ini),
             ('start_at', '<=', date_fi),
-            ('config_id', '=', config_id)])
+            ('config_id', 'in', config_id)])
             
-        name_pos = self.env["pos.config"].search([('id', '=', config_id)]).name
+        name_pos = self.env["pos.config"].search([('id', 'in', config_id)]).name
         
         session_bank = self.env['account.bank.statement'].search([
             ('create_date', '>=', date_ini),
             ('create_date', '<=', date_fi),
-            ('pos_session_id.config_id', '=', config_id)])
+            ('pos_session_id.config_id', 'in', config_id)])
             
         amount = {}
         linies = {}
@@ -73,7 +73,7 @@ class Reportposreportclosing(models.AbstractModel):
                 } for payment in session_bank]
             } 
         
-    @api.multi
+    
     def _get_report_values(self, docids, data=None):
         data = dict(data or {})
         config_id = self.env['pos.config'].browse(data['session_id'])
