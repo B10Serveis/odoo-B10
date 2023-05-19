@@ -13,6 +13,7 @@
         "stock",
         "state_original_name",
         "sale_management",
+        "l10n_es_partner",
     ],
     "license": "AGPL-3",
     "application": True,
