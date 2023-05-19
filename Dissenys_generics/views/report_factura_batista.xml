@@ -90,7 +90,6 @@
                 </div>
             </div>
 
-
             <!-- Page -->
             <div class="article">
                 <div class="container"
@@ -102,7 +101,7 @@
                         <div class="col-6"
                             id="b10_docinfo_left">
 
-                            <!-- Dades Comanda -->
+                            <!-- Dades Factura -->
                             <span t-if="doc.name">
                                 <h5 style="border-bottom: 1px solid #c1c1c1; ">
                                     <span t-if="o.amount_total_signed >= 0">
@@ -132,11 +131,17 @@
                                 </span>
                                 <br/>
                             </p>
+                            <p style="margin-bottom: 0;">
+                                <span t-if="doc.invoice_payment_term_id">Payment Term: <span t-field="doc.invoice_payment_term_id"/>
+                                </span>
+                                <br/>
+                            </p>
                             <p t-if="doc.payment_mode_id"
                                 style="margin-bottom: 0;">
                                 <span t-if="'Transfe' in doc.payment_mode_id.name">IBAN: <span t-esc="doc.partner_bank_id.acc_number"/>
                                 </span>
                             </p>
+
                         </div>
                         <!-- Columna dreta-->
                         <div class="col-5 offset-1"

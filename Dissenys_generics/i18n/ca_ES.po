@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-09 14:06+0000\n"
-"PO-Revision-Date: 2023-01-09 15:10+0100\n"
+"POT-Creation-Date: 2023-05-19 15:05+0000\n"
+"PO-Revision-Date: 2023-05-19 17:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,11 @@ msgstr "<span>N/S: </span>"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "<strong>Amount Due</strong>"
 msgstr "<strong>Import a pagar</strong>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "<strong>Factura d'abonament</strong>"
+msgstr ""
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -158,6 +163,11 @@ msgid "DESCRIPTION"
 msgstr "DESCRIPCIÓ"
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Data Abonament:"
+msgstr ""
+
+#. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_entrega_batista_document
 msgid "Date delivered:"
 msgstr "Data d'entrega:"
@@ -203,6 +213,11 @@ msgstr ""
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.factura_batista
 msgid "Factura Estandard"
+msgstr ""
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Factura d'abonament:"
 msgstr ""
 
 #. module: Dissenys_generics
@@ -261,6 +276,11 @@ msgstr "Pagat el"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "Payment Method:"
 msgstr "Forma de pagament:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Payment Term:"
+msgstr "Condicions pagament:"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_entrega_batista_document
