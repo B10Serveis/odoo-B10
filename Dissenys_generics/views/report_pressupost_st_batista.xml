@@ -259,7 +259,8 @@
                         <div style="border: 1px solid black; height: 80px;">
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6"
+                        style="padding-left:10px;">
                         <br/>
                         <p>Sign and stamp this quotation to accept it. A valid quotation for 15 days from the date of the quotation.</p>
                     </div>
