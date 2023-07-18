@@ -44,7 +44,8 @@
                         <!-- Logo esquerra -->
                         <div class="col-6"
                             id="b10_header_left">
-                            <img t-att-src="image_data_uri(doc.company_id.logo)"
+                            <img t-if="doc.company_id.logo"
+                                t-att-src="image_data_uri(doc.company_id.logo)"
                                 style="max-width: 200px; max-height: 150px;"/>
                         </div>
 
@@ -131,7 +132,12 @@
                                 <br/>
                             </p>
                             <p style="margin-bottom: 0;">
-                                <span t-if="doc.payment_mode_id.id==2">IBAN: <span t-field="doc.partner_bank_id.acc_number"/>
+                                <span t-if="doc.invoice_payment_term_id">Payment Term: <span t-field="doc.invoice_payment_term_id"/>
+                                </span>
+                                <br/>
+                            </p>
+                            <p style="margin-bottom: 0;">
+                                <span t-if="'Transfe' in doc.payment_mode_id.name">IBAN: <span t-field="doc.partner_bank_id.acc_number"/>
                                 </span>
                             </p>
                         </div>

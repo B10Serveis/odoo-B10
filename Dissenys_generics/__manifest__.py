@@ -13,7 +13,8 @@
         "stock",
         "state_original_name",
         "sale_management",
-        "state_original_name"
+        "state_original_name",
+        "l10n_es_partner",
     ],
     "license": "AGPL-3",
     "application": True,
@@ -29,5 +30,7 @@
         "views/show_product_image.xml",
         "views/proforma_batista.xml",
         "views/report_proforma_batista.xml",
+        "views/comanda_compra_batista.xml",
+        "views/report_comanda_compra_batista.xml",
     ],
 }
