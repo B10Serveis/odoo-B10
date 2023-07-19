@@ -11,6 +11,18 @@
                     <field name="PuntoVerde_invoice"/>
                 </xpath>                 
             </field>
-        </record>        
+        </record>   
+<!-- 
+        <record id="account_invoice_report_total_ibee" model="ir.ui.view">
+        	<field name="name">account.invoice.report.total.IBEE</field>
+        	<field name="model">account.invoice.report</field>
+        	<field name="inherit_id" ref="account.view_account_invoice_report_pivot"/>
+        	<field name="arch" type="xml">
+        		<xpath expr="//field[@name='price_total']" position="after">
+        			<field name="total_ibee" string="Total IBEE" type="measure"/>
+        		</xpath>
+        	</field>        		
+        </record>     
+-->
     </data>
 </odoo>

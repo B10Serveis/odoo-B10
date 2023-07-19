@@ -49,6 +49,12 @@ Registre de Versions
 * [FIX] Afegir punt verd al còmput de comandes cap a factura 
 * [FIX] Calcular correctament els impostos en factures 
 
+12.0.0.2.1 (18/07/2023)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir el camp total IBEE al informe de facturació analítica   
+
+
 Roadmap   
 =======   
 

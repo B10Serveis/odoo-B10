@@ -6,8 +6,7 @@ from odoo.tools.misc import formatLang
 class sale_order_line_IBEE(models.Model):
     _inherit = 'sale.order.line'
 
-    PuntoVerde_sale = fields.Float(
-        string='PuntoVerde', compute='_compute_amount')
+    PuntoVerde_sale = fields.Float(string='PuntoVerde', compute='_compute_amount')
     IBEE_sale = fields.Float(string='IBEE', compute='_compute_amount')
 
     @api.depends('product_uom_qty', 'discount', 'price_unit', 'tax_id')
@@ -86,8 +85,7 @@ class SaleOrder(models.Model):
     def _amount_by_group(self):
         for order in self:
             currency = order.currency_id or order.company_id.currency_id
-            fmt = partial(formatLang, self.with_context(
-                lang=order.partner_id.lang).env, currency_obj=currency)
+            fmt = partial(formatLang, self.with_context(lang=order.partner_id.lang).env, currency_obj=currency)
             res = {}
             for line in order.order_line:
                 IBEE_unit = line.product_id.litres_IBEE * \
@@ -130,9 +128,9 @@ class SaleOrder(models.Model):
 class account_invoice_line_IBEE(models.Model):
     _inherit = 'account.invoice.line'
 
-    PuntoVerde_invoice = fields.Float(
-        string='PuntoVerde', compute='_compute_price')
-    IBEE_invoice = fields.Float(string='IBEE', compute='_compute_price')
+    PuntoVerde_invoice = fields.Float(string='PuntoVerde', compute='_compute_price', store=True)
+    IBEE_invoice = fields.Float(string='IBEE', compute='_compute_price', store=True)
+    ibee_invoice = fields.Float(string='ibee', compute='_compute_price', store=True)
 
     @api.one
     @api.depends('price_unit', 'discount', 'invoice_line_tax_ids', 'quantity',
@@ -148,6 +146,7 @@ class account_invoice_line_IBEE(models.Model):
 
         self.PuntoVerde_invoice = PuntoVerde_unit * self.quantity
         self.IBEE_invoice = IBEE_unit * self.quantity
+        self.ibee_invoice = IBEE_unit * self.quantity
 
         currency = self.invoice_id and self.invoice_id.currency_id or None
         price = (self.price_unit * (1 - (self.discount or 0.0) / 100.0) ) + PuntoVerde_unit + IBEE_unit
@@ -169,7 +168,7 @@ class account_invoice_line_IBEE(models.Model):
 
 class account_invoice_IBEE(models.Model):
     _inherit = 'account.invoice'
-
+    
     @api.multi
     def get_taxes_values(self):
 
