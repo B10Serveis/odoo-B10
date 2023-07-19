@@ -31,4 +31,4 @@
 #
 ###############################################
 
-from . import product, sales, model520
+from . import product, sales, model520, invoicereport
