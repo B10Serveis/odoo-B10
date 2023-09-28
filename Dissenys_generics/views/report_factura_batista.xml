@@ -132,7 +132,7 @@
                                 <br/>
                             </p>
                             <p style="margin-bottom: 0;">
-                                <span t-if="'Transfe' in doc.payment_mode_id.name">IBAN: <span t-field="doc.partner_bank_id.acc_number"/>
+                                <span t-if="doc.payment_mode_id.name and 'Transfe' in doc.payment_mode_id.name">IBAN: <span t-field="doc.partner_bank_id.acc_number"/>
                                 </span>
                             </p>
                         </div>
