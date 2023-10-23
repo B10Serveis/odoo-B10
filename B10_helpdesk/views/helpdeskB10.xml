@@ -33,6 +33,10 @@
                             widget="html"/>
                     </page>
                 </xpath>
+                <xpath expr="//field[@name='channel_id']"
+                    position="after">
+                    <field name="worked_hours" string="Worked Hours"/>
+                </xpath>
             </field>
         </record>
     </data>
