@@ -10,3 +10,5 @@ state_original_name/models/__pycache__/state_original_name.cpython-39.pyc
 B10_helpdesk/__pycache__/__init__.cpython-39.pyc
 B10_helpdesk/models/__pycache__/__init__.cpython-39.pyc
 B10_helpdesk/models/__pycache__/helpdeskB10.cpython-39.pyc
+plantilles_email/models/__pycache__/__init__.cpython-39.pyc
+plantilles_email/models/__pycache__/models.cpython-39.pyc
