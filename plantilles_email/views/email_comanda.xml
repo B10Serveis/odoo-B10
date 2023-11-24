@@ -1,19 +1,19 @@
 <?xml version="1.0" ?>
 <odoo>
-    <record id="factura_email_template"
+    <record id="comanda_email_template"
         model="mail.template">
-        <field name="name">Standard - Invoice Email Template</field>
+        <field name="name">Standard - Sale Order Email Template</field>
         <field name="model_id"
-            ref="account.model_account_move"/>
-        <field name="subject">{{ object.company_id.name }} Invoice ref. {{ object.name or object.ref or 'n/a' }}</field>
+            ref="sale.model_sale_order"/>
+        <field name="subject">{{ object.company_id.name }} Order ref. {{ object.name or 'n/a' }}</field>
         <field name="email_from">{{ object.company_id.email }}</field>
         <field name="email_to">{{ object.partner_id.email_formatted }}</field>
         <field name="lang">{{ object.partner_id.lang }}</field>
         <field name="auto_delete"
             eval="True" />
         <field name="report_template"
-            ref="Dissenys_generics.factura_batista" />
-        <field name="report_name">Invoice_{{ (object.ref or object.name or '').replace('/','_') }}</field>
+            ref="Dissenys_generics.comanda_batista" />
+        <field name="report_name">Order_{{ (object.name or '').replace('/','_') }}</field>
 
 
         <field name="body_html"
@@ -45,7 +45,7 @@
                                                     <tr>
                                                         <td valign="middle"
                                                             style="padding: 16px; font-size: 20px; font-weight: bold; color: white;">
-                                                            <span >Invoice from </span>
+                                                            <span >Order from </span>
                                                             <t t-out="object.user_id.company_id.name or ''"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
@@ -77,10 +77,10 @@
                                                                     contenteditable="false">
                                                                 </t>
                                                                 <br/>
-                                                                    You have a new invoice available:
+                                                                    You have a new order available:
                                                                 <br/>
                                                                 <p style="margin-left: 16px">
-                                                                    Invoice number: 
+                                                                    Order number: 
                                                                     <span style="font-weight: bold;">
                                                                         <t t-out="object.name or 'n/a'"
                                                                             data-oe-t-inline="true"
@@ -94,14 +94,14 @@
                                                                         contenteditable="false">
                                                                     </t>
                                                                     <br/>
-                                                                    Amount invoiced: 
-                                                                    <t t-out="format_amount(object.amount_total_signed, object.currency_id) or ''"
+                                                                    Amount Ordered: 
+                                                                    <t t-out="format_amount(object.amount_total, object.currency_id) or ''"
                                                                         data-oe-t-inline="true"
                                                                         contenteditable="false">
                                                                     </t>
                                                                     <br/>
-                                                                    Invoice date: 
-                                                                    <t t-out="format_date(object.date) or ''"
+                                                                    Order date: 
+                                                                    <t t-out="format_date(object.date_order) or ''"
                                                                         data-oe-t-inline="true"
                                                                         contenteditable="false">
                                                                     </t>
