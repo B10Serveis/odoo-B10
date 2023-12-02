@@ -6,7 +6,8 @@ class helpdeksB10(models.Model):
     close_note = fields.Html(string="Closing Note", required=False, )
     email_ccs = fields.Many2many('res.partner', 'ticket_partner_rel', 'ticket_ids', 'partner_id',  string="CC", domain=[('email','=like','%@%')])
     related_contract = fields.Many2one('contract.contract', string="Contract")
-    worked_hours = fields.Float(string="Worked Hours")
+    worked_hours = fields.Float(string="Worked Hours", required='False')
+    stage_closed = fields.Boolean(string='Stage closed', related='stage_id.closed')
 
 class partner_helpdesk_B10(models.Model):
         _inherit = 'res.partner'
