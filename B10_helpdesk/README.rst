@@ -52,6 +52,11 @@ Changelog
 
 * [ADD] Trasllat a V.16.
 
+16.0.1.1.0 (2023-12-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Validació del camp hores treballades
+
 Bug Tracker
 ===========
 
