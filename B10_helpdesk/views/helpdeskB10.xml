@@ -35,7 +35,7 @@
                 </xpath>
                 <xpath expr="//field[@name='channel_id']"
                     position="after">
-                    <field name="stage_closed" />
+                    <field name="stage_closed" invisible="1"/>
                     <field name="worked_hours" string="Worked Hours" attrs="{'required':[('stage_closed','=','1')]}"/>
                 </xpath>
             </field>
