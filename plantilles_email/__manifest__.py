@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.1.0",
     "depends": [
         "base",
         "mail",
@@ -15,6 +15,7 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "views/debrand_odoo_mail.xml",
         "views/email_factura.xml",
         "views/email_comanda.xml",
         "views/email_pressupost.xml",

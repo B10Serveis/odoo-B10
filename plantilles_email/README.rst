@@ -39,10 +39,16 @@ To use this module, you need to:
 Changelog
 =========
 
-15.0.1.0.0 (2022-12-09)
+15.0.1.0.0 (2023-11-20)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [ADD] Creació del mòdul
+
+15.0.1.1.0 (2023-12-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Debrand Odoo mail
+
 
 
 Bug Tracker
