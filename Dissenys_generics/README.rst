@@ -48,6 +48,7 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [BUG] Arreglat error en numero de compte de factures
+* [ADD] Mail Debrand
 
 
 Bug Tracker

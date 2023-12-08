@@ -18,6 +18,7 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "views/debrand_odoo_mail.xml",
         "views/pressupost_batista.xml",
         "views/report_pressupost_batista.xml",
         "views/factura_batista.xml",
