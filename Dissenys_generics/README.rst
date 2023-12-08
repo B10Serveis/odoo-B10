@@ -44,6 +44,11 @@ Changelog
 
 * [ADD] Nou format d'impressió genèric de documents
 
+13.0.1.0.1 (2023-12-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [BUG] Arreglat error en numero de compte de factures
+
 
 Bug Tracker
 ===========
