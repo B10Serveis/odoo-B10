@@ -14,8 +14,11 @@
                     <field name="email_ccs"
                         widget="many2many_tags"
                         options="{'color_field': 'color', 'no_create_edit': True}" />
+                    <field name="current_time"
+                        invisible="1"/>
                     <field name="related_contract"
-                        options="{'color_field': 'color', 'no_create_edit': True}" />
+                        options="{'color_field': 'color', 'no_create_edit': True}"
+                        domain="['|', ('date_end', '&gt;=', current_time),('date_end', '=', False)]"/>
                 </xpath>
                 <xpath expr="//page[@name='description']"
                     position="after">
@@ -35,8 +38,11 @@
                 </xpath>
                 <xpath expr="//field[@name='channel_id']"
                     position="after">
-                    <field name="stage_closed" invisible="1"/>
-                    <field name="worked_hours" string="Worked Hours" attrs="{'required':[('stage_closed','=','1')]}"/>
+                    <field name="stage_closed"
+                        invisible="1"/>
+                    <field name="worked_hours"
+                        string="Worked Hours"
+                        attrs="{'required':[('stage_closed','=','1')]}"/>
                 </xpath>
             </field>
         </record>
