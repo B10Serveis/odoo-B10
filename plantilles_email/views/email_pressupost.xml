@@ -6,8 +6,9 @@
         <field name="model_id"
             ref="sale.model_sale_order"/>
         <field name="subject">{{ object.company_id.name }} Order ref. {{ object.name or 'n/a' }}</field>
-        <field name="email_from">{{ object.company_id.email }}</field>
+        <field name="email_from">{{ user.email_formatted or object.invoice_user_id.email_formatted or object.company_id.email_formatted }}</field>
         <field name="email_to">{{ object.partner_id.email_formatted }}</field>
+        <field name="reply_to">{{ user.email_formatted or object.invoice_user_id.email_formatted or object.company_id.email_formatted }}</field>
         <field name="lang">{{ object.partner_id.lang }}</field>
         <field name="auto_delete"
             eval="True" />
@@ -135,7 +136,7 @@
                                                         <td style="opacity: 0.7;"
                                                             valign="middle"
                                                             align="left">
-                                                            <t t-out="object.user_id.signature or ''"
+                                                            <t t-out="user.signature or ''"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -145,7 +146,7 @@
                                                         <td valign="middle"
                                                             align="left"
                                                             style="font-size: 14px; font-weight: bold;">
-                                                            <t t-out="object.user_id.company_id.name or ''"
+                                                            <t t-out="user.company_id.name or ''"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -155,29 +156,29 @@
                                                         <td style="opacity: 0.7;"
                                                             valign="middle"
                                                             align="left">
-                                                            <t t-out="object.user_id.company_id.phone or ''"
+                                                            <t t-out="user.phone or ''"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
-                                                            <t t-if="object.user_id.company_id.email"
+                                                            <t t-if="user.email"
                                                                 data-oe-t-group="0"
                                                                 data-oe-t-group-active="true"
                                                                 data-oe-t-inline="true">
                                                                     |
-                                                                <a t-attf-href="'mailto:%s' % {{ object.user_id.company_id.email }}"
+                                                                <a t-attf-href="'mailto:%s' % {{ user.email }}"
                                                                     style="text-decoration:none; color: #454748;"
-                                                                    t-out="object.user_id.company_id.email or ''"
+                                                                    t-out="user.email or ''"
                                                                     contenteditable="false">
                                                                 </a>
                                                             </t>
-                                                            <t t-if="object.user_id.company_id.website"
+                                                            <t t-if="user.company_id.website"
                                                                 data-oe-t-group="1"
                                                                 data-oe-t-group-active="true"
                                                                 data-oe-t-inline="true">
                                                                     |
-                                                                <a t-attf-href="'%s' % {{ object.user_id.company_id.website }}"
+                                                                <a t-attf-href="'%s' % {{ user.company_id.website }}"
                                                                     style="text-decoration:none; color: #454748;"
-                                                                    t-out="object.user_id.company_id.website or ''"
+                                                                    t-out="user.company_id.website or ''"
                                                                     contenteditable="false">
                                                                 </a>
                                                             </t>
