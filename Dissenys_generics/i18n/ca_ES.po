@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-19 10:33+0000\n"
-"PO-Revision-Date: 2023-05-19 12:36+0200\n"
+"POT-Creation-Date: 2024-01-02 10:02+0000\n"
+"PO-Revision-Date: 2024-01-02 11:06+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,9 +71,19 @@ msgid "<span>, </span>"
 msgstr ""
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+msgid "<span>.</span>"
+msgstr ""
+
+#. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid "<span>S/N: </span>"
 msgstr "<span>N/S: </span>"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+msgid "<span>This quotation is valid until </span>"
+msgstr "<span>Aques pressupost és vàlid fins </span>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -245,7 +255,7 @@ msgstr "Data Factura:"
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid "Invoice:"
-msgstr "Factura"
+msgstr "Factura:"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -338,13 +348,8 @@ msgstr "Mostrar imatge del producte"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
-msgid ""
-"Sign and stamp this quotation to accept it. A valid quotation\n"
-"\t\t\t\t\t\t\tfor 15 days from the date of the quotation."
-msgstr ""
-"Signeu i segelleu aquest pressupost per acceptar-lo. \n"
-"Aquest pressupost és vàlid durant 15 dies a partir de la data del "
-"pressupost."
+msgid "Sign and stamp this quotation to accept it."
+msgstr "Signeu i segelleu aquest pressupost per acceptar-lo."
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document

@@ -301,9 +301,14 @@
 					</div>
 					<div class="col-6"
 						style="padding-left:10px;">
-						<br />
-						<p>Sign and stamp this quotation to accept it. A valid quotation
-							for 15 days from the date of the quotation.</p>
+						<p>Sign and stamp this quotation to accept it.</p>
+						<p t-if="doc.validity_date">
+							<span>This quotation is valid until </span>
+							<span t-if="doc.validity_date"
+								t-field="doc.validity_date"
+								t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
+							<span>.</span>
+						</p>
 					</div>
 				</div>
 			</div>
