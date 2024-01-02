@@ -8,6 +8,7 @@ from odoo import api, fields, models
 
 class Reportposreportclosing(models.AbstractModel):
     _name = 'report.pos_closing_report.report_pos_closing_report'
+    _description = 'Report POS closing'
 
     @api.model
     def get_session(self, date_ini=False, date_fi=False, config_id=False):
