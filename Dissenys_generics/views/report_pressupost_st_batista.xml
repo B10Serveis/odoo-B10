@@ -250,29 +250,6 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <!-- Signatura -->
-                <div class="row"
-                    id="b10_totaltable"
-                    style="page-break-inside: avoid">
-                    <div class="col-6">
-                        <p>Signature and Stamp for acceptance</p>
-                        <div style="border: 1px solid black; height: 80px;">
-                        </div>
-                    </div>
-                    <div class="col-6"
-                        style="padding-left:10px;">
-                        <p>Sign and stamp this quotation to accept it.</p>
-                        <p t-if="doc.validity_date">
-                            <span>This quotation is valid until </span>
-                            <span t-if="doc.validity_date"
-                                t-field="doc.validity_date"
-                                t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
-                            <span>.</span>
-                        </p>
-                    </div>
-                </div>
-
             </div>
 
             <!-- Footer -->
@@ -281,7 +258,6 @@
                     id="b10_footer">
                     <div class="col-12">
                         <div class="last-page">
-
                             <div style="clear:left; display:block; color:gray; font-size:0.75em; text-align: center;">
                                 <p style="margin-bottom: 0; text-align: center;">
                         According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data
