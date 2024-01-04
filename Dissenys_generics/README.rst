@@ -44,6 +44,11 @@ Changelog
 
 * [ADD] Nou format d'impressió genèric de documents
 
+16.0.1.0.1 (2024-01-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir termini de pagament als documents
+
 
 Bug Tracker
 ===========

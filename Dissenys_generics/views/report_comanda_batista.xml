@@ -127,6 +127,11 @@
 										t-options='{"widget": "date","format": "dd/MM/yyyy"}' />
 								</span>
 							</p>
+                            <p style="margin-bottom: 0;">
+                                <span t-if="doc.payment_term_id.name">Payment Terms: <span t-field="doc.payment_term_id.name"/>
+                                </span>
+                                <br/>
+                            </p>
 							<p style="margin-bottom: 0;">
 								<span t-if="doc.payment_mode_id.name">
 									Payment Method:

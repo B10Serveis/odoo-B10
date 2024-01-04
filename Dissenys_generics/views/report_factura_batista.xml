@@ -108,23 +108,28 @@
                                         <strong>Invoice</strong>
                                     </span>
                                     <span t-if="not o.amount_total_signed >= 0">
-                                        <strong>Factura d'abonament</strong>
+                                        <strong>Credit note</strong>
                                     </span>
                                 </h5>
                             </span>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.name and o.amount_total_signed >= 0">Invoice: <span t-field="doc.name"/>
                                 </span>
-                                <span t-if="doc.name and not o.amount_total_signed >= 0">Factura d'abonament: <span t-field="doc.name"/>
+                                <span t-if="doc.name and not o.amount_total_signed >= 0">Credit note: <span t-field="doc.name"/>
                                 </span>
                             </p>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.invoice_date and o.amount_total_signed >= 0">Invoice Date: <span t-field="doc.invoice_date"
                                     t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
                                 </span>
-                                <span t-if="doc.invoice_date and not o.amount_total_signed >= 0">Data Abonament: <span t-field="doc.invoice_date"
+                                <span t-if="doc.invoice_date and not o.amount_total_signed >= 0">Credit note Date: <span t-field="doc.invoice_date"
                                     t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
                                 </span>
+                            </p>
+                            <p style="margin-bottom: 0;">
+                                <span t-if="doc.invoice_payment_term_id.name">Payment Terms: <span t-field="doc.invoice_payment_term_id.name"/>
+                                </span>
+                                <br/>
                             </p>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.payment_mode_id.name">Payment Method: <span t-field="doc.payment_mode_id.name"/>
