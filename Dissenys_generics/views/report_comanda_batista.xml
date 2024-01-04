@@ -119,6 +119,14 @@
                                     t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
                                 </span>
                             </p>
+                            <p t-if="doc.commitment_date"
+                                style="margin-bottom: 0;">
+                                <span>
+                                    Commitment Date:
+                                    <span t-field="doc.commitment_date"
+                                        t-options='{"widget": "date","format": "dd/MM/yyyy"}' />
+                                </span>
+                            </p>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.payment_mode_id.name">Payment Method: <span t-field="doc.payment_mode_id.name"/>
                                 </span>
