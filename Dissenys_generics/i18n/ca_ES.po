@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-02 10:02+0000\n"
-"PO-Revision-Date: 2024-01-02 11:06+0100\n"
+"POT-Creation-Date: 2024-01-04 09:59+0000\n"
+"PO-Revision-Date: 2024-01-04 11:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -72,6 +72,7 @@ msgstr ""
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "<span>.</span>"
 msgstr ""
 
@@ -82,6 +83,7 @@ msgstr "<span>N/S: </span>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "<span>This quotation is valid until </span>"
 msgstr "<span>Aques pressupost és vàlid fins </span>"
 
@@ -129,76 +131,48 @@ msgid ""
 "According to the GDPR, we inform you that we will\n"
 "\t\t\t\t\t\t\t\t\tprocess your personal data in order to carry out\n"
 "\t\t\t\t\t\t\t\t\tadministrative, accounting and fiscal management. Data\n"
-"\t\t\t\t\t\t\t\t\tproportionately, the time required by a legal "
-"obligation will\n"
-"\t\t\t\t\t\t\t\t\tbe retained and will not be transferred to third "
-"parties except\n"
-"\t\t\t\t\t\t\t\t\tlegal provision required, or if necessary, prior "
-"consent of The\n"
-"\t\t\t\t\t\t\t\t\tinterested party. It will be able to exercise the "
-"following\n"
-"\t\t\t\t\t\t\t\t\trights on its personal data: right of access, "
-"rectification,\n"
-"\t\t\t\t\t\t\t\t\terasure, oblate, limitation, opposition, portability "
-"and to\n"
-"\t\t\t\t\t\t\t\t\twithdraw the consent given, to the address indicated in "
-"this\n"
-"\t\t\t\t\t\t\t\t\tdocument. In addition, it will be able to contact the "
-"competent\n"
-"\t\t\t\t\t\t\t\t\tsupervisory authority in the field of data protection "
-"by get\n"
+"\t\t\t\t\t\t\t\t\tproportionately, the time required by a legal obligation will\n"
+"\t\t\t\t\t\t\t\t\tbe retained and will not be transferred to third parties except\n"
+"\t\t\t\t\t\t\t\t\tlegal provision required, or if necessary, prior consent of The\n"
+"\t\t\t\t\t\t\t\t\tinterested party. It will be able to exercise the following\n"
+"\t\t\t\t\t\t\t\t\trights on its personal data: right of access, rectification,\n"
+"\t\t\t\t\t\t\t\t\terasure, oblate, limitation, opposition, portability and to\n"
+"\t\t\t\t\t\t\t\t\twithdraw the consent given, to the address indicated in this\n"
+"\t\t\t\t\t\t\t\t\tdocument. In addition, it will be able to contact the competent\n"
+"\t\t\t\t\t\t\t\t\tsupervisory authority in the field of data protection by get\n"
 "\t\t\t\t\t\t\t\t\tadditional information or file a complaint."
 msgstr ""
-"D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades "
-"personals amb la finalitat de realitzar la gestió administrativa, "
-"comptable i fiscal. Les dades\n"
-"proporcionades es conservaran el temps exigible per una obligació legal i "
-"no seran cedides a tercers excepte previsió legal exigible, o en el seu "
-"cas, previ consentiment de\n"
-"l’interessat. Podrà exercir els següents drets sobre les seves dades "
-"personals: dret d’accés, rectificació, supressió, oblit, limitació, "
-"oposició, portabilitat i a retirar el\n"
-"consentiment prestat, a l’adreça assenyalada en el present document. A "
-"més, podrà adreçar-se a l’autoritat de Control competent en matèria de "
-"Protecció de Dades per\n"
+"D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades personals amb la finalitat de realitzar la gestió administrativa, comptable i fiscal. Les dades\n"
+"proporcionades es conservaran el temps exigible per una obligació legal i no seran cedides a tercers excepte previsió legal exigible, o en el seu cas, previ consentiment de\n"
+"l’interessat. Podrà exercir els següents drets sobre les seves dades personals: dret d’accés, rectificació, supressió, oblit, limitació, oposició, portabilitat i a retirar el\n"
+"consentiment prestat, a l’adreça assenyalada en el present document. A més, podrà adreçar-se a l’autoritat de Control competent en matèria de Protecció de Dades per\n"
 "obtenir informació addicional o presentar una reclamació."
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid ""
-"According to the GDPR, we inform you that we will process your personal "
-"data in order to carry out administrative, accounting and fiscal "
-"management. Data\n"
-"proportionately, the time required by a legal obligation will be retained "
-"and will not be transferred to third parties except legal provision "
-"required, or if necessary, prior consent of\n"
-"The interested party. It will be able to exercise the following rights on "
-"its personal data: right of access, rectification, erasure, oblate, "
-"limitation, opposition, portability and to withdraw the\n"
-"consent given, to the address indicated in this document. In addition, it "
-"will be able to contact the competent supervisory authority in the field "
-"of data protection by\n"
+"According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
+"proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of\n"
+"The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the\n"
+"consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by\n"
 "get additional information or file a complaint."
 msgstr ""
-"D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades "
-"personals amb la finalitat de realitzar la gestió administrativa, "
-"comptable i fiscal. Les dades\n"
-"proporcionades es conservaran el temps exigible per una obligació legal i "
-"no seran cedides a tercers excepte previsió legal exigible, o en el seu "
-"cas, previ consentiment de\n"
-"l’interessat. Podrà exercir els següents drets sobre les seves dades "
-"personals: dret d’accés, rectificació, supressió, oblit, limitació, "
-"oposició, portabilitat i a retirar el\n"
-"consentiment prestat, a l’adreça assenyalada en el present document. A "
-"més, podrà adreçar-se a l’autoritat de Control competent en matèria de "
-"Protecció de Dades per\n"
+"D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades personals amb la finalitat de realitzar la gestió administrativa, comptable i fiscal. Les dades\n"
+"proporcionades es conservaran el temps exigible per una obligació legal i no seran cedides a tercers excepte previsió legal exigible, o en el seu cas, previ consentiment de\n"
+"l’interessat. Podrà exercir els següents drets sobre les seves dades personals: dret d’accés, rectificació, supressió, oblit, limitació, oposició, portabilitat i a retirar el\n"
+"consentiment prestat, a l’adreça assenyalada en el present document. A més, podrà adreçar-se a l’autoritat de Control competent en matèria de Protecció de Dades per\n"
 "obtenir informació addicional o presentar una reclamació."
 
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.comanda_batista
 msgid "Comanda Estandard"
 msgstr ""
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+msgid "Commitment Date:"
+msgstr "Data de lliurament:"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -348,17 +322,9 @@ msgstr "Mostrar imatge del producte"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "Sign and stamp this quotation to accept it."
 msgstr "Signeu i segelleu aquest pressupost per acceptar-lo."
-
-#. module: Dissenys_generics
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
-msgid ""
-"Sign and stamp this quotation to accept it. A valid quotation for 15 days "
-"from the date of the quotation."
-msgstr ""
-"Signeu i segelleu aquest pressupost per acceptar-lo. Aquest pressupost és "
-"vàlid durant 15 dies a partir de la data del pressupost."
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
