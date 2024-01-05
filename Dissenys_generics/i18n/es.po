@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 10:22+0000\n"
-"PO-Revision-Date: 2024-01-04 11:24+0100\n"
+"POT-Creation-Date: 2024-01-05 08:34+0000\n"
+"PO-Revision-Date: 2024-01-05 09:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,6 @@ msgstr ""
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "<span>.</span>"
 msgstr ""
 
@@ -87,7 +86,6 @@ msgstr "<span>N/S: </span>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "<span>This quotation is valid until </span>"
 msgstr "<span>Este presupuesto es válido hasta el </span>"
 
@@ -277,7 +275,16 @@ msgstr "Forma de pago"
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid "Payment Term:"
-msgstr ""
+msgstr "Plazos de pago:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_compra_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
+msgid "Payment Terms:"
+msgstr "Plazos de pago:"
 
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.pressupost_batista
@@ -348,13 +355,11 @@ msgstr "Mostrar imagen del producto"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "Sign and stamp this quotation to accept it."
 msgstr "Firme y selle este presupuesto para aceptarlo."
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid "Signature and Stamp for acceptance"
 msgstr "Firma y sello para la aceptación"
 
@@ -376,15 +381,6 @@ msgstr "NIF:"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "Tel:"
-msgstr ""
-
-#. module: Dissenys_generics
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_compra_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
-msgid "Term:"
 msgstr ""
 
 #. module: Dissenys_generics
