@@ -299,7 +299,6 @@
 					</div>
 					<div class="col-6"
 						style="padding-left:10px;">
-						<p>Sign and stamp this quotation to accept it.</p>
 						<p t-if="doc.validity_date">
 							<span>This quotation is valid until </span>
 							<span t-if="doc.validity_date"
