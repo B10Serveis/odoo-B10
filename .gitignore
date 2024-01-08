@@ -13,3 +13,6 @@ B10_helpdesk/models/__pycache__/helpdeskB10.cpython-39.pyc
 plantilles_email/models/__pycache__/__init__.cpython-39.pyc
 plantilles_email/models/__pycache__/models.cpython-39.pyc
 plantilles_email/__pycache__/__init__.cpython-39.pyc
+B10_contracts/__pycache__/__init__.cpython-39.pyc
+B10_contracts/models/__pycache__/__init__.cpython-39.pyc
+B10_contracts/models/__pycache__/contractsB10.cpython-39.pyc

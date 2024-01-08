@@ -52,6 +52,11 @@ Changelog
 
 * [ADD] Trasllat a V.16.
 
+16.0.1.1.0 (2024-01-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegit data de caducitat del contracte.
+
 Bug Tracker
 ===========
 
