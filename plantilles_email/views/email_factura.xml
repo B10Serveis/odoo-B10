@@ -47,7 +47,7 @@
                                                         <td valign="middle"
                                                             style="padding: 16px; font-size: 20px; font-weight: bold; color: white;">
                                                             <span >Invoice from </span>
-                                                            <t t-out="object.user_id.company_id.name or ''"
+                                                            <t t-out="object.company_id.name or ''"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -114,7 +114,7 @@
                                                             align="right">
                                                             <img t-attf-src="/logo.png?company={{ object.user_id.company_id.id }}"
                                                                 style="padding: 0px; margin: 16px; height: auto; width: 100px;"
-                                                                t-att-alt="object.user_id.company_id.name"/>
+                                                                t-att-alt="object.company_id.name"/>
                                                         </td>
                                                     </tr>
                                                 </tbody>
