@@ -330,7 +330,7 @@
 						</div>
 					</div>
 					<div class="col-6">
-						<p>Sign and stamp this quotation to accept it.</p>
+						<p>Return this quotation signed or stamped to confirm its validity.</p>
 						<p t-if="doc.validity_date">
 							<span>This quotation is valid until </span>
 							<span t-if="doc.validity_date"
