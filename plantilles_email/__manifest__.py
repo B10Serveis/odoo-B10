@@ -19,5 +19,6 @@
         "views/email_factura.xml",
         "views/email_comanda.xml",
         "views/email_pressupost.xml",
+        "views/email_proforma.xml",
     ],
 }
