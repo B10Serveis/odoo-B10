@@ -32,5 +32,7 @@
         "views/report_proforma_batista.xml",
         "views/comanda_compra_batista.xml",
         "views/report_comanda_compra_batista.xml",
+        "views/entrega_batista.xml",
+        "views/report_entrega_batista.xml",
     ],
 }
