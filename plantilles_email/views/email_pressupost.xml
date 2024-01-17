@@ -6,9 +6,9 @@
         <field name="model_id"
             ref="sale.model_sale_order"/>
         <field name="subject">{{ object.company_id.name }} Order ref. {{ object.name or 'n/a' }}</field>
-        <field name="email_from">{{ user.email_formatted or object.invoice_user_id.email_formatted or object.company_id.email_formatted }}</field>
+        <field name="email_from">{{ user.email_formatted  }}</field>
         <field name="email_to">{{ object.partner_id.email_formatted }}</field>
-        <field name="reply_to">{{ user.email_formatted or object.invoice_user_id.email_formatted or object.company_id.email_formatted }}</field>
+        <field name="reply_to">{{ user.email_formatted  }}</field>
         <field name="lang">{{ object.partner_id.lang }}</field>
         <field name="auto_delete"
             eval="True" />
