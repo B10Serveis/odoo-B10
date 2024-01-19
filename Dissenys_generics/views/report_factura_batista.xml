@@ -243,7 +243,7 @@
                                                         t-value="0"/>
                                                     <t t-foreach="lot_values"
                                                         t-as="snln_line">
-                                                        <t t-if="l.product_id.display_name==snln_line['product_name']">
+                                                        <t t-if="line.product_id.display_name==snln_line['product_name']">
                                                             <!-- Si és el 1r SN -->
                                                             <t t-if="i==0">
                                                                 <span>S/N: </span>

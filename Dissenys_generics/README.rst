@@ -49,6 +49,11 @@ Changelog
 
 * [ADD] Afegir termini de pagament als documents
 
+16.0.1.0.2 (2024-01-19)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correció bug num serie
+
 
 Bug Tracker
 ===========
