@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.0.2",
+    "version": "16.0.1.1.2",
     "depends": [
         "base",
         "account_payment_partner",
@@ -31,5 +31,6 @@
         "views/report_proforma_batista.xml",
         "views/entrega_batista.xml",
         "views/report_entrega_batista.xml",
+        "data/account.payment.method.csv",
     ],
 }

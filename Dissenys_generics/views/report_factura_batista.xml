@@ -136,7 +136,9 @@
                                 <br/>
                             </p>
                             <p style="margin-bottom: 0;">
-                                <span t-if="doc.payment_mode_id.name and 'Transfe' in doc.payment_mode_id.name">IBAN: <span t-field="doc.partner_bank_id.acc_number"/>
+                                <span t-if="doc.payment_mode_id.name 
+                                    and doc.payment_mode_id.payment_method_id.code 
+                                    and doc.payment_mode_id.payment_method_id.code=='bank_transfer'">IBAN: <span t-field="doc.partner_bank_id.acc_number"/>
                                 </span>
                             </p>
                         </div>

@@ -34,7 +34,8 @@ Usage
 
 To use this module, you need to:
 
-#. Impressió de documents acabats amb l'extensió B10
+#. Impressió de documents acabats amb l'extensió B10.
+#. ATENCIÓ: Perque es mostri l'IBAN si el mode de pagament és Transferencia cal seleccionar al Mode de pagament el Mètode de pagament 'Bank Transfer'.
 
 Changelog
 =========
@@ -53,6 +54,12 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Correció bug num serie
+
+16.0.1.1.2 (2024-01-22)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Mostra iban a Factura si el mètode de pagament associat al mode de pagament és 'Bank Transfer'
+* [ADD] Fitxer data per afegir metode de pagament 'Bank Transfer'
 
 
 Bug Tracker
@@ -77,6 +84,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
