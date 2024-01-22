@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.1.2",
     "depends": [
         "base",
         "account_payment_partner",
@@ -13,7 +13,6 @@
         "stock",
         "state_original_name",
         "sale_management",
-        "state_original_name",
         "l10n_es_partner",
     ],
     "license": "AGPL-3",
@@ -34,5 +33,6 @@
         "views/report_comanda_compra_batista.xml",
         "views/entrega_batista.xml",
         "views/report_entrega_batista.xml",
+        "data/account.payment.method.csv",
     ],
 }
