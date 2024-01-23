@@ -13,7 +13,10 @@ Creates a field on res.country.state to show the original name of spanish states
 Changelog
 =========
 
+14.0.1.0.0 (2024-01-23)
+~~~~~~~~~~~~~~~~~~~~~~~
 
+* [ADD] Traspassat a 14.0
 
 
 Bug Tracker
@@ -33,11 +36,11 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
 ~~~~~~~~~~~~~
-
 
 The development of this module has been financially supported by:
 
