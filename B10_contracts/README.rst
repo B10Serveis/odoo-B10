@@ -57,6 +57,12 @@ Changelog
 
 * [ADD] Afegit data de caducitat del contracte.
 
+16.0.1.2.0 (2024-01-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] A contract.line fer el camp last_date_invoiced editable i el camp is_canceled visible i editable.
+* [ADD] A contract.contract fer el camp last_date_invoiced visible i editable.
+
 Bug Tracker
 ===========
 
@@ -79,6 +85,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
