@@ -24,3 +24,4 @@ Contribuidores
 * Rodrigo Colombo <rodrigo.covl@gmail.com> <rcolombo@sdatos.es>
 * Héctor J. Ravelo <hravelo@sdatos.es>
 * Marc Tormo <marc@batista10.cat>
+* Joan Llimiñana i Sabaté <joan@batista10.cat>

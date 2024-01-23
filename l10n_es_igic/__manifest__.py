@@ -12,26 +12,26 @@
 ##############################################################################
 
 {
-    'name': 'IGIC (Impuesto General Indirecto Canario',
-    'version': '14.0.1.0.0',
-    'author': "David Diz Martínez <daviddiz@gmail.com>,"
-              "Atlantux Consultores - Enrique Zanardi,"
-              "Sistemas de Datos,"
-              "Comunitea,"
-              "Batista10,"
-              "Odoo Community Association (OCA)",
-    'category': 'Localisation/Account Charts',
+    "name": "IGIC (Impuesto General Indirecto Canario",
+    "version": "14.0.1.0.0",
+    "author": "David Diz Martínez <daviddiz@gmail.com>,"
+    "Atlantux Consultores - Enrique Zanardi,"
+    "Sistemas de Datos,"
+    "Comunitea,"
+    "Batista10,"
+    "Odoo Community Association (OCA)",
+    "category": "Localisation/Account Charts",
     "website": "https://github.com/OCA/l10n-spain",
-    "depends": ['l10n_es'],
+    "depends": ["l10n_es"],
     "license": "AGPL-3",
-    'data': ['data/account_chart_template_data.xml',
-    		 'data/account_group.xml',
-             'data/account.account.template-igic.csv',
-             'data/account_data.xml',
-             'data/account_tax_data.xml',
-        	 'data/account_fiscal_position_template_data.xml',
-        	 ],
-    'installable': True,
-    'auto_install': False,
+    "data": [
+        "data/account_chart_template_data.xml",
+        "data/account_group.xml",
+        "data/account.account.template-igic.csv",
+        "data/account_data.xml",
+        "data/account_tax_data.xml",
+        "data/account_fiscal_position_template_data.xml",
+    ],
+    "installable": True,
+    "auto_install": False,
 }
-
