@@ -52,6 +52,13 @@ Changelog
 
 * [ADD] Traslladat a 14.0.
 
+14.0.1.2.0 (2024-01-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] A contract.line fer el camp last_date_invoiced editable i el camp is_canceled visible i editable.
+* [ADD] A contract.contract fer el camp last_date_invoiced visible i editable.
+
+
 Bug Tracker
 ===========
 

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-08 11:25+0000\n"
-"PO-Revision-Date: 2024-01-08 12:27+0100\n"
+"POT-Creation-Date: 2024-01-23 16:00+0000\n"
+"PO-Revision-Date: 2024-01-23 17:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Plural-Forms: \n"
 "Language: ca_ES\n"
 "X-Generator: Poedit 2.4.2\n"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.contract_line_form_B10
+msgid "Canceled"
+msgstr "Cancel·lat"
 
 #. module: B10_contracts
 #: model:ir.model,name:B10_contracts.model_contract_contract
@@ -36,3 +41,8 @@ msgstr "Caducitat"
 #: model_terms:ir.ui.view,arch_db:B10_contracts.contract_form_B10
 msgid "Expiration date"
 msgstr "Data Caducitat"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.contract_form_B10
+msgid "Last date invoiced"
+msgstr "Darrera Data de Facturació"
