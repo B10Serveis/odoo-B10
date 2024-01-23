@@ -47,15 +47,10 @@ Known issues / Roadmap
 Changelog
 =========
 
-16.0.1.0.0 (2023-09-12)
+14.0.1.1.0 (2024-01-23)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Trasllat a V.16.
-
-16.0.1.1.0 (2024-01-08)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Afegit data de caducitat del contracte.
+* [ADD] Traslladat a 14.0.
 
 Bug Tracker
 ===========
@@ -79,6 +74,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan LLimiñana <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
