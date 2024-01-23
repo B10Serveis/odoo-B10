@@ -79,4 +79,16 @@ The development of this module has been financially supported by:
 Maintainers
 ~~~~~~~~~~~
 
-* Batista10
+This module is maintained by the OCA.
+
+.. image:: https://odoo-community.org/logo.png
+   :alt: Odoo Community Association
+   :target: https://odoo-community.org
+
+OCA, or the Odoo Community Association, is a nonprofit organization whose
+mission is to support the collaborative development of Odoo features and
+promote its widespread use.
+
+This module is part of the `OCA/odoob10 <https://github.com/OCA/odoob10/tree/12.0/B10_contractes>`_ project on GitHub.
+
+You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
