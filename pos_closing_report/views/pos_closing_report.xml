@@ -1,66 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <template id="report_pos_closing_report">
-      <t t-call="web.html_container">
-        <t t-call="web.internal_layout">
-          <div class="page">
-            <div class="text-center">
-              <h2>POS CLOSING REPORT</h2>
-            </div>
-            <div><strong>Point of Sale: </strong><span t-esc="name"/><strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/><strong> Date end: </strong><span t-esc="date_stop" t-options="{'widget': 'date'}"/></div>
-            <table class="table table-condensed">
-              <thead>
-                <th>Session</th>
-                <th>Status</th>
-                <th>Date init</th>
-                <th>Date end</th>
-                <th class="text-right">Amount</th>
-              </thead>
-              <tbody>
-                <tr t-foreach="sessions" t-as="line_ids" style="background-color: lightgrey;">
-                  <td>
-                    <span t-esc="line_ids['session_name']"/>
-                  </td>
-                  <td>
-                    <span t-esc="line_ids['session_stat']"/>
-                  </td>
-                  <td>
-                    <span t-esc="line_ids['session_ini']" t-options="{'widget': 'date'}"/>
-                  </td>
-                  <td>
-                    <span t-esc="line_ids['session_fi']" t-options="{'widget': 'date'}"/>
-                  </td>
-                  <td class="text-right">
-                    <span t-esc="line_ids['session_amount']"/>
-                  </td>
-                  <tr>
-                  <th class="text-right" colspan="1">Payment Mode</th>
-                  <th class="text-right">Initial Amount</th>
-                  <th class="text-right">Declared</th>
-                  <th class="text-right">Real</th>
-                  </tr>
-                  <tr t-foreach="linies" t-as="line_pay" t-if="line_pay['session_nom'] == line_ids['session_name']" >
-                    <td class="text-right" colspan="1">
-                      <span t-esc="line_pay['fpago']" />
-                    </td>
-                    <td class="text-right"> 
-                        <span t-esc="line_pay['canvi']"/>
-                    </td>
-                    <td class="text-right"> 
-                        <span t-esc="line_pay['declarat']"/>
-                    </td>
-                    <td class="text-right"> 
-                        <span t-esc="line_pay['total']"/>
-                    </td>
-                  </tr>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </t>
-      </t>
-    </template>
-  </data>
+	<data>
+		<template id="report_pos_closing_report">
+			<t t-call="web.html_container">
+				<t t-call="web.internal_layout">
+					<div class="page">
+						<div class="text-center">
+							<h2>POS CLOSING REPORT</h2>
+						</div>
+						<div>
+							<strong>Point of Sale: </strong>
+							<span t-esc="name"/>
+							<strong> Date Start: </strong>
+							<span t-esc="date_start"
+								t-options="{'widget': 'date'}"/>
+							<strong> Date end: </strong>
+							<span t-esc="date_stop"
+								t-options="{'widget': 'date'}"/>
+						</div>
+						<table class="table table-condensed">
+							<thead>
+								<th>Session</th>
+								<th>Status</th>
+								<th>Date init</th>
+								<th>Date end</th>
+								<th class="text-right">Amount</th>
+							</thead>
+							<tbody>
+								<tr t-foreach="sessions"
+									t-as="line_ids"
+									style="background-color: lightgrey;">
+									<td>
+										<span t-esc="line_ids['session_name']"/>
+									</td>
+									<td>
+										<span t-esc="line_ids['session_stat']"/>
+									</td>
+									<td>
+										<span t-esc="line_ids['session_ini']"
+											t-options="{'widget': 'date'}"/>
+									</td>
+									<td>
+										<span t-esc="line_ids['session_fi']"
+											t-options="{'widget': 'date'}"/>
+									</td>
+									<td class="text-right">
+										<span t-esc="line_ids['session_amount']"/>
+									</td>
+									<tr>
+										<th class="text-right"
+											colspan="1">Payment Mode</th>
+										<th class="text-right">Initial Amount</th>
+										<th class="text-right">Declared</th>
+										<th class="text-right">Real</th>
+									</tr>
+									<tr t-foreach="linies"
+										t-as="line_pay"
+										t-if="line_pay['session_nom'] == line_ids['session_name']">
+										<td class="text-right"
+											colspan="1">
+											<span t-esc="line_pay['fpago']" />
+										</td>
+										<td class="text-right">
+											<span t-esc="line_pay['canvi']"/>
+										</td>
+										<td class="text-right">
+											<span t-esc="line_pay['declarat']"/>
+										</td>
+										<td class="text-right">
+											<span t-esc="line_pay['total']"/>
+										</td>
+									</tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+	</data>
 </odoo>
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     "name": "Informe de tancament de caixa TPV",
     "summary": """Informe de tancament de caixa TPV""",
@@ -10,9 +9,9 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "security/ir.model.access.csv",
         "wizard/pos_wizard_report.xml",
         "views/pos_closing.xml",
         "views/pos_closing_report.xml",
     ],
-    "installable": False,
 }

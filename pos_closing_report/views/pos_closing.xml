@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <report 
-            id="pos_closing_report"
+        <report id="pos_closing_report"
             model="report.pos_closing_report.pos_closing_report"
             string="POS Closing Report"
             report_type="qweb-pdf"
             name="pos_closing_report.report_pos_closing_report"
-            file="pos_closing_report.pos_closing_report"
-            />
+            file="pos_closing_report.pos_closing_report" />
     </data>
 </odoo>
