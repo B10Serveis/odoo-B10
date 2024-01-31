@@ -51,6 +51,11 @@ Changelog
 * [ADD] Mostra iban a Factura si el mètode de pagament associat al mode de pagament és 'Bank Transfer'
 * [ADD] Fitxer data per afegir metode de pagament 'Bank Transfer'
 
+15.0.1.1.3 (2024-01-31)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció de text "Factura abonament" al angles i traducció
+
 
 Bug Tracker
 ===========
