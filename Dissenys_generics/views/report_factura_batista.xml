@@ -109,21 +109,21 @@
                                         <strong>Invoice</strong>
                                     </span>
                                     <span t-if="not o.amount_total_signed >= 0">
-                                        <strong>Factura d'abonament</strong>
+                                        <strong>Refund invoice</strong>
                                     </span>
                                 </h5>
                             </span>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.name and o.amount_total_signed >= 0">Invoice: <span t-field="doc.name"/>
                                 </span>
-                                <span t-if="doc.name and not o.amount_total_signed >= 0">Factura d'abonament: <span t-field="doc.name"/>
+                                <span t-if="doc.name and not o.amount_total_signed >= 0">Refund invoice: <span t-field="doc.name"/>
                                 </span>
                             </p>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.invoice_date and o.amount_total_signed >= 0">Invoice Date: <span t-field="doc.invoice_date"
                                     t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
                                 </span>
-                                <span t-if="doc.invoice_date and not o.amount_total_signed >= 0">Data Abonament: <span t-field="doc.invoice_date"
+                                <span t-if="doc.invoice_date and not o.amount_total_signed >= 0">Refund Date: <span t-field="doc.invoice_date"
                                     t-options='{"widget": "date","format": "dd/MM/yyyy"}'/>
                                 </span>
                             </p>
