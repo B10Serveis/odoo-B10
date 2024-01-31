@@ -1,2 +1,2 @@
 "id","code","name","payment_type"
-"account_payment_method_bank_transfer","bank_transfer","Bank transfer","Entrada"
+"account_payment_method_bank_transfer","bank_transfer","Bank transfer","Inbound"
