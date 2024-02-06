@@ -338,11 +338,64 @@
                         id="b10_totaltable"
                         style="margin-left: 0px ">
                         <div class="col-6">
-                            <t t-if="doc.narration">
-                                <div class="jumbotron"
-                                    t-field="doc.narration">
-                                </div>
-                            </t>
+                            <div class="row"
+                                id="b10_narration">
+                                <t t-if="doc.narration">
+                                    <div class="jumbotron"
+                                        t-field="doc.narration">
+                                    </div>
+                                </t>
+                            </div>
+                            <div class="row"
+                                id="b10_payment_terms">
+
+                                <t t-set="payment_term_details"
+                                    t-value="o.payment_term_details"/>
+                                <div t-if="o.invoice_payment_term_id.display_on_invoice and payment_term_details"
+                                    t-field="o.invoice_payment_term_id.note"
+                                    name="payment_term"/>
+                            </div>
+                            <div class="row"
+                                id="b10_payment_terms_table">
+                                <t t-if="o.invoice_payment_term_id.display_on_invoice and payment_term_details">
+                                    <div t-if='o.show_payment_term_details'
+                                        id="total_payment_term_details_table"
+                                        class="row"
+                                        style="padding-right: 20px;">
+
+                                        <table class="table table-sm"
+                                            style="page-break-inside: avoid; width: 300px;">
+                                            <th class="border-black text-start">
+                                            Due Date
+                                            </th>
+                                            <th class="border-black text-end">
+                                            Amount Due
+                                            </th>
+                                            <th t-if="o.show_discount_details"
+                                                class="border-black text-end">
+                                            Discount
+                                            </th>
+                                            <t t-foreach="payment_term_details"
+                                                t-as="term">
+                                                <tr>
+                                                    <td t-esc="term.get('date')"
+                                                        class="text-start"/>
+                                                    <td t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                                        t-esc="term.get('amount')"
+                                                        class="text-end"/>
+                                                    <td t-if="term.get('discount_date')"
+                                                        class="text-end">
+                                                        <span t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                                            t-esc="term.get('discount_amount_currency')"/>
+                                                                if paid before
+                                                        <span t-esc="term.get('discount_date')"/>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </table>
+                                    </div>
+                                </t>
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="clearfix">
