@@ -56,6 +56,15 @@ Changelog
 
 * [FIX] Correcció de text "Factura abonament" al angles i traducció
 
+15.0.1.2.3 (2024-02-07)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegim el camp display_on_invoice al model account.payment.term
+* [ADD] Mostrem el camp display_on_invoice a la vista account.view_payment_term_form
+* [ADD] Al disseny de factura mostrem taula de terminis de pagament si el camp display_on_invoice és True
+
+
+
 
 Bug Tracker
 ===========

@@ -300,11 +300,49 @@
                         id="b10_totaltable"
                         style="margin-left: 0px ">
                         <div class="col-6">
-                            <t t-if="doc.narration">
-                                <div class="jumbotron"
-                                    t-field="doc.narration">
-                                </div>
-                            </t>
+                            <div class="row"
+                                id="b10_narration">
+                                <t t-if="doc.narration">
+                                    <div class="jumbotron"
+                                        t-field="doc.narration"
+                                        style="width:400px">
+                                    </div>
+                                </t>
+                            </div>
+                            <div class="row"
+                                id="b10_payment_terms"
+                                t-if="doc.invoice_payment_term_id.name and doc.invoice_payment_term_id.display_on_invoice">
+                                <span>Payment term: </span>
+                                <span t-field="doc.invoice_payment_term_id.name"/>
+                            </div>
+                            <div class="row"
+                                id="b10_payment_terms_table"
+                                t-if="doc.invoice_payment_term_id.display_on_invoice">
+                                <table class="table table-condensed table-striped"
+                                    style="width:300px">
+                                    <thead>
+                                        <tr>
+                                            <th>Due date</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- .sorted(key=lambda r: r.date_maturity) -->
+                                        <t t-foreach="doc.line_ids"
+                                            t-as="due">
+                                            <tr t-if="due.debit != 0">
+                                                <td>
+                                                    <span t-field="due.date_maturity"/>
+                                                </td>
+                                                <td>
+                                                    <span t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                                        t-esc="due.balance * doc.currency_id.rate"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="clearfix">

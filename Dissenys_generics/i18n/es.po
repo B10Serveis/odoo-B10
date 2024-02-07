@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-31 08:30+0000\n"
-"PO-Revision-Date: 2024-01-31 09:33+0100\n"
+"POT-Creation-Date: 2024-02-07 09:58+0000\n"
+"PO-Revision-Date: 2024-02-07 11:02+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -117,6 +117,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
 msgid "<span>.</span>"
 msgstr ""
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "<span>Payment term: </span>"
+msgstr "<span>Terminio pago: </span>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -231,6 +236,11 @@ msgstr ""
 "obtener información adicional o presentar una reclamación."
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Amount"
+msgstr "Importe"
+
+#. module: Dissenys_generics
 #: model:account.payment.method,name:Dissenys_generics.account_payment_method_bank_transfer
 msgid "Bank transfer"
 msgstr "Transferencia"
@@ -284,6 +294,11 @@ msgstr "Descripción"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "Disc.(%)"
 msgstr "Desc.(%)"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Due date"
+msgstr "Fecha"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -361,6 +376,11 @@ msgstr "Forma de pago:"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid "Payment Term:"
 msgstr "Plazos de pago:"
+
+#. module: Dissenys_generics
+#: model:ir.model,name:Dissenys_generics.model_account_payment_term
+msgid "Payment Terms"
+msgstr "Plazos de pago"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -462,6 +482,11 @@ msgstr "Pedido de venta"
 #: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__show_product_image
 msgid "Show product image"
 msgstr "Mostrar imagen del producto"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_payment_term__display_on_invoice
+msgid "Show the terms of the invoice"
+msgstr "Mostrar terminios de la factura"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
