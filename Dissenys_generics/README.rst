@@ -61,6 +61,14 @@ Changelog
 * [ADD] Mostra iban a Factura si el mètode de pagament associat al mode de pagament és 'Bank Transfer'
 * [ADD] Fitxer data per afegir metode de pagament 'Bank Transfer'
 
+16.0.1.2.2 (2024-02-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Agrupar linies de factura per comanda d'origen.
+* [ADD] Afegir apartat de configuració B10 amb opció per agrupar o no les linies de factura.
+* [ADD] Afegir opció a la factura per agrupar o no les linies de factura.
+
+
 
 Bug Tracker
 ===========
