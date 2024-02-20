@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-06 15:03+0000\n"
-"PO-Revision-Date: 2024-02-06 16:06+0100\n"
+"POT-Creation-Date: 2024-02-20 09:42+0000\n"
+"PO-Revision-Date: 2024-02-20 11:27+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -46,6 +46,19 @@ msgstr "('Presupuesto_'+object.name)"
 #: model:ir.actions.report,print_report_name:Dissenys_generics.entrega_batista
 msgid "('StockPicking_'+object.name)"
 msgstr "('Entrega_'+object.name)"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.res_config_settings_view_form
+msgid ""
+"<b>Group invoice lines by origin</b>\n"
+"                                <br modifiers=\"{}\"/>\n"
+"                                <small>Groups invoice lines by origin on the standard designs</small>\n"
+"                                <br modifiers=\"{}\"/>"
+msgstr ""
+"<b>Agrupa linias de factura por pedido</b>\n"
+"                                <br modifiers=\"{}\"/>\n"
+"                                <small>Agrupa linias de factura por pedido en los diseños estandar</small>\n"
+"                                <br modifiers=\"{}\"/>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -222,6 +235,11 @@ msgid "Amount Due"
 msgstr "Importe"
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.res_config_settings_view_form
+msgid "B10 Settings"
+msgstr "B10 Configuraciones"
+
+#. module: Dissenys_generics
 #: model:account.payment.method,name:Dissenys_generics.account_payment_method_bank_transfer
 msgid "Bank transfer"
 msgstr ""
@@ -240,6 +258,11 @@ msgstr "Pedido Estandard"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
 msgid "Commitment Date:"
 msgstr "Fecha de entrega:"
+
+#. module: Dissenys_generics
+#: model:ir.model,name:Dissenys_generics.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -315,6 +338,23 @@ msgid "Factura Estandard"
 msgstr ""
 
 #. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_bank_statement_line__group_by_origin
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_move__group_by_origin
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_payment__group_by_origin
+msgid "Group Invoice Lines by Origin"
+msgstr "Agrupa linias de factura por Pedido"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_res_config_settings__invoice_lines_by_origin
+msgid "Group invoice lines by origin"
+msgstr "Agrupa linias de factura por Pedido"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,help:Dissenys_generics.field_res_config_settings__invoice_lines_by_origin
+msgid "Groups invoice lines by origin on the standard designs"
+msgstr "Agrupa linias de factura por Pedido en les diseños estandar"
+
+#. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid "IBAN:"
 msgstr ""
@@ -328,6 +368,11 @@ msgstr "Fecha Factura:"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid "Invoice:"
 msgstr "Factura:"
+
+#. module: Dissenys_generics
+#: model:ir.model,name:Dissenys_generics.model_account_move
+msgid "Journal Entry"
+msgstr "Entrada de Diario"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_entrega_batista_document
@@ -438,9 +483,14 @@ msgid "Sale Order:"
 msgstr "Pedido de venta:"
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Sale order"
+msgstr "Pedido"
+
+#. module: Dissenys_generics
 #: model:ir.model,name:Dissenys_generics.model_sale_order
 msgid "Sales Order"
-msgstr "Pedidos de Venta"
+msgstr "Pedido de venta"
 
 #. module: Dissenys_generics
 #: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__show_product_image
@@ -451,6 +501,11 @@ msgstr "Mostrar imagen del producto"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
 msgid "Signature and Stamp for acceptance"
 msgstr "Firma y sello para la aceptación"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.res_config_settings_view_form
+msgid "Standard designs"
+msgstr "Diseños estandar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_entrega_batista_document

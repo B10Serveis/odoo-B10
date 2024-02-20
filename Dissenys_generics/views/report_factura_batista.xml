@@ -6,7 +6,7 @@
                 <t t-set="data_report_margin_top"
                     t-value="30"/>
                 <t t-set="data_report_header_spacing"
-                    t-value="25"/>
+                    t-value="30"/>
                 <t t-set="data_report_margin_bottom"
                     t-value="25"/>
                 <t t-foreach="docs"
@@ -230,6 +230,13 @@
                         <t t-set="lines"
                             t-value="o.invoice_line_ids.sorted(key=lambda l: (-l.sequence, l.date, l.move_name, -l.id), reverse=True)"/>
 
+                        <t t-set="last_order"
+                            t-value="' '"/>
+                        <t t-set="current_order"
+                            t-value="' '"/>
+                        <t t-set="group_by_order"
+                            t-value="o.group_by_origin"/>
+
                         <t t-foreach="lines"
                             t-as="line">
                             <t t-set="current_subtotal"
@@ -238,6 +245,20 @@
                             <t t-set="current_subtotal"
                                 t-value="current_subtotal + line.price_total"
                                 groups="account.group_show_line_subtotals_tax_included"/>
+
+                            <t t-if="group_by_order">
+                                <t t-set="current_order"
+                                    t-value="(line.sale_line_ids[0].order_id.name if line.sale_line_ids else '')"/>
+                                <tr t-if="(not last_order==current_order) and (not current_order==' ')"
+                                    class="table-active"
+                                    style="border-top-color: #373737; border-bottom-color: #373737; border-width: 1px; background: #dee2e6;">
+                                    <td colspan="6">
+                                        <strong>
+                                        Sale order <span t-esc="current_order"/>
+                                        </strong>
+                                    </td>
+                                </tr>
+                            </t>
 
                             <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
                                 <t t-if="line.display_type == 'product'"
@@ -315,6 +336,8 @@
                                             t-options="{'widget': 'text'}"/>
                                     </td>
                                 </t>
+                                <t t-set="last_order"
+                                    t-value="current_order"/>
                             </tr>
                             <t t-if="current_section and (line_last or lines[line_index+1].display_type == 'line_section')">
                                 <tr class="is-subtotal text-end">

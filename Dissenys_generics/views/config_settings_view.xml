@@ -1,0 +1,52 @@
+<odoo>
+    <record id="res_config_settings_view_form"
+        model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.Dissenys_generics</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority"
+            eval="10"/>
+        <field name="inherit_id"
+            ref="base.res_config_settings_view_form"/>
+        <field name="arch"
+            type="xml">
+            <xpath expr="//div[hasclass('settings')]"
+                position="inside">
+                <div class="app_settings_block"
+                    data-string="B10 Settings"
+                    string="B10 Settings"
+                    data-key="Dissenys_generics">
+                    <h2>Standard designs</h2>
+                    <div class="row mt16 o_settings_container"
+                        modifiers="{}">
+                        <div class="col-6 col-lg-6 o_setting_box"
+                            modifiers="{}">
+                            <div class="o_setting_right_pane"
+                                modifiers="{}">
+                                <b>Group invoice lines by origin</b>
+                                <br modifiers="{}"/>
+                                <small>Groups invoice lines by origin on the standard designs</small>
+                                <br modifiers="{}"/>
+                                <field name="invoice_lines_by_origin"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_move_view_inherit"
+        model="ir.ui.view">
+        <field name="name">account.move.custom.form.inherited</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id"
+            ref="account.view_move_form"/>
+        <field name="arch"
+            type="xml">
+            <xpath expr="//field[@name='ref']"
+                position="after">
+                <field name="group_by_origin"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
