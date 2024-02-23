@@ -73,9 +73,7 @@
                                                             valign="top">
                                                             <div>
                                                                     Dear 
-                                                                <t t-out="object.partner_id.name + ',' or ','"
-                                                                    data-oe-t-inline="true"
-                                                                    contenteditable="false">
+                                                                <t t-out="object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or ''">
                                                                 </t>
                                                                 <br/>
                                                                     You have a new quotation available:
