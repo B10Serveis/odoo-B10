@@ -480,11 +480,50 @@
                         <div class="last-page">
                             <div style="clear:left; display:block; color:gray; font-size:0.75em; text-align: center;">
                                 <p style="margin-bottom: 0; text-align: center;">
-                        According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data
-proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of
-The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the
-consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by
-get additional information or file a complaint.
+                                    According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data
+                                    proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of
+                                    The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the
+                                    consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by
+                                    get additional information or file a complaint.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"
+                    id="b10_mercantil"
+                    t-if="doc.company_id.partner_id.es_libro or doc.company_id.partner_id.es_registro_mercantil or doc.company_id.partner_id.es_hoja or doc.company_id.partner_id.es_folio or doc.company_id.partner_id.es_seccion or doc.company_id.partner_id.es_volumen">
+                    <div class="col-12">
+                        <div class="last-page">
+                            <div style="clear:left; display:block; color:black; font-size:0.75em; text-align: center;">
+                                <p style="margin-bottom: 0; text-align: center;">
+                                    <span t-field="doc.company_id.name" />
+									Registered in the commercial register
+                                    <span t-if="doc.company_id.partner_id.es_registro_mercantil">
+										of
+                                        <span t-field="doc.company_id.partner_id.es_registro_mercantil" />
+                                    </span>
+                                    <span t-if="doc.company_id.partner_id.es_tomo">
+										, on the Volume
+                                        <span t-field="doc.company_id.partner_id.es_tomo" />
+                                    </span>
+                                    <span t-if="doc.company_id.partner_id.es_libro">
+										, Book
+                                        <span t-field="doc.company_id.partner_id.es_libro" />
+                                    </span>
+                                    <span t-if="doc.company_id.partner_id.es_folio">
+										, Sheet
+                                        <span t-field="doc.company_id.partner_id.es_folio" />
+                                    </span>
+                                    <span t-if="doc.company_id.partner_id.es_seccion">
+										, Section
+                                        <span t-field="doc.company_id.partner_id.es_seccion" />
+                                    </span>
+                                    <span t-if="doc.company_id.partner_id.es_hoja">
+										, Page
+                                        <span t-field="doc.company_id.partner_id.es_hoja" />
+                                    </span>
+									.
                                 </p>
                             </div>
                         </div>

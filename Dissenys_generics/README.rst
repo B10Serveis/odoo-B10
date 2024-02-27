@@ -68,6 +68,12 @@ Changelog
 * [ADD] Afegir apartat de configuració B10 amb opció per agrupar o no les linies de factura.
 * [ADD] Afegir opció a la factura per agrupar o no les linies de factura.
 
+16.0.1.3.2 (2024-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir dependencia de l10n_es_partner_mercantil
+* [ADD] Mostrar a les factures les dades del registre mercantil a sota el peu de pàgina si n'hi ha.
+
 
 
 Bug Tracker
