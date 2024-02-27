@@ -63,6 +63,11 @@ Changelog
 * [ADD] Mostrem el camp display_on_invoice a la vista account.view_payment_term_form
 * [ADD] Al disseny de factura mostrem taula de terminis de pagament si el camp display_on_invoice és True
 
+15.0.1.3.3 (2024-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir dependencia de l10n_es_partner_mercantil
+* [ADD] Mostrar a les factures les dades del registre mercantil a sota el peu de pàgina si n'hi ha.
 
 
 

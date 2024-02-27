@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-07 09:58+0000\n"
-"PO-Revision-Date: 2024-02-07 11:02+0100\n"
+"POT-Creation-Date: 2024-02-27 16:25+0000\n"
+"PO-Revision-Date: 2024-02-27 17:30+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -51,6 +51,31 @@ msgstr "('Pedido_'+object.name)"
 #: model:ir.actions.report,print_report_name:Dissenys_generics.entrega_batista
 msgid "('StockPicking_'+object.name)"
 msgstr "('Entrega_'+object.name)"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid ", Book"
+msgstr ", Libro"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid ", Page"
+msgstr ", Hoja"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid ", Section"
+msgstr ", Sección"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid ", Sheet"
+msgstr ", Folio"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid ", on the Volume"
+msgstr ", en el Tomo"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -206,6 +231,7 @@ msgstr ""
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_entrega_batista_document
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid ""
 "According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
 "                                    proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of\n"
@@ -220,7 +246,6 @@ msgstr ""
 "obtener información adicional o presentar una reclamación."
 
 #. module: Dissenys_generics
-#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_st_batista_document
 msgid ""
 "According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
@@ -464,6 +489,11 @@ msgid "Refund invoice:"
 msgstr "Factura abono:"
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Registered in the commercial register"
+msgstr "Registrada en el reg. mercantil"
+
+#. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
 msgid "Return this quotation signed or stamped to confirm its validity."
 msgstr "Devuelva este presupuesto firmado para confirmar su validez."
@@ -540,3 +570,8 @@ msgstr "Precio Unitario"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "VAT:"
 msgstr "CIF:"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "of"
+msgstr "de"

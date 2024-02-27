@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "15.0.1.2.3",
+    "version": "15.0.1.3.3",
     "depends": [
         "base",
         "account_payment_partner",
@@ -14,6 +14,7 @@
         "state_original_name",
         "sale_management",
         "l10n_es_partner",
+        "l10n_es_partner_mercantil",
     ],
     "license": "AGPL-3",
     "application": True,
