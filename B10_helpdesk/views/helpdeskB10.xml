@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="helpdesk_ticket_view_form_B10"
+            model="ir.ui.view">
+            <field name="name">helpdeskB10</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id"
+                ref="helpdesk_mgmt.ticket_view_form"/>
+            <field name="arch"
+                type="xml">
+                <xpath expr="//field[@name='partner_email']"
+                    position="after">
+                    <field name="email_ccs"
+                        widget="many2many_tags"
+                        options="{'color_field': 'color', 'no_create_edit': True}" />
+                    <field name="current_time"
+                        invisible="1"/>
+                    <field name="related_contract"
+                        options="{'color_field': 'color', 'no_create_edit': True}"
+                        domain="['|', ('date_end', '&gt;=', current_time),('date_end', '=', False)]"/>
+                </xpath>
+                <xpath expr="//page[@name='description']"
+                    position="after">
+                    <page name="internal_note"
+                        string="Internal Notes">
+                        <field name="internal_note"
+                            widget="html"/>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='internal_note']"
+                    position="after">
+                    <page name="close_note"
+                        string="Closing Notes">
+                        <field name="close_note"
+                            widget="html"/>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='channel_id']"
+                    position="after">
+                    <field name="stage_closed"
+                        invisible="1"/>
+                    <field name="worked_hours"
+                        string="Worked Hours"
+                        attrs="{'required':[('stage_closed','=','1')]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

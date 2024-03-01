@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report id="helpdesk_ticket_report_B10"
+            string="Helpsdesk ticket Estandard"
+            model="helpdesk.ticket"
+            report_type="qweb-pdf"
+            file="B10_helpdesk.template_helpdesk_ticket_B10"
+            name="B10_helpdesk.template_helpdesk_ticket_B10" />
+
+        <template id="template_helpdesk_ticket_B10">
+            <t t-call="web.html_container">
+                <t t-foreach="docs"
+                    t-as="doc">
+                    <t t-set="doc"
+                        t-value="doc.with_context()" />
+                    <!-- HEADER -->
+                    <div class="header"
+                        style="overflow: hidden;">
+                        <div class="first-page">
+                            <!-- Multicompany -->
+                            <t t-if="not o and doc">
+                                <t t-set="o"
+                                    t-value="doc"/>
+                            </t>
+                            <t t-if="o and 'company_id' in o">
+                                <t t-set="company"
+                                    t-value="o.company_id.sudo()"/>
+                            </t>
+                            <t t-if="not o or not 'company_id' in o">
+                                <t t-set="company"
+                                    t-value="res_company"/>
+                            </t>
+                            <!-- Capçalera -->
+                            <div class="row"
+                                id="b10_header"
+                                style="overflow: hidden;">
+
+                                <!-- Logo esquerra -->
+                                <div class="col-6"
+                                    id="b10_header_left">
+                                    <img t-if="doc.company_id.logo"
+                                        t-att-src="image_data_uri(doc.company_id.logo)"
+                                        style="max-width: 200px; max-height: 150px;"/>
+                                </div>
+
+
+                                <!-- Dades Empresa dreta-->
+                                <div class="col-6"
+                                    id="b10_header_right"
+                                    style="padding:15px; padding-left:30px;">
+                                    <p style="margin-bottom: 0; color:gray; font-size:0.75em;">
+                                        <strong>
+                                            <span t-if="company.name"
+                                                t-field="company.name"/>
+                                        </strong>
+                                        <br/>
+                                        <span t-if="company.vat">VAT: <span t-field="company.vat"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0; color:gray; font-size:0.75em; margin-bottom:10px">
+                                        <span t-if="company.street"
+                                            t-field="company.street"/>
+                                        <br/>
+                                        <span t-if="company.zip"
+                                            t-field="company.zip"/>
+                                        <span> - </span>
+                                        <span t-if="company.city"
+                                            t-field="company.city"/>
+                                        <span> (</span>
+                                        <span t-if="company.state_id.name"
+                                            t-field="company.state_id.original_name"/>
+                                        <span>)</span>
+                                        <br/>
+                                        <span t-if="company.phone">Tel: <span t-field="company.phone"/>
+                                        </span>
+                                        <span t-if="company.email">Email: <span t-field="company.email"/>
+                                        </span>
+                                        <br/>
+                                        <span t-if="company.website"
+                                            t-field="company.website"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PAGE -->
+                    <div class="article">
+                        <div class="container"
+                            style="margin-bottom:1em; font-size: 14px;">
+                            <div class="row"
+                                id="b10_ticket_name"
+                                style="border-bottom: 1px solid #c1c1c1; padding:1em;">
+                                <h4 t-if="doc.number"
+                                    style="margin-right:1em;">
+                                    <strong>
+                                        <span t-field="doc.number"/>
+                                    </strong>
+                                </h4>
+                                <h5 t-if="doc.name">
+                                    <span t-field="doc.name"/>
+                                </h5>
+                            </div>
+                            <div class="row"
+                                id="b10_ticket_data"
+                                style="border-bottom: 1px solid #c1c1c1; padding:1em;">
+                                <div class="col-6"
+                                    id="b10_ticket_data_left">
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.team_id">
+                                        <span>
+                                            <strong>Team: </strong>
+                                            <span t-field="doc.team_id"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.user_id">
+                                        <span>
+                                            <strong>Assigned user: </strong>
+                                            <span t-field="doc.user_id"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.priority">
+                                        <span>
+                                            <strong>Priority: </strong>
+                                            <span t-field="doc.priority"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.create_date">
+                                        <span>
+                                            <strong>Created on: </strong>
+                                            <span t-field="doc.create_date"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.channel_id">
+                                        <span>
+                                            <strong>Channel: </strong>
+                                            <span t-field="doc.channel_id"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.category_id">
+                                        <span>
+                                            <strong>Category: </strong>
+                                            <span t-field="doc.category_id"/>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="col-6"
+                                    id="b10_ticket_data_right">
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.partner_id">
+                                        <strong>
+                                            <span t-field="doc.partner_id"/>
+                                        </strong>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.partner_id">
+                                        <span t-if="doc.partner_id.street">
+                                            <span t-field="doc.partner_id.street"/>
+                                            <br/>
+                                        </span>
+                                        <span t-if="doc.partner_id.street2">
+                                            <span t-field="doc.partner_id.street2"/>
+                                            <br/>
+                                        </span>
+                                        <span t-if="doc.partner_id.zip">
+                                            <span t-field="doc.partner_id.zip"/>
+                                                -
+                                        </span>
+                                        <span t-if="doc.partner_id.city">
+                                            <span t-field="doc.partner_id.city"/>
+                                            <br/>
+                                        </span>
+                                        <span t-if="doc.partner_id.country_id">
+                                            <span t-field="doc.partner_id.country_id"/>
+                                            <br/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.partner_id.phone">
+                                        <span>
+                                            <strong>Phone: </strong>
+                                            <span t-field="doc.partner_id.phone"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.partner_id.mobile">
+                                        <span>
+                                            <strong>Mobile: </strong>
+                                            <span t-field="doc.partner_id.mobile"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0;"
+                                        t-if="doc.partner_email">
+                                        <span>
+                                            <strong>Email: </strong>
+                                            <span t-field="doc.partner_email"/>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row"
+                                id="b10_ticket_description"
+                                style="padding:1em;">
+                                <div class="col-2"
+                                    t-if="doc.description">
+                                    <h6>
+                                        <strong style="line-height: 1.2em;">
+                                            Description: 
+                                        </strong>
+                                    </h6>
+                                </div>
+                                <div class="col-10">
+                                    <span t-field="doc.description"
+                                        style="line-height: 1.2em;"/>
+                                </div>
+                            </div>
+                            <div class="row"
+                                id="b10_ticket_close_notes"
+                                style="border-bottom: 1px solid #c1c1c1; padding:1em;">
+                                <div class="col-2"
+                                    t-if="doc.close_note">
+                                    <h6>
+                                        <strong style="line-height: 1.2em;">
+                                            Close notes: 
+                                        </strong>
+                                    </h6>
+                                </div>
+                                <div class="col-10">
+                                    <span t-field="doc.close_note"
+                                        style="line-height: 1.2em;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FOOTER -->
+                    <div class="footer">
+                        <div class="row"
+                            id="b10_footer">
+
+                            <div class="col-12">
+                                <div class="last-page">
+                                    <div style="clear:left; display:block; color:gray; font-size:0.75em; text-align: center;">
+                                        <p style="margin-bottom: 0; text-align: center;">
+                                            According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data
+                                            proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of
+                                            The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the
+                                            consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by
+                                            get additional information or file a complaint.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
