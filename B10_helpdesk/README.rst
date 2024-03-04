@@ -53,6 +53,11 @@ Changelog
 * [ADD] Trasllat a V.13.
 * [ADD] Afegit disseny d'impressió.
 
+13.0.1.0.1 (2024-03-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Correcció de bugs.
+
 Bug Tracker
 ===========
 

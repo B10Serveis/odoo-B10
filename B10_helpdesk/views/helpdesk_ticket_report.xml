@@ -14,7 +14,7 @@
                 <t t-foreach="docs"
                     t-as="doc">
                     <t t-set="doc"
-                        t-value="doc.with_context()" />
+                        t-value="doc.with_context({'lang':doc.partner_id.lang})" />
                     <!-- HEADER -->
                     <div class="header"
                         style="overflow: hidden;">
@@ -205,10 +205,10 @@
                                 </div>
                             </div>
                             <div class="row"
+                                t-if="doc.description != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'"
                                 id="b10_ticket_description"
                                 style="padding:1em;">
-                                <div class="col-2"
-                                    t-if="doc.description">
+                                <div class="col-2">
                                     <h6>
                                         <strong style="line-height: 1.2em;">
                                             Description: 
@@ -221,10 +221,10 @@
                                 </div>
                             </div>
                             <div class="row"
+                                t-if="doc.close_note != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'"
                                 id="b10_ticket_close_notes"
                                 style="border-bottom: 1px solid #c1c1c1; padding:1em;">
-                                <div class="col-2"
-                                    t-if="doc.close_note">
+                                <div class="col-2">
                                     <h6>
                                         <strong style="line-height: 1.2em;">
                                             Close notes: 
