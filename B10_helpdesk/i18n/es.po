@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-01 16:48+0000\n"
-"PO-Revision-Date: 2024-03-01 17:54+0100\n"
+"PO-Revision-Date: 2024-03-04 16:01+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,9 @@ msgid ""
 "                                            Close notes: \n"
 "                                        </strong>"
 msgstr ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Notas de cierre: \n"
+"                                        </strong>"
 
 #. module: B10_helpdesk
 #: model_terms:ir.ui.view,arch_db:B10_helpdesk.template_helpdesk_ticket_B10
