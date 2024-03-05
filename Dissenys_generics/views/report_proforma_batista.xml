@@ -3,10 +3,14 @@
 	<data>
 		<template id="report_proforma_batista">
 			<t t-call="web.html_container">
+				<!-- ANOTACIONS -->
+				<!-- Original: margin top 30 header spacing 25 -->
+				<!-- Ultima revisió: margin top 40 header spacing 35 -->
+				<!-- Revisat per TELDAIR -->
 				<t t-set="data_report_margin_top"
-					t-value="30" />
+					t-value="40"/>
 				<t t-set="data_report_header_spacing"
-					t-value="25" />
+					t-value="35"/>
 				<t t-set="data_report_margin_bottom"
 					t-value="25" />
 				<t t-foreach="docs"
@@ -93,7 +97,7 @@
 			<!-- Page -->
 			<div class="article">
 				<div class="container"
-					style="margin-bottom:1em; padding-top:40px;">
+					style="margin-bottom:1em; padding-top:0px;">
 					<!-- Client i Document -->
 					<div class="row"
 						id="b10_docinfo">
