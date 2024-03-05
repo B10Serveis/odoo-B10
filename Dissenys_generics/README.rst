@@ -69,6 +69,10 @@ Changelog
 * [ADD] Afegir dependencia de l10n_es_partner_mercantil
 * [ADD] Mostrar a les factures les dades del registre mercantil a sota el peu de pàgina si n'hi ha.
 
+15.0.1.4.3 (2024-03-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Correcció de contingut ocult en salt de pàgina.
 
 
 Bug Tracker
