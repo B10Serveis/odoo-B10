@@ -18,6 +18,11 @@ Changelog
 
 * [ADD] Traspassat a 14.0
 
+14.0.1.0.1 (2024-03-15)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Warning unknown parameter 'requiered'.
+
 
 Bug Tracker
 ===========

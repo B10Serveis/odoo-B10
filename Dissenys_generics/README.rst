@@ -44,24 +44,31 @@ Changelog
 14.0.1.0.0 (2022-12-08)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Nou format d'impressió genèric de documents
+* [ADD] Nou format d'impressió genèric de documents.
 
 14.0.1.1.2 (2024-01-22)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Mostra iban a Factura si el mètode de pagament associat al mode de pagament és 'Bank Transfer'
-* [ADD] Fitxer data per afegir metode de pagament 'Bank Transfer'
+* [ADD] Mostra iban a Factura si el mètode de pagament associat al mode de pagament és 'Bank Transfer'.
+* [ADD] Fitxer data per afegir metode de pagament 'Bank Transfer'.
 
 14.0.1.1.3 (2024-01-31)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [FIX] Correcció de text "Factura abonament" al angles i traducció
+* [FIX] Correcció de text "Factura abonament" al angles i traducció.
 
 14.0.1.2.3 (2024-02-28)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Afegir dependencia de l10n_es_partner_mercantil
+* [ADD] Afegir dependencia de l10n_es_partner_mercantil.
 * [ADD] Mostrar a les factures les dades del registre mercantil a sota el peu de pàgina si n'hi ha.
+
+14.0.1.2.4 (2024-03-15)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Warnings The <report> tag is deprecated.
+
+
 
 
 
