@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<report id="comanda_compra_batista"
-			model="purchase.order"
-			string="Comanda Estandard"
-			report_type="qweb-pdf"
-			name="Dissenys_generics.report_comanda_compra_batista"
-			file="Dissenys_generics.report_comanda_compra_batista"
-			print_report_name="('PurchaseOrder_'+object.name)"
-			attachment_use="False" />
+		<record id="comanda_compra_batista"
+			model="ir.actions.report">
+			<field name="name">Comanda Estandard</field>
+			<field name="model">purchase.order</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">Dissenys_generics.report_comanda_compra_batista</field>
+			<field name="report_file">Dissenys_generics.report_comanda_compra_batista</field>
+			<field name="print_report_name">('PurchaseOrder_'+object.name)</field>
+		</record>
 	</data>
 </odoo>
