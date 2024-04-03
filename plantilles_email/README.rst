@@ -49,6 +49,11 @@ Changelog
 
 * [ADD] Debrand odoo mail
 
+16.0.1.1.1 (2024-04-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Arregla error quan el client és l'adreça de lliurament
+
 
 Bug Tracker
 ===========
