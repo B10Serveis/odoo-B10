@@ -14,7 +14,7 @@
             eval="True" />
         <field name="report_template"
             ref="Dissenys_generics.factura_batista" />
-        <field name="report_name">Invoice_{{ (object.ref or object.name or '').replace('/','_') }}</field>
+        <field name="report_name">Invoice_{{ (object.ref or object.name or '-').replace('/','_') }}</field>
 
 
         <field name="body_html"
@@ -48,7 +48,7 @@
                                                         <td valign="middle"
                                                             style="padding: 16px; font-size: 20px; font-weight: bold; color: white;">
                                                             <span >Invoice from </span>
-                                                            <t t-out="object.company_id.name or ''"
+                                                            <t t-out="object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or '-'"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -74,7 +74,7 @@
                                                             valign="top">
                                                             <div>
                                                                     Dear 
-                                                                <t t-out="object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or ''">
+                                                                <t t-out="object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or '-'">
                                                                 </t>
                                                                 <br/>
                                                                     You have a new invoice available:
@@ -89,19 +89,19 @@
                                                                     </span>
                                                                     <br/>
                                                                     Client: 
-                                                                    <t t-out="object.partner_id.name or ''"
+                                                                    <t t-out="object.partner_id.name or '-'"
                                                                         data-oe-t-inline="true"
                                                                         contenteditable="false">
                                                                     </t>
                                                                     <br/>
                                                                     Amount invoiced: 
-                                                                    <t t-out="format_amount(object.amount_total_signed, object.currency_id) or ''"
+                                                                    <t t-out="format_amount(object.amount_total_signed, object.currency_id) or '-'"
                                                                         data-oe-t-inline="true"
                                                                         contenteditable="false">
                                                                     </t>
                                                                     <br/>
                                                                     Invoice date: 
-                                                                    <t t-out="format_date(object.date) or ''"
+                                                                    <t t-out="format_date(object.date) or '-'"
                                                                         data-oe-t-inline="true"
                                                                         contenteditable="false">
                                                                     </t>
@@ -135,7 +135,7 @@
                                                         <td style="opacity: 0.7;"
                                                             valign="middle"
                                                             align="left">
-                                                            <t t-out="user.signature or ''"
+                                                            <t t-out="user.signature or '-'"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -145,7 +145,7 @@
                                                         <td valign="middle"
                                                             align="left"
                                                             style="font-size: 14px; font-weight: bold;">
-                                                            <t t-out="user.company_id.name or ''"
+                                                            <t t-out="user.company_id.name or '-'"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -155,7 +155,7 @@
                                                         <td style="opacity: 0.7;"
                                                             valign="middle"
                                                             align="left">
-                                                            <t t-out="user.phone or ''"
+                                                            <t t-out="user.phone or '-'"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -166,7 +166,7 @@
                                                                     |
                                                                 <a t-attf-href="'mailto:%s' % {{ user.email }}"
                                                                     style="text-decoration:none; color: #454748;"
-                                                                    t-out="user.email or ''"
+                                                                    t-out="user.email or '-'"
                                                                     contenteditable="false">
                                                                 </a>
                                                             </t>
@@ -177,7 +177,7 @@
                                                                     |
                                                                 <a t-attf-href="'%s' % {{ user.company_id.website }}"
                                                                     style="text-decoration:none; color: #454748;"
-                                                                    t-out="user.company_id.website or ''"
+                                                                    t-out="user.company_id.website or '-'"
                                                                     contenteditable="false">
                                                                 </a>
                                                             </t>

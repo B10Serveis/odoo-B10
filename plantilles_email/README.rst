@@ -49,7 +49,10 @@ Changelog
 
 * [ADD] Debrand Odoo mail
 
+15.0.1.1.1 (2024-04-03)
+~~~~~~~~~~~~~~~~~~~~~~~
 
+* [FIX] Arregla error quan el client és l'adreça de lliurament
 
 Bug Tracker
 ===========
