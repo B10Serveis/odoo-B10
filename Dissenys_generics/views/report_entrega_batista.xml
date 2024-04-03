@@ -6,7 +6,7 @@
                 <!-- ANOTACIONS -->
                 <!-- Original: margin top 30 header spacing 25 -->
                 <!-- Ultima revisió: margin top 40 header spacing 35 -->
-                <!-- Revisat per TELDAIR -->
+                <!-- Revisat per TELDAIR, AROMAKING -->
                 <t t-set="data_report_margin_top"
                     t-value="40"/>
                 <t t-set="data_report_header_spacing"
