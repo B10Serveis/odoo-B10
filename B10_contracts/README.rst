@@ -22,7 +22,8 @@ Batista10 - Contractes
 
 |badge1| |badge2| |badge3| |badge4| 
 
-Afegeix nous camps (Notes internes i notes de tancament) i funcionalitats al modul contractes de OCA
+Fa visible i editable al formulari de Contractes els camps Darrera Data de Facturació. 
+Afegeis el camp de data de caducitat.
 
 
 **Table of contents**
@@ -35,14 +36,11 @@ Usage
 
 Per fer servir el mòdul:
 
-#. Emplenar notes internes i notes de tancament
+#. Modificar el camp Darrera Data de Facturació.
 
 Known issues / Roadmap
 ======================
 
-
-* Establir temps de ressolució i recordatoris quan el temps de ressolució estigui passat.
-* No deixar tancar un tiquet si no hi ha res escrit en les notes de tancament.
 
 Changelog
 =========
@@ -57,6 +55,22 @@ Changelog
 
 * [ADD] A contract.line fer el camp last_date_invoiced editable i el camp is_canceled visible i editable.
 * [ADD] A contract.contract fer el camp last_date_invoiced visible i editable.
+
+14.0.1.3.0 (2024-04-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correccions al readme.
+* [FIX] Elimina dependencia de Helpdesk.
+* [ADD] Camp last_date_invoiced editable a les linies.
+* [ADD] Si line_recurrence és Fals, copiar el valor last_date_invoced de la capçalera a TOTES les línies.
+* [ADD] Camp is_canceled editable a les linies.
+* [ADD] Amagar els botons de Aturar i Cancelar.
+
+14.0.1.4.0 (2024-04-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Errors de vistes.
+* [ADD] Amagar tots els botons.
 
 
 Bug Tracker
