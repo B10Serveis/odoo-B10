@@ -7,7 +7,7 @@
             <field name="name">B10_contract_form</field>
             <field name="model">contract.contract</field>
             <field name="inherit_id"
-                ref="contract.contract_contract_customer_form_view" />
+                ref="contract.contract_contract_form_view" />
             <field name="arch"
                 type="xml">
                 <!-- FER VISIBLE SI EL CAMP ÉS CADUCAT -->

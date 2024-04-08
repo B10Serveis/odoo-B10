@@ -71,6 +71,10 @@ Changelog
 * [ADD] Camp is_canceled editable a les linies.
 * [ADD] Amagar els botos de Aturar i Cancelar.
 
+16.0.1.3.1 (2024-04-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Error de vista.
 
 
 Bug Tracker
