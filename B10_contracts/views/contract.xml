@@ -33,20 +33,38 @@
                         string="Last date invoiced"
                         readonly="0"/>
                 </xpath>
-                <!-- FER EDITABLE EL CAMP LAST DATE INVOICED DE LES LINIES -->
                 <xpath expr="//field[@name='contract_line_ids']/tree/field[@name='last_date_invoiced']"
                     position="replace">
                     <field name="last_date_invoiced"
                         string="Last date invoiced"
                         readonly="0"/>
                 </xpath>
-                <!-- CANVIAR EL BOTÓ CANCELAR PER BOOL IS_CANCELED -->
-                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='cancel']"
-                    position="replace">
+                <!-- FER VISIBLE I EDITABLE EL CAMP IS CANCELED DE LES LINIES -->
+                <xpath expr="//field[@name='contract_line_fixed_ids']/tree/field[@name='last_date_invoiced']"
+                    position="after">
                     <field name="is_canceled"/>
                 </xpath>
-                <!-- OCULTAR EL BOTÓ ATURAR -->
+                <xpath expr="//field[@name='contract_line_ids']/tree/field[@name='last_date_invoiced']"
+                    position="after">
+                    <field name="is_canceled"/>
+                </xpath>
+                <!-- OCULTAR ELS BOTONS -->
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_plan_successor']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_stop_plan_successor']"
+                    position="replace">
+                </xpath>
                 <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_stop']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='cancel']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_uncancel']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='renew']"
                     position="replace">
                 </xpath>
             </field>

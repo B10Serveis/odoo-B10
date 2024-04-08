@@ -81,6 +81,12 @@ Changelog
 
 * [FIX] Error de vista.
 
+16.0.1.4.2 (2024-04-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Ocultar tots els botons de contract.line.
+* [FIX] Error de vista.
+
 
 Bug Tracker
 ===========

@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.3.2",
+    "version": "16.0.1.4.2",
     "depends": ["contract"],
     "license": "AGPL-3",
     "application": True,
