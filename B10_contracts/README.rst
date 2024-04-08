@@ -76,6 +76,11 @@ Changelog
 
 * [FIX] Error de vista.
 
+16.0.1.3.2 (2024-04-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Error de vista.
+
 
 Bug Tracker
 ===========
