@@ -74,6 +74,11 @@ Changelog
 * [ADD] Afegir dependencia de l10n_es_partner_mercantil
 * [ADD] Mostrar a les factures les dades del registre mercantil a sota el peu de pàgina si n'hi ha.
 
+16.0.1.3.3 (2024-05-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Arreglar problema al obtenir dades de configuració des del cron
+
 
 
 Bug Tracker
