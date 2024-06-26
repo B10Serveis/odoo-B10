@@ -40,45 +40,10 @@ To use this module, you need to:
 Changelog
 =========
 
-16.0.1.0.0 (2022-12-09)
+17.0.1.0.0 (2024-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Nou format d'impressió genèric de documents
-
-16.0.1.0.1 (2024-01-04)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Afegir termini de pagament als documents
-
-16.0.1.0.2 (2024-01-19)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Correció bug num serie
-
-16.0.1.1.2 (2024-01-22)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Mostra iban a Factura si el mètode de pagament associat al mode de pagament és 'Bank Transfer'
-* [ADD] Fitxer data per afegir metode de pagament 'Bank Transfer'
-
-16.0.1.2.2 (2024-02-20)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Agrupar linies de factura per comanda d'origen.
-* [ADD] Afegir apartat de configuració B10 amb opció per agrupar o no les linies de factura.
-* [ADD] Afegir opció a la factura per agrupar o no les linies de factura.
-
-16.0.1.3.2 (2024-02-27)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Afegir dependencia de l10n_es_partner_mercantil
-* [ADD] Mostrar a les factures les dades del registre mercantil a sota el peu de pàgina si n'hi ha.
-
-16.0.1.3.3 (2024-05-03)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Arreglar problema al obtenir dades de configuració des del cron
-
+* [ADD] Migrat des de 16.0
 
 
 Bug Tracker

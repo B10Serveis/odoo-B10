@@ -45,47 +45,10 @@ Known issues / Roadmap
 Changelog
 =========
 
-16.0.1.0.0 (2023-09-12)
+17.0.1.0.0 (2024-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Trasllat a V.16.
-
-16.0.1.1.0 (2024-01-08)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Afegit data de caducitat del contracte.
-
-16.0.1.2.0 (2024-01-23)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] A contract.line fer el camp last_date_invoiced editable i el camp is_canceled visible i editable.
-* [ADD] A contract.contract fer el camp last_date_invoiced visible i editable.
-
-16.0.1.3.0 (2024-04-02)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Correccions al readme.
-* [FIX] Elimina dependencia de Helpdesk.
-* [ADD] Camp last_date_invoiced editable a les linies.
-* [ADD] Si line_recurrence és Fals, copiar el valor last_date_invoced de la capçalera a TOTES les línies.
-* [ADD] Camp is_canceled editable a les linies.
-* [ADD] Amagar els botos de Aturar i Cancelar.
-
-16.0.1.3.1 (2024-04-08)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Error de vista.
-
-16.0.1.3.2 (2024-04-08)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Error de vista.
-
-16.0.1.4.2 (2024-04-08)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Ocultar tots els botons de contract.line.
-* [FIX] Error de vista.
+* [ADD] Trasllat a V.17.
 
 
 Bug Tracker

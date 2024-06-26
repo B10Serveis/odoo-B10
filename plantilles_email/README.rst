@@ -39,20 +39,11 @@ To use this module, you need to:
 Changelog
 =========
 
-16.0.1.0.0 (2023-11-20)
+17.0.1.0.0 (2024-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Creació del mòdul
+* [ADD] Migrat de 16.0
 
-16.0.1.1.0 (2023-12-06)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Debrand odoo mail
-
-16.0.1.1.1 (2024-04-03)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Arregla error quan el client és l'adreça de lliurament
 
 
 Bug Tracker
@@ -77,6 +68,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits

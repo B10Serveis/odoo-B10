@@ -47,15 +47,11 @@ Known issues / Roadmap
 Changelog
 =========
 
-16.0.1.0.0 (2023-09-12)
+17.0.1.0.0 (2024-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Trasllat a V.16.
+* [ADD] Trasllat a V.17.
 
-16.0.1.1.0 (2023-12-06)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Validació del camp hores treballades
 
 Bug Tracker
 ===========
@@ -79,6 +75,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits

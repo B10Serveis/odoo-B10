@@ -13,10 +13,10 @@ Creates a field on res.country.state to show the original name of spanish states
 Changelog
 =========
 
-16.0.1.0.1 (2024-04-17)
+17.0.1.0.0 (2024-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [FIX] Correccions menors
+* [ADD] Migrat de 16.0
 
 
 
