@@ -44,15 +44,15 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                     <button name="apply_theoretical_price"
                         type="object"
                         string="Apply Theoretical Price"
-                        attrs="{'invisible': [('product_incorrect_price_qty', '=', 0)]}"/>
+                        invisible="product_incorrect_price_qty == 0"/>
                     <button name="apply_theoretical_price_too_cheap"
                         type="object"
                         string="Up to Theoretical Price"
-                        attrs="{'invisible': [('product_too_cheap_qty', '=', 0)]}"/>
+                        invisible="product_too_cheap_qty == 0"/>
                     <button name="apply_theoretical_price_too_expensive"
                         type="object"
                         string="Down to Theoretical Price"
-                        attrs="{'invisible': [('product_too_expensive_qty', '=', 0)]}"/>
+                        invisible="product_too_expensive_qty == 0"/>
                 </header>
 
                 <sheet>
@@ -65,7 +65,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             class="oe_stat_button oe_inline"
                             icon="fa-list"
                             context="{'search_default_margin_classification_id': active_id}"
-                            attrs="{'invisible': [('product_qty', '=', 0)]}">
+                            invisible="product_qty == 0">
                             <field name="product_qty"
                                 widget="statinfo"
                                 string="Products"/>
@@ -77,7 +77,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             icon="fa-check-square"
                             context="{'search_default_margin_classification_id': active_id,
                                 'search_default_filter_margin_correct': True}"
-                            attrs="{'invisible': [('product_correct_price_qty', '=', 0)]}">
+                            invisible="product_correct_price_qty == 0">
                             <field name="product_correct_price_qty"
                                 widget="statinfo"
                                 string="Correct"/>
@@ -89,7 +89,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             icon="fa-square"
                             context="{'search_default_margin_classification_id': active_id,
                                 'search_default_filter_margin_incorrect': True}"
-                            attrs="{'invisible': [('product_incorrect_price_qty', '=', 0)]}">
+                            invisible="product_incorrect_price_qty == 0">
                             <field name="product_incorrect_price_qty"
                                 widget="statinfo"
                                 string="Incorrect"/>
@@ -101,7 +101,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             icon="fa-minus-square"
                             context="{'search_default_margin_classification_id': active_id,
                                 'search_default_filter_margin_too_cheap': True}"
-                            attrs="{'invisible': [('product_too_cheap_qty', '=', 0)]}">
+                            invisible="product_too_cheap_qty == 0">
                             <field name="product_too_cheap_qty"
                                 widget="statinfo"
                                 string="Too Cheap"/>
@@ -113,7 +113,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                             icon="fa-plus-square"
                             context="{'search_default_margin_classification_id': active_id,
                                 'search_default_filter_margin_too_expensive': True}"
-                            attrs="{'invisible': [('product_too_expensive_qty', '=', 0)]}">
+                            invisible="product_too_expensive_qty == 0">
                             <field name="product_too_expensive_qty"
                                 widget="statinfo"
                                 string="Too Priced"/>
@@ -140,7 +140,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                                 <div>
                                     <field name="profit_margin"
                                         class="oe_inline"
-                                        attrs="{'required': True}"/>
+                                        required="True" />
                                 </div>
                                 <label for="markup"/>
                                 <div>
