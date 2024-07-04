@@ -198,7 +198,7 @@
                                 </span>
                             </td>
                             <td class="text-right">
-                                <span t-field="l.move_id.quantity_done"/>
+                                <span t-field="l.move_id.quantity"/>
                                 <span t-field="l.move_id.product_uom"/>
                             </td>
                         </tr>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="action_report_factura_batista"
+		model="ir.actions.report">
+		<field name="name">Factura Estandard</field>
+		<field name="model">account.move</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">Dissenys_generics.report_factura_batista</field>
+		<field name="report_file">Dissenys_generics.report_factura_batista</field>
+		<field name="print_report_name">'Invoice_%s' % (object.name)</field>
+		<field name="binding_model_id"
+			ref="account.model_account_move"/>
+		<field name="binding_type">report</field>
+	</record>
+</odoo>
