@@ -12,9 +12,8 @@
         <field name="lang">{{ object.partner_id.lang }}</field>
         <field name="auto_delete"
             eval="True" />
-        <field name="report_template"
-            ref="Dissenys_generics.comanda_batista" />
-        <field name="report_name">Order_{{ (object.name or '-').replace('/','_') }}</field>
+        <field name="report_template_ids"
+            eval="[(4, ref('Dissenys_generics.action_report_comanda_batista'))]"/>
 
 
         <field name="body_html"
