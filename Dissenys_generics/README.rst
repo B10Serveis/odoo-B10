@@ -37,6 +37,11 @@ To use this module, you need to:
 #. Impressió de documents acabats amb l'extensió B10.
 #. ATENCIÓ: Perque es mostri l'IBAN si el mode de pagament és Transferencia cal seleccionar al Mode de pagament el Mètode de pagament 'Bank Transfer'.
 
+Known issues / Roadmap
+======================
+
+* Dependencia del Pull Request https://github.com/OCA/sale-reporting/pull/267
+
 Changelog
 =========
 

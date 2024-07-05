@@ -40,7 +40,7 @@ Per fer servir el mòdul:
 Known issues / Roadmap
 ======================
 
-
+* Dependencia del Pull Request https://github.com/OCA/helpdesk/pull/529
 * Establir temps de ressolució i recordatoris quan el temps de ressolució estigui passat.
 * No deixar tancar un tiquet si no hi ha res escrit en les notes de tancament.
 
