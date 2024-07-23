@@ -34,7 +34,6 @@
         "views/comanda_compra_batista.xml",
         "views/report_comanda_compra_batista.xml",
         "views/show_product_image.xml",
-        "views/invoice_report_pivot.xml",
         "data/account.payment.method.csv",
     ],
 }

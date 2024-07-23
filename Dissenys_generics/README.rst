@@ -73,7 +73,10 @@ Changelog
 
 * [ADD] Afegeix el total amb impostos a l'informe de facturació.
 
+14.0.1.3.5 (2024-07-23)
+~~~~~~~~~~~~~~~~~~~~~~~
 
+* [FIX] Elimina commit anterior.
 
 
 Bug Tracker
