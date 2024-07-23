@@ -68,6 +68,10 @@ Changelog
 
 * [FIX] Warnings The <report> tag is deprecated.
 
+14.0.1.3.4 (2024-07-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegeix el total amb impostos a l'informe de facturació.
 
 
 
