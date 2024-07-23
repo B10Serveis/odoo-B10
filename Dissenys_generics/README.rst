@@ -78,6 +78,11 @@ Changelog
 
 * [FIX] Elimina commit anterior.
 
+14.0.1.3.6 (2024-07-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Correcció de l'informe de facturació per funcionar amb comptes analitics.
+
 
 Bug Tracker
 ===========
