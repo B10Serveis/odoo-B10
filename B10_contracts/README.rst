@@ -87,6 +87,12 @@ Changelog
 * [ADD] Ocultar tots els botons de contract.line.
 * [FIX] Error de vista.
 
+16.0.1.5.2 (2024-07-25)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Disseny de document de Contracte.
+
+
 
 Bug Tracker
 ===========

@@ -6,16 +6,136 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-23 16:00+0000\n"
-"PO-Revision-Date: 2024-01-23 17:03+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2024-07-29 08:16+0000\n"
+"PO-Revision-Date: 2024-07-29 10:28+0200\n"
+"Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: es\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: B10_contracts
+#: model:ir.actions.report,print_report_name:B10_contracts.contracte_batista
+msgid "('Contract_'+object.name)"
+msgstr "('Contrato_'+object.name)"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<span> (</span>"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<span> -</span>"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<span>)</span>"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid ""
+"<span>)</span>\n"
+"\t\t\t\t\t\t\t\t<br/>"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Contract</strong>"
+msgstr "<strong>Contrato</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Date End</strong>"
+msgstr "<strong>Fecha Fin</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Date Start</strong>"
+msgstr "<strong>Fecha Inicio</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Date next invoice</strong>"
+msgstr "<strong>Fecha siguiente factura</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Date of end:</strong>"
+msgstr "<strong>Fecha Fin:</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Date of next invoice:</strong>"
+msgstr "<strong>Fecha siguiente factura:</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Date of start:</strong>"
+msgstr "<strong>Fecha Inicio:</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Description</strong>"
+msgstr "<strong>Descripción</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Modifications</strong>"
+msgstr "<strong>Modificaciones</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Price</strong>"
+msgstr "<strong>Precio</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Cantidad</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Precio unit.</strong>"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid ""
+"According to the GDPR, we inform you that we will\n"
+"\t\t\t\t\t\t\t\t\tprocess your personal data in order to carry out\n"
+"\t\t\t\t\t\t\t\t\tadministrative, accounting and fiscal management. Data\n"
+"\t\t\t\t\t\t\t\t\tproportionately, the time required by a legal obligation will\n"
+"\t\t\t\t\t\t\t\t\tbe retained and will not be transferred to third parties except\n"
+"\t\t\t\t\t\t\t\t\tlegal provision required, or if necessary, prior consent of The\n"
+"\t\t\t\t\t\t\t\t\tinterested party. It will be able to exercise the following\n"
+"\t\t\t\t\t\t\t\t\trights on its personal data: right of access, rectification,\n"
+"\t\t\t\t\t\t\t\t\terasure, oblate, limitation, opposition, portability and to\n"
+"\t\t\t\t\t\t\t\t\twithdraw the consent given, to the address indicated in this\n"
+"\t\t\t\t\t\t\t\t\tdocument. In addition, it will be able to contact the competent\n"
+"\t\t\t\t\t\t\t\t\tsupervisory authority in the field of data protection by get\n"
+"\t\t\t\t\t\t\t\t\tadditional information or file a complaint."
+msgstr ""
+"De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos personales con el fin de realizar la gestión administrativa, contable y fiscal. Los datos\n"
+"proporcionados se conservarán el tiempo exigible por una obligación legal y no serán cedidas a terceros excepto previsión legal exigible, o en su caso, previo consentimiento del\n"
+"interesado. Podrá ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, limitación, oposición, portabilidad y a retirar el\n"
+"consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente en materia de Protección de Datos para\n"
+"obtener información adicional o presentar una reclamación."
 
 #. module: B10_contracts
 #: model_terms:ir.ui.view,arch_db:B10_contracts.contract_line_form_B10
@@ -28,9 +148,34 @@ msgid "Contract"
 msgstr "Contrato"
 
 #. module: B10_contracts
+#: model:ir.model,name:B10_contracts.model_contract_line
+msgid "Contract Line"
+msgstr "Línea de contrato"
+
+#. module: B10_contracts
 #: model:ir.model.fields,field_description:B10_contracts.field_contract_contract__contract_expiration
 msgid "Contract expiration"
 msgstr "Caducidad contrato"
+
+#. module: B10_contracts
+#: model:ir.actions.report,name:B10_contracts.contracte_batista
+msgid "Contracte Estandard"
+msgstr "Contrato Estandar"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "Date"
+msgstr "Fecha"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "Description"
+msgstr "Descripción"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "Email:"
+msgstr ""
 
 #. module: B10_contracts
 #: model_terms:ir.ui.view,arch_db:B10_contracts.contract_tree_B10
@@ -43,6 +188,22 @@ msgid "Expiration date"
 msgstr "Fecha caducidad"
 
 #. module: B10_contracts
+#: model:ir.model.fields,field_description:B10_contracts.field_contract_line__last_date_invoiced
 #: model_terms:ir.ui.view,arch_db:B10_contracts.contract_form_B10
 msgid "Last date invoiced"
-msgstr "Última Fecha de Facturación"
+msgstr "Última fecha facturada"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "TIN:"
+msgstr "NIF:"
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "Tel:"
+msgstr ""
+
+#. module: B10_contracts
+#: model_terms:ir.ui.view,arch_db:B10_contracts.report_contracte_batista_document
+msgid "VAT:"
+msgstr "NIF:"
