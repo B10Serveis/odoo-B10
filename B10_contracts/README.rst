@@ -92,6 +92,11 @@ Changelog
 
 * [ADD] Disseny de document de Contracte.
 
+16.0.1.5.3 (2024-09-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Visibilitat del camp last_date_invoiced.
+
 
 
 Bug Tracker

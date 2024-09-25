@@ -112,5 +112,27 @@
                 </xpath>
             </field>
         </record>
+
+        <!-- FORM LINIA DE CONTRACTE -->
+        <record id="contract_line_form_B10_2"
+            model="ir.ui.view">
+            <field name="name">B10_contract_line_form_2</field>
+            <field name="model">contract.line</field>
+            <field name="inherit_id"
+                ref="contract.contract_line_form_view" />
+            <field name="arch"
+                type="xml">
+                <!-- FER LAST_DATE_INVOICED VISIBLE PER TOTHOM -->
+                <xpath expr="//group/group[@groups='base.group_no_one']"
+                    position="replace">
+                    <group>
+                        <field name="last_date_invoiced"
+                            readonly="0"/>
+                        <field name="termination_notice_date"
+                            readonly="0"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
