@@ -31,7 +31,7 @@ class AccountMove(models.Model):
 
     group_by_origin = fields.Boolean(string="Group Invoice Lines by Origin")
 
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
         res = super(AccountMove, self).create(vals)
         # Modificacions error cron:
