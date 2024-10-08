@@ -50,6 +50,11 @@ Changelog
 
 * [ADD] Migrat des de 16.0
 
+17.0.1.1.0 (2024-10-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'error que no mostrava el total de linia de factura.
+
 
 Bug Tracker
 ===========
