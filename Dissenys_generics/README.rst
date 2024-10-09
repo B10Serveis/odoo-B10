@@ -55,6 +55,11 @@ Changelog
 
 * [FIX] Correcció d'error que no mostrava el total de linia de factura.
 
+17.0.1.2.0 (2024-10-09)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'error que no mostrava el total de secció de factura.
+
 
 Bug Tracker
 ===========
