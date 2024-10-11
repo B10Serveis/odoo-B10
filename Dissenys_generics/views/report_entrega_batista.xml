@@ -141,6 +141,8 @@
                                 <strong>
                                     <span t-if="doc.partner_id.parent_id.name"
                                         t-field="doc.partner_id.parent_id.name"/>
+                                    <span t-if="not doc.partner_id.parent_id.name and doc.partner_id.name"
+                                        t-field="doc.partner_id.name"/>
                                 </strong>
                             </h5>
                             <p style="margin-bottom: 0;">

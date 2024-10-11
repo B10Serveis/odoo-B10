@@ -74,6 +74,10 @@ Changelog
 
 * [ADD] Correcció de contingut ocult en salt de pàgina.
 
+15.0.1.5.3 (2024-03-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Al disseny d'entrega mostrar el nom del contacte si aquest no te empresa mare.
 
 Bug Tracker
 ===========
