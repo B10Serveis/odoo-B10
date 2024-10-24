@@ -79,6 +79,10 @@ Changelog
 
 * [FIX] Arreglar problema al obtenir dades de configuració des del cron
 
+16.0.1.4.3 (2024-10-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Dissenys, aliniar columnes numèriques a la dreta.
 
 
 Bug Tracker

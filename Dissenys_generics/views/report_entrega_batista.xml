@@ -178,9 +178,9 @@
                     id="b10_linetable">
                     <thead>
                         <tr>
-                            <th class="text-right">CODE</th>
-                            <th class="text-left">DESCRIPTION</th>
-                            <th class="text-right">DELIVERED</th>
+                            <th class="text-end">CODE</th>
+                            <th class="text-start">DESCRIPTION</th>
+                            <th class="text-end">DELIVERED</th>
                         </tr>
                     </thead>
                     <tbody class="order_tbody"
@@ -188,7 +188,7 @@
                         <tr t-foreach="doc.move_line_ids"
                             t-as="l">
 
-                            <td class="text-right">
+                            <td class="text-end">
                                 <span t-field="l.product_id.code"/>
                             </td>
                             <td>
@@ -197,7 +197,7 @@
                                 <span t-if="l.lot_id">Lot: <span t-field="l.lot_id"/>
                                 </span>
                             </td>
-                            <td class="text-right">
+                            <td class="text-end">
                                 <span t-field="l.move_id.quantity_done"/>
                                 <span t-field="l.move_id.product_uom"/>
                             </td>
