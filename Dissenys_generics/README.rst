@@ -60,6 +60,11 @@ Changelog
 
 * [FIX] Correcció d'error que no mostrava el total de secció de factura.
 
+17.0.1.3.0 (2024-10-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Dissenys, aliniar columnes numèriques a la dreta.
+
 
 Bug Tracker
 ===========
