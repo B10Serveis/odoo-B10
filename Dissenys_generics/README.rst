@@ -79,6 +79,11 @@ Changelog
 
 * [ADD] Al disseny d'entrega mostrar el nom del contacte si aquest no te empresa mare.
 
+15.0.1.6.3 (2024-10-25)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegeix el total amb impostos a l'informe de facturació.
+
 Bug Tracker
 ===========
 
