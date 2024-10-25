@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="contracte_batista"
+			model="contract.contract"
+			string="Contracte Estandard"
+			report_type="qweb-pdf"
+			name="B10_contracts.report_contracte_batista"
+			file="B10_contracts.report_contracte_batista"
+			print_report_name="('Contract_'+object.name)"
+			attachment_use="False" />
+	</data>
+</odoo>

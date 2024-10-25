@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- FORM DE CONTRACTE -->
+        <record id="contract_form_B10"
+            model="ir.ui.view">
+            <field name="name">B10_contract_form</field>
+            <field name="model">contract.contract</field>
+            <field name="inherit_id"
+                ref="contract.contract_contract_form_view" />
+            <field name="arch"
+                type="xml">
+                <!-- FER VISIBLE SI EL CAMP ÉS CADUCAT -->
+                <xpath expr="//field[@name='date_end']"
+                    position="after">
+                    <field name="contract_expiration"
+                        string="Expiration date"
+                        readonly="1"
+                        widget="remaining_days"/>
+                </xpath>
+                <!-- FER VISIBLE I EDITABLE EL CAMP LAST DATE INVOICED -->
+                <xpath expr="//field[@name='recurring_next_date']"
+                    position="after">
+                    <field name="last_date_invoiced"
+                        string="Last date invoiced"
+                        readonly="0"
+                        widget="remaining_days"/>
+                </xpath>
+                <!-- FER EDITABLE EL CAMP LAST DATE INVOICED DE LES LINIES -->
+                <xpath expr="//field[@name='contract_line_fixed_ids']/tree/field[@name='last_date_invoiced']"
+                    position="replace">
+                    <field name="last_date_invoiced"
+                        string="Last date invoiced"
+                        readonly="0"/>
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/field[@name='last_date_invoiced']"
+                    position="replace">
+                    <field name="last_date_invoiced"
+                        string="Last date invoiced"
+                        readonly="0"/>
+                </xpath>
+                <!-- FER VISIBLE I EDITABLE EL CAMP IS CANCELED DE LES LINIES -->
+                <xpath expr="//field[@name='contract_line_fixed_ids']/tree/field[@name='last_date_invoiced']"
+                    position="after">
+                    <field name="is_canceled"/>
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/field[@name='last_date_invoiced']"
+                    position="after">
+                    <field name="is_canceled"/>
+                </xpath>
+                <!-- OCULTAR ELS BOTONS -->
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_plan_successor']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_stop_plan_successor']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_stop']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='cancel']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='action_uncancel']"
+                    position="replace">
+                </xpath>
+                <xpath expr="//field[@name='contract_line_ids']/tree/button[@name='renew']"
+                    position="replace">
+                </xpath>
+            </field>
+        </record>
+        <!-- LLISTAT DE CONTRACTES -->
+        <record id="contract_tree_B10"
+            model="ir.ui.view">
+            <field name="name">B10_contract_tree</field>
+            <field name="model">contract.contract</field>
+            <field name="inherit_id"
+                ref="contract.contract_contract_tree_view"/>
+            <field name="arch"
+                type="xml">
+                <xpath expr="//field[@name='partner_id']"
+                    position="after">
+                    <!-- Add the Expiration field in the tree view -->
+                    <field name="date_end"
+                        string="Expiration"
+                        widget="remaining_days"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- FORM LINIA DE CONTRACTE -->
+        <record id="contract_line_form_B10"
+            model="ir.ui.view">
+            <field name="name">B10_contract_line_form</field>
+            <field name="model">contract.line</field>
+            <field name="inherit_id"
+                ref="contract.contract_line_customer_form_view" />
+            <field name="arch"
+                type="xml">
+                <!-- FER LAST_DATE_INVOICED EDITABLE -->
+                <xpath expr="//field[@name='last_date_invoiced']"
+                    position="replace">
+                    <field name="last_date_invoiced"
+                        readonly="0"/>
+                </xpath>
+                <!-- FER VISIBLE IS_CANCELED -->
+                <xpath expr="//field[@name='next_period_date_end']"
+                    position="after">
+                    <field name="is_canceled"
+                        string="Canceled"
+                        readonly="0"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- FORM LINIA DE CONTRACTE -->
+        <record id="contract_line_form_B10_2"
+            model="ir.ui.view">
+            <field name="name">B10_contract_line_form_2</field>
+            <field name="model">contract.line</field>
+            <field name="inherit_id"
+                ref="contract.contract_line_form_view" />
+            <field name="arch"
+                type="xml">
+                <!-- FER LAST_DATE_INVOICED VISIBLE PER TOTHOM -->
+                <xpath expr="//group/group[@groups='base.group_no_one']"
+                    position="replace">
+                    <group>
+                        <field name="last_date_invoiced"
+                            readonly="0"/>
+                        <field name="termination_notice_date"
+                            readonly="0"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
