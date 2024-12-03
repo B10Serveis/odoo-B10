@@ -113,9 +113,9 @@
                                 </h5>
                             </span>
                             <p style="margin-bottom: 0;">
-                                <span t-if="doc.invoice_number and o.amount_total_signed >= 0">Invoice: <span t-field="doc.invoice_number"/>
+                                <span t-if="doc.number and o.amount_total_signed >= 0">Invoice: <span t-field="doc.number"/>
                                 </span>
-                                <span t-if="doc.invoice_number and not o.amount_total_signed >= 0">Factura d'abonament: <span t-field="doc.invoice_number"/>
+                                <span t-if="doc.number and not o.amount_total_signed >= 0">Factura d'abonament: <span t-field="doc.number"/>
                                 </span>
                             </p>
                             <p style="margin-bottom: 0;">

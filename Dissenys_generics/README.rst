@@ -44,6 +44,11 @@ Changelog
 
 * [ADD] Nou format d'impressió genèric de documents
 
+14.0.1.0.1 (2024-12-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció error invoice_number
+
 
 Bug Tracker
 ===========
