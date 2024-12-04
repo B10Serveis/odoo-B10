@@ -39,3 +39,9 @@ product_margin_classification/models/__pycache__/product_template.cpython-311.py
 state_original_name/__pycache__/__init__.cpython-311.pyc
 state_original_name/models/__pycache__/__init__.cpython-311.pyc
 state_original_name/models/__pycache__/state_original_name.cpython-311.pyc
+l10n_ad/__pycache__/__init__.cpython-311.pyc
+l10n_ad/models/__pycache__/__init__.cpython-311.pyc
+l10n_ad/models/__pycache__/account_move.cpython-311.pyc
+l10n_ad/models/__pycache__/account_tax.cpython-311.pyc
+l10n_ad/models/__pycache__/template_ad_common.cpython-311.pyc
+l10n_ad/models/__pycache__/template_ad_full.cpython-311.pyc

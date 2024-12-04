@@ -1,0 +1,145 @@
+id,name,code,account_type,reconcile
+account_full_100,Capital social,100,equity,False
+account_full_1030,"Socis per desemborsaments no exigits, capital social",1030,equity,False
+account_full_1034,"Socis per desemborsaments no exigits, capital pendent d’inscripció",1034,equity,False
+account_full_1040,"Socis per aportacions no dineràries pendents, capital social",1040,equity,False
+account_full_1044,"Socis per aportacions no dineràries pendents, capital pendent d’inscripció",1044,equity,False
+account_full_1110,Patrimoni net per emissió d’instruments financers compostos,1110,equity,False
+account_full_1111,Resta d’instruments de patrimoni net,111100,equity,False
+account_full_1143,Reserva per fons de comerç,1143,equity,False
+account_full_115,Reserves per pèrdues i guanys actuarials i altres ajustos,115,equity,False
+account_common_112,Reserva legal,112,equity,False
+account_common_113,Reserves voluntàries,113,equity,False
+account_full_120,Romanent,120,equity,False
+account_full_121,Resultats negatius d’exercicis anteriors,121,equity,False
+account_full_129,Resultat de l’exercici,129,equity_unaffected,False
+account_full_130,Subvencions oficials de capital,130,equity,False
+account_full_132,"Altres subvencions, donacions i llegats",132,equity,False
+account_full_133,Ajustos per valoració en actius financers a valor raonable amb canvis en el patrimoni net,133,equity,False
+account_full_1340,Cobertura de fluxos d’efectiu,1340,equity,False
+account_full_1341,Cobertura d’una inversió neta en un negoci a l’estranger,1341,equity,False
+account_full_135,Diferències de conversió,135,equity,False
+account_full_136,"Ajustos per valoració en actius no corrents i grups alienables d’elements, mantinguts per a la venda",136,equity,False
+account_full_140,Provisió per retribucions a llarg termini al personal,140,liability_non_current,True
+account_full_146,Provisió per a reestructuracions,146,liability_non_current,True
+account_full_147,Provisió per transaccions amb pagaments basats en instruments de patrimoni,147,liability_non_current,True
+account_common_150,Accions o participacions a llarg termini considerades passius financers,150,liability_non_current,False
+account_common_171,Deutes a llarg termini,171,liability_non_current,False
+account_full_1765,"Passius per derivats financers a llarg termini, cartera de negociació",1765,liability_non_current,True
+account_full_1768,"Passius per derivats financers a llarg termini, instruments de cobertura",1768,liability_non_current,True
+account_full_178,Obligacions i bons convertibles,178,liability_non_current,False
+account_full_189,Garanties financeres a llarg termini,189,liability_non_current,False
+account_full_204,Fons de comerç,204,asset_fixed,False
+account_full_2403,Participacions a llarg termini en empreses del grup,2403,asset_fixed,False
+account_full_2404,Participacions a llarg termini en empreses associades,2404,asset_fixed,False
+account_full_2405,Participacions a llarg termini en altres parts vinculades,2405,asset_fixed,False
+account_full_2493,Desemborsaments pendents sobre participacions a llarg termini en empreses del grup,2493,asset_fixed,False
+account_full_2494,Desemborsaments pendents sobre participacions a llarg termini en empreses associades,2494,asset_fixed,False
+account_full_2495,Desemborsaments pendents sobre participacions a llarg termini en altres parts vinculades,2495,asset_fixed,False
+account_full_2550,"Actius per derivats financers a llarg termini, cartera de negociació",2550,asset_fixed,False
+account_full_2553,"Actius per derivats financers a llarg termini, instruments de cobertura",2553,asset_fixed,False
+account_full_257,Drets de reemborsament derivats de contractes d’assegurança relatius a retribucions a llarg termini al personal,257,asset_fixed,False
+account_full_466,Remuneracions mitjançant sistemes d’aportació definida pendents de pagament,466,liability_payable,True
+account_full_490,Deteriorament de valor de crèdits per operacions comercials,490,liability_current,False
+account_full_501,Obligacions i bons convertibles a curt termini,501,liability_current,False
+account_common_502,Accions o participacions a curt termini considerades passius financers,502,liability_current,False
+account_full_5091,Obligacions i bons convertibles amortitzats,5091,liability_current,True
+account_common_521,Deutes a curt termini,521,liability_current,False
+account_common_526,Dividend actiu a pagar,526,liability_payable,True
+account_full_5296,Provisió a curt termini per a reestructuracions,5296,liability_current,True
+account_full_5297,Provisió a curt termini per transaccions amb pagaments basats en instruments de patrimoni,5297,liability_current,True
+account_full_551,Compte corrent amb socis i administradors,551,asset_current,False
+account_full_5530,Socis de societat dissolta,5530,liability_current,False
+account_full_5531,"Socis, compte de fusió",5531,asset_current,False
+account_full_5532,Socis de societat escindida,5532,liability_current,False
+account_full_5533,"Socis, compte d’escissió",5533,asset_current,False
+account_common_5585,Socis per desemborsaments exigits sobre accions o participacions considerades passius financers,5585,liability_current,False
+account_full_5593,"Actius per derivats financers a curt termini, instruments de cobertura",5593,asset_current,False
+account_full_5598,"Passius per derivats financers a curt termini, instruments de cobertura",5598,liability_current,False
+account_full_569,Garanties financeres a curt termini,569,liability_current,False
+account_full_580,Immobilitzat,580,asset_current,False
+account_full_581,Inversions amb persones i entitats vinculades,581,asset_current,False
+account_full_582,Inversions financeres,582,asset_current,False
+account_full_583,"Existències, deutors comercials i altres comptes a cobrar",583,asset_current,False
+account_full_584,Altres actius,584,asset_current,False
+account_full_585,Provisions,585,liability_current,False
+account_full_586,Deutes amb característiques especials,586,liability_current,False
+account_full_587,Deutes amb persones i entitats vinculades,587,liability_current,False
+account_full_588,Creditors comercials i altres comptes a pagar,588,liability_current,False
+account_full_589,Altres passius,589,liability_current,False
+account_full_5990,Deteriorament de valor d’immobilitzat no corrent mantingut per a la venda,5990,asset_current,False
+account_full_5991,Deteriorament de valor d’inversions amb persones i entitats vinculades no corrents mantingudes per a la venda,5991,asset_current,False
+account_full_5992,Deteriorament de valor d’inversions financeres no corrents mantingudes per a la venda,5992,asset_current,False
+account_full_5993,"Deteriorament de valor d’existències, deutors comercials i altres comptes a cobrar integrats en un grup alienable mantingut per a la venda",5993,asset_current,False
+account_full_5994,Deteriorament de valor d’altres actius mantinguts per a la venda,5994,asset_current,False
+account_full_643,Retribucions a llarg termini mitjançant sistemes d’aportació definida,643,expense,False
+account_full_6440,Contribucions anuals,6440,expense,False
+account_full_6442,Altres costos,6442,expense,False
+account_full_6450,Retribucions al personal liquidats amb instruments de patrimoni,6450,expense,False
+account_full_6457,Retribucions al personal liquidats en efectiu basat en instruments de patrimoni,6457,expense,False
+account_full_650,Pèrdues de crèdits comercials incobrables,650,expense,False
+account_full_6510,Benefici transferit (gestor),6510,expense,False
+account_full_6511,Pèrdua suportada (partícip o associat no gestor),6511,expense,False
+account_full_659,Altres pèrdues en gestió corrent,659,expense,False
+account_full_6630,Pèrdues de cartera de negociació,6630,expense,False
+account_full_6631,Pèrdues de designats per l’empresa,6631,expense,False
+account_full_6632,Pèrdues d’actius financers a valor raonable amb canvis en el patrimoni net,6632,expense,False
+account_full_6633,Pèrdues d’instruments de cobertura,6633,expense,False
+account_full_671,Pèrdues procedents de l’immobilitzat material,671,expense,False
+account_full_691,Pèrdues per deteriorament de l’immobilitzat material,691,expense,False
+account_full_694,Pèrdues per deteriorament de crèdits per operacions comercials,694,expense,False
+account_full_7630,Beneficis de cartera de negociació,7630,income,False
+account_full_7631,Beneficis de designats per l’empresa,7631,income,False
+account_full_7632,Beneficis d’actius financers a valor raonable amb canvis en el patrimoni net,7632,income,False
+account_full_7633,Beneficis d’instruments de cobertura,7633,income,False
+account_full_767,Ingressos d’actius afectes i de drets de reemborsament relatius a retribucions a llarg termini,767,income,False
+account_full_774,Diferència negativa en combinacions de negocis,774,income,False
+account_full_791,Reversió del deteriorament de l’immobilitzat material,791,income,False
+account_full_794,Reversió del deteriorament de crèdits per operacions comercials,794,income,False
+account_full_7950,Excés de provisió per retribucions al personal,7950,income,False
+account_full_7956,Excés de provisió per a reestructuracions,7956,income,False
+account_full_7957,Excés de provisió per transaccions amb pagaments basats en instruments de patrimoni,7957,income,False
+account_full_800,Pèrdues d’actius financers a valor raonable amb canvis en el patrimoni net,800,expense,False
+account_full_802,Transferència de beneficis en actius financers a valor raonable amb canvis en el patrimoni net,802,expense,False
+account_full_810,Pèrdues per cobertures de fluxos d’efectiu,810,expense,False
+account_full_811,Pèrdues per cobertures d’inversions netes en un negoci a l’estranger,811,expense,False
+account_full_812,Transferència de beneficis per cobertures de fluxos d’efectiu,812,expense,False
+account_full_813,Transferència de beneficis per cobertures d’inversions netes en un negoci a l’estranger,813,expense,False
+account_full_820,Diferències de conversió negatives,820,expense,False
+account_full_821,Transferència de diferències de conversió positives,821,expense,False
+account_full_8300,Impost corrent,8300,expense,False
+account_full_8301,Impost diferit,8301,expense,False
+account_full_833,Ajustos negatius en la imposició sobre beneficis,833,expense,False
+account_full_834,Ingressos fiscals per diferències permanents,834,expense,False
+account_full_835,Ingressos fiscals per deduccions i bonificacions,835,expense,False
+account_full_836,Transferència de diferències permanents,836,expense,False
+account_full_837,Transferència de deduccions i bonificacions,837,expense,False
+account_full_838,Ajustos positius en la imposició sobre beneficis,838,expense,False
+account_full_840,Transferència de subvencions oficials de capital,840,expense,False
+account_full_841,Transferència de donacions i llegats de capital,841,expense,False
+account_full_842,"Transferència d’altres subvencions, donacions i llegats",842,expense,False
+account_full_850,Pèrdues actuarials,850,expense,False
+account_full_851,Ajustos negatius en actius per retribucions a llarg termini de prestació definida,851,expense,False
+account_full_860,Pèrdues en actius no corrents i grups alienables d’elements mantinguts per a la venda,860,expense,False
+account_full_862,Transferència de beneficis en actius no corrents i grups alienables d’elements mantinguts per a la venda,862,expense,False
+account_full_891,"Deteriorament de participacions en el patrimoni, empreses del grup",891,expense_depreciation,False
+account_full_892,"Deteriorament de participacions en el patrimoni, empreses associades",892,expense_depreciation,False
+account_full_900,Beneficis en actius financers a valor raonable amb canvis en el patrimoni net,900,income,False
+account_full_902,Transferència de pèrdues d’actius financers a valor raonable amb canvis en el patrimoni net,902,income,False
+account_full_910,Beneficis per cobertures de fluxos d’efectiu,910,income,False
+account_full_911,Beneficis per cobertures d’una inversió neta en un negoci a l’estranger,911,income,False
+account_full_912,Transferència de pèrdues per cobertures de fluxos d’efectiu,912,income,False
+account_full_913,Transferència de pèrdues per cobertures d’una inversió neta en un negoci a l’estranger,913,income,False
+account_full_920,Diferències de conversió positives,920,income,False
+account_full_921,Transferència de diferències de conversió negatives,921,income,False
+account_full_940,Ingressos de subvencions oficials de capital,940,income,False
+account_full_941,Ingressos de donacions i llegats de capital,941,income,False
+account_full_942,"Ingressos d’altres subvencions, donacions i llegats",942,income,False
+account_full_950,Guanys actuarials,950,income,False
+account_full_951,Ajustos positius en actius per retribucions a llarg termini de prestació definida,951,income,False
+account_full_960,Beneficis en actius no corrents i grups alienables d’elements mantinguts per a la venda,960,income,False
+account_full_962,Transferència de pèrdues en actius no corrents i grups alienables d’elements mantinguts per a la venda,962,income,False
+account_full_991,"Recuperació d’ajustos valoratius negatius previs, empreses del grup",991,income,False
+account_full_992,"Recuperació d’ajustos valoratius negatius previs, empreses associades",992,income,False
+account_full_993,"Transferència per deteriorament d’ajustos valoratius negatius previs, empreses del grup",993,income,False
+account_full_994,"Transferència per deteriorament d’ajustos valoratius negatius previs, empreses associades",994,income,False
