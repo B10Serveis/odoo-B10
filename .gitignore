@@ -45,3 +45,6 @@ l10n_ad/models/__pycache__/account_move.cpython-311.pyc
 l10n_ad/models/__pycache__/account_tax.cpython-311.pyc
 l10n_ad/models/__pycache__/template_ad_common.cpython-311.pyc
 l10n_ad/models/__pycache__/template_ad_full.cpython-311.pyc
+crm_secondary_salesperson/__pycache__/__init__.cpython-311.pyc
+crm_secondary_salesperson/models/__pycache__/__init__.cpython-311.pyc
+crm_secondary_salesperson/models/__pycache__/crm_lead.cpython-311.pyc
