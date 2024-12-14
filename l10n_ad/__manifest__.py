@@ -1,8 +1,7 @@
 {
     "name": "Andorra - Accounting",
     "summary": """Creació de grups comptables, Pla General Comptable i taxes Andorranes (IGI, IRPF)""",
-    "version": "17.0.0.1.0",
-    "countries": ["ad"],
+    "version": "1.0.0",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Accounting/Localizations/Account Charts",
@@ -19,7 +18,7 @@ Andorra Comptes Comptables
         "base_iban",
         "base_vat",
     ],
-    "data": [
+    "data": [        
         "data/res_partner_data.xml",
     ],
     "license": "LGPL-3",

@@ -2,7 +2,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from odoo import fields, models
 
-
 class AccountTax(models.Model):
     _inherit = "account.tax"
 
@@ -17,7 +16,6 @@ class AccountTax(models.Model):
             ("sujeto", "Sujeto"),
             ("retencion", "Retencion"),
         ],
-        string="Tax Type (Andorra)",
-        default="sujeto",
+        string="Tax Type (Andorra)", default="sujeto",
     )
     l10n_ad_bien_inversion = fields.Boolean("Bien de Inversion", default=False)
