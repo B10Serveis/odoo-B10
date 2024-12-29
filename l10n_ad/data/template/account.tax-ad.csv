@@ -1,9 +1,9 @@
 id,sequence,description,invoice_label,type_tax_use,name,amount,amount_type,tax_group_id,analytic,l10n_ad_type,l10n_ad_exempt_reason,l10n_ad_bien_inversion,tax_scope,include_base_amount,repartition_line_ids/repartition_type,repartition_line_ids/tag_ids,repartition_line_ids/document_type,repartition_line_ids/account_id,repartition_line_ids/factor_percent,children_tax_ids
-account_tax_template_s_igi9-5,0,"IGI 9,5%",,sale,"9,5% S",9.5,percent,tax_group_igi_9-5,,subjecte,,,consu,,base,,invoice,,,
+account_tax_template_s_igi9-5,0,"IGI 9,5%",,sale,"9,5% S",9.5,percent,tax_group_igi_9-5,,subjecte,,,service,,base,,invoice,,,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_477,,
 ,,,,,,,,,,,,,,,base,,refund,,,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_477,,
-account_tax_template_p_igi9-5,0,"IGI 9,5%",,purchase,"9,5% P",9.5,percent,tax_group_igi_9-5,,subjecte,,,consu,,base,,invoice,,,
+account_tax_template_p_igi9-5,0,"IGI 9,5%",,purchase,"9,5% P",9.5,percent,tax_group_igi_9-5,,subjecte,,,service,,base,,invoice,,,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_472,,
 ,,,,,,,,,,,,,,,base,,refund,,,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_472,,
