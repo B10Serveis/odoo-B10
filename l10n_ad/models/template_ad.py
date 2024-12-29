@@ -9,19 +9,17 @@ class AccountChartTemplate(models.AbstractModel):
     @template('ad')
     def _get_ad_template_data(self):
         return {
-            "name": _('Base'),
-            "visible": 0,
-            "property_account_receivable_id": '4300',
-            "property_account_payable_id": '4100',
-            "property_account_expense_categ_id": '600',
-            "property_account_income_categ_id": '7000',
+            'property_account_receivable_id': 'account_account_4300',
+            'property_account_payable_id': 'account_account_4100',
+            'property_account_expense_categ_id': 'account_account_600',
+            'property_account_income_categ_id': 'account_account_7000',
         }
 
     @template('ad', 'res.company')
     def _get_ad_res_company(self):
         return {
             self.env.company.id: {
-                "account_fiscal_country_id": "base.ad",
+                'account_fiscal_country_id': 'base.ad',
                 "bank_account_code_prefix": "572",
                 "cash_account_code_prefix": "570",
                 "transfer_account_code_prefix": "57299",

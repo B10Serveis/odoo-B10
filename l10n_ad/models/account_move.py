@@ -5,8 +5,8 @@ from odoo import models, fields, api
 class AccountMove(models.Model):
     _inherit = "account.move"
 
-    l10n_ad_is_simplified = fields.Boolean("Is Simplified",
-        compute="_compute_l10n_ad_is_simplified", readonly=False, store=True)
+    l10n_ad_is_simplified = fields.Boolean("Is Simplified", 
+                                           compute="_compute_l10n_ad_is_simplified", readonly=False, store=True)
 
     @api.depends("partner_id")
     def _compute_l10n_ad_is_simplified(self):
