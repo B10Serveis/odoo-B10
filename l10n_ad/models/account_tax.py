@@ -13,9 +13,9 @@ class AccountTax(models.Model):
     )
     l10n_ad_type = fields.Selection(
         selection=[
-            ("sujeto", "Sujeto"),
-            ("retencion", "Retencion"),
+            ("subjecte", "Subjecte"),
+            ("retencio", "Retenció"),
         ],
-        string="Tax Type (Andorra)", default="sujeto",
+        string="Tax Type (Andorra)", default="subjecte",
     )
-    l10n_ad_bien_inversion = fields.Boolean("Bien de Inversion", default=False)
+    l10n_ad_bien_inversion = fields.Boolean("Bens d'Inversió", default=False)

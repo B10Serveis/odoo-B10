@@ -4,7 +4,8 @@
     'version': '1.0',
     'icon': '/account/static/description/l10n.png',
     'countries': ['ad'],
-    'author': 'Batista10',    
+    'author': 'Batista10',
+    'website': 'https://batista10.cat',    
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Andorra Comptes Comptables 
@@ -15,9 +16,9 @@ Andorra Comptes Comptables
     * Creació de taxes Andorranes (IGI, IRPF)
 """,
     'depends': [
-        "account",
-        "base_iban",
-        "base_vat",
+        'account',
+        'base_iban',
+        'base_vat',
     ],
     'data': [        
         'data/res_partner_data.xml',
