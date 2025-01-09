@@ -65,6 +65,12 @@ Changelog
 
 * [ADD] Dissenys, aliniar columnes numèriques a la dreta.
 
+17.0.1.4.0 (2025-01-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Entrega: Si hi ha signatura del client, es mostra sota la data d'entrega.
+* [FIX] Entrega: Correcció justificat entre paragrafs.
+
 
 Bug Tracker
 ===========

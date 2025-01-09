@@ -51,7 +51,6 @@
                                 style="max-width: 200px; max-height: 150px;"/>
                         </div>
 
-
                         <!-- Dades Empresa dreta-->
                         <div class="col-6"
                             id="b10_header_right"
@@ -92,7 +91,6 @@
                 </div>
             </div>
 
-
             <!-- Page -->
             <div class="article">
                 <div class="container"
@@ -118,7 +116,6 @@
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.origin">Sale Order: <span t-field="doc.origin"/>
                                 </span>
-
                             </p>
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.date">Picking Date: <span t-field="doc.date"
@@ -126,7 +123,6 @@
                                 </span>
                             </p>
                         </div>
-
 
                         <!-- Columna dreta-->
                         <div class="col-5 offset-1"
@@ -159,7 +155,6 @@
                                 </span>
                                 <span t-if="doc.partner_id.city"
                                     t-field="doc.partner_id.city"/>
-
                                 <span t-if="doc.partner_id.state_id.name">(                                    
                                     <span t-field="doc.partner_id.state_id.original_name"/>
                                     <span>)</span>
@@ -174,37 +169,37 @@
                 </div>
 
                 <!-- Linies Entrega -->
-                <table class="table table-condensed table-striped table-sm"
-                    id="b10_linetable">
-                    <thead>
-                        <tr>
-                            <th class="text-right">CODE</th>
-                            <th class="text-left">DESCRIPTION</th>
-                            <th class="text-right">DELIVERED</th>
-                        </tr>
-                    </thead>
-                    <tbody class="order_tbody"
-                        style="font-size:14px !important">
-                        <tr t-foreach="doc.move_line_ids"
-                            t-as="l">
-
-                            <td class="text-right">
-                                <span t-field="l.product_id.code"/>
-                            </td>
-                            <td>
-                                <span t-field="l.product_id.name"/>
-                                <br/>
-                                <span t-if="l.lot_id">Lot: <span t-field="l.lot_id"/>
-                                </span>
-                            </td>
-                            <td class="text-right">
-                                <span t-field="l.move_id.quantity"/>
-                                <span t-field="l.move_id.product_uom"/>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr></hr>
+                <div class="container">
+                    <table class="table table-condensed table-striped table-sm"
+                        id="b10_linetable">
+                        <thead>
+                            <tr>
+                                <th class="text-right">CODE</th>
+                                <th class="text-left">DESCRIPTION</th>
+                                <th class="text-right">DELIVERED</th>
+                            </tr>
+                        </thead>
+                        <tbody class="order_tbody"
+                            style="font-size:14px !important">
+                            <tr t-foreach="doc.move_line_ids"
+                                t-as="l">
+                                <td class="text-right">
+                                    <span t-field="l.product_id.code"/>
+                                </td>
+                                <td>
+                                    <span t-field="l.product_id.name"/>
+                                    <br/>
+                                    <span t-if="l.lot_id">Lot: <span t-field="l.lot_id"/>
+                                    </span>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.move_id.quantity"/>
+                                    <span t-field="l.move_id.product_uom"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <!-- Totals -->
                 <div class="row"
@@ -218,7 +213,22 @@
                 </div>
                 <!-- Fi Totals -->
 
-                <hr/>
+                <!-- Firma -->
+                <div class="container"
+                    id="b10_signature"
+                    t-if="doc.signature"
+                    style="">
+                    <div class="row">
+                        <span style="">
+                            <strong>Signature:</strong>
+                        </span>
+                        <img t-att-src="image_data_uri(o.signature)"
+                            style="max-height: 250px; max-width: 750px;"/>
+                        <span t-if="o.partner_id.name"
+                            t-field="o.partner_id.name">-</span>
+                    </div>
+                </div>
+                <!-- Fi Firma -->
 
             </div>
 
