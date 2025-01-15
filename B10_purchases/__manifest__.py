@@ -1,0 +1,25 @@
+{
+    "name": "B10 Purchases",
+    "summary": """B10 Purchases""",
+    "author": "Batista10",
+    "website": "https://www.batista10.cat",
+    "category": "Personalization",
+    "version": "16.0.0.1.0",
+    "depends": [
+        "base",
+        "purchase",
+        "state_original_name",
+        "l10n_es_partner",
+        "l10n_es_partner_mercantil",
+    ],
+    "license": "AGPL-3",
+    "application": True,
+    "data": [
+        "views/B10_purchase_order_report.xml",
+        "views/B10_purchase_order.xml",
+        "views/B10_purchase_quotation_report.xml",
+        "views/B10_purchase_quotation.xml",
+        "views/B10_purchase_quotation_email.xml",
+        "views/B10_purchase_order_email.xml",
+    ],
+}

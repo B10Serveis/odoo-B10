@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="B10_purchase_quotation"
+			model="purchase.order"
+			string="Standard purchase quotation"
+			report_type="qweb-pdf"
+			name="B10_purchases.B10_purchase_quotation_report"
+			file="B10_purchases.B10_purchase_quotation_report"
+			print_report_name="('PurchQuot_'+object.name)"
+			attachment_use="False" />
+	</data>
+</odoo>
