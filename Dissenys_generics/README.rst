@@ -84,6 +84,11 @@ Changelog
 
 * [ADD] Afegeix el total amb impostos a l'informe de facturació.
 
+15.0.1.7.3 (2025-02-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir signatura al disseny d'entrega.
+
 Bug Tracker
 ===========
 
