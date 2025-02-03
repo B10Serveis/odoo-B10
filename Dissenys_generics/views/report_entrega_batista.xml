@@ -218,6 +218,23 @@
                 </div>
                 <!-- Fi Totals -->
 
+                <!-- Firma -->
+                <div class="container"
+                    id="b10_signature"
+                    t-if="doc.signature"
+                    style="">
+                    <div class="row">
+                        <span style="">
+                            <strong>Signature:</strong>
+                        </span>
+                        <img t-att-src="image_data_uri(o.signature)"
+                            style="max-height: 250px; max-width: 750px;"/>
+                        <span t-if="o.partner_id.name"
+                            t-field="o.partner_id.name">-</span>
+                    </div>
+                </div>
+                <!-- Fi Firma -->
+
                 <hr/>
 
             </div>

@@ -84,6 +84,11 @@ Changelog
 
 * [ADD] Dissenys, aliniar columnes numèriques a la dreta.
 
+16.0.1.5.3 (2025-02-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir Signatura al disseny d'entrega.
+
 
 Bug Tracker
 ===========
