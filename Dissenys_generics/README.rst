@@ -71,6 +71,11 @@ Changelog
 * [ADD] Entrega: Si hi ha signatura del client, es mostra sota la data d'entrega.
 * [FIX] Entrega: Correcció justificat entre paragrafs.
 
+17.0.1.4.1 (2025-02-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció de traduccions.
+
 
 Bug Tracker
 ===========
