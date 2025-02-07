@@ -76,6 +76,10 @@ Changelog
 
 * [FIX] Correcció de traduccions.
 
+17.0.1.4.2 (2025-02-07)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Mostrar subtotals de linia sense IVA al disseny de Factura.
 
 Bug Tracker
 ===========

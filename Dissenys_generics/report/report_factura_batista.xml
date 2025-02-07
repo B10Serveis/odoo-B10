@@ -240,7 +240,7 @@
                         <t t-foreach="lines"
                             t-as="line">
                             <t t-set="current_subtotal"
-                                t-value="current_subtotal + line.price_total" />
+                                t-value="current_subtotal + line.price_subtotal" />
 
                             <t t-if="group_by_order">
                                 <t t-set="current_order"
@@ -309,7 +309,7 @@
                                     </td>
                                     <td class="text-end o_price_total">
                                         <span class="text-nowrap"
-                                            t-field="line.price_total" />
+                                            t-field="line.price_subtotal" />
                                     </td>
                                 </t>
                                 <t t-if="line.display_type == 'line_section'">
