@@ -29,3 +29,5 @@ product_margin_classification/models/__pycache__/product_margin_classification.c
 product_margin_classification/models/__pycache__/product_template.cpython-37.pyc
 product_margin_classification/models/__pycache__/product_product.cpython-37.pyc
 hide_cost/models/__pycache__/__init__.cpython-37.pyc
+B10_account/models/__pycache__/__init__.cpython-39.pyc
+B10_account/models/__pycache__/helpdeskB10.cpython-39.pyc
