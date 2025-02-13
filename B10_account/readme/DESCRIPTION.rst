@@ -1,0 +1,1 @@
+- Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
