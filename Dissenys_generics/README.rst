@@ -91,6 +91,11 @@ Changelog
 
 * [FIX] Canviat el xpath de res.config.settings que generava conflicte en algunes instal·lacions.
 
+17.0.1.5.4 (2025-02-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Factures rectificatives en negatiu.
+
 Bug Tracker
 ===========
 

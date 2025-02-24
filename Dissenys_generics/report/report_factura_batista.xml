@@ -294,7 +294,11 @@
                                         </data>
                                     </td>
                                     <td class="text-end">
-                                        <span t-field="line.quantity"/>
+                                        <!--Modificació signe per Factura Rectificativa-->
+                                        <span t-if="o.amount_total_signed >= 0"
+                                            t-field="line.quantity"/>
+                                        <span t-if="not o.amount_total_signed >= 0"
+                                            t-esc="line.quantity*-1"/>
                                         <span t-field="line.product_uom_id"
                                             groups="uom.group_uom"/>
                                     </td>
@@ -307,9 +311,15 @@
                                         <span class="text-nowrap"
                                             t-field="line.discount"/>
                                     </td>
+                                    <!--Modificació signe per Factura Rectificativa-->
                                     <td class="text-end o_price_total">
-                                        <span class="text-nowrap"
+                                        <span t-if="o.amount_total_signed >= 0"
+                                            class="text-nowrap"
                                             t-field="line.price_subtotal" />
+                                        <span t-if="not o.amount_total_signed >= 0"
+                                            class="text-nowrap"
+                                            t-esc="line.price_subtotal*-1"
+                                            t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                     </td>
                                 </t>
                                 <t t-if="line.display_type == 'line_section'">
@@ -335,7 +345,13 @@
                                 <tr class="is-subtotal text-end">
                                     <td colspan="99">
                                         <strong class="mr16">Subtotal</strong>
-                                        <span t-esc="current_subtotal"
+                                        <!--Modificació signe per Factura Rectificativa-->
+                                        <span t-if="o.amount_total_signed >= 0"
+                                            t-esc="current_subtotal"
+                                            t-options='{"widget": "monetary", "display_currency": o.currency_id}'>
+                                        </span>
+                                        <span t-if="not o.amount_total_signed >= 0"
+                                            t-esc="current_subtotal*-1"
                                             t-options='{"widget": "monetary", "display_currency": o.currency_id}'>
                                         </span>
                                     </td>
@@ -422,7 +438,47 @@
                                         <!--Tax totals-->
                                         <t t-set="tax_totals"
                                             t-value="o.tax_totals"/>
-                                        <t t-call="account.document_tax_totals"/>
+
+                                        <!--Modificació signe per Factura Rectificativa-->
+                                        <t t-if="not o.amount_total_signed >= 0"
+                                            t-foreach="tax_totals['groups_by_subtotal'].items()"
+                                            t-as="subtotal">
+                                            <tr style="border-top-color:rgb(0, 0, 0); border-top-width: 1px;">
+                                                <td>
+                                                    <strong>
+                                                        <t t-esc="subtotal[0]"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-end">
+                                                    <span t-esc="subtotal[1][0]['tax_group_base_amount'] * -1"
+                                                        t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        <t t-esc="subtotal[1][0]['tax_group_name']"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-end">
+                                                    <span t-esc="subtotal[1][0]['tax_group_amount'] * -1"
+                                                        t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr t-if="not o.amount_total_signed >= 0">
+                                            <td>
+                                                <strong>
+													Total
+                                                </strong>
+                                            </td>
+                                            <td class="text-end">
+                                                <span t-esc="o.amount_total_signed"
+                                                    t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                            </td>
+                                        </tr>
+                                        <t t-if="o.amount_total_signed >= 0"
+                                            t-call="account.document_tax_totals"/>
 
                                         <!--Payments-->
                                         <t t-if="print_with_payments">
