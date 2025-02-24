@@ -44,6 +44,11 @@ Changelog
 * [ADD] Documents de comanda i pressupost de compra.
 * [ADD] Emails de comanda i pressupost de compra.
 
+17.0.0.1.1 (2025-02-12)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Eliminar t-field-options dels documents.
+
 
 Bug Tracker
 ===========
