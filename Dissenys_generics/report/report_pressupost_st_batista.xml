@@ -223,8 +223,7 @@
                                 </td>
                                 <td name="td_priceunit"
                                     class="text-end">
-                                    <span t-field="l.price_unit"
-                                        t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;doc.currency_id&quot;}" />
+                                    <span t-field="l.price_unit" />
                                 </td>
                                 <td t-if="is_discount"
                                     name="td_discount"
@@ -233,8 +232,7 @@
                                 </td>
                                 <td name="td_subtotal"
                                     class="text-end">
-                                    <span t-field="l.price_subtotal"
-                                        t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;doc.currency_id&quot;}" />
+                                    <span t-field="l.price_subtotal" />
                                 </td>
                             </t>
                             <t t-if="l.display_type == 'line_section'">

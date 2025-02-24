@@ -52,3 +52,5 @@ B10_purchases/__pycache__/__init__.cpython-311.pyc
 l10n_ad/models/__pycache__/template_ad.cpython-311.pyc
 B10_pos/models/__pycache__/__init__.cpython-311.pyc
 B10_pos/models/__pycache__/contractsB10.cpython-311.pyc
+B10_pos/models/__pycache__/pos_b10.cpython-311.pyc
+B10_pos/__pycache__/__init__.cpython-311.pyc

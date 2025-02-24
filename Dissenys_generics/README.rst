@@ -81,6 +81,16 @@ Changelog
 
 * [FIX] Mostrar subtotals de linia sense IVA al disseny de Factura.
 
+17.0.1.4.3 (2025-02-12)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Eliminar t-field-options dels documents.
+
+17.0.1.4.4 (2025-02-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Canviat el xpath de res.config.settings que generava conflicte en algunes instal·lacions.
+
 Bug Tracker
 ===========
 

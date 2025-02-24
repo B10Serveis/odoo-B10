@@ -9,8 +9,8 @@
             ref="base.res_config_settings_view_form"/>
         <field name="arch"
             type="xml">
-            <xpath expr="//form"
-                position="inside">
+            <xpath expr="//div[@id='invite_users']"
+                position="after">
                 <div class="app_settings_block"
                     data-string="B10 Settings"
                     string="B10 Settings"
