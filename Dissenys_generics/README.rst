@@ -89,6 +89,11 @@ Changelog
 
 * [ADD] Afegir Signatura al disseny d'entrega.
 
+16.0.1.6.4 (2025-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir descripció (de rebut/lliurament/transferencia) a les linies d'entrega.
+
 
 Bug Tracker
 ===========

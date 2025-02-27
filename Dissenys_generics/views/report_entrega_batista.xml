@@ -193,6 +193,15 @@
                             </td>
                             <td>
                                 <span t-field="l.product_id.name"/>
+                                <!--RECEPCIONS-->
+                                <span t-if="doc.picking_type_id.code=='incoming' and l.product_id.description_pickingin"
+                                    t-field="l.product_id.description_pickingin"/>
+                                <!--LLIURAMENTS-->
+                                <span t-if="doc.picking_type_id.code=='outgoing' and l.product_id.description_pickingout"
+                                    t-field="l.product_id.description_pickingout"/>
+                                <!--INTERNES-->
+                                <span t-if="doc.picking_type_id.code=='internal' and l.product_id.description_picking"
+                                    t-field="l.product_id.description_picking"/>
                                 <br/>
                                 <span t-if="l.lot_id">Lot: <span t-field="l.lot_id"/>
                                 </span>
