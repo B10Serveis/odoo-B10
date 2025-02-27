@@ -49,6 +49,11 @@ Changelog
 
 * [FIX] Eliminar t-field-options dels documents.
 
+17.0.1.2.1 (2025-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir data d'arribada esperada a comanda de compra.
+
 
 Bug Tracker
 ===========

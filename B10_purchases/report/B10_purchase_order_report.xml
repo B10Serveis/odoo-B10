@@ -120,6 +120,13 @@
 								</span>
 							</p>
 							<p style="margin-bottom: 0;">
+								<span t-if="doc.date_order">
+									Planned Date:
+									<span t-field="doc.date_planned"
+										t-options='{"widget": "date","format": "dd/MM/yyyy"}' />
+								</span>
+							</p>
+							<p style="margin-bottom: 0;">
 								<span t-if="doc.payment_term_id.name">Payment Terms: <span t-field="doc.payment_term_id.name"/>
 								</span>
 							</p>
