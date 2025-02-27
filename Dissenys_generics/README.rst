@@ -96,6 +96,11 @@ Changelog
 
 * [ADD] Factures rectificatives en negatiu.
 
+17.0.1.6.4 (2025-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir descripció (de rebut/lliurament/transferencia) a les linies d'entrega.
+
 Bug Tracker
 ===========
 
