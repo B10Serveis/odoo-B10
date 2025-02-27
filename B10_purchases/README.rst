@@ -44,6 +44,11 @@ Changelog
 * [ADD] Documents de comanda i pressupost de compra.
 * [ADD] Emails de comanda i pressupost de compra.
 
+16.0.1.2.0 (2025-01-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir data d'arribada esperada a comanda de compra.
+
 
 Bug Tracker
 ===========
