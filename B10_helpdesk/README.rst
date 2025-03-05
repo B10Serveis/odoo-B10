@@ -52,6 +52,11 @@ Changelog
 
 * [ADD] Migrat de 16.0
 
+15.0.1.2.0 (2024-10-22)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir disseny d'impressió de ticket.
+
 Bug Tracker
 ===========
 
