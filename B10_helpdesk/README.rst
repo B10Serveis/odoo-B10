@@ -57,6 +57,12 @@ Changelog
 
 * [ADD] Validació del camp hores treballades
 
+16.0.1.2.0 (2025-03-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir disseny d'impressió de ticket.
+
+
 Bug Tracker
 ===========
 

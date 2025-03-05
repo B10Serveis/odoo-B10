@@ -20,3 +20,5 @@ B10_purchases/__pycache__/__init__.cpython-39.pyc
 B10_purchases/models/__pycache__/__init__.cpython-39.pyc
 B10_account/models/__pycache__/__init__.cpython-39.pyc
 B10_account/models/__pycache__/helpdeskB10.cpython-39.pyc
+B10_account/__pycache__/__init__.cpython-39.pyc
+B10_account/models/__pycache__/B10_account_move.cpython-39.pyc
