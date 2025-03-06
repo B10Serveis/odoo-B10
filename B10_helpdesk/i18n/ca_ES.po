@@ -4,23 +4,121 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-06 08:31+0000\n"
-"PO-Revision-Date: 2023-12-06 09:33+0100\n"
-"Last-Translator: Marc Tormo i Bochaca <batista10.info@gmail.com>\n"
+"POT-Creation-Date: 2025-03-05 16:47+0000\n"
+"PO-Revision-Date: 2025-03-05 17:48+0100\n"
+"Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
+"Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: ca_ES\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: B10_helpdesk
+#: model:ir.actions.report,print_report_name:B10_helpdesk.action_helpdesk_ticket_report_B10
+msgid "'Ticket_%s' % (object.name)"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<span> (</span>"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<span> - </span>"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid ""
+"<span>)</span>\n"
+"                                            <br/>"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Close notes: \n"
+"                                        </strong>"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Description: \n"
+"                                        </strong>"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Assigned user: </strong>"
+msgstr "<strong>Usuari assignat: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Category: </strong>"
+msgstr "<strong>Categoria: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Channel: </strong>"
+msgstr "<strong>Canal: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Created on: </strong>"
+msgstr "<strong>Creat el: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Email: </strong>"
+msgstr "<strong>Email: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Mobile: </strong>"
+msgstr "<strong>Mòbil: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Phone: </strong>"
+msgstr "<strong>Telèfon: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Priority: </strong>"
+msgstr "<strong>Prioritat: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "<strong>Team: </strong>"
+msgstr "<strong>Equip: </strong>"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid ""
+"According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
+"                                            proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of\n"
+"                                            The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the\n"
+"                                            consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by\n"
+"                                            get additional information or file a complaint."
+msgstr ""
+"D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades personals amb la finalitat de realitzar la gestió administrativa, comptable i fiscal. Les dades\n"
+"proporcionades es conservaran el temps exigible per una obligació legal i no seran cedides a tercers excepte previsió legal exigible, o en el seu cas, previ consentiment de\n"
+"l’interessat. Podrà exercir els següents drets sobre les seves dades personals: dret d’accés, rectificació, supressió, oblit, limitació, oposició, portabilitat i a retirar el\n"
+"consentiment prestat, a l’adreça assenyalada en el present document. A més, podrà adreçar-se a l’autoritat de Control competent en matèria de Protecció de Dades per\n"
+"obtenir informació addicional o presentar una reclamació."
 
 #. module: B10_helpdesk
 #: model:ir.model.fields,field_description:B10_helpdesk.field_helpdesk_ticket__email_ccs
 msgid "CC"
-msgstr "CC"
+msgstr ""
 
 #. module: B10_helpdesk
 #: model:ir.model.fields,field_description:B10_helpdesk.field_res_partner__cc_email
@@ -49,9 +147,24 @@ msgid "Contract"
 msgstr "Contracte"
 
 #. module: B10_helpdesk
+#: model:ir.model.fields,field_description:B10_helpdesk.field_helpdesk_ticket__current_time
+msgid "Current time"
+msgstr "Hora actual"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "Email:"
+msgstr ""
+
+#. module: B10_helpdesk
 #: model:ir.model,name:B10_helpdesk.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
 msgstr "Tiquet del centre d'assitència"
+
+#. module: B10_helpdesk
+#: model:ir.actions.report,name:B10_helpdesk.action_helpdesk_ticket_report_B10
+msgid "Helpsdesk ticket Estandard"
+msgstr "Tiquet de Centre d'assistència"
 
 #. module: B10_helpdesk
 #: model:ir.model.fields,field_description:B10_helpdesk.field_helpdesk_ticket__internal_note
@@ -67,6 +180,16 @@ msgstr "Anotacions internes"
 #: model:ir.model.fields,field_description:B10_helpdesk.field_helpdesk_ticket__stage_closed
 msgid "Stage closed"
 msgstr "Etapa tancada"
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "Tel:"
+msgstr ""
+
+#. module: B10_helpdesk
+#: model_terms:ir.ui.view,arch_db:B10_helpdesk.helpdesk_ticket_report_B10
+msgid "VAT:"
+msgstr "NIF:"
 
 #. module: B10_helpdesk
 #: model:ir.model.fields,field_description:B10_helpdesk.field_helpdesk_ticket__worked_hours

@@ -47,10 +47,15 @@ Known issues / Roadmap
 Changelog
 =========
 
-17.0.1.0.0 (2024-06-26)
+17.0.1.1.0 (2024-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [ADD] Trasllat a V.17.
+
+17.0.1.2.0 (2025-03-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir disseny d'impressió de ticket.
 
 
 Bug Tracker
