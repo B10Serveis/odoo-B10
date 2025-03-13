@@ -89,6 +89,11 @@ Changelog
 
 * [ADD] Afegir signatura al disseny d'entrega.
 
+15.0.1.8.3 (2025-03-13)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Corregit report tag deprecated.
+
 Bug Tracker
 ===========
 
