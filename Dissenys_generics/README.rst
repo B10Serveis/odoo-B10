@@ -94,6 +94,11 @@ Changelog
 
 * [ADD] Afegir descripció (de rebut/lliurament/transferencia) a les linies d'entrega.
 
+16.0.1.7.4 (2025-03-13)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Corregit report tag deprecated.
+
 
 Bug Tracker
 ===========
