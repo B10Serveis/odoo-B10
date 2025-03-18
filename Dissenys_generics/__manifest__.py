@@ -13,6 +13,7 @@
         "stock",
         "state_original_name",
         "sale_management",
+        "purchase",
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
     ],

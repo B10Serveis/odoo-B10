@@ -15,7 +15,6 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
-        "views/debrand_odoo_mail.xml",
         "views/email_factura.xml",
         "views/email_comanda.xml",
         "views/email_pressupost.xml",
