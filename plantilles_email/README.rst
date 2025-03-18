@@ -44,6 +44,11 @@ Changelog
 
 * [ADD] Migrat de 16.0
 
+17.0.1.2.1 (2025-03-18)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Establir plantilles per defecte.
+
 
 
 Bug Tracker
