@@ -13,7 +13,7 @@
         <field name="auto_delete"
             eval="True" />
         <field name="report_template"
-            ref="Dissenys_generics.factura_batista" />
+            ref="Dissenys_generics.action_report_factura_batista" />
         <field name="report_name">Invoice_{{ (object.ref or object.name or '-').replace('/','_') }}</field>
 
 

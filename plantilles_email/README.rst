@@ -54,6 +54,13 @@ Changelog
 
 * [FIX] Arregla error quan el client és l'adreça de lliurament
 
+15.0.1.2.1 (2025-03-18)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Establir plantilles per defecte.
+* [FIX] Correcció ID de documents degut a canvis en Dissenys_generics.
+
+
 Bug Tracker
 ===========
 

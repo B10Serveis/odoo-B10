@@ -13,7 +13,7 @@
         <field name="auto_delete"
             eval="True" />
         <field name="report_template"
-            ref="Dissenys_generics.comanda_batista" />
+            ref="Dissenys_generics.action_report_comanda_batista" />
         <field name="report_name">Order_{{ (object.name or '-').replace('/','_') }}</field>
 
 
