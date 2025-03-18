@@ -13,7 +13,7 @@
         <field name="auto_delete"
             eval="True" />
         <field name="report_template"
-            ref="Dissenys_generics.pressupost_batista" />
+            ref="Dissenys_generics.action_report_pressupost_batista" />
         <field name="report_name">Quotation_{{ (object.name or '-').replace('/','_') }}</field>
 
 
