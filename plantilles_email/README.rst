@@ -60,6 +60,11 @@ Changelog
 * [ADD] Establir plantilles per defecte.
 * [FIX] Correcció ID de documents degut a canvis en Dissenys_generics.
 
+15.0.1.2.2 (2025-03-19)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'error multiempresa.
+
 
 Bug Tracker
 ===========
