@@ -36,7 +36,7 @@
                                     <tr style="">
                                         <td style="min-width: 590px;"
                                             align="center">
-                                            <table t-attf-style="min-width: 590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:separate; background-color: {{ object.user_id.company_id.primary_color or 'gray'}}"
+                                            <table t-attf-style="min-width: 590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:separate; background-color: {{ object.company_id.primary_color or 'gray'}}"
                                                 width="590"
                                                 cellspacing="0"
                                                 cellpadding="0"
@@ -109,7 +109,7 @@
                                                         <!-- LOGO -->
                                                         <td valign="top"
                                                             align="right">
-                                                            <img t-attf-src="/logo.png?company={{ object.user_id.company_id.id }}"
+                                                            <img t-attf-src="/logo.png?company={{ object.company_id.id }}"
                                                                 style="padding: 0px; margin: 16px; height: auto; width: 100px;"
                                                                 t-att-alt="object.company_id.name"/>
                                                         </td>
