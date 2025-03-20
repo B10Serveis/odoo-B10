@@ -99,6 +99,11 @@ Changelog
 
 * [ADD] Corregit report tag deprecated.
 
+16.0.1.7.5 (2025-03-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Corregit condicional de pagaments a la Factura.
+
 
 Bug Tracker
 ===========
