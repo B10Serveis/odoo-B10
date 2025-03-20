@@ -106,6 +106,11 @@ Changelog
 
 * [FIX] Corregit condicional de pagaments a la Factura.
 
+17.0.1.7.5 (2025-03-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Format de Signatura a les Entregues + Traduccions.
+
 Bug Tracker
 ===========
 

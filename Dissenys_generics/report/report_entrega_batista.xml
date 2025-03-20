@@ -225,14 +225,15 @@
                 <!-- Firma -->
                 <div class="container"
                     id="b10_signature"
-                    t-if="doc.signature"
-                    style="">
+                    t-if="doc.signature">
                     <div class="row">
-                        <span style="">
+                        <span>
                             <strong>Signature:</strong>
                         </span>
+                    </div>
+                    <div class="row">
                         <img t-att-src="image_data_uri(o.signature)"
-                            style="max-height: 250px; max-width: 750px;"/>
+                            style="max-height: 250px; max-width: 750px; width: 350px;"/>
                         <span t-if="o.partner_id.name"
                             t-field="o.partner_id.name">-</span>
                     </div>
