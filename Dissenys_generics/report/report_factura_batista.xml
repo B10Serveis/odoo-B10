@@ -481,7 +481,7 @@
                                             t-call="account.document_tax_totals"/>
 
                                         <!--Payments-->
-                                        <t t-if="print_with_payments">
+                                        <t t-if="not o.amount_total==o.amount_residual">
                                             <t t-if="o.payment_state != 'invoicing_legacy'">
                                                 <t t-set="payments_vals"
                                                     t-value="o.sudo().invoice_payments_widget and o.sudo().invoice_payments_widget['content'] or []"/>

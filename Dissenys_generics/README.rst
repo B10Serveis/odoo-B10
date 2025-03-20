@@ -101,6 +101,11 @@ Changelog
 
 * [ADD] Afegir descripció (de rebut/lliurament/transferencia) a les linies d'entrega.
 
+17.0.1.6.5 (2025-03-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Corregit condicional de pagaments a la Factura.
+
 Bug Tracker
 ===========
 
