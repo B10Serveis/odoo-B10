@@ -111,6 +111,11 @@ Changelog
 
 * [ADD] Format de Signatura a les Entregues + Traduccions.
 
+17.0.1.8.5 (2025-03-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Modificacions a Entregues per tenir en compte devolucions.
+
 Bug Tracker
 ===========
 

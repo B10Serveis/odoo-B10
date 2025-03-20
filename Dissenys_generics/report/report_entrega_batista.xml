@@ -104,11 +104,20 @@
                             id="b10_docinfo_left">
 
                             <!-- Dades entrega -->
-                            <span t-if="doc.name">
+
+                            <!-- ENTREGA -->
+                            <span t-if="doc.name and doc.picking_type_code=='outgoing'">
                                 <h5 style="border-bottom: 1px solid #c1c1c1; ">
-                                    <strong>STOCK PICKING</strong>
+                                    <strong>OUTGOING STOCK PICKING</strong>
                                 </h5>
                             </span>
+                            <!-- DEVOLUCIÓ -->
+                            <span t-if="doc.name and doc.picking_type_code=='incoming'">
+                                <h5 style="border-bottom: 1px solid #c1c1c1; ">
+                                    <strong>INCOMING STOCK PICKING</strong>
+                                </h5>
+                            </span>
+
                             <p style="margin-bottom: 0;">
                                 <span t-if="doc.name">Stock Picking: <span t-field="doc.name"/>
                                 </span>
@@ -176,7 +185,10 @@
                             <tr>
                                 <th class="text-right">CODE</th>
                                 <th class="text-left">DESCRIPTION</th>
-                                <th class="text-right">DELIVERED</th>
+                                <th class="text-right"
+                                    t-if="doc.picking_type_code=='outgoing'">DELIVERED</th>
+                                <th class="text-right"
+                                    t-if="doc.picking_type_code=='incoming'">RETURNED</th>
                             </tr>
                         </thead>
                         <tbody class="order_tbody"
@@ -201,8 +213,14 @@
                                     <span t-if="l.lot_id">Lot: <span t-field="l.lot_id"/>
                                     </span>
                                 </td>
-                                <td class="text-right">
+                                <td class="text-right"
+                                    t-if="doc.picking_type_code=='outgoing'">
                                     <span t-field="l.move_id.quantity"/>
+                                    <span t-field="l.move_id.product_uom"/>
+                                </td>
+                                <td class="text-right"
+                                    t-if="doc.picking_type_code=='incoming'">
+                                    <span t-esc="l.move_id.quantity * -1"/>
                                     <span t-field="l.move_id.product_uom"/>
                                 </td>
                             </tr>
