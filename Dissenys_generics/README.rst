@@ -116,6 +116,11 @@ Changelog
 
 * [ADD] Modificacions a Entregues per tenir en compte devolucions.
 
+17.0.1.8.6 (2025-04-07)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Al model account.move canviat @api.model a @api.model_create_multi.
+
 Bug Tracker
 ===========
 
