@@ -86,6 +86,11 @@ Changelog
 
 * [ADD] Migració des de 16.0
 
+17.0.1.0.1 (2025-04-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Deprecation Warnings de decimal_precision
+
 
 Known issues / Roadmap
 ======================

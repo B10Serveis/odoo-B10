@@ -3,7 +3,6 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models
-import odoo.addons.decimal_precision as dp
 
 
 class ProductTemplate(models.Model):
@@ -26,13 +25,13 @@ class ProductTemplate(models.Model):
     theoretical_price = fields.Float(
         string="Theoretical Price",
         related="product_variant_ids.theoretical_price",
-        digits=dp.get_precision("Product Price"),
+        digits="Product Price",
     )
 
     theoretical_difference = fields.Float(
         string="Theoretical Difference",
         related="product_variant_ids.theoretical_difference",
-        digits=dp.get_precision("Product Price"),
+        digits="Product Price",
     )
 
     margin_state = fields.Selection(

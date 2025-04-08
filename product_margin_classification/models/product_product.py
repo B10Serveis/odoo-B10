@@ -5,7 +5,6 @@
 from odoo import _, api, fields, models, tools
 from odoo.exceptions import ValidationError
 from odoo.tools.float_utils import float_compare
-import odoo.addons.decimal_precision as dp
 
 
 class Productproduct(models.Model):
@@ -25,14 +24,14 @@ class Productproduct(models.Model):
 
     theoretical_price = fields.Float(
         string="Theoretical Price",
-        digits=dp.get_precision("Product Price"),
+        digits="Product Price",
         compute="_compute_theoretical_multi",
         store=True,
     )
 
     theoretical_difference = fields.Float(
         string="Theoretical Difference",
-        digits=dp.get_precision("Product Price"),
+        digits="Product Price",
         compute="_compute_theoretical_multi",
         store=True,
     )
@@ -55,7 +54,7 @@ class Productproduct(models.Model):
         "taxes_id",
     )
     def _compute_theoretical_multi(self):
-        precision = self.env["decimal.precision"].precision_get("Product Price")
+        precision = self.env.company.currency_id.decimal_places
 
         for product in self:
             classification = product.margin_classification_id
