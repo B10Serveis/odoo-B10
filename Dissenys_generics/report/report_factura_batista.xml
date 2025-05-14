@@ -386,6 +386,7 @@
                                     t-field="o.invoice_payment_term_id.note"
                                     name="payment_term"/>
                             </div>
+                            <!-- Payment terms table -->
                             <div class="row"
                                 id="b10_payment_terms_table">
                                 <t t-if="o.invoice_payment_term_id.display_on_invoice and payment_term_details">

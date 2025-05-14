@@ -121,6 +121,11 @@ Changelog
 
 * [FIX] Al model account.move canviat @api.model a @api.model_create_multi.
 
+17.0.1.9.6 (2025-05-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Mostra els venciments a la Factura Estandard (Cal que el venciment tingui marcat "Mostra terminis de la factura").
+
 Bug Tracker
 ===========
 
