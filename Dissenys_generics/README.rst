@@ -94,6 +94,11 @@ Changelog
 
 * [ADD] Corregit report tag deprecated.
 
+15.0.1.9.3 (2025-05-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Mostra els venciments a la Factura Estandard (Cal que el venciment tingui marcat "Mostra terminis de la facturas").
+
 Bug Tracker
 ===========
 

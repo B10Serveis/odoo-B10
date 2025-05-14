@@ -321,6 +321,7 @@
                                 <span>Payment term: </span>
                                 <span t-field="doc.invoice_payment_term_id.name"/>
                             </div>
+                            <!-- Payment terms table -->
                             <div class="row"
                                 id="b10_payment_terms_table"
                                 t-if="doc.invoice_payment_term_id.display_on_invoice">
