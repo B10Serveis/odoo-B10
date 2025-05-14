@@ -104,6 +104,11 @@ Changelog
 
 * [FIX] Corregit condicional de pagaments a la Factura.
 
+16.0.1.9.5 (2025-05-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Mostra els venciments a la Factura Estandard (Cal que el venciment tingui marcat "Mostra terminis de la factura").
+
 
 Bug Tracker
 ===========
