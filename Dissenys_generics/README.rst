@@ -83,6 +83,11 @@ Changelog
 
 * [ADD] Correcció de l'informe de facturació per funcionar amb comptes analitics.
 
+14.0.1.4.6 (2025-05-15)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Mostra els venciments a la Factura Estandard.
+
 
 Bug Tracker
 ===========

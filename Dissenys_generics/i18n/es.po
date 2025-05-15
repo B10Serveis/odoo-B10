@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 12:31+0000\n"
-"PO-Revision-Date: 2024-02-28 13:35+0100\n"
+"POT-Creation-Date: 2025-05-15 09:15+0000\n"
+"PO-Revision-Date: 2025-05-15 11:38+0200\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: es\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. module: Dissenys_generics
 #: model:ir.actions.report,print_report_name:Dissenys_generics.factura_batista
@@ -76,6 +76,11 @@ msgstr ", Folio"
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
 msgid ", on the Volume"
 msgstr ", en el Tomo"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "<span>Payment term: </span>"
+msgstr "<span>Terminio pago: </span>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -207,6 +212,11 @@ msgstr ""
 "obtener información adicional o presentar una reclamación."
 
 #. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Amount"
+msgstr "Importe"
+
+#. module: Dissenys_generics
 #: model:account.payment.method,name:Dissenys_generics.account_payment_method_bank_transfer
 msgid "Bank transfer"
 msgstr "Transferencia"
@@ -219,6 +229,7 @@ msgstr "CODIGO"
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.comanda_batista
 #: model:ir.actions.report,name:Dissenys_generics.comanda_compra_batista
+#: model:ir.actions.report,name:Dissenys_generics.entrega_batista
 msgid "Comanda Estandard"
 msgstr "Pedido Estandard"
 
@@ -262,9 +273,15 @@ msgid "Disc.(%)"
 msgstr "Desc.(%)"
 
 #. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_invoice_report__display_name
 #: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "Nombre Mostrado"
+
+#. module: Dissenys_generics
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
+msgid "Due date"
+msgstr "Vencimiento"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -278,14 +295,9 @@ msgid "Email:"
 msgstr "Correo:"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.entrega_batista
-msgid "Entrega Estandard"
-msgstr ""
-
-#. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.factura_batista
 msgid "Factura Estandard"
-msgstr ""
+msgstr "Factura Estandar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_factura_batista_document
@@ -293,6 +305,7 @@ msgid "IBAN:"
 msgstr ""
 
 #. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_invoice_report__id
 #: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order__id
 msgid "ID"
 msgstr ""
@@ -308,6 +321,12 @@ msgid "Invoice:"
 msgstr "Factura:"
 
 #. module: Dissenys_generics
+#: model:ir.model,name:Dissenys_generics.model_account_invoice_report
+msgid "Invoices Statistics"
+msgstr "Estadísticas de Facturación"
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_invoice_report____last_update
 #: model:ir.model.fields,field_description:Dissenys_generics.field_sale_order____last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
@@ -383,14 +402,14 @@ msgid "ProForma Date:"
 msgstr "Fecha ProForma:"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.proforma_batista
-msgid "ProForma Estandard"
-msgstr ""
-
-#. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "ProForma:"
 msgstr ""
+
+#. module: Dissenys_generics
+#: model:ir.actions.report,name:Dissenys_generics.proforma_batista
+msgid "Proforma Estandard"
+msgstr "Proforma Estandar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -494,6 +513,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
 msgid "Term:"
 msgstr ""
+
+#. module: Dissenys_generics
+#: model:ir.model.fields,field_description:Dissenys_generics.field_account_invoice_report__price_total_with_tax
+#: model_terms:ir.ui.view,arch_db:Dissenys_generics.view_account_invoice_report_pivot_inherit
+msgid "Total Price with Taxes"
+msgstr "Total IVA incluido"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document

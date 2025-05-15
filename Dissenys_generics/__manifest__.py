@@ -4,10 +4,11 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "14.0.1.3.6",
+    "version": "14.0.1.4.6",
     "depends": [
         "base",
         "account_payment_partner",
+        "account_payment_sale",
         "sale",
         "sale_order_report_product_image",
         "stock",

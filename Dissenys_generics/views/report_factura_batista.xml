@@ -311,6 +311,39 @@
                                     t-field="doc.narration">
                                 </div>
                             </t>
+                            <div class="row"
+                                id="b10_payment_terms">
+                                <span>Payment term: </span>
+                                <span t-field="doc.invoice_payment_term_id.name"/>
+                            </div>
+                            <!-- Payment terms table -->
+                            <div class="row"
+                                id="b10_payment_terms_table">
+                                <table class="table table-condensed table-striped"
+                                    style="width:300px">
+                                    <thead>
+                                        <tr>
+                                            <th>Due date</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- .sorted(key=lambda r: r.date_maturity) -->
+                                        <t t-foreach="doc.line_ids"
+                                            t-as="due">
+                                            <tr t-if="due.debit != 0">
+                                                <td>
+                                                    <span t-field="due.date_maturity"/>
+                                                </td>
+                                                <td>
+                                                    <span t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                                        t-esc="due.balance * doc.currency_id.rate"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="col-6">
                             <div class="clearfix">
