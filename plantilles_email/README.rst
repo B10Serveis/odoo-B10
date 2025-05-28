@@ -54,6 +54,12 @@ Changelog
 
 * [FIX] Correcció d'error multiempresa.
 
+17.0.1.3.2 (2025-05-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir enllaç de visualitzar pressupost, comanda i factura.
+
+
 
 
 Bug Tracker
