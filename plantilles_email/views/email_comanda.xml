@@ -106,6 +106,14 @@
                                                                         contenteditable="false">
                                                                     </t>
                                                                 </p>
+                                                                <t t-if="object.require_signature">
+                                                                    <p style="margin-left: 16px; margin-top: 12px;">
+                                                                        You can review and sign the quotation online at the following link:
+                                                                        <a t-attf-href="{{ object.get_portal_url() }}"
+                                                                            style="color: #1a73e8;">
+                                                                        View Quotation Online</a>
+                                                                    </p>
+                                                                </t>
                                                             </div>
                                                         </td>
                                                         <!-- LOGO -->

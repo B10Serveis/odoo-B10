@@ -46,7 +46,7 @@
                                                     <tr>
                                                         <td valign="middle"
                                                             style="padding: 16px; font-size: 20px; font-weight: bold; color: white;">
-                                                            <span >Order from </span>
+                                                            <span >Quotation from </span>
                                                             <t t-out="object.company_id.name or '-'"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
@@ -105,6 +105,16 @@
                                                                         contenteditable="false">
                                                                     </t>
                                                                 </p>
+
+                                                                <t t-if="object.require_signature">
+                                                                    <p style="margin-left: 16px; margin-top: 12px;">
+                                                                        You can review and sign the quotation online at the following link:
+                                                                        <a t-attf-href="{{ object.get_portal_url() }}"
+                                                                            style="color: #1a73e8;">
+                                                                        View Quotation Online</a>
+                                                                    </p>
+                                                                </t>
+
                                                             </div>
                                                         </td>
                                                         <!-- LOGO -->

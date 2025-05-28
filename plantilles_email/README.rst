@@ -65,6 +65,11 @@ Changelog
 
 * [FIX] Correcció error multiempresa.
 
+16.0.1.3.2 (2025-05-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir enllaç de visualitzar pressupost, comanda i factura.
+
 
 Bug Tracker
 ===========
@@ -88,6 +93,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
