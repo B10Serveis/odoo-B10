@@ -70,6 +70,11 @@ Changelog
 
 * [ADD] Afegir enllaç de visualitzar pressupost, comanda i factura.
 
+16.0.1.4.2 (2025-06-09)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir plantilla Pendent de pagament.
+
 
 Bug Tracker
 ===========
