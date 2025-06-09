@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "15.0.1.2.2",
+    "version": "15.0.1.3.2",
     "depends": [
         "base",
         "mail",
@@ -16,6 +16,7 @@
     "application": True,
     "data": [
         "views/email_factura.xml",
+        "views/email_factura_impagada.xml",
         "views/email_comanda.xml",
         "views/email_pressupost.xml",
     ],

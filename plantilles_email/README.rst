@@ -65,6 +65,11 @@ Changelog
 
 * [FIX] Correcció d'error multiempresa.
 
+15.0.1.3.2 (2025-06-09)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir plantilla Pendent de pagament.
+
 
 Bug Tracker
 ===========
