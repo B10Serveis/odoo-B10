@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "17.0.1.3.2",
+    "version": "17.0.1.4.2",
     "depends": [
         "base",
         "mail",
@@ -17,6 +17,7 @@
     "data": [
         "views/debrand_odoo_mail.xml",
         "views/email_factura.xml",
+        "views/email_factura_impagada.xml",
         "views/email_comanda.xml",
         "views/email_pressupost.xml",
         "views/email_proforma.xml",
