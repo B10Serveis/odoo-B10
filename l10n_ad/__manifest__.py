@@ -4,8 +4,7 @@
     'name': 'Andorra - Accounting',
     'summary': ('Creació de grups comptables, Pla General Comptable'
                 ' i taxes andorranes (IGI, IRPF)'),
-    # TODO: Replace with "17.0.1.0.0" when part of OCA.
-    'version': '1.0',
+    'version': '17.0.1.0.0',
     'icon': '/account/static/description/l10n.png',
     'countries': ['ad'],
     # TODO: Add ", Odoo Community Association (OCA)" when part of OCA.
