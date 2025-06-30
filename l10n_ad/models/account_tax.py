@@ -19,4 +19,5 @@ class AccountTax(models.Model):
         ],
         string="Tax Type (Andorra)", default="subjecte",
     )
-    l10n_ad_bien_inversion = fields.Boolean("Bens d'Inversió", default=False)
+    l10n_ad_bien_inversion = fields.Boolean(string="Bens d'Inversió (Andorra)",
+                                            default=False)
