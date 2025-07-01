@@ -264,11 +264,7 @@
                         <div class="last-page">
                             <div style="clear:left; display:block; color:gray; font-size:0.75em; text-align: center;">
                                 <p style="margin-bottom: 0; text-align: center;">
-                        According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data
-proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of
-The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the
-consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by
-get additional information or file a complaint.
+                                    <span t-field="company.report_footer" />
                                 </p>
                             </div>
                         </div>

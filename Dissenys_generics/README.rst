@@ -36,6 +36,10 @@ To use this module, you need to:
 
 #. Impressió de documents acabats amb l'extensió B10
 #. ATENCIÓ: Perque es mostri l'IBAN si el mode de pagament és Transferencia cal seleccionar al Mode de pagament el Mètode de pagament 'Bank Transfer'.
+#. La importació del text del peu de pàgina sol funciona en anglès. Cal actualitzar les traduccions a mà al instalar.
+#. El text per defecte és:
+* D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades personals amb la finalitat de realitzar la gestió administrativa, comptable i fiscal. Les dades proporcionades es conservaran el temps exigible per una obligació legal i no seran cedides a tercers excepte previsió legal exigible, o en el seu cas, previ consentiment de l’interessat. Podrà exercir els següents drets sobre les seves dades personals: dret d’accés, rectificació, supressió, oblit, limitació, oposició, portabilitat i a retirar el consentiment prestat, a l’adreça assenyalada en el present document. A més, podrà adreçar-se a l’autoritat de Control competent en matèria de Protecció de Dades per obtenir informació addicional o presentar una reclamació.
+* De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos personales con el fin de realizar la gestión administrativa, contable y fiscal. Los datos proporcionados se conservarán el tiempo exigible por una obligación legal y no serán cedidas a terceros excepto previsión legal exigible, o en su caso, previo consentimiento del interesado. Podrá ejercer los  siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, limitación, oposición, portabilidad y a retirar el consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente en materia de Protección de Datos para obtener información adicional o presentar una reclamación.
 
 Changelog
 =========
@@ -98,6 +102,11 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [ADD] Mostra els venciments a la Factura Estandard (Cal que el venciment tingui marcat "Mostra terminis de la facturas").
+
+15.0.1.10.3 (2025-06-30)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Peus de documents dinamics i traduibles utilitzant el camp de "Configuració - Configurar el disseny del document - Peu".
 
 Bug Tracker
 ===========
