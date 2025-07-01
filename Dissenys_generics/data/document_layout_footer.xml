@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="document_layout_footer_custom"
+            model="base.document.layout">
+            <field name="report_footer">
+                According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of the interested party. You may exercise the following rights on your personal data: right of access, rectification, erasure, forgetfulness, limitation, opposition, portability and to withdraw the consent given, to the address indicated in this document. In addition, you may contact the competent supervisory authority in the field of data protection to obtain additional information or file a complaint.
+            </field>
+        </record>
+    </data>
+</odoo>
