@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- Herència de la vista de partner per afegir Accessos Proveïdor -->
+    <record id="view_partner_form_b10_purchases" model="ir.ui.view">
+      <field name="name">b10.purchases.partner.form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+
+        <!-- Afegim el camp supplier_rank dins un xpath vàlid -->
+        <xpath expr="//sheet" position="inside">
+          <field name="supplier_rank" invisible="1"/>
+        </xpath>
+
+        <!-- Checkbox per habilitar la pestanya Accessos -->
+        <xpath expr="//sheet/notebook" position="before">
+          <group modifiers="{
+            'invisible': ['|',
+              ['supplier_rank','=', 0],
+              ['customer_rank','>', 0]
+            ]
+          }">
+            <field name="x_is_provider_access"/>
+          </group>
+        </xpath>
+
+        <!-- Pestanya “Access” amb els camps i condició de visibilitat -->
+        <xpath expr="//sheet/notebook" position="inside">
+          <page name="b10_access_page"
+                string="Access"
+                modifiers="{
+                  'invisible': ['|',
+                    ['supplier_rank','=', 0],
+                    ['|',
+                      ['customer_rank','>', 0],
+                      ['x_is_provider_access','=', False]
+                    ]
+                  ]
+                }">
+            <group>
+              <field name="x_provider_url"    placeholder="https://example.com"/>
+              <field name="x_provider_user"   placeholder="user@example.com"/>
+              <field name="x_provider_pwd"    placeholder="••••••••"/>
+            </group>
+          </page>
+        </xpath>
+
+      </field>
+    </record>
+
+  </data>
+</odoo>

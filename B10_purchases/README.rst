@@ -54,6 +54,10 @@ Changelog
 
 * [ADD] Afegir data d'arribada esperada a comanda de compra.
 
+17.0.1.3.1 (2025-07-04)
+----------------------
+
+* [ADD] Integració de la pestanya “Access” i checkbox per a proveïdors.
 
 Bug Tracker
 ===========
@@ -78,7 +82,6 @@ Contributors
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
-
 
 Other credits
 ~~~~~~~~~~~~~

@@ -6,16 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 14:58+0000\n"
-"PO-Revision-Date: 2025-02-27 16:00+0100\n"
-"Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
+"POT-Creation-Date: 2025-07-04 10:30+0000\n"
+"PO-Revision-Date: 2025-07-04 10:30+0000\n"
+"Last-Translator: Pol Comas <pol@batista10.cat>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 3.2.2\n"
 
 #. module: B10_purchases
 #: model:ir.actions.report,print_report_name:B10_purchases.B10_purchase_order_action
@@ -546,6 +545,11 @@ msgstr ""
 "        "
 
 #. module: B10_purchases
+#: model_terms:ir.ui.view,arch_db:B10_purchases.view_partner_form_b10_purchases
+msgid "Access"
+msgstr "Acceso"
+
+#. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
 msgid ""
@@ -570,6 +574,11 @@ msgstr ""
 "obtener información adicional o presentar una reclamación."
 
 #. module: B10_purchases
+#: model:ir.model,name:B10_purchases.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
 msgid "Description"
@@ -579,7 +588,19 @@ msgstr "Descripción"
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
 msgid "Email:"
-msgstr ""
+msgstr "Correo"
+
+#. module: B10_purchases
+#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_is_provider_access
+#: model:ir.model.fields,help:B10_purchases.field_res_users__x_is_provider_access
+msgid "Enable the Access tab for supplier platform credentials"
+msgstr "Habilitar la pestaña Acceso para las credenciales de la plataforma del proveedor"
+
+#. module: B10_purchases
+#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_pwd_encrypted
+#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_pwd_encrypted
+msgid "Encrypted Provider Password"
+msgstr "Contraseña de proveedor cifrada"
 
 #. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
@@ -590,6 +611,18 @@ msgstr "Fecha pedido:"
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 msgid "Order:"
 msgstr "Pedido:"
+
+#. module: B10_purchases
+#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_pwd
+#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_pwd
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: B10_purchases
+#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_provider_pwd
+#: model:ir.model.fields,help:B10_purchases.field_res_users__x_provider_pwd
+msgid "Password for the supplier platform"
+msgstr "Contraseña para la plataforma del proveedor "
 
 #. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
@@ -603,10 +636,22 @@ msgid "Planned Date:"
 msgstr "Llegada esperada:"
 
 #. module: B10_purchases
+#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_url
+#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_url
+msgid "Platform URL"
+msgstr "URL de la plataforma"
+
+#. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
 msgid "Price"
 msgstr "Precio"
+
+#. module: B10_purchases
+#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_is_provider_access
+#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_is_provider_access
+msgid "Provider Access"
+msgstr "Acceso del proveedor"
 
 #. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
@@ -654,7 +699,13 @@ msgstr "NIF:"
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
 msgid "Tel:"
-msgstr ""
+msgstr "Telf"
+
+#. module: B10_purchases
+#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_provider_url
+#: model:ir.model.fields,help:B10_purchases.field_res_users__x_provider_url
+msgid "URL of the supplier platform"
+msgstr "URL de la plataforma del proveedor"
 
 #. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
@@ -663,10 +714,32 @@ msgid "Unit Price"
 msgstr "Precio Unitario"
 
 #. module: B10_purchases
+#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_provider_user
+#: model:ir.model.fields,help:B10_purchases.field_res_users__x_provider_user
+msgid "User login for the supplier platform"
+msgstr "Inicio de sesión para la plataforma del proveedor"
+
+#. module: B10_purchases
+#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_user
+#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_user
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#. module: B10_purchases
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
 #: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
 msgid "VAT:"
 msgstr "NIF:"
+
+#. module: B10_purchases
+#: model_terms:ir.ui.view,arch_db:B10_purchases.view_partner_form_b10_purchases
+msgid "https://example.com"
+msgstr "https://example.com"
+
+#. module: B10_purchases
+#: model_terms:ir.ui.view,arch_db:B10_purchases.view_partner_form_b10_purchases
+msgid "user@example.com"
+msgstr "usuario@example.com"
 
 #. module: B10_purchases
 #: model:mail.template,subject:B10_purchases.comanda_email_template
