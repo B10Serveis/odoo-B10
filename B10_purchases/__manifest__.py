@@ -8,6 +8,8 @@
     "depends": [
         "base",
         "purchase",
+        "contacts",
+        "field_encryption",
         "state_original_name",
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
@@ -21,5 +23,6 @@
         "views/B10_purchase_quotation.xml",
         "views/B10_purchase_quotation_email.xml",
         "views/B10_purchase_order_email.xml",
+        "views/B10_supplier_platform.xml",
     ],
 }

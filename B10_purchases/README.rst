@@ -49,6 +49,10 @@ Changelog
 
 * [ADD] Afegir data d'arribada esperada a comanda de compra.
 
+16.0.1.3.1 (2025-07-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Integració de la pestanya “Access” i checkbox per a proveïdors.
 
 Bug Tracker
 ===========
