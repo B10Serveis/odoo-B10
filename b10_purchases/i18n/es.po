@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * b10_purchases
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-03 15:13+0000\n"
+"PO-Revision-Date: 2025-07-03 15:13+0000\n"
+"Last-Translator: Pol Comas <pol@batista10.cat>\n"
+"Language-Team: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "Access"
+msgstr "Acceso"
+
+#. module: b10_purchases
+#: model:ir.model,name:b10_purchases.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_pwd
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_pwd
+msgid "Contrasenya"
+msgstr "Contraseña"
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_is_provider_access
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_is_provider_access
+msgid "Enable the Access tab for supplier platform credentials"
+msgstr "Habilitar la pestaña Acceso para las credenciales de la plataforma del proveedor"
+
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_pwd_encrypted
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_pwd_encrypted
+msgid "Encrypted Provider Password"
+msgstr "Contraseña de proveedor cifrada"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "Password"
+msgstr "Contraseña"
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_provider_pwd
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_provider_pwd
+msgid "Password for the supplier platform"
+msgstr "Contraseña para la plataforma del proveedor"
+
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_url
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_url
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "Platform URL"
+msgstr "URL de la plataforma"
+
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_is_provider_access
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_is_provider_access
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "Provider Access"
+msgstr "Acceso del proveedor"
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_provider_url
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_provider_url
+msgid "URL of the supplier platform"
+msgstr "URL de la plataforma del proveedor"
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_provider_user
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_provider_user
+msgid "User login for the supplier platform"
+msgstr "Inicio de sesión para la plataforma del proveedor"
+
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_user
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_user
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "https://example.com"
+msgstr "https://example.com"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
+msgid "user@example.com"
+msgstr "usuario@example.com"
