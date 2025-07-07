@@ -34,8 +34,7 @@ Usage
 
 To use this module, you need to:
 
-Instal·lació de field_encryption
---------------------------------
+**Instal·lació de field_encryption:**
 
 El mòdul **field_encryption** és requereix per emmagatzemar i desxifrar el camp de contrasenya de proveïdor.
 
