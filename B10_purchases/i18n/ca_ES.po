@@ -572,6 +572,16 @@ msgstr ""
 "obtenir informació addicional o presentar una reclamació."
 
 #. module: B10_purchases
+#: model:res.groups,name:B10_purchases.group_b10_pwd_manager
+msgid "B10 Purchases Password Manager"
+msgstr "B10 Purchases - Gestor de Contrasenyes de Proveïdor"
+
+#. module: B10_purchases
+#: model:res.groups,name:B10_purchases.group_b10_pwd_reader
+msgid "B10 Purchases Password Reader"
+msgstr "B10 Purchases - Lector de Contrasenyes de Proveïdor"
+
+#. module: B10_purchases
 #: model:ir.model,name:B10_purchases.model_res_partner
 msgid "Contact"
 msgstr "Contacte"
