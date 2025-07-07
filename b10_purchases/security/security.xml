@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Grup que pot veure i editar contrasenyes de proveïdor -->
+  <record id="group_provider_password_view" model="res.groups">
+    <field name="name">Provider Password Manager</field>
+    <field name="category_id" ref="base.module_category_hidden"/>
+  </record>
+  <!-- Grup que pot veure contrasenyes de proveïdor -->
+  <record id="group_b10_pwd_reader" model="res.groups">
+    <field name="name">B10 Purchases Password Reader</field>
+    <field name="implied_ids" eval="[(4, ref('group_provider_password_view'))]"/>
+    <field name="category_id" ref="base.module_category_hidden"/>
+  </record>
+</odoo>

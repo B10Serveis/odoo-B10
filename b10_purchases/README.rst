@@ -34,6 +34,52 @@ Usage
 
 To use this module, you need to:
 
+Instal·lació de field_encryption
+--------------------------------
+
+El mòdul **field_encryption** és requereix per emmagatzemar i desxifrar el camp de contrasenya de proveïdor.
+
+1. Clona el repositori oficial:
+
+   .. code-block:: bash
+
+      cd /ruta/al/teu/addons
+      git clone https://github.com/ShahAlamSumon/field_encryption.git
+
+2. Afegeix `field_encryption` al teu `addons_path` del `odoo.conf`:
+
+   .. code-block:: ini
+
+      [options]
+      addons_path = /ruta/al/teu/addons, /altres/camins, ...
+
+3. Marca **field_encryption** com a mòdul global:
+
+   .. code-block:: ini
+
+      [options]
+      server_wide_modules = web,web_kanban_gauge,field_encryption
+
+4. Genera una clau d’encriptació segura de 32 bytes en Base64. Per exemple:
+
+   .. code-block:: bash
+
+      python3 - <EOF
+      import base64, os
+      print(base64.urlsafe_b64encode(os.urandom(32)).decode())
+      EOF
+
+5. Afig la clau generada al `odoo.conf`:
+
+   .. code-block:: ini
+
+      [options]
+      encryption_key = <la-teva-clau-base64-de-32-bytes>
+
+6. Reinicia Odoo i comprova que el mòdul **field_encryption** aparegui a la llista d’Apps.
+
+Un cop fet això, podràs instal·lar **B10 Purchases** amb la funcionalitat d’encriptació activada.
+
 Changelog
 =========
 
@@ -43,6 +89,10 @@ Changelog
 * [ADD] Checkbox “Provider Access” i pestanya Access (URL, Usuari, PWD).  
 * [FIX] Visibilitat només per a proveïdors (`supplier_rank > 0`).
 
+15.0.1.5.4 (2025-07-07)
+~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] **Security**: afegits grups de permisos “Provider Password Reader” i “Provider Password Manager” per controlar qui pot visualitzar i modificar les contrasenyes.
 
 Bug Tracker
 ===========
@@ -81,7 +131,7 @@ Maintainers
 This module is maintained by Batista10.
 
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/17.0/Dissenys_generics>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/15.0>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
 
