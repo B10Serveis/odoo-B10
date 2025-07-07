@@ -30,7 +30,10 @@
             <group>
               <field name="x_provider_url"    string="Platform URL" placeholder="https://example.com"/>
               <field name="x_provider_user"   string="Username" placeholder="user@example.com"/>
-              <field name="x_provider_pwd"    string="Password" placeholder="••••••••" widget="password"/>
+              <field name="x_provider_pwd"    string="Password" placeholder="••••••••" widget="password" 
+                     groups="B10_purchases.group_b10_pwd_manager"/>
+              <field name="x_provider_pwd"    string="Password" placeholder="••••••••" widget="password" 
+                     readonly = "1" groups="B10_purchases.group_b10_pwd_reader"/>
             </group>
           </page>
         </xpath>

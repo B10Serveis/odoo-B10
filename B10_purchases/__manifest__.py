@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.2.0",
+    "version": "16.0.1.3.2",
     "depends": [
         "base",
         "purchase",
@@ -17,6 +17,7 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "security/security.xml",
         "views/B10_purchase_order_report.xml",
         "views/B10_purchase_order.xml",
         "views/B10_purchase_quotation_report.xml",

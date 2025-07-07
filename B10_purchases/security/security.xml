@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Grup de lectura i escriptura -->
+  <record id="group_b10_pwd_manager" model="res.groups">
+    <field name="name">B10 Purchases Password Manager</field>
+    <field name="implied_ids" eval="[(5, 0, 0)]"/>
+    <field name="category_id" ref="base.module_category_hidden"/>
+  </record>
+
+  <!-- Grup de només lectura -->
+  <record id="group_b10_pwd_reader" model="res.groups">
+    <field name="name">B10 Purchases Password Reader</field>
+    <field name="implied_ids" eval="[(5, 0, 0)]"/>
+    <field name="category_id" ref="base.module_category_hidden"/>
+  </record>
+</odoo>
