@@ -15,12 +15,7 @@
 
         <!-- Checkbox per habilitar la pestanya Accessos -->
         <xpath expr="//sheet/notebook" position="before">
-          <group modifiers="{
-            'invisible': ['|',
-              ['supplier_rank','=', 0],
-              ['customer_rank','>', 0]
-            ]
-          }">
+          <group invisible="supplier_rank == 0">
             <field name="x_is_provider_access"/>
           </group>
         </xpath>
@@ -29,9 +24,7 @@
         <xpath expr="//sheet/notebook" position="inside">
           <page name="b10_access_page"
                 string="Access"
-                modifiers="{
-                  'invisible': [('x_is_provider_access', '=', False)]
-                }">
+                invisible="not x_is_provider_access">
             <group>
               <field name="x_provider_url"    placeholder="https://example.com"/>
               <field name="x_provider_user"   placeholder="user@example.com"/>
