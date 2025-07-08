@@ -31,3 +31,5 @@
 #
 ###############################################
 from . import supplierPlatformb10
+from . import res_groups
+from . import res_users
