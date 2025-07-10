@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b10_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-10 09:14+0000\n"
+"PO-Revision-Date: 2025-07-10 09:14+0000\n"
+"Last-Translator: Pol Comas <pol@batista10.cat>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "<strong> Date Start: </strong>"
+msgstr "<strong> Fecha de inicio: </strong>"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "<strong> Date end: </strong>"
+msgstr "<strong> Fecha fin: </strong>"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "<strong>Point of Sale: </strong>"
+msgstr "<strong>Punto de Venta: </strong>"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.view_pos_session_wizard
+msgid "<strong>Point of Sale</strong>"
+msgstr "<strong>Punto de Venta</strong>"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Amount"
+msgstr "Importe"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.view_pos_session_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Date end"
+msgstr "Fecha fin"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Date init"
+msgstr "Fecha de inicio"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Declared"
+msgstr "Declarado"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__end_date
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Initial Amount"
+msgstr "Importe inicial"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "POS CLOSING REPORT"
+msgstr "INFORME DE CIERRE TPV"
+
+#. module: b10_pos
+#: model:ir.actions.report,name:b10_pos.pos_closing_report
+#: model:ir.model,name:b10_pos.model_report_b10_pos_report_pos_closing_report
+#: model:ir.ui.menu,name:b10_pos.pos_closing_wizard_report_menu
+msgid "POS Closing Report"
+msgstr "Informe de cierre TPV"
+
+#. module: b10_pos
+#: model:ir.actions.act_window,name:b10_pos.pos_closing_report_act_window
+msgid "POS Closing Report Wizard"
+msgstr "Asistente Informe de cierre TPV"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.view_pos_session_wizard
+msgid "POS Report Closing"
+msgstr "Informe cierre TPV"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Payment Mode"
+msgstr "Forma de pago"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__pos_session_id
+msgid "Point of Sale Configuration"
+msgstr "Configuración de Punto de Venta"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.view_pos_session_wizard
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Real"
+msgstr "Real"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Session"
+msgstr "Sesión"
+
+#. module: b10_pos
+#: model:ir.model.fields,field_description:b10_pos.field_pos_closing_wizard__start_date
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Status"
+msgstr "Estado"
+
+#. module: b10_pos
+#: model:ir.model,name:b10_pos.model_pos_closing_wizard
+msgid "Wizard POS Closing Report"
+msgstr "Asistente Informe de cierre TPV"

@@ -1,0 +1,19 @@
+{
+    'name': "Batista 10 - POS",
+    'summary': """Personalització POS Batista10""",   
+    'author': "Batista10",
+    'website': "https://www.batista10.cat",
+    'category': "Personalization",
+    'version': '16.0.0.1.0',
+    'depends': ['base','point_of_sale'],
+    'license': 'AGPL-3', 
+    'application': True,
+    'data': [
+            'security/ir.model.access.csv',
+			'wizard/pos_wizard_report.xml',
+        	'views/pos_closing.xml',
+        	'views/pos_closing_report.xml'
+			],
+	'installable': True,
+}
+
