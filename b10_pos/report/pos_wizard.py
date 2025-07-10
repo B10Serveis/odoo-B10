@@ -28,7 +28,7 @@ class ReportPosReportClosing(models.AbstractModel):
         else:
             dt_ini = today_utc
         if date_fi:
-            dt_fi = fields.Datetime.from_string(date_fi)
+            dt_fi = fields.Datetime.from_string(date_fi) + timedelta(days=1, seconds=-1)
         else:
             dt_fi = today_utc + timedelta(days=1, seconds=-1)
         
