@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="action_pos_closing_report" model="ir.actions.report">
+      <field name="name">POS Closing Report</field>
+      <field name="model">report.b10_pos.pos_closing_report</field>
+      <field name="report_type">qweb-pdf</field>
+      <field name="report_name">b10_pos.report_pos_closing_report</field>
+      <field name="binding_model_id" ref="point_of_sale.model_pos_config"/>
+      <field name="binding_type">report</field>
+    </record>
+  </data>
+</odoo>

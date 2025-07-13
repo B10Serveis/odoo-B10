@@ -50,6 +50,10 @@ Changelog
 * [ADD] Modifica product.product perque el POS vegi les existencies per Ubicació enlloc de per Magatzem.
 
 
+17.0.1.1.0 (2025-07-13)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Informe de tancament de caixa diari: funcionalitat per crear un informe de resum dels tancaments de caixa diaris.
+
 Bug Tracker
 ===========
 
@@ -73,7 +77,7 @@ Contributors
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
-
+* Pol Comas i Romero <pol@batista10.cat> (https://www.batista10.cat)
 
 Other credits
 ~~~~~~~~~~~~~

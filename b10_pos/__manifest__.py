@@ -8,5 +8,11 @@
     "depends": ["point_of_sale"],
     "license": "AGPL-3",
     "application": True,
-    "data": [],
+    'data': [
+            'security/ir.model.access.csv',
+            'views/pos_closing.xml',
+        	'views/pos_closing_report.xml',
+			'wizard/pos_wizard_report.xml'
+			],
+	'installable': True,
 }
