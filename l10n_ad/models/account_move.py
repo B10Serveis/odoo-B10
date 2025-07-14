@@ -7,7 +7,7 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     l10n_ad_is_simplified = fields.Boolean(
-        "Is Simplified",
+        "Is Simplified (Andorra)",
         compute="_compute_l10n_ad_is_simplified",
         readonly=False, store=True)
 
