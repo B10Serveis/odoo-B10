@@ -1,16 +1,12 @@
-# Copyright 2024, 2025 Batista10
-# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Andorra - Accounting',
     'summary': ('Creation of account groups, general chart of accounts'
                 ' and Andorran taxes (IGI, IRPF)'),
-    'version': '17.0.1.0.0',
+    'version': '1.0.0',
     'countries': ['ad'],
-    # TODO: Add ", Odoo Community Association (OCA)" when part of OCA.
-    'author': 'Batista10',
-    # TODO: Replace with "https://github.com/OCA/<repo>/tree/17.0/<addon>"
-    # when part of OCA.
-    'website': 'https://batista10.cat',
+    'author': 'Batista10 <https://batista10.cat>',
+    'website': 'https://www.odoo.com/documentation/17.0/applications/finance/fiscal_localizations.html',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
 Andorran Charts of Accounts
