@@ -62,7 +62,14 @@ Changelog
 
 * [ADD] Afegir disseny d'impressió de ticket.
 
+16.0.1.3.0 (2025-03-05)
+~~~~~~~~~~~~~~~~~~~~~~~
 
+* [REM] Eliminar la dependència de `contract` del `__manifest__.py`.
+* [REM] Suprimir el camp `related_contract` de `helpdesk.ticket`.
+* [REM] Suprimir el camp computat `current_time` i el mètode `_get_current_time`.
+* [REM] Treure les referències a `related_contract` i `current_time` de la vista `helpdeskB10.xml`.
+  
 Bug Tracker
 ===========
 
