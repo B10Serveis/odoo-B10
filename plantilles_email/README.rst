@@ -64,6 +64,11 @@ Changelog
 
 * [ADD] Afegir plantilla Pendent de pagament.
 
+17.0.1.5.2 (2025-07-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegir plantilla Entrega.
+
 
 Bug Tracker
 ===========

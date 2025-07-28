@@ -4,13 +4,14 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "17.0.1.4.2",
+    "version": "17.0.1.5.2",
     "depends": [
         "base",
         "mail",
         "contacts",
         "l10n_es_partner",
         "Dissenys_generics",
+        "stock_picking_send_by_mail",
     ],
     "license": "AGPL-3",
     "application": True,
@@ -21,5 +22,6 @@
         "views/email_comanda.xml",
         "views/email_pressupost.xml",
         "views/email_proforma.xml",
+        "views/email_entrega.xml",
     ],
 }
