@@ -8,7 +8,7 @@
             <xpath expr="//div[2]/table"
                 position="replace">
 
-                <table class="table table-condensed table-striped">
+                <table class="table table-sm table-striped">
                     <!-- Comprovació si hi ha algun descompte -->
                     <t t-set="is_discount"
                         t-value="0" />

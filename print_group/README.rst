@@ -44,6 +44,13 @@ Changelog
 
 * [ADD] Nou format d'impressió genèric de documents
 
+15.0.1.0.1 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/report_comanda_print_group.xml`
+  - plantilla `views/report_factura_print_group.xml`
+  - plantilla `views/report_pressupost_print_group.xml`
 
 Bug Tracker
 ===========
