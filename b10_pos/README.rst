@@ -43,6 +43,11 @@ Changelog
 * [RENAME] Mòdul `pos_closing_report` renombrat a `b10_pos`
 * [FIX] Adaptat codi d’Odoo 14 a Odoo 15.
 
+15.0.1.0.1 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/pos_closing_report.xml`
 
 Bug Tracker
 ===========
