@@ -31,3 +31,4 @@
 #
 ###############################################
 from . import b10_account_move
+from . import res_partner_bank

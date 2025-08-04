@@ -51,6 +51,8 @@ Changelog
 * [MIG] Migració a V.18.
 * [ADD] Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
 
+18.0.1.1.0 (2025-08-04)
+* [ADD] _sql_constraints_ a res.partner.bank per permetre usar un mateix Account Number a diversos partners però impedint duplicates dins del mateix partner.
 
 Bug Tracker
 ===========
