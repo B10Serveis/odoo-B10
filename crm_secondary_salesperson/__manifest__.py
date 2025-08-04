@@ -5,7 +5,7 @@
     "name": "Crm Secondary Salesperson",
     "category": "Customer Relationship Management",
     "summary": """CRM Secondary Salesperson""",
-    "version": "17.0.1.0.3",
+    "version": "18.0.1.0.3",
     "license": "AGPL-3",
     "author": "Escodoo, Odoo Community Association (OCA), Batista10",
     "maintainers": ["marcelsavegnago"],

@@ -2,7 +2,7 @@
     'name': "Field Encryption",
     'summary': """Encrypted fields data in database.""",
     'category': 'Technical Settings',
-    "version": "17.0.0.1",
+    "version": "18.0.0.1",
     "license": "AGPL-3",
     "author": "Shah Alam Sumon",
     "website": "https://github.com/ShahAlamSumon/field_encryption",

@@ -1,7 +1,7 @@
 {
     'name': 'Andorra - Accounting',
     'summary': '""Creació de grups comptables, Pla General Comptable i taxes Andorranes (IGI, IRPF)""',
-    'version': '1.0',
+    "version": "18.0.0.1",
     'icon': '/account/static/description/l10n.png',
     'countries': ['ad'],
     'author': 'Batista10',
