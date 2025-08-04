@@ -184,7 +184,7 @@
 					</div>
 				</div>
 				<!-- Linies Pressupost -->
-				<table class="table table-condensed table-striped"
+				<table class="table table-sm table-striped"
 					id="b10_linetable">
 					<thead>
 						<tr>
@@ -254,7 +254,7 @@
 							<div class="clearfix">
 								<div id="total"
 									class="row">
-									<table class="table table-condensed table-striped"
+									<table class="table table-sm table-striped"
 										style="page-break-inside: avoid;">
 										<!--Tax totals -->
 										<t t-set="tax_totals"

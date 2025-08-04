@@ -197,7 +197,7 @@
                 </div>
 
                 <!-- Linies Pressupost -->
-                <table class="table table-condensed table-striped"
+                <table class="table table-sm table-striped"
                     id="b10_linetable">
                     <!-- Comprovació si hi ha algun descompte -->
                     <t t-set="is_discount"
@@ -325,7 +325,7 @@
                             <div class="row"
                                 id="b10_payment_terms_table"
                                 t-if="doc.invoice_payment_term_id.display_on_invoice">
-                                <table class="table table-condensed table-striped"
+                                <table class="table table-sm table-striped"
                                     style="width:300px">
                                     <thead>
                                         <tr>
@@ -355,7 +355,7 @@
                             <div class="clearfix">
                                 <div id="total"
                                     class="row">
-                                    <table class="table table-condensed table-striped"
+                                    <table class="table table-sm table-striped"
                                         style="page-break-inside: avoid;">
                                         <!--Tax totals -->
                                         <t t-set="tax_totals"
