@@ -51,6 +51,11 @@ Changelog
 
 * [ADD] Trasllat a V.15.
 
+15.0.1.5.4 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `B10_contracts/report_contracte_batista.xml`
 
 Bug Tracker
 ===========
