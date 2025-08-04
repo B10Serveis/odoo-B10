@@ -4,7 +4,7 @@
     'author': "Batista10",
     'website': "https://www.batista10.cat",
     'category': "Personalization",
-    'version': '16.0.0.1.0',
+    'version': '16.0.0.1.1',
     'depends': ['base','point_of_sale'],
     'license': 'AGPL-3', 
     'application': True,

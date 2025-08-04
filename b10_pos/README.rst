@@ -43,6 +43,12 @@ Changelog
 * [ADD] Creat a V.16.
 * [ADD] Informe de tancament de sessions POS per rang de dates.
 
+16.0.1.0.1 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/pos_closing_report.xml`
+  
 Bug Tracker
 ===========
 

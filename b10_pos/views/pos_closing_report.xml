@@ -9,7 +9,7 @@
               <h2>POS CLOSING REPORT</h2>
             </div>
             <div><strong>Point of Sale: </strong><span t-esc="name"/><strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/><strong> Date end: </strong><span t-esc="date_stop" t-options="{'widget': 'date'}"/></div>
-            <table class="table table-condensed">
+            <table class="table table-sm">
               <thead>
                 <th>Session</th>
                 <th>Status</th>
