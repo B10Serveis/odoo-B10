@@ -54,6 +54,13 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [ADD] Informe de tancament de caixa diari: funcionalitat per crear un informe de resum dels tancaments de caixa diaris.
 
+
+17.0.1.1.1 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/pos_closing_report.xml`
+
 Bug Tracker
 ===========
 
