@@ -104,6 +104,12 @@ Changelog
 
 * [ADD] **Security**: afegits grups de permisos “Provider Password Reader” i “Provider Password Manager” per controlar qui pot visualitzar i modificar les contrasenyes.
 
+16.0.1.3.3 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/B10_purchase_quotation_report.xml`
+
 Bug Tracker
 ===========
 
