@@ -97,7 +97,11 @@ Changelog
 
 * [FIX] Visibilitat del camp last_date_invoiced.
 
+16.0.1.5.4 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
 
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/report_contracte_batista.xml`
 
 Bug Tracker
 ===========
