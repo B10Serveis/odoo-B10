@@ -174,7 +174,7 @@
                 </div>
 
                 <!-- Linies Entrega -->
-                <table class="table table-condensed table-striped table-sm"
+                <table class="table table-sm table-striped"
                     id="b10_linetable">
                     <thead>
                         <tr>

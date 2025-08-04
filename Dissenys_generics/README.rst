@@ -120,6 +120,17 @@ Changelog
 * [ADD] Peus de documents dinamics i traduibles utilitzant el camp de "Configuració - Configurar el disseny del document - Peu".
 
 
+16.0.1.10.6 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
+  - plantilla `views/report_comanda_batista.xml`
+  - plantilla `views/report_entrega_batista.xml`
+  - plantilla `views/report_factura_batista.xml`
+  - plantilla `views/report_pressupost_batista.xml`
+  - plantilla `views/report_pressupost_st_batista.xml`
+  - plantilla `views/report_proforma_batista.xml`
+
 Bug Tracker
 ===========
 

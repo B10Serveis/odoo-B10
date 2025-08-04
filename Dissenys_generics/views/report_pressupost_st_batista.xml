@@ -174,7 +174,7 @@
 
 
                 <!-- Linies Pressupost -->
-                <table class="table table-condensed table-striped"
+                <table class="table table-sm table-striped"
                     id="b10_linetable">
                     <!-- Comprovació si hi ha algun descompte -->
                     <t t-set="is_discount"
