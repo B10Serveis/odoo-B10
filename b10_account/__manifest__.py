@@ -8,5 +8,10 @@
     "depends": ["account", "base","account_payment"],
     "license": "AGPL-3",
     "application": True,
-    "data": [],
+    "data": [
+        "views/config_settings_view.xml",
+        "views/account_move_inherit.xml",
+        "report/factura_batista.xml",
+        "report/report_factura_batista.xml",
+    ],
 }

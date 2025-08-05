@@ -1,0 +1,12 @@
+<odoo>
+  <record id="b10_account.account_move_form_inherit" model="ir.ui.view">
+    <field name="name">account.move.form.b10.account</field>
+    <field name="model">account.move</field>
+    <field name="inherit_id" ref="account.view_move_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='ref']" position="after">
+        <field name="group_by_origin"/>
+      </xpath>
+    </field>
+  </record>
+</odoo>

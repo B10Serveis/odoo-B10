@@ -8,22 +8,24 @@ Batista10 - Account
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
-    :target: https://odoo-community.org/page/development-status
-    :alt: Beta
+   :target: https://odoo-community.org/page/development-status
+   :alt: Beta
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
-    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-    :alt: License: AGPL-3
-.. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fodoob10-lightgray.png?logo=github
-    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account
-    :alt: OCA/odoob10
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
+.. |badge3| image:: https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github
+   :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account
+   :alt: B10Serveis/odoo-B10
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_account
-    :alt: Translate me on Weblate
+   :target: https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_account
+   :alt: Translate me on Weblate
 
-|badge1| |badge2| |badge3| |badge4| 
+|badge1| |badge2| |badge3| |badge4|
 
-Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
-
+Personalitzacions de facturació:  
+- Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
+– Agrupa línies per origen  
+– Informe “Factura Estandard” amb lots, IBAN i dades mercantils  
 
 **Table of contents**
 
@@ -33,13 +35,17 @@ Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma 
 Usage
 =====
 
-Per fer servir el mòdul:
+Per utilitzar aquest mòdul:
 
+#. Activa l’opció **Group invoice lines by origin** a **Settings → Accounting**.  
+#. Crea o obre una factura i comprova que apareix el checkbox **Group Invoice Lines by Origin** sota el camp **Reference**.  
+#. Desa la factura; si està actiu, les línies s’agrupen per ordre d’origen.  
+#. Per generar el PDF, fes **Print → Factura Estandard**.
 
 Known issues / Roadmap
 ======================
 
-* 
+* Cap incidència coneguda.  
 
 Changelog
 =========
@@ -50,55 +56,47 @@ Changelog
 * [MIG] Migració a V.18.
 * [ADD] Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
 
-18.0.1.1.0 (2025-08-04)
+18.0.1.1.0 (2025-08-05)
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [ADD] _sql_constraints_ a res.partner.bank per permetre usar un mateix Account Number a diversos partners però impedint duplicates dins del mateix partner.
+* [ADD] Informe **Factura Estandard** amb:  
+  - Lots facturats (`_get_invoiced_lot_values`)  
+  - IBAN / SEPA a la capçalera  
+  - Dades mercantils al peu de pàgina  
+  - Agrupació de línies per ordre si s’activa
+
 
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://gitlab.com/batista10/odoob10/issues>`_.
-In case of trouble, please check there if your issue has already been reported.
-If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/odoob10/issues/new?body=module:%20B10_helpdesk%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
-
-Do not contact contributors directly about support or help with technical issues.
+Bugs are tracked on `GitHub Issues <https://github.com/B10Serveis/odoo-B10/issues>`_.  
+Si us plau verifica si l’issue existeix abans de crear-ne un de nou.
 
 Credits
 =======
 
 Authors
 ~~~~~~~
-
 * Batista10
 
 Contributors
 ~~~~~~~~~~~~
-
-* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
-
+* Joan Llimiñana i Sabaté <joan@batista10.cat>
+* Pol Comas i Romero <pol@batista10.cat>
 
 Other credits
 ~~~~~~~~~~~~~
-
-
-The development of this module has been financially supported by:
-
-* Batista10
+El desenvolupament ha estat finançat per Batista10.
 
 Maintainers
 ~~~~~~~~~~~
-
-This module is maintained by the OCA.
+Aquest mòdul és mantingut per Batista10.
 
 .. image:: https://odoo-community.org/logo.png
    :alt: Odoo Community Association
    :target: https://odoo-community.org
 
-OCA, or the Odoo Community Association, is a nonprofit organization whose
-mission is to support the collaborative development of Odoo features and
-promote its widespread use.
+Part of `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account>`_.
 
-This module is part of the `OCA/odoob10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account>`_ project on GitHub.
-
-You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+You are welcome to contribute: https://odoo-community.org/page/Contribute.
+::contentReference[oaicite:0]{index=0}
