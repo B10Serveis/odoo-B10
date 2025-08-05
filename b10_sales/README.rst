@@ -26,6 +26,7 @@ Plantilles PDF i funcionalitats addicionals per a vendes:
 – Filtre “Expired” de pressupostos  
 – Checkbox “Show product image” al formulari  
 – Dissenys per a Pressupost, Pressupost S/T, Comanda i ProForma  
+– Plantilles Email per a Pressupost, Comanda i ProForma  
 
 **Table of contents**
 
@@ -46,7 +47,11 @@ Per fer servir aquest mòdul:
    - **Comanda Estandard**  
    - **ProForma Estandard**  
   des del menú **Print**.
-
+#. Enviar per Email  
+   - Obre un Pressupost i clica **Send by Email**: s’auto‐selecciona la plantilla **Standard - Quotation Email Template**.  
+   - Obre una Comanda i clica **Send by Email**: s’auto‐selecciona la plantilla **Standard - Sale Order Email Template**.  
+   - Obre una ProForma i clica **Send by Email**: s’auto‐selecciona la plantilla **Standard - Proforma Email Template**.  
+  
 Known issues / Roadmap
 ======================
 
@@ -74,6 +79,13 @@ Changelog
   - **Pressupost Estandard S/T** (`report/pressupost_st_batista.xml`)  
   - **Comanda Estandard** (`report/comanda_batista.xml`)  
   - **ProForma Estandard** (`report/proforma_batista.xml`)
+
+18.0.1.2.0 (2025-08-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Email Templates i override de `_find_mail_template()`:  
+  - **Standard - Quotation Email Template**  
+  - **Standard - Sale Order Email Template**  
+  - **Standard - Proforma Email Template**
 
 Bug Tracker
 ===========
