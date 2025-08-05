@@ -6,6 +6,15 @@ class B10AccountMove(models.Model):
 
     group_by_origin = fields.Boolean(string="Group Invoice Lines by Origin")
 
+    # Estableix la plantilla de correu electrònic per defecte de Factura
+    def _get_mail_template(self):
+        if self.move_type in ("out_invoice", "out_refund"):
+            template = self.env.ref("b10_account.factura_email_template", raise_if_not_found=False)
+            if template:
+                return template.id
+        # Per la resta, deleguem al mètode original
+        return super(B10AccountMove, self)._get_mail_template()
+    
     @api.onchange("payment_mode_id")
     def _onchange_payment_mode_id_b10(self):
         for move in self:

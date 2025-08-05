@@ -73,7 +73,7 @@
                                     t-field="company.city"/>
                                 <span> (</span>
                                 <span t-if="company.state_id.name"
-                                    t-field="company.state_id.original_name"/>
+                                    t-field="company.state_id.name"/>
                                 <span>)</span>
                                 <br/>
                                 <span t-if="company.phone">Tel: <span t-field="company.phone"/>
@@ -188,7 +188,7 @@
                                     t-field="doc.partner_id.city"/>
 
                                 <span t-if="doc.partner_id.state_id.name">(                                    
-                                    <span t-field="doc.partner_id.state_id.original_name"/>
+                                    <span t-field="doc.partner_id.state_id.name"/>
                                     <span>)</span>
                                 </span>
                             </p>

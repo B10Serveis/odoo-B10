@@ -65,6 +65,11 @@ Changelog
   - Dades mercantils al peu de pàgina  
   - Agrupació de línies per ordre si s’activa
 
+18.0.1.2.0 (2025-08-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Plantilles de correu per a factures:  
+  - Standard – Invoice Email Template (`factura_email_template`)  
+  - Standard – Pending Payment Email Template (`pending_payment_email_template`)
 
 Bug Tracker
 ===========
