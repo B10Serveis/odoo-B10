@@ -1,5 +1,5 @@
 {
-    'name': 'B10 Sales',
+    'name': 'Batista10 - Sales',
     'summary': 'Personalització Vendes Batista10',
     'version': '18.0.1.2.0',
     'category': 'Sales',

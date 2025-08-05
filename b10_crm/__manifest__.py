@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    "name": "B10 CRM",
+    "name": "Batista10 - CRM",
     "category": "Personalization",
     "summary": "Personalitzacions CRM per Batista10",
     "version": "18.0.1.0.0",

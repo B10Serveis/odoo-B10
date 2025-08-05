@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "B10 - Stock Picking",
+    "name": "Batista10 - Stock Picking",
     "summary": "Personalització de la impressió de les entregues",
     "version": "18.0.1.0.0",
     "category": "Warehouse/Reporting",
@@ -9,10 +9,12 @@
     "license": "AGPL-3",
     "depends": [
         "stock",
+        "mail",
     ],
     "data": [
         "report/entrega_batista.xml",
         "report/report_entrega_batista.xml",
+        "views/email_entrega.xml",
     ],
     "installable": True,
     "application": True,

@@ -1,6 +1,6 @@
 {
-    "name": "B10 Purchases",
-    "summary": """B10 Purchases""",
+    "name": "Batista10 - Purchases",
+    "summary": """Personalització de compres Batista10""",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
