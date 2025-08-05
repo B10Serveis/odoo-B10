@@ -21,8 +21,8 @@ class ResUsers(models.Model):
 
     # Mètode auxiliar per assegurar que un usuari no tingui els grups 'Manager' i 'Reader' alhora.
     def _ensure_exclusive_groups(self, user):
-        GroupManager = self.env.ref('B10_purchases.group_b10_pwd_manager')
-        GroupReader  = self.env.ref('B10_purchases.group_b10_pwd_reader')
+        GroupManager = self.env.ref('b10_purchases.group_b10_pwd_manager')
+        GroupReader  = self.env.ref('b10_purchases.group_b10_pwd_reader')
 
         if GroupManager in user.groups_id and GroupReader in user.groups_id:
             user.sudo().write({

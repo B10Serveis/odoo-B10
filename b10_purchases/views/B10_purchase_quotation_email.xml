@@ -13,7 +13,7 @@
         <field name="auto_delete"
             eval="True" />
         <field name="report_template_ids"
-            eval="[(4, ref('B10_purchases.B10_purchase_quotation_action'))]"/>
+            eval="[(4, ref('b10_purchases.B10_purchase_quotation_action'))]"/>
 
         <field name="body_html"
             type="html">

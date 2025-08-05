@@ -6,8 +6,8 @@ class ResGroups(models.Model):
 
     def write(self, vals):
         res = super().write(vals)
-        GroupMgr  = self.env.ref('B10_purchases.group_b10_pwd_manager')
-        GroupRead = self.env.ref('B10_purchases.group_b10_pwd_reader')
+        GroupMgr  = self.env.ref('b10_purchases.group_b10_pwd_manager')
+        GroupRead = self.env.ref('b10_purchases.group_b10_pwd_reader')
 
         # Només ens interessa si modifiquen la many2many 'users'
         if 'users' in vals:

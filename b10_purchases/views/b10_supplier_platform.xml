@@ -28,8 +28,8 @@
             <group>
               <field name="x_provider_url"    placeholder="https://example.com"/>
               <field name="x_provider_user"   placeholder="user@example.com"/>
-              <field name="x_provider_pwd"    placeholder="••••••••" groups="B10_purchases.group_b10_pwd_manager"/>
-              <field name="x_provider_pwd"    placeholder="••••••••" readonly="1" groups="B10_purchases.group_b10_pwd_reader"/>
+              <field name="x_provider_pwd"    placeholder="••••••••" groups="b10_purchases.group_b10_pwd_manager"/>
+              <field name="x_provider_pwd"    placeholder="••••••••" readonly="1" groups="b10_purchases.group_b10_pwd_reader"/>
             </group>
           </page>
         </xpath>

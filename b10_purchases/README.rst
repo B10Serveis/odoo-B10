@@ -14,10 +14,10 @@ B10 Purchases
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fodoob10-lightgray.png?logo=github
-    :target: https://github.com/OCA/odoob10/tree/12.0/B10_dissenys
+    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_purchases
     :alt: OCA/odoob10
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/odoob10-12-0/odoob10-12-0-B10_dissenys
+    :target: https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_purchases
     :alt: Translate me on Weblate
 
 |badge1| |badge2| |badge3| |badge4| 
@@ -90,32 +90,10 @@ Un cop fet això, podràs instal·lar **B10 Purchases** amb la funcionalitat d�
 Changelog
 =========
 
-17.0.0.1.0 (2025-01-15)
+18.0.1.0.0 (2025-08-05)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Creat a V.17.
-* [ADD] Documents de comanda i pressupost de compra.
-* [ADD] Emails de comanda i pressupost de compra.
-
-17.0.0.1.1 (2025-02-12)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Eliminar t-field-options dels documents.
-
-17.0.1.2.1 (2025-02-27)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Afegir data d'arribada esperada a comanda de compra.
-
-17.0.1.3.1 (2025-07-04)
-----------------------
-
-* [ADD] Integració de la pestanya “Access” i checkbox per a proveïdors.
-
-17.0.1.3.2 (2025-07-04)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] **Security**: afegits grups de permisos “Provider Password Reader” i “Provider Password Manager” per controlar qui pot visualitzar i modificar les contrasenyes.
+* [MIG] Creat a V.18.
 
 Bug Tracker
 ===========
@@ -155,6 +133,6 @@ Maintainers
 This module is maintained by Batista10.
 
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/17.0/Dissenys_generics>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/Dissenys_generics>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
