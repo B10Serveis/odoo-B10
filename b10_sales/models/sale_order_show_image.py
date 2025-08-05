@@ -1,0 +1,5 @@
+from odoo import models, fields
+
+class SaleOrderInherited(models.Model):
+    _inherit = "sale.order"
+    show_product_image = fields.Boolean("Show product image", required=False)

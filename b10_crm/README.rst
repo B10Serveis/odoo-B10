@@ -28,6 +28,7 @@ Aquest mòdul integra i trasllada el mòdul `crm_secondary_salesperson` original
 - **Repo original**: https://github.com/OCA/crm
 
 **Table of contents**
+
 .. contents::
    :local:
 

@@ -5,7 +5,7 @@
     "website": "https://www.batista10.cat",
     "category": "Personalization",
     "version": "18.0.1.1.0",
-    "depends": ["account", "base"],
+    "depends": ["account", "base","account_payment"],
     "license": "AGPL-3",
     "application": True,
     "data": [],
