@@ -14,10 +14,10 @@ Batista10 - Account
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fodoob10-lightgray.png?logo=github
-    :target: https://github.com/OCA/odoob10/tree/12.0/B10_helpdesk
+    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account
     :alt: OCA/odoob10
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/odoob10-12-0/odoob10-12-0-B10_helpdesk
+    :target: https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_account
     :alt: Translate me on Weblate
 
 |badge1| |badge2| |badge3| |badge4| 
@@ -35,7 +35,6 @@ Usage
 
 Per fer servir el mòdul:
 
-#. 
 
 Known issues / Roadmap
 ======================
@@ -52,6 +51,7 @@ Changelog
 * [ADD] Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
 
 18.0.1.1.0 (2025-08-04)
+~~~~~~~~~~~~~~~~~~~~~~~
 * [ADD] _sql_constraints_ a res.partner.bank per permetre usar un mateix Account Number a diversos partners però impedint duplicates dins del mateix partner.
 
 Bug Tracker
@@ -99,6 +99,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/odoob10 <https://github.com/OCA/odoob10/tree/12.0/B10_helpdesk>`_ project on GitHub.
+This module is part of the `OCA/odoob10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

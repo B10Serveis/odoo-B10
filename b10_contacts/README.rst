@@ -14,7 +14,7 @@ Batista10 - Contactes
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github
-   :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_contactes
+   :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_contacts
    :alt: B10Serveis/odoo-B10
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
    :target: https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_contactes
@@ -93,6 +93,6 @@ Maintainers
 
 This module is maintained by batista10.
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_contactes>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_contacts>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
