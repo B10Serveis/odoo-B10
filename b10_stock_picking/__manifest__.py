@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "depends": [
         "stock",
-        "mail",
+        "b10_mail",
     ],
     "data": [
         "report/entrega_batista.xml",

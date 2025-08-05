@@ -12,7 +12,7 @@
         "contacts",
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
-        "mail",
+        "b10_mail",
     ],
     "license": "AGPL-3",
     "application": True,

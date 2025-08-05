@@ -7,7 +7,7 @@
     'website': 'https://www.batista10.cat',
     'license': 'AGPL-3',
     'depends': [
-        'mail',
+        'b10_mail',
         'sale_management',
         'sale_order_report_product_image',
         'account_payment_sale',
