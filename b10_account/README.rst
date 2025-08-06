@@ -23,9 +23,9 @@ Batista10 - Account
 |badge1| |badge2| |badge3| |badge4|
 
 Personalitzacions de facturació:  
-- Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
-– Agrupa línies per origen  
-– Informe “Factura Estandard” amb lots, IBAN i dades mercantils  
+- **Assignació automàtica del compte bancari del partner** quan es tria una forma de pagament amb diari bancari fix.  
+- **Agrupació de línies de factura per comanda d’origen**, amb encapçalaments clars al PDF/QWeb.  
+- Informe “**Factura Estandard**” complet amb: lots facturats, IBAN/SEPA a la capçalera i dades.
 
 **Table of contents**
 
@@ -37,10 +37,10 @@ Usage
 
 Per utilitzar aquest mòdul:
 
-#. Activa l’opció **Group invoice lines by origin** a **Settings → Accounting**.  
-#. Crea o obre una factura i comprova que apareix el checkbox **Group Invoice Lines by Origin** sota el camp **Reference**.  
-#. Desa la factura; si està actiu, les línies s’agrupen per ordre d’origen.  
-#. Per generar el PDF, fes **Print → Factura Estandard**.
+#. Ves a **Settings → General Settings** i, en el bloc Facturació, activa **Group invoice lines by origin**.  
+#. Crea o obre una factura de venda; comprova que apareix el checkbox **Group Invoice Lines by Origin** sota el camp **Customer**.  
+#. Desa la factura: si està marcat el checkbox, en generar el PDF la taula de línies sortirà agrupada per cada “Sale order X”.  
+#. Des de la vista de factura, fes **Print → Factura Estandard** per obtenir el PDF amb tots els elements (lots, IBAN, dades mercantils).
 
 Known issues / Roadmap
 ======================

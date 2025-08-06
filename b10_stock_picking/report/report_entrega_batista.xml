@@ -77,9 +77,6 @@
                                     <t t-if="company.state_id.original_name">
                                         <span t-esc="company.state_id.original_name"/>
                                     </t>
-                                    <t t-if="not company.state_id.original_name and company.state_id.name">
-                                        <span t-field="company.state_id.name"/>
-                                    </t>
                                 <span>)</span>
                                 <br/>
                                 <span t-if="company.phone">Tel: <span t-field="company.phone"/>

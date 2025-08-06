@@ -9,6 +9,7 @@
     "license": "AGPL-3",
     "depends": [
         "mail",
+        "b10_contacts",
     ],
     "data": [
         "views/debrand_odoo_mail.xml",

@@ -1,2 +1,2 @@
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
-
+* Pol Comas i Romero <pol@batista10.cat> (https://www.batista10.cat)
