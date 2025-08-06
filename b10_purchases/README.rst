@@ -22,7 +22,13 @@ B10 Purchases
 
 |badge1| |badge2| |badge3| |badge4| 
 
-Mòdul de compres de Batista10
+Personalitzacions de compres per Batista10:  
+- **Supplier Platform Access**: pestanya “Access” al formulari de partner amb URL, usuari i contrasenya encriptada per a portals de proveïdor.  
+- **Grups exclusius**: usuaris amb rol **Password Manager** o **Password Reader**, s’assegura que no pertanyin als dos grups alhora.  
+- **Plantilles d’email**: templates personalitzats per a pressupostos i comandes (_quotation_ i _purchase order_) que s’apliquen en enviar per correu.  
+- **Informes QWeb**: dissenys “B10 Purchase Quotation” i “B10 Purchase Order” per a PDF de pressupostos i comandes amb dades mercantils i estils homogeni.  
+- **Seguretat**: permisos definits en `security/security.xml` perquè només els grups adequats accedeixin als camps i accions.
+
 
 **Table of contents**
 
@@ -38,54 +44,32 @@ To use this module, you need to:
 
 El mòdul **field_encryption** és requereix per emmagatzemar i desxifrar el camp de contrasenya de proveïdor.
 
-1. Clona el repositori oficial:
+1. **Instal·lació**  
+   - Ves a **Apps** i instal·la **Batista10 – Purchases**.  
 
-   .. code-block:: bash
+2. **Configuració d’accés a la plataforma del proveïdor**  
+   - Obre **Contacts → Partners** i selecciona un partner amb **Supplier Rank** > 0.  
+   - Activa **Provider Access**.  
+   - A la nova pestanya **Access**, introdueix:  
+     - **Platform URL**  
+     - **Username**  
+     - **Password** (es desa encriptat; els usuaris del grup **Password Reader** només el veuen en mode lectura).  
+   - Desa i comprova que el camp `x_provider_pwd_encrypted` s’omple al back-end.
 
-      cd /ruta/al/teu/addons
-      git clone https://github.com/ShahAlamSumon/field_encryption.git
+3. **Gestió de grups d’usuaris exclusius**  
+   - Crea o edita un usuari i assigna-li el grup **Password Manager**.  
+   - Assigna-li també **Password Reader**: el sistema ha d’eliminar automàticament un dels dos per mantenir-los exclusius.  
+   - Fes la prova equivalent modificant els grups des de **Settings → Users & Companies → Users** i **Settings → Users & Companies → Groups**.
 
-2. Afegeix `field_encryption` al teu `addons_path` del `odoo.conf`:
+4. **Enviar correus de pressupost i comanda**  
+   - Crea una **Request for Quotation** o **Purchase Order** en estat **RFQ** / **Draft**.  
+   - Prem **Send by Email**.  
+   - Confirma que la plantilla carregada és la plantilla B10 corresponent (`presupost_email_template` o `pressupost_email_template` per RFQ, `comanda_email_template` per PO).  
 
-   .. code-block:: ini
+5. **Impressió de PDF de pressupostos i comandes**  
+   - Obre un RFQ i fes **Print → B10 Purchase Quotation** per generar el PDF amb el layout personalitzat.  
+   - Obre una PO confirmada i fes **Print → B10 Purchase Order** per validar el report amb logo, dades d’empresa, i llistat de línies.  
 
-      [options]
-      addons_path = /ruta/al/teu/addons, /altres/camins, ...
-
-3. Marca **field_encryption** com a mòdul global:
-
-   .. code-block:: ini
-
-      [options]
-      server_wide_modules = web,web_kanban_gauge,field_encryption
-
-4. **IMPORTANT (Odoo 17 only)**: obre  `field_encryption/models/fields.py`  i localitza el mètode `_inverse_encrypt`.  
-   Canvia aquesta línia:
-
-   .. code-block:: diff
-
-      - value = self.convert_to_read(record[self.name], record, use_name_get=False)
-      + value = self.convert_to_read(record[self.name], record)
-  
-5. Genera una clau d’encriptació segura de 32 bytes en Base64. Per exemple:
-
-   .. code-block:: bash
-
-      python3 - <<EOF
-      import base64, os
-      print(base64.urlsafe_b64encode(os.urandom(32)).decode())
-      EOF
-
-6. Afig la clau generada al `odoo.conf`:
-
-   .. code-block:: ini
-
-      [options]
-      encryption_key = <la-teva-clau-base64-de-32-bytes>
-
-7. Reinicia Odoo i comprova que el mòdul **field_encryption** aparegui a la llista d’Apps.
-
-Un cop fet això, podràs instal·lar **B10 Purchases** amb la funcionalitat d’encriptació activada.
 
 Changelog
 =========
@@ -133,6 +117,6 @@ Maintainers
 This module is maintained by Batista10.
 
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/Dissenys_generics>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_purchases>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
