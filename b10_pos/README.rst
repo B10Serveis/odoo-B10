@@ -14,15 +14,19 @@ Batista10 - POS
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fodoob10-lightgray.png?logo=github
-    :target: https://github.com/OCA/odoob10/tree/12.0/B10_POS
+    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_pos
     :alt: OCA/odoob10
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/odoob10-12-0/odoob10-12-0-B10_POS
+    :target: https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_crm
     :alt: Translate me on Weblate
 
 |badge1| |badge2| |badge3| |badge4| 
 
-Modifica product.product perque el POS vegi les existencies per Ubicació enlloc de per Magatzem.
+Personalització completa per al punt de venda (POS):  
+- **Stock per ubicació**: el mètode `get_product_info_pos` mostra existències i previsions per cada ubicació interna en comptes de per magatzem.  
+- **Detall avançat de producte**: inclou desglossament d’impostos, preus per tarifes, llistat de proveïdors vàlids i variants.  
+- **Informe de tancament de caixa**: wizard per filtrar per dates i configuració, i generació d’un PDF QWeb amb resum de sessions i detalls de pagaments.  
+- Controls de seguretat perquè només usuaris POS puguin accedir al wizard.
 
 
 **Table of contents**
@@ -33,9 +37,20 @@ Modifica product.product perque el POS vegi les existencies per Ubicació enlloc
 Usage
 =====
 
-Per fer servir el mòdul:
+1. **Instal·lació**  
+   - Ves a **Apps** i instal·la **Batista10 – POS**.  
+   - Assegura’t que l’usuari forma part del grup **Point of Sale / User** o **Manager**.
 
-#. 
+2. **Generar Informe de tancament de caixa**  
+   - Al menú **Point of Sale → Reporting → POS Closing Report**, obre el wizard.  
+   - Selecciona **Start Date**, **End Date** i la **POS Configuration**.  
+   - Prem **Print** per obtenir el PDF amb:  
+     - Llista de sessions dins l’interval (estat, dates, total per sessió).  
+     - Subtaules de pagaments per mètode (Declared, Real).  
+
+3. **Validar seguretat**  
+   - Accedeix amb un usuari sense permisos POS: no ha de poder obrir el wizard.  
+   - Amb un usuari POS User, el menú i el wizard han d’estar disponibles.
 
 Known issues / Roadmap
 ======================
@@ -43,23 +58,14 @@ Known issues / Roadmap
 
 Changelog
 =========
-17.0.1.0.0 (2025-02-05)
+18.0.1.0.0 (2025-02-05)
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-* [ADD] Creat a V.17.
-* [ADD] Modifica product.product perque el POS vegi les existencies per Ubicació enlloc de per Magatzem.
-
-
-17.0.1.1.0 (2025-07-13)
-~~~~~~~~~~~~~~~~~~~~~~~
-* [ADD] Informe de tancament de caixa diari: funcionalitat per crear un informe de resum dels tancaments de caixa diaris.
-
-
-17.0.1.1.1 (2025-08-04)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
-  - plantilla `views/pos_closing_report.xml`
+* [MIG] Adaptat a Odoo 18.  
+* [ADD] `get_product_info_pos`: mostra existències i previsions per ubicació interna.  
+* [ADD] Desglossament d’impostos, tarifes, proveïdors i variants al POS.
+* [ADD] Wizard **POS Closing Report** amb selecció de dates i configuració.  
+* [ADD] QWeb PDF amb resum de sessions i detalls de pagaments.
+* [FIX] Substituïda la classe Bootstrap `table-condensed` per `table-sm` en la plantilla `pos_closing_report.xml`.
 
 Bug Tracker
 ===========
@@ -107,6 +113,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/odoob10 <https://github.com/OCA/odoob10/tree/12.0/B10_POS>`_ project on GitHub.
+This module is part of the `OCA/odoob10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_pos>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
