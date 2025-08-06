@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_product_product_tree" model="ir.ui.view">
+        <field name="name">product.product.tree.margin</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <list decoration-warning="margin_state == 'too_expensive'"
+                  decoration-danger="margin_state == 'too_cheap'"
+                  editable="bottom">
+                <field name="default_code" readonly="1"/>
+                <field name="name" readonly="1"/>
+                <field name="standard_price"
+                       widget="monetary"
+                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                <field name="lst_price"
+                       widget="monetary"
+                       options="{'currency_field': 'currency_id', 'field_digits': True}"
+                       readonly="product_variant_count > 1"/>
+                <field name="theoretical_price"
+                       widget="monetary"
+                       options="{'currency_field': 'currency_id', 'field_digits': True}"
+                       invisible="theoretical_difference == 0"/>
+                <field name="margin_state"/>
+
+                <button name="use_theoretical_price"
+                        type="object"
+                        string="Apply Margin"
+                        icon="oi-arrow-thick-top"
+                        invisible="margin_state != 'too_cheap'"
+                        help="Increase the Sale Price up to Theoretical Price"/>  
+                <button name="use_theoretical_price"
+                        type="object"
+                        string="Apply Margin"
+                        icon="oi-arrow-thick-bottom"
+                        invisible="margin_state != 'too_expensive'"
+                        help="Decrease the Sale Price down to Theoretical Price"/>  
+
+                <field name="theoretical_difference"
+                       widget="monetary"
+                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                <field name="product_variant_count" invisible="1"/>
+                <field name="currency_id" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_product_product_search" model="ir.ui.view">
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_search_form_view"/>
+        <field name="arch" type="xml">
+            <field name="categ_id" position="after">
+                <field name="margin_classification_id"/>
+                <field name="margin_state"/>
+                <filter string="Incorrect Margin"
+                        name="filter_margin_incorrect"
+                        domain="[('margin_state','in', ['too_cheap','too_expensive'])]"/>
+                <filter string="Correct Margin"
+                        name="filter_margin_correct"
+                        domain="[('margin_state','=','correct')]"
+                        invisible="1"/>
+                <filter string="Too Cheap"
+                        name="filter_margin_too_cheap"
+                        domain="[('margin_state','=','too_cheap')]"
+                        invisible="1"/>
+                <filter string="Too Expensive"
+                        name="filter_margin_too_expensive"
+                        domain="[('margin_state','=','too_expensive')]"
+                        invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_product_product_form" model="ir.ui.view">
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <header>
+                    <button name="use_theoretical_price"
+                            type="object"
+                            string="⇒ Increase Price"
+                            icon="oi-arrow-thick-top"
+                            invisible="margin_state != 'too_cheap'"
+                            help="Increase the Sale Price up to Theoretical Price"/>  
+                    <button name="use_theoretical_price"
+                            type="object"
+                            string="⇒ Decrease Price"
+                            icon="oi-arrow-thick-bottom"
+                            invisible="margin_state != 'too_expensive'"
+                            help="Decrease the Sale Price down to Theoretical Price"/>  
+                </header>
+                <div class="o_form_sheetbg">
+                    <field name="margin_classification_id" invisible="product_variant_count > 1"/>
+                    <label for="theoretical_price"
+                           invisible="margin_state == 'correct' or product_variant_count > 1"/>
+                    <field name="theoretical_price"
+                           class="oe_inline"
+                           invisible="margin_state == 'correct' or product_variant_count > 1"/>
+                    <field name="margin_state" invisible="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

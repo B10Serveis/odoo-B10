@@ -5,7 +5,7 @@
     "website": "https://www.batista10.cat",
     "category": "Personalization",
     "version": "18.0.1.2.0",
-    "depends": ["helpdesk_mgmt", "contract", "state_original_name"],
+    "depends": ["helpdesk_mgmt", "contract"],
     "license": "AGPL-3",
     "application": True,
     "data": [
