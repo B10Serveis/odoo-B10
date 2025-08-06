@@ -22,7 +22,10 @@ Batista10 - CRM
 
 |badge1| |badge2| |badge3| |badge4|
 
-Personalitzacions CRM per a Batista10: afegir camp de venedor secundari i mantenir-lo consistent.
+Personalitzacions CRM per a Batista10:  
+- Afegeix el camp **Secondary Salesperson** (`secondary_user_id`) a `crm.lead`.  
+- **Constraint SQL** que prohibeix assignar el mateix usuari com a venedor principal i secundari.  
+  
 Aquest mòdul integra i trasllada el mòdul `crm_secondary_salesperson` original d’Escodoo:
 - **Original author**: Marcel Savegnago (Escodoo)
 - **Repo original**: https://github.com/OCA/crm
@@ -79,10 +82,16 @@ Contributors
 * Marcel Savegnago <marcel.savegnago@escodoo.com.br>  
 * Eduardo Aparício <eduardo.aparicio@escodoo.com.br>
 * Joan Llimiñana <info@batista10.cat>
-* Pol Comas <pol@batista10.cat>
+* Pol Comas <info@batista10.cat>
   
 Maintainers
 ~~~~~~~~~~~
 
 Aquest mòdul és mantingut per Batista10.  
 
+.. image:: https://odoo-community.org/logo.png
+   :alt: Odoo Community Association
+   :target: https://odoo-community.org
+
+Part of `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_crm>`_.  
+You are welcome to contribute: https://odoo-community.org/page/Contribute.
