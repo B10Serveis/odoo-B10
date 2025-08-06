@@ -22,9 +22,10 @@ Batista10 - Contactes
 
 |badge1| |badge2| |badge3| |badge4| 
 
-Afegeix personalitzacions sobre contactes i estats regionals:  
-- Camp `original_name` a `res.country.state` amb el nom original de les províncies espanyoles.  
-- Carrega masses de dades de noms originals des d’un fitxer CSV.
+Personalitzacions de contactes:
+- Afegeix un camp `original_name` en els estats (`res.country.state`) per emmagatzemar el nom original local.
+- Carrega per defecte els noms en català/dialecte per a tots els estats d’Espanya via `data/res.country.state.csv`.
+- Sense impacte en la vista de partner; és un camp addicional pensat per informes i migracions.
 
 **Table of contents**
 
