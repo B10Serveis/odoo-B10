@@ -26,6 +26,7 @@ Personalitzacions de contactes:
 - Afegeix un camp `original_name` en els estats (`res.country.state`) per emmagatzemar el nom original local.
 - Carrega per defecte els noms en català/dialecte per a tots els estats d’Espanya via `data/res.country.state.csv`.
 - Sense impacte en la vista de partner; és un camp addicional pensat per informes i migracions.
+- Override de create() per restringir que només usuaris amb el grup Settings / Technical Features (base.group_system) puguin crear nous estats/provincias.
 
 **Table of contents**
 
@@ -57,6 +58,10 @@ Changelog
 * [ADD] Camp `original_name` a `res.country.state`.  
 * [ADD] Carrega noms originals de les províncies espanyoles via CSV.
 
+18.0.1.1.0 (2025-08-07)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Override de `create()` a `res.country.state` per permetre només als administradors (grup Settings) crear estats/provincias.
+  
 Bug Tracker
 ===========
 
