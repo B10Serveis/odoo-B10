@@ -1,5 +1,5 @@
 =============================
-Product Margin Classification
+B10 Products
 =============================
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -14,7 +14,7 @@ Product Margin Classification
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fmargin--analysis-lightgray.png?logo=github
-    :target: https://github.com/OCA/margin-analysis/tree/12.0/product_margin_classification
+    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_products
     :alt: OCA/margin-analysis
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
     :target: https://translation.odoo-community.org/projects/margin-analysis-12-0/margin-analysis-12-0-product_margin_classification
@@ -81,15 +81,10 @@ Configuration
 Changelog
 =========
 
-17.0.1.0.0 (2024-06-26)
+18.0.1.0.0 (2025-08-06)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-* [ADD] Migració des de 16.0
-
-17.0.1.0.1 (2025-04-08)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Deprecation Warnings de decimal_precision
+* [ADD] Migració des de 17.0
 
 
 Known issues / Roadmap
@@ -123,7 +118,7 @@ Contributors
 * Sylvain LE GAL <https://twitter.com/legalsylvain>
 * Marc Poch Mallandrich <mpoch@planetatic.com>
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
-
+* Pol Comas i Romer <pol@batista10.cat> (https://www.batista10.cat)
 
 Maintainers
 ~~~~~~~~~~~
@@ -146,6 +141,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-legalsylvain| 
 
-This module is part of the `OCA/margin-analysis <https://github.com/OCA/margin-analysis/tree/12.0/product_margin_classification>`_ project on GitHub.
+This module is part of the `OCA/margin-analysis <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_products>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

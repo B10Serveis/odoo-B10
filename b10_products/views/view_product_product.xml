@@ -4,44 +4,36 @@
     <record id="view_product_product_tree" model="ir.ui.view">
         <field name="name">product.product.tree.margin</field>
         <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
         <field name="arch" type="xml">
-            <list decoration-warning="margin_state == 'too_expensive'"
-                  decoration-danger="margin_state == 'too_cheap'"
-                  editable="bottom">
-                <field name="default_code" readonly="1"/>
-                <field name="name" readonly="1"/>
-                <field name="standard_price"
-                       widget="monetary"
-                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
-                <field name="lst_price"
-                       widget="monetary"
-                       options="{'currency_field': 'currency_id', 'field_digits': True}"
-                       readonly="product_variant_count > 1"/>
+
+            <xpath expr="//list" position="attributes">
+                <attribute name="decoration-warning">margin_state == 'too_expensive'</attribute>
+                <attribute name="decoration-danger">margin_state == 'too_cheap'</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='lst_price']" position="after">
                 <field name="theoretical_price"
-                       widget="monetary"
-                       options="{'currency_field': 'currency_id', 'field_digits': True}"
-                       invisible="theoretical_difference == 0"/>
+                        widget="monetary"
+                        options="{'currency_field':'currency_id','field_digits':True}"
+                        invisible="theoretical_difference == 0"/>
                 <field name="margin_state"/>
-
                 <button name="use_theoretical_price"
                         type="object"
                         string="Apply Margin"
-                        icon="oi-arrow-thick-top"
+                        icon="fa-arrow-thick-top"
                         invisible="margin_state != 'too_cheap'"
-                        help="Increase the Sale Price up to Theoretical Price"/>  
+                        help="Increase the Sale Price up to Theoretical Price"/>
                 <button name="use_theoretical_price"
                         type="object"
                         string="Apply Margin"
-                        icon="oi-arrow-thick-bottom"
+                        icon="fa-arrow-thick-bottom"
                         invisible="margin_state != 'too_expensive'"
-                        help="Decrease the Sale Price down to Theoretical Price"/>  
-
+                        help="Decrease the Sale Price down to Theoretical Price"/>
                 <field name="theoretical_difference"
-                       widget="monetary"
-                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
-                <field name="product_variant_count" invisible="1"/>
-                <field name="currency_id" invisible="1"/>
-            </list>
+                        widget="monetary"
+                        options="{'currency_field':'currency_id','field_digits':True}"/>
+            </xpath>
         </field>
     </record>
 
@@ -80,13 +72,13 @@
                     <button name="use_theoretical_price"
                             type="object"
                             string="⇒ Increase Price"
-                            icon="oi-arrow-thick-top"
+                            icon="fa-arrow-thick-top"
                             invisible="margin_state != 'too_cheap'"
                             help="Increase the Sale Price up to Theoretical Price"/>  
                     <button name="use_theoretical_price"
                             type="object"
                             string="⇒ Decrease Price"
-                            icon="oi-arrow-thick-bottom"
+                            icon="fa-arrow-thick-bottom"
                             invisible="margin_state != 'too_expensive'"
                             help="Decrease the Sale Price down to Theoretical Price"/>  
                 </header>

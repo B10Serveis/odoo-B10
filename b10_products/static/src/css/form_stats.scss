@@ -1,0 +1,27 @@
+.o_stat_buttons .btn {
+  display: flex;
+  align-items: center;
+}
+.o_stat_buttons .btn .o_stat_info {
+  margin-left: 4px;  
+}
+/* Button Color */
+.o_stat_buttons .btn {
+  color: #a378d1;              
+  border-color: black;       
+}
+
+/* Text Color */
+.o_stat_buttons .btn .o_stat_text {
+  color: #000 !important;
+}
+
+/* Icons Color (inherit from text color) */
+.o_stat_buttons .btn .fa {
+  font-size: 1.2em;            
+}
+/* Number Color */
+.o_stat_buttons .btn .o_stat_info {
+  color: #a378d1;
+  font-weight: bold;
+}

@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-
-    <record id="view_product_template_form"
-            model="ir.ui.view">
-        <field name="model">product.template</field>
-        <field name="inherit_id" ref="product.product_template_only_form_view"/>
-        <field name="arch" type="xml">
-            <xpath expr="//sheet" position="inside">
-                <header>
-                    <button name="use_theoretical_price"
-                            type="object"
-                            string="⇒ Increase Price"
-                            invisible="margin_state != 'too_cheap' or product_variant_count > 1"
-                            help="Increase the Sale Price up to Theoretical Price">
-                        <i class="oi oi-arrow-thick-top"/>
-                    </button>
-                    <button name="use_theoretical_price"
-                            type="object"
-                            string="⇒ Decrease Price"
-                            invisible="margin_state != 'too_expensive' or product_variant_count > 1"
-                            help="Decrease the Sale Price down to Theoretical Price">
-                        <i class="oi oi-arrow-thick-bottom"/>
-                    </button>
-                </header>
-                <div class="o_form_sheetbg">
-                    <field name="margin_classification_id"
-                           invisible="product_variant_count > 1"/>
-                </div>
-            </xpath>
-        </field>
-    </record>
-
+  <record id="view_product_template_form_margin_fields" model="ir.ui.view">
+    <field name="name">product.template.form.margin.fields</field>
+    <field name="model">product.template</field>
+    <field name="inherit_id" ref="product.product_template_only_form_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet" position="inside">
+        <group string="Margin Classification">
+            <field name="margin_classification_id"
+                string="Margin Classification"
+                invisible="product_variant_count &gt; 1"/>
+            <field name="theoretical_price"
+                string="Theoretical Price"
+                widget="monetary"
+                options="{'currency_field': 'currency_id', 'field_digits': True}"
+                invisible="product_variant_count &gt; 1 or theoretical_difference == 0"/>
+            <button name="use_theoretical_price"
+                    type="object"
+                    string="⇒ Increase"
+                    class="btn-link"
+                    invisible="margin_state != 'too_cheap' or product_variant_count &gt; 1"/>
+            <button name="use_theoretical_price"
+                    type="object"
+                    string="⇒ Decrease"
+                    class="btn-link"
+                    invisible="margin_state != 'too_expensive' or product_variant_count &gt; 1"/>
+        </group>
+      </xpath>
+    </field>
+  </record>
 </odoo>
