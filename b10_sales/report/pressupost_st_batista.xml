@@ -2,7 +2,7 @@
 <odoo>
 	<record id="action_report_pressupost_st_batista"
 		model="ir.actions.report">
-		<field name="name">Pressupost Estandard S/T</field>
+		<field name="name">B10 - Pressupost Estandard S/T</field>
 		<field name="model">sale.order</field>
 		<field name="report_type">qweb-pdf</field>
 		<field name="report_name">b10_sales.report_pressupost_st_batista</field>

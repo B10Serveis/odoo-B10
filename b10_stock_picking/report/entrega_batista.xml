@@ -2,7 +2,7 @@
 <odoo>
 	<record id="action_report_entrega_batista"
 		model="ir.actions.report">
-		<field name="name">Entrega Estandard</field>
+		<field name="name">B10 - Entrega Estandard</field>
 		<field name="model">stock.picking</field>
 		<field name="report_type">qweb-pdf</field>
 		<field name="report_name">b10_stock_picking.report_entrega_batista</field>

@@ -2,7 +2,7 @@
 <odoo>
 	<record id="action_report_factura_batista"
 		model="ir.actions.report">
-		<field name="name">Factura Estandard</field>
+		<field name="name">Factura B10</field>
 		<field name="model">account.move</field>
 		<field name="report_type">qweb-pdf</field>
 		<field name="report_name">b10_account.report_factura_batista</field>

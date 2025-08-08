@@ -2,7 +2,7 @@
 <odoo>
     <record id="pdening_payment_email_template"
         model="mail.template">
-        <field name="name">Standard - Pending Payment Email Template</field>
+        <field name="name">B10 - Pending Payment Email Template</field>
         <field name="model_id"
             ref="account.model_account_move"/>
         <field name="subject">{{ object.company_id.name }} Pending payment of Invoice {{ object.name or object.ref or 'n/a' }}</field>

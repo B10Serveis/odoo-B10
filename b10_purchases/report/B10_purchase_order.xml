@@ -2,7 +2,7 @@
 <odoo>
 	<record id="B10_purchase_order_action"
 		model="ir.actions.report">
-		<field name="name">Standard purchase order</field>
+		<field name="name">B10 - Standard purchase order</field>
 		<field name="model">purchase.order</field>
 		<field name="report_type">qweb-pdf</field>
 		<field name="report_name">b10_purchases.B10_purchase_order_report</field>
