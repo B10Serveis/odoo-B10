@@ -2,7 +2,7 @@
 <odoo>
 	<record id="action_helpdesk_ticket_report_B10"
 		model="ir.actions.report">
-		<field name="name">Helpsdesk ticket Estandard</field>
+		<field name="name">Helpsdesk ticket B10</field>
 		<field name="model">helpdesk.ticket</field>
 		<field name="report_type">qweb-pdf</field>
 		<field name="report_name">b10_helpdesk.helpdesk_ticket_report_B10</field>

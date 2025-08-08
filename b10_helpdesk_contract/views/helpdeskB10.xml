@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="helpdesk_contract_ticket_view_form_B10"
+            model="ir.ui.view">
+            <field name="name">helpdesk_contract_B10</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id"
+                ref="helpdesk_mgmt.ticket_view_form"/>
+            <field name="arch"
+                type="xml">
+                <xpath expr="//field[@name='partner_email']"
+                    position="after">
+                    <field name="current_time"
+                        invisible="1"/>
+                    <field name="related_contract"
+                        options="{'color_field': 'color', 'no_create_edit': True}"
+                        domain="['|', ('date_end', '&gt;=', current_time),('date_end', '=', False)]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
