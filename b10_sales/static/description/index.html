@@ -5,34 +5,57 @@
 !! changes will be overwritten.                   !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <p><a class="reference external" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_sales"><img alt="B10Serveis/odoo-B10" src="https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github" /></a> <a class="reference external" href="https://translation.odoo-community.org/projects/odoob10-18-0/odoob10-18-0-b10_sales"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a></p>
-<p>Plantilles PDF i funcionalitats addicionals per a vendes:
-– Filtre “Expired” de pressupostos
+<dl class="docutils">
+<dt>Aquest mòdul afegeix plantilles PDF i funcionalitats addicionals per a vendes:</dt>
+<dd>– Filtre “Expired” de pressupostos
 – Checkbox “Show product image” al formulari
 – Dissenys per a Pressupost, Pressupost S/T, Comanda i ProForma
-– Plantilles Email per a Pressupost, Comanda i ProForma</p>
+– Plantilles Email per a Pressupost, Comanda i ProForma</dd>
+</dl>
+<p>A més, aquest mòdul està dissenyat per ampliar el càlcul del preu de venda a Odoo.</p>
+<p>Afegeix un nou model 'Classificacions de Marges' vinculat a les variants de producte.</p>
+<p>Una classificació de marge té un camp 'Marge de Benefici' i camps addicionals per gestionar
+el mètode de càlcul, com en el model d'ítem de llista de preus (Taxa de Markup, Mètode de Redondeig i Camps de Càrrega)</p>
+<p>Si el producte té una classificació de marge definida i el preu teòric no és
+el mateix que el preu de venda, es mostra un camp addicional 'Preu Teòric',
+basat en la Classificació de Marge i un botó està disponible per
+canviar el preu de venda.</p>
+<img alt="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/product_product_form.png" src="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/product_product_form.png" />
+<p>En el formulari de Classificació de marge, l'usuari pot canviar els camps de càlcul.
+(Marge, Mètode de Redondeig, ...)
+Tres botons estan disponibles per aplicar els preus teòrics:
+* a tots els productes,
+* només per als productes que són massa cars
+* només per als productes que són massa barats</p>
+<img alt="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/margin_classification_form.png" src="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/margin_classification_form.png" />
+<p>Clicant en els botons intel·ligents a la part dreta del formulari,
+tots els productes es mostraran, i l'usuari pot canviar fàcilment els preus</p>
+<img alt="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/product_product_tree_incorrect_price.png" src="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/product_product_tree_incorrect_price.png" />
+<p>L'usuari també pot veure fàcilment els productes amb marges incorrectes en les vistes d'arbre de classificació de marges:</p>
+<img alt="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/margin_classification_tree.png" src="https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/margin_classification_tree.png" />
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#usage" id="id4">Usage</a></li>
-<li><a class="reference internal" href="#known-issues-roadmap" id="id5">Known issues / Roadmap</a></li>
-<li><a class="reference internal" href="#changelog" id="id6">Changelog</a><ul>
-<li><a class="reference internal" href="#id1" id="id7">18.0.1.0.0 (2025-08-05)</a></li>
-<li><a class="reference internal" href="#id2" id="id8">18.0.1.1.0 (2025-08-05)</a></li>
-<li><a class="reference internal" href="#id3" id="id9">18.0.1.2.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#usage" id="id5">Usage</a></li>
+<li><a class="reference internal" href="#known-issues-roadmap" id="id6">Known issues / Roadmap</a></li>
+<li><a class="reference internal" href="#changelog" id="id7">Changelog</a><ul>
+<li><a class="reference internal" href="#id1" id="id8">18.0.1.0.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#id2" id="id9">18.0.1.1.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#id3" id="id10">18.0.1.2.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#id4" id="id11">18.0.1.3.0 (2025-08-08)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bug-tracker" id="id10">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="id11">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="id12">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="id13">Contributors</a></li>
-<li><a class="reference internal" href="#other-credits" id="id14">Other credits</a></li>
-<li><a class="reference internal" href="#maintainers" id="id15">Maintainers</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="id12">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="id13">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="id14">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="id15">Contributors</a></li>
+<li><a class="reference internal" href="#maintainers" id="id16">Maintainers</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="usage">
-<h2><a class="toc-backref" href="#id4">Usage</a></h2>
+<h2><a class="toc-backref" href="#id5">Usage</a></h2>
 <p>Per fer servir aquest mòdul:</p>
 <ol class="arabic simple">
 <li>Instal·la <strong>b10_sales</strong> des de Apps.</li>
@@ -44,33 +67,36 @@
 - <strong>Comanda Estandard</strong>
 - <strong>ProForma Estandard</strong></li>
 </ol>
+<blockquote>
+des del menú <strong>Print</strong>.</blockquote>
 <ol class="arabic simple">
 <li>Enviar per Email
 - Obre un Pressupost i clica <strong>Send by Email</strong>: s’auto‐selecciona la plantilla <strong>Standard - Quotation Email Template</strong>.
 - Obre una Comanda i clica <strong>Send by Email</strong>: s’auto‐selecciona la plantilla <strong>Standard - Sale Order Email Template</strong>.
 - Obre una ProForma i clica <strong>Send by Email</strong>: s’auto‐selecciona la plantilla <strong>Standard - Proforma Email Template</strong>.</li>
+<li>Classificacions de Marges:
+- Ves a: Vendes &gt; Configuració &gt; Productes &gt; Classificacions de Marges
+- Crea noves classificacions
+- Assigna classificacions als teus productes</li>
 </ol>
 </div>
 <div class="section" id="known-issues-roadmap">
-<h2><a class="toc-backref" href="#id5">Known issues / Roadmap</a></h2>
+<h2><a class="toc-backref" href="#id6">Known issues / Roadmap</a></h2>
 <ul class="simple">
 <li>Cap incidència coneguda per a aquesta versió.</li>
-<li>Millores possibles:
-- Afegir filtre per <strong>Secondary Salesperson</strong> (b10_crm).
-- Notifications automàtiques al vèncer un pressupost.</li>
 </ul>
 </div>
 <div class="section" id="changelog">
-<h2><a class="toc-backref" href="#id6">Changelog</a></h2>
+<h2><a class="toc-backref" href="#id7">Changelog</a></h2>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id7">18.0.1.0.0 (2025-08-05)</a></h3>
+<h3><a class="toc-backref" href="#id8">18.0.1.0.0 (2025-08-05)</a></h3>
 <ul class="simple">
 <li>[ADD] Creat a V.18.</li>
 <li>[ADD] Afegit filtre “Caducats” per la vista de recerca de pressupostos.</li>
 </ul>
 </div>
 <div class="section" id="id2">
-<h3><a class="toc-backref" href="#id8">18.0.1.1.0 (2025-08-05)</a></h3>
+<h3><a class="toc-backref" href="#id9">18.0.1.1.0 (2025-08-05)</a></h3>
 <ul class="simple">
 <li>[MIG] Migració a Odoo 18.</li>
 <li>[ADD] Checkbox <strong>Show product image</strong> al formulari de comanda.</li>
@@ -82,7 +108,7 @@
 </ul>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id9">18.0.1.2.0 (2025-08-05)</a></h3>
+<h3><a class="toc-backref" href="#id10">18.0.1.2.0 (2025-08-05)</a></h3>
 <ul class="simple">
 <li>[ADD] Email Templates i override de <cite>_find_mail_template()</cite>:
 - <strong>Standard - Quotation Email Template</strong>
@@ -90,36 +116,39 @@
 - <strong>Standard - Proforma Email Template</strong></li>
 </ul>
 </div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id11">18.0.1.3.0 (2025-08-08)</a></h3>
+<ul class="simple">
+<li>[ADD] Classificacions de Marges.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="bug-tracker">
-<h2><a class="toc-backref" href="#id10">Bug Tracker</a></h2>
+<h2><a class="toc-backref" href="#id12">Bug Tracker</a></h2>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues">GitHub Issues</a>.
 Si us plau comprova si ja hi ha un issue abans de crear-ne un de nou.</p>
 </div>
 <div class="section" id="credits">
-<h2><a class="toc-backref" href="#id11">Credits</a></h2>
+<h2><a class="toc-backref" href="#id13">Credits</a></h2>
 <div class="section" id="authors">
-<h3><a class="toc-backref" href="#id12">Authors</a></h3>
+<h3><a class="toc-backref" href="#id14">Authors</a></h3>
 <ul class="simple">
 <li>Batista10</li>
+<li>GRAP</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h3><a class="toc-backref" href="#id13">Contributors</a></h3>
+<h3><a class="toc-backref" href="#id15">Contributors</a></h3>
 <ul class="simple">
+<li>Sylvain LE GAL &lt;<a class="reference external" href="https://twitter.com/legalsylvain">https://twitter.com/legalsylvain</a>&gt;</li>
+<li>Marc Poch Mallandrich &lt;<a class="reference external" href="mailto:mpoch&#64;planetatic.com">mpoch&#64;planetatic.com</a>&gt;</li>
 <li>Marc Tormo i Bochaca &lt;<a class="reference external" href="mailto:marc&#64;batista10.cat">marc&#64;batista10.cat</a>&gt;</li>
 <li>Joan Llimiñana i Sabaté &lt;<a class="reference external" href="mailto:joan&#64;batista10.cat">joan&#64;batista10.cat</a>&gt;</li>
 <li>Pol Comas i Romero &lt;<a class="reference external" href="mailto:pol&#64;batista10.cat">pol&#64;batista10.cat</a>&gt;</li>
 </ul>
 </div>
-<div class="section" id="other-credits">
-<h3><a class="toc-backref" href="#id14">Other credits</a></h3>
-<ul class="simple">
-<li>Basat en les plantilles de <cite>Dissenys_generics</cite>.</li>
-</ul>
-</div>
 <div class="section" id="maintainers">
-<h3><a class="toc-backref" href="#id15">Maintainers</a></h3>
+<h3><a class="toc-backref" href="#id16">Maintainers</a></h3>
 <p>Aquest mòdul és mantingut per Batista10.</p>
 <a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
 <p>Este mòdul forma part del projecte

@@ -1,7 +1,11 @@
+# Copyright (C) 2016-Today GRAP (http://www.grap.coop)
+# @author: Sylvain LE GAL (https://twitter.com/legalsylvain)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
 {
     'name': 'Batista10 - Sales',
     'summary': 'Personalització Vendes Batista10',
-    'version': '18.0.1.2.0',
+    'version': '18.0.1.3.0',
     'category': 'Sales',
     'author': 'Batista10',
     'website': 'https://www.batista10.cat',
@@ -14,7 +18,18 @@
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
     ],
+    "demo": [
+        "demo/res_groups.xml",
+        "demo/product_margin_classification.xml",
+        "demo/product_product.xml",
+    ],
     'data': [
+        "security/ir_rule.xml",
+        "security/ir.model.access.csv",
+        "data/decimal_precision.xml",
+        "views/view_product_product.xml",
+        "views/view_product_template.xml",
+        "views/view_product_margin_classification.xml",
         # Reports
         'report/comanda_batista.xml',
         'report/pressupost_batista.xml',
@@ -28,6 +43,11 @@
         'views/B10_sale_order_expired_filter.xml',
         'views/show_product_image.xml',
     ],
+    'assets': {
+    'web.assets_backend': [
+        'b10_sales/static/src/css/form_stats.scss',
+        ],
+    },
     'installable': True,
     'application': True,
     'auto_install': False,

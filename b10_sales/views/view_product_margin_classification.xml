@@ -83,7 +83,7 @@
         model="ir.ui.view">
         <field name="name">product.margin.classification.form.stat.buttons</field>
         <field name="model">product.margin.classification</field>
-        <field name="inherit_id" ref="b10_products.view_product_margin_classification_form"/>
+        <field name="inherit_id" ref="b10_sales.view_product_margin_classification_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@class='oe_title']" position="replace">
                 <div class="oe_title o_row d-flex justify-content-between align-items-center">

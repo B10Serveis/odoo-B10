@@ -1,22 +1,541 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* B10_sales
+# 	* b10_sales
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-08 09:25+0000\n"
-"PO-Revision-Date: 2025-07-08 09:25+0000\n"
+"POT-Creation-Date: 2025-08-08 06:58+0000\n"
+"PO-Revision-Date: 2025-08-08 06:58+0000\n"
 "Last-Translator: Pol Comas <pol@batista10.cat>\n"
-"Language-Team: \n"
-"Language: es\n"
+"Language-Team: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: B10_sales
-#: model_terms:ir.ui.view,arch_db:B10_sales.view_sale_order_search_expired
+#. module: b10_sales
+#: model:ir.actions.report,print_report_name:b10_sales.action_report_comanda_batista
+msgid "'Order_%s' % (object.name)"
+msgstr "'Pedido_%s' % (object.name)"
+
+#. module: b10_sales
+#: model:ir.actions.report,print_report_name:b10_sales.action_report_proforma_batista
+msgid "'Proforma_%s' % (object.name)"
+msgstr "'Proforma_%s' % (object.name)"
+
+#. module: b10_sales
+#: model:ir.actions.report,print_report_name:b10_sales.action_report_pressupost_st_batista
+msgid "'QuotationWT_%s' % (object.name)"
+msgstr "'PresupuestoST_%s' % (object.name)"
+
+#. module: b10_sales
+#: model:ir.actions.report,print_report_name:b10_sales.action_report_pressupost_batista
+msgid "'Quotation_%s' % (object.name)"
+msgstr "'Presupuesto_%s' % (object.name)"
+
+#. module: b10_sales
+#. odoo-python
+#: code:addons/b10_sales/models/product_margin_classification.py:0
+msgid "-100 is not a valid Markup."
+msgstr "-100 no es un margen válido."
+
+#. module: b10_sales
+#. odoo-python
+#: code:addons/b10_sales/models/product_margin_classification.py:0
+msgid "100 is not a valid Profit Margin."
+msgstr "100 no es un margen de beneficio válido."
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+msgid "<span>This quotation is valid until </span>"
+msgstr "<span>Este presupuesto es válido hasta </span>"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "<strong>ProForma Invoice</strong>"
+msgstr "<strong>Factura Proforma</strong>"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+msgid "<strong>Quotation</strong>"
+msgstr "<strong>Presupuesto</strong>"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+msgid "<strong>Sale Order</strong>"
+msgstr "<strong>Pedido de Venta</strong>"
+
+#. module: b10_sales
+#: model:ir.model.fields,help:b10_sales.field_product_margin_classification__profit_margin
+msgid ""
+"Also called 'Net margin' or 'Net Profit Ratio'.\n"
+"It is computed with the following formula Profit Margin = 100 * (Sale Price - Cost) / Sale Price"
+msgstr ""
+"También llamado 'Margen neto' o 'Ratio de beneficio neto'.\n"
+"Se calcula con la siguiente fórmula: Margen de beneficio = 100 * (Precio de venta - Costo) / Precio de venta"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_tree
+msgid "Apply Margin"
+msgstr "Aplicar margen"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form
+msgid "Apply Theoretical Price"
+msgstr "Aplicar precio teórico"
+
+#. module: b10_sales
+#: model:ir.actions.report,name:b10_sales.action_report_comanda_batista
+msgid "Comanda Estandard"
+msgstr "Pedido Estándar"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+msgid "Commitment Date:"
+msgstr "Fecha de compromiso:"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form
+msgid "Computation Method"
+msgstr "Método de cálculo"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form_stat_inherit
+msgid "Correct"
+msgstr "Correcto"
+
+#. module: b10_sales
+#: model:ir.model.fields.selection,name:b10_sales.selection__product_product__margin_state__correct
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_search
+msgid "Correct Margin"
+msgstr "Margen correcto"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_form
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_tree
+msgid "Decrease the Sale Price down to Theoretical Price"
+msgstr "Reducir el precio de venta hasta el precio teórico"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Description"
+msgstr "Descripción"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Disc.(%)"
+msgstr "Desc.(%)"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form
+msgid "Down to Theoretical Price"
+msgstr "Reducir al precio teórico"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Email:"
+msgstr "Correo electrónico:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_sale_order_search_expired
 msgid "Expired"
-msgstr "Caducados"
+msgstr "Caducado"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__id
+msgid "ID"
+msgstr "ID"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form_stat_inherit
+msgid "Incorrect"
+msgstr "Incorrecto"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_search
+msgid "Incorrect Margin"
+msgstr "Margen incorrecto"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_form
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_tree
+msgid "Increase the Sale Price up to Theoretical Price"
+msgstr "Aumentar el precio de venta hasta el precio teórico"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_product__margin_classification_id
+#: model:ir.model.fields,field_description:b10_sales.field_product_template__margin_classification_id
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_template_form_margin_fields
+msgid "Margin Classification"
+msgstr "Clasificación de margen"
+
+#. module: b10_sales
+#: model:ir.actions.act_window,name:b10_sales.action_product_margin_classification
+#: model:ir.ui.menu,name:b10_sales.menu_product_margin_classification
+msgid "Margin Classifications"
+msgstr "Clasificaciones de margen"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__markup
+msgid "Markup"
+msgstr "Incremento"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+msgid "Order Date:"
+msgstr "Fecha del pedido:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+msgid "Order:"
+msgstr "Pedido:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Payment Method:"
+msgstr "Método de pago:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Payment Terms:"
+msgstr "Plazos de pago:"
+
+#. module: b10_sales
+#: model:ir.actions.report,name:b10_sales.action_report_pressupost_batista
+msgid "Pressupost Estandard"
+msgstr "Presupuesto Estandar"
+
+#. module: b10_sales
+#: model:ir.actions.report,name:b10_sales.action_report_pressupost_st_batista
+msgid "Pressupost Estandard S/T"
+msgstr "Presupuesto Estandar S/T"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Price"
+msgstr "Precio"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__price_round
+msgid "Price Rounding"
+msgstr "Redondeo de precio"
+
+#. module: b10_sales
+#. odoo-python
+#: code:addons/b10_sales/models/product_margin_classification.py:0
+msgid "Price Rounding can not be null."
+msgstr "El redondeo de precio no puede ser nulo."
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__price_surcharge
+msgid "Price Surcharge"
+msgstr "Recargo de precio"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "ProForma Date:"
+msgstr "Fecha de proforma:"
+
+#. module: b10_sales
+#: model:ir.actions.report,name:b10_sales.action_report_proforma_batista
+msgid "ProForma Estandard"
+msgstr "Proforma estándar"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "ProForma:"
+msgstr "Proforma:"
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_product_margin_classification
+msgid "Product Margin Classification"
+msgstr "Clasificación de margen de producto"
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_product_product
+msgid "Product Variant"
+msgstr "Variante de producto"
+
+#. module: b10_sales
+#: model:ir.actions.act_window,name:b10_sales.action_view_product_product_by_margin_classification
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__product_ids
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form_stat_inherit
+msgid "Products"
+msgstr "Productos"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__product_qty
+msgid "Products Quantity"
+msgstr "Cantidad de productos"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__profit_margin
+msgid "Profit Margin"
+msgstr "Margen de beneficio"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+msgid "Quotation Date:"
+msgstr "Fecha de presupuesto:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+msgid "Quotation:"
+msgstr "Presupuesto:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+msgid "Return this quotation signed or stamped to confirm its validity."
+msgstr "Devuelva este presupuesto firmado o sellado para confirmar su validez."
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: b10_sales
+#: model:ir.model.fields,help:b10_sales.field_product_margin_classification__price_round
+msgid ""
+"Sets the price so that it is a multiple of this value.\n"
+"Rounding is applied after the margin and before the surcharge.\n"
+"To have prices that end in 9.99, set rounding 1, surcharge -0.01"
+msgstr ""
+"Establece el precio para que sea múltiplo de este valor.\n"
+"El redondeo se aplica después del margen y antes del recargo.\n"
+"Para tener precios que terminen en 9,99, establezca redondeo 1 y recargo -0,01."
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form
+msgid "Settings"
+msgstr "Configuración"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_sale_order__show_product_image
+msgid "Show product image"
+msgstr "Mostrar imagen del producto"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+msgid "Signature and Stamp for acceptance"
+msgstr "Firma y sello para aceptación"
+
+#. module: b10_sales
+#: model:ir.model.fields,help:b10_sales.field_product_margin_classification__price_surcharge
+msgid ""
+"Specify the fixed amount to add or substract(if negative) to the amount "
+"calculated with the discount."
+msgstr "Especifique la cantidad fija a añadir o restar (si es negativa) al importe calculado con el descuento."
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "TIN:"
+msgstr "NIF:"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Tel:"
+msgstr "Tel:"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_product__theoretical_difference
+#: model:ir.model.fields,field_description:b10_sales.field_product_template__theoretical_difference
+msgid "Theoretical Difference"
+msgstr "Diferencia teórica"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_product__theoretical_price
+#: model:ir.model.fields,field_description:b10_sales.field_product_template__theoretical_price
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_template_form_margin_fields
+msgid "Theoretical Price"
+msgstr "Precio teórico"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_product__margin_state
+#: model:ir.model.fields,field_description:b10_sales.field_product_template__margin_state
+msgid "Theoretical Price State"
+msgstr "Estado del precio teórico"
+
+#. module: b10_sales
+#: model:ir.model.fields.selection,name:b10_sales.selection__product_product__margin_state__too_cheap
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form_stat_inherit
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_search
+msgid "Too Cheap"
+msgstr "Demasiado barato"
+
+#. module: b10_sales
+#: model:product.template,name:b10_sales.too_cheap_product_product_template
+msgid "Too Cheap Product"
+msgstr "Producto demasiado barato"
+
+#. module: b10_sales
+#: model:ir.model.fields.selection,name:b10_sales.selection__product_product__margin_state__too_expensive
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_search
+msgid "Too Expensive"
+msgstr "Demasiado caro"
+
+#. module: b10_sales
+#: model:product.template,name:b10_sales.too_expensive_product_product_template
+msgid "Too Expensive Product"
+msgstr "Producto demasiado caro"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form_stat_inherit
+msgid "Too Priced"
+msgstr "Precio excesivo"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__product_too_cheap_qty
+msgid "Total Products Too Cheap"
+msgstr "Total de productos demasiado baratos"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__product_too_expensive_qty
+msgid "Total Products Too Expensive"
+msgstr "Total de productos demasiado caros"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__product_correct_price_qty
+msgid "Total Products With Correct Price"
+msgstr "Total de productos con precio correcto"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_product_margin_classification__product_incorrect_price_qty
+msgid "Total Products With Incorrect Price"
+msgstr "Total de productos con precio incorrecto"
+
+#. module: b10_sales
+#. odoo-python
+#: code:addons/b10_sales/models/product_product.py:0
+msgid ""
+"Unimplemented Feature\n"
+"The sale taxes are not correctly set for computing prices with coefficients for the product %s"
+msgstr ""
+"Funcionalidad no implementada\n"
+"Los impuestos de venta no están configurados correctamente para calcular precios con coeficientes para el producto %s"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_margin_classification_form
+msgid "Up to Theoretical Price"
+msgstr "Hasta el precio teórico"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_st_batista_document
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_batista_document
+msgid "VAT:"
+msgstr "IVA:"
+
+#. module: b10_sales
+#: model:ir.model.fields,help:b10_sales.field_product_margin_classification__markup
+msgid ""
+"Value that help you to compute the sale price, based on your cost, as defined: Sale Price = (Cost * (100 + Markup)) / 100\n"
+"It is computed with the following formula Markup = 100 * (Sale Price - Cost) / Cost"
+msgstr ""
+"Valor que le ayuda a calcular el precio de venta, basado en su coste, según la fórmula: Precio de venta = (Coste * (100 + Margen)) / 100\n"
+"Se calcula con la siguiente fórmula: Margen = 100 * (Precio de venta - Coste) / Coste"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_template_form_margin_fields
+msgid "⇒ Decrease"
+msgstr "⇒ Disminuir"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_form
+msgid "⇒ Decrease Price"
+msgstr "⇒ Disminuir precio"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_template_form_margin_fields
+msgid "⇒ Increase"
+msgstr "⇒ Aumentar"
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_form
+msgid "⇒ Increase Price"
+msgstr "⇒ Aumentar precio"
