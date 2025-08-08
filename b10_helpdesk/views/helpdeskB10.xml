@@ -6,7 +6,7 @@
             <field name="name">helpdeskB10</field>
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id"
-                ref="helpdesk_mgmt.helpdesk_ticket_view_form"/>
+                ref="helpdesk_mgmt.ticket_view_form"/>
             <field name="arch"
                 type="xml">
                 <xpath expr="//field[@name='partner_email']"
@@ -40,9 +40,8 @@
                     position="after">
                     <field name="stage_closed"
                         invisible="1"/>
-                    <field name="worked_hours"
-                        string="Worked Hours"
-                        required="stage_closed == 1"/>
+                    <field name="worked_hours" string="Worked Hours"
+                        modifiers="{'required': [['stage_closed', '=', True]]}"/>
                 </xpath>
             </field>
         </record>
