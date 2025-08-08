@@ -23,5 +23,6 @@ En particular, permet generar els següents informes en el format necessari per 
 """,
     "data": [
         "security/groups.xml",
+        "views/res_company_view.xml",
     ],
 }
