@@ -119,6 +119,12 @@ Changelog
   - plantilla `views/report_pressupost_batista.xml`
   - plantilla `views/report_proforma_batista.xml`
 
+
+15.0.1.10.5 (2025-08-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Error a factura: falta t-att-data-oe-mode i t-att-data-oe-id al div de la classe article.
+
 Bug Tracker
 ===========
 

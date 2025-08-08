@@ -97,7 +97,9 @@
 
 
             <!-- Page -->
-            <div class="article">
+            <div class="article"
+                t-att-data-oe-model="o and o._name"
+                t-att-data-oe-id="o and o.id">
                 <div class="container"
                     style="margin-bottom:1em; padding-top:0px;">
                     <!-- Client i Document -->
