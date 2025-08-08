@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.1.0",
+    "version": "18.0.2.1.0",
     "depends": ["helpdesk_mgmt"],
     "license": "AGPL-3",
     "application": True,

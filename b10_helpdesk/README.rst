@@ -58,6 +58,10 @@ Changelog
 * [REM] Eliminats els camps `related_contract` i `current_time` per traslladar-los al nou mòdul `b10_helpdesk_contracts`, eliminant així la dependència amb el mòdul `contract`.
 * [CLEAN] Neteja de vistes per eliminar referències als camps suprimits.
 
+18.0.2.1.0 (2025-08-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] scripts de migració (OpenUpgrade-style)
+  
 Bug Tracker
 ===========
 
