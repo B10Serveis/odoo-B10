@@ -21,4 +21,7 @@ En particular, permet generar els següents informes en el format necessari per 
     * Dades de les condicions comercials dels clients
     * Vendes als clients
 """,
+    "data": [
+        "security/groups.xml",
+    ],
 }
