@@ -141,6 +141,11 @@ Changelog
 
 * [FIX] Error de traducció "Commanda".
 
+17.0.1.11.7 (2025-08-11)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Afegir unitat a la columna de quantitats de pressupost.
+
 Bug Tracker
 ===========
 
