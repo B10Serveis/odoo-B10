@@ -136,6 +136,11 @@ Changelog
 
 * [ADD] Peus de documents dinamics i traduibles utilitzant el camp de "Configuració - Configurar el disseny del document - Peu".
 
+17.0.1.10.7 (2025-08-11)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Error de traducció "Commanda".
+
 Bug Tracker
 ===========
 

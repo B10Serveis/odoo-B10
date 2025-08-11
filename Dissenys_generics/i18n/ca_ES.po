@@ -218,7 +218,7 @@ msgstr "<strong>Pressupost</strong>"
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
 msgid "<strong>Sale Order</strong>"
-msgstr "<strong>Commanda de venda</strong>"
+msgstr "<strong>Comanda de venda</strong>"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_pressupost_batista_document
