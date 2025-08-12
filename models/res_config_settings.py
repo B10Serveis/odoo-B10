@@ -10,3 +10,6 @@ class ResConfigSettings(models.TransientModel):
     group_damm_integration = fields.Boolean(
         string="Damm integration",
         implied_group="damm_integration.res_groups_damm_integration")
+    damm_partner_id = fields.Many2one(
+        related="company_id.damm_partner_id", readonly=False,
+        groups="damm_integration.res_groups_damm_integration")
