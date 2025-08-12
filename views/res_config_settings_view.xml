@@ -17,6 +17,13 @@
                     <div class="o_setting_left_pane">
                         <field name="group_damm_integration"/>
                     </div>
+                    <div class="o_setting_right_pane" id="damm_dealer_code">
+                        <label for="damm_dealer_code"/>
+                        <field name="damm_dealer_code"/>
+                        <div class="text-muted">
+                            The code used by Damm to identify your company as a dealer of its products.
+                        </div>
+                    </div>
                     <div class="o_setting_right_pane" id="damm_partner_id">
                         <label for="damm_partner_id"/>
                         <field name="damm_partner_id"/>
