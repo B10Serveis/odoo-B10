@@ -24,7 +24,10 @@ En particular, permet generar els següents informes en el format necessari per 
     "depends": ["base_setup"],
     "data": [
         "security/groups.xml",
+        "security/ir.model.access.csv",
+        "views/menus.xml",
         "views/res_company_view.xml",
         "views/res_config_settings_view.xml",
+        "wizards/reports_view.xml",
     ],
 }
