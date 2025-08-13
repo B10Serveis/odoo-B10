@@ -8,7 +8,7 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     group_damm_integration = fields.Boolean(
-        string="Damm integration",
+        string="Damm Integration",
         implied_group="damm_integration.res_groups_damm_integration")
     damm_dealer_code = fields.Char(
         related="company_id.damm_dealer_code", readonly=False,

@@ -25,7 +25,7 @@ class DammReportsWizard(models.TransientModel):
             ("conditions", "Commercial Conditions"),
             ("sales", "Sales"),
         ],
-        string="Report type",
+        string="Report Type",
         required=True,
         default="sales",
     )
