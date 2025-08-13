@@ -14,6 +14,11 @@ class DammReportsWizard(models.TransientModel):
                  bool(self.env.user.company_id.damm_dealer_code
                       and self.env.user.company_id.damm_partner_id)))
 
+    date_start = fields.Date(
+        string="Start Date", required=True, default=fields.Date.today)
+    date_end = fields.Date(
+        string="End Date", required=True, default=fields.Date.today)
+
     report_type = fields.Selection(
         [
             ("customers", "Customers Data"),
@@ -24,6 +29,13 @@ class DammReportsWizard(models.TransientModel):
         required=True,
         default="sales",
     )
+
+    @api.constrains("date_start", "date_end")
+    def _check_dates_range(self):
+        for report in self:
+            if report.date_start > report.date_end:
+                raise models.ValidationError(
+                    "Report end date must be greater than its start date")
 
     @api.model
     def create(self, values):

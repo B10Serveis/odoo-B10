@@ -15,6 +15,8 @@
             </p>
             <field name="damm_config_ok" invisible="1"/>
             <field name="report_type"/>
+            <field name="date_start"/>
+            <field name="date_end"/>
             <footer>
                 <button type="object" name="generate_report" string="Generate" class="btn-primary"/>
                 <button type="object" special="cancel" string="Cancel"/>
