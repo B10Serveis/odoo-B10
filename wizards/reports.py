@@ -1,7 +1,7 @@
 # Copyright 2024, 2025 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import exceptions, models, fields
+from odoo import api, exceptions, models, fields
 
 
 class DammReportsWizard(models.TransientModel):
@@ -19,9 +19,8 @@ class DammReportsWizard(models.TransientModel):
         default="sales",
     )
 
-    def generate_report(self):
-        self.ensure_one()
-        # TODO: move check to recordset creation
+    @api.model
+    def create(self, values):
         company = self.env.user.company_id
         dealer_code = company.damm_dealer_code
         if not dealer_code:
@@ -29,4 +28,8 @@ class DammReportsWizard(models.TransientModel):
         damm_partner = company.damm_partner_id
         if not damm_partner:
             raise exceptions.UserError("Please configure which partner is the Damm company")
+        return super(DammReportsWizard, self).create(values)
+
+    def generate_report(self):
+        self.ensure_one()
         raise NotImplementedError("TODO")
