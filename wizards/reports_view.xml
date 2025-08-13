@@ -14,9 +14,11 @@
                 Your Damm integration configuration may be missing some values, please check it.
             </p>
             <field name="damm_config_ok" invisible="1"/>
-            <field name="report_type"/>
-            <field name="date_start"/>
-            <field name="date_end"/>
+            <group>
+                <field name="report_type"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+            </group>
             <footer>
                 <button type="object" name="generate_report" string="Generate" class="btn-primary"/>
                 <button type="object" special="cancel" string="Cancel"/>
