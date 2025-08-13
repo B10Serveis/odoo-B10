@@ -8,6 +8,12 @@ class DammReportsWizard(models.TransientModel):
     _name = "damm_integration.reports.wizard"
     _description = "Wizard to help create reports for Damm"
 
+    # To show a warning about incomplete configuration in the view.
+    damm_config_ok = fields.Boolean(
+        default=(lambda self:
+                 bool(self.env.user.company_id.damm_dealer_code
+                      and self.env.user.company_id.damm_partner_id)))
+
     report_type = fields.Selection(
         [
             ("customers", "Customers Data"),

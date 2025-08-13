@@ -9,6 +9,11 @@
     <field name="model">damm_integration.reports.wizard</field>
     <field name="arch" type="xml">
         <form string="Generate Reports for Damm">
+            <p class="alert alert-warning"
+               attrs="{'invisible': [('damm_config_ok', '=', True)]}">
+                Your Damm integration configuration may be missing some values, please check it.
+            </p>
+            <field name="damm_config_ok" invisible="1"/>
             <field name="report_type"/>
             <footer>
                 <button type="object" name="generate_report" string="Generate" class="btn-primary"/>
