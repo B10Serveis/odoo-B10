@@ -48,7 +48,7 @@ class DammReportsWizard(models.TransientModel):
             raise exceptions.UserError("Please configure which partner is the Damm company")
         return super(DammReportsWizard, self).create(values)
 
-    def _search_customers_and_sales(self):  # ->  (customer_ids, sale_line_ids)
+    def _search_customers_and_sales(self):  # ->  (customers, sale_lines)
         company = self.env.user.company_id
         damm_partner_id = company.damm_partner_id.id
         sale_orders = self.env["sale.order"].search(
@@ -59,11 +59,11 @@ class DammReportsWizard(models.TransientModel):
             ]
         )
 
-        customer_ids = set()
-        sale_line_ids = set()
+        customers = {}
+        sale_lines = {}
         is_product_by_damm = {}  # cache
         for sale_order in sale_orders:
-            customer_id = sale_order.partner_id.id
+            customer = sale_order.partner_id
             for sale_order_line in sale_order.order_line:
                 product = sale_order_line.product_id
                 by_damm = is_product_by_damm.get(product.id)
@@ -72,13 +72,13 @@ class DammReportsWizard(models.TransientModel):
                         damm_partner_id in product.mapped("seller_ids.name.id")
                     )
                 if by_damm:
-                    customer_ids.add(customer_id)
-                    sale_line_ids.add(sale_order_line.id)
+                    customers[customer.id] = customer
+                    sale_lines[sale_order_line.id] = sale_order_line
 
-        return (customer_ids, sale_line_ids)
+        return (customers, sale_lines)
 
     def generate_report(self):
         self.ensure_one()
-        (customer_ids, sale_line_ids) = self._search_customers_and_sales()
+        (customers, sale_lines) = self._search_customers_and_sales()
 
         raise NotImplementedError("TODO")
