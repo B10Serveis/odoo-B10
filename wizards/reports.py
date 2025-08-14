@@ -61,13 +61,19 @@ class DammReportsWizard(models.TransientModel):
             ]
         )
 
-        # TODO: cache products sold by Damm
         customer_ids = set()
         sale_line_ids = set()
+        is_product_by_damm = {}  # cache
         for sale_order in sale_orders:
             customer_id = sale_order.partner_id.id
             for sale_order_line in sale_order.order_line:
-                if damm_partner_id in sale_order_line.mapped("product_id.seller_ids.name.id"):
+                product = sale_order_line.product_id
+                by_damm = is_product_by_damm.get(product.id)
+                if by_damm is None:  # cache whether product by Damm
+                    is_product_by_damm[product.id] = by_damm = (
+                        damm_partner_id in product.mapped("seller_ids.name.id")
+                    )
+                if by_damm:
                     customer_ids.add(customer_id)
                     sale_line_ids.add(sale_order_line.id)
 
