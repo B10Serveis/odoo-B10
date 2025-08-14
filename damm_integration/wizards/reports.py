@@ -50,4 +50,25 @@ class DammReportsWizard(models.TransientModel):
 
     def generate_report(self):
         self.ensure_one()
+
+        company = self.env.user.company_id
+        damm_partner_id = company.damm_partner_id.id
+        sale_orders = self.env["sale.order"].search(
+            [
+                ("state", "=", "sale"),
+                ("date_order", ">=", self.date_start),
+                ("date_order", "<=", self.date_end),
+            ]
+        )
+
+        # TODO: cache products sold by Damm
+        customer_ids = set()
+        sale_line_ids = set()
+        for sale_order in sale_orders:
+            customer_id = sale_order.partner_id.id
+            for sale_order_line in sale_order.order_line:
+                if damm_partner_id in sale_order_line.mapped("product_id.seller_ids.name.id"):
+                    customer_ids.add(customer_id)
+                    sale_line_ids.add(sale_order_line.id)
+
         raise NotImplementedError("TODO")

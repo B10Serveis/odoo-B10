@@ -21,7 +21,7 @@ En particular, permet generar els següents informes en el format necessari per 
     * Dades de les condicions comercials dels clients
     * Vendes als clients
 """,
-    "depends": ["base_setup"],
+    "depends": ["base_setup", "sale"],
     "data": [
         "security/groups.xml",
         "security/ir.model.access.csv",
