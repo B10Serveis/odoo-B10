@@ -4,6 +4,39 @@
 from odoo import api, exceptions, models, fields
 
 
+# Report item field getters and value formatters.
+def _g_damm_code(rep, item):
+    return rep.env.user.company_id.damm_dealer_code
+
+def _g_field(f):
+    return lambda rep, item: getattr(item, f)
+
+def _g_const(v):
+    return lambda rep, item: v
+
+_g_empty = _g_const("")
+
+def _f_str_or_empty(rep, v):
+    return str(v) if v is not False else ""
+
+# Report format for each report type.
+# Each value is a list of `(title, maxlen, getter, formatter)` tuples.
+_report_formats = {
+    "customers": [
+        ("Distribuidor", 10, _g_damm_code, _f_str_or_empty),
+        ("cod_Detallista", 50, _g_field("id"), _f_str_or_empty),
+        ("Nombre", 150, _g_field("comercial"), _f_str_or_empty),
+        ("Prefijo", 50, _g_empty, None),
+        # ... TODO
+        ("SubDistribuidor", 50, _g_const("N"), None),
+        # ... TODO
+        ("NIF_Distribuidor", 20, _g_field("vat"),
+         lambda r, v: (v or "").replace("ES", "", 1)),
+        # ... TODO
+    ],
+}
+
+
 class DammReportsWizard(models.TransientModel):
     _name = "damm_integration.reports.wizard"
     _description = "Wizard to help create reports for Damm"
@@ -77,8 +110,26 @@ class DammReportsWizard(models.TransientModel):
 
         return (customers, sale_lines)
 
+    def _format_report_items(self, items):
+        formats = _report_formats[self.report_type]
+        formatted_items = []
+        for item in items.values():
+            formatted_item = {}
+            for (title, maxlen, getter, formatter) in formats:
+                value = getter(self, item)
+                value = formatter(self, value) if formatter else str(value)
+                value = value[:maxlen]
+                formatted_item[title] = value
+            formatted_items.append(formatted_item)
+        return formatted_items
+
     def generate_report(self):
         self.ensure_one()
         (customers, sale_lines) = self._search_customers_and_sales()
+
+        if self.report_type == "customers":
+            line_data = self._format_report_items(customers)
+        else:
+             raise NotImplementedError("TODO report type")
 
         raise NotImplementedError("TODO")
