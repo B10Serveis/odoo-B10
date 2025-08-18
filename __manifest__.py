@@ -25,7 +25,7 @@ En particular, permet generar els següents informes en el format necessari per 
         "base_setup",  # res.config.settings view
         "base_vat",  # res.partner.vat
         "l10n_es_partner",  # res.partner.comercial
-        "sale",  # sale.order
+        "account",  # account.move
     ],
     "data": [
         "security/groups.xml",
