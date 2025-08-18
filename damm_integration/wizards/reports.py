@@ -84,21 +84,21 @@ class DammReportsWizard(models.TransientModel):
     def _search_customers_and_sales(self):  # ->  (customers, sale_lines)
         company = self.env.user.company_id
         damm_partner_id = company.damm_partner_id.id
-        sale_orders = self.env["sale.order"].search(
+        sales = self.env["account.move"].search(
             [
-                ("state", "=", "sale"),
-                ("date_order", ">=", self.date_start),
-                ("date_order", "<=", self.date_end),
+                ("state", "=", "posted"),
+                ("invoice_date", ">=", self.date_start),
+                ("invoice_date", "<=", self.date_end),
             ]
         )
 
         customers = {}
         sale_lines = {}
         is_product_by_damm = {}  # cache
-        for sale_order in sale_orders:
-            customer = sale_order.partner_id
-            for sale_order_line in sale_order.order_line:
-                product = sale_order_line.product_id
+        for sale in sales:
+            customer = sale.partner_id
+            for sale_line in sale.invoice_line_ids:
+                product = sale_line.product_id
                 by_damm = is_product_by_damm.get(product.id)
                 if by_damm is None:  # cache whether product by Damm
                     is_product_by_damm[product.id] = by_damm = (
@@ -106,7 +106,7 @@ class DammReportsWizard(models.TransientModel):
                     )
                 if by_damm:
                     customers[customer.id] = customer
-                    sale_lines[sale_order_line.id] = sale_order_line
+                    sale_lines[sale_line.id] = sale_line
 
         return (customers, sale_lines)
 
