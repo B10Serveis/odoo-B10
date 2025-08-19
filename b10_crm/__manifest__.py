@@ -11,7 +11,7 @@
     "maintainers": ["marcelsavegnago"],
     "website": "https://www.batista10.cat",
     "license": "AGPL-3",
-    "depends": ["crm"],
+    "depends": ["crm", "b10_settings_hub"],
     "data": [
         "views/crm_lead_secondary_salesperson_view.xml",
     ],

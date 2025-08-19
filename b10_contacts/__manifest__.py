@@ -6,7 +6,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "license": "AGPL-3",
-    "depends": ["base", "contacts"],
+    "depends": ["base", "contacts", "b10_settings_hub"],
     "data": [
         "security/ir.model.access.csv",
         "data/res.country.state.csv",

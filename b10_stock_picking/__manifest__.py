@@ -10,6 +10,7 @@
     "depends": [
         "stock",
         "b10_mail",
+        "b10_settings_hub",
     ],
     "data": [
         "report/entrega_batista.xml",

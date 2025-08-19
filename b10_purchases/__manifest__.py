@@ -13,6 +13,7 @@
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
         "b10_mail",
+        "b10_settings_hub",
     ],
     "license": "AGPL-3",
     "application": True,

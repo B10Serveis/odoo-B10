@@ -2,17 +2,14 @@
   <record id="b10_account.res_config_settings_view_form" model="ir.ui.view">
     <field name="name">res.config.settings.form.b10.account</field>
     <field name="model">res.config.settings</field>
-    <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+    <field name="inherit_id" ref="b10_settings_hub.view_res_config_settings_b10"/>
     <field name="arch" type="xml">
-      <xpath expr="//app[@name='account']/block[@name='fiscal_localization_setting_container']"
-             position="after">
-        <block title="Facturació" id="b10_invoice_group_by_origin_block">
-          <setting id="b10_invoice_group_by_origin"
-                   string="Group invoice lines by origin"
-                   help="Agrupar línies de factura per comanda d’origen">
-            <field name="invoice_lines_by_origin"/>
-          </setting>
-        </block>
+      <xpath expr="//block[@name='b10_account']" position="inside">
+        <setting id="b10_invoice_group_by_origin"
+                 string="Group invoice lines by origin"
+                 help="Agrupar línies de factura per comanda d’origen">
+          <field name="invoice_lines_by_origin"/>
+        </setting>
       </xpath>
     </field>
   </record>
