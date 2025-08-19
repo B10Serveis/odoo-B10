@@ -1,0 +1,168 @@
+<odoo>
+  <record id="view_res_config_settings_b10" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.b10</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="priority">90</field>
+    <field name="arch" type="xml">
+      <xpath expr="//form" position="inside">
+        <app string="B10" name="b10" logo="/b10_settings_hub/static/description/icon.png">
+          
+          <!-- ACCOUNT -->
+          <block title="Account" name="b10_account">
+            <setting id="b10_account_setting">
+              <div>
+                <label for="module_b10_account"/>
+                <div>
+                  <p>Adds billing enhancements: auto-assign partner bank by payment method, group invoice
+                   lines by source with clear PDF headers, improved reports/emails, and safeguards against
+                    duplicate bank accounts per partner.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_account"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- CONTACTS -->
+          <block title="Contacts" name="b10_contacts">
+            <setting id="b10_contacts_setting">
+              <div>
+                <label for="module_b10_contacts"/>
+                <div>
+                  <p> Extends contacts with a local/official state name field, restricts state creation to technical 
+                  users, and improves QWeb reports.
+                  </p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_contacts"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- CONTRACTS -->
+          <block title="Contracts" name="b10_contracts">
+            <setting id="b10_contracts_setting">
+              <div>
+                <label for="module_b10_contracts"/>
+                <div>
+                  <p>Exposes and makes editable the “Last Invoicing Date” on contracts and adds an expiration date field.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_contracts"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- CRM -->
+          <block title="CRM" name="b10_crm">
+            <setting id="b10_crm_setting">
+              <div>
+                <label for="module_b10_crm"/>
+                <div>
+                  <p>This module extends CRM to allow the definition of a secondary salesperson.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_crm"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- HELP DESK -->
+          <block title="Helpdesk" name="b10_helpdesk">
+            <setting id="b10_helpdesk_setting">
+              <div>
+                <label for="module_b10_helpdesk"/>
+                <div>
+                  <p>Adds internal notes and closing notes fields plus extra utilities on top of the OCA Helpdesk module.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_helpdesk"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- POS -->
+          <block title="Point of Sale" name="b10_pos">
+            <setting id="b10_pos_setting">
+              <div>
+                <label for="module_b10_pos"/>
+                <div>
+                  <p>Customizes POS to show stock and forecasts per internal location, adds a rich product detail panel 
+                  (taxes, pricelists, vendors, variants), and provides a date-filtered cash closing report (PDF) 
+                  restricted to POS managers.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_pos"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- PURCHASES -->
+          <block title="Purchases" name="b10_purchases">
+            <setting id="b10_purchases_setting">
+              <div>
+                <label for="module_b10_purchases"/>
+                <div>
+                  <p>Enhances the purchase flow: securely stores vendor portal credentials on partners with admin/read roles, 
+                  adds branded email templates, and provides consistent QWeb documents with company/legal data.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_purchases"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- SALES -->
+          <block title="Sales" name="b10_sales">
+            <setting id="b10_sales_setting">
+              <div>
+                <label for="module_b10_sales"/>
+                <div>
+                  <p>Extends sales with branded PDFs and emails (quotes/orders/proformas), an “expired quotes” filter, optional 
+                  product images on documents, and margin classes to keep selling prices aligned with target profitability.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_sales"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+          <!-- STOCK PICKING -->
+          <block title="Stock Picking" name="b10_stock_picking">
+            <setting id="b10_stock_picking_setting">
+              <div>
+                <label for="module_b10_stock_picking"/>
+                <div>
+                  <p>Custom delivery slip (PDF) with corporate header, partner and product lines, scheduled date in footer, 
+                  email template with attachment, and a one-click “Send by Email” action from the picking.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_stock_picking"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+
+        </app>
+      </xpath>
+    </field>
+  </record>
+</odoo>

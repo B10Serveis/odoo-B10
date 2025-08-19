@@ -1,0 +1,195 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b10_settings_hub
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-19 07:08+0000\n"
+"PO-Revision-Date: 2025-08-19 07:08+0000\n"
+"Last-Translator: Pol Comas <pol@batista10.cat>\n"
+"Language-Team: \n"
+"Language: ca_ES \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "<span>Enable/Disable features</span>"
+msgstr "<span>Activar/Desactivar funcionalitats</span>"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Account"
+msgstr "Comptabilitat"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Adds billing enhancements: auto-assign partner bank by payment method, group invoice\n"
+"                   lines by source with clear PDF headers, improved reports/emails, and safeguards against\n"
+"                    duplicate bank accounts per partner."
+msgstr ""
+"Afegeix millores de facturació: assignació automàtica del banc del client segons el mètode de pagament, agrupació de línies de factura per origen amb capçaleres clares en PDF, informes i correus millorats, i protecció contra comptes bancaris duplicats per client."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Adds internal notes and closing notes fields plus extra utilities on top of "
+"the OCA Helpdesk module."
+msgstr ""
+"Afegeix camps de notes internes i de tancament, així com utilitats extres sobre el mòdul OCA Helpdesk."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "B10"
+msgstr "B10"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "CRM"
+msgstr "CRM"
+
+#. module: b10_settings_hub
+#: model:ir.model,name:b10_settings_hub.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paràmetres de configuració"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Contacts"
+msgstr "Contactes"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Contracts"
+msgstr "Contractes"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Custom delivery slip (PDF) with corporate header, partner and product lines, scheduled date in footer, \n"
+"                  email template with attachment, and a one-click “Send by Email” action from the picking."
+msgstr ""
+"Albarà personalitzat (PDF) amb capçalera corporativa, línies de client i producte, data prevista al peu, plantilla de correu amb adjunt i acció d’«Enviar per correu» amb un sol clic des de l’albarà."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Customizes POS to show stock and forecasts per internal location, adds a rich product detail panel \n"
+"                  (taxes, pricelists, vendors, variants), and provides a date-filtered cash closing report (PDF) \n"
+"                  restricted to POS managers."
+msgstr ""
+"Personalitza el TPV per mostrar estoc i previsions per ubicació interna, afegeix un panell detallat de producte (impostos, tarifes, proveïdors, variants) i ofereix un informe de tancament de caixa filtrat per data (PDF), restringit als gestors de TPV."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Enhances the purchase flow: securely stores vendor portal credentials on partners with admin/read roles, \n"
+"                  adds branded email templates, and provides consistent QWeb documents with company/legal data."
+msgstr ""
+"Millora el flux de compres: desa de manera segura les credencials del portal de proveïdors als contactes amb rols d’admin/lectura, afegeix plantilles de correu corporatives i genera documents QWeb coherents amb les dades legals de l’empresa."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Exposes and makes editable the “Last Invoicing Date” on contracts and adds "
+"an expiration date field."
+msgstr ""
+"Mostra i permet editar la «Data de la darrera facturació» als contractes i afegeix un camp de data de caducitat."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Extends contacts with a local/official state name field, restricts state creation to technical \n"
+"                  users, and improves QWeb reports."
+msgstr ""
+"Amplia els contactes amb un camp de nom d’estat local/oficial, restringeix la creació d’estats als usuaris tècnics i millora els informes QWeb."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"Extends sales with branded PDFs and emails (quotes/orders/proformas), an “expired quotes” filter, optional \n"
+"                  product images on documents, and margin classes to keep selling prices aligned with target profitability."
+msgstr ""
+"Amplia vendes amb PDFs i correus corporatius (pressupostos/comandes/proformes), un filtre de «pressupostos vençuts», imatges de producte opcionals als documents i classes de marge per mantenir els preus de venda alineats amb la rendibilitat objectiu."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Helpdesk"
+msgstr "Helpdesk"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Point of Sale"
+msgstr "Punt de Venda"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Purchases"
+msgstr "Compres"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Sales"
+msgstr "Vendes"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Stock Picking"
+msgstr "Albarans"
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
+"This module extends CRM to allow the definition of a secondary salesperson."
+msgstr ""
+"Aquest mòdul amplia el CRM per permetre definir un venedor secundari."
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_account
+msgid "b10_account"
+msgstr "b10_account"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_contacts
+msgid "b10_contacts"
+msgstr "b10_contacts"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_contracts
+msgid "b10_contracts"
+msgstr "b10_contracts"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_crm
+msgid "b10_crm"
+msgstr "b10_crm"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_helpdesk
+msgid "b10_helpdesk"
+msgstr "b10_helpdesk"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_pos
+msgid "b10_pos"
+msgstr "b10_pos"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_purchases
+msgid "b10_purchases"
+msgstr "b10_purchases"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_sales
+msgid "b10_sales"
+msgstr "b10_sales"
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_stock_picking
+msgid "b10_stock_picking"
+msgstr "b10_stock_picking"
