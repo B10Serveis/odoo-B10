@@ -20,7 +20,8 @@ def _f_str_or_empty(rep, v):
     return str(v) if v is not False else ""
 
 # Report format for each report type.
-# Each value is a list of `(title, maxlen, getter, formatter)` tuples.
+# Each value is a list of tuples
+# `(title, maxlen, getter(report, item), formatter(report, value))`.
 _report_formats = {
     "customers": [
         ("Distribuidor", 10, _g_damm_code, _f_str_or_empty),
