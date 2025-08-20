@@ -9,7 +9,12 @@ def _g_damm_code(rep, item):
     return rep.env.user.company_id.damm_dealer_code
 
 def _g_field(f):
-    return lambda rep, item: getattr(item, f)
+    def _g_field_getter(rep, item):
+        value = item
+        for field in f.split("."):
+            value = getattr(value, field)
+        return value
+    return _g_field_getter
 
 def _g_const(v):
     return lambda rep, item: v
