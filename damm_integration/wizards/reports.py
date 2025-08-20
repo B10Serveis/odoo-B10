@@ -156,7 +156,7 @@ class DammReportsWizard(models.TransientModel):
             raise exceptions.UserError("Please configure which partner is the Damm company")
         return super(DammReportsWizard, self).create(values)
 
-    def _search_customers_and_sales(self):  # ->  (customers, sale_lines)
+    def _search_report_items(self):  # -> {"customers": ..., "sales": ...}
         company = self.env.user.company_id
         damm_partner_id = company.damm_partner_id.id
         sales = self.env["account.move"].search(
@@ -183,7 +183,7 @@ class DammReportsWizard(models.TransientModel):
                     customers[customer.id] = customer
                     sale_lines[sale_line.id] = sale_line
 
-        return (customers, sale_lines)
+        return dict(customers=customers, sales=sale_lines)
 
     def _format_report_items(self, items):
         formats = _report_formats[self.report_type]
@@ -200,13 +200,11 @@ class DammReportsWizard(models.TransientModel):
 
     def generate_report(self):
         self.ensure_one()
-        (customers, sale_lines) = self._search_customers_and_sales()
+        try:
+            report_items = self._search_report_items()[self.report_type]
+        except KeyError as ke:
+            raise NotImplementedError("TODO report type: %s" % ke)
 
-        if self.report_type == "customers":
-            line_data = self._format_report_items(customers)
-        elif self.report_type == "sales":
-            line_data = self._format_report_items(sale_lines)
-        else:
-             raise NotImplementedError("TODO report type")
 
+        line_data = self._format_report_items(report_items)
         raise NotImplementedError("TODO")
