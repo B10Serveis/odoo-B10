@@ -21,6 +21,11 @@ def _g_const(v):
 
 _g_empty = _g_const("")
 
+def _g_if_gift(gift_val, nongift_val=""):
+    return lambda r, sl: (
+        gift_val if sl.discount == 100 or _v_price(sl) == 0
+        else nongift_val)
+
 def _f_str_or_empty(rep, v):
     return str(v) if v is not False else ""
 
@@ -96,19 +101,10 @@ _report_formats = {
         ("Nº descuento", 20,
          lambda r, sl: "" if sl.discount in [0, 100] else "DTO VALOR", None),
         ("Nº descuento en producto", 20, _g_empty, None),
-        ("Tipo obsequio ", 20,
-         lambda r, sl: (
-             "OBSEQUIO" if sl.discount == 100 or _v_price(sl) == 0
-             else ""), None),
-        ("Motivo Obsequio", 10,
-         lambda r, sl: (
-             "ZH08" if sl.discount == 100 or _v_price(sl) == 0
-             else ""), None),
+        ("Tipo obsequio ", 20, _g_if_gift("OBSEQUIO"), None),
+        ("Motivo Obsequio", 10, _g_if_gift("ZH08"), None),
         ("Fecha aplicación cond. precio", 8, _g_field("date"), _f_date),
-        ("Sin cargo", 2,
-         lambda r, sl: (
-             "OB" if sl.discount == 100 or _v_price(sl) == 0
-             else "NO"), None),
+        ("Sin cargo", 2, _g_if_gift("OB", "NO"), None),
         ("Prev. Habitual", 10, _g_field("partner_id.user_id.id"), _f_str_or_empty),
         ("Prev. Documento", 10, _g_field("move_id.user_id.id"), _f_str_or_empty),
         ("SubDistribuidor", 10, _g_empty, None),
