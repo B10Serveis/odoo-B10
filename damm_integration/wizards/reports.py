@@ -24,6 +24,20 @@ _g_empty = _g_const("")
 def _f_str_or_empty(rep, v):
     return str(v) if v is not False else ""
 
+def _f_date(rep, v):
+    return str(v or "").replace("-", "")
+
+# Other helpers.
+
+def _v_price(sale_line):  # TODO: cache
+    punto_verde_tax = 0  # TODO
+    return round(1000 * (
+        sale_line.price_unit * sale_line.quantity + punto_verde_tax))
+
+def _v_discount(sale_line):  # TODO: cache
+    return round(1000 * (  # no taxes
+        sale_line.price_unit * sale_line.quantity * sale_line.discount / 100))
+
 # Report format for each report type.
 # Each value is a list of tuples
 # `(title, maxlen, getter(report, item), formatter(report, value))`.
@@ -62,6 +76,42 @@ _report_formats = {
         ("DomicilioRestoTit", 50, _g_empty, None),
         ("Cod_Postal_Tit", 5, _g_field("zip"), _f_str_or_empty),
         ("PoblaciónTit", 50, _g_field("city"), _f_str_or_empty),
+    ],
+
+    "sales": [
+        ("Distribuidor", 10, _g_damm_code, _f_str_or_empty),
+        ("Nº Cliente", 20, _g_field("partner_id.id"), _f_str_or_empty),
+        ("Nº Producto", 20, _g_field("product_id.id"), _f_str_or_empty),
+        ("Nº Producto Damm", 20, _g_field("product_id.default_code"), _f_str_or_empty),
+        ("Tipo documento venta", 2, _g_const("EN"), None),
+        ("Servicio a terceros", 1, _g_const("N"), None),
+        ("Nº Pedido Detallista", 20, _g_field("move_id.invoice_origin"), _f_str_or_empty),
+        ("Nº Documento", 20, _g_field("move_name"), _f_str_or_empty),
+        ("Nº Línea doc", 10, _g_field("sequence"), None),
+        ("Fecha documento", 8, _g_field("date"), _f_date),
+        ("Cantidad", 15, lambda r, sl: round(sl.quantity * 100_000), None),
+        ("Importe albarán", 12,
+         lambda r, sl: _v_discount(sl) if sl.discount == 100 else _v_price(sl), None),
+        ("Importe Dto", 12, lambda r, sl: _v_discount(sl), None),
+        ("Nº descuento", 20,
+         lambda r, sl: "" if sl.discount in [0, 100] else "DTO VALOR", None),
+        ("Nº descuento en producto", 20, _g_empty, None),
+        ("Tipo obsequio ", 20,
+         lambda r, sl: (
+             "OBSEQUIO" if sl.discount == 100 or _v_price(sl) == 0
+             else ""), None),
+        ("Motivo Obsequio", 10,
+         lambda r, sl: (
+             "ZH08" if sl.discount == 100 or _v_price(sl) == 0
+             else ""), None),
+        ("Fecha aplicación cond. precio", 8, _g_field("date"), _f_date),
+        ("Sin cargo", 2,
+         lambda r, sl: (
+             "OB" if sl.discount == 100 or _v_price(sl) == 0
+             else "NO"), None),
+        ("Prev. Habitual", 10, _g_field("partner_id.user_id.id"), _f_str_or_empty),
+        ("Prev. Documento", 10, _g_field("move_id.user_id.id"), _f_str_or_empty),
+        ("SubDistribuidor", 10, _g_empty, None),
     ],
 }
 
@@ -158,6 +208,8 @@ class DammReportsWizard(models.TransientModel):
 
         if self.report_type == "customers":
             line_data = self._format_report_items(customers)
+        elif self.report_type == "sales":
+            line_data = self._format_report_items(sale_lines)
         else:
              raise NotImplementedError("TODO report type")
 
