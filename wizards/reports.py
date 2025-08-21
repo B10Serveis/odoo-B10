@@ -156,7 +156,7 @@ class DammReportsWizard(models.TransientModel):
             raise exceptions.UserError("Please configure which partner is the Damm company")
         return super(DammReportsWizard, self).create(values)
 
-    def _search_report_items(self):  # -> {"customers": ..., "sales": ...}
+    def _search_report_items(self):  # -> {"customers": ..., "sales": ..., "conditions": ...}
         company = self.env.user.company_id
         damm_partner_id = company.damm_partner_id.id
         sales = self.env["account.move"].search(
@@ -183,7 +183,19 @@ class DammReportsWizard(models.TransientModel):
                     customers[customer.id] = customer
                     sale_lines[sale_line.id] = sale_line
 
-        return dict(customers=customers, sales=sale_lines)
+        conditions = {}
+        # Conditions for non-buyers are irrelevant, avoid the cruft.
+        plist_ids = set(c.property_product_pricelist.id
+                        for c in customers.values())
+        plist_items = self.env["product.pricelist.item"].search([
+            ("pricelist_id", "in", list(plist_ids)),
+        ])
+        for plist_item in plist_items:
+            product = plist_item.product_tmpl_id
+            if damm_partner_id in product.mapped("seller_ids.name.id"):  # TODO: cache
+                conditions[plist_item.id] = plist_item
+
+        return dict(customers=customers, sales=sale_lines, conditions=conditions)
 
     def _format_report_items(self, items):
         formats = _report_formats[self.report_type]
