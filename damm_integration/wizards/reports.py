@@ -193,20 +193,18 @@ class DammReportsWizard(models.TransientModel):
             raise exceptions.UserError("Please configure which partner is the Damm company")
         return super(DammReportsWizard, self).create(values)
 
-    def _search_report_items(self):  # -> {"customers": ..., "sales": ..., "conditions": ...}
+    def _search_report_items(self):
         company = self.env.user.company_id
         damm_partner_id = company.damm_partner_id.id
-        sales = self.env["account.move"].search(
-            [
-                ("state", "=", "posted"),
-                ("invoice_date", ">=", self.date_start),
-                ("invoice_date", "<=", self.date_end),
-            ]
-        )
 
         customers = {}
         sale_lines = {}
         is_product_by_damm = {}  # cache
+        sales = self.env["account.move"].search([
+            ("state", "=", "posted"),
+            ("invoice_date", ">=", self.date_start),
+            ("invoice_date", "<=", self.date_end),
+        ])
         for sale in sales:
             customer = sale.partner_id
             for sale_line in sale.invoice_line_ids:
@@ -219,6 +217,12 @@ class DammReportsWizard(models.TransientModel):
                 if by_damm:
                     customers[customer.id] = customer
                     sale_lines[sale_line.id] = sale_line
+
+        if self.report_type == "customers":
+            return customers
+        if self.report_type == "sales":
+            return sale_lines
+        del sales, sale_lines
 
         conditions = {}
         # Conditions for non-buyers are irrelevant,
@@ -240,7 +244,8 @@ class DammReportsWizard(models.TransientModel):
                     conditions[plist_item.id, plcust.id] = (
                         plist_item.with_context(_partner_id=plcust.id))
 
-        return dict(customers=customers, sales=sale_lines, conditions=conditions)
+        assert(self.report_type == "conditions")
+        return conditions
 
     def _format_report_items(self, items):
         formats = _report_formats[self.report_type]
@@ -257,11 +262,6 @@ class DammReportsWizard(models.TransientModel):
 
     def generate_report(self):
         self.ensure_one()
-        try:
-            report_items = self._search_report_items()[self.report_type]
-        except KeyError as ke:
-            raise NotImplementedError("TODO report type: %s" % ke)
-
-
+        report_items = self._search_report_items()
         line_data = self._format_report_items(report_items)
         raise NotImplementedError("TODO")
