@@ -1,6 +1,8 @@
 # Copyright 2024, 2025 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+import itertools
+
 from odoo import api, exceptions, models, fields
 
 
@@ -184,9 +186,13 @@ class DammReportsWizard(models.TransientModel):
                     sale_lines[sale_line.id] = sale_line
 
         conditions = {}
-        # Conditions for non-buyers are irrelevant, avoid the cruft.
-        plist_ids = set(c.property_product_pricelist.id
-                        for c in customers.values())
+        # Conditions for non-buyers are irrelevant,
+        # filter by customers that did buy (and group them by pricelist).
+        plist_ids = dict((plist_id, list(custs))
+                         for plist_id, custs in itertools.groupby(
+                             customers.values(),
+                             lambda c: c.property_product_pricelist.id)
+                         if plist_id)
         plist_items = self.env["product.pricelist.item"].search([
             ("pricelist_id", "in", list(plist_ids)),
         ])
@@ -195,12 +201,9 @@ class DammReportsWizard(models.TransientModel):
             if damm_partner_id in product.mapped("seller_ids.name.id"):  # TODO: cache
                 # The condition must appear for each customer that it applies to,
                 # so decorate it with the customer id to tell them apart.
-                plist_customer_ids = [
-                    c.id for c in customers.values()
-                    if c.property_product_pricelist == plist_item.pricelist_id]
-                for plcust_id in plist_customer_ids:
-                    conditions[plist_item.id, plcust_id] = (
-                        plist_item.with_context(_partner_id=plcust_id))
+                for plcust in plist_ids[plist_item.pricelist_id.id]:
+                    conditions[plist_item.id, plcust.id] = (
+                        plist_item.with_context(_partner_id=plcust.id))
 
         return dict(customers=customers, sales=sale_lines, conditions=conditions)
 
