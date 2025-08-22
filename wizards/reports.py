@@ -193,7 +193,14 @@ class DammReportsWizard(models.TransientModel):
         for plist_item in plist_items:
             product = plist_item.product_tmpl_id
             if damm_partner_id in product.mapped("seller_ids.name.id"):  # TODO: cache
-                conditions[plist_item.id] = plist_item
+                # The condition must appear for each customer that it applies to,
+                # so decorate it with the customer id to tell them apart.
+                plist_customer_ids = [
+                    c.id for c in customers.values()
+                    if c.property_product_pricelist == plist_item.pricelist_id]
+                for plcust_id in plist_customer_ids:
+                    conditions[plist_item.id, plcust_id] = (
+                        plist_item.with_context(_partner_id=plcust_id))
 
         return dict(customers=customers, sales=sale_lines, conditions=conditions)
 
