@@ -45,7 +45,7 @@ def _v_discount(sale_line):  # TODO: cache
     return round(1000 * (  # no taxes
         sale_line.price_unit * sale_line.quantity * sale_line.discount / 100))
 
-# Report format for each report type.
+# Report format for the individual fields of each report type.
 # Each value is a list of tuples
 # `(title, maxlen, getter(report, item), formatter(report, value))`.
 _report_formats = {
@@ -147,6 +147,9 @@ _report_formats = {
         ("Observaciones", 255, _g_empty, None),
     ],
 }
+
+# Report types which used a format with fixed field widths.
+_report_formats_fixed = {"sales"}
 
 
 class DammReportsWizard(models.TransientModel):
@@ -250,12 +253,20 @@ class DammReportsWizard(models.TransientModel):
     def _format_report_items(self, items):
         formats = _report_formats[self.report_type]
         formatted_items = []
+        fixed_width = self.report_type in _report_formats_fixed
         for item in items.values():
             formatted_item = {}
             for (title, maxlen, getter, formatter) in formats:
                 value = getter(self, item)
-                value = formatter(self, value) if formatter else str(value)
-                value = value[:maxlen]
+
+                ffmt = "%s"  # report's generic field format
+                if fixed_width:
+                    ffmt = "%%%ds" % (maxlen if isinstance(value, (int, float))
+                                      else -maxlen)
+                if formatter:
+                    value = formatter(self, value)
+                value = (ffmt % value)[:maxlen]
+
                 formatted_item[title] = value
             formatted_items.append(formatted_item)
         return formatted_items
