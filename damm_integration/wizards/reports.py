@@ -32,7 +32,7 @@ def _f_str_or_empty(rep, v):
     return str(v) if v is not False else ""
 
 def _f_date(rep, v):
-    return str(v or "").replace("-", "")
+    return v.strftime("%Y%m%d") if v else ""
 
 # Other helpers.
 
