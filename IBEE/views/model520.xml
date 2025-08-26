@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report 
+            id="model520_report"
+            model="report.model520_report"
+            string="Model 520 IBEE"
+            report_type="qweb-pdf"
+            name="IBEE.model520_report_template"
+            file="IBEE.model520_report"
+            />
+    </data>
+</odoo>

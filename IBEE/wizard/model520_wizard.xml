@@ -1,0 +1,39 @@
+<odoo>
+  <record id="model520_report_wizard" model="ir.ui.view">
+    <field name="name">model520.wizard.form</field>
+    <field name="model">model520.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Model 520 IBEE">
+        <group>
+          <group><field name="date_start"/></group>
+          <group><field name="date_end"/></group>
+        </group>
+        <footer>
+          <button name="get_report" string="Get Report" type="object" class="oe_highlight"/>
+          <button string="Cancel" special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_model520_report_wizard" model="ir.actions.act_window">
+    <field name="name">Model 520 IBEE</field>
+    <field name="res_model">model520.wizard</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+    <field name="view_id" ref="model520_report_wizard"/>
+  </record>
+
+  <menuitem id="IBEE_menu"
+            name="IBEE"
+            parent="account.menu_finance_reports"
+            sequence="90"
+            groups="account.group_account_user,account.group_account_manager"/>
+
+  <menuitem id="menu_model520_report_wizard"
+            name="Model 520"
+            parent="IBEE_menu"
+            action="action_model520_report_wizard"
+            sequence="10"
+            groups="account.group_account_user,account.group_account_manager"/>
+</odoo>

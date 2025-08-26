@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+  <!-- Grup d’impostos IBEE -->
+  <record id="tax_group_ibee" model="account.tax.group">
+    <field name="name">IBEE</field>
+    <field name="sequence">1</field>
+  </record>
+
+  <!-- IBEE 0.10 €/L -->
+  <record id="tax_ibee_010" model="account.tax">
+    <field name="name">IBEE 0.10 €/L</field>
+    <field name="type_tax_use">sale</field>
+    <field name="amount_type">code</field>
+    <field name="price_include">0</field>
+    <field name="include_base_amount">1</field>
+    <field name="tax_group_id" ref="tax_group_ibee"/>
+    <field name="sequence">-1</field>
+    <field name="python_compute"><![CDATA[
+litres = 0.0
+if product:
+    litres = product.litres_IBEE or 0.0
+    if not litres and product.product_tmpl_id:
+        litres = product.product_tmpl_id.litres_IBEE or 0.0
+result = quantity * litres * 0.10
+]]></field>
+
+    <!-- EXACTAMENT 1 base + 1 impost per factura i abonament -->
+    <field name="invoice_repartition_line_ids" eval="[
+      (5,0,0),
+      (0,0,{'repartition_type':'base','factor_percent':100.0}),
+      (0,0,{'repartition_type':'tax','factor_percent':100.0})
+    ]"/>
+    <field name="refund_repartition_line_ids" eval="[
+      (5,0,0),
+      (0,0,{'repartition_type':'base','factor_percent':100.0}),
+      (0,0,{'repartition_type':'tax','factor_percent':100.0})
+    ]"/>
+  </record>
+
+  <!-- IBEE 0.15 €/L -->
+  <record id="tax_ibee_015" model="account.tax">
+    <field name="name">IBEE 0.15 €/L</field>
+    <field name="type_tax_use">sale</field>
+    <field name="amount_type">code</field>
+    <field name="price_include">0</field>
+    <field name="include_base_amount">1</field>
+    <field name="tax_group_id" ref="tax_group_ibee"/>
+    <field name="sequence">-1</field>
+    <field name="python_compute"><![CDATA[
+litres = 0.0
+if product:
+    litres = product.litres_IBEE or 0.0
+    if not litres and product.product_tmpl_id:
+        litres = product.product_tmpl_id.litres_IBEE or 0.0
+result = quantity * litres * 0.15
+]]></field>
+
+    <field name="invoice_repartition_line_ids" eval="[
+      (5,0,0),
+      (0,0,{'repartition_type':'base','factor_percent':100.0}),
+      (0,0,{'repartition_type':'tax','factor_percent':100.0})
+    ]"/>
+    <field name="refund_repartition_line_ids" eval="[
+      (5,0,0),
+      (0,0,{'repartition_type':'base','factor_percent':100.0}),
+      (0,0,{'repartition_type':'tax','factor_percent':100.0})
+    ]"/>
+  </record>
+</odoo>

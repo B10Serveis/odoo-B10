@@ -1,0 +1,291 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* IBEE
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-26 11:42+0000\n"
+"PO-Revision-Date: 2025-08-26 11:42+0000\n"
+"Last-Translator: Pol Comas <pol@batista10.cat>\n"
+"Language-Team: \n"
+"Language: ca_ES \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: IBEE
+#: model:ir.model.fields.selection,name:IBEE.selection__product_template__IBEE__0_1
+msgid "0.10"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model.fields.selection,name:IBEE.selection__product_template__IBEE__0_15
+msgid "0.15"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "8 gr de sucre"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Adreça: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Base Imposable_ _ _ _ _ _ _ _ _ _ _1</strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Codi Postal: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Cognoms i Nom/Raó Social: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Exercici: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Municipi: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>NIF: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>País: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Periode: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Provincia: </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Quota Total</strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Quota tributària_ _ _ _ _  _ _ _ _ _ _3</strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>Tipus de gravamen_ _ _ _ _  _ _ _ _2</strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>a  </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>a  </strong> 0,15 €/l"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>b  </strong>"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "<strong>b  </strong> 0,10 €/l"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "Autoliquidació"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "CPR:9055050"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_wizard
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__display_name
+msgid "Display Name"
+msgstr "Mostra el nom"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__date_end
+msgid "End Date"
+msgstr "Data de finalització"
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "Entre 5 i 8 gr de sucre"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "Espai reservat per a l'Administració"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model.fields.selection,name:IBEE.selection__product_template__IBEE__0
+msgid "Exempt"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_wizard
+msgid "Get Report"
+msgstr "Obtenir l'informe"
+
+#. module: IBEE
+#: model:account.tax.group,name:IBEE.tax_group_ibee
+#: model:ir.model.fields,field_description:IBEE.field_product_product__IBEE
+#: model:ir.model.fields,field_description:IBEE.field_product_template__IBEE
+#: model:ir.ui.menu,name:IBEE.IBEE_menu
+#: model_terms:ir.ui.view,arch_db:IBEE.invoice_IBEE_view_form
+#: model_terms:ir.ui.view,arch_db:IBEE.report_comanda_inherit_ibee
+#: model_terms:ir.ui.view,arch_db:IBEE.report_factura_inherit_ibee
+#: model_terms:ir.ui.view,arch_db:IBEE.report_pressupost_inherit_ibee
+#: model_terms:ir.ui.view,arch_db:IBEE.report_proforma_inherit_ibee
+#: model_terms:ir.ui.view,arch_db:IBEE.sale_IBEE_view_form
+msgid "IBEE"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_account_move_line__ibee_amount
+#: model:ir.model.fields,field_description:IBEE.field_sale_order_line__ibee_amount
+msgid "IBEE línia"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "Impost sobre begudes ensucrades envasades"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_report_model520_report
+msgid "Informe Model 520 IBEE"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_account_invoice_report
+msgid "Invoices Statistics"
+msgstr "Estadístiques de factures"
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_account_move_line
+msgid "Journal Item"
+msgstr "Anotació comptable"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificació el"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualització el"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_product_product__litres_IBEE
+#: model:ir.model.fields,field_description:IBEE.field_product_template__litres_IBEE
+msgid "Litres x Unitat"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.ui.menu,name:IBEE.menu_model520_report_wizard
+msgid "Model 520"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.actions.act_window,name:IBEE.action_model520_report_wizard
+#: model:ir.actions.report,name:IBEE.model520_report
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_wizard
+msgid "Model 520 IBEE"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_product_product
+msgid "Product"
+msgstr "Producte"
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producte"
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línia comanda de venda"
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_model520_wizard__date_start
+msgid "Start Date"
+msgstr "Data d'inici"
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "Subjecte passiu"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model.fields,field_description:IBEE.field_account_invoice_report__total_ibee
+#: model_terms:ir.ui.view,arch_db:IBEE.account_invoice_report_total_ibee
+msgid "Total IBEE"
+msgstr ""
+
+#. module: IBEE
+#: model:ir.model,name:IBEE.model_model520_wizard
+msgid "Wizard Model 520 IBEE"
+msgstr ""
+
+#. module: IBEE
+#: model_terms:ir.ui.view,arch_db:IBEE.model520_report_template
+msgid "litres"
+msgstr ""

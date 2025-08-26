@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_proforma_inherit_ibee" inherit_id="Dissenys_generics.report_proforma_batista_document" priority="20">
+
+            <!-- Comprova si hi ha IBEE i suma total -->
+            <xpath expr="//div[2]/table/thead" position="before">
+                <t t-set="total_IBEE" t-value="0"/>
+                <t t-foreach="doc.order_line" t-as="l">
+                    <t t-if="l.ibee_amount">
+                        <t t-set="total_IBEE" t-value="total_IBEE + l.ibee_amount"/>
+                    </t>
+                </t>
+            </xpath>
+
+            <!-- Si hi ha IBEE mostrar columna  -->
+            <xpath expr="//div[2]/table/thead/tr/th[4]" position="after">
+                <th t-if="total_IBEE > 0" class="text-right">IBEE</th>
+            </xpath>
+
+            <!-- Si hi ha IBEE mostrar valor en linia  -->
+            <xpath expr="//div[2]/table/tbody/tr/t/td[4]" position="after">
+                <th t-if="total_IBEE > 0" class="text-right">
+                    <t t-if="l.ibee_amount">
+                        <span t-esc="l.ibee_amount" t-options='{"widget": "monetary", "display_currency": doc.currency_id}' style="font-weight: normal;"/>
+                    </t>
+                </th>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>
