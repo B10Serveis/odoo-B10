@@ -22,6 +22,7 @@
         "report/report_pressupost_batista.xml",
         "report/factura_batista.xml",
         "report/report_factura_batista.xml",
+        #"report/report_factura_batista_verifactu.xml",
         "report/comanda_batista.xml",
         "report/report_comanda_batista.xml",
         "report/pressupost_st_batista.xml",
