@@ -15,6 +15,8 @@
         "sale_management",
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
+#        "l10n_es_edi_verifactu", # per al QR VeriFactu
+#        "web"  # per al QR VeriFactu
     ],
     "license": "AGPL-3",
     "application": True,
@@ -23,6 +25,8 @@
         "views/report_pressupost_batista.xml",
         "views/factura_batista.xml",
         "views/report_factura_batista.xml",
+        #"views/report_factura_batista_verifactu_principi.xml", # qr verifactu al principi
+        #"views/report_factura_batista_verifactu_final.xml",    # qr verifactu al final
         "views/comanda_batista.xml",
         "views/report_comanda_batista.xml",
         "views/pressupost_st_batista.xml",
