@@ -5,7 +5,9 @@
     "website": "https://www.batista10.cat",
     "category": "Personalization",
     "version": "18.0.1.1.0",
-    "depends": ["account", "b10_mail", "l10n_es_partner","l10n_es_partner_mercantil", "account_payment_sale", "b10_settings_hub"],
+    "depends": ["account", "b10_mail", "l10n_es_partner","l10n_es_partner_mercantil", "account_payment_sale", "b10_settings_hub",
+                #"account_edi"
+                ],
     "license": "AGPL-3",
     "application": True,
     "data": [
@@ -13,6 +15,7 @@
         "views/account_move_inherit.xml",
         "report/factura_batista.xml",
         "report/report_factura_batista.xml",
+        #"report/report_factura_batista_verifactu.xml",
         "views/email_factura_impagada.xml",
         "views/email_factura.xml",
         "data/account.payment.method.csv",
