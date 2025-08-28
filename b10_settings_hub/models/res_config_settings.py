@@ -12,4 +12,4 @@ class ResConfigSettings(models.TransientModel):
     module_b10_purchases = fields.Boolean(string="b10_purchases")
     module_b10_sales    = fields.Boolean(string="b10_sales")
     module_b10_stock_picking = fields.Boolean(string="b10_stock_picking")
-
+    module_b10_multicompany = fields.Boolean(string="b10_multicompany")

@@ -88,6 +88,14 @@ msgstr ""
 #. module: b10_settings_hub
 #: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
 msgid ""
+"Enables automatic creation of purchase orders from sales orders (SO → PO) "
+"between companies."
+msgstr ""
+"Permite la creación automática de pedidos de compra a partir de pedidos de venta (SO → PO) entre empresas."
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid ""
 "Enhances the purchase flow: securely stores vendor portal credentials on partners with admin/read roles, \n"
 "                  adds branded email templates, and provides consistent QWeb documents with company/legal data."
 msgstr ""
@@ -121,6 +129,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
 msgid "Helpdesk"
 msgstr ""
+
+#. module: b10_settings_hub
+#: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
+msgid "Multicompany"
+msgstr "Multiempresa"
 
 #. module: b10_settings_hub
 #: model_terms:ir.ui.view,arch_db:b10_settings_hub.view_res_config_settings_b10
@@ -172,6 +185,11 @@ msgstr ""
 #. module: b10_settings_hub
 #: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_helpdesk
 msgid "b10_helpdesk"
+msgstr ""
+
+#. module: b10_settings_hub
+#: model:ir.model.fields,field_description:b10_settings_hub.field_res_config_settings__module_b10_multicompany
+msgid "b10_multicompany"
 msgstr ""
 
 #. module: b10_settings_hub

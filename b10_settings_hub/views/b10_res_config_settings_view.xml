@@ -161,6 +161,22 @@
             </setting>
           </block>
 
+          <!-- MULTICOMPANY -->
+          <block title="Multicompany" name="b10_multicompany">
+            <setting id="b10_multicompany_setting">
+              <div>
+                <label for="module_b10_multicompany"/>
+                <div>
+                  <p>Enables automatic creation of purchase orders from sales orders (SO → PO) between companies.</p>
+                  <div style="display:flex; align-items:center; gap:6px;">
+                    <field name="module_b10_multicompany"/>
+                    <span>Enable/Disable features</span>
+                  </div>
+                </div>
+              </div>
+            </setting>
+          </block>
+          
         </app>
       </xpath>
     </field>
