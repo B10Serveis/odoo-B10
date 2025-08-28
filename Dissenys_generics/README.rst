@@ -146,6 +146,13 @@ Changelog
 
 * [IMP] Afegir unitat a la columna de quantitats de pressupost.
 
+17.0.1.12.0 (2025-08-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Integració QR Veri*Factu al report: primera pàgina (dreta), textos i mides segons AEAT.  
+* [ADD] Dependència a l10n_es_edi_verifactu.  
+* [IMP] Capçalera en 3 columnes: logo + dades + QR.  
+
 Bug Tracker
 ===========
 
