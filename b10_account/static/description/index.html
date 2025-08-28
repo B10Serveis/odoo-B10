@@ -17,51 +17,52 @@
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#usage" id="id4">Usage</a></li>
-<li><a class="reference internal" href="#known-issues-roadmap" id="id5">Known issues / Roadmap</a></li>
-<li><a class="reference internal" href="#changelog" id="id6">Changelog</a><ul>
-<li><a class="reference internal" href="#id1" id="id7">18.0.1.0.0 (2025-08-04)</a></li>
-<li><a class="reference internal" href="#id2" id="id8">18.0.1.1.0 (2025-08-05)</a></li>
-<li><a class="reference internal" href="#id3" id="id9">18.0.1.2.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#usage" id="id5">Usage</a></li>
+<li><a class="reference internal" href="#known-issues-roadmap" id="id6">Known issues / Roadmap</a></li>
+<li><a class="reference internal" href="#changelog" id="id7">Changelog</a><ul>
+<li><a class="reference internal" href="#id1" id="id8">18.0.1.0.0 (2025-08-04)</a></li>
+<li><a class="reference internal" href="#id2" id="id9">18.0.1.1.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#id3" id="id10">18.0.1.2.0 (2025-08-05)</a></li>
+<li><a class="reference internal" href="#id4" id="id11">18.0.1.3.0 (2025-08-28)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bug-tracker" id="id10">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="id11">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="id12">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="id13">Contributors</a></li>
-<li><a class="reference internal" href="#other-credits" id="id14">Other credits</a></li>
-<li><a class="reference internal" href="#maintainers" id="id15">Maintainers</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="id12">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="id13">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="id14">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="id15">Contributors</a></li>
+<li><a class="reference internal" href="#other-credits" id="id16">Other credits</a></li>
+<li><a class="reference internal" href="#maintainers" id="id17">Maintainers</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="usage">
-<h2><a class="toc-backref" href="#id4">Usage</a></h2>
+<h2><a class="toc-backref" href="#id5">Usage</a></h2>
 <p>Per utilitzar aquest mòdul:</p>
 <ol class="arabic simple">
-<li>Ves a <strong>Settings → General Settings → B10</strong> i, en el bloc Facturació, activa <strong>Group invoice lines by origin</strong>.</li>
+<li>Ves a <strong>Settings → B10</strong> i, en el bloc Facturació, activa <strong>Group invoice lines by origin</strong>.</li>
 <li>Crea o obre una factura de venda; comprova que apareix el checkbox <strong>Group Invoice Lines by Origin</strong> sota el camp <strong>Customer</strong>.</li>
 <li>Desa la factura: si està marcat el checkbox, en generar el PDF la taula de línies sortirà agrupada per cada “Sale order X”.</li>
 <li>Des de la vista de factura, fes <strong>Print → Factura Estandard</strong> per obtenir el PDF amb tots els elements (lots, IBAN, dades mercantils).</li>
 </ol>
 </div>
 <div class="section" id="known-issues-roadmap">
-<h2><a class="toc-backref" href="#id5">Known issues / Roadmap</a></h2>
+<h2><a class="toc-backref" href="#id6">Known issues / Roadmap</a></h2>
 <ul class="simple">
 <li>Cap incidència coneguda.</li>
 </ul>
 </div>
 <div class="section" id="changelog">
-<h2><a class="toc-backref" href="#id6">Changelog</a></h2>
+<h2><a class="toc-backref" href="#id7">Changelog</a></h2>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id7">18.0.1.0.0 (2025-08-04)</a></h3>
+<h3><a class="toc-backref" href="#id8">18.0.1.0.0 (2025-08-04)</a></h3>
 <ul class="simple">
 <li>[MIG] Migració a V.18.</li>
 <li>[ADD] Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.</li>
 </ul>
 </div>
 <div class="section" id="id2">
-<h3><a class="toc-backref" href="#id8">18.0.1.1.0 (2025-08-05)</a></h3>
+<h3><a class="toc-backref" href="#id9">18.0.1.1.0 (2025-08-05)</a></h3>
 <ul class="simple">
 <li>[ADD] _sql_constraints_ a res.partner.bank per permetre usar un mateix Account Number a diversos partners però impedint duplicates dins del mateix partner.</li>
 <li>[ADD] Informe <strong>Factura Estandard</strong> amb:
@@ -72,40 +73,48 @@
 </ul>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id9">18.0.1.2.0 (2025-08-05)</a></h3>
+<h3><a class="toc-backref" href="#id10">18.0.1.2.0 (2025-08-05)</a></h3>
 <ul class="simple">
 <li>[ADD] Plantilles de correu per a factures:
 - Standard – Invoice Email Template (<cite>factura_email_template</cite>)
 - Standard – Pending Payment Email Template (<cite>pending_payment_email_template</cite>)</li>
 </ul>
 </div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id11">18.0.1.3.0 (2025-08-28)</a></h3>
+<ul class="simple">
+<li>[ADD] Integració QR Veri*Factu al report: primera pàgina (dreta), textos i mides segons AEAT.</li>
+<li>[ADD] Dependència a l10n_es_edi_verifactu.</li>
+<li>[IMP] Capçalera en 3 columnes: logo + dades (a totes les pàgines) + QR (només primera).</li>
+</ul>
+</div>
 </div>
 <div class="section" id="bug-tracker">
-<h2><a class="toc-backref" href="#id10">Bug Tracker</a></h2>
+<h2><a class="toc-backref" href="#id12">Bug Tracker</a></h2>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues">GitHub Issues</a>.
 Si us plau verifica si l’issue existeix abans de crear-ne un de nou.</p>
 </div>
 <div class="section" id="credits">
-<h2><a class="toc-backref" href="#id11">Credits</a></h2>
+<h2><a class="toc-backref" href="#id13">Credits</a></h2>
 <div class="section" id="authors">
-<h3><a class="toc-backref" href="#id12">Authors</a></h3>
+<h3><a class="toc-backref" href="#id14">Authors</a></h3>
 <ul class="simple">
 <li>Batista10</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h3><a class="toc-backref" href="#id13">Contributors</a></h3>
+<h3><a class="toc-backref" href="#id15">Contributors</a></h3>
 <ul class="simple">
 <li>Joan Llimiñana i Sabaté &lt;<a class="reference external" href="mailto:joan&#64;batista10.cat">joan&#64;batista10.cat</a>&gt;</li>
 <li>Pol Comas i Romero &lt;<a class="reference external" href="mailto:pol&#64;batista10.cat">pol&#64;batista10.cat</a>&gt;</li>
 </ul>
 </div>
 <div class="section" id="other-credits">
-<h3><a class="toc-backref" href="#id14">Other credits</a></h3>
+<h3><a class="toc-backref" href="#id16">Other credits</a></h3>
 <p>El desenvolupament ha estat finançat per Batista10.</p>
 </div>
 <div class="section" id="maintainers">
-<h3><a class="toc-backref" href="#id15">Maintainers</a></h3>
+<h3><a class="toc-backref" href="#id17">Maintainers</a></h3>
 <p>Aquest mòdul és mantingut per Batista10.</p>
 <a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
 <p>Part of <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_account">B10Serveis/odoo-B10</a>.</p>

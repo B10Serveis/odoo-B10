@@ -39,20 +39,21 @@
                     </t>
                     <!-- Capçalera -->
                     <div class="row"
-                        id="b10_header">
+                        id="b10_header"
+                        style="align-items:flex-start;">
 
                         <!-- Logo esquerra -->
-                        <div class="col-6"
+                        <div class="col-5"
                             id="b10_header_left">
                             <img t-if="doc.company_id.logo"
                                 t-att-src="image_data_uri(doc.company_id.logo)"
                                 style="max-width: 200px; max-height: 150px;"/>
                         </div>
 
-                        <!-- Dades Empresa dreta -->
-                        <div class="col-6"
-                            id="b10_header_right"
-                            style="padding:15px; padding-left:30px;">
+                        <!-- Dades Empresa centre -->
+                        <div class="col-4"
+                            id="b10_header_center"
+                            style="padding:12px 10px 0 10px;">
                             <p style="margin-bottom: 0; color:gray; font-size:0.75em;">
                                 <strong>
                                     <span t-if="company.name"
@@ -86,6 +87,19 @@
                                     t-field="company.website"/>
                             </p>
                         </div>
+
+                        <!-- QR dreta -->
+                        <div class="col-3" id="b10_header_qr" style="padding:0; text-align:right;">
+                            <div class="first-page">
+                                <t t-if="o.l10n_es_edi_verifactu_required and o.l10n_es_edi_verifactu_qr_code">
+                                    <div style="display:inline-block; text-align:center;">
+                                        <strong class="text-center">QR tributario:</strong>
+                                        <img style="display:block; width:35mm; height:35mm;" t-att-src="o.l10n_es_edi_verifactu_qr_code"/>
+                                        <strong class="text-center">VERI*FACTU</strong>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,6 +107,7 @@
 
             <!-- Page -->
             <div class="article">
+                <br/> <br/>
                 <div class="container"
                     style="margin-bottom:1em; padding-top:40px;">
                     <!-- Client i Document -->

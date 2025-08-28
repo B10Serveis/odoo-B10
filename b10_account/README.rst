@@ -71,6 +71,12 @@ Changelog
   - Standard – Invoice Email Template (`factura_email_template`)  
   - Standard – Pending Payment Email Template (`pending_payment_email_template`)
 
+18.0.1.3.0 (2025-08-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Integració QR Veri*Factu al report: primera pàgina (dreta), textos i mides segons AEAT.  
+* [ADD] Dependència a l10n_es_edi_verifactu.  
+* [IMP] Capçalera en 3 columnes: logo + dades + QR.  
+
 Bug Tracker
 ===========
 
