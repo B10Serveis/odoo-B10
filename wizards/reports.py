@@ -211,7 +211,7 @@ class DammReportsWizard(models.TransientModel):
             raise exceptions.UserError("Please configure which partner is the Damm company")
         return super(DammReportsWizard, self).create(values)
 
-    def _search_report_items(self):
+    def _search_report_items(self) -> dict[int, object]:
         company = self.env.user.company_id
         damm_partner_id = company.damm_partner_id.id
 
@@ -265,7 +265,9 @@ class DammReportsWizard(models.TransientModel):
         assert(self.report_type == "conditions")
         return conditions
 
-    def _format_report_items(self, items):
+    def _format_report_items(self, items: dict[int, object]) -> (
+            list[dict[str, str]]
+    ):
         formats = _report_formats[self.report_type]
         formatted_items = []
         fixed_width = self.report_type in _report_formats_fixed
@@ -286,7 +288,9 @@ class DammReportsWizard(models.TransientModel):
             formatted_items.append(formatted_item)
         return formatted_items
 
-    def _assemble_report(self, lines):
+    def _assemble_report(self, lines: list[dict[str, str]]) -> (
+            tuple[str, bytes]
+    ):
         report_name = _report_names[self.report_type](self)
         field_names = [fmt[0] for fmt in _report_formats[self.report_type]]
         lterm = "\r\n"
