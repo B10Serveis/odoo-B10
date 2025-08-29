@@ -4,9 +4,9 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "17.0.1.0.0",
-    "depends": ["account"],
+    "version": "17.0.1.1.0",
+    "depends": ["account", "account_payment_partner",],
     "license": "AGPL-3",
     "application": True,
-    "data": [],
+    "data": ["views/invoice_report_pivot.xml"],
 }
