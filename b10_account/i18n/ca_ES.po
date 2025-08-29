@@ -573,6 +573,12 @@ msgid "Tel:"
 msgstr "Telèfon:"
 
 #. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_account_invoice_report__price_total_with_tax
+#: model_terms:ir.ui.view,arch_db:b10_account.view_account_invoice_report_pivot_inherit
+msgid "Total Price with Taxes"
+msgstr "Total amb Impostos"
+
+#. module: b10_account
 #: model_terms:ir.ui.view,arch_db:b10_account.report_factura_batista_document
 msgid "Unit Price"
 msgstr "Preu unitari"

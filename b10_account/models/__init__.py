@@ -33,3 +33,4 @@
 from . import b10_account_move
 from . import res_partner_bank
 from . import res_config_settings
+from . import account_invoice_report

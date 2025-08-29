@@ -77,6 +77,11 @@ Changelog
 * [ADD] Dependència a l10n_es_edi_verifactu.  
 * [IMP] Capçalera en 3 columnes: logo + dades + QR.  
 
+18.0.1.4.0 (2025-08-29)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [IMP] Invoice Analysis: afegida la mesura "Total Price with Taxes" a la vista pivot.
+
+
 Bug Tracker
 ===========
 

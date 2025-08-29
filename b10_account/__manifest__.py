@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.3.0",
+    "version": "18.0.1.4.0",
     "depends": ["account", 
                 "b10_mail", 
                 "l10n_es_partner",
@@ -13,6 +13,7 @@
                 "b10_settings_hub",
                 "l10n_es_edi_verifactu",
                 "report_qweb_element_page_visibility", # Perque el QR surti només a la primera pàgina
+                "account_payment_partner",
                 ],
     "license": "AGPL-3",
     "application": True,
@@ -23,6 +24,7 @@
         "report/report_factura_batista.xml",
         "views/email_factura_impagada.xml",
         "views/email_factura.xml",
+        "views/invoice_report_pivot.xml",
         "data/account.payment.method.csv",
     ],
 }
