@@ -1,6 +1,8 @@
 # Copyright 2024, 2025 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+import csv
+import io
 import itertools
 
 from odoo import api, exceptions, models, fields
@@ -148,8 +150,21 @@ _report_formats = {
     ],
 }
 
-# Report types which used a format with fixed field widths.
+# Report types which use a format with fixed field widths.
 _report_formats_fixed = {"sales"}
+
+# Report name formatter functions, by report type.
+_report_names = {
+    "customers": lambda rep: ("Det_%s_%s.txt"
+                              % (rep.env.user.company_id.damm_dealer_code,
+                                 rep.date_start.strftime("%Y%m%d"))),
+    "sales": lambda rep: ("%s_VENTAS_Factura_%s.txt"
+                          % (rep.env.user.company_id.damm_dealer_code,
+                             rep.date_start.strftime("%Y%m"))),
+    "conditions": lambda rep: ("CondCiales_%s_%s.txt"
+                               % (rep.env.user.company_id.damm_dealer_code,
+                                  rep.date_start.strftime("%Y%m%d"))),
+}
 
 
 class DammReportsWizard(models.TransientModel):
@@ -271,8 +286,34 @@ class DammReportsWizard(models.TransientModel):
             formatted_items.append(formatted_item)
         return formatted_items
 
+    def _assemble_report(self, lines):
+        report_name = _report_names[self.report_type](self)
+        field_names = [fmt[0] for fmt in _report_formats[self.report_type]]
+        lterm = "\r\n"
+
+        if self.report_type in _report_formats_fixed:
+            # One entry per line, fields in order, back-to-back.
+            report_data = lterm.join(
+                "".join(line[f] for f in field_names)
+                for line in lines
+            )
+            if report_data:
+                report_data += lterm
+        else:
+            csv_file = io.StringIO()
+            csv_writer = csv.DictWriter(csv_file, fieldnames=field_names,
+                                        delimiter="[", lineterminator=lterm,
+                                        quoting=csv.QUOTE_NONE)
+            # csv_writer.writeheader()
+            for line in lines:
+                csv_writer.writerow(line)
+            report_data = csv_file.getvalue()
+
+        return (report_name, report_data.encode("utf-8"))  # TODO check encoding
+
     def generate_report(self):
         self.ensure_one()
         report_items = self._search_report_items()
         line_data = self._format_report_items(report_items)
+        report_name, report_data = self._assemble_report(line_data)
         raise NotImplementedError("TODO")
