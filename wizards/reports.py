@@ -36,6 +36,9 @@ def _f_str_or_empty(rep, v):
 def _f_date(rep, v):
     return v.strftime("%Y%m%d") if v else ""
 
+def _f_float(rep, v):
+    return ("%g" % v).replace(".", ",") if v is not False else ""
+
 # Other helpers.
 
 def _v_price(sale_line):  # TODO: cache
@@ -127,13 +130,12 @@ _report_formats = {
         ("GrupoObjetivo", 50, _g_empty, None),
         ("Nº Producto", 20, _g_field("product_tmpl_id.id"), _f_str_or_empty),
         ("Material", 25, _g_field("product_tmpl_id.default_code"), _f_str_or_empty),
-        ("Objetivo_N", None, _g_const(0), None),
+        ("Objetivo_N", None, _g_const(0.0), _f_float),
         ("Periodo", 50, _g_const("Factura"), None),
-        ("Entrega_Mínima", None, _g_field("min_quantity"), _f_str_or_empty),
+        ("Entrega_Mínima", None, _g_field("min_quantity"),  _f_float),
         ("FechaHasta", None, _g_field("date_end"), _f_date),
         ("Centralizada", None, _g_const("N"), None),
-        ("Descuento_M", None, _g_field("percent_price"),
-         lambda r, v: str(v or "").replace(".", ",")),
+        ("Descuento_M", None, _g_field("percent_price"), _f_float),
         ("Objetivo_Tipo", 50, _g_const("Cajas"), None),
         ("Comentarios", 255, _g_empty, None),
         ("Aplicable", 10, _g_const("Depend"), None),
