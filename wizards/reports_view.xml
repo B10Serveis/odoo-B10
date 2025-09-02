@@ -4,7 +4,7 @@
 
 <odoo>
 
-<record id="damm_integration_reports_wizard_view_form" model="ir.ui.view">
+<record id="view_damm_reports_wizard" model="ir.ui.view">
     <field name="name">Generate Reports for Damm</field>
     <field name="model">damm_integration.reports.wizard</field>
     <field name="arch" type="xml">
@@ -27,17 +27,17 @@
     </field>
 </record>
 
-<record id="damm_integration_reports_wizard_action" model="ir.actions.act_window">
+<record id="action_damm_reports_wizard" model="ir.actions.act_window">
     <field name="name">Generate Reports for Damm</field>
     <field name="type">ir.actions.act_window</field>
     <field name="res_model">damm_integration.reports.wizard</field>
     <field name="view_mode">form</field>
-    <field name="view_id" ref="damm_integration_reports_wizard_view_form"/>
+    <field name="view_id" ref="view_damm_reports_wizard"/>
     <field name="target">new</field>
 </record>
 
-<menuitem id="damm_integration_reports_wizard_menu"
-          name="Reports" parent="damm_integration_base_menu"
-          action="damm_integration_reports_wizard_action"/>
+<menuitem id="menu_action_damm_reports_wizard"
+          name="Reports" parent="menu_damm_base"
+          action="action_damm_reports_wizard"/>
 
 </odoo>
