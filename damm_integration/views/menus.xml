@@ -4,6 +4,6 @@
 
 <odoo>
 
-<menuitem id="damm_integration_base_menu" name="Damm"/>
+<menuitem id="menu_damm_base" name="Damm"/>
 
 </odoo>
