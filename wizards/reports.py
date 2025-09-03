@@ -42,9 +42,8 @@ def _f_float(rep, v):
 # Other helpers.
 
 def _v_price(sale_line):  # TODO: cache
-    punto_verde_tax = 0  # TODO
-    return round(1000 * (
-        sale_line.price_unit * sale_line.quantity + punto_verde_tax))
+    return round(1000 * (  # may be tuned to include some taxes
+        sale_line.price_unit * sale_line.quantity))
 
 def _v_discount(sale_line):  # TODO: cache
     return round(1000 * (  # no taxes
