@@ -36,8 +36,13 @@
     <field name="target">new</field>
 </record>
 
+<menuitem id="menu_damm_reports"
+          name="Damm"
+          parent="account.menu_finance_reports" sequence="99"/>
+
 <menuitem id="menu_action_damm_reports_wizard"
-          name="Reports" parent="menu_damm_base"
+          name="New report for Damm"
+          parent="menu_damm_reports"
           action="action_damm_reports_wizard"/>
 
 </odoo>
