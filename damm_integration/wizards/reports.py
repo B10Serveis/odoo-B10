@@ -169,7 +169,7 @@ _report_names = {
 
 
 class DammReportsWizard(models.TransientModel):
-    _name = "damm_integration.reports.wizard"
+    _name = "damm.reports.wizard"
     _description = "Wizard to help create reports for Damm"
 
     # To show a warning about incomplete configuration in the view.
