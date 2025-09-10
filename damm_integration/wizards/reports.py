@@ -199,17 +199,19 @@ class DammReportsWizard(models.TransientModel):
         for report in self:
             if report.date_start > report.date_end:
                 raise models.ValidationError(
-                    "Report end date must be greater than its start date")
+                    "Report end date must be greater than its start date.")
 
     @api.model
     def create(self, values):
         company = self.env.user.company_id
         dealer_code = company.damm_dealer_code
         if not dealer_code:
-            raise exceptions.UserError("Please configure your company's Damm dealer code")
+            raise exceptions.UserError(
+                "Please configure your company's Damm dealer code.")
         damm_partner = company.damm_partner_id
         if not damm_partner:
-            raise exceptions.UserError("Please configure which partner is the Damm company")
+            raise exceptions.UserError(
+                "Please configure which partner is the Damm company.")
         return super(DammReportsWizard, self).create(values)
 
     def _search_report_items(self) -> dict[int, object]:
@@ -323,7 +325,8 @@ class DammReportsWizard(models.TransientModel):
         if not report_items:
             # Avoid weird behaviour with empty data
             # (e.g. missing attachment, 404 Not Found with `/web/content`).
-            raise exceptions.UserError("No items match the given selection, empty report")
+            raise exceptions.UserError(
+                "No items match the given selection, empty report.")
 
         line_data = self._format_report_items(report_items)
         report_name, report_data = self._assemble_report(line_data)
