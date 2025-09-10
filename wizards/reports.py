@@ -319,6 +319,12 @@ class DammReportsWizard(models.TransientModel):
     def generate_report(self):
         self.ensure_one()
         report_items = self._search_report_items()
+
+        if not report_items:
+            # Avoid weird behaviour with empty data
+            # (e.g. missing attachment, 404 Not Found with `/web/content`).
+            raise exceptions.UserError("No items match the given selection, empty report")
+
         line_data = self._format_report_items(report_items)
         report_name, report_data = self._assemble_report(line_data)
         raise NotImplementedError("TODO")
