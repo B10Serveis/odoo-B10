@@ -1,9 +1,11 @@
 # Copyright 2024, 2025 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+import base64
 import csv
 import io
 import itertools
+import urllib.parse
 
 from odoo import _, api, exceptions, models, fields
 
@@ -194,6 +196,10 @@ class DammReportsWizard(models.TransientModel):
         default="sales",
     )
 
+    report_name = fields.Char("Report File Name")
+    report_data = fields.Binary("Report File Data")
+
+
     @api.constrains("date_start", "date_end")
     def _check_dates_range(self):
         for report in self:
@@ -329,5 +335,19 @@ class DammReportsWizard(models.TransientModel):
                 _("No items match the given selection, empty report."))
 
         line_data = self._format_report_items(report_items)
-        report_name, report_data = self._assemble_report(line_data)
-        raise NotImplementedError("TODO")
+        self.report_name, report_data = self._assemble_report(line_data)
+        self.report_data = base64.b64encode(report_data)
+
+        url_query = urllib.parse.urlencode([
+            ("model", self._name),
+            ("id", str(self.id)),
+            ("field", "report_data"),
+            ("filename_field", "report_name"),
+            ("download", "true"),
+        ])
+
+        return {
+            "type": "ir.actions.act_url",
+            "url": "/web/content?%s" % url_query,
+            "target": "self",
+        }
