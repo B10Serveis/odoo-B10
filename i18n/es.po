@@ -1,0 +1,249 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* damm_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 10:57+0000\n"
+"PO-Revision-Date: 2025-09-10 16:34+0200\n"
+"Last-Translator: Ivan Vilata i Balaguer <ivan@batista10.cat>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: es\n"
+
+#. module: damm_integration
+#: model:res.groups,comment:damm_integration.res_groups_damm_integration
+msgid ""
+"\n"
+"        The user will be able to perform data integrations for Damm (like reports).\n"
+"    "
+msgstr ""
+"\n"
+"        El usuario podrá realizar integraciones de datos para Damm (como informes).\n"
+"    "
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.view_damm_reports_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: damm_integration
+#: model:ir.model.fields.selection,name:damm_integration.selection__damm_reports_wizard__report_type__conditions
+msgid "Commercial Conditions"
+msgstr "Condiciones comerciales"
+
+#. module: damm_integration
+#: model:ir.model,name:damm_integration.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: damm_integration
+#: model:ir.model,name:damm_integration.model_res_config_settings
+msgid "Config Settings"
+msgstr "Parámetros de configuración"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: damm_integration
+#: model:ir.model.fields.selection,name:damm_integration.selection__damm_reports_wizard__report_type__customers
+msgid "Customers Data"
+msgstr "Datos de los clientes"
+
+#. module: damm_integration
+#: model:ir.ui.menu,name:damm_integration.menu_damm_reports
+msgid "Damm"
+msgstr "Damm"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_res_company__damm_partner_id
+#: model:ir.model.fields,field_description:damm_integration.field_res_config_settings__damm_partner_id
+msgid "Damm Company"
+msgstr "Compañía Damm"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__damm_config_ok
+msgid "Damm Config Ok"
+msgstr "Configuración de Damm correcta"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_res_company__damm_dealer_code
+#: model:ir.model.fields,field_description:damm_integration.field_res_config_settings__damm_dealer_code
+msgid "Damm Dealer Code"
+msgstr "Código de distribuidor Damm"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_res_config_settings__group_damm_integration
+#: model:res.groups,name:damm_integration.res_groups_damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.res_config_settings_view_form
+msgid "Damm Integration"
+msgstr "Integración con Damm"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre de visualización"
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.res_config_settings_view_form
+msgid ""
+"Enable the creation of reports for sending to S.A. Damm;\n"
+"                        you will then need to configure settings below."
+msgstr ""
+"Habilita la creación de informes para enviar a S.A. Damm;\n"
+"                        deberá configurar parámetros a continuación."
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__date_end
+msgid "End Date"
+msgstr "Fecha final"
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.view_damm_reports_wizard
+msgid "Generate"
+msgstr "Generar"
+
+#. module: damm_integration
+#: model:ir.actions.act_window,name:damm_integration.action_damm_reports_wizard
+#: model_terms:ir.ui.view,arch_db:damm_integration.view_damm_reports_wizard
+msgid "Generate Reports for Damm"
+msgstr "Generar informes para Damm"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: damm_integration
+#: model:ir.ui.menu,name:damm_integration.menu_action_damm_reports_wizard
+msgid "New report for Damm"
+msgstr "Nuevo informe para Damm"
+
+#. module: damm_integration
+#: code:addons/damm_integration/wizards/reports.py:0
+#, python-format
+msgid "No items match the given selection, empty report."
+msgstr "No hay ítems que concuerden con la selección dada, el informe está vacío."
+
+#. module: damm_integration
+#: code:addons/damm_integration/wizards/reports.py:0
+#, python-format
+msgid "Please configure which partner is the Damm company."
+msgstr "Debe configurar qué contacto es la compañía Damm."
+
+#. module: damm_integration
+#: code:addons/damm_integration/wizards/reports.py:0
+#, python-format
+msgid "Please configure your company's Damm dealer code."
+msgstr "Debe configurar el código de distribuidor Damm de su compañía."
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__report_data
+msgid "Report File Data"
+msgstr "Datos del fichero de informe"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__report_name
+msgid "Report File Name"
+msgstr "Nombre del fichero de informe"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__report_type
+msgid "Report Type"
+msgstr "Tipo de informe"
+
+#. module: damm_integration
+#: code:addons/damm_integration/wizards/reports.py:0
+#, python-format
+msgid "Report end date must be greater than its start date."
+msgstr "La fecha final del informe debe ser posterior a la de inicio."
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.view_company_form
+msgid "S.A. Damm in your Odoo"
+msgstr "S.A. Damm en su Odoo"
+
+#. module: damm_integration
+#: model:ir.model.fields.selection,name:damm_integration.selection__damm_reports_wizard__report_type__sales
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: damm_integration
+#: model:ir.model.fields,field_description:damm_integration.field_damm_reports_wizard__date_start
+msgid "Start Date"
+msgstr "Fecha inicial"
+
+#. module: damm_integration
+#: model:ir.model.fields,help:damm_integration.field_res_company__damm_dealer_code
+#: model:ir.model.fields,help:damm_integration.field_res_config_settings__damm_dealer_code
+msgid ""
+"The code used by Damm to identify your company as a dealer of its products"
+msgstr ""
+"El código usado por Damm para identificar a su compañía como distribuidor de"
+" sus productos"
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.res_config_settings_view_form
+msgid ""
+"The code used by Damm to identify your company as a dealer of its products."
+msgstr ""
+"El código usado por Damm para identificar a su compañía como distribuidor de"
+" sus productos."
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.res_config_settings_view_form
+msgid "The company (partner) S.A. Damm in your Odoo."
+msgstr "La compañía (contacto) S.A. Damm en su Odoo."
+
+#. module: damm_integration
+#: model:ir.model.fields,help:damm_integration.field_res_company__damm_partner_id
+#: model:ir.model.fields,help:damm_integration.field_res_config_settings__damm_partner_id
+msgid "Used to locate products and customers when generating reports for Damm"
+msgstr ""
+"Usado para encontrar los productos y clientes al generar informes para Damm"
+
+#. module: damm_integration
+#: model:ir.model,name:damm_integration.model_damm_reports_wizard
+msgid "Wizard to help create reports for Damm"
+msgstr "Asistente para ayudar con la creación de informes para Damm"
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.view_damm_reports_wizard
+msgid ""
+"Your Damm integration configuration may be missing some values, please check"
+" it."
+msgstr ""
+"Puede que falten valores en su configuración de integración con Damm, haga "
+"el favor de revisarla."
+
+#. module: damm_integration
+#: model_terms:ir.ui.view,arch_db:damm_integration.view_company_form
+msgid "Your company's Damm dealer code"
+msgstr "El código de distribuidor Damm de su compañía"
