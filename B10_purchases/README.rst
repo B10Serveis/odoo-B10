@@ -66,15 +66,13 @@ El mòdul **field_encryption** és requereix per emmagatzemar i desxifrar el cam
 
       - value = self.convert_to_read(record[self.name], record, use_name_get=False)
       + value = self.convert_to_read(record[self.name], record)
-  
+
 5. Genera una clau d’encriptació segura de 32 bytes en Base64. Per exemple:
 
-   .. code-block:: bash
+   .. code-block:: python
 
-      python3 - <<EOF
-      import base64, os
-      print(base64.urlsafe_b64encode(os.urandom(32)).decode())
-      EOF
+      from cryptography.fernet import Fernet
+      Fernet.generate_key().decode()
 
 6. Afig la clau generada al `odoo.conf`:
 
