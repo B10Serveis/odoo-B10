@@ -8,9 +8,9 @@
     <field name="name">res.config.settings.view.form.inherit.damm_integration</field>
     <field name="model">res.config.settings</field>
     <field name="priority" eval="99"/>
-    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
     <field name="arch" type="xml">
-        <xpath expr="//div[@name='integration']" position="after">
+        <xpath expr="//block[@name='integration']" position="after">
             <h2>Damm Integration</h2>
             <div class="row mt16 o_settings_container" name="damm_integration">
                 <div class="col-12 col-lg-6 o_setting_box" id="damm_integration">
