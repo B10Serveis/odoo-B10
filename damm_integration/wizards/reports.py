@@ -239,7 +239,7 @@ class DammReportsWizard(models.TransientModel):
                 by_damm = is_product_by_damm.get(product.id)
                 if by_damm is None:  # cache whether product by Damm
                     is_product_by_damm[product.id] = by_damm = (
-                        damm_partner_id in product.mapped("seller_ids.name.id")
+                        damm_partner_id in product.mapped("seller_ids.partner_id.id")
                     )
                 if by_damm:
                     customers[customer.id] = customer
@@ -264,7 +264,7 @@ class DammReportsWizard(models.TransientModel):
         ])
         for plist_item in plist_items:
             product = plist_item.product_tmpl_id
-            if damm_partner_id in product.mapped("seller_ids.name.id"):  # TODO: cache
+            if damm_partner_id in product.mapped("seller_ids.partner_id.id"):  # TODO: cache
                 # The condition must appear for each customer that it applies to,
                 # so decorate it with the customer id to tell them apart.
                 for plcust in plist_ids[plist_item.pricelist_id.id]:
