@@ -39,3 +39,17 @@ class AccountMove(models.Model):
         settings = self.env["res.config.settings"].sudo()  # Access settings model
         res.group_by_origin = settings.get_invoice_lines_by_origin()
         return res
+
+
+class AccountPaymentMethod(models.Model):
+    _inherit = "account.payment.method"
+
+    # Fem disponible bank_transfer per a tots els diaris de tipus bancari.
+    @api.model
+    def _get_payment_method_information(self):
+        res = super()._get_payment_method_information()
+        res["bank_transfer"] = {
+            "mode": "multi",
+            "domain": [("type", "=", "bank")],
+        }
+        return res

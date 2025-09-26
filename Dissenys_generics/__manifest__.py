@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "17.0.1.12.0",
+    "version": "17.0.1.13.0",
     "depends": [
         "base",
         "account_payment_partner",
@@ -15,7 +15,7 @@
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
         "l10n_es_edi_verifactu",
-        "report_qweb_element_page_visibility", # Perque el QR surti només a la primera pàgina
+        "report_qweb_element_page_visibility",  # Perque el QR surti només a la primera pàgina
     ],
     "license": "AGPL-3",
     "application": True,

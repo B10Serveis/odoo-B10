@@ -61,3 +61,4 @@ B10_account/models/__pycache__/helpdeskB10.cpython-39.pyc
 B10_account/__pycache__/__init__.cpython-311.pyc
 B10_account/models/__pycache__/__init__.cpython-311.pyc
 B10_account/models/__pycache__/B10_account_move.cpython-311.pyc
+B10_account/models/__pycache__/account_invoice_report.cpython-311.pyc

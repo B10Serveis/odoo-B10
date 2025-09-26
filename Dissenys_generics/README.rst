@@ -153,6 +153,12 @@ Changelog
 * [ADD] Dependència a l10n_es_edi_verifactu.  
 * [IMP] Capçalera en 3 columnes: logo + dades + QR.  
 
+17.0.1.13.0 (2025-09-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegim codi python a account.payment.method per fer disponible bank_transfer per a tots els diaris de tipus bancari.  
+
+
 Bug Tracker
 ===========
 
