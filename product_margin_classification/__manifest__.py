@@ -4,7 +4,7 @@
 
 {
     "name": "Product Margin Classification",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Account",
     "author": "GRAP,Odoo Community Association (OCA)",
     "maintainers": ["legalsylvain"],
