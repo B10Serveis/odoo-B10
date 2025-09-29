@@ -93,9 +93,7 @@ class ProductMarginClassification(models.Model):
 
     @api.model
     def _default_price_round(self):
-        digits = self.env["ir.model.fields"]._get_digits(
-            "product.margin.classification", "price_round"
-        )[1]
+        digits = self._fields["price_round"].get_digits(self.env)[1]
         return 10 ** (-digits)
 
     # constrains Section
