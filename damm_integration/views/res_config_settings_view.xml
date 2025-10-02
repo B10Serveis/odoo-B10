@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022, 2023, 2024, 2025 Batista10
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+<record id="res_config_settings_view_form" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.damm_integration</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="99"/>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//block[@name='integration']" position="after">
+            <h2>Damm Integration</h2>
+            <div class="row mt16 o_settings_container" name="damm_integration">
+                <div class="col-12 col-lg-6 o_setting_box" id="damm_integration">
+                    <field class="o_setting_left_pane" name="group_damm_integration"/>
+                    <p class="o_setting_right_pane text-muted">
+                        Enable the creation of reports for sending to S.A. Damm;
+                        you will then need to configure settings below.
+                    </p>
+                    <div class="o_setting_right_pane" id="damm_dealer_code"
+                         groups="damm_integration.res_groups_damm_integration">
+                        <label for="damm_dealer_code"/>
+                        <field name="damm_dealer_code"/>
+                        <div class="text-muted">
+                            The code used by Damm to identify your company as a dealer of its products.
+                        </div>
+                    </div>
+                    <div class="o_setting_right_pane" id="damm_partner_id"
+                         groups="damm_integration.res_groups_damm_integration">
+                        <label for="damm_partner_id"/>
+                        <field name="damm_partner_id"/>
+                        <div class="text-muted">
+                            The company (partner) S.A. Damm in your Odoo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </field>
+</record>
+
+</odoo>
