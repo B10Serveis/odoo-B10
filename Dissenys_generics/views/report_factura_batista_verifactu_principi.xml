@@ -20,7 +20,7 @@
         <div class="row text-center">
           <div class="w-100">
             <!-- Mostra el literal només si l'empresa té activat VERI*FACTU -->
-            <t t-if="o.company_id.l10n_es_vv">
+            <t t-if="o.company_id.verifactu_enabled">
               <strong>VERI*FACTU</strong>
             </t>
           </div>

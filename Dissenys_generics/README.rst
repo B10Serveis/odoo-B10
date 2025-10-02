@@ -131,6 +131,11 @@ Changelog
   - plantilla `views/report_pressupost_st_batista.xml`
   - plantilla `views/report_proforma_batista.xml`
 
+16.0.1.11.6 (2025-10-02)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] QR Verifactu a Factura.
+
 Bug Tracker
 ===========
 

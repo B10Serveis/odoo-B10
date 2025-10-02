@@ -88,17 +88,20 @@
                         </div>
 
                         <!-- QR dreta -->
-                        <!-- <div class="col-3" id="b10_header_qr" style="padding:0; text-align:right;">
+                        <div class="col-3"
+                            id="b10_header_qr"
+                            style="padding:0; text-align:right;">
                             <div class="first-page">
-                                <t t-if="o.verifactu_enabled and o.verifactu_qr">
+                                <t t-if="doc.verifactu_enabled and doc.verifactu_qr">
                                     <div style="display:inline-block; text-align:center;">
                                         <strong class="text-center">QR tributario:</strong>
-                                        <img t-attf-src="data:image/png;base64,{{o.verifactu_qr}}" style="min-width: 30mm; max-width: 40mm"/>
+                                        <img t-attf-src="data:image/png;base64,{{doc.verifactu_qr}}"
+                                            style="min-width: 30mm; max-width: 40mm"/>
                                         <strong class="text-center">VERI*FACTU</strong>
                                     </div>
                                 </t>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
