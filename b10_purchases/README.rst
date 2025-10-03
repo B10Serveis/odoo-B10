@@ -91,6 +91,11 @@ Changelog
 
 * [ADD] **Security**: afegits grups de permisos “Provider Password Reader” i “Provider Password Manager” per controlar qui pot visualitzar i modificar les contrasenyes.
 
+15.0.1.5.5 (2025-10-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Camp de contrasenya editable o no en vista de proveïdor segons grups.
+
 Bug Tracker
 ===========
 
@@ -113,6 +118,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Pol Comas i Romero <pol@batista10.cat> (https://www.batista10.cat)
+* Ivan Vilata i Balaguer <ivan@batista10.cat> (https://www.batista10.cat)
 
 Other credits
 ~~~~~~~~~~~~~
