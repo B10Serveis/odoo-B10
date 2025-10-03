@@ -79,6 +79,11 @@ Changelog
 
 * [MIG] Creat a V.18.
 
+18.0.1.0.1 (2025-10-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Camp de contrasenya editable o no en vista de proveïdor segons grups.
+
 Bug Tracker
 ===========
 
@@ -102,6 +107,8 @@ Contributors
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
+* Pol Comas i Romero <pol@batista10.cat> (https://www.batista10.cat)
+* Ivan Vilata i Balaguer <ivan@batista10.cat> (https://www.batista10.cat)
 
 Other credits
 ~~~~~~~~~~~~~
