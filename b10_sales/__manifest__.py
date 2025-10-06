@@ -11,6 +11,7 @@
     'website': 'https://www.batista10.cat',
     'license': 'AGPL-3',
     'depends': [
+        'b10_account',  # account_payment_method_bank_transfer (ref)
         'b10_mail',
         'sale_management',
         'sale_order_report_product_image',
