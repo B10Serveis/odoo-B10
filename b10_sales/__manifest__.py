@@ -7,6 +7,7 @@
     "version": "17.0.1.0.0",
     "depends": [
         "sale",
+        "Dissenys_generics",  # account_payment_method_bank_transfer (ref)
     ],
     "license": "AGPL-3",
     "application": True,
