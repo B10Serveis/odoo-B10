@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="report_pressupost_inherit_batista_iban"
+			inherit_id="Dissenys_generics.report_pressupost_batista_document">
+
+			<xpath expr="//div[@id='b10_docinfo_left']/p[4]"
+				position="after">
+				<p style="margin-bottom: 0;">
+					<span t-if="doc.payment_journal_id">
+						IBAN:
+						<span t-field="doc.payment_journal_id.bank_account_id.acc_number"/>
+					</span>
+				</p>
+			</xpath>
+
+		</template>
+	</data>
+</odoo>
