@@ -13,5 +13,6 @@
     "application": True,
     "data": [
         "views/B10_sale_order_expired_filter.xml",
+        "views/sale_order_payment_journal.xml",
     ],
 }
