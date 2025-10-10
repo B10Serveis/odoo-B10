@@ -60,8 +60,16 @@ class SaleOrder(models.Model):
     )
 
     @api.onchange("payment_mode_id")
-    def _check_no_payment_journal(self):
-        if self.payment_journal_id:
+    def _set_payment_journal(self):
+        payment_mode = self.payment_mode_id
+        new_payment_journal = (
+            payment_mode.fixed_journal_id
+            if payment_mode.bank_account_link == "fixed" else False
+        )
+
+        if self.payment_journal_id and new_payment_journal != self.payment_journal_id:
             raise exceptions.ValidationError(
-                _("Please unset the current payment journal "
-                  "before changing the payment mode."))
+                _("The current payment journal cannot be used "
+                  "with the selected payment mode; "
+                  "please unset the journal first if you are sure."))
+        self.payment_journal_id = new_payment_journal
