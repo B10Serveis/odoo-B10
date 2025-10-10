@@ -12,5 +12,6 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "views/sale_order_payment_journal.xml",
     ],
 }
