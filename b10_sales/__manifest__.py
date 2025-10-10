@@ -43,6 +43,7 @@
         'report/report_proforma_batista.xml',
         # Views
         'views/B10_sale_order_expired_filter.xml',
+        'views/sale_order_payment_journal.xml',
         'views/show_product_image.xml',
     ],
     'assets': {
