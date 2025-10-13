@@ -63,14 +63,17 @@ class SaleOrder(models.Model):
     def _set_payment_journal(self):
         payment_mode = self.payment_mode_id
         old_payment_journal = self.payment_journal_id
+        assert payment_mode.bank_account_link in ["fixed", "variable"]
         if payment_mode.bank_account_link == "fixed":
             new_payment_journal = payment_mode.fixed_journal_id
-        elif (payment_mode.bank_account_link == "variable"
-              and old_payment_journal
-              and old_payment_journal in payment_mode.variable_journal_ids):
-            new_payment_journal = old_payment_journal
-        else:
+        elif not payment_mode.variable_journal_ids:
             new_payment_journal = False
+        elif not old_payment_journal:
+            new_payment_journal = payment_mode.variable_journal_ids[0]
+        elif old_payment_journal in payment_mode.variable_journal_ids:
+            new_payment_journal = old_payment_journal
+        else:  # old journal not among variable ones
+            new_payment_journal = payment_mode.variable_journal_ids[0]
 
         if old_payment_journal and new_payment_journal != old_payment_journal:
             raise exceptions.ValidationError(
