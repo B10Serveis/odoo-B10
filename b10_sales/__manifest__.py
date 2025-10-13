@@ -5,12 +5,13 @@
 {
     'name': 'Batista10 - Sales',
     'summary': 'Personalització Vendes Batista10',
-    'version': '18.0.1.3.0',
+    'version': '18.0.1.4.0',
     'category': 'Sales',
     'author': 'Batista10',
     'website': 'https://www.batista10.cat',
     'license': 'AGPL-3',
     'depends': [
+        'b10_account',  # account_payment_method_bank_transfer (ref)
         'b10_mail',
         'sale_management',
         'sale_order_report_product_image',
@@ -42,6 +43,7 @@
         'report/report_proforma_batista.xml',
         # Views
         'views/B10_sale_order_expired_filter.xml',
+        'views/sale_order_payment_journal.xml',
         'views/show_product_image.xml',
     ],
     'assets': {

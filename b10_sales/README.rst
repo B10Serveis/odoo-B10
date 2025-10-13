@@ -25,6 +25,7 @@ B10 Sales
 Aquest mòdul afegeix plantilles PDF i funcionalitats addicionals per a vendes:  
    – Filtre “Expired” de pressupostos  
    – Checkbox “Show product image” al formulari  
+   - Selecció de diari de pagament al formulari (pestanya d'altra informació), per a incloure'n l'IBAN als dissenys  
    – Dissenys per a Pressupost, Pressupost S/T, Comanda i ProForma  
    – Plantilles Email per a Pressupost, Comanda i ProForma  
 
@@ -125,6 +126,10 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [ADD] Classificacions de Marges.
 
+18.0.1.4.0 (2025-10-13)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Selecció del diari de pagament al formulari de comanda, s'inclou IBAN de pagament a capçalera de pressupost, comanda i proforma.
+
 Bug Tracker
 ===========
 
@@ -148,6 +153,7 @@ Contributors
 * Marc Tormo i Bochaca <marc@batista10.cat>  
 * Joan Llimiñana i Sabaté <joan@batista10.cat>  
 * Pol Comas i Romero <pol@batista10.cat>
+* Ivan Vilata i Balaguer <ivan@batista10.cat>
 
 Maintainers
 ~~~~~~~~~~~

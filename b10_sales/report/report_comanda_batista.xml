@@ -138,6 +138,12 @@
 									<span t-field="doc.payment_mode_id.name" />
 								</span>
 							</p>
+							<p style="margin-bottom: 0;">
+								<span t-if="doc.payment_journal_id">
+									IBAN:
+									<span t-field="doc.payment_journal_id.bank_account_id.acc_number" />
+								</span>
+							</p>
 						</div>
 						<!-- Columna dreta -->
 						<div class="col-6"
