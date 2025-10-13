@@ -32,6 +32,10 @@ Mòdul de compres de Batista10
 Changelog
 =========
 
+16.0.1.0.0 (2025-10-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [ADD] Selecció del diari de pagament al formulari de comanda, s'inclou IBAN de pagament a capçalera de pressupost, comanda i proforma.
+
 Bug Tracker
 ===========
 
@@ -56,6 +60,7 @@ Contributors
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 * Pol Comas i Romero <pol@batista10.cat> (https://www.batista10.cat)
+* Ivan Vilata i Balaguer <ivan@batista10.cat> (https://www.batista10.cat)
 
 Other credits
 ~~~~~~~~~~~~~
