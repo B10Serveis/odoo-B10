@@ -62,12 +62,17 @@ class SaleOrder(models.Model):
     @api.onchange("payment_mode_id")
     def _set_payment_journal(self):
         payment_mode = self.payment_mode_id
-        new_payment_journal = (
-            payment_mode.fixed_journal_id
-            if payment_mode.bank_account_link == "fixed" else False
-        )
+        old_payment_journal = self.payment_journal_id
+        if payment_mode.bank_account_link == "fixed":
+            new_payment_journal = payment_mode.fixed_journal_id
+        elif (payment_mode.bank_account_link == "variable"
+              and old_payment_journal
+              and old_payment_journal in payment_mode.variable_journal_ids):
+            new_payment_journal = old_payment_journal
+        else:
+            new_payment_journal = False
 
-        if self.payment_journal_id and new_payment_journal != self.payment_journal_id:
+        if old_payment_journal and new_payment_journal != old_payment_journal:
             raise exceptions.ValidationError(
                 _("The current payment journal cannot be used "
                   "with the selected payment mode; "
