@@ -130,6 +130,10 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [ADD] Selecció del diari de pagament al formulari de comanda, s'inclou IBAN de pagament a capçalera de pressupost, comanda i proforma.
 
+18.0.1.4.1 (2025-10-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [FIX] Establiment de diari de pagament durant creació de comanda de venda.
+
 Bug Tracker
 ===========
 
