@@ -63,6 +63,8 @@ class SaleOrder(models.Model):
     def _set_payment_journal(self):
         payment_mode = self.payment_mode_id
         old_payment_journal = self.payment_journal_id
+        if not payment_mode or not payment_mode.bank_account_link:
+            return  # new sale order
         assert payment_mode.bank_account_link in ["fixed", "variable"]
         if payment_mode.bank_account_link == "fixed":
             new_payment_journal = payment_mode.fixed_journal_id
