@@ -79,6 +79,10 @@ Registre de Versions
   - [REM] Eliminats models que recalculaven preus i impostos.  
   - [REM] Totes les referències al Punt Verd eliminades.
 
+15.0.1.2.0 (15/10/2025)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [FIX] Modificacions per a que funcioni l'informe de factures.
+
 Roadmap   
 =======   
 
