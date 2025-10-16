@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b10_sales
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-14 14:15+0000\n"
+"PO-Revision-Date: 2025-10-16 10:28+0200\n"
+"Last-Translator: Ivan Vilata i Balaguer <ivan@batista10.cat>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_sale_order__allowed_pay_journal_ids
+msgid "Allowed Payment Journals"
+msgstr "Diarios de pago permitidos"
+
+#. module: b10_sales
+#: model:ir.model.fields,help:b10_sales.field_sale_order__payment_journal_id
+msgid ""
+"For sale orders with a payment method having a fixed bank account, this is "
+"the account associated with the method. When the method othewise has a set "
+"of bank accounts to choose from, this allows you to chose one of the "
+"accounts for paying the sale order."
+msgstr "Para pedidos de venta con un método de pago con una cuenta bancaria fija, este campo es la cuenta asociada con el método. Si no, cuando el método tiene un conjunto de cuentas bancarias de donde escoger, este campo le permite escoger una para pagar el pedido de venta."
+
+#. module: b10_sales
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_comanda_inherit_batista_iban
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_pressupost_inherit_batista_iban
+#: model_terms:ir.ui.view,arch_db:b10_sales.report_proforma_inherit_batista_iban
+msgid "IBAN:"
+msgstr "IBAN:"
+
+#. module: b10_sales
+#: model:ir.model.fields,field_description:b10_sales.field_sale_order__payment_journal_id
+msgid "Payment Journal"
+msgstr "Diario de pago"
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: b10_sales
+#: model:ir.model.fields,help:b10_sales.field_sale_order__allowed_pay_journal_ids
+msgid ""
+"Technical field used to constrain the valid choices of payment journal "
+"depending on the chosen payment mode."
+msgstr "Campo ténico usado para limitar las opciones válidas de diario de pago, según el modo de pago escogido."
+
+#. module: b10_sales
+#. odoo-python
+#: code:addons/b10_sales/models/sale_order.py:0
+#, python-format
+msgid ""
+"The current payment journal cannot be used with the selected payment mode; "
+"please unset the journal first if you are sure."
+msgstr "No se puede usar el diario de pago actual con el modo de pago escogido; quite antes el diario si está seguro."
