@@ -108,6 +108,11 @@ Changelog
 * [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
   - plantilla `views/B10_purchase_quotation_report.xml`
 
+16.0.1.3.4 (2025-10-22)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'error en camp de company primary color.
+
 Bug Tracker
 ===========
 
