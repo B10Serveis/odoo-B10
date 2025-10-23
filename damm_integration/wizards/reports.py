@@ -12,7 +12,7 @@ from odoo import _, api, exceptions, models, fields
 
 # Report item field getters and value formatters.
 def _g_damm_code(rep, item):
-    return rep.env.user.company_id.damm_dealer_code
+    return rep.env.company.damm_dealer_code
 
 def _g_field(f):
     def _g_field_getter(rep, item):
@@ -159,13 +159,13 @@ _report_formats_fixed = {"sales"}
 # Report name formatter functions, by report type.
 _report_names = {
     "customers": lambda rep: ("Det_%s_%s.txt"
-                              % (rep.env.user.company_id.damm_dealer_code,
+                              % (rep.env.company.damm_dealer_code,
                                  rep.date_start.strftime("%Y%m%d"))),
     "sales": lambda rep: ("%s_VENTAS_Factura_%s.txt"
-                          % (rep.env.user.company_id.damm_dealer_code,
+                          % (rep.env.company.damm_dealer_code,
                              rep.date_start.strftime("%Y%m"))),
     "conditions": lambda rep: ("CondCiales_%s_%s.txt"
-                               % (rep.env.user.company_id.damm_dealer_code,
+                               % (rep.env.company.damm_dealer_code,
                                   rep.date_start.strftime("%Y%m%d"))),
 }
 
@@ -177,8 +177,8 @@ class DammReportsWizard(models.TransientModel):
     # To show a warning about incomplete configuration in the view.
     damm_config_ok = fields.Boolean(
         default=(lambda self:
-                 bool(self.env.user.company_id.damm_dealer_code
-                      and self.env.user.company_id.damm_partner_id)))
+                 bool(self.env.company.damm_dealer_code
+                      and self.env.company.damm_partner_id)))
 
     date_start = fields.Date(
         string="Start Date", required=True, default=fields.Date.today)
@@ -209,7 +209,7 @@ class DammReportsWizard(models.TransientModel):
 
     @api.model
     def create(self, values):
-        company = self.env.user.company_id
+        company = self.env.company
         dealer_code = company.damm_dealer_code
         if not dealer_code:
             raise exceptions.UserError(
@@ -221,7 +221,7 @@ class DammReportsWizard(models.TransientModel):
         return super(DammReportsWizard, self).create(values)
 
     def _search_report_items(self) -> dict[int, object]:
-        company = self.env.user.company_id
+        company = self.env.company
         damm_partner_id = company.damm_partner_id.id
 
         customers = {}
