@@ -4,7 +4,7 @@ Configuració
 Per a fer servir aquest mòdul cal acomplir els requeriments següents:
 
 * A la vostra instància d'Odoo ha d'existir un *contacte* (partner) que represente la companyia S.A. Damm (el nom del contacte ha d'incloure la paraula «Damm»).
-* La vostra companyia ha de tenir assignat un *codi de distribuïdor* de Damm.
+* La companyia actual (o la companyia de l'usuari actual) ha de tenir assignat un *codi de distribuïdor* de Damm.
 
 Una volta instaŀlat aquest mòdul en la vostra instància d'Odoo, per a habilitar les seues funcions cal que seguiu aquests passos com a administrador:
 
