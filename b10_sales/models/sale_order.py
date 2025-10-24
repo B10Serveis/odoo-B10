@@ -84,6 +84,13 @@ class SaleOrder(models.Model):
                   "please unset the journal first if you are sure."))
         self.payment_journal_id = new_payment_journal
 
+    # Set invoice bank account if payment journal is set in sale order.
+    def _prepare_invoice(self):
+        invoice_vals = super()._prepare_invoice()
+        if payment_journal := self.payment_journal_id:
+            invoice_vals["partner_bank_id"] = payment_journal.bank_account_id.id
+        return invoice_vals
+
     show_product_image = fields.Boolean("Show product image", required=False)
 
     def _get_default_mail_template_id(self):
