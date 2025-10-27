@@ -136,6 +136,11 @@ Changelog
 
 * [IMP] Mida QR Verifactu a Factura.
 
+15.0.1.11.7 (2025-10-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Mida QR Verifactu a Factura.
+
 Bug Tracker
 ===========
 
