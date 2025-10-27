@@ -207,18 +207,24 @@ class DammReportsWizard(models.TransientModel):
                 raise models.ValidationError(
                     _("Report end date must be greater than its start date."))
 
-    @api.model
-    def create(self, values):
-        company = self.env.company
-        dealer_code = company.damm_dealer_code
-        if not dealer_code:
-            raise exceptions.UserError(
-                _("Please configure your company's Damm dealer code."))
-        damm_partner = company.damm_partner_id
-        if not damm_partner:
-            raise exceptions.UserError(
-                _("Please configure which partner is the Damm company."))
-        return super(DammReportsWizard, self).create(values)
+    @api.model_create_multi
+    def create(self, vals_list):
+        company_model = self.env["res.company"]
+
+        for vals in vals_list:
+            # Obtener la compañía del contexto o vals
+            company_id = vals.get("company_id") or self.env.company.id
+            company = company_model.browse(company_id)
+
+            if not company.damm_dealer_code:
+                raise exceptions.UserError(
+                    _("Please configure your company's Damm dealer code."))
+
+            if not company.damm_partner_id:
+                raise exceptions.UserError(
+                    _("Please configure which partner is the Damm company."))
+
+        return super(DammReportsWizard, self).create(vals_list)
 
     def _search_report_items(self) -> dict[int, object]:
         company = self.env.company
