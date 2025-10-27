@@ -102,7 +102,8 @@
                                         <strong class="text-center">QR tributario:</strong>
                                         <br />
                                         <img t-attf-src="data:image/png;base64,{{doc.verifactu_qr}}"
-                                            style="min-width: 90px; max-width: 90px"/>
+                                            style="min-width: 100px; max-width: 100px"/>
+                                        <br />
                                         <strong class="text-center">VERI*FACTU</strong>
                                     </div>
                                 </t>
