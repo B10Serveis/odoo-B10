@@ -15,7 +15,7 @@
         'b10_mail',
         'sale_management',
         'sale_order_report_product_image',
-        'account_payment_sale',
+        'account_payment_sale',  # account.move:payment_mode_id
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
         "b10_settings_hub",

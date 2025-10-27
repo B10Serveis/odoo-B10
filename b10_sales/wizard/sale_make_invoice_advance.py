@@ -7,6 +7,8 @@ class SaleAdvancePaymentInv(models.TransientModel):
     def _prepare_invoice_values(self, order, so_lines, accounts):
         invoice_vals = super()._prepare_invoice_values(
             order, so_lines, accounts)
+        if payment_mode := order.payment_mode_id:
+            invoice_vals["payment_mode_id"] = payment_mode.id
         if payment_journal := order.payment_journal_id:
             invoice_vals["partner_bank_id"] = payment_journal.bank_account_id.id
         return invoice_vals
