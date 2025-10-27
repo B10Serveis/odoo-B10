@@ -7,6 +7,7 @@
     "version": "16.0.1.0.1",
     "depends": [
         "sale",
+        "account_payment_sale",  # account.move:payment_mode_id
         "Dissenys_generics",  # account_payment_method_bank_transfer (ref), reports
     ],
     "license": "AGPL-3",
