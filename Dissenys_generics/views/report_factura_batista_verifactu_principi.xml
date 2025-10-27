@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="verifactu_qr_block_batista">
+      <div class="verifactu-qr"
+        t-if="o.verifactu_qr"
+        style="margin-top:8px; margin-bottom:8px;">
+        <div class="row text-center">
+          <div class="w-100">
+            <strong>QR Tributario:</strong>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="mb8 w-100">
+            <img t-att-src="'data:image/png;base64,' + o.verifactu_qr.decode()"
+              style="width:35mm;height:35mm;image-rendering: auto;"
+              alt="QR Veri*Factu"/>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="w-100">
+            <!-- Mostra el literal només si l'empresa té activat VERI*FACTU -->
+            <t t-if="o.company_id.verifactu_enabled">
+              <strong>VERI*FACTU</strong>
+            </t>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Inserció a la plantilla de document 
+    <template id="report_factura_batista_document_verifactu" inherit_id="Dissenys_generics.report_factura_batista_document">
+      <xpath expr="//div[@id='b10_docinfo_right']" position="inside">
+        <t t-call="Dissenys_generics.verifactu_qr_block_batista"/>
+      </xpath>
+    </template> -->
+  </data>
+</odoo>

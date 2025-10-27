@@ -125,6 +125,12 @@ Changelog
 
 * [FIX] Error a factura: falta t-att-data-oe-mode i t-att-data-oe-id al div de la classe article.
 
+
+15.0.1.11.5 (2025-10-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] QR Verifactu a Factura.
+
 Bug Tracker
 ===========
 
