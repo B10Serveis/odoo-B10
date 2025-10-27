@@ -87,6 +87,8 @@ class SaleOrder(models.Model):
     # Set invoice bank account if payment journal is set in sale order.
     def _prepare_invoice(self):
         invoice_vals = super()._prepare_invoice()
+        if payment_mode := self.payment_mode_id:
+            invoice_vals["payment_mode_id"] = payment_mode.id
         if payment_journal := self.payment_journal_id:
             invoice_vals["partner_bank_id"] = payment_journal.bank_account_id.id
         return invoice_vals
