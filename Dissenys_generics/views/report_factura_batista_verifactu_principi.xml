@@ -13,7 +13,7 @@
         <div class="row text-center">
           <div class="mb8 w-100">
             <img t-att-src="'data:image/png;base64,' + o.verifactu_qr.decode()"
-              style="width:35mm;height:35mm;image-rendering: auto;"
+              style="width:200px;height:200px;image-rendering: auto;"
               alt="QR Veri*Factu"/>
           </div>
         </div>
