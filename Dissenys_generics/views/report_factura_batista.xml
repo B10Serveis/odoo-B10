@@ -95,7 +95,7 @@
                         <!-- QR dreta -->
                         <div class="col-3"
                             id="b10_header_qr"
-                            style="padding:0; text-align:right;">
+                            style="padding-right:20px; text-align:right;">
                             <div class="first-page">
                                 <t t-if="doc.verifactu_enabled and doc.verifactu_qr">
                                     <div style="display:inline-block; text-align:center;">
