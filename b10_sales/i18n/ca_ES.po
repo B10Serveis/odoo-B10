@@ -14,6 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+"Language: ca_ES\n"
 
 #. module: b10_sales
 #: model:ir.model.fields,field_description:b10_sales.field_sale_order__allowed_pay_journal_ids
@@ -40,6 +41,11 @@ msgstr "IBAN:"
 #: model:ir.model.fields,field_description:b10_sales.field_sale_order__payment_journal_id
 msgid "Payment Journal"
 msgstr "Diari de pagament"
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Vendes. Bestreta pagament factura"
 
 #. module: b10_sales
 #: model:ir.model,name:b10_sales.model_sale_order
