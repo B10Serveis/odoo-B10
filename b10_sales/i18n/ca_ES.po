@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+"Language: ca_ES\n"
 
 #. module: b10_sales
 #: model:ir.actions.report,print_report_name:b10_sales.action_report_comanda_batista
