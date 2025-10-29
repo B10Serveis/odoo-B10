@@ -59,6 +59,33 @@ class SaleOrder(models.Model):
         "this allows you to chose one of the accounts for paying the sale order.",
     )
 
+    @api.constrains("payment_journal_id")
+    def _check_nonempty_payment_journal(self):
+        bank_transfer = self.env.ref(
+            "b10_account.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if not bank_transfer:
+            return  # the constraint only applies to bank transfer payments
+
+        for order in self:
+            payment_mode = order.payment_mode_id
+            assert (not payment_mode or not payment_mode.bank_account_link
+                    or payment_mode.bank_account_link in ["fixed", "variable"])
+            if (
+                    order.payment_journal_id
+                    or not payment_mode
+                    or payment_mode.payment_method_id != bank_transfer
+                    or (payment_mode.bank_account_link == "fixed"
+                        and not payment_mode.fixed_journal_id)
+                    or (payment_mode.bank_account_link == "variable"
+                        and not payment_mode.variable_journal_ids)
+            ):
+                continue
+            raise models.ValidationError(
+                _("A payment journal must be set with bank transfer payment modes "
+                  "that have associated bank accounts."))
+
     @api.onchange("payment_mode_id")
     def _set_payment_journal(self):
         payment_mode = self.payment_mode_id
