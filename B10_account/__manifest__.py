@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.4.0",
+    "version": "18.0.1.5.0",
     "depends": ["account", 
                 "b10_mail", 
                 "l10n_es_partner",
