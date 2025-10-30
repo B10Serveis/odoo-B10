@@ -81,6 +81,11 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [IMP] Invoice Analysis: afegida la mesura "Total Price with Taxes" a la vista pivot.
 
+18.0.1.5.0 (2025-10-30)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Millor selecció i comprovació del banc destinatari de la factura en emprar un mode de pagament per transferència bancària (codi `bank_transfer`).
+
 
 Bug Tracker
 ===========
@@ -99,6 +104,7 @@ Contributors
 ~~~~~~~~~~~~
 * Joan Llimiñana i Sabaté <joan@batista10.cat>
 * Pol Comas i Romero <pol@batista10.cat>
+* Ivan Vilata i Balaguer <ivan@batista10.cat>
 
 Other credits
 ~~~~~~~~~~~~~
