@@ -51,12 +51,6 @@ Changelog
 * [ADD] Creat a V.15.
 * [ADD] Assigna el 'Banc Receptor' automàticament si en una factura assignem una forma de pagament que te un diari bancari fix.
 
-15.0.1.0.1 (2025-10-27)
-~~~~~~~~~~~~~~~~~~~~~~~
-
-* [FIX] Ús de camp inexistent a Odoo 15 per a ordenar comptes de pagament de factura.
-* [FIX] Dependència mancant sobre `account_payment_partner` en Odoo 15.
-
 Bug Tracker
 ===========
 
