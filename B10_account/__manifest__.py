@@ -8,6 +8,7 @@
     "depends": [
         "account",
         "account_payment_partner",  # account.move:payment_mode_id
+        "Dissenys_generics",  # account_payment_method_bank_transfer (ref)
     ],
     "license": "AGPL-3",
     "application": True,
