@@ -15,6 +15,36 @@ class B10AccountMove(models.Model):
         # Per la resta, deleguem al mètode original
         return super(B10AccountMove, self)._get_mail_template()
     
+    # Similar to `b10_sales:sale.order:_check_nonempty_payment_journal()`,
+    # but checking the actual value as the field has no domain restrictions.
+    @api.constrains("partner_bank_id")
+    def _check_transfer_partner_bank(self):
+        bank_transfer = self.env.ref(
+            "b10_account.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if not bank_transfer:
+            return  # the constraint only applies to bank transfer payments
+
+        for move in self:
+            payment_mode = move.payment_mode_id
+            assert (not payment_mode or not payment_mode.bank_account_link
+                    or payment_mode.bank_account_link in ["fixed", "variable"])
+            partner_bank = move.partner_bank_id
+            if (
+                    not payment_mode
+                    or payment_mode.payment_method_id != bank_transfer
+                    or (payment_mode.bank_account_link == "fixed"
+                        and partner_bank == payment_mode.fixed_journal_id.bank_account_id)
+                    or (payment_mode.bank_account_link == "variable"
+                        and partner_bank
+                        and partner_bank in payment_mode.variable_journal_ids.mapped("bank_account_id"))
+            ):
+                continue
+            raise models.ValidationError(
+                _("A recipient bank must be set which is valid for "
+                  "the current bank transfer payment mode."))
+
     # Similar to `b10_sales:sale.order:_set_payment_journal()`.
     @api.onchange("payment_mode_id")
     def _onchange_payment_mode_id_b10(self):
