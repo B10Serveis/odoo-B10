@@ -1,22 +1,37 @@
-from odoo import api, models, fields, _
+from odoo import api, exceptions, models, fields, _
 
 
 class B10AccountMove(models.Model):
     _inherit = "account.move"
 
+    # Similar to `b10_sales:sale.order:_set_payment_journal()`.
     @api.onchange("payment_mode_id")
     def _onchange_payment_mode_id_b10(self):
-        for move in self:
-            # Que fem si la factura ja te ficat un num de compte i canviem el mètode de pagament?
-            if (
-                move.payment_mode_id.payment_method_id.code == "bank_transfer"
-                and move.payment_mode_id.bank_account_link == "fixed"
-                and move.payment_mode_id.fixed_journal_id
-            ):
-                if move.payment_mode_id.fixed_journal_id.bank_account_id.acc_number:
-                    move.partner_bank_id = (
-                        move.payment_mode_id.fixed_journal_id.bank_account_id
-                    )
+        payment_mode = self.payment_mode_id
+        old_partner_bank = self.partner_bank_id
+
+        assert (not payment_mode or not payment_mode.bank_account_link
+                or payment_mode.bank_account_link in ["fixed", "variable"])
+
+        if not payment_mode or not payment_mode.bank_account_link:
+            new_partner_bank = False
+        elif payment_mode.bank_account_link == "fixed":
+            new_partner_bank = payment_mode.fixed_journal_id.bank_account_id
+        elif not payment_mode.variable_journal_ids:
+            new_partner_bank = False
+        elif not old_partner_bank:
+            new_partner_bank = payment_mode.variable_journal_ids[0].bank_account_id
+        elif old_partner_bank in payment_mode.variable_journal_ids.bank_account_id:
+            new_partner_bank = old_partner_bank
+        else:  # old bank not among variable ones
+            new_partner_bank = payment_mode.variable_journal_ids[0].bank_account_id
+
+        if old_partner_bank and new_partner_bank != old_partner_bank:
+            raise exceptions.ValidationError(
+                _("The current recipient bank cannot be used "
+                  "with the selected payment mode; "
+                  "please unset the bank first if you are sure."))
+        self.partner_bank_id = new_partner_bank
 
     @api.depends("bank_partner_id", "payment_mode_id")
     def _compute_partner_bank_id(self):
