@@ -38,3 +38,10 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Millor selecció i comprovació del banc destinatari de la factura en emprar un mode de pagament per transferència bancària (codi `bank_transfer`).
+
+18.0.1.5.1 (2025-10-31)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Dependència mancant sobre `sale_stock`.
+* [IMP] Separació de la documentació en components, correccions diverses.
+
