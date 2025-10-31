@@ -59,14 +59,44 @@ class SaleOrder(models.Model):
         "this allows you to chose one of the accounts for paying the sale order.",
     )
 
+    @api.constrains("payment_journal_id")
+    def _check_nonempty_payment_journal(self):
+        bank_transfer = self.env.ref(
+            "b10_account.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if not bank_transfer:
+            return  # the constraint only applies to bank transfer payments
+
+        for order in self:
+            payment_mode = order.payment_mode_id
+            assert (not payment_mode or not payment_mode.bank_account_link
+                    or payment_mode.bank_account_link in ["fixed", "variable"])
+            if (
+                    order.payment_journal_id
+                    or not payment_mode
+                    or payment_mode.payment_method_id != bank_transfer
+                    or (payment_mode.bank_account_link == "fixed"
+                        and not payment_mode.fixed_journal_id)
+                    or (payment_mode.bank_account_link == "variable"
+                        and not payment_mode.variable_journal_ids)
+            ):
+                continue
+            raise models.ValidationError(
+                _("A payment journal must be set with bank transfer payment modes "
+                  "that have associated bank accounts."))
+
     @api.onchange("payment_mode_id")
     def _set_payment_journal(self):
         payment_mode = self.payment_mode_id
         old_payment_journal = self.payment_journal_id
+
+        assert (not payment_mode or not payment_mode.bank_account_link
+                or payment_mode.bank_account_link in ["fixed", "variable"])
+
         if not payment_mode or not payment_mode.bank_account_link:
-            return  # new sale order
-        assert payment_mode.bank_account_link in ["fixed", "variable"]
-        if payment_mode.bank_account_link == "fixed":
+            new_payment_journal = False
+        elif payment_mode.bank_account_link == "fixed":
             new_payment_journal = payment_mode.fixed_journal_id
         elif not payment_mode.variable_journal_ids:
             new_payment_journal = False
@@ -83,6 +113,19 @@ class SaleOrder(models.Model):
                   "with the selected payment mode; "
                   "please unset the journal first if you are sure."))
         self.payment_journal_id = new_payment_journal
+
+    def _add_payment_to_invoice_vals(self, invoice_vals):
+        self.ensure_one()
+        if payment_mode := self.payment_mode_id:
+            invoice_vals["payment_mode_id"] = payment_mode.id
+        if payment_journal := self.payment_journal_id:
+            invoice_vals["partner_bank_id"] = payment_journal.bank_account_id.id
+
+    # Set invoice bank account if payment journal is set in sale order.
+    def _prepare_invoice(self):
+        invoice_vals = super()._prepare_invoice()
+        self._add_payment_to_invoice_vals(invoice_vals)
+        return invoice_vals
 
     show_product_image = fields.Boolean("Show product image", required=False)
 

@@ -134,6 +134,12 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [FIX] Establiment de diari de pagament durant creació de comanda de venda.
 
+18.0.1.5.0 (2025-10-30)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [FIX] Es comprova el diari de pagament en treure el mode de pagament de la comada de venda.
+* [IMP] No es permet un diari de pagament buit si la comanda té un mode de pagament per transferència bancària amb comptes associats.
+* [IMP] S'estableix a la factura creada des de la comanda de venda el mode i compte de pagament, si estan establerts a la comanda.
+
 Bug Tracker
 ===========
 
