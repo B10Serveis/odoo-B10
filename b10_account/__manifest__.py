@@ -14,6 +14,7 @@
                 "l10n_es_edi_verifactu",
                 "report_qweb_element_page_visibility", # Perque el QR surti només a la primera pàgina
                 "account_payment_partner",  # account.move:payment_mode_id
+                "sale_stock",  # sale.order.line:move_ids
                 ],
     "license": "AGPL-3",
     "application": True,
