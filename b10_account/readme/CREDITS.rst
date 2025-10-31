@@ -1,4 +1,1 @@
-
-The development of this module has been financially supported by:
-
-* Batista10
+El desenvolupament ha estat finançat per Batista10.
