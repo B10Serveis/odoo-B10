@@ -4,9 +4,10 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "15.0.1.0.1",
+    "version": "15.0.1.1.0",
     "depends": [
         "sale",
+        "account_payment_sale",  # account.move:payment_mode_id
         "Dissenys_generics",  # account_payment_method_bank_transfer (ref), reports
     ],
     "license": "AGPL-3",

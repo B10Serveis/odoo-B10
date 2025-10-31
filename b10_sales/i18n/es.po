@@ -7,13 +7,22 @@ msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-14 14:15+0000\n"
-"PO-Revision-Date: 2025-10-16 10:28+0200\n"
+"PO-Revision-Date: 2025-10-29 10:54+0100\n"
 "Last-Translator: Ivan Vilata i Balaguer <ivan@batista10.cat>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+"Language: es\n"
+
+#. module: b10_sales
+#: code:addons/b10_sales/models/sale_order.py:0
+#, python-format
+msgid ""
+"A payment journal must be set with bank transfer payment modes that have "
+"associated bank accounts."
+msgstr "Se debe establecer un diario de pago al usar modos de pago por transferencia bancaria que tengan cuentas bancarias asociadas."
 
 #. module: b10_sales
 #: model:ir.model.fields,field_description:b10_sales.field_sale_order__allowed_pay_journal_ids
@@ -40,6 +49,11 @@ msgstr "IBAN:"
 #: model:ir.model.fields,field_description:b10_sales.field_sale_order__payment_journal_id
 msgid "Payment Journal"
 msgstr "Diario de pago"
+
+#. module: b10_sales
+#: model:ir.model,name:b10_sales.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Pago anticipado para factura de ventas"
 
 #. module: b10_sales
 #: model:ir.model,name:b10_sales.model_sale_order
