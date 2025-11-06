@@ -5,7 +5,6 @@
     'summary': ('Creation of account groups, general chart of accounts'
                 ' and Andorran taxes (IGI, IRPF)'),
     'version': '17.0.1.0.0',
-    'icon': '/account/static/description/l10n.png',
     'countries': ['ad'],
     # TODO: Add ", Odoo Community Association (OCA)" when part of OCA.
     'author': 'Batista10',
