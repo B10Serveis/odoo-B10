@@ -2,8 +2,8 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 {
     'name': 'Andorra - Accounting',
-    'summary': ('Creació de grups comptables, Pla General Comptable'
-                ' i taxes andorranes (IGI, IRPF)'),
+    'summary': ('Creation of account groups, general chart of accounts'
+                ' and Andorran taxes (IGI, IRPF)'),
     'version': '17.0.1.0.0',
     'icon': '/account/static/description/l10n.png',
     'countries': ['ad'],
@@ -14,12 +14,12 @@
     'website': 'https://batista10.cat',
     'category': 'Accounting/Localizations/Account Charts',
     'description': """
-Andorra Comptes Comptables
-==========================
+Andorran Charts of Accounts
+===========================
 
-    * Creació de grups comptables
-    * Creació del Pla General Comptable
-    * Creació de taxes andorranes (IGI, IRPF)
+    * Creation of account groups
+    * Creation of general chart of accounts
+    * Creation of Andorran taxes (IGI, IRPF)
 """,
     'depends': [
         'account',
