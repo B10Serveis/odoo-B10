@@ -8,14 +8,14 @@ class AccountTax(models.Model):
 
     l10n_ad_exempt_reason = fields.Selection(
         selection=[
-            ("E1", "No exempt"),
+            ("E1", "Not exempt"),
         ],
         string="Exempt Reason (Andorra)",
     )
     l10n_ad_type = fields.Selection(
         selection=[
-            ("subjecte", "Subjecte"),
-            ("retencio", "Retenció"),
+            ("subjecte", "Subject"),
+            ("retencio", "Withholding"),
         ],
         string="Tax Type (Andorra)", default="subjecte",
     )
