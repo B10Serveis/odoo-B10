@@ -158,6 +158,11 @@ Changelog
 
 * [ADD] Afegim codi python a account.payment.method per fer disponible bank_transfer per a tots els diaris de tipus bancari.  
 
+17.0.1.14.0 (2025-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Canviem la dependència del mòdul l10n_es_edi_verifactu a l10n_es_verifactu_oca.
+
 
 Bug Tracker
 ===========
