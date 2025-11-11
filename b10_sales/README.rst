@@ -46,6 +46,11 @@ Changelog
 * [IMP] No es permet un diari de pagament buit si la comanda té un mode de pagament per transferència bancària amb comptes associats.
 * [IMP] S'estableix a la factura creada des de la comanda de venda el mode i compte de pagament, si estan establerts a la comanda.
 
+15.0.1.1.1 (2025-11-11)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] No es comprova el diari de pagament de la comanda de venda en canviar a un mode de pagament que no és per transferència bancària.
+
 Bug Tracker
 ===========
 
