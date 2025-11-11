@@ -5,17 +5,18 @@
     "website": "https://www.batista10.cat",
     "category": "Personalization",
     "version": "18.0.1.5.1",
-    "depends": ["account", 
-                "b10_mail", 
-                "l10n_es_partner",
-                "l10n_es_partner_mercantil", 
-                "account_payment_sale", 
-                "b10_settings_hub",
-                "l10n_es_edi_verifactu",
-                "report_qweb_element_page_visibility", # Perque el QR surti només a la primera pàgina
-                "account_payment_partner",  # account.move:payment_mode_id
-                "sale_stock",  # sale.order.line:move_ids
-                ],
+    "depends": [
+        "account",
+        "b10_mail",
+        "l10n_es_partner",
+        "l10n_es_partner_mercantil",
+        "account_payment_sale",
+        "b10_settings_hub",
+        "l10n_es_verifactu_oca",
+        "report_qweb_element_page_visibility",  # Perque el QR surti només a la primera pàgina
+        "account_payment_partner",  # account.move:payment_mode_id
+        "sale_stock",  # sale.order.line:move_ids
+    ],
     "license": "AGPL-3",
     "application": True,
     "data": [

@@ -93,6 +93,11 @@ Changelog
 * [FIX] Dependència mancant sobre `sale_stock`.
 * [IMP] Separació de la documentació en components, correccions diverses.
 
+18.0.1.5.1 (2025-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Canviem la dependència del mòdul l10n_es_edi_verifactu a l10n_es_verifactu_oca.
+
 
 Bug Tracker
 ===========
