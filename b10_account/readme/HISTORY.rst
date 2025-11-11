@@ -50,3 +50,8 @@
 
 * [CHA] Canviem la dependència del mòdul l10n_es_edi_verifactu a l10n_es_verifactu_oca.
 
+18.0.1.5.3 (2025-11-11)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] No es comprova el banc destinatari de la factura en canviar a un mode de pagament que no és per transferència bancària.
+
