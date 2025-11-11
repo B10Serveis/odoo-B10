@@ -136,6 +136,11 @@ Changelog
 
 * [ADD] QR Verifactu a Factura.
 
+16.0.1.11.7 (2025-11-11)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Ajust mida QR Verifactu a Factura.
+
 Bug Tracker
 ===========
 
