@@ -67,7 +67,16 @@ class B10AccountMove(models.Model):
         else:  # old bank not among variable ones
             new_partner_bank = payment_mode.variable_journal_ids[0].bank_account_id
 
-        if old_partner_bank and new_partner_bank != old_partner_bank:
+        is_bank_transfer = False
+        bank_transfer = self.env.ref(
+            "b10_account.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if bank_transfer and payment_mode and payment_mode.payment_method_id == bank_transfer:
+            # The check only applies to bank transfer payments.
+            is_bank_transfer = True
+
+        if is_bank_transfer and old_partner_bank and new_partner_bank != old_partner_bank:
             raise exceptions.ValidationError(
                 _("The current recipient bank cannot be used "
                   "with the selected payment mode; "

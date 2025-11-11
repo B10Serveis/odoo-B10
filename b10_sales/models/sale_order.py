@@ -107,7 +107,16 @@ class SaleOrder(models.Model):
         else:  # old journal not among variable ones
             new_payment_journal = payment_mode.variable_journal_ids[0]
 
-        if old_payment_journal and new_payment_journal != old_payment_journal:
+        is_bank_transfer = False
+        bank_transfer = self.env.ref(
+            "b10_account.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if bank_transfer and payment_mode and payment_mode.payment_method_id == bank_transfer:
+            # The check only applies to bank transfer payments.
+            is_bank_transfer = True
+
+        if is_bank_transfer and old_payment_journal and new_payment_journal != old_payment_journal:
             raise exceptions.ValidationError(
                 _("The current payment journal cannot be used "
                   "with the selected payment mode; "
