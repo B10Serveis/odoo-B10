@@ -4,8 +4,8 @@
     "name": "POS Choose Product then Search",
     "summary": ("Makes POS activate the search box again"
                 " right after clicking on a product."),
-    "version": "18.0.0.0.0",
-    "development_status": "Alpha",
+    "version": "18.0.0.9.0",
+    "development_status": "Beta",
     "category": "Point of Sale",
     "website": "https://batista10.cat/",
     "author": "Batista10",
