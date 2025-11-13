@@ -1,4 +1,12 @@
+*~
+
 __pycache__/
 *.pyc
+
+*.mo
+
+.dbeaver/
+.idea/
+.vscode/settings.json
 
 .gitignore
