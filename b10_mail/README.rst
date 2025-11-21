@@ -44,7 +44,8 @@ Changelog
 =========
 
 18.0.1.0.0 (2025-08-05)
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~~
+
 * [ADD] Primer llançament: override de `mail.mail_notification_layout` per a
   desbranding d’emails.
 
