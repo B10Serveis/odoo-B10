@@ -70,8 +70,8 @@ Changelog
 
 * [ADD] Afegir plantilla Pendent de pagament.
 
-15.0.X.Y.Z+1 (2025-11-21)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+15.0.1.3.3 (2025-11-21)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Eliminat estil de mida zero en separador de peu de plantilla (per a evitar disparadors d'spam per text invisible com a Spamassassin).
 
