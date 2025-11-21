@@ -69,8 +69,8 @@ Changelog
 
 * [ADD] Afegir plantilla Entrega.
 
-17.0.X.Y.Z+1 (2025-11-21)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+17.0.1.5.3 (2025-11-21)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Eliminat estil de mida zero en separador de peu de plantilla (per a evitar disparadors d'spam per text invisible com a Spamassassin).
 
