@@ -18,7 +18,7 @@
 						<tr>
 							<td valign="center">
 								<hr width="100%"
-									style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 10px 0px;" />
+									style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;min-height:1px;line-height:0; margin: 10px 0px;" />
 							</td>
 						</tr>
 						<tr>
@@ -64,7 +64,7 @@
 						<tr>
 							<td valign="center">
 								<hr width="100%"
-									style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin: 10px 0px;" />
+									style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;min-height:1px;line-height:0;margin: 10px 0px;" />
 								<p t-if="subtype_internal"
 									style="background-color: #f2dede; padding: 5px; margin-bottom: 16px; font-size: 13px;">
 									<strong>Internal communication</strong>
@@ -81,7 +81,7 @@
 			<xpath expr="//body/div/div[4]" position="replace">
 				<div style="display:none; margin-top:32px;">
 					<hr width="100%"
-						style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 4px 0px;" />
+						style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;min-height:1px;line-height:0; margin: 16px 0px 4px 0px;" />
 					<b t-out="company.name" style="font-size:11px;" />
 					<br />
 					<p style="color: #999999; margin-top:2px; font-size:11px;">
