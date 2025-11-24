@@ -146,6 +146,11 @@ Changelog
 
 * [IMP] Ajustos QR Verifactu a Factura.
 
+15.0.1.12.10 (2025-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegim codi python a account.payment.method per fer disponible bank_transfer per a tots els diaris de tipus bancari.  
+
 Bug Tracker
 ===========
 
