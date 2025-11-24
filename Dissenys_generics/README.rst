@@ -141,6 +141,11 @@ Changelog
 
 * [CHA] Ajust mida QR Verifactu a Factura.
 
+16.0.1.12.7 (2025-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegim codi python a account.payment.method per fer disponible bank_transfer per a tots els diaris de tipus bancari.  
+
 Bug Tracker
 ===========
 
