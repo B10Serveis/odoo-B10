@@ -6,7 +6,7 @@
                 <t t-set="data_report_margin_top"
                     t-value="30"/>
                 <t t-set="data_report_header_spacing"
-                    t-value="30"/>
+                    t-value="25"/>
                 <t t-set="data_report_margin_bottom"
                     t-value="25"/>
                 <t t-foreach="docs"
@@ -113,7 +113,7 @@
                 <br/>
                 <br/>
                 <div class="container"
-                    style="margin-bottom:1em; padding-top:40px;">
+                    style="margin-bottom:1em; padding-top:50px;">
                     <!-- Client i Document -->
                     <div class="row"
                         id="b10_docinfo">

@@ -103,6 +103,11 @@ Changelog
 
 * [FIX] No es comprova el banc destinatari de la factura en canviar a un mode de pagament que no és per transferència bancària.
 
+18.0.1.6.3 (2025-11-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Mida Header de Factura per QR Verifactu.
+
 
 Bug Tracker
 ===========
