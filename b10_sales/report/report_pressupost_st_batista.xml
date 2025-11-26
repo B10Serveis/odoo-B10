@@ -71,9 +71,9 @@
                                 <span t-if="company.city"
                                     t-field="company.city"/>
                                 <span> (</span>
-                                    <t t-if="company.state_id.original_name">
-                                        <span t-esc="company.state_id.original_name"/>
-                                    </t>
+                                <t t-if="company.state_id.original_name">
+                                    <span t-esc="company.state_id.original_name"/>
+                                </t>
                                 <span>)</span>
                                 <br/>
                                 <span t-if="company.phone">Tel: <span t-field="company.phone"/>
@@ -92,7 +92,7 @@
             <!-- Page -->
             <div class="article">
                 <div class="container"
-                    style="margin-bottom:1em; padding-top:40px;">
+                    style="margin-bottom:1em; padding-top:50px;">
 
                     <!-- Client i Document -->
                     <div class="row"

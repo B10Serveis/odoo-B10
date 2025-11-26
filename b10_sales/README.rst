@@ -145,6 +145,11 @@ Changelog
 
 * [FIX] No es comprova el diari de pagament de la comanda de venda en canviar a un mode de pagament que no és per transferència bancària.
 
+18.0.1.6.1 (2025-11-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Padding per separar contingut del header a tots els documents de venda.
+
 Bug Tracker
 ===========
 
