@@ -55,8 +55,13 @@
 
 * [FIX] No es comprova el banc destinatari de la factura en canviar a un mode de pagament que no és per transferència bancària.
 
-O.0.X.Y.Z+1 (2025-11-28)
-~~~~~~~~~~~~~~~~~~~~~~~~
+18.0.1.6.3 (2025-11-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Mida Header de Factura per QR Verifactu.
+
+18.0.1.6.4 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
