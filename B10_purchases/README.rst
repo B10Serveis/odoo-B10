@@ -120,8 +120,8 @@ Changelog
 
 * [FIX] Camp de contrasenya editable o no en vista de proveïdor segons grups.
 
-O.0.X.Y.Z+1 (2025-11-28)
-~~~~~~~~~~~~~~~~~~~~~~~~
+17.0.1.3.4 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
