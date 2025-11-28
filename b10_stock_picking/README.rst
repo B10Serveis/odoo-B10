@@ -63,8 +63,8 @@ Changelog
 * [ADD] Informe QWeb **report_entrega_batista** amb disseny B10 per a stock pickings.  
 * [ADD] Plantilla HTML **entrega_email_template** amb report adjunt.
 
-O.0.X.Y.Z+1 (2025-11-28)
-~~~~~~~~~~~~~~~~~~~~~~~~
+18.0.1.0.1 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
