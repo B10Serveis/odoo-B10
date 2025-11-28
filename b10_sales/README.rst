@@ -150,8 +150,8 @@ Changelog
 
 * [CHA] Padding per separar contingut del header a tots els documents de venda.
 
-O.0.X.Y.Z+1 (2025-11-28)
-~~~~~~~~~~~~~~~~~~~~~~~~
+18.0.1.6.2 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
