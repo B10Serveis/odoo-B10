@@ -160,6 +160,11 @@ Changelog
 
 * [CHA] Ajustat padding per separar contingut del header a documents de venda.
 
+18.0.1.6.4 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Ajustades mides header a documents de venda.
+
 Bug Tracker
 ===========
 
