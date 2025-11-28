@@ -152,7 +152,7 @@
                                                         <td valign="middle"
                                                             align="left"
                                                             style="font-size: 14px; font-weight: bold;">
-                                                            <t t-out="user.company_id.name or '-'"
+                                                            <t t-out="object.company_id.name or '-'"
                                                                 data-oe-t-inline="true"
                                                                 contenteditable="false">
                                                             </t>
@@ -177,14 +177,14 @@
                                                                     contenteditable="false">
                                                                 </a>
                                                             </t>
-                                                            <t t-if="user.company_id.website"
+                                                            <t t-if="object.company_id.website"
                                                                 data-oe-t-group="1"
                                                                 data-oe-t-group-active="true"
                                                                 data-oe-t-inline="true">
                                                                     |
-                                                                <a t-attf-href="'%s' % {{ user.company_id.website }}"
+                                                                <a t-attf-href="'%s' % {{ object.company_id.website }}"
                                                                     style="text-decoration:none; color: #454748;"
-                                                                    t-out="user.company_id.website or '-'"
+                                                                    t-out="object.company_id.website or '-'"
                                                                     contenteditable="false">
                                                                 </a>
                                                             </t>
@@ -213,4 +213,9 @@
             </table>
         </field>
     </record>
+    <!-- Force using the body above for the template. -->
+    <!-- WARNING: On module update, this will undo any manual changes to the template,
+         regardless of its data entry `noupdate` status. -->
+    <function name="reset_template" model="mail.template"
+              eval="[ref('plantilles_email.comanda_email_template')]"/>
 </odoo>
