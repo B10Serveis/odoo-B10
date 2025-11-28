@@ -113,6 +113,11 @@ Changelog
 
 * [FIX] Correcció d'error en camp de company primary color.
 
+O.0.X.Y.Z+1 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
+
 Bug Tracker
 ===========
 
