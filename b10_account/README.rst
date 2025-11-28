@@ -113,6 +113,11 @@ Changelog
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
+18.0.1.6.5 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Ajustades mides de header a factura.
+
 
 Bug Tracker
 ===========
