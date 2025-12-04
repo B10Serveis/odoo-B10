@@ -151,6 +151,11 @@ Changelog
 
 * [CHA] Ajustada mida del header que provocava logo tallat en FredOlive.  
 
+16.0.1.12.9 (2025-12-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Augmentada amplada maxima del logo a factures, els logos allargats podien quedar petits.  
+
 Bug Tracker
 ===========
 
