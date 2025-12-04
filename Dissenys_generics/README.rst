@@ -146,6 +146,11 @@ Changelog
 
 * [ADD] Afegim codi python a account.payment.method per fer disponible bank_transfer per a tots els diaris de tipus bancari.  
 
+16.0.1.12.8 (2025-12-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Ajustada mida del header que provocava logo tallat en FredOlive.  
+
 Bug Tracker
 ===========
 
