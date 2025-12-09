@@ -61,6 +61,11 @@ Changelog
 * [ADD] **Vendor Reference** del PO = número de la SO (`partner_ref = SO.name`).  
 * [ADD] **Warnings** d’onchange a la SO per informar que no hi ha sincronització cap al PO en canvis de qty/preu/impostos/afegir producte.  
 
+O.0.X.Y.Z+1 (2025-12-09)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Descripcions més entenedores en la pantalla de configuració.
+
 Bug Tracker
 ===========
 
@@ -77,6 +82,7 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 * Pol Comas i Romero <pol@batista10.cat>
+* Ivan Vilata i Balaguer <ivan@batista10.cat>
 
 Other credits
 ~~~~~~~~~~~~~
