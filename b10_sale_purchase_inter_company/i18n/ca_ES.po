@@ -6,15 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-14 06:46+0000\n"
-"PO-Revision-Date: 2025-08-14 06:46+0000\n"
-"Last-Translator: <pol@batista10.cat>\n"
+"POT-Creation-Date: 2025-12-09 10:50+0000\n"
+"PO-Revision-Date: 2025-12-09 12:09+0100\n"
+"Last-Translator: Ivan Vilata i Balaguer <ivan@batista10.cat>\n"
 "Language-Team: \n"
 "Language: ca_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: b10_sale_purchase_inter_company
+#: model_terms:ir.ui.view,arch_db:b10_sale_purchase_inter_company.res_config_settings_view_form_sale_purchase_ic
+msgid "Allow intercompany sales to this company to create purchases in it"
+msgstr "Permetre a les vendes interempresa cap aquesta empresa de crear-hi compres"
 
 #. module: b10_sale_purchase_inter_company
 #: model:ir.model,name:b10_sale_purchase_inter_company.model_res_company
@@ -78,11 +83,6 @@ msgstr "Línia de la comanda de compra"
 #: model:ir.model.fields,field_description:b10_sale_purchase_inter_company.field_res_config_settings__purchase_auto_validation
 msgid "Purchase Orders Auto Validation"
 msgstr "Validació automàtica de comandes de compra"
-
-#. module: b10_sale_purchase_inter_company
-#: model_terms:ir.ui.view,arch_db:b10_sale_purchase_inter_company.res_config_settings_view_form_sale_purchase_ic
-msgid "Purchase from sale"
-msgstr "Compra des de venda"
 
 #. module: b10_sale_purchase_inter_company
 #: model_terms:ir.ui.view,arch_db:b10_sale_purchase_inter_company.res_config_settings_view_form_sale_purchase_ic
@@ -158,6 +158,11 @@ msgid ""
 msgstr ""
 "Aquesta comanda de compra s'ha creat automàticament des d'una comanda de "
 "venda intercompany (%s)."
+
+#. module: b10_sale_purchase_inter_company
+#: model_terms:ir.ui.view,arch_db:b10_sale_purchase_inter_company.res_config_settings_view_form_sale_purchase_ic
+msgid "User to be set as creator of the purchases"
+msgstr "Usuari a establir com a creador de les compres"
 
 #. module: b10_sale_purchase_inter_company
 #. odoo-python
