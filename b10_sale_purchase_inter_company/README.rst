@@ -23,12 +23,13 @@ Batista10 - Sale/Purchase IC
 |badge1| |badge2| |badge3| |badge4|
 
 Aquest mòdul és útil si hi ha diverses companyies en la mateixa base de dades d’Odoo i aquestes companyies es venen béns o serveis entre elles.
-Permet crear automàticament una comanda de compra (PO) a la companyia B a partir d’una comanda de venda (SO) feta a la companyia A.
+Permet crear automàticament una comanda de compra (PO) a la companyia B a partir d’una comanda de venda (SO) feta des de la companyia A.
 
 Imagina que tens la companyia A i la companyia B en la mateixa base de dades d’Odoo:
-    - La companyia A ven productes o serveis a la companyia B.
-    - La companyia A crea una comanda de venda (SO) amb la companyia B com a client.
-    - Aquest mòdul automatitza la creació de la comanda de compra (PO) a la companyia B amb la companyia A com a proveïdor.
+
+* La companyia A ven productes o serveis a la companyia B.
+* La companyia A crea una comanda de venda (SO) amb la companyia B com a client.
+* Aquest mòdul automatitza la creació de la comanda de compra (PO) a la companyia B, amb la companyia A com a proveïdor.
 
 **Table of contents**
 
@@ -39,12 +40,17 @@ Imagina que tens la companyia A i la companyia B en la mateixa base de dades d�
 Configuration notes
 ===================
 
-Per configurar aquest mòdul, cal: 
-#. Anar al menú *Configuració > Companyies > Companyies*. 
-#. Seleccionar una de les companyies. 
-#. Anar a la pestanya Inter-Company i, dins del grup Sale To Purchase, activar l’opció Purchase from sale (po_from_so).
-#. Si marques l’opció Purchase Orders Auto Validation a la configuració de la companyia B, aleshores, quan validis una comanda de venda (SO) a la companyia A amb la companyia B com a client, la comanda de compra (PO) es validarà automàticament a la companyia B amb la companyia A com a proveïdor.
+Per a permetre que la creació d’una comanda de venda a la companyia A cree una comanda de compra associada a la companyia B, cal fer-ho a la configuració de la companyia B:
 
+#. Escollir la companyia actual al menú superior d’Odoo (a la dreta, junt al nom d’usuari).
+#. Anar al menú *Configuració > Configuració General*.
+#. Sota la secció *Empreses*, apartat interempresa (*Inter Company*), sota *Venda / Compra* marcar l’opció primera, que habilita aquesta funció.
+#. El selector següent vos permetrà escollir un usuari que apareixerà com a creador d’aquestes comandes de compra. Si no n’escolliu cap, s’emprarà l’usuari que ha creat la comanda de venda. En qualsevol cas, caldrà que l’usuari emprat tinga permisos de creació de compres en aquesta companyia.
+#. Si marqueu l’opció de validació automàtica, quan valideu la comanda de venda a la companyia A amb la companyia B com a client, la comanda de compra es validarà automàticament a la companyia B.
+
+Caldrà repetir aquestes passes per a cada companyia on vulgueu admetre la creació d’aquest tipus de comandes de compra.
+
+**Important:** Habilitar per a una companyia l’opció de permetre la creació de comandes de compra associades a comandes de venda permetrà que açò es faça *des de qualsevol altra companyia* de l’Odoo (sempre que l’usuari creador tinga els permisos necessaris).
 
 Known issues / Roadmap
 ======================
