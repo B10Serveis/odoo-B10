@@ -1,0 +1,69 @@
+<odoo>
+    <data>
+        <!-- Reordena camps de marge per millorar visualització -->
+        <record id="view_form_product_margin"
+            model="ir.ui.view">
+            <field name="name">b10_product_margin_form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id"
+                ref="product.product_template_only_form_view"/>
+            <field name="arch"
+                type="xml">
+
+                <!-- Esborra el label original -->
+                <xpath expr="//label[@for='list_price']"
+                    position="replace">
+                </xpath>
+
+                <!-- Modificació de la vista del marge -->
+                <xpath expr="//div[@name='pricing']"
+                    position="replace">
+
+                    <!-- Primera linia: Preu de venda -->
+                    <field name="list_price"
+                        widget="monetary"
+                        options="{'currency_field': 'currency_id', 'field_digits': True}"
+                        on_change="1" />
+
+                    <!-- Segona linia: Impostos -->
+                    <field name="tax_string"
+                        field_id="tax_string_0"/>
+
+                    <!-- Tercera linia: Classificació de marge -->
+                    <field name="margin_classification_id"
+                        invisible="product_variant_count &gt; 1"
+                        can_create="True"
+                        can_write="True"
+                        field_id="margin_classification_id_0"/>
+
+                    <!-- Quarta linia (condicional): Preu teòric i botó de canvi de preu -->
+                    <label for="theoretical_price"
+                        invisible="margin_state == 'correct' or product_variant_count &gt; 1"/>
+                    <div invisible="margin_state == 'correct' or product_variant_count &gt; 1">
+                        <field name="theoretical_price"
+                            class="oe_inline"
+                            field_id="theoretical_price_0"/>
+                        <button name="use_theoretical_price"
+                            string="⇒ Incrementar el Precio"
+                            type="object"
+                            class="oe_link"
+                            invisible="margin_state != 'too_cheap'"
+                            help="Incrementar el Precio de Venta hasta el Precio Teórico"/>
+                        <button name="use_theoretical_price"
+                            string="⇒ Decrementar el Precio"
+                            type="object"
+                            class="oe_link"
+                            invisible="margin_state != 'too_expensive'"
+                            help="Decrementar el Precio de Venta hasta el Precio Teórico"/>
+                    </div>
+
+                    <!-- Camp invisible però necessari -->
+                    <field name="margin_state"
+                        invisible="1"
+                        field_id="margin_state_0"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
