@@ -25,3 +25,16 @@ B10_account/models/__pycache__/B10_account_move.cpython-39.pyc
 field_encryption/__pycache__/__init__.cpython-310.pyc
 field_encryption/models/__pycache__/__init__.cpython-310.pyc
 field_encryption/models/__pycache__/fields.cpython-310.pyc
+B10_account/__pycache__/__init__.cpython-310.pyc
+B10_account/models/__pycache__/__init__.cpython-310.pyc
+B10_account/models/__pycache__/account_invoice_report.cpython-310.pyc
+B10_account/models/__pycache__/B10_account_move.cpython-310.pyc
+Dissenys_generics/__pycache__/__init__.cpython-310.pyc
+Dissenys_generics/models/__pycache__/__init__.cpython-310.pyc
+Dissenys_generics/models/__pycache__/models.cpython-310.pyc
+plantilles_email/__pycache__/__init__.cpython-310.pyc
+plantilles_email/models/__pycache__/__init__.cpython-310.pyc
+plantilles_email/models/__pycache__/models.cpython-310.pyc
+state_original_name/__pycache__/__init__.cpython-310.pyc
+state_original_name/models/__pycache__/__init__.cpython-310.pyc
+state_original_name/models/__pycache__/state_original_name.cpython-310.pyc

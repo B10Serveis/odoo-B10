@@ -1726,7 +1726,7 @@ msgstr ""
 "        "
 
 #. module: plantilles_email
-#: model:mail.template,body_html:plantilles_email.pdening_payment_email_template
+#: model:mail.template,body_html:plantilles_email.pending_payment_email_template
 msgid ""
 "<table style=\"padding:16px 0 0 0;box-sizing:border-box;caption-side:"
 "bottom;padding-top: 16px; background-color: white; font-family:Verdana, "
@@ -2286,7 +2286,7 @@ msgstr ""
 
 #. module: plantilles_email
 #: model:mail.template,report_name:plantilles_email.factura_email_template
-#: model:mail.template,report_name:plantilles_email.pdening_payment_email_template
+#: model:mail.template,report_name:plantilles_email.pending_payment_email_template
 msgid "Invoice_{{ (object.ref or object.name or '-').replace('/','_') }}"
 msgstr "Factura_{{ (object.ref or object.name or '-').replace('/','_') }}"
 
@@ -2331,7 +2331,7 @@ msgid "Standard - Invoice Email Template"
 msgstr "Estandar - Email Factura"
 
 #. module: plantilles_email
-#: model:mail.template,name:plantilles_email.pdening_payment_email_template
+#: model:mail.template,name:plantilles_email.pending_payment_email_template
 msgid "Standard - Pending Payment Email Template"
 msgstr "Estandar - Plantilla de Pago pendiente"
 
@@ -2366,7 +2366,7 @@ msgid "{{ object.company_id.name }} Order ref. {{ object.name or 'n/a' }}"
 msgstr "{{ object.company_id.name }} Pedido ref. {{ object.name or 'n/a' }}"
 
 #. module: plantilles_email
-#: model:mail.template,subject:plantilles_email.pdening_payment_email_template
+#: model:mail.template,subject:plantilles_email.pending_payment_email_template
 msgid ""
 "{{ object.company_id.name }} Pending payment of Invoice {{ object.name or "
 "object.ref or 'n/a' }}"

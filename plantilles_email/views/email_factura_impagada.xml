@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <odoo>
-    <record id="pdening_payment_email_template"
+    <record id="pending_payment_email_template"
         model="mail.template">
         <field name="name">Standard - Pending Payment Email Template</field>
         <field name="model_id"
@@ -248,6 +248,7 @@
     <!-- Force using the body above for the template. -->
     <!-- WARNING: On module update, this will undo any manual changes to the template,
          regardless of its data entry `noupdate` status. -->
-    <function name="reset_template" model="mail.template"
-              eval="[ref('plantilles_email.pdening_payment_email_template')]"/>
+    <function name="reset_template"
+        model="mail.template"
+        eval="[ref('plantilles_email.pending_payment_email_template')]"/>
 </odoo>
