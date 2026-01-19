@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+kit_digital.access_kit_digital_logs_usuaris,access_kit_digital_logs_usuaris,kit_digital.model_kit_digital_logs_usuaris,,1,1,1,1

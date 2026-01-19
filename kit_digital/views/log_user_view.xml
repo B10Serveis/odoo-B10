@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<!-- Tree view -->
+	<record id="logs_usuaris_tree_view" model="ir.ui.view">
+		<field name="name">kit_digital.logs_usuaris.tree</field>
+		<field name="model">kit_digital.logs_usuaris</field>
+		<field name="arch" type="xml">
+			<tree string="LOGS de usuarios" multi_edit="1" duplicate="false">
+				<field name="user_name" optional="show" />
+				<field name="data_log" optional="show" />
+				<field name="status" optional="show" />
+				<field name="database_name" optional="show" />
+				<field name="ip_origin" optional="show" />				
+			</tree>
+		</field>
+	</record>
+
+	<!-- Search view -->
+	<record id="server_search_view" model="ir.ui.view">
+		<field name="name">kit_digital.logs_usuaris.search</field>
+		<field name="model">kit_digital.logs_usuaris</field>
+		<field name="arch" type="xml">
+			<search string="Fecha acceso">
+				<field name="data_log" string="Fecha"
+					filter_domain="[('data_log','ilike', self)]" />
+			</search>
+		</field>
+	</record>
+
+	<!-- Action -->
+	<record id="log_user_action" model="ir.actions.act_window">
+		<field name="name">Users</field>
+		<field name="res_model">kit_digital.logs_usuaris</field>
+		<field name="view_mode">tree</field>
+	</record>
+
+	<!--  Menu -->
+	<menuitem id="logs_usuaris_menu_action" name="LOGS Usuarios" parent="base.menu_users" action="log_user_action" sequence="1"/>
+</odoo>
