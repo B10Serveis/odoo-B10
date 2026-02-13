@@ -38,3 +38,7 @@ plantilles_email/models/__pycache__/models.cpython-310.pyc
 state_original_name/__pycache__/__init__.cpython-310.pyc
 state_original_name/models/__pycache__/__init__.cpython-310.pyc
 state_original_name/models/__pycache__/state_original_name.cpython-310.pyc
+acc_number_serveral_partners/__pycache__/__init__.cpython-310.pyc
+acc_number_serveral_partners/models/__pycache__/__init__.cpython-310.pyc
+acc_number_serveral_partners/models/__pycache__/models.cpython-310.pyc
+*.pyc
