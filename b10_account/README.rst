@@ -118,6 +118,12 @@ Changelog
 
 * [FIX] Ajustades mides de header a factura.
 
+18.0.1.7.5 (2026-02-16)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Modifica el filtre de 'Compte a pagar' perque mostri tots els comptes de tipus 'liability%'.
+
+
 
 Bug Tracker
 ===========

@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.6.5",
+    "version": "18.0.1.7.5",
     "depends": [
         "account",
         "b10_mail",
@@ -28,5 +28,6 @@
         "views/email_factura.xml",
         "views/invoice_report_pivot.xml",
         "data/account.payment.method.csv",
+        "views/partner_form_inherit.xml",
     ],
 }
