@@ -109,7 +109,7 @@
 
 
             <!-- Page -->
-            <div class="article">
+            <div class="article" t-att-data-oe-model="doc._name" t-att-data-oe-id="doc.id">
                 <!-- <br/> <br/> -->
                 <div class="container"
                     style="margin-bottom:1em; padding-top:40px;">

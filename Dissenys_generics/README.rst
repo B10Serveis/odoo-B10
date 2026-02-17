@@ -156,6 +156,11 @@ Changelog
 
 * [CHA] Augmentada amplada maxima del logo a factures, els logos allargats podien quedar petits.  
 
+16.0.1.12.10 (2026-02-17)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Modificat div article de Factura per evitar error que apareixia en Integrapirineus. 
+
 Bug Tracker
 ===========
 

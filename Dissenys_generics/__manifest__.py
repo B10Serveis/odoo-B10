@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.12.9",
+    "version": "16.0.1.12.10",
     "depends": [
         "base",
         "account_payment_partner",
