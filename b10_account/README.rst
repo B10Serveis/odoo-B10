@@ -123,6 +123,11 @@ Changelog
 
 * [ADD] Modifica el filtre de 'Compte a pagar' perque mostri tots els comptes de tipus 'liability%'.
 
+18.0.1.7.6 (2026-02-19)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'error al establir plantilla d'email de factura per defecte.
+
 
 
 Bug Tracker
