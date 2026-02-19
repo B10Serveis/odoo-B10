@@ -46,13 +46,17 @@ tots els productes es mostraran, i l'usuari pot canviar fàcilment els preus</p>
 <li><a class="reference internal" href="#section-4" id="toc-entry-7">18.0.1.3.0 (2025-08-08)</a></li>
 <li><a class="reference internal" href="#section-5" id="toc-entry-8">18.0.1.4.0 (2025-10-13)</a></li>
 <li><a class="reference internal" href="#section-6" id="toc-entry-9">18.0.1.4.1 (2025-10-14)</a></li>
+<li><a class="reference internal" href="#section-7" id="toc-entry-10">18.0.1.5.0 (2025-10-30)</a></li>
+<li><a class="reference internal" href="#section-8" id="toc-entry-11">18.0.1.5.1 (2025-11-11)</a></li>
+<li><a class="reference internal" href="#section-9" id="toc-entry-12">18.0.1.6.1 (2025-11-26)</a></li>
+<li><a class="reference internal" href="#section-10" id="toc-entry-13">18.0.1.6.2 (2025-11-28)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bug-tracker" id="toc-entry-10">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="toc-entry-11">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="toc-entry-12">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="toc-entry-13">Contributors</a></li>
-<li><a class="reference internal" href="#maintainers" id="toc-entry-14">Maintainers</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-14">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-15">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-16">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-17">Contributors</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-18">Maintainers</a></li>
 </ul>
 </li>
 </ul>
@@ -143,23 +147,49 @@ Block quote ends without a blank line; unexpected unindent.</div>
 <li>[FIX] Establiment de diari de pagament durant creació de comanda de venda.</li>
 </ul>
 </div>
+<div class="section" id="section-7">
+<h3><a class="toc-backref" href="#toc-entry-10">18.0.1.5.0 (2025-10-30)</a></h3>
+<ul class="simple">
+<li>[FIX] Es comprova el diari de pagament en treure el mode de pagament de la comada de venda.</li>
+<li>[IMP] No es permet un diari de pagament buit si la comanda té un mode de pagament per transferència bancària amb comptes associats.</li>
+<li>[IMP] S'estableix a la factura creada des de la comanda de venda el mode i compte de pagament, si estan establerts a la comanda.</li>
+</ul>
+</div>
+<div class="section" id="section-8">
+<h3><a class="toc-backref" href="#toc-entry-11">18.0.1.5.1 (2025-11-11)</a></h3>
+<ul class="simple">
+<li>[FIX] No es comprova el diari de pagament de la comanda de venda en canviar a un mode de pagament que no és per transferència bancària.</li>
+</ul>
+</div>
+<div class="section" id="section-9">
+<h3><a class="toc-backref" href="#toc-entry-12">18.0.1.6.1 (2025-11-26)</a></h3>
+<ul class="simple">
+<li>[CHA] Padding per separar contingut del header a tots els documents de venda.</li>
+</ul>
+</div>
+<div class="section" id="section-10">
+<h3><a class="toc-backref" href="#toc-entry-13">18.0.1.6.2 (2025-11-28)</a></h3>
+<ul class="simple">
+<li>[FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="bug-tracker">
-<h2><a class="toc-backref" href="#toc-entry-10">Bug Tracker</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-14">Bug Tracker</a></h2>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues">GitHub Issues</a>.
 Si us plau comprova si ja hi ha un issue abans de crear-ne un de nou.</p>
 </div>
 <div class="section" id="credits">
-<h2><a class="toc-backref" href="#toc-entry-11">Credits</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-15">Credits</a></h2>
 <div class="section" id="authors">
-<h3><a class="toc-backref" href="#toc-entry-12">Authors</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-16">Authors</a></h3>
 <ul class="simple">
 <li>Batista10</li>
 <li>GRAP</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h3><a class="toc-backref" href="#toc-entry-13">Contributors</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-17">Contributors</a></h3>
 <ul class="simple">
 <li>Sylvain LE GAL &lt;<a class="reference external" href="https://twitter.com/legalsylvain">https://twitter.com/legalsylvain</a>&gt;</li>
 <li>Marc Poch Mallandrich &lt;<a class="reference external" href="mailto:mpoch&#64;planetatic.com">mpoch&#64;planetatic.com</a>&gt;</li>
@@ -170,7 +200,7 @@ Si us plau comprova si ja hi ha un issue abans de crear-ne un de nou.</p>
 </ul>
 </div>
 <div class="section" id="maintainers">
-<h3><a class="toc-backref" href="#toc-entry-14">Maintainers</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-18">Maintainers</a></h3>
 <p>Aquest mòdul és mantingut per Batista10.</p>
 <a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
 <p>Este mòdul forma part del projecte

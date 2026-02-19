@@ -25,7 +25,7 @@ B10 Purchases
 Personalitzacions de compres per Batista10:  
 - **Supplier Platform Access**: pestanya “Access” al formulari de partner amb URL, usuari i contrasenya encriptada per a portals de proveïdor.  
 - **Grups exclusius**: usuaris amb rol **Password Manager** o **Password Reader**, s’assegura que no pertanyin als dos grups alhora.  
-- **Plantilles d’email**: templates personalitzats per a pressupostos i comandes (_quotation_ i _purchase order_) que s’apliquen en enviar per correu.  
+- **Plantilles d’email**: templates personalitzats per a pressupostos i comandes (_quotation_ i _purchase_order_) que s’apliquen en enviar per correu.  
 - **Informes QWeb**: dissenys “B10 Purchase Quotation” i “B10 Purchase Order” per a PDF de pressupostos i comandes amb dades mercantils i estils homogeni.  
 - **Seguretat**: permisos definits en `security/security.xml` perquè només els grups adequats accedeixin als camps i accions.
 
@@ -51,9 +51,11 @@ El mòdul **field_encryption** és requereix per emmagatzemar i desxifrar el cam
    - Obre **Contacts → Partners** i selecciona un partner amb **Supplier Rank** > 0.  
    - Activa **Provider Access**.  
    - A la nova pestanya **Access**, introdueix:  
+
      - **Platform URL**  
      - **Username**  
      - **Password** (es desa encriptat; els usuaris del grup **Password Reader** només el veuen en mode lectura).  
+
    - Desa i comprova que el camp `x_provider_pwd_encrypted` s’omple al back-end.
 
 3. **Gestió de grups d’usuaris exclusius**  
@@ -83,6 +85,11 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Camp de contrasenya editable o no en vista de proveïdor segons grups.
+
+18.0.1.0.2 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
 Bug Tracker
 ===========

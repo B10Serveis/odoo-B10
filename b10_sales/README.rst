@@ -134,6 +134,37 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [FIX] Establiment de diari de pagament durant creació de comanda de venda.
 
+18.0.1.5.0 (2025-10-30)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [FIX] Es comprova el diari de pagament en treure el mode de pagament de la comada de venda.
+* [IMP] No es permet un diari de pagament buit si la comanda té un mode de pagament per transferència bancària amb comptes associats.
+* [IMP] S'estableix a la factura creada des de la comanda de venda el mode i compte de pagament, si estan establerts a la comanda.
+
+18.0.1.5.1 (2025-11-11)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] No es comprova el diari de pagament de la comanda de venda en canviar a un mode de pagament que no és per transferència bancària.
+
+18.0.1.6.1 (2025-11-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Padding per separar contingut del header a tots els documents de venda.
+
+18.0.1.6.2 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
+
+18.0.1.6.3 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Ajustat padding per separar contingut del header a documents de venda.
+
+18.0.1.6.4 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Ajustades mides header a documents de venda.
+
 Bug Tracker
 ===========
 

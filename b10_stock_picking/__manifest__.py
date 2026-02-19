@@ -2,7 +2,7 @@
 {
     "name": "Batista10 - Stock Picking",
     "summary": "Personalització de la impressió de les entregues",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.0.1",
     "category": "Warehouse/Reporting",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
