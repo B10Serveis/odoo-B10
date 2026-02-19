@@ -13,7 +13,7 @@ class B10AccountMove(models.Model):
                 "b10_account.factura_email_template", raise_if_not_found=False
             )
             if template:
-                return template.id  # IGUAL HA DE SER EL TEMPLATE I NO EL TEMPLATE_ID
+                return template  # Canviat de template.id a template perque el mètode original pot retornar un registre i no un ID.
         # Per la resta, deleguem al mètode original
         return super(B10AccountMove, self)._get_mail_template()
 
