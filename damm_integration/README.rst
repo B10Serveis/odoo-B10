@@ -95,6 +95,11 @@ Changelog
 
 * [FIX] Selecció de la companyia pròpia correcta en entorns multiempresa.
 
+0.9.2 (2026-02-19)
+~~~~~~~~~~~~~~~~~~
+
+* [CHA] Modificat el calcul de descomptes per incloure el descompte per unitat en comptes de només percentual.
+
 
 Bug Tracker
 ===========
