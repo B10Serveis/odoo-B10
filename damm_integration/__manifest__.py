@@ -3,7 +3,7 @@
 {
     "name": "Integració amb Damm",
     "summary": "Integració de dades amb Damm",
-    "version": "15.0.0.9.2",
+    "version": "15.0.0.9.3",
     "development_status": "Beta",
     "category": "Sales",
     "website": "https://batista10.cat/",

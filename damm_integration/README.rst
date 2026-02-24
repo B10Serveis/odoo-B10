@@ -100,6 +100,11 @@ Changelog
 
 * [CHA] Modificat el calcul de descomptes per incloure el descompte per unitat en comptes de només percentual.
 
+0.9.3 (2026-02-24)
+~~~~~~~~~~~~~~~~~~
+
+* [CHA] Eliminat comes del camp Numero de document.
+
 
 Bug Tracker
 ===========
