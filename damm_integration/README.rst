@@ -95,6 +95,13 @@ Changelog
 
 * [FIX] Selecció de la companyia pròpia correcta en entorns multiempresa.
 
+0.9.2 (2026-02-24)
+~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'errors detectats en Carboniques Franques.
+* [FIX] Correcció de warnings de KLO.
+
+
 
 Bug Tracker
 ===========
