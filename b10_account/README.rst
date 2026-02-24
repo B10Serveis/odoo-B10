@@ -128,6 +128,11 @@ Changelog
 
 * [FIX] Correcció d'error al establir plantilla d'email de factura per defecte.
 
+18.0.1.7.7 (2026-02-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Traducció de plantilles d'email de factura.
+
 
 
 Bug Tracker
