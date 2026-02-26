@@ -133,6 +133,11 @@ Changelog
 
 * [FIX] Traducció de plantilles d'email de factura.
 
+18.0.1.8.7 (2026-02-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Estableix document de Factura B10 com a document de factura per defecte.
+
 
 
 Bug Tracker
