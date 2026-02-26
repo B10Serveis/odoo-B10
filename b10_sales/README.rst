@@ -165,6 +165,12 @@ Changelog
 
 * [CHA] Ajustades mides header a documents de venda.
 
+18.0.1.7.4 (2026-02-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Establir emails de venda per defecte.
+* [FIX] Traducció de plantilles d'email de venda.
+
 Bug Tracker
 ===========
 

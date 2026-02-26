@@ -5,7 +5,7 @@
 {
     "name": "Batista10 - Sales",
     "summary": "Personalització Vendes Batista10",
-    "version": "18.0.1.6.4",
+    "version": "18.0.1.7.4",
     "category": "Sales",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
@@ -45,6 +45,10 @@
         "views/B10_sale_order_expired_filter.xml",
         "views/sale_order_payment_journal.xml",
         "views/show_product_image.xml",
+        # Email Templates
+        "views/email_comanda.xml",
+        "views/email_pressupost.xml",
+        "views/email_proforma.xml",
     ],
     "assets": {
         "web.assets_backend": [

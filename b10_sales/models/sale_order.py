@@ -1,5 +1,6 @@
 from odoo import _, api, exceptions, fields, models
 
+
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
@@ -18,8 +19,10 @@ class SaleOrder(models.Model):
             raise_if_not_found=False,
         )
         domain_tmpl = [
-            "&", ("type", "=", "bank"),
-            "&", ("bank_account_id", "!=", False),
+            "&",
+            ("type", "=", "bank"),
+            "&",
+            ("bank_account_id", "!=", False),
             "REPLACE: JOURNAL ID CONDITION",
         ]
         journals = self.env["account.journal"]
@@ -29,19 +32,21 @@ class SaleOrder(models.Model):
 
             payment_mode = order.payment_mode_id
             if (
-                    not bank_transfer
-                    or not payment_mode
-                    or bank_transfer != payment_mode.payment_method_id
+                not bank_transfer
+                or not payment_mode
+                or bank_transfer != payment_mode.payment_method_id
             ):
                 continue
 
             domain = domain_tmpl.copy()
             acct_link = payment_mode.bank_account_link
-            if fixed_journal := (acct_link == "fixed"
-                                 and payment_mode.fixed_journal_id):
+            if fixed_journal := (
+                acct_link == "fixed" and payment_mode.fixed_journal_id
+            ):
                 domain[-1] = ("id", "=", fixed_journal.id)
-            elif variable_journals := (acct_link == "variable"
-                                       and payment_mode.variable_journal_ids):
+            elif variable_journals := (
+                acct_link == "variable" and payment_mode.variable_journal_ids
+            ):
                 domain[-1] = ("id", "in", variable_journals.mapped("id"))
             else:
                 continue
@@ -70,29 +75,42 @@ class SaleOrder(models.Model):
 
         for order in self:
             payment_mode = order.payment_mode_id
-            assert (not payment_mode or not payment_mode.bank_account_link
-                    or payment_mode.bank_account_link in ["fixed", "variable"])
+            assert (
+                not payment_mode
+                or not payment_mode.bank_account_link
+                or payment_mode.bank_account_link in ["fixed", "variable"]
+            )
             if (
-                    order.payment_journal_id
-                    or not payment_mode
-                    or payment_mode.payment_method_id != bank_transfer
-                    or (payment_mode.bank_account_link == "fixed"
-                        and not payment_mode.fixed_journal_id)
-                    or (payment_mode.bank_account_link == "variable"
-                        and not payment_mode.variable_journal_ids)
+                order.payment_journal_id
+                or not payment_mode
+                or payment_mode.payment_method_id != bank_transfer
+                or (
+                    payment_mode.bank_account_link == "fixed"
+                    and not payment_mode.fixed_journal_id
+                )
+                or (
+                    payment_mode.bank_account_link == "variable"
+                    and not payment_mode.variable_journal_ids
+                )
             ):
                 continue
             raise models.ValidationError(
-                _("A payment journal must be set with bank transfer payment modes "
-                  "that have associated bank accounts."))
+                _(
+                    "A payment journal must be set with bank transfer payment modes "
+                    "that have associated bank accounts."
+                )
+            )
 
     @api.onchange("payment_mode_id")
     def _set_payment_journal(self):
         payment_mode = self.payment_mode_id
         old_payment_journal = self.payment_journal_id
 
-        assert (not payment_mode or not payment_mode.bank_account_link
-                or payment_mode.bank_account_link in ["fixed", "variable"])
+        assert (
+            not payment_mode
+            or not payment_mode.bank_account_link
+            or payment_mode.bank_account_link in ["fixed", "variable"]
+        )
 
         if not payment_mode or not payment_mode.bank_account_link:
             new_payment_journal = False
@@ -112,15 +130,26 @@ class SaleOrder(models.Model):
             "b10_account.account_payment_method_bank_transfer",
             raise_if_not_found=False,
         )
-        if bank_transfer and payment_mode and payment_mode.payment_method_id == bank_transfer:
+        if (
+            bank_transfer
+            and payment_mode
+            and payment_mode.payment_method_id == bank_transfer
+        ):
             # The check only applies to bank transfer payments.
             is_bank_transfer = True
 
-        if is_bank_transfer and old_payment_journal and new_payment_journal != old_payment_journal:
+        if (
+            is_bank_transfer
+            and old_payment_journal
+            and new_payment_journal != old_payment_journal
+        ):
             raise exceptions.ValidationError(
-                _("The current payment journal cannot be used "
-                  "with the selected payment mode; "
-                  "please unset the journal first if you are sure."))
+                _(
+                    "The current payment journal cannot be used "
+                    "with the selected payment mode; "
+                    "please unset the journal first if you are sure."
+                )
+            )
         self.payment_journal_id = new_payment_journal
 
     def _add_payment_to_invoice_vals(self, invoice_vals):
@@ -138,25 +167,46 @@ class SaleOrder(models.Model):
 
     show_product_image = fields.Boolean("Show product image", required=False)
 
-    def _get_default_mail_template_id(self):
+    # Override to set B10 email templates depending on the state of the SO (quotation vs sales order).
+    def _find_mail_template(self):
+        """Get the appropriate mail template for the current sales order based on its state.
+
+        If the SO is confirmed, we return the mail template for the sale confirmation.
+        Otherwise, we return the quotation email template.
+
+        :return: The correct mail template based on the current status
+        :rtype: record of `mail.template` or `None` if not found
+        """
         self.ensure_one()
         # Proforma?
         if self.env.context.get("proforma"):
             return self.env.ref(
                 "b10_sales.proforma_email_template",
                 raise_if_not_found=False,
-            ).id
+            )
         # Pressupost
         if self.state in ("draft", "sent"):
             return self.env.ref(
                 "b10_sales.pressupost_email_template",
                 raise_if_not_found=False,
-            ).id
-        # Comanda confirmada
-        if self.state in ("sale", "done"):
+            )
+        else:
+            return self._get_confirmation_template()
+
+    # Override to set B10 email templates depending on the state of the SO (quotation vs sales order).
+    def _get_confirmation_template(self):
+        """Get the mail template sent on SO confirmation (or for confirmed SO's).
+
+        :return: `mail.template` record or None if default template wasn't found
+        """
+        self.ensure_one()
+        default_confirmation_template = self.env.ref(
+            "b10_sales.comanda_email_template",
+            raise_if_not_found=False,
+        )
+        if default_confirmation_template:
+            return default_confirmation_template
+        else:
             return self.env.ref(
-                "b10_sales.comanda_email_template",
-                raise_if_not_found=False,
-            ).id
-        # Caigui pel genèric
-        return super()._get_default_mail_template_id()
+                "sale.mail_template_sale_confirmation", raise_if_not_found=False
+            )
