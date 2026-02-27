@@ -91,6 +91,14 @@ Changelog
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
+18.0.1.1.2 (2026-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Traduccións de plantilles d'email i varies.
+* [CHA] Plantilles d'email establertes per defecte.
+* [CHA] Modificades les mides de capçalera dels documents.
+
+
 Bug Tracker
 ===========
 

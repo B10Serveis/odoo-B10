@@ -1,86 +1,99 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* B10_purchases
+# 	* b10_purchases
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-06 14:48+0000\n"
-"PO-Revision-Date: 2025-11-28 15:15+0100\n"
-"Last-Translator: Ivan Vilata i Balaguer <ivan@batista10.cat>\n"
+"POT-Creation-Date: 2026-02-26 11:36+0000\n"
+"PO-Revision-Date: 2026-02-26 15:26+0100\n"
+"Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
 
-#. module: B10_purchases
-#: model:ir.actions.report,print_report_name:B10_purchases.B10_purchase_order_action
+#. module: b10_purchases
+#: model:ir.actions.report,print_report_name:b10_purchases.B10_purchase_order_action
 msgid "'PurchOrder_%s' % (object.name)"
 msgstr "'PedCompra_%s' % (object.name)"
 
-#. module: B10_purchases
-#: model:ir.actions.report,print_report_name:B10_purchases.B10_purchase_quotation_action
+#. module: b10_purchases
+#: model:ir.actions.report,print_report_name:b10_purchases.B10_purchase_quotation_action
 msgid "'PurchQuot_%s' % (object.name)"
 msgstr "'PptoCompra_%s' % (object.name)"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "<span> (</span>"
 msgstr ""
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "<span> -</span>"
 msgstr ""
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "<span>)</span>"
 msgstr ""
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid ""
 "<span>)</span>\n"
 "\t\t\t\t\t\t\t\t<br/>"
 msgstr ""
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
 msgid "<strong>Purchase Order</strong>"
 msgstr "<strong>Pedido de compra</strong>"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "<strong>Purchase Quotation</strong>"
 msgstr "<strong>Presupuesto Compra</strong>"
 
-#. module: B10_purchases
-#: model:mail.template,body_html:B10_purchases.comanda_email_template
+#. module: b10_purchases
+#: model:mail.template,body_html:b10_purchases.comanda_email_template
 msgid ""
-"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, "
+"Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                <tbody>\n"
 "                    <tr>\n"
 "                        <td align=\"center\">\n"
-"                            <table t-attf-style=\"padding: 16px; color: #454748; border-collapse:separate; background-color: #F1F1F1\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                            <table t-attf-style=\"padding: 16px; color: #454748; "
+"border-collapse:separate; background-color: #F1F1F1\" width=\"590\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                <tbody>\n"
 "\n"
 "                                    <!-- HEADER -->\n"
 "                                    <tr style=\"\">\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table t-attf-style=\"min-width: 590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px;                                                  border-collapse:separate; background-color: {{ object.user_id.company_id.primary_color or 'gray'}}\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table t-attf-style=\"min-width: "
+"590px; padding: 0px 8px 0px 8px; border-bottom: solid gray "
+"2px;                                                  border-collapse:separate; "
+"background-color: {{ object.user_id.company_id.primary_color or 'gray'}}\" "
+"width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
-"                                                            <span>Order from </span>\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td valign=\"middle\" "
+"style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
+"                                                            <span>Order from </"
+"span>\n"
+"                                                            <t t-out=\"object."
+"company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
@@ -91,38 +104,60 @@ msgid ""
 "\n"
 "                                    <!-- CONTENT -->\n"
 "                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table style=\"min-width: 590px; "
+"background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" "
+"width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"font-size: 13px; padding: 16px;\" valign=\"top\">\n"
+"                                                        <td style=\"font-size: "
+"13px; padding: 16px;\" valign=\"top\">\n"
 "                                                            <div>\n"
 "                                                                    Dear \n"
-"                                                                <t t-out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or '-'\">\n"
+"                                                                <t t-"
+"out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id."
+"parent_id.name or '-'\">\n"
 "                                                                </t>\n"
-"                                                                <br>\n"
-"                                                                    Here is in attachment a purchase order:\n"
-"                                                                <br>\n"
-"                                                                <p style=\"margin-left: 16px\">\n"
-"                                                                    Order number: \n"
-"                                                                    <span style=\"font-weight: bold;\">\n"
-"                                                                        <t t-out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                <br/>\n"
+"                                                                    Here is in "
+"attachment a purchase order:\n"
+"                                                                <br/>\n"
+"                                                                <p "
+"style=\"margin-left: 16px\">\n"
+"                                                                    Order "
+"number: \n"
+"                                                                    <span "
+"style=\"font-weight: bold;\">\n"
+"                                                                        <t t-"
+"out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
 "                                                                        </t>\n"
 "                                                                    </span>\n"
-"                                                                    <br>\n"
-"                                                                    Amount Ordered: \n"
-"                                                                    <t t-out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                    <br/>\n"
+"                                                                    Amount "
+"Ordered: \n"
+"                                                                    <t t-"
+"out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-"
+"inline=\"true\" contenteditable=\"false\">\n"
 "                                                                    </t>\n"
-"                                                                    <br>\n"
-"                                                                    Order date: \n"
-"                                                                    <t t-out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                    <br/>\n"
+"                                                                    Order "
+"date: \n"
+"                                                                    <t t-"
+"out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
 "                                                                    </t>\n"
 "                                                                </p>\n"
 "                                                            </div>\n"
 "                                                        </td>\n"
 "                                                        <!-- LOGO -->\n"
-"                                                        <td valign=\"top\" align=\"right\">\n"
-"                                                            <img t-attf-src=\"/logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\">\n"
+"                                                        <td valign=\"top\" "
+"align=\"right\">\n"
+"                                                            <img t-attf-src=\"/"
+"logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; "
+"margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\"/"
+">\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                </tbody>\n"
@@ -132,44 +167,76 @@ msgid ""
 "\n"
 "                                    <!-- FOOTER -->\n"
 "                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table style=\"min-width: 590px; "
+"background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px "
+"0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" "
+"cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td style=\"opacity: 0.7;"
+"\" valign=\"middle\" align=\"left\">\n"
+"                                                            <t t-out=\"user."
+"signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td valign=\"middle\" "
+"align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
+"                                                            <t t-out=\"object."
+"company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td style=\"opacity: 0.7;"
+"\" valign=\"middle\" align=\"left\">\n"
+"                                                            <t t-out=\"user."
+"phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
-"                                                            <t t-if=\"user.email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                            <t t-if=\"user."
+"email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-"
+"inline=\"true\">\n"
 "                                                                    |\n"
-"                                                                <a t-attf-href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
+"                                                                <a t-attf-"
+"href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: "
+"#454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
 "                                                                </a>\n"
 "                                                            </t>\n"
-"                                                            <t t-if=\"object.company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                            <t t-if=\"object."
+"company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-"
+"oe-t-inline=\"true\">\n"
 "                                                                    |\n"
-"                                                                <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"object.company_id.website or '-'\" contenteditable=\"false\">\n"
+"                                                                <a t-attf-"
+"href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; "
+"color: #454748;\" t-out=\"object.company_id.website or '-'\" "
+"contenteditable=\"false\">\n"
 "                                                                </a>\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; padding-top:10px;\">\n"
-"                                                                According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
-"                                                                proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of\n"
-"                                                                The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the\n"
-"                                                                consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by\n"
-"                                                                get additional information or file a complaint.\n"
+"                                                        <td valign=\"middle\" "
+"align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; "
+"padding-top:10px;\">\n"
+"                                                                According to the "
+"GDPR, we inform you that we will process your personal data in order to carry "
+"out administrative, accounting and fiscal management. Data\n"
+"                                                                proportionately, "
+"the time required by a legal obligation will be retained and will not be "
+"transferred to third parties except legal provision required, or if necessary, "
+"prior consent of\n"
+"                                                                The interested "
+"party. It will be able to exercise the following rights on its personal data: "
+"right of access, rectification, erasure, oblate, limitation, opposition, "
+"portability and to withdraw the\n"
+"                                                                consent given, "
+"to the address indicated in this document. In addition, it will be able to "
+"contact the competent supervisory authority in the field of data protection by\n"
+"                                                                get additional "
+"information or file a complaint.\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                </tbody>\n"
@@ -184,144 +251,204 @@ msgid ""
 "            </table>\n"
 "        "
 msgstr ""
-"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
-"                <tbody>\n"
-"                    <tr>\n"
-"                        <td align=\"center\">\n"
-"                            <table t-attf-style=\"padding: 16px; color: #454748; border-collapse:separate; background-color: #F1F1F1\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
-"                                <tbody>\n"
+"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, "
+"Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"    <tbody>\n"
+"        <tr>\n"
+"            <td align=\"center\">\n"
+"                <table t-attf-style=\"padding: 16px; color: #454748; border-"
+"collapse:separate; background-color: #F1F1F1\" width=\"590\" cellspacing=\"0\" "
+"cellpadding=\"0\" border=\"0\">\n"
+"                    <tbody>\n"
 "\n"
-"                                    <!-- HEADER -->\n"
-"                                    <tr style=\"\">\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table t-attf-style=\"min-width: 590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px;                                                  border-collapse:separate; background-color: {{ object.user_id.company_id.primary_color or 'gray'}}\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
-"                                                <tbody>\n"
-"                                                    <tr>\n"
-"                                                        <td valign=\"middle\" style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
-"                                                            <span>Pedido de compra de </span>\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                            </t>\n"
-"                                                        </td>\n"
-"                                                    </tr>\n"
-"                                                </tbody>\n"
-"                                            </table>\n"
-"                                        </td>\n"
-"                                    </tr>\n"
+"                        <!-- HEADER -->\n"
+"                        <tr>\n"
+"                            <td style=\"min-width: 590px;\" align=\"center\">\n"
+"                                <table t-attf-style=\"min-width: 590px; padding: "
+"0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:separate; "
+"background-color: {{ object.user_id.company_id.primary_color or 'gray'}}\" "
+"width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                    <tbody>\n"
+"                                        <tr>\n"
+"                                            <td valign=\"middle\" "
+"style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
+"                                                <span>Pedido de </span>\n"
+"                                                <t t-out=\"object.company_id."
+"name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                </t>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </tbody>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
 "\n"
-"                                    <!-- CONTENT -->\n"
-"                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
-"                                                <tbody>\n"
-"                                                    <tr>\n"
-"                                                        <td style=\"font-size: 13px; padding: 16px;\" valign=\"top\">\n"
-"                                                            <div>\n"
-"                                                                    Estimado/a \n"
-"                                                                <t t-out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or '-'\">\n"
-"                                                                </t>\n"
-"                                                                <br>\n"
-"                                                                    Le adjuntamos un pedido de compra:\n"
-"                                                                <br>\n"
-"                                                                <p style=\"margin-left: 16px\">\n"
-"                                                                    Pedido: \n"
-"                                                                    <span style=\"font-weight: bold;\">\n"
-"                                                                        <t t-out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                                        </t>\n"
-"                                                                    </span>\n"
-"                                                                    <br>\n"
-"                                                                    Importe: \n"
-"                                                                    <t t-out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                                    </t>\n"
-"                                                                    <br>\n"
-"                                                                    Fecha: \n"
-"                                                                    <t t-out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                                    </t>\n"
-"                                                                </p>\n"
-"                                                            </div>\n"
-"                                                        </td>\n"
-"                                                        <!-- LOGO -->\n"
-"                                                        <td valign=\"top\" align=\"right\">\n"
-"                                                            <img t-attf-src=\"/logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\">\n"
-"                                                        </td>\n"
-"                                                    </tr>\n"
-"                                                </tbody>\n"
-"                                            </table>\n"
-"                                        </td>\n"
-"                                    </tr>\n"
+"                        <!-- CONTENT -->\n"
+"                        <tr>\n"
+"                            <td style=\"min-width: 590px;\" align=\"center\">\n"
+"                                <table style=\"min-width: 590px; background-"
+"color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" "
+"width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                    <tbody>\n"
+"                                        <tr>\n"
+"                                            <td style=\"font-size: 13px; "
+"padding: 16px;\" valign=\"top\">\n"
+"                                                <div>\n"
+"                                                    Estimado/a \n"
+"                                                    <t t-out=\"object.partner_id."
+"name or object.partner_id.comercial or object.partner_id.parent_id.name or "
+"'-'\">\n"
+"                                                    </t>\n"
+"                                                    <br/>\n"
+"                                                    Se adjunta una orden de "
+"compra:\n"
+"                                                    <br/>\n"
+"                                                    <p style=\"margin-left: "
+"16px\">\n"
+"                                                        Número de pedido: \n"
+"                                                        <span style=\"font-"
+"weight: bold;\">\n"
+"                                                            <t t-out=\"object."
+"name or 'n/a'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                            </t>\n"
+"                                                        </span>\n"
+"                                                        <br/>\n"
+"                                                        Importe del pedido: \n"
+"                                                        <t t-"
+"out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-"
+"inline=\"true\" contenteditable=\"false\">\n"
+"                                                        </t>\n"
+"                                                        <br/>\n"
+"                                                        Fecha del pedido: \n"
+"                                                        <t t-"
+"out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
+"                                                        </t>\n"
+"                                                    </p>\n"
+"                                                </div>\n"
+"                                            </td>\n"
+"                                            <!-- LOGO -->\n"
+"                                            <td valign=\"top\" align=\"right\">\n"
+"                                                <img t-attf-src=\"/logo.png?"
+"company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; margin: 16px; "
+"height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\"/>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </tbody>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
 "\n"
-"                                    <!-- FOOTER -->\n"
-"                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
-"                                                <tbody>\n"
-"                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                            </t>\n"
-"                                                        </td>\n"
-"                                                    </tr>\n"
-"                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                            </t>\n"
-"                                                        </td>\n"
-"                                                    </tr>\n"
-"                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
-"                                                            </t>\n"
-"                                                            <t t-if=\"user.email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
-"                                                                    |\n"
-"                                                                <a t-attf-href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
-"                                                                </a>\n"
-"                                                            </t>\n"
-"                                                            <t t-if=\"object.company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
-"                                                                    |\n"
-"                                                                <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"object.company_id.website or '-'\" contenteditable=\"false\">\n"
-"                                                                </a>\n"
-"                                                            </t>\n"
-"                                                        </td>\n"
-"                                                    </tr>\n"
-"                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; padding-top:10px;\">\n"
-"                                                                De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos personales con el fin de realizar la gestión administrativa, \"\n"
-"contable y fiscal. Los datos proporcionados se conservarán el tiempo exigible por una obligación legal y no serán cedidas a terceros excepto previsión legal exigible, o en su \"\n"
-"caso, previo consentimiento del interesado. Podrá ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, \"\n"
-"limitación, oposición, portabilidad y a retirar el consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente \"\n"
-"en materia de Protección de Datos para obtener información adicional o presentar una reclamación.\n"
-"                                                        </td>\n"
-"                                                    </tr>\n"
-"                                                </tbody>\n"
-"                                            </table>\n"
-"                                        </td>\n"
-"                                    </tr>\n"
-"                                </tbody>\n"
-"                            </table>\n"
-"                        </td>\n"
-"                    </tr>\n"
-"                </tbody>\n"
-"            </table>\n"
-"        "
+"                        <!-- FOOTER -->\n"
+"                        <tr>\n"
+"                            <td style=\"min-width: 590px;\" align=\"center\">\n"
+"                                <table style=\"min-width: 590px; background-"
+"color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px 0px 8px; "
+"border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" "
+"border=\"0\">\n"
+"                                    <tbody>\n"
+"                                        <tr>\n"
+"                                            <td style=\"opacity: 0.7;\" "
+"valign=\"middle\" align=\"left\">\n"
+"                                                <t t-out=\"user.signature or "
+"'-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                </t>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                        <tr>\n"
+"                                            <td valign=\"middle\" align=\"left\" "
+"style=\"font-size: 14px; font-weight: bold;\">\n"
+"                                                <t t-out=\"object.company_id."
+"name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                </t>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                        <tr>\n"
+"                                            <td style=\"opacity: 0.7;\" "
+"valign=\"middle\" align=\"left\">\n"
+"                                                <t t-out=\"user.phone or '-'\" "
+"data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                </t>\n"
+"                                                <t t-if=\"user.email\" data-oe-t-"
+"group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                    |\n"
+"                                                    <a t-attf-href=\"'mailto:%s' "
+"% {{ user.email }}\" style=\"text-decoration:none; color: #454748;\" t-"
+"out=\"user.email or '-'\" contenteditable=\"false\">\n"
+"                                                    </a>\n"
+"                                                </t>\n"
+"                                                <t t-if=\"object.company_id."
+"website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-oe-t-"
+"inline=\"true\">\n"
+"                                                    |\n"
+"                                                    <a t-attf-href=\"'%s' % "
+"{{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;"
+"\" t-out=\"object.company_id.website or '-'\" contenteditable=\"false\">\n"
+"                                                    </a>\n"
+"                                                </t>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                        <tr>\n"
+"                                            <td valign=\"middle\" align=\"left\" "
+"style=\"font-size: 10px; text-decoration:none; color: #454748; padding-top:10px;"
+"\">\n"
+"                                                De acuerdo con el RGPD, le "
+"informamos de que trataremos sus datos personales con la finalidad de llevar a "
+"cabo la gestión administrativa, contable y fiscal. Los datos se conservarán "
+"durante el tiempo necesario para cumplir con una obligación legal y no serán "
+"cedidos a terceros salvo obligación legal o, en su caso, previo consentimiento "
+"del interesado. \n"
+"                                                Podrá ejercer los siguientes "
+"derechos sobre sus datos personales: derecho de acceso, rectificación, "
+"supresión, limitación, oposición, portabilidad y a retirar el consentimiento "
+"otorgado, en la dirección indicada en este documento. Asimismo, podrá dirigirse "
+"a la autoridad de control competente en materia de protección de datos para "
+"obtener información adicional o presentar una reclamación.\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </tbody>\n"
+"                                </table>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </td>\n"
+"        </tr>\n"
+"    </tbody>\n"
+"</table>"
 
-#. module: B10_purchases
-#: model:mail.template,body_html:B10_purchases.pressupost_email_template
+#. module: b10_purchases
+#: model:mail.template,body_html:b10_purchases.pressupost_email_template
 msgid ""
-"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, "
+"Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                <tbody>\n"
 "                    <tr>\n"
 "                        <td align=\"center\">\n"
-"                            <table t-attf-style=\"padding: 16px; color: #454748; border-collapse:separate; background-color: #F1F1F1\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                            <table t-attf-style=\"padding: 16px; color: #454748; "
+"border-collapse:separate; background-color: #F1F1F1\" width=\"590\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                <tbody>\n"
 "\n"
 "                                    <!-- HEADER -->\n"
 "                                    <tr style=\"\">\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table t-attf-style=\"min-width: 590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:separate; background-color: {{ object.user_id.company_id.primary_color or 'gray'}}\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table t-attf-style=\"min-width: "
+"590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:"
+"separate; background-color: {{ object.user_id.company_id.primary_color or "
+"'gray'}}\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
-"                                                            <span>Order from </span>\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td valign=\"middle\" "
+"style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
+"                                                            <span>Order from </"
+"span>\n"
+"                                                            <t t-out=\"object."
+"company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
@@ -332,38 +459,60 @@ msgid ""
 "\n"
 "                                    <!-- CONTENT -->\n"
 "                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table style=\"min-width: 590px; "
+"background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" "
+"width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"font-size: 13px; padding: 16px;\" valign=\"top\">\n"
+"                                                        <td style=\"font-size: "
+"13px; padding: 16px;\" valign=\"top\">\n"
 "                                                            <div>\n"
 "                                                                    Dear \n"
-"                                                                <t t-out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or '-'\">\n"
+"                                                                <t t-"
+"out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id."
+"parent_id.name or '-'\">\n"
 "                                                                </t>\n"
-"                                                                <br>\n"
-"                                                                    Here is in attachment a request for quotation:\n"
-"                                                                <br>\n"
-"                                                                <p style=\"margin-left: 16px\">\n"
-"                                                                    Quotation number: \n"
-"                                                                    <span style=\"font-weight: bold;\">\n"
-"                                                                        <t t-out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                <br/>\n"
+"                                                                    Here is in "
+"attachment a request for quotation:\n"
+"                                                                <br/>\n"
+"                                                                <p "
+"style=\"margin-left: 16px\">\n"
+"                                                                    Quotation "
+"number: \n"
+"                                                                    <span "
+"style=\"font-weight: bold;\">\n"
+"                                                                        <t t-"
+"out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
 "                                                                        </t>\n"
 "                                                                    </span>\n"
-"                                                                    <br>\n"
-"                                                                    Amount Quoted: \n"
-"                                                                    <t t-out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                    <br/>\n"
+"                                                                    Amount "
+"Quoted: \n"
+"                                                                    <t t-"
+"out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-"
+"inline=\"true\" contenteditable=\"false\">\n"
 "                                                                    </t>\n"
-"                                                                    <br>\n"
-"                                                                    Quotation date: \n"
-"                                                                    <t t-out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                    <br/>\n"
+"                                                                    Quotation "
+"date: \n"
+"                                                                    <t t-"
+"out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
 "                                                                    </t>\n"
 "                                                                </p>\n"
 "                                                            </div>\n"
 "                                                        </td>\n"
 "                                                        <!-- LOGO -->\n"
-"                                                        <td valign=\"top\" align=\"right\">\n"
-"                                                            <img t-attf-src=\"/logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\">\n"
+"                                                        <td valign=\"top\" "
+"align=\"right\">\n"
+"                                                            <img t-attf-src=\"/"
+"logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; "
+"margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\"/"
+">\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                </tbody>\n"
@@ -373,44 +522,76 @@ msgid ""
 "\n"
 "                                    <!-- FOOTER -->\n"
 "                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table style=\"min-width: 590px; "
+"background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px "
+"0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" "
+"cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td style=\"opacity: 0.7;"
+"\" valign=\"middle\" align=\"left\">\n"
+"                                                            <t t-out=\"user."
+"signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td valign=\"middle\" "
+"align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
+"                                                            <t t-out=\"object."
+"company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td style=\"opacity: 0.7;"
+"\" valign=\"middle\" align=\"left\">\n"
+"                                                            <t t-out=\"user."
+"phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
-"                                                            <t t-if=\"user.email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                            <t t-if=\"user."
+"email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-"
+"inline=\"true\">\n"
 "                                                                    |\n"
-"                                                                <a t-attf-href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
+"                                                                <a t-attf-"
+"href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: "
+"#454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
 "                                                                </a>\n"
 "                                                            </t>\n"
-"                                                            <t t-if=\"object.company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                            <t t-if=\"object."
+"company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-"
+"oe-t-inline=\"true\">\n"
 "                                                                    |\n"
-"                                                                <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"object.company_id.website or '-'\" contenteditable=\"false\">\n"
+"                                                                <a t-attf-"
+"href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; "
+"color: #454748;\" t-out=\"object.company_id.website or '-'\" "
+"contenteditable=\"false\">\n"
 "                                                                </a>\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; padding-top:10px;\">\n"
-"                                                                According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
-"                                                                proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of\n"
-"                                                                The interested party. It will be able to exercise the following rights on its personal data: right of access, rectification, erasure, oblate, limitation, opposition, portability and to withdraw the\n"
-"                                                                consent given, to the address indicated in this document. In addition, it will be able to contact the competent supervisory authority in the field of data protection by\n"
-"                                                                get additional information or file a complaint.\n"
+"                                                        <td valign=\"middle\" "
+"align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; "
+"padding-top:10px;\">\n"
+"                                                                According to the "
+"GDPR, we inform you that we will process your personal data in order to carry "
+"out administrative, accounting and fiscal management. Data\n"
+"                                                                proportionately, "
+"the time required by a legal obligation will be retained and will not be "
+"transferred to third parties except legal provision required, or if necessary, "
+"prior consent of\n"
+"                                                                The interested "
+"party. It will be able to exercise the following rights on its personal data: "
+"right of access, rectification, erasure, oblate, limitation, opposition, "
+"portability and to withdraw the\n"
+"                                                                consent given, "
+"to the address indicated in this document. In addition, it will be able to "
+"contact the competent supervisory authority in the field of data protection by\n"
+"                                                                get additional "
+"information or file a complaint.\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                </tbody>\n"
@@ -425,22 +606,33 @@ msgid ""
 "            </table>\n"
 "        "
 msgstr ""
-"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"<table style=\"padding-top: 16px; background-color: white; font-family:Verdana, "
+"Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                <tbody>\n"
 "                    <tr>\n"
 "                        <td align=\"center\">\n"
-"                            <table t-attf-style=\"padding: 16px; color: #454748; border-collapse:separate; background-color: #F1F1F1\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                            <table t-attf-style=\"padding: 16px; color: #454748; "
+"border-collapse:separate; background-color: #F1F1F1\" width=\"590\" "
+"cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                <tbody>\n"
 "\n"
 "                                    <!-- HEADER -->\n"
 "                                    <tr style=\"\">\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table t-attf-style=\"min-width: 590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:separate; background-color: {{ object.user_id.company_id.primary_color or 'gray'}}\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table t-attf-style=\"min-width: "
+"590px; padding: 0px 8px 0px 8px; border-bottom: solid gray 2px; border-collapse:"
+"separate; background-color: {{ object.user_id.company_id.primary_color or "
+"'gray'}}\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
-"                                                            <span>Presupuesto de compra de </span>\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td valign=\"middle\" "
+"style=\"padding: 16px; font-size: 20px; font-weight: bold; color: white;\">\n"
+"                                                            <span>Pedido de </"
+"span>\n"
+"                                                            <t t-out=\"object."
+"company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
@@ -451,38 +643,60 @@ msgstr ""
 "\n"
 "                                    <!-- CONTENT -->\n"
 "                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table style=\"min-width: 590px; "
+"background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" "
+"width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"font-size: 13px; padding: 16px;\" valign=\"top\">\n"
+"                                                        <td style=\"font-size: "
+"13px; padding: 16px;\" valign=\"top\">\n"
 "                                                            <div>\n"
 "                                                                    Estimado/a \n"
-"                                                                <t t-out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id.parent_id.name or '-'\">\n"
+"                                                                <t t-"
+"out=\"object.partner_id.name or object.partner_id.comercial or object.partner_id."
+"parent_id.name or '-'\">\n"
 "                                                                </t>\n"
-"                                                                <br>\n"
-"                                                                    Les adjuntamos un presupuesto de compra:\n"
-"                                                                <br>\n"
-"                                                                <p style=\"margin-left: 16px\">\n"
-"                                                                    Presupuesto: \n"
-"                                                                    <span style=\"font-weight: bold;\">\n"
-"                                                                        <t t-out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                <br/>\n"
+"                                                                    Adjunto "
+"encontrará una solicitud de presupuesto:\n"
+"                                                                <br/>\n"
+"                                                                <p "
+"style=\"margin-left: 16px\">\n"
+"                                                                    Número de "
+"presupuesto: \n"
+"                                                                    <span "
+"style=\"font-weight: bold;\">\n"
+"                                                                        <t t-"
+"out=\"object.name or 'n/a'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
 "                                                                        </t>\n"
 "                                                                    </span>\n"
-"                                                                    <br>\n"
-"                                                                    Importe: \n"
-"                                                                    <t t-out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                    <br/>\n"
+"                                                                    Importe "
+"presupuestado: \n"
+"                                                                    <t t-"
+"out=\"format_amount(object.amount_total, object.currency_id) or '-'\" data-oe-t-"
+"inline=\"true\" contenteditable=\"false\">\n"
 "                                                                    </t>\n"
-"                                                                    <br>\n"
-"                                                                    Fecha: \n"
-"                                                                    <t t-out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                                    <br/>\n"
+"                                                                    Fecha del "
+"presupuesto: \n"
+"                                                                    <t t-"
+"out=\"format_date(object.date_order) or '-'\" data-oe-t-inline=\"true\" "
+"contenteditable=\"false\">\n"
 "                                                                    </t>\n"
 "                                                                </p>\n"
 "                                                            </div>\n"
 "                                                        </td>\n"
 "                                                        <!-- LOGO -->\n"
-"                                                        <td valign=\"top\" align=\"right\">\n"
-"                                                            <img t-attf-src=\"/logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\">\n"
+"                                                        <td valign=\"top\" "
+"align=\"right\">\n"
+"                                                            <img t-attf-src=\"/"
+"logo.png?company={{ object.user_id.company_id.id }}\" style=\"padding: 0px; "
+"margin: 16px; height: auto; width: 100px;\" t-att-alt=\"object.company_id.name\"/"
+">\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                </tbody>\n"
@@ -492,44 +706,72 @@ msgstr ""
 "\n"
 "                                    <!-- FOOTER -->\n"
 "                                    <tr>\n"
-"                                        <td style=\"min-width: 590px;\" align=\"center\">\n"
-"                                            <table style=\"min-width: 590px; background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                        <td style=\"min-width: 590px;\" "
+"align=\"center\">\n"
+"                                            <table style=\"min-width: 590px; "
+"background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 0px 8px "
+"0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" "
+"cellpadding=\"0\" border=\"0\">\n"
 "                                                <tbody>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td style=\"opacity: 0.7;"
+"\" valign=\"middle\" align=\"left\">\n"
+"                                                            <t t-out=\"user."
+"signature or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
-"                                                            <t t-out=\"object.company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td valign=\"middle\" "
+"align=\"left\" style=\"font-size: 14px; font-weight: bold;\">\n"
+"                                                            <t t-out=\"object."
+"company_id.name or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td style=\"opacity: 0.7;\" valign=\"middle\" align=\"left\">\n"
-"                                                            <t t-out=\"user.phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
+"                                                        <td style=\"opacity: 0.7;"
+"\" valign=\"middle\" align=\"left\">\n"
+"                                                            <t t-out=\"user."
+"phone or '-'\" data-oe-t-inline=\"true\" contenteditable=\"false\">\n"
 "                                                            </t>\n"
-"                                                            <t t-if=\"user.email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                            <t t-if=\"user."
+"email\" data-oe-t-group=\"0\" data-oe-t-group-active=\"true\" data-oe-t-"
+"inline=\"true\">\n"
 "                                                                    |\n"
-"                                                                <a t-attf-href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
+"                                                                <a t-attf-"
+"href=\"'mailto:%s' % {{ user.email }}\" style=\"text-decoration:none; color: "
+"#454748;\" t-out=\"user.email or '-'\" contenteditable=\"false\">\n"
 "                                                                </a>\n"
 "                                                            </t>\n"
-"                                                            <t t-if=\"object.company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-oe-t-inline=\"true\">\n"
+"                                                            <t t-if=\"object."
+"company_id.website\" data-oe-t-group=\"1\" data-oe-t-group-active=\"true\" data-"
+"oe-t-inline=\"true\">\n"
 "                                                                    |\n"
-"                                                                <a t-attf-href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; color: #454748;\" t-out=\"object.company_id.website or '-'\" contenteditable=\"false\">\n"
+"                                                                <a t-attf-"
+"href=\"'%s' % {{ object.company_id.website }}\" style=\"text-decoration:none; "
+"color: #454748;\" t-out=\"object.company_id.website or '-'\" "
+"contenteditable=\"false\">\n"
 "                                                                </a>\n"
 "                                                            </t>\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                    <tr>\n"
-"                                                        <td valign=\"middle\" align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; padding-top:10px;\">\n"
-"                                                                De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos personales con el fin de realizar la gestión administrativa, \"\n"
-"contable y fiscal. Los datos proporcionados se conservarán el tiempo exigible por una obligación legal y no serán cedidas a terceros excepto previsión legal exigible, o en su \"\n"
-"caso, previo consentimiento del interesado. Podrá ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, \"\n"
-"limitación, oposición, portabilidad y a retirar el consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente \"\n"
-"en materia de Protección de Datos para obtener información adicional o presentar una reclamación.\n"
+"                                                        <td valign=\"middle\" "
+"align=\"left\" style=\"font-size: 10px; text-decoration:none; color: #454748; "
+"padding-top:10px;\">\n"
+"                                                                De acuerdo con "
+"el RGPD, le informamos de que trataremos sus datos personales con la finalidad "
+"de llevar a cabo la gestión administrativa, contable y fiscal. Los datos se "
+"conservarán durante el tiempo necesario para cumplir con una obligación legal y "
+"no serán cedidos a terceros salvo obligación legal o, en su caso, previo "
+"consentimiento del interesado. \n"
+"                                                                Podrá ejercer "
+"los siguientes derechos sobre sus datos personales: derecho de acceso, "
+"rectificación, supresión, limitación, oposición, portabilidad y a retirar el "
+"consentimiento otorgado, en la dirección indicada en este documento. Asimismo, "
+"podrá dirigirse a la autoridad de control competente en materia de protección de "
+"datos para obtener información adicional o presentar una reclamación.\n"
 "                                                        </td>\n"
 "                                                    </tr>\n"
 "                                                </tbody>\n"
@@ -541,218 +783,294 @@ msgstr ""
 "                        </td>\n"
 "                    </tr>\n"
 "                </tbody>\n"
-"            </table>\n"
-"        "
+"            </table>"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.view_partner_form_b10_purchases
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
 msgid "Access"
 msgstr "Acceso"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model:ir.model,name:b10_purchases.model_res_groups
+msgid "Access Groups"
+msgstr "Grupos de acceso"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid ""
 "According to the GDPR, we inform you that we will\n"
 "\t\t\t\t\t\t\t\t\tprocess your personal data in order to carry out\n"
 "\t\t\t\t\t\t\t\t\tadministrative, accounting and fiscal management. Data\n"
 "\t\t\t\t\t\t\t\t\tproportionately, the time required by a legal obligation will\n"
-"\t\t\t\t\t\t\t\t\tbe retained and will not be transferred to third parties except\n"
-"\t\t\t\t\t\t\t\t\tlegal provision required, or if necessary, prior consent of The\n"
+"\t\t\t\t\t\t\t\t\tbe retained and will not be transferred to third parties "
+"except\n"
+"\t\t\t\t\t\t\t\t\tlegal provision required, or if necessary, prior consent of "
+"The\n"
 "\t\t\t\t\t\t\t\t\tinterested party. It will be able to exercise the following\n"
 "\t\t\t\t\t\t\t\t\trights on its personal data: right of access, rectification,\n"
 "\t\t\t\t\t\t\t\t\terasure, oblate, limitation, opposition, portability and to\n"
 "\t\t\t\t\t\t\t\t\twithdraw the consent given, to the address indicated in this\n"
-"\t\t\t\t\t\t\t\t\tdocument. In addition, it will be able to contact the competent\n"
+"\t\t\t\t\t\t\t\t\tdocument. In addition, it will be able to contact the "
+"competent\n"
 "\t\t\t\t\t\t\t\t\tsupervisory authority in the field of data protection by get\n"
 "\t\t\t\t\t\t\t\t\tadditional information or file a complaint."
 msgstr ""
-"De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos personales con el fin de realizar la gestión administrativa, contable y fiscal. Los datos\n"
-"proporcionados se conservarán el tiempo exigible por una obligación legal y no serán cedidas a terceros excepto previsión legal exigible, o en su caso, previo consentimiento del\n"
-"interesado. Podrá ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, limitación, oposición, portabilidad y a retirar el\n"
-"consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente en materia de Protección de Datos para\n"
+"De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos "
+"personales con el fin de realizar la gestión administrativa, contable y fiscal. "
+"Los datos\n"
+"proporcionados se conservarán el tiempo exigible por una obligación legal y no "
+"serán cedidas a terceros excepto previsión legal exigible, o en su caso, previo "
+"consentimiento del\n"
+"interesado. Podrá ejercer los siguientes derechos sobre sus datos personales: "
+"derecho de acceso, rectificación, supresión, olvido, limitación, oposición, "
+"portabilidad y a retirar el\n"
+"consentimiento prestado, a la dirección señalada en el presente documento. "
+"Además, podrá dirigirse a la autoridad de Control competente en materia de "
+"Protección de Datos para\n"
 "obtener información adicional o presentar una reclamación."
 
-#. module: B10_purchases
-#: model:res.groups,name:B10_purchases.group_b10_pwd_manager
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_is_provider_access
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_is_provider_access
+msgid "Accés al proveïdor"
+msgstr "Acceso al proveedor"
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_is_provider_access
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_is_provider_access
+msgid ""
+"Activa la pestanya d'accés per a les credencials de la plataforma del proveïdor"
+msgstr ""
+"Activa la pestaña de acceso para las credenciales de la plataforma del proveedor"
+
+#. module: b10_purchases
+#: model:ir.actions.report,name:b10_purchases.B10_purchase_order_action
+msgid "B10 - Standard purchase order"
+msgstr "B10 - Pedido de compra"
+
+#. module: b10_purchases
+#: model:ir.actions.report,name:b10_purchases.B10_purchase_quotation_action
+msgid "B10 - Standard purchase quotation"
+msgstr "B10 - Presupuesto de compra"
+
+#. module: b10_purchases
+#: model:res.groups,name:b10_purchases.group_b10_pwd_manager
 msgid "B10 Purchases Password Manager"
-msgstr "B10 Purchases - Gestor de Contraseñas de Proveedor"
+msgstr ""
 
-#. module: B10_purchases
-#: model:res.groups,name:B10_purchases.group_b10_pwd_reader
+#. module: b10_purchases
+#: model:res.groups,name:b10_purchases.group_b10_pwd_reader
 msgid "B10 Purchases Password Reader"
-msgstr "B10 Purchases - Lector de Contraseñas de Proveedor"
+msgstr ""
 
-#. module: B10_purchases
-#: model:ir.model,name:B10_purchases.model_res_partner
+#. module: b10_purchases
+#: model:ir.model,name:b10_purchases.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_pwd
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_pwd
+msgid "Contrasenya"
+msgstr "Contraseña"
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_provider_pwd
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_provider_pwd
+msgid "Contrasenya per a la plataforma del proveïdor"
+msgstr "Contraseña para la plataforma del proveedor"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Description"
 msgstr "Descripción"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Email:"
-msgstr "Correo"
+msgstr ""
 
-#. module: B10_purchases
-#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_is_provider_access
-#: model:ir.model.fields,help:B10_purchases.field_res_users__x_is_provider_access
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "Enable the Access tab for supplier platform credentials"
-msgstr "Habilitar la pestaña Acceso para las credenciales de la plataforma del proveedor"
+msgstr ""
+"Habilitar la pestaña Acceso para las credenciales de la plataforma del proveedor"
 
-#. module: B10_purchases
-#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_pwd_encrypted
-#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_pwd_encrypted
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_pwd_encrypted
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_pwd_encrypted
 msgid "Encrypted Provider Password"
 msgstr "Contraseña de proveedor cifrada"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-msgid "Order Date:"
-msgstr "Fecha pedido:"
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_provider_user
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_provider_user
+msgid "Inici de sessió per a la plataforma del proveïdor"
+msgstr "Inicio de sesión para la plataforma del proveedor"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_user
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_user
+msgid "Nom d'usuari"
+msgstr "Nombre de usuario"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+msgid "Order Date:"
+msgstr "Fecha del pedido:"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
 msgid "Order:"
 msgstr "Pedido:"
 
-#. module: B10_purchases
-#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_pwd
-#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_pwd
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "Password"
 msgstr "Contraseña"
 
-#. module: B10_purchases
-#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_provider_pwd
-#: model:ir.model.fields,help:B10_purchases.field_res_users__x_provider_pwd
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "Password for the supplier platform"
-msgstr "Contraseña para la plataforma del proveedor "
+msgstr "Contraseña para la plataforma del proveedor"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Payment Terms:"
 msgstr "Plazos de pago:"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
 msgid "Planned Date:"
 msgstr "Llegada esperada:"
 
-#. module: B10_purchases
-#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_url
-#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_url
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "Platform URL"
 msgstr "URL de la plataforma"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Price"
 msgstr "Precio"
 
-#. module: B10_purchases
-#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_is_provider_access
-#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_is_provider_access
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "Provider Access"
 msgstr "Acceso del proveedor"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model:ir.model,name:b10_purchases.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Quantity"
 msgstr "Cantidad"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Quotation Date:"
-msgstr "Fecha Presupuesto:"
+msgstr "Fecha de presupuesto:"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Quotation:"
 msgstr "Presupuesto:"
 
-#. module: B10_purchases
-#: model:mail.template,name:B10_purchases.comanda_email_template
+#. module: b10_purchases
+#: model:mail.template,name:b10_purchases.comanda_email_template
 msgid "Standard - Purchase Order Email Template"
-msgstr "Estandar - Email Pedido Compra"
+msgstr "B10 - Email Pedido Compra"
 
-#. module: B10_purchases
-#: model:mail.template,name:B10_purchases.pressupost_email_template
+#. module: b10_purchases
+#: model:mail.template,name:b10_purchases.pressupost_email_template
 msgid "Standard - Purchase Quotation Email Template"
-msgstr "Estandar - Email Presupuesto Compra"
+msgstr "B10 - Email Presupuesto Compra"
 
-#. module: B10_purchases
-#: model:ir.actions.report,name:B10_purchases.B10_purchase_order_action
-msgid "Standard purchase order"
-msgstr "Pedido de Compra Estandar"
-
-#. module: B10_purchases
-#: model:ir.actions.report,name:B10_purchases.B10_purchase_quotation_action
-msgid "Standard purchase quotation"
-msgstr "Presupuesto de Compra Estandar"
-
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "TIN:"
 msgstr "NIF:"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Tel:"
-msgstr "Telf"
+msgstr ""
 
-#. module: B10_purchases
-#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_provider_url
-#: model:ir.model.fields,help:B10_purchases.field_res_users__x_provider_url
+#. module: b10_purchases
+#: model:ir.model.fields,field_description:b10_purchases.field_res_partner__x_provider_url
+#: model:ir.model.fields,field_description:b10_purchases.field_res_users__x_provider_url
+msgid "URL de la plataforma"
+msgstr ""
+
+#. module: b10_purchases
+#: model:ir.model.fields,help:b10_purchases.field_res_partner__x_provider_url
+#: model:ir.model.fields,help:b10_purchases.field_res_users__x_provider_url
+msgid "URL de la plataforma del proveïdor"
+msgstr "URL de la plataforma del proveedor"
+
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "URL of the supplier platform"
 msgstr "URL de la plataforma del proveedor"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "Unit Price"
-msgstr "Precio Unitario"
+msgstr "Precio unitario"
 
-#. module: B10_purchases
-#: model:ir.model.fields,help:B10_purchases.field_res_partner__x_provider_user
-#: model:ir.model.fields,help:B10_purchases.field_res_users__x_provider_user
+#. module: b10_purchases
+#: model:ir.model,name:b10_purchases.model_res_users
+msgid "User"
+msgstr "Usuario"
+
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "User login for the supplier platform"
 msgstr "Inicio de sesión para la plataforma del proveedor"
 
-#. module: B10_purchases
-#: model:ir.model.fields,field_description:B10_purchases.field_res_partner__x_provider_user
-#: model:ir.model.fields,field_description:B10_purchases.field_res_users__x_provider_user
+#. module: b10_purchases
+#. odoo-python
+#: code:addons/b10_purchases/models/supplierPlatformb10.py:0
 msgid "Username"
 msgstr "Nombre de usuario"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_order_document
-#: model_terms:ir.ui.view,arch_db:B10_purchases.B10_purchase_quotation_document
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_order_document
+#: model_terms:ir.ui.view,arch_db:b10_purchases.B10_purchase_quotation_document
 msgid "VAT:"
 msgstr "NIF:"
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.view_partner_form_b10_purchases
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
 msgid "https://example.com"
-msgstr "https://example.com"
+msgstr ""
 
-#. module: B10_purchases
-#: model_terms:ir.ui.view,arch_db:B10_purchases.view_partner_form_b10_purchases
+#. module: b10_purchases
+#: model_terms:ir.ui.view,arch_db:b10_purchases.view_partner_form_b10_purchases
 msgid "user@example.com"
-msgstr "usuario@example.com"
+msgstr ""
 
-#. module: B10_purchases
-#: model:mail.template,subject:B10_purchases.comanda_email_template
-#: model:mail.template,subject:B10_purchases.pressupost_email_template
+#. module: b10_purchases
+#: model:mail.template,subject:b10_purchases.comanda_email_template
+#: model:mail.template,subject:b10_purchases.pressupost_email_template
 msgid "{{ object.company_id.name }} Order ref. {{ object.name or 'n/a' }}"
 msgstr "{{ object.company_id.name }} Ref. Pedido {{ object.name or 'n/a' }}"
