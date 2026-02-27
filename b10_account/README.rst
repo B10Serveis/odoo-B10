@@ -138,6 +138,11 @@ Changelog
 
 * [FIX] Estableix document de Factura B10 com a document de factura per defecte.
 
+18.0.1.8.8 (2026-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Afegit salt de linia entre telefon i email de company.
+
 
 
 Bug Tracker

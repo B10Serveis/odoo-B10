@@ -88,6 +88,7 @@
                                 <br/>
                                 <span t-if="company.phone">Tel: <span t-field="company.phone"/>
                                 </span>
+                                <br />
                                 <span t-if="company.email">Email: <span t-field="company.email"/>
                                 </span>
                                 <br/>
