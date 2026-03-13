@@ -284,6 +284,7 @@ class DammReportsWizard(models.TransientModel):
         is_product_by_damm = {}  # cache
         sales = self.env["account.move"].search(
             [
+                ("move_type", "in", ["out_invoice", "out_refund"]),
                 ("state", "=", "posted"),
                 ("invoice_date", ">=", self.date_start),
                 ("invoice_date", "<=", self.date_end),
