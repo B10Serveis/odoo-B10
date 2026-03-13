@@ -42,10 +42,6 @@ def _f_str_or_empty(rep, v):
     return str(v) if v is not False else ""
 
 
-def _f_str_replace_coma(rep, v):
-    return str(v).replace(",", "") if v is not False else ""
-
-
 def _f_date(rep, v):
     return v.strftime("%Y%m%d") if v else ""
 
@@ -135,7 +131,7 @@ _report_formats = {
             _g_field("move_id.invoice_origin"),
             _f_str_or_empty,
         ),
-        ("Nº Documento", 20, _g_field("move_name"), _f_str_replace_coma),
+        ("Nº Documento", 20, _g_empty, None),
         ("Nº Línea doc", 10, _g_field("sequence"), None),
         ("Fecha documento", 8, _g_field("date"), _f_date),
         ("Cantidad", 15, lambda r, sl: round(sl.quantity * 100_000), None),
