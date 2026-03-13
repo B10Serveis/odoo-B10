@@ -53,11 +53,16 @@ def _f_float(rep, v):
 # Other helpers.
 
 
+def _v_quantity(sale_line):  # TODO: cache
+    q = sale_line.quantity
+    return q if sale_line.move_id.move_type != "out_refund" else -q
+
+
 def _v_price(sale_line):  # TODO: cache
     return round(
         1000
         * (  # may be tuned to include some taxes
-            sale_line.price_unit * sale_line.quantity
+            sale_line.price_unit * _v_quantity(sale_line)
         )
     )
 
@@ -66,8 +71,10 @@ def _v_discount(sale_line):  # TODO: cache
     return round(
         1000
         * (  # no taxes
-            (sale_line.price_unit * sale_line.quantity) - sale_line.price_subtotal
+            (sale_line.price_unit * sale_line.quantity)
+            - sale_line.price_subtotal
         )
+        * (1 if sale_line.move_id.move_type != "out_refund" else -1)
     )
     # Codi original comentat al detectar que Carboniques Franques utilitza
     # descompte per unitat i no percentual (account_invoice_fixed_discount).
@@ -134,7 +141,7 @@ _report_formats = {
         ("Nº Documento", 20, _g_empty, None),
         ("Nº Línea doc", 10, _g_field("sequence"), None),
         ("Fecha documento", 8, _g_field("date"), _f_date),
-        ("Cantidad", 15, lambda r, sl: round(sl.quantity * 100_000), None),
+        ("Cantidad", 15, lambda r, sl: round(_v_quantity(sl) * 100_000), None),
         (
             "Importe albarán",
             12,
@@ -147,7 +154,7 @@ _report_formats = {
             "Nº descuento",
             20,
             lambda r, sl: (
-                "" if sl.discount in [100] and _v_discount(sl) > 0 else "DTO VALOR"
+                "" if sl.discount in [100] and _v_discount(sl) else "DTO VALOR"
             ),
             None,
             # Codi original comentat al detectar que Carboniques Franques utilitza descompte per unitat i no percentual (account_invoice_fixed_discount).
