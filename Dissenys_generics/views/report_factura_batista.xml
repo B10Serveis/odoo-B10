@@ -109,7 +109,9 @@
 
 
             <!-- Page -->
-            <div class="article" t-att-data-oe-model="doc._name" t-att-data-oe-id="doc.id">
+            <div class="article"
+                t-att-data-oe-model="doc._name"
+                t-att-data-oe-id="doc.id">
                 <!-- <br/> <br/> -->
                 <div class="container"
                     style="margin-bottom:1em; padding-top:40px;">
@@ -176,6 +178,10 @@
                         <div class="col-6"
                             style="margin-left: 20px;"
                             id="b10_docinfo_right">
+                            <!-- Separador QR -->
+                            <p style="margin-bottom: 0;">
+                                <br/>
+                            </p>
                             <!-- Dades Client -->
                             <h5>
                                 <strong>

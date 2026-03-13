@@ -161,6 +161,11 @@ Changelog
 
 * [FIX] Modificat div article de Factura per evitar error que apareixia en Integrapirineus. 
 
+16.0.1.12.11 (2026-03-13)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Al disseny de factura hem afegit un separador entre el nom del  client i el QR. 
+
 Bug Tracker
 ===========
 
