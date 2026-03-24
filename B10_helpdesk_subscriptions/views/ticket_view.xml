@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2025 Batista10 (https://www.batista10.cat/).
+@author: Joan Llimiñana <joan@batista10.cat>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
 <odoo>
     <data>
         <record id="ticket_view_form_B10_subscriptions"
