@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-05 16:48+0000\n"
-"PO-Revision-Date: 2025-03-05 17:50+0100\n"
+"POT-Creation-Date: 2025-03-06 08:14+0000\n"
+"PO-Revision-Date: 2026-03-24 12:07+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -84,7 +84,7 @@ msgstr "<strong>Creado el: </strong>"
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
 msgid "<strong>Email: </strong>"
-msgstr ""
+msgstr "<strong>Email: </strong>"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
@@ -120,17 +120,6 @@ msgstr ""
 "interesado. Podrá ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, limitación, oposición, portabilidad y a retirar el\n"
 "consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente en materia de Protección de Datos para\n"
 "obtener información adicional o presentar una reclamación."
-
-#. module: b10_helpdesk
-#: model:ir.model.fields,field_description:b10_helpdesk.field_helpdesk_ticket__email_ccs
-msgid "CC"
-msgstr ""
-
-#. module: b10_helpdesk
-#: model:ir.model.fields,field_description:b10_helpdesk.field_res_partner__cc_email
-#: model:ir.model.fields,field_description:b10_helpdesk.field_res_users__cc_email
-msgid "Cc Email"
-msgstr ""
 
 #. module: b10_helpdesk
 #: model:ir.model.fields,field_description:b10_helpdesk.field_helpdesk_ticket__close_note
