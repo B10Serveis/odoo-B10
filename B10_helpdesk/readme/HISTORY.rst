@@ -13,3 +13,8 @@
 ~~~~~~~~~~~~~~~~~~
 
 * [ADD] Afegir disseny d'impressió de ticket.
+
+1.3.0 (2026-03-24)
+~~~~~~~~~~~~~~~~~~
+
+* [IMP] Eliminats camps de còpia de correu. Feu servir els seguidors de l'objecte.
