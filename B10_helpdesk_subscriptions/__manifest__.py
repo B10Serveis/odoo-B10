@@ -4,6 +4,8 @@
 
 {
     "name": "Batista10 - Helpdesk Subscriptions",
+    "summary": ("Hides contract relation in tickets"
+                " and adds subscription relation"),
     "author": ["Batista10"],
     "version": "15.0.1.0.1",
     "application": True,
