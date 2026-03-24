@@ -7,7 +7,7 @@
     "summary": ("Hides contract relation in tickets"
                 " and adds subscription relation"),
     "author": "Batista10",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "application": False,
     "installable": True,
     "license": "AGPL-3",

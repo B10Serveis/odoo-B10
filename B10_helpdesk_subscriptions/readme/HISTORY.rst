@@ -10,3 +10,8 @@
 ~~~~~~~~~~~~~~~~~~
 
 * [IMP] Notes de llicència i autoria.
+
+1.0.2 (2026-03-24)
+~~~~~~~~~~~~~~~~~~
+
+* [IMP] Documentació adaptada a estàndards OCA.
