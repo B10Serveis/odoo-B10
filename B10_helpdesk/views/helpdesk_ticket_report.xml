@@ -37,56 +37,54 @@
                                     t-value="res_company"/>
                             </t>
                             <!-- Capçalera -->
-                            <div class="container">
-                                <div class="row"
-                                    id="b10_header"
-                                    style="overflow: hidden;">
+                            <div class="row"
+                                id="b10_header"
+                                style="overflow: hidden;">
 
-                                    <!-- Logo esquerra -->
-                                    <div class="col-6"
-                                        id="b10_header_left">
-                                        <img t-if="doc.company_id.logo"
-                                            t-att-src="image_data_uri(doc.company_id.logo)"
-                                            style="max-width: 200px; max-height: 150px;"/>
-                                    </div>
+                                <!-- Logo esquerra -->
+                                <div class="col-6"
+                                    id="b10_header_left">
+                                    <img t-if="doc.company_id.logo"
+                                        t-att-src="image_data_uri(doc.company_id.logo)"
+                                        style="max-width: 200px; max-height: 150px;"/>
+                                </div>
 
 
-                                    <!-- Dades Empresa dreta-->
-                                    <div class="col-6"
-                                        id="b10_header_right"
-                                        style="padding:15px; padding-left:30px;">
-                                        <p style="margin-bottom: 0; color:gray; font-size:0.75em;">
-                                            <strong>
-                                                <span t-if="company.name"
-                                                    t-field="company.name"/>
-                                            </strong>
-                                            <br/>
-                                            <span t-if="company.vat">VAT: <span t-field="company.vat"/>
-                                            </span>
-                                        </p>
-                                        <p style="margin-bottom: 0; color:gray; font-size:0.75em; margin-bottom:10px">
-                                            <span t-if="company.street"
-                                                t-field="company.street"/>
-                                            <br/>
-                                            <span t-if="company.zip"
-                                                t-field="company.zip"/>
-                                            <span> - </span>
-                                            <span t-if="company.city"
-                                                t-field="company.city"/>
-                                            <span> (</span>
-                                            <span t-if="company.state_id.name"
-                                                t-field="company.state_id.original_name"/>
-                                            <span>)</span>
-                                            <br/>
-                                            <span t-if="company.phone">Tel: <span t-field="company.phone"/>
-                                            </span>
-                                            <span t-if="company.email">Email: <span t-field="company.email"/>
-                                            </span>
-                                            <br/>
-                                            <span t-if="company.website"
-                                                t-field="company.website"/>
-                                        </p>
-                                    </div>
+                                <!-- Dades Empresa dreta-->
+                                <div class="col-6"
+                                    id="b10_header_right"
+                                    style="padding:15px; padding-left:30px;">
+                                    <p style="margin-bottom: 0; color:gray; font-size:0.75em;">
+                                        <strong>
+                                            <span t-if="company.name"
+                                                t-field="company.name"/>
+                                        </strong>
+                                        <br/>
+                                        <span t-if="company.vat">VAT: <span t-field="company.vat"/>
+                                        </span>
+                                    </p>
+                                    <p style="margin-bottom: 0; color:gray; font-size:0.75em; margin-bottom:10px">
+                                        <span t-if="company.street"
+                                            t-field="company.street"/>
+                                        <br/>
+                                        <span t-if="company.zip"
+                                            t-field="company.zip"/>
+                                        <span> - </span>
+                                        <span t-if="company.city"
+                                            t-field="company.city"/>
+                                        <span> (</span>
+                                        <span t-if="company.state_id.name"
+                                            t-field="company.state_id.original_name"/>
+                                        <span>)</span>
+                                        <br/>
+                                        <span t-if="company.phone">Tel: <span t-field="company.phone"/>
+                                        </span>
+                                        <span t-if="company.email">Email: <span t-field="company.email"/>
+                                        </span>
+                                        <br/>
+                                        <span t-if="company.website"
+                                            t-field="company.website"/>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -98,19 +96,15 @@
                             <div class="row"
                                 id="b10_ticket_name"
                                 style="border-bottom: 1px solid #c1c1c1; padding:1em;">
-                                <div class="col-4">
-                                    <h4 t-if="doc.number"
-                                        style="margin-right:1em;">
-                                        <strong>
-                                            <span t-field="doc.number"/>
-                                        </strong>
-                                    </h4>
-                                </div>
-                                <div class="col-8">
-                                    <h5 t-if="doc.name">
-                                        <span t-field="doc.name"/>
-                                    </h5>
-                                </div>
+                                <h4 t-if="doc.number"
+                                    style="margin-right:1em;">
+                                    <strong>
+                                        <span t-field="doc.number"/>
+                                    </strong>
+                                </h4>
+                                <h5 t-if="doc.name">
+                                    <span t-field="doc.name"/>
+                                </h5>
                             </div>
                             <div class="row"
                                 id="b10_ticket_data"
@@ -246,7 +240,6 @@
                                         style="line-height: 1.2em;"/>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <!-- FOOTER -->
