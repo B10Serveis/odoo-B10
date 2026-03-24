@@ -5,7 +5,7 @@
 {
     "name": "Batista10 - Helpdesk Subscriptions",
     "author": ["Batista10"],
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.1",
     "application": True,
     "installable": True,
     "license": "AGPL-3",
