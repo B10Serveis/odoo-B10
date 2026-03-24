@@ -47,3 +47,4 @@ field_encryption/models/__pycache__/__init__.cpython-310.pyc
 field_encryption/models/__pycache__/fields.cpython-310.pyc
 B10_account/__pycache__/__init__.cpython-39.pyc
 *.pyc
+*.mo
