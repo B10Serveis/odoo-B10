@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ticket_view_form_B10_subscriptions"
+            model="ir.ui.view">
+            <field name="name">helpdeskB10_subscriptions</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id"
+                ref="helpdesk_mgmt.ticket_view_form"/>
+            <field name="arch"
+                type="xml">
+                <xpath expr="//field[@name='related_contract']"
+                    position="replace">
+                    <!-- Replacing the related_contract field with related_subscription -->
+                    <field name="related_contract"
+                        invisible="1"/>
+                    <field name="related_subscription"
+                        options="{'color_field': 'color', 'no_create_edit': True}"
+                        domain="['|', ('date', '&gt;=', current_time),('date', '=', False)]"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
