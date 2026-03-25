@@ -13,11 +13,10 @@ Creates a field on res.country.state to show the original name of spanish states
 Changelog
 =========
 
-17.0.1.0.0 (2024-06-26)
-~~~~~~~~~~~~~~~~~~~~~~~
+1.0.2 (2026-03-25)
+~~~~~~~~~~~~~~~~~~
 
-* [ADD] Migrat de 16.0
-
+* [IMP] Codi unificat per a diferents versions d’Odoo.
 
 
 Bug Tracker
