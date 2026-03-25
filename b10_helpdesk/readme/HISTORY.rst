@@ -19,6 +19,22 @@
 
 * [IMP] Eliminats camps de còpia de correu. Feu servir els seguidors de l'objecte.
 
+18.0.1.0.0 (2025-08-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [MIG] Migració a Odoo 18.
+
+18.0.1.1.0 (2025-08-08)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [REM] Eliminat el camp `email_ccs` i la funcionalitat de còpies en CC als tiquets.
+* [REM] Eliminat el camp `cc_email` al model `res.partner` (relació inversa de CC).
+* [REM] Eliminats els camps `related_contract` i `current_time` per traslladar-los al nou mòdul `b10_helpdesk_contracts`, eliminant així la dependència amb el mòdul `contract`.
+* [CLEAN] Neteja de vistes per eliminar referències als camps suprimits.
+
+2.1.0 (2025-08-08)
+~~~~~~~~~~~~~~~~~~
+
+* [ADD] Scripts de migració (OpenUpgrade-style).
+
 2.1.1 (2026-03-25)
 ~~~~~~~~~~~~~~~~~~
 
