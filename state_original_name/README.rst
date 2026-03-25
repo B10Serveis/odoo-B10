@@ -13,7 +13,10 @@ Creates a field on res.country.state to show the original name of spanish states
 Changelog
 =========
 
+1.0.2 (2026-03-25)
+~~~~~~~~~~~~~~~~~~
 
+* [IMP] Codi unificat per a diferents versions d’Odoo.
 
 
 Bug Tracker
@@ -33,6 +36,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
+* Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
