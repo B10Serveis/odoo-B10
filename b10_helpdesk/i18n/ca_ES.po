@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-08 08:36+0000\n"
-"PO-Revision-Date: 2025-08-08 08:36+0000\n"
+"POT-Creation-Date: 2025-03-06 08:14+0000\n"
+"PO-Revision-Date: 2026-03-24 12:07+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "Language: ca_ES\n"
@@ -45,6 +45,9 @@ msgid ""
 "                                            Close notes: \n"
 "                                        </strong>"
 msgstr ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Notes de tancament: \n"
+"                                        </strong>"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
@@ -53,6 +56,9 @@ msgid ""
 "                                            Description: \n"
 "                                        </strong>"
 msgstr ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Descripció: \n"
+"                                        </strong>"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
@@ -117,7 +123,7 @@ msgstr ""
 #. module: b10_helpdesk
 #: model:ir.model.fields,field_description:b10_helpdesk.field_helpdesk_ticket__close_note
 msgid "Closing Note"
-msgstr "Notes de tancament"
+msgstr "Nota de tancament"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_view_form_B10
@@ -137,12 +143,12 @@ msgstr "Tiquet del centre d'assitència"
 #. module: b10_helpdesk
 #: model:ir.actions.report,name:b10_helpdesk.action_helpdesk_ticket_report_B10
 msgid "Helpsdesk ticket Estandard"
-msgstr ""
+msgstr "Tiquet de Centre d'assistència"
 
 #. module: b10_helpdesk
 #: model:ir.model.fields,field_description:b10_helpdesk.field_helpdesk_ticket__internal_note
 msgid "Internal Note"
-msgstr "Notes internes"
+msgstr "Nota interna"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_view_form_B10

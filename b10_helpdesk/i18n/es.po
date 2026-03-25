@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-08 08:36+0000\n"
-"PO-Revision-Date: 2025-08-08 08:36+0000\n"
+"POT-Creation-Date: 2025-03-06 08:14+0000\n"
+"PO-Revision-Date: 2026-03-24 12:07+0100\n"
 "Last-Translator: Joan Llimiñana <joan@batista10.cat>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -45,6 +45,9 @@ msgid ""
 "                                            Close notes: \n"
 "                                        </strong>"
 msgstr ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Notas de cierre: \n"
+"                                        </strong>"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
@@ -53,6 +56,9 @@ msgid ""
 "                                            Description: \n"
 "                                        </strong>"
 msgstr ""
+"<strong style=\"line-height: 1.2em;\">\n"
+"                                            Descripción: \n"
+"                                        </strong>"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
@@ -77,7 +83,7 @@ msgstr "<strong>Creado el: </strong>"
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
 msgid "<strong>Email: </strong>"
-msgstr ""
+msgstr "<strong>Email: </strong>"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
@@ -132,22 +138,22 @@ msgstr ""
 #. module: b10_helpdesk
 #: model:ir.model,name:b10_helpdesk.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
-msgstr "Tiquet del centre d'assitència"
+msgstr "Ticket Helpdesk"
 
 #. module: b10_helpdesk
 #: model:ir.actions.report,name:b10_helpdesk.action_helpdesk_ticket_report_B10
 msgid "Helpsdesk ticket Estandard"
-msgstr ""
+msgstr "Ticket Helpdesk Estandard"
 
 #. module: b10_helpdesk
 #: model:ir.model.fields,field_description:b10_helpdesk.field_helpdesk_ticket__internal_note
 msgid "Internal Note"
-msgstr "Nota Interna"
+msgstr "Nota interna"
 
 #. module: b10_helpdesk
 #: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_view_form_B10
 msgid "Internal Notes"
-msgstr "Notas Internas"
+msgstr "Notas internas"
 
 #. module: b10_helpdesk
 #: model:ir.model.fields,field_description:b10_helpdesk.field_helpdesk_ticket__stage_closed
