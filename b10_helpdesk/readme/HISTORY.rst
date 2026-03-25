@@ -18,3 +18,9 @@
 ~~~~~~~~~~~~~~~~~~
 
 * [IMP] Eliminats camps de còpia de correu. Feu servir els seguidors de l'objecte.
+
+2.1.1 (2026-03-25)
+~~~~~~~~~~~~~~~~~~
+
+* [IMP] Codi sincronitzat amb altres versions d’Odoo.
+* [FIX] Afegida dependència mancant de ``b10_contacts``.
