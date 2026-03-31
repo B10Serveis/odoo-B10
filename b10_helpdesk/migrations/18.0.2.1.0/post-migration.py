@@ -9,10 +9,10 @@ def migrate(cr, version):
     # Comprovar que el mòdul nou s’ha instal·lat
     cr.execute("""
         SELECT state FROM ir_module_module
-        WHERE name = 'b10_helpdesk_contracts'
+        WHERE name = 'b10_helpdesk_contract'
     """)
     row = cr.fetchone()
 
     # llança un warning/log si no està 'installed'
     if not row or row[0] != 'installed':
-        _logger.warning("El mòdul b10_helpdesk_contracts no està instal·lat.")
+        _logger.warning("El mòdul b10_helpdesk_contract no està instal·lat.")

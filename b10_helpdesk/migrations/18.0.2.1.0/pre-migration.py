@@ -15,7 +15,7 @@ def migrate(cr, version):
     # Assegurar que el nou mòdul existeix a la llista i marcar-lo per instal·lar
     cr.execute("""
         SELECT id, state FROM ir_module_module
-        WHERE name = 'b10_helpdesk_contracts'
+        WHERE name = 'b10_helpdesk_contract'
     """)
     mod = cr.fetchone()
     if mod:
