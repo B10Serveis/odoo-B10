@@ -40,3 +40,8 @@
 
 * [IMP] Codi sincronitzat amb altres versions d’Odoo.
 * [FIX] Afegida dependència mancant de ``b10_contacts``.
+
+2.1.2 (2026-04-01)
+~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correccions a scripts de migració per a evitar perdre dades de contractes.
