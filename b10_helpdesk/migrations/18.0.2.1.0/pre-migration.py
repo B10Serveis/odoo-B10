@@ -1,4 +1,3 @@
-# b10_helpdesk/migrations/18.0.2.1.0/pre-migration.py
 def migrate(cr, version):
     # Només si s’està actualitzant el mòdul
     if not version:

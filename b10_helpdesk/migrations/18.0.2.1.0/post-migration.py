@@ -1,4 +1,3 @@
-# b10_helpdesk/migrations/18.0.2.1.0/post-migration.py
 import logging
 
 _logger = logging.getLogger(__name__)
