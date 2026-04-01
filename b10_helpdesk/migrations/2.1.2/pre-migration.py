@@ -25,7 +25,7 @@ def migrate(cr, version):
         WHERE name = 'b10_helpdesk_contract'
     """)
     mod = cr.fetchone()
-    if mod:  # TODO: fallar
+    if mod:
         mod_id, state = mod
         if state in ('uninstalled', 'to remove'):
             cr.execute("""
@@ -33,4 +33,7 @@ def migrate(cr, version):
                    SET state='to install'
                  WHERE id=%s
             """, (mod_id,))
-
+    else:
+        raise RuntimeError("Cal instal·lar el mòdul b10_helpdesk_contract"
+                           " per a actualitzar els models de dades existents,"
+                           " però no es troba disponible.")
