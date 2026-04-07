@@ -13,7 +13,7 @@
         <field name="auto_delete"
             eval="True" />
         <field name="report_template"
-            ref="B10_purchases.B10_purchase_quotation" />
+            ref="B10_purchases.B10_purchase_quotation_action" />
         <field name="report_name">PurchQuot_{{ (object.name or '-').replace('/','_') }}</field>
 
 
