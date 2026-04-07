@@ -118,6 +118,11 @@ Changelog
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
+16.0.1.3.6 (2026-04-07)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Evita avisos diversos relacionats amb el format de les plantilles de comanda i pressupost de compra.
+
 Bug Tracker
 ===========
 
