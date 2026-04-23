@@ -2,9 +2,10 @@
 <odoo>
     <record id="res_config_settings_view_form_sale_purchase_ic" model="ir.ui.view">
         <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="b10_settings_hub.view_res_config_settings_b10"/>
+        <field name="inherit_id" ref="b10_base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//block[@name='b10_multicompany']" position="inside">
+            <xpath expr="//app[@name='b10_base']" position="inside">
+            <block title="Multicompany" name="b10_multicompany">
                 <div class="text-decoration-underline mt8 mb8">Sale / Purchase</div>
                 <div class="content-group">
                     <div>
@@ -27,6 +28,7 @@
                         <field name="purchase_auto_validation" class="oe_inline"/>
                     </div>
                 </div>
+            </block>
             </xpath>
         </field>
     </record>
