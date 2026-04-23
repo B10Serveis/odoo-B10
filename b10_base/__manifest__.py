@@ -13,5 +13,8 @@
     "website": "https://www.batista10.cat",
     "application": False,
     "installable": True,
-    "depends": ["base"],
+    "depends": ["base_setup"],
+    "data": [
+        "views/res_config_settings_views.xml",
+    ],
 }
