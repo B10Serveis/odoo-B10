@@ -4,14 +4,14 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.8.8",
+    "version": "18.0.1.9.0",
     "depends": [
         "account",
+        "b10_base",
         "b10_mail",
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
         "account_payment_sale",
-        "b10_settings_hub",
         "l10n_es_verifactu_oca",
         "report_qweb_element_page_visibility",  # Perque el QR surti només a la primera pàgina
         "account_payment_partner",  # account.move:payment_mode_id
