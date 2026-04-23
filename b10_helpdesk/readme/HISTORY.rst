@@ -45,3 +45,8 @@
 ~~~~~~~~~~~~~~~~~~
 
 * [FIX] Correccions a scripts de migració per a evitar perdre dades de contractes.
+
+2.2.0 (2026-04-23)
+~~~~~~~~~~~~~~~~~~
+
+* [IMP] Elimina la dependència de ``b10_settings_hub``.
