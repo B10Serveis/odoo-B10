@@ -5,8 +5,8 @@
 {
     "name": "Batista10 - Base",
     "summary": "Funcions comunes per a mòduls B10",
-    "version": "0.0.0",
-    "development_status": "Alpha",
+    "version": "0.9.0",
+    "development_status": "Beta",
     "category": "Customizations",
     "author": "Batista10",
     "license": "AGPL-3",
