@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.1.2",
+    "version": "18.0.1.2.0",
     "depends": [
         "base",
         "purchase",
@@ -13,7 +13,6 @@
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
         "b10_mail",
-        "b10_settings_hub",
     ],
     "license": "AGPL-3",
     "application": True,

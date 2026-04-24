@@ -22,6 +22,8 @@ Batista10 - Settings Hub
 
 |badge1| |badge2| |badge3| |badge4|
 
+⚠️OBSOLET⚠️, podeu eliminar aquest mòdul.
+
 Mòdul Settings Hub per centralitzar la gestió dels mòduls de Batista10.  
 
 **Table of contents**
@@ -52,6 +54,11 @@ Changelog
 
 * [ADD] Creació del Settings Hub per agrupar la configuració dels mòduls Batista10.  
 
+18.0.1.0.1 (2026-04-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Es declara el mòdul com a obsolet. Els mòduls B10 ara empren ``b10_base``.
+
 Bug Tracker
 ===========
 
@@ -76,10 +83,6 @@ El desenvolupament ha estat finançat per Batista10.
 Maintainers
 ~~~~~~~~~~~
 Aquest mòdul és mantingut per Batista10.
-
-.. image:: https://odoo-community.org/logo.png
-   :alt: Odoo Community Association
-   :target: https://odoo-community.org
 
 Part of `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_settings_hub>`_.
 

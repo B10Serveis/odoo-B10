@@ -1,3 +1,3 @@
 Per fer servir el mòdul:
 
-#. Afegeix control de caducitat dels contractes
+#. Modificar el camp Darrera Data de Facturació.

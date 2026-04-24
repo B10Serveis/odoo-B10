@@ -1,40 +1,40 @@
-This module is designed to extend Sale Price computation in Odoo.
+Aquest mòdul afegeix plantilles PDF i funcionalitats addicionals per a vendes:  
 
-This module add a new model 'Margin Classifications' linked to Product variants.
+* Filtre “Expired” de pressupostos  
+* Checkbox “Show product image” al formulari  
+* Selecció de diari de pagament al formulari (pestanya d'altra informació), per a incloure'n l'IBAN als dissenys  
+* Dissenys per a Pressupost, Pressupost S/T, Comanda i ProForma  
+* Plantilles Email per a Pressupost, Comanda i ProForma  
 
-A margin classification has a 'Profit Margin' field and extra fields to manage
-computation method, like in Pricelist Item model (Markup Rate, Rounding and Surcharge fields)
+A més, aquest mòdul està dissenyat per ampliar el càlcul del preu de venda a Odoo.
 
-If product has a margin classification defined and the theoretical price is
-not the same as the sale price, an extra field 'Theoretical Price' is
-displayed, based on the Margin Classification and a button is available to
-change sale price.
+Afegeix un nou model 'Classificacions de Marges' vinculat a les variants de producte.
 
-.. image:: ../static/description/product_product_form.png
+Una classificació de marge té un camp 'Marge de Benefici' i camps addicionals per gestionar
+el mètode de càlcul, com en el model d'ítem de llista de preus (Taxa de Markup, Mètode de Redondeig i Camps de Càrrega)
 
-On the Margin classification Form, user can change computation fields.
-(Margin, Rounding method, ...)
-Three buttons are available to apply theoretical prices:
-* to all products,
-* only for products that are too expensive
-* only for products that are too cheap
+Si el producte té una classificació de marge definida i el preu teòric no és
+el mateix que el preu de venda, es mostra un camp addicional 'Preu Teòric',
+basat en la Classificació de Marge i un botó està disponible per
+canviar el preu de venda.
 
-.. image:: ../static/description/margin_classification_form.png
+.. image:: https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/product_product_form.png
 
-By clicking on the smart buttons on the right part of the form,
-all the products will be displayed, and user can easily change prices
+En el formulari de Classificació de marge, l'usuari pot canviar els camps de càlcul.
+(Marge, Mètode de Redondeig, ...)
+Tres botons estan disponibles per aplicar els preus teòrics:
 
-.. image:: ../static/description/product_product_tree_incorrect_price.png
+* a tots els productes,
+* només per als productes que són massa cars
+* només per als productes que són massa barats
 
-User can also see easily products with incorrect margins in the margin classification tree views:
+.. image:: https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/margin_classification_form.png
 
-.. image:: ../static/description/margin_classification_tree.png
+Clicant en els botons intel·ligents a la part dreta del formulari,
+tots els productes es mostraran, i l'usuari pot canviar fàcilment els preus
 
-This module use both [Markup](https://en.wikipedia.org/wiki/Markup_(business))
-and [Profit Margin](https://en.wikipedia.org/wiki/Profit_margin) concepts.
+.. image:: https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/product_product_tree_incorrect_price.png
 
-You could be interested by native Pricelist functionalities, setting sale
-prices based on Cost prices. The main problem of this design is that sale price
-change automaticaly when cost price changes, that is not desired in some user
-cases. For exemple, if you have a shop, you want to changes sale prices when
-customers is not in the shop, and after having changed labels in the shop.
+L'usuari també pot veure fàcilment els productes amb marges incorrectes en les vistes d'arbre de classificació de marges:
+
+.. image:: https://raw.githubusercontent.com/OCA/margin-analysis/12.0/product_margin_classification/static/description/margin_classification_tree.png

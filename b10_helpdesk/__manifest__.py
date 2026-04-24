@@ -4,8 +4,8 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "2.1.2",
-    "depends": ["helpdesk_mgmt", "b10_contacts", "b10_settings_hub"],
+    "version": "2.2.0",
+    "depends": ["helpdesk_mgmt", "b10_contacts"],
     "license": "AGPL-3",
     "application": True,
     "data": [

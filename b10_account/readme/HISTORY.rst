@@ -19,6 +19,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [ADD] Plantilles de correu per a factures:
+
   - Standard – Invoice Email Template (`factura_email_template`)
   - Standard – Pending Payment Email Template (`pending_payment_email_template`)
 
@@ -65,3 +66,37 @@
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
+18.0.1.6.5 (2025-11-28)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Ajustades mides de header a factura.
+
+18.0.1.7.5 (2026-02-16)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Modifica el filtre de 'Compte a pagar' perque mostri tots els comptes de tipus 'liability%'.
+
+18.0.1.7.6 (2026-02-19)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Correcció d'error al establir plantilla d'email de factura per defecte.
+
+18.0.1.7.7 (2026-02-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Traducció de plantilles d'email de factura.
+
+18.0.1.8.7 (2026-02-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Estableix document de Factura B10 com a document de factura per defecte.
+
+18.0.1.8.8 (2026-02-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Afegit salt de linia entre telefon i email de company.
+
+18.0.1.9.0 (2026-04-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Canvia la dependència de ``b10_settings_hub`` per ``b10_base``.
