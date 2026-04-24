@@ -1,8 +1,25 @@
 #!/bin/sh
 exec 1>&2
 
+get_module_version() {
+    git cat-file blob ":$1/__manifest__.py" \
+        | python3 -c 'import sys, ast; print(ast.literal_eval(sys.stdin.read())["version"])'
+}
+
+dump_module_verdocs() {
+    local f
+    for f in "README.rst" "readme/HISTORY.rst" "readme/HISTORY.md"; do
+        git cat-file blob ":$module/$f" 2> /dev/null
+    done
+}
+
 git status --porcelain | sed -nE 's#^M. (.*)/__manifest__.py$#\1#p' \
     | (while read module; do
+           version=$(get_module_version "$module")
+           if [ "$version" != '0.0.0' ] && ! dump_module_verdocs "$module" | fgrep -q "$version" ; then
+               echo "ERROR: No hi ha notes sobre la versió $version de «$module»."
+               exit 1
+           fi
            if ! git ls-files --cached -t "$module/readme/" | grep -q "^. $module/readme/"; then
                continue
            fi
