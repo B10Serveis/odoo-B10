@@ -1,7 +1,7 @@
 {
     "name": "Batista10 - Settings Hub",
-    "version": "18.0.1.0.0",
-    "summary": "Hub de configuracions per a mòduls B10",
+    "version": "18.0.1.0.1",
+    "summary": "⚠️OBSOLET⚠️ Hub de configuracions per a mòduls B10",
     "category": "Settings",
     "depends": ["base", "base_setup"],  
     "data": [
