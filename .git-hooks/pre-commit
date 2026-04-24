@@ -1,0 +1,27 @@
+#!/bin/sh
+exec 1>&2
+
+git status --porcelain | sed -nE 's#^M. (.*)/__manifest__.py$#\1#p' \
+    | (while read module; do
+           if ! git ls-files --cached -t "$module/readme/" | grep -q "^. $module/readme/"; then
+               continue
+           fi
+           if ! git status --porcelain | grep -q "^M. $module/README.rst$"; then
+               continue
+           fi
+           if ! git status --porcelain | grep -q "^M. $module/readme/HISTORY\.*"; then
+               cat <<EOF | fmt -w78
+ERROR: En declarar una nova versió de «$module»,\
+ s’ha modificat «$module/README.rst»\
+ però no s’ha actualitzat «$module/readme/HISTORY.*».
+
+Modifiqueu aquest darrer fitxer i empreu \
+«oca-gen-addon-readme --org-name=B10Serveis --repo-name=odoo-B10 --branch=<VERSIÓ_ODOO> --addon-dir=.»\
+ dins de «$module» per a regenerar «$module/README.rst»\
+ (en aquest commit o en el següent).
+EOF
+               exit 1
+           fi
+       done)
+
+# Ix amb el codi de l’última ordre de dalt.
