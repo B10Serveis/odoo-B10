@@ -85,6 +85,11 @@ Changelog
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
+16.0.1.4.5 (2026-05-05)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Mostra el logo de la companyia en les plantilles de correu, correcció en traduccions.
+
 
 Bug Tracker
 ===========
