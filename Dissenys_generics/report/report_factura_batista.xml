@@ -460,7 +460,7 @@
                                             t-value="o.tax_totals"/>
 
                                         <!--Modificació signe per Factura Rectificativa-->
-                                        <t t-if="not o.amount_total_signed >= 0"
+                                        <t t-if="not o.amount_total_signed >= 0 and tax_totals and 'groups_by_subtotal' in tax_totals"
                                             t-foreach="tax_totals['groups_by_subtotal'].items()"
                                             t-as="subtotal">
                                             <tr style="border-top-color:rgb(0, 0, 0); border-top-width: 1px;">

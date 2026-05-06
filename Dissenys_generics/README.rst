@@ -163,6 +163,11 @@ Changelog
 
 * [CHA] Canviem la dependència del mòdul l10n_es_edi_verifactu a l10n_es_verifactu_oca.
 
+17.0.1.14.1 (2026-05-06)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Al dissenys de factura arreglat un cas on el diccionari de tax_totals era nul.
+
 
 Bug Tracker
 ===========
