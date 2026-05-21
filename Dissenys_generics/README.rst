@@ -168,6 +168,11 @@ Changelog
 
 * [FIX] Al dissenys de factura arreglat un cas on el diccionari de tax_totals era nul.
 
+17.0.1.15.1 (2026-05-21)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Establert disseny de factura per defecte.
+
 
 Bug Tracker
 ===========

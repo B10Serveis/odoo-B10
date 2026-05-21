@@ -79,6 +79,11 @@ Changelog
 
 * [FIX] Mostra la companyia del document en lloc de la de l'usuari en les plantilles de correu (per compatibilitat amb multiempresa). Les plantilles existents són reemplaçades en actualitzar.
 
+17.0.1.6.4 (2026-05-21)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Eliminat el report a plantilla factura perque envii sol el report per defecte (establert al mòdul de dissenys).
+
 
 Bug Tracker
 ===========

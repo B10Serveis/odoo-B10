@@ -12,8 +12,6 @@
         <field name="lang">{{ object.partner_id.lang }}</field>
         <field name="auto_delete"
             eval="True" />
-        <field name="report_template_ids"
-            eval="[(4, ref('Dissenys_generics.action_report_factura_batista'))]"/>
 
 
         <field name="body_html"
@@ -214,6 +212,7 @@
     <!-- Force using the body above for the template. -->
     <!-- WARNING: On module update, this will undo any manual changes to the template,
          regardless of its data entry `noupdate` status. -->
-    <function name="reset_template" model="mail.template"
-              eval="[ref('plantilles_email.factura_email_template')]"/>
+    <function name="reset_template"
+        model="mail.template"
+        eval="[ref('plantilles_email.factura_email_template')]"/>
 </odoo>
