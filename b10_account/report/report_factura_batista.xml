@@ -411,15 +411,15 @@
 
                                 <t t-set="payment_term_details"
                                     t-value="o.payment_term_details"/>
-                                <div t-if="o.invoice_payment_term_id.display_on_invoice and payment_term_details"
+                                <div t-if="(o.invoice_payment_term_id.display_on_invoice or o.b10_display_payment_term_table) and payment_term_details"
                                     t-field="o.invoice_payment_term_id.note"
                                     name="payment_term"/>
                             </div>
                             <!-- Payment terms table -->
                             <div class="row"
                                 id="b10_payment_terms_table">
-                                <t t-if="o.invoice_payment_term_id.display_on_invoice and payment_term_details">
-                                    <div t-if='o.show_payment_term_details'
+                                <t t-if="(o.invoice_payment_term_id.display_on_invoice or o.b10_display_payment_term_table) and payment_term_details">
+                                    <div t-if='o.show_payment_term_details or o.b10_display_payment_term_table'
                                         id="total_payment_term_details_table"
                                         class="row"
                                         style="padding-right: 20px;">

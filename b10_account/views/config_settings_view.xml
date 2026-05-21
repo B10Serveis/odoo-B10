@@ -1,18 +1,28 @@
 <odoo>
-  <record id="b10_account.res_config_settings_view_form" model="ir.ui.view">
-    <field name="name">res.config.settings.form.b10.account</field>
-    <field name="model">res.config.settings</field>
-    <field name="inherit_id" ref="b10_base.res_config_settings_view_form"/>
-    <field name="arch" type="xml">
-      <xpath expr="//app[@name='b10_base']" position="inside">
-        <block title="Account" name="b10_account">
-          <setting id="b10_invoice_group_by_origin"
-                   string="Group invoice lines by origin"
-                   help="Agrupar línies de factura per comanda d’origen">
-            <field name="invoice_lines_by_origin"/>
-          </setting>
-        </block>
-      </xpath>
-    </field>
-  </record>
+    <record id="b10_account.res_config_settings_view_form"
+        model="ir.ui.view">
+        <field name="name">res.config.settings.form.b10.account</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id"
+            ref="b10_base.res_config_settings_view_form"/>
+        <field name="arch"
+            type="xml">
+            <xpath expr="//app[@name='b10_base']"
+                position="inside">
+                <block title="Account"
+                    name="b10_account">
+                    <setting id="b10_invoice_group_by_origin"
+                        string="Group invoice lines by origin"
+                        help="Agrupar línies de factura per comanda d’origen">
+                        <field name="invoice_lines_by_origin"/>
+                    </setting>
+                    <setting id="b10_display_payment_term_table"
+                        string="Display payment term table"
+                        help="Display payment term table on the standard invoice design">
+                        <field name="b10_display_payment_term_table"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
 </odoo>

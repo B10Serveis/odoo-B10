@@ -38,6 +38,7 @@ Usage
 
 Per utilitzar aquest mòdul:
 
+Agrupació de línies per comanda d’origen:
 #. Vés a **Settings → B10** i, en el bloc Comptabilitat, activa **Group invoice lines by origin**.
 #. Crea o obre una factura de venda; comprova que apareix el checkbox **Group Invoice Lines by Origin** sota el camp **Client/a**.
 #. Desa la factura: si està marcat el checkbox, en generar el PDF la taula de línies sortirà agrupada per cada “Comanda de venda X”.
@@ -148,6 +149,11 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Canvia la dependència de ``b10_settings_hub`` per ``b10_base``.
+
+18.0.1.10.0 (2026-05-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Afegit camp de configuració per a la visualització de la taula de venciments.
 
 Bug Tracker
 ===========

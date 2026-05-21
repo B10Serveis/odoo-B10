@@ -5,6 +5,7 @@ class B10AccountMove(models.Model):
     _inherit = "account.move"
 
     group_by_origin = fields.Boolean(string="Group Invoice Lines by Origin")
+    b10_display_payment_term_table = fields.Boolean(string="Display Payment Term Table")
 
     # Estableix la plantilla de correu electrònic per defecte de Factura
     def _get_mail_template(self):
@@ -142,11 +143,14 @@ class B10AccountMove(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         records = super().create(vals_list)
-        # Aplica la configuració
+        # Obté valors de configuració
         setting = self.env["res.config.settings"].sudo()
         group = setting.get_invoice_lines_by_origin()
+        display_payment_terms = setting.get_b10_display_payment_term_table()
         for inv in records:
             inv.group_by_origin = group
+            inv.b10_display_payment_term_table = display_payment_terms
+
         return records
 
     def _get_invoiced_lot_values(self):
