@@ -84,6 +84,11 @@ Changelog
 
 * [CHA] Eliminat el report a plantilla factura perque envii sol el report per defecte (establert al mòdul de dissenys).
 
+17.0.1.6.5 (2026-05-22)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [CHA] Eliminat el report a plantilla factura impagada perque envii sol el report per defecte (establert al mòdul de dissenys).
+
 
 Bug Tracker
 ===========
