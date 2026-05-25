@@ -1,11 +1,11 @@
-Per a permetre que la creació d’una comanda de venda a la companyia A cree una comanda de compra associada a la companyia B, cal fer-ho a la configuració de la companyia B:
+To allow a sale order in company A to create an associated purchase order in company B, one must enable it in company B's settings:
 
-#. Escollir la companyia actual al menú superior d’Odoo (a la dreta, junt al nom d’usuari).
-#. Anar al menú *Configuració > Configuració General*.
-#. Sota la secció *Empreses*, apartat interempresa (*Inter Company*), sota *Venda / Compra* marcar l’opció primera, que habilita aquesta funció.
-#. El selector següent vos permetrà escollir un usuari que apareixerà com a creador d’aquestes comandes de compra. Si no n’escolliu cap, s’emprarà l’usuari que ha creat la comanda de venda. En qualsevol cas, caldrà que l’usuari emprat tinga permisos de creació de compres en aquesta companyia.
-#. Si marqueu l’opció de validació automàtica, quan valideu la comanda de venda a la companyia A amb la companyia B com a client, la comanda de compra es validarà automàticament a la companyia B.
+#. Choose the current company in Odoo's top menu (to the right, next no the user's name).
+#. Go to menu *Settings / General Settings*.
+#. Under section *Companies*, heading *Inter Company OCA features*, under *Sale / Purchase* check the first option, which enables this functionality.
+#. The selector below allows you to choose a user which will appear as the creator of these purchase orders. If you do not choose a user, the user who created the sale order will be used. In any case, the user needs to have permission to create purchase orders in this company.
+#. If you check the option of automatic validation, when you confirm the sale order in company A with company B as the customer, the purchase order will be automatically confirmed in company B.
 
-Caldrà repetir aquestes passes per a cada companyia on vulgueu admetre la creació d’aquest tipus de comandes de compra.
+These steps should be repeated for each company where you want to accept the creation of such purchase orders.
 
-**Important:** Habilitar per a una companyia l’opció de permetre la creació de comandes de compra associades a comandes de venda permetrà que açò es faça *des de qualsevol altra companyia* de l’Odoo (sempre que l’usuari creador tinga els permisos necessaris).
+**Important:** Checking in a company the option to allow the creation of purchase orders associated with sale orders will allow this to be done *from any other company* in Odoo (as long as the creating user has the required permissions).

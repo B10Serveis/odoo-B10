@@ -1,1 +1,1 @@
-El desenvolupament ha estat finançat per Batista10.
+Development has been funded by Batista10.

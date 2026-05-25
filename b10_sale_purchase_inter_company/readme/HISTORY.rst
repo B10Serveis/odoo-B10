@@ -1,11 +1,11 @@
 1.0.0 (2025-08-13)
 ~~~~~~~~~~~~~~~~~~
 
-* [ADD] Creació automàtica de **PO** en confirmar **SO** (SO → PO) entre companyies.  
-* [ADD] **Vendor Reference** del PO = número de la SO (`partner_ref = SO.name`).  
-* [ADD] **Warnings** d’onchange a la SO per informar que no hi ha sincronització cap al PO en canvis de qty/preu/impostos/afegir producte.  
+* [ADD] Automatic creation of the PO when confirming the SO (SO → PO) between companies.
+* [ADD] Set PO's vendor reference to SO number (``PO.partner_ref = SO.name``).
+* [ADD] Onchange warnings in SO to inform that no synchronization is made towards the PO when changing qty/price/taxes/product list.
 
 1.0.1 (2025-12-09)
 ~~~~~~~~~~~~~~~~~~
 
-* [FIX] Descripcions més entenedores en la pantalla de configuració.
+* [FIX] More understandable descriptions in configuration screen.

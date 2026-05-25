@@ -1,10 +1,9 @@
-Aquest mòdul és útil si hi ha diverses companyies en la mateixa base de dades d’Odoo i aquestes companyies es venen béns o serveis entre elles.
-Permet crear automàticament una comanda de compra (PO) a la companyia B a partir d’una comanda de venda (SO) feta des de la companyia A.
+This module is useful if there are multiple companies in the same Odoo database and those companies sell goods or services among themselves. It allows to create a purchase order (PO) automatically in company A from a sale order (SO) created in company B.
 
-Imagina que tens la companyia A i la companyia B en la mateixa base de dades d’Odoo:
+Imagine you have company A and company B in the same Odoo database:
 
-* La companyia A ven productes o serveis a la companyia B.
-* La companyia A crea una comanda de venda (SO) amb la companyia B com a client.
-* Aquest mòdul automatitza la creació de la comanda de compra (PO) a la companyia B, amb la companyia A com a proveïdor.
+* Company A sells goods or services to company B.
+* Company A creates a sale order (SO) with company B as customer.
+* This module automates the creation of the purchase order (PO) in company B with company A as seller.
 
-Aquest mòdul implementa el comportament contrari al del mòdul ``purchase_sale_inter_company``, del qual conté codi derivat (sota la mateixa llicència).
+This module implements the converse behaviour to module ``purchase_sale_inter_company``, from which it contains derivative code (under the same license).

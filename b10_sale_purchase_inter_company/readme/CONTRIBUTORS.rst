@@ -3,7 +3,7 @@
   * Pol Comas i Romero <pol@batista10.cat>
   * Ivan Vilata i Balaguer <ivan@batista10.cat>
 
-Per al mòdul ``purchase_sale_inter_company``:
+For module ``purchase_sale_inter_company``:
 
 * Odoo S.A. (original module inter_company_rules)
 * Andrea Stirpe <a.stirpe@onestein.nl>
