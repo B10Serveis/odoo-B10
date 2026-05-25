@@ -11,7 +11,7 @@ class SaleOrderLine(models.Model):
         compute_sudo=True,
     )
 
-    auto_purchase_line_id = fields.Many2one(  
+    auto_purchase_line_id = fields.Many2one(
         comodel_name="purchase.order.line",
         string="Target Purchase Order Line",
         readonly=True,
@@ -48,7 +48,7 @@ class SaleOrderLine(models.Model):
                         ),
                     }
                 }
-    
+
     @api.onchange("price_unit")
     def _onchange_price_unit_warn_intercompany(self):
         """Warns the user that changing the price in the SO does not synchronize the PO."""
@@ -65,7 +65,7 @@ class SaleOrderLine(models.Model):
                         ),
                     }
                 }
-            
+
     @api.onchange("tax_id")
     def _onchange_tax_id_warn_intercompany(self):
         """Warns the user that changing the tax_id in the SO does not synchronize the PO."""
@@ -82,7 +82,7 @@ class SaleOrderLine(models.Model):
                         ),
                     }
                 }
-            
+
     @api.onchange("product_id")
     def _onchange_product_added_warn_intercompany(self):
         """Warns when a new line is added to an intercompany SO.
@@ -105,4 +105,3 @@ class SaleOrderLine(models.Model):
                         ),
                     }
                 }
-            

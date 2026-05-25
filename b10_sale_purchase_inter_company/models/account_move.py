@@ -1,5 +1,7 @@
 from markupsafe import Markup
-from odoo import models, _
+
+from odoo import _, models
+
 
 class AccountMove(models.Model):
     _inherit = "account.move"

@@ -11,7 +11,7 @@ class SaleOrder(models.Model):
         compute_sudo=True,
     )
 
-    auto_purchase_order_id = fields.Many2one(  
+    auto_purchase_order_id = fields.Many2one(
         comodel_name="purchase.order",
         string="Target Purchase Order",
         readonly=True,
