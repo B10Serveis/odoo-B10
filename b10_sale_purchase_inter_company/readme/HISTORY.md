@@ -10,3 +10,8 @@
 ## 1.0.1 (2025-12-09)
 
 - \[FIX\] More understandable descriptions in configuration screen.
+
+## 1.0.2 (2026-05-25)
+
+- \[IMP\] Apply OCA standards, split documentation, translate into
+  English.
