@@ -1,3 +1,6 @@
+# Copyright 2025 Batista10
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+
 {
     "name": "Batista10 - Inter Company Module for Sale to Purchase Order",
     "summary": "Intercompany SO/PO rules",
