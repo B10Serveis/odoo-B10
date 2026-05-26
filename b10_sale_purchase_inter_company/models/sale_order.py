@@ -79,7 +79,8 @@ class SaleOrder(models.Model):
             vendor_partner.property_purchase_currency_id.id
             or dest_company.currency_id.id
         ):
-            # NB: property_purchase_currency_id is not always defined; it is compared with the company one if necessary
+            # NB: property_purchase_currency_id is not always defined;
+            # it is compared with the company one if necessary
             raise UserError(
                 _(
                     "You cannot create PO from SO because "
@@ -192,7 +193,7 @@ class SaleOrder(models.Model):
         return new_line._convert_to_write(new_line._cache)
 
     def action_cancel(self):
-        """If we cancel the SO, we cancel the mirror PO (if it is in editable status)."""
+        """If we cancel the SO, cancel the mirror PO (if in editable status)."""
         purchase_orders = (
             self.env["purchase.order"]
             .sudo()
