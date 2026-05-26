@@ -99,7 +99,11 @@ class SaleOrderLine(models.Model):
             if line.display_type in ("line_section", "line_note"):
                 continue
             # SO intercompany and line NOT yet linked to PO
-            if line.order_id.auto_purchase_order_id and not line.auto_purchase_line_id and line.product_id:
+            if (
+                line.order_id.auto_purchase_order_id
+                and not line.auto_purchase_line_id
+                and line.product_id
+            ):
                 return {
                     "warning": {
                         "title": _("Warning"),

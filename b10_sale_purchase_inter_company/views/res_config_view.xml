@@ -16,7 +16,7 @@
                             class="o_light_label mr8"
                             for="po_from_so"
                         />
-                        <field name="po_from_so" class="oe_inline"/>
+                        <field name="po_from_so" class="oe_inline" />
                     </div>
                     <div invisible="not company_id or not po_from_so">
                         <label
@@ -29,11 +29,12 @@
                             required="po_from_so"
                             class="oe_inline mr8"
                         />
-                        <br/>
+                        <br />
                         <label
                             for="purchase_auto_validation"
-                            class="oe_inline o_light_label mr8"/>
-                        <field name="purchase_auto_validation" class="oe_inline"/>
+                            class="oe_inline o_light_label mr8"
+                        />
+                        <field name="purchase_auto_validation" class="oe_inline" />
                     </div>
                 </div>
             </xpath>

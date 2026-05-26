@@ -76,7 +76,8 @@ class SaleOrder(models.Model):
 
         # Currency coherence between SO and price list/destination company
         if self.currency_id.id != (
-            vendor_partner.property_purchase_currency_id.id or dest_company.currency_id.id
+            vendor_partner.property_purchase_currency_id.id
+            or dest_company.currency_id.id
         ):
             # NB: property_purchase_currency_id is not always defined; it is compared with the company one if necessary
             raise UserError(
@@ -88,7 +89,10 @@ class SaleOrder(models.Model):
 
         # PO data
         po_vals = self._prepare_purchase_order_data(
-            self.client_order_ref or self.name, vendor_partner, dest_company, self.partner_shipping_id
+            self.client_order_ref or self.name,
+            vendor_partner,
+            dest_company,
+            self.partner_shipping_id,
         )
         purchase = (
             self.env["purchase.order"]
@@ -102,7 +106,8 @@ class SaleOrder(models.Model):
             body=_(
                 "This purchase order has been automatically created "
                 "from an intercompany sale order (%s)."
-            ) % self.name,
+            )
+            % self.name,
             message_type="comment",
         )
 
@@ -157,8 +162,9 @@ class SaleOrder(models.Model):
             new_order.date_planned = self.commitment_date
         return new_order._convert_to_write(new_order._cache)
 
-
-    def _prepare_purchase_order_line_data(self, sale_line, dest_company, purchase_order):
+    def _prepare_purchase_order_line_data(
+        self, sale_line, dest_company, purchase_order
+    ):
         # Create a line with essential information for onchange
         new_line = self.env["purchase.order.line"].new(
             {
