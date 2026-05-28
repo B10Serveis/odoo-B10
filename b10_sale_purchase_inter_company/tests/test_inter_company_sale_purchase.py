@@ -4,6 +4,8 @@
 # Copyright 2020 ForgeFlow S.L. (https://www.forgeflow.com)
 # Copyright 2026 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+from datetime import datetime
+
 from odoo.exceptions import UserError
 from odoo.tests.common import Form
 
@@ -164,3 +166,19 @@ class TestSalePurchaseInterCompany(TestAccountInvoiceInterCompanyBase):
         self.sale_company_a.currency_id = currency
         with self.assertRaises(UserError):
             self._approve_so()
+
+    def test_sale_invoice_relation(self):
+        self.partner_company_a.company_id = False
+        self.partner_company_b.company_id = False
+        purchase = self._approve_so()
+        purchase_invoice_id = purchase.action_create_invoice()["res_id"]
+        purchase_invoice = self.env["account.move"].browse(purchase_invoice_id)
+        purchase_invoice.invoice_date = datetime.now()
+        purchase_invoice.action_post()
+        self.assertEqual(len(self.sale_company_a.invoice_ids), 1)
+        self.assertEqual(
+            self.sale_company_a.invoice_ids.auto_invoice_id,
+            purchase_invoice,
+        )
+        self.assertEqual(len(self.sale_company_a.order_line.invoice_lines), 1)
+        self.assertEqual(self.sale_company_a.order_line.qty_invoiced, 3)
