@@ -1,9 +1,9 @@
-# Copyright 2022, 2023, 2024, 2025 Batista10
+# Copyright 2022, 2023, 2024, 2025, 2026 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "Integració amb Damm",
     "summary": "Integració de dades amb Damm",
-    "version": "18.0.0.9.2",
+    "version": "0.9.3",
     "development_status": "Beta",
     "category": "Sales",
     "website": "https://batista10.cat/",

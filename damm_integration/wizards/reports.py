@@ -1,4 +1,4 @@
-# Copyright 2024, 2025 Batista10
+# Copyright 2024, 2025, 2026 Batista10
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 import base64
@@ -40,6 +40,10 @@ def _g_if_gift(gift_val, nongift_val=""):
 
 def _f_str_or_empty(rep, v):
     return str(v) if v is not False else ""
+
+
+def _f_str_replace_comma(rep, v):
+    return str(v).replace(",", "") if v is not False else ""
 
 
 def _f_date(rep, v):
@@ -136,9 +140,9 @@ _report_formats = {
             "Nº Pedido Detallista",
             20,
             _g_field("move_id.invoice_origin"),
-            _f_str_or_empty,
+            _f_str_replace_comma,
         ),
-        ("Nº Documento", 20, _g_empty, None),
+        ("Nº Documento", 20, _g_field("move_name"), _f_str_replace_comma),
         ("Nº Línea doc", 10, _g_field("sequence"), None),
         ("Fecha documento", 8, _g_field("date"), _f_date),
         ("Cantidad", 15, lambda r, sl: round(_v_quantity(sl) * 100_000), None),
