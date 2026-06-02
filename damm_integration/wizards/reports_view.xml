@@ -4,45 +4,56 @@
 
 <odoo>
 
-<record id="view_damm_reports_wizard" model="ir.ui.view">
-    <field name="name">Generate Reports for Damm</field>
-    <field name="model">damm.reports.wizard</field>
-    <field name="arch" type="xml">
-        <form string="Generate Reports for Damm">
-            <p class="alert alert-warning"
-               attrs="{'invisible': [('damm_config_ok', '=', True)]}">
+    <record id="view_damm_reports_wizard"
+        model="ir.ui.view">
+        <field name="name">Generate Reports for Damm</field>
+        <field name="model">damm.reports.wizard</field>
+        <field name="arch"
+            type="xml">
+            <form string="Generate Reports for Damm">
+                <p class="alert alert-warning"
+                   attrs="{'invisible': [('damm_config_ok', '=', True)]}">
                 Your Damm integration configuration may be missing some values, please check it.
-            </p>
-            <field name="damm_config_ok" invisible="1"/>
-            <group>
-                <field name="report_type"/>
-                <field name="date_start"/>
-                <field name="date_end"/>
-            </group>
-            <footer>
-                <button type="object" name="generate_report" string="Generate" class="btn-primary"/>
-                <button type="object" special="cancel" string="Cancel"/>
-            </footer>
-        </form>
-    </field>
-</record>
+                </p>
+                <field name="damm_config_ok"
+                    invisible="1"/>
+                <group>
+                    <field name="report_type"/>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                </group>
+                <footer>
+                    <button type="object"
+                        name="generate_report"
+                        string="Generate"
+                        class="btn-primary"/>
+                    <button type="object"
+                        special="cancel"
+                        string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
 
-<record id="action_damm_reports_wizard" model="ir.actions.act_window">
-    <field name="name">Generate Reports for Damm</field>
-    <field name="type">ir.actions.act_window</field>
-    <field name="res_model">damm.reports.wizard</field>
-    <field name="view_mode">form</field>
-    <field name="view_id" ref="view_damm_reports_wizard"/>
-    <field name="target">new</field>
-</record>
+    <record id="action_damm_reports_wizard"
+        model="ir.actions.act_window">
+        <field name="name">Generate Reports for Damm</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">damm.reports.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id"
+            ref="view_damm_reports_wizard"/>
+        <field name="target">new</field>
+    </record>
 
-<menuitem id="menu_damm_reports"
-          name="Damm"
-          parent="account.menu_finance_reports" sequence="99"/>
+    <menuitem id="menu_damm_reports"
+        name="Damm"
+        parent="account.menu_finance_reports"
+        sequence="99"/>
 
-<menuitem id="menu_action_damm_reports_wizard"
-          name="New report for Damm"
-          parent="menu_damm_reports"
-          action="action_damm_reports_wizard"/>
+    <menuitem id="menu_action_damm_reports_wizard"
+        name="New report for Damm"
+        parent="menu_damm_reports"
+        action="action_damm_reports_wizard"/>
 
 </odoo>
