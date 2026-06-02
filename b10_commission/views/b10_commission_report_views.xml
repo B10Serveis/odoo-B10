@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_b10_commission_line_report_tree"
+        model="ir.ui.view">
+        <field name="name">b10.commission.line.report.tree</field>
+        <field name="model">b10.commission.line.report</field>
+        <field name="arch"
+            type="xml">
+            <tree string="Commission Line Report">
+                <field name="currency_id"
+                    invisible="1"/>
+                <field name="agent_id"/>
+                <field name="date"/>
+                <field name="move_id"/>
+                <field name="product_categ_id"/>
+                <field name="product_id"/>
+                <field name="partner_id"/>
+                <field name="quantity"
+                    sum="Total"/>
+                <field name="price_unit"
+                    widget="monetary"/>
+                <field name="price_subtotal"
+                    widget="monetary"
+                    sum="Total"/>
+                <field name="price_total"
+                    widget="monetary"
+                    sum="Total"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_b10_commission_line_report_search"
+        model="ir.ui.view">
+        <field name="name">b10.commission.line.report.search</field>
+        <field name="model">b10.commission.line.report</field>
+        <field name="arch"
+            type="xml">
+            <search>
+                <field name="agent_id"/>
+                <filter string="Date"
+                    name="date"
+                    date="date"/>
+                <group expand="0"
+                    string="Group By">
+                    <filter string="Agent"
+                        name="group_lines_by_agent"
+                        domain="[]"
+                        context="{'group_by':'agent_id'}" />
+                    <filter string="Categoria"
+                        name="group_lines_by_categ"
+                        domain="[]"
+                        context="{'group_by':'product_categ_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_b10_commission_line_report"
+        model="ir.actions.act_window">
+        <field name="name">Commission Lines</field>
+        <field name="res_model">b10.commission.line.report</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id"
+            ref="view_b10_commission_line_report_tree"/>
+        <field name="search_view_id"
+            ref="view_b10_commission_line_report_search"/>
+        <field name="context">{'search_default_group_by_agent_id': 1}</field>
+    </record>
+
+    <menuitem id="menu_b10_commission_report"
+        name="Commission Lines"
+        parent="account_commission.menu_invoicing_commission"
+        action="action_b10_commission_line_report"
+        sequence="10"/>
+</odoo>
