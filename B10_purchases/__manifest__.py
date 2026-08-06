@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.3.6",
+    "version": "16.0.1.3.7",
     "depends": [
         "base",
         "purchase",
@@ -18,6 +18,7 @@
     "application": True,
     "data": [
         "security/security.xml",
+        "security/ir.model.access.csv",
         "report/B10_purchase_order_report.xml",
         "report/B10_purchase_order.xml",
         "report/B10_purchase_quotation_report.xml",

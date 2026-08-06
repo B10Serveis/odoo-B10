@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* b10_pms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-06 00:00+0000\n"
+"PO-Revision-Date: 2026-08-06 00:00+0000\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: b10_pms
+#: model:mail.template,name:b10_pms.mail_template_reservation_confirmation
+msgid "B10 - Hotel Reservation Confirmation"
+msgstr "B10 - Confirmation de réservation d'hôtel"
+
+#. module: b10_pms
+#: model:mail.template,subject:b10_pms.mail_template_reservation_confirmation
+msgid ""
+"{{ object.pms_property_id.name }} - Reservation {{ object.name }} confirmed"
+msgstr ""
+"{{ object.pms_property_id.name }} - Réservation {{ object.name }} confirmée"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Additional information"
+msgstr "Informations complémentaires"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Check-in"
+msgstr "Arrivée"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Check-out"
+msgstr "Départ"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Dear"
+msgstr "Cher/Chère"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "If you have any questions about your reservation, please contact us."
+msgstr "Si vous avez des questions concernant votre réservation, veuillez nous contacter."
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Kind regards,<br/>"
+msgstr "Cordialement,<br/>"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Reference"
+msgstr "Référence"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Reservation confirmed"
+msgstr "Réservation confirmée"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Reservation details"
+msgstr "Détails de la réservation"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Rooms and guests"
+msgstr "Chambres et personnes"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "Total"
+msgstr "Total"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "We are pleased to confirm your reservation at"
+msgstr "Nous avons le plaisir de confirmer votre réservation auprès de"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "adult(s),"
+msgstr "adulte(s),"
+
+#. module: b10_pms
+#: model_terms:ir.ui.view,arch_db:b10_pms.reservation_confirmation_body
+msgid "child(ren)"
+msgstr "enfant(s)"
+

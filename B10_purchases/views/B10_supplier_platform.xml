@@ -21,20 +21,37 @@
           </group>
         </xpath>
 
-        <!-- Pestanya “Access” amb els camps i condició de visibilitat -->
+        <!-- Pestanya “Access” amb les credencials i condició de visibilitat -->
         <xpath expr="//sheet/notebook" position="inside">
           <page string="Access"
                 attrs="{'invisible': ['|',
                                       ('x_is_provider_access','=',False),
                                       ('supplier_rank','=',0)]}">
-            <group>
-              <field name="x_provider_url"    string="Platform URL" placeholder="https://example.com"/>
-              <field name="x_provider_user"   string="Username" placeholder="user@example.com"/>
-              <field name="x_provider_pwd"    string="Password" placeholder="••••••••" widget="password" 
-                     groups="B10_purchases.group_b10_pwd_manager"/>
-              <field name="x_provider_pwd"    string="Password" placeholder="••••••••" widget="password" 
-                     readonly = "1" groups="B10_purchases.group_b10_pwd_reader"/>
-            </group>
+            <field name="provider_credential_ids">
+              <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="url" placeholder="https://example.com"/>
+                <field name="user" placeholder="user@example.com"/>
+                <field name="password" placeholder="••••••••" widget="password"
+                       groups="B10_purchases.group_b10_pwd_manager"/>
+                <field name="password" placeholder="••••••••" widget="password"
+                       readonly="1" groups="B10_purchases.group_b10_pwd_reader"/>
+              </tree>
+              <form>
+                <sheet>
+                  <group>
+                    <field name="name"/>
+                    <field name="url" placeholder="https://example.com"/>
+                    <field name="user" placeholder="user@example.com"/>
+                    <field name="password" placeholder="••••••••" widget="password"
+                           groups="B10_purchases.group_b10_pwd_manager"/>
+                    <field name="password" placeholder="••••••••" widget="password"
+                           readonly="1" groups="B10_purchases.group_b10_pwd_reader"/>
+                  </group>
+                </sheet>
+              </form>
+            </field>
           </page>
         </xpath>
 

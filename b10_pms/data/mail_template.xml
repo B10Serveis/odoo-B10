@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="reservation_confirmation_body" name="Hotel Reservation Confirmation Email">
+            <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; background-color: white; font-family: Verdana, Arial, sans-serif; color: #454748; width: 100%; border-collapse: separate;">
+                <tbody>
+                    <tr>
+                        <td align="center">
+                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="padding: 16px; color: #454748; border-collapse: separate; background-color: #F1F1F1;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="min-width: 590px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="590" t-attf-style="min-width: 590px; padding: 0 8px; border-bottom: solid gray 2px; border-collapse: separate; background-color: {{ object.company_id.primary_color or 'gray' }};">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign="middle" style="padding: 16px; font-size: 20px; font-weight: bold; color: white;">
+                                                            Reservation confirmed
+                                                        </td>
+                                                        <td align="right" valign="middle">
+                                                            <img t-attf-src="/logo.png?company={{ object.company_id.id }}" t-att-alt="object.company_id.name" style="padding: 8px 16px; height: auto; width: 100px;"/>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="min-width: 590px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0 8px; border-collapse: separate;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td valign="top" style="font-size: 13px; padding: 16px;">
+                                                            <p>
+                                                                Dear
+                                                                <t t-out="object.partner_id.name or '-'"/>,
+                                                            </p>
+                                                            <p>
+                                                                We are pleased to confirm your reservation at
+                                                                <strong><t t-out="object.pms_property_id.name or '-'"/></strong>.
+                                                            </p>
+                                                            <p style="font-size: 16px; font-weight: bold; margin-top: 24px;">Reservation details</p>
+                                                            <table border="0" cellpadding="5" cellspacing="0" width="100%" style="font-size: 13px; border-collapse: collapse;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width: 35%; color: #777777;">Reference</td>
+                                                                        <td><strong><t t-out="object.name or '-'"/></strong></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="color: #777777;">Check-in</td>
+                                                                        <td><t t-out="format_date(object.first_checkin) if object.first_checkin else '-'"/></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="color: #777777;">Check-out</td>
+                                                                        <td><t t-out="format_date(object.last_checkout) if object.last_checkout else '-'"/></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="color: #777777;">Rooms and guests</td>
+                                                                        <td>
+                                                                            <t t-foreach="object.reservation_ids.filtered(lambda reservation: reservation.state != 'cancel')" t-as="reservation">
+                                                                                <div>
+                                                                                    <t t-out="reservation.room_type_id.name or '-'"/>
+                                                                                    —
+                                                                                    <t t-out="reservation.adults or 0"/> adult(s),
+                                                                                    <t t-out="reservation.children or 0"/> child(ren)
+                                                                                </div>
+                                                                            </t>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="color: #777777;">Total</td>
+                                                                        <td><strong><t t-out="format_amount(object.amount_total, object.currency_id)"/></strong></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <t t-if="object.pms_property_id.mail_information">
+                                                                <p style="font-size: 16px; font-weight: bold; margin-top: 24px;">Additional information</p>
+                                                                <div t-out="object.pms_property_id.mail_information"/>
+                                                            </t>
+                                                            <p style="margin-top: 24px;">
+                                                                If you have any questions about your reservation, please contact us.
+                                                            </p>
+                                                            <p>
+                                                                Kind regards,<br/>
+                                                                <strong><t t-out="object.pms_property_id.name or object.company_id.name"/></strong>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="min-width: 590px;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; font-size: 11px; margin-top: 16px; padding: 8px; border-collapse: separate;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="left" style="font-size: 14px; font-weight: bold;">
+                                                            <t t-out="object.pms_property_id.name or '-'"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" style="opacity: 0.7; padding-top: 4px;">
+                                                            <t t-if="object.pms_property_id.partner_id.phone">
+                                                                <t t-out="object.pms_property_id.partner_id.phone"/>
+                                                            </t>
+                                                            <t t-if="object.pms_property_id.partner_id.email">
+                                                                |
+                                                                <a t-attf-href="mailto:{{ object.pms_property_id.partner_id.email }}" style="text-decoration: none; color: #454748;" t-out="object.pms_property_id.partner_id.email"/>
+                                                            </t>
+                                                            <t t-if="object.company_id.website">
+                                                                |
+                                                                <a t-att-href="object.company_id.website" style="text-decoration: none; color: #454748;" t-out="object.company_id.website"/>
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                    <tr t-if="object.pms_property_id.privacy_policy">
+                                                        <td align="left" style="font-size: 10px; color: #454748; padding-top: 12px;">
+                                                            <div t-out="object.pms_property_id.privacy_policy"/>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </template>
+
+    <record id="mail_template_reservation_confirmation" model="mail.template">
+        <field name="name">B10 - Hotel Reservation Confirmation</field>
+        <field name="model_id" ref="pms.model_pms_folio"/>
+        <field name="subject">{{ object.pms_property_id.name }} - Reservation {{ object.name }} confirmed</field>
+        <field name="email_from">{{ object.pms_property_id.partner_id.email_formatted or user.email_formatted }}</field>
+        <field name="email_to">{{ object.email or object.partner_id.email }}</field>
+        <field name="reply_to">{{ object.pms_property_id.partner_id.email_formatted or user.email_formatted }}</field>
+        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
+            <t t-call="b10_pms.reservation_confirmation_body"/>
+        </field>
+    </record>
+</odoo>
