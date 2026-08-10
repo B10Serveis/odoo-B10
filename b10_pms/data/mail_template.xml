@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="reservation_confirmation_body" name="Hotel Reservation Confirmation Email">
+    <record id="mail_template_reservation_confirmation" model="mail.template">
+        <field name="name">B10 - Hotel Reservation Confirmation</field>
+        <field name="model_id" ref="pms.model_pms_folio"/>
+        <field name="subject">{{ object.pms_property_id.name }} - Reservation {{ object.name }} confirmed</field>
+        <field name="email_from">{{ object.pms_property_id.partner_id.email_formatted or user.email_formatted }}</field>
+        <field name="email_to">{{ object.email or object.partner_id.email }}</field>
+        <field name="reply_to">{{ object.pms_property_id.partner_id.email_formatted or user.email_formatted }}</field>
+        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
             <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; background-color: white; font-family: Verdana, Arial, sans-serif; color: #454748; width: 100%; border-collapse: separate;">
                 <tbody>
                     <tr>
@@ -127,19 +136,6 @@
                     </tr>
                 </tbody>
             </table>
-    </template>
-
-    <record id="mail_template_reservation_confirmation" model="mail.template">
-        <field name="name">B10 - Hotel Reservation Confirmation</field>
-        <field name="model_id" ref="pms.model_pms_folio"/>
-        <field name="subject">{{ object.pms_property_id.name }} - Reservation {{ object.name }} confirmed</field>
-        <field name="email_from">{{ object.pms_property_id.partner_id.email_formatted or user.email_formatted }}</field>
-        <field name="email_to">{{ object.email or object.partner_id.email }}</field>
-        <field name="reply_to">{{ object.pms_property_id.partner_id.email_formatted or user.email_formatted }}</field>
-        <field name="lang">{{ object.partner_id.lang }}</field>
-        <field name="auto_delete" eval="True"/>
-        <field name="body_html" type="html">
-            <t t-call="b10_pms.reservation_confirmation_body"/>
         </field>
     </record>
 </odoo>
