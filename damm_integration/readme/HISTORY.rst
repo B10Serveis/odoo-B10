@@ -21,3 +21,8 @@
 * [FIX] Només es consideren els moviments corresponents a factures (tant ordinàries com devolucions).
 * [FIX] Mostra valors negatius per a les factures rectificatives.
 * [IMP] Més filtres de comes en camps de factura.
+
+0.9.4 (2026-09-03)
+~~~~~~~~~~~~~~~~~~
+
+* [FIX] Saneig dels caràcters que trencaven el CSV dels informes de clients i de condicions comercials (cometes, claudàtors i salts de línia), que provocaven l'error «need to escape, but no escapechar set».
