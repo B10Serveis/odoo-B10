@@ -46,6 +46,22 @@ def _f_str_replace_comma(rep, v):
     return str(v).replace(",", "") if v is not False else ""
 
 
+# Damm exige CSV con separador "[" y sin cadenas delimitadoras (QUOTE_NONE,
+# sin escapechar). En esas condiciones el módulo csv de Python lanza
+# "need to escape, but no escapechar set" si algún valor contiene "[", '"'
+# o saltos de línea, por lo que se sanea sustituyéndolos por caracteres
+# legibles equivalentes antes de escribir cada línea.
+def _csv_sanitize(value):
+    return (
+        str(value)
+        .replace('"', "'")
+        .replace("[", "(")
+        .replace("]", ")")
+        .replace("\r", " ")
+        .replace("\n", " ")
+    )
+
+
 def _f_date(rep, v):
     return v.strftime("%Y%m%d") if v else ""
 
@@ -401,7 +417,9 @@ class DammReportsWizard(models.TransientModel):
             )
             # csv_writer.writeheader()
             for line in lines:
-                csv_writer.writerow(line)
+                csv_writer.writerow(
+                    {field: _csv_sanitize(value) for field, value in line.items()}
+                )
             report_data = csv_file.getvalue()
 
         return (report_name, report_data.encode("utf-8"))  # TODO check encoding
