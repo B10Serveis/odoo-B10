@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Property Management",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "license": "AGPL-3",
     "depends": ["pms"],
     "data": [
@@ -13,4 +13,3 @@
     "installable": True,
     "application": False,
 }
-

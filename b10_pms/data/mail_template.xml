@@ -25,7 +25,7 @@
                                                             Reservation confirmed
                                                         </td>
                                                         <td align="right" valign="middle">
-                                                            <img t-attf-src="/logo.png?company={{ object.company_id.id }}" t-att-alt="object.company_id.name" style="padding: 8px 16px; height: auto; width: 100px;"/>
+                                                            <img t-attf-src="/web/image/pms.property/{{ object.pms_property_id.id }}/logo" t-att-alt="object.pms_property_id.name" style="padding: 8px 16px; height: auto; width: 100px;"/>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -115,9 +115,9 @@
                                                                 |
                                                                 <a t-attf-href="mailto:{{ object.pms_property_id.partner_id.email }}" style="text-decoration: none; color: #454748;" t-out="object.pms_property_id.partner_id.email"/>
                                                             </t>
-                                                            <t t-if="object.company_id.website">
+                                                            <t t-if="object.pms_property_id.website">
                                                                 |
-                                                                <a t-att-href="object.company_id.website" style="text-decoration: none; color: #454748;" t-out="object.company_id.website"/>
+                                                                <a t-att-href="object.pms_property_id.website" style="text-decoration: none; color: #454748;" t-out="object.pms_property_id.website"/>
                                                             </t>
                                                         </td>
                                                     </tr>
