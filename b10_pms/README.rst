@@ -53,6 +53,12 @@ Changelog
   foli i no a l'empresa.
 * [FIX] El logotip de la capçalera ara correspon a la propietat PMS del foli.
 
+16.0.1.0.2 (2026-09-09)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] El logotip de l'hotel ara és accessible per als destinataris del
+  correu que no tenen una sessió iniciada a Odoo.
+
 Bug Tracker
 ===========
 
