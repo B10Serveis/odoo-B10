@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <record id="invoice_IBEE_view_form" model="ir.ui.view">
+            <field name="name">invoice.form.IBEE</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line_ids']//tree//field[@name='price_subtotal']" position="after">
+                    <field name="ibee_amount" string="IBEE" optional="hide"/>
+                </xpath>                 
+            </field>
+        </record>   
+        <record id="account_invoice_report_total_ibee" model="ir.ui.view">
+        	<field name="name">account.invoice.report.total.IBEE</field>
+        	<field name="model">account.invoice.report</field>
+        	<field name="inherit_id" ref="account.view_account_invoice_report_pivot"/>
+        	<field name="arch" type="xml">
+        		<xpath expr="//field[@name='price_subtotal']" position="after">
+        			<field name="total_ibee" string="Total IBEE" type="measure"/>
+        		</xpath>
+        	</field>        		
+        </record>     
+    </data>
+</odoo>

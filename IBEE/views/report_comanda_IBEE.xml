@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_comanda_inherit_ibee" inherit_id="Dissenys_generics.report_comanda_batista_document" priority="20">
+
+            <xpath expr="//table[@id='b10_linetable']/thead" position="before">
+                <t t-set="total_IBEE" t-value="sum(x.ibee_amount for x in doc.order_line)"/>
+            </xpath>
+            <xpath expr="//table[@id='b10_linetable']/thead/tr/th[@name='th_subtotal']" position="after">
+                <th t-if="total_IBEE" class="text-end">IBEE</th>
+            </xpath>
+            <xpath expr="//table[@id='b10_linetable']/tbody[@class='order_tbody']//td[@name='td_subtotal']" position="after">
+                <td t-if="total_IBEE" class="text-end">
+                    <span t-esc="l.ibee_amount" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

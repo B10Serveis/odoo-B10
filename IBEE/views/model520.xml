@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="model520_report" model="ir.actions.report">
+        <field name="name">Model 520 IBEE</field>
+        <field name="model">model520.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">IBEE.model520_report_template</field>
+        <field name="report_file">IBEE.model520_report_template</field>
+    </record>
+</odoo>
