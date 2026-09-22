@@ -16,6 +16,7 @@
         "views/B10_sale_order_expired_filter.xml",
         "views/sale_order_payment_journal.xml",
         "views/sale_order_no_cancel_warning.xml",
+        "wizard/res_config_settings_views.xml",
         "report/report_comanda_batista_iban.xml",
         "report/report_pressupost_batista_iban.xml",
         "report/report_proforma_batista_iban.xml",
