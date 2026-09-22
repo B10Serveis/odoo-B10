@@ -8,9 +8,14 @@
                 ref="sale.view_order_form"/>
             <field name="arch"
                 type="xml">
+                <xpath expr="//header"
+                    position="inside">
+                    <field name="needs_confirm_cancel"
+                           invisible="1"/>
+                </xpath>
                 <xpath expr="//button[@name='action_cancel']"
                     position="attributes">
-                    <attribute name="context">{'disable_cancel_warning': True}</attribute>
+                    <attribute name="context">{'disable_cancel_warning': not needs_confirm_cancel}</attribute>
                 </xpath>
             </field>
         </record>

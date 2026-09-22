@@ -135,3 +135,16 @@ class SaleOrder(models.Model):
         invoice_vals = super()._prepare_invoice()
         self._add_payment_to_invoice_vals(invoice_vals)
         return invoice_vals
+
+    # Shorthand for checking in views.
+    needs_confirm_cancel = fields.Boolean(
+        compute="_compute_needs_confirm_cancel",
+    )
+
+    @api.depends("company_id")
+    def _compute_needs_confirm_cancel(self):
+        company_id = self.env.company
+        for so in self:
+            so.needs_confirm_cancel = (
+                (so.company_id or company_id).b10_so_confirm_cancel
+            )
