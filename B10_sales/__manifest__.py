@@ -43,6 +43,7 @@
         # Views
         "views/B10_sale_order_expired_filter.xml",
         "views/sale_order_payment_journal.xml",
+        "views/sale_order_no_cancel_warning.xml",
         "views/show_product_image.xml",
         # Email Templates
         "views/email_comanda.xml",
