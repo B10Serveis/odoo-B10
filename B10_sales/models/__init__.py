@@ -30,6 +30,7 @@
 # 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #
 ###############################################
+from . import res_company
 from . import sale_order
 from . import product_margin_classification
 from . import product_product
