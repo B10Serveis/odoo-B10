@@ -77,3 +77,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Elimina la dependència de ``b10_settings_hub``.
+
+18.0.1.9.0 (2026-09-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Nova opció de companyia per a inhabilitar el diàleg de confirmació en canceŀlar un pressupost o comanda de venda.
