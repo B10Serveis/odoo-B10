@@ -5,6 +5,7 @@ Aquest mòdul afegeix plantilles PDF i funcionalitats addicionals per a vendes:
 * Selecció de diari de pagament al formulari (pestanya d'altra informació), per a incloure'n l'IBAN als dissenys  
 * Dissenys per a Pressupost, Pressupost S/T, Comanda i ProForma  
 * Plantilles Email per a Pressupost, Comanda i ProForma  
+* Possibilitat d’inhabilitar el diàleg de confirmació en canceŀlar un pressupost o comanda de venda.  
 
 A més, aquest mòdul està dissenyat per ampliar el càlcul del preu de venda a Odoo.
 

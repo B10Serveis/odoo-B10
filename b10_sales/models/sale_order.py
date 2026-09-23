@@ -210,3 +210,16 @@ class SaleOrder(models.Model):
             return self.env.ref(
                 "sale.mail_template_sale_confirmation", raise_if_not_found=False
             )
+
+    # Shorthand for checking in views.
+    needs_confirm_cancel = fields.Boolean(
+        compute="_compute_needs_confirm_cancel",
+    )
+
+    @api.depends("company_id")
+    def _compute_needs_confirm_cancel(self):
+        company_id = self.env.company
+        for so in self:
+            so.needs_confirm_cancel = (
+                (so.company_id or company_id).b10_so_confirm_cancel
+            )
