@@ -12,9 +12,10 @@
         <template id="template_helpdesk_ticket_B10">
             <t t-call="web.html_container">
                 <t t-set="data_report_margin_top"
-                    t-value="30"/>
+                    t-value="40"/>
+                <!-- Keep the header near the page top while reserving space for its logo. -->
                 <t t-set="data_report_header_spacing"
-                    t-value="25"/>
+                    t-value="35"/>
                 <t t-foreach="docs"
                     t-as="doc">
                     <t t-set="doc"
@@ -90,21 +91,29 @@
                         </div>
                     </div>
                     <!-- PAGE -->
-                    <div class="article">
-                        <div class="container"
-                            style="margin-bottom:1em; font-size: 14px; padding-top:25px;">
+                    <div class="article"
+                        style="font-size:16px; line-height:1.4;">
+                        <div class="container-fluid"
+                            style="width:100%; max-width:100%; margin:0 0 1em 0; padding:0 15px; box-sizing:border-box;">
                             <div class="row"
                                 id="b10_ticket_name"
                                 style="border-bottom: 1px solid #c1c1c1; padding:1em;">
-                                <h4 t-if="doc.number"
-                                    style="margin-right:1em;">
-                                    <strong>
-                                        <span t-field="doc.number"/>
-                                    </strong>
-                                </h4>
-                                <h5 t-if="doc.name">
-                                    <span t-field="doc.name"/>
-                                </h5>
+                                <div class="col-3"
+                                    style="padding-left:0; overflow-wrap:anywhere; word-wrap:break-word;">
+                                    <h4 t-if="doc.number"
+                                        style="margin:0; font-size:1.25em;">
+                                        <strong>
+                                            <span t-field="doc.number"/>
+                                        </strong>
+                                    </h4>
+                                </div>
+                                <div class="col-9"
+                                    style="padding-right:0; overflow-wrap:anywhere; word-wrap:break-word;">
+                                    <h5 t-if="doc.name"
+                                        style="margin:0; font-size:1.1em;">
+                                        <span t-field="doc.name"/>
+                                    </h5>
+                                </div>
                             </div>
                             <div class="row"
                                 id="b10_ticket_data"
