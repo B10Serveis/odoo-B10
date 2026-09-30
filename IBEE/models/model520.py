@@ -1,7 +1,17 @@
 from odoo import api, fields, models
 
+
+class IrActionsReport(models.Model):
+    _inherit = 'ir.actions.report'
+
+    def _get_rendering_context_model(self, report):
+        if report.report_name == 'IBEE.model520_report_template':
+            return self.env['report.ibee.model520_report_template']
+        return super()._get_rendering_context_model(report)
+
+
 class Model520(models.AbstractModel):
-    _name = 'report.IBEE.model520_report_template'
+    _name = 'report.ibee.model520_report_template'
     _description = 'Informe Model 520 IBEE'
 
     @api.model

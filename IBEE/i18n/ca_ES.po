@@ -202,7 +202,7 @@ msgid "Impost sobre begudes ensucrades envasades"
 msgstr ""
 
 #. module: IBEE
-#: model:ir.model,name:IBEE.model_report_IBEE_model520_report_template
+#: model:ir.model,name:IBEE.model_report_ibee_model520_report_template
 msgid "Informe Model 520 IBEE"
 msgstr ""
 

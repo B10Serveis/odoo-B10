@@ -13,7 +13,7 @@
         "Dissenys_generics",
         "account_tax_python",
     ],
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "license": "AGPL-3",
     "application": True,
     "category": "Account",

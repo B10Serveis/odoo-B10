@@ -38,6 +38,11 @@ indiqueu ``0,33`` litres. El mòdul afegeix l'impost corresponent als impostos
 de venda de l'article; els altres impostos es conserven. Si ja hi ha
 comandes o factures creades, reviseu-ne els impostos de línia.
 
+L'IBEE només es calcula quan la província de l'adreça de lliurament de la
+comanda o factura és Barcelona, Girona, Lleida o Tarragona. Si no hi ha
+adreça de lliurament, s'utilitza la del client. Sense província, o amb una
+província diferent, la quota d'IBEE és zero.
+
 Per imprimir el Model 520, aneu a Facturació -> Informes -> IBEE -> Model 520,
 seleccioneu el període i genereu el PDF. El model suma les factures de client
 comptabilitzades i resta els abonaments del mateix període, segons la data
@@ -95,6 +100,14 @@ Registre de Versions
 * [MIG] Adaptació a Odoo 16.0 OCB.
 * [FIX] Model 520 en PDF, dates comptables i abonaments.
 * [FIX] Import per línia a l'informe analític de factures i columnes als PDF.
+
+16.0.1.1.0 (30/09/2026)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Aplicació de l'IBEE només a les províncies catalanes: Barcelona, Girona,
+  Lleida i Tarragona, segons l'adreça de lliurament de comandes i factures.
+* [FIX] Ús de l'adreça del client si no hi ha adreça de lliurament.
+* [FIX] Quota d'IBEE zero si l'adreça no té província o és fora de les províncies catalanes.
 
 Roadmap   
 =======   

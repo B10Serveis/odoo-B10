@@ -36,3 +36,4 @@ from . import invoicereport
 from . import model520
 from . import product
 from . import sales
+from . import tax
