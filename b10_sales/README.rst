@@ -51,6 +51,11 @@ Changelog
 
 * [FIX] No es comprova el diari de pagament de la comanda de venda en canviar a un mode de pagament que no és per transferència bancària.
 
+16.0.1.3.0 (2026-10-02)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Nova opció de companyia per a inhabilitar el diàleg de confirmació en canceŀlar un pressupost o comanda de venda.
+
 Bug Tracker
 ===========
 

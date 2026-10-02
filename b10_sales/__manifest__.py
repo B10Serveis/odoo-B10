@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.1.1",
+    "version": "16.0.1.3.0",
     "depends": [
         "sale",
         "account_payment_sale",  # account.move:payment_mode_id
@@ -14,6 +14,8 @@
     "application": True,
     "data": [
         "views/sale_order_payment_journal.xml",
+        "views/sale_order_no_cancel_warning.xml",
+        "wizard/res_config_settings_views.xml",
         "report/report_comanda_batista_iban.xml",
         "report/report_pressupost_batista_iban.xml",
         "report/report_proforma_batista_iban.xml",
