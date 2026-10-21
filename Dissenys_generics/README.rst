@@ -41,6 +41,15 @@ To use this module, you need to:
 * D’acord amb l’establert al RGPD, l’informem que tractarem les seves dades personals amb la finalitat de realitzar la gestió administrativa, comptable i fiscal. Les dades proporcionades es conservaran el temps exigible per una obligació legal i no seran cedides a tercers excepte previsió legal exigible, o en el seu cas, previ consentiment de l’interessat. Podrà exercir els següents drets sobre les seves dades personals: dret d’accés, rectificació, supressió, oblit, limitació, oposició, portabilitat i a retirar el consentiment prestat, a l’adreça assenyalada en el present document. A més, podrà adreçar-se a l’autoritat de Control competent en matèria de Protecció de Dades per obtenir informació addicional o presentar una reclamació.
 * De acuerdo con el establecido al RGPD, lo informamos que trataremos sus datos personales con el fin de realizar la gestión administrativa, contable y fiscal. Los datos proporcionados se conservarán el tiempo exigible por una obligación legal y no serán cedidas a terceros excepto previsión legal exigible, o en su caso, previo consentimiento del interesado. Podrá ejercer los  siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión, olvido, limitación, oposición, portabilidad y a retirar el consentimiento prestado, a la dirección señalada en el presente documento. Además, podrá dirigirse a la autoridad de Control competente en materia de Protección de Datos para obtener información adicional o presentar una reclamación.
 
+Correcció dels noms dels informes en instal·lacions existents
+-----------------------------------------------------------
+
+La versió 16.0.1.12.12 incorpora traduccions explícites dels noms dels sis
+informes en català i castellà. Si una instal·lació conserva noms incorrectes,
+com «Operaciones de picking» per a «Entrega Estandard», cal importar
+``i18n/ca_ES.po`` i ``i18n/es.po`` per als idiomes corresponents, marcant
+«Sobreescriure termes existents». Una actualització ordinària del mòdul pot
+conservar les traduccions incorrectes ja desades a la base de dades.
 
 Changelog
 =========
@@ -165,6 +174,12 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [FIX] Al disseny de factura hem afegit un separador entre el nom del  client i el QR. 
+
+16.0.1.12.12 (2026-10-21)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Afegides traduccions explícites en català i castellà dels noms dels sis informes.
+* [DOC] Documentada la importació amb sobreescriptura per corregir noms incorrectes en instal·lacions existents.
 
 Bug Tracker
 ===========

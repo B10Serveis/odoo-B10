@@ -275,9 +275,9 @@ msgid "CODE"
 msgstr "CODIGO"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.comanda_batista
+#: model:ir.actions.report,name:Dissenys_generics.action_report_comanda_batista
 msgid "Comanda Estandard"
-msgstr "Pedido Estandar"
+msgstr "Pedido Estándar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -353,14 +353,14 @@ msgid "Email:"
 msgstr "Correo:"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.entrega_batista
+#: model:ir.actions.report,name:Dissenys_generics.action_report_entrega_batista
 msgid "Entrega Estandard"
-msgstr "Entrega Estandar"
+msgstr "Entrega Estándar"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.factura_batista
+#: model:ir.actions.report,name:Dissenys_generics.action_report_factura_batista
 msgid "Factura Estandard"
-msgstr "Factura Estandar"
+msgstr "Factura Estándar"
 
 #. module: Dissenys_generics
 #: model:ir.model.fields,field_description:Dissenys_generics.field_account_bank_statement_line__group_by_origin
@@ -443,14 +443,14 @@ msgid "Picking Date:"
 msgstr "Fecha entrega:"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.pressupost_batista
+#: model:ir.actions.report,name:Dissenys_generics.action_report_pressupost_batista
 msgid "Pressupost Estandard"
-msgstr "Presupuesto Estandar"
+msgstr "Presupuesto Estándar"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.pressupost_st_batista
+#: model:ir.actions.report,name:Dissenys_generics.action_report_pressupost_st_batista
 msgid "Pressupost Estandard S/T"
-msgstr "Presupuesto Estandar S/T"
+msgstr "Presupuesto Estándar S/T"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -467,9 +467,9 @@ msgid "ProForma Date:"
 msgstr "Fecha ProForma:"
 
 #. module: Dissenys_generics
-#: model:ir.actions.report,name:Dissenys_generics.proforma_batista
+#: model:ir.actions.report,name:Dissenys_generics.action_report_proforma_batista
 msgid "ProForma Estandard"
-msgstr "ProForma Estandar"
+msgstr "Proforma Estándar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
