@@ -1222,22 +1222,22 @@ msgstr "Aplica preu teòric"
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_comanda_batista
 msgid "B10 - Comanda Estandard"
-msgstr ""
+msgstr "B10 - Comanda Estàndard"
 
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_pressupost_batista
 msgid "B10 - Pressupost Estandard"
-msgstr ""
+msgstr "B10 - Pressupost Estàndard"
 
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_pressupost_st_batista
 msgid "B10 - Pressupost Estandard S/T"
-msgstr ""
+msgstr "B10 - Pressupost Estàndard S/T"
 
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_proforma_batista
 msgid "B10 - ProForma Estandard"
-msgstr ""
+msgstr "B10 - Proforma Estàndard"
 
 #. module: b10_sales
 #: model:mail.template,name:b10_sales.proforma_email_template

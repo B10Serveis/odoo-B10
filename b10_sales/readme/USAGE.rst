@@ -23,3 +23,13 @@ Per fer servir aquest mòdul:
    - Ves a: Vendes > Configuració > Productes > Classificacions de Marges
    - Crea noves classificacions
    - Assigna classificacions als teus productes
+
+Correcció dels noms dels informes en instal·lacions existents
+-----------------------------------------------------------
+
+La versió 18.0.1.9.1 incorpora les traduccions corregides dels quatre informes de venda
+en català i castellà, amb el prefix «B10 -». Si una instal·lació conserva
+noms incorrectes, cal importar ``b10_sales/i18n/ca_ES.po`` i
+``b10_sales/i18n/es.po`` per als idiomes corresponents, marcant
+«Sobreescriure termes existents». Una actualització ordinària del mòdul pot
+conservar les traduccions incorrectes ja desades a la base de dades.

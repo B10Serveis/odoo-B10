@@ -82,3 +82,9 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Nova opció de companyia per a inhabilitar el diàleg de confirmació en canceŀlar un pressupost o comanda de venda.
+
+18.0.1.9.1 (2026-10-21)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Completa les traduccions catalanes dels noms dels quatre informes de venda i corregeix les castellanes, conservant el prefix B10.
+* [DOC] Documentada la importació amb sobreescriptura per corregir noms incorrectes en instal·lacions existents.

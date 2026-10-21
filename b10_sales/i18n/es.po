@@ -1139,22 +1139,22 @@ msgstr "Aplicar precio teórico"
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_comanda_batista
 msgid "B10 - Comanda Estandard"
-msgstr "Pedido Estándar"
+msgstr "B10 - Pedido Estándar"
 
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_pressupost_batista
 msgid "B10 - Pressupost Estandard"
-msgstr "Presupuesto Estandar"
+msgstr "B10 - Presupuesto Estándar"
 
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_pressupost_st_batista
 msgid "B10 - Pressupost Estandard S/T"
-msgstr "Presupuesto Estandar S/T"
+msgstr "B10 - Presupuesto Estándar S/T"
 
 #. module: b10_sales
 #: model:ir.actions.report,name:b10_sales.action_report_proforma_batista
 msgid "B10 - ProForma Estandard"
-msgstr "Proforma estándar"
+msgstr "B10 - Proforma Estándar"
 
 #. module: b10_sales
 #: model:mail.template,name:b10_sales.proforma_email_template
