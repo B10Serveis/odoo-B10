@@ -16,3 +16,9 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Elimina la dependència de ``b10_settings_hub``.
+
+18.0.1.1.1 (2026-10-21)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Ajusta la cadena original del nom de l'informe d'entrega a «B10 - Entrega Estandard» i les traduccions catalana i castellana.
+* [DOC] Documentada la importació amb sobreescriptura per corregir noms incorrectes en instal·lacions existents.

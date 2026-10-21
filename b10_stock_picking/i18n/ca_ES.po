@@ -201,8 +201,8 @@ msgstr "Correu electrònic:"
 
 #. module: b10_stock_picking
 #: model:ir.actions.report,name:b10_stock_picking.action_report_entrega_batista
-msgid "Entrega Estandard"
-msgstr "Entrega Estàndard"
+msgid "B10 - Entrega Estandard"
+msgstr "B10 - Entrega Estàndard"
 
 #. module: b10_stock_picking
 #: model_terms:ir.ui.view,arch_db:b10_stock_picking.report_entrega_batista_document
