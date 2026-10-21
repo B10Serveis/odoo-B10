@@ -298,7 +298,7 @@ msgstr "CODIGO"
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.action_report_comanda_batista
 msgid "Comanda Estandard"
-msgstr ""
+msgstr "Pedido Estándar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -376,12 +376,12 @@ msgstr "Correo:"
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.action_report_entrega_batista
 msgid "Entrega Estandard"
-msgstr ""
+msgstr "Entrega Estándar"
 
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.action_report_factura_batista
 msgid "Factura Estandard"
-msgstr ""
+msgstr "Factura Estándar"
 
 #. module: Dissenys_generics
 #: model:ir.model.fields,field_description:Dissenys_generics.field_account_bank_statement_line__group_by_origin
@@ -466,12 +466,12 @@ msgstr "Fecha entrega:"
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.action_report_pressupost_batista
 msgid "Pressupost Estandard"
-msgstr ""
+msgstr "Presupuesto Estándar"
 
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.action_report_pressupost_st_batista
 msgid "Pressupost Estandard S/T"
-msgstr ""
+msgstr "Presupuesto Estándar S/T"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_comanda_batista_document
@@ -490,7 +490,7 @@ msgstr "Fecha ProForma:"
 #. module: Dissenys_generics
 #: model:ir.actions.report,name:Dissenys_generics.action_report_proforma_batista
 msgid "ProForma Estandard"
-msgstr ""
+msgstr "Proforma Estándar"
 
 #. module: Dissenys_generics
 #: model_terms:ir.ui.view,arch_db:Dissenys_generics.report_proforma_batista_document
