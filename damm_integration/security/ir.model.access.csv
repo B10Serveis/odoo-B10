@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_damm_reports_wizard,Access Damm reports wizard,model_damm_reports_wizard,res_groups_damm_integration,1,1,1,1

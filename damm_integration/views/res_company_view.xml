@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022, 2023, 2024, 2025 Batista10
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+<record id="view_company_form" model="ir.ui.view">
+    <field name="name">Company: add Damm company</field>
+    <field name="model">res.company</field>
+    <field name="inherit_id" ref="base.view_company_form"/>
+    <field name="arch" type="xml">
+        <field name="currency_id" position="after">
+            <field name="damm_dealer_code"
+                   groups="damm_integration.res_groups_damm_integration"
+                   placeholder="Your company's Damm dealer code"/>
+            <field name="damm_partner_id"
+                   groups="damm_integration.res_groups_damm_integration"
+                   placeholder="S.A. Damm in your Odoo"/>
+        </field>
+    </field>
+</record>
+
+</odoo>
