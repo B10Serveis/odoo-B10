@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 from odoo.http import request
+from odoo.tools.misc import str2bool
 
 
 class SaleOrderInherited(models.Model):
@@ -19,11 +20,12 @@ class ResConfigSettings(models.TransientModel):
     # Modificacions per error de cron:
     # -Creem get_invoice_lines_by_origin() per poder obtenir el valor sense request.
     def get_invoice_lines_by_origin(self):
-        return (
+        value = (
             self.env["ir.config_parameter"]
             .sudo()
             .get_param("dissenys_generics.invoice_lines_by_origin", False)
         )
+        return str2bool(value, default=False)
 
 
 class AccountMove(models.Model):
