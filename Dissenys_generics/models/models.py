@@ -32,13 +32,15 @@ class AccountMove(models.Model):
     group_by_origin = fields.Boolean(string="Group Invoice Lines by Origin")
 
     @api.model_create_multi
-    def create(self, vals):
-        res = super(AccountMove, self).create(vals)
-        # Modificacions error cron:
-        # -Accedim a ResConfigSettings amb self.env["res.config.settings"].sudo() i cridem get_invoice_lines_by_origin() per obtenir el parametre.
-        settings = self.env["res.config.settings"].sudo()  # Access settings model
-        res.group_by_origin = settings.get_invoice_lines_by_origin()
-        return res
+    def create(self, vals_list):
+        if any("group_by_origin" not in vals for vals in vals_list):
+            settings = self.env["res.config.settings"].sudo()
+            default_group_by_origin = settings.get_invoice_lines_by_origin()
+            vals_list = [
+                dict(vals, group_by_origin=vals.get("group_by_origin", default_group_by_origin))
+                for vals in vals_list
+            ]
+        return super().create(vals_list)
 
 
 class AccountPaymentMethod(models.Model):
