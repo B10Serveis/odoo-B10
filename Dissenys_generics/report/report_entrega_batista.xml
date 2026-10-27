@@ -215,13 +215,13 @@
                                 </td>
                                 <td class="text-right"
                                     t-if="doc.picking_type_code=='outgoing'">
-                                    <span t-field="l.move_id.quantity"/>
-                                    <span t-field="l.move_id.product_uom"/>
+                                    <span t-field="l.quantity"/>
+                                    <span t-field="l.product_uom_id"/>
                                 </td>
                                 <td class="text-right"
                                     t-if="doc.picking_type_code=='incoming'">
-                                    <span t-esc="l.move_id.quantity * -1"/>
-                                    <span t-field="l.move_id.product_uom"/>
+                                    <span t-esc="l.quantity * -1"/>
+                                    <span t-field="l.product_uom_id"/>
                                 </td>
                             </tr>
                         </tbody>
