@@ -469,27 +469,28 @@
 
                                         <!--Modificació signe per Factura Rectificativa-->
                                         <t t-if="not o.amount_total_signed >= 0 and tax_totals and 'groups_by_subtotal' in tax_totals"
-                                            t-foreach="tax_totals['groups_by_subtotal'].items()"
+                                            t-foreach="tax_totals['subtotals']"
                                             t-as="subtotal">
                                             <tr style="border-top-color:rgb(0, 0, 0); border-top-width: 1px;">
                                                 <td>
                                                     <strong>
-                                                        <t t-esc="subtotal[0]"/>
+                                                        <t t-esc="subtotal['name']"/>
                                                     </strong>
                                                 </td>
                                                 <td class="text-end">
-                                                    <span t-esc="subtotal[1][0]['tax_group_base_amount'] * -1"
+                                                    <span t-esc="subtotal['amount'] * -1"
                                                         t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
                                                 </td>
                                             </tr>
-                                            <tr>
+                                            <tr t-foreach="tax_totals['groups_by_subtotal'][subtotal['name']]"
+                                                t-as="tax_group">
                                                 <td>
                                                     <strong>
-                                                        <t t-esc="subtotal[1][0]['tax_group_name']"/>
+                                                        <t t-esc="tax_group['tax_group_name']"/>
                                                     </strong>
                                                 </td>
                                                 <td class="text-end">
-                                                    <span t-esc="subtotal[1][0]['tax_group_amount'] * -1"
+                                                    <span t-esc="tax_group['tax_group_amount'] * -1"
                                                         t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
                                                 </td>
                                             </tr>
@@ -501,7 +502,7 @@
                                                 </strong>
                                             </td>
                                             <td class="text-end">
-                                                <span t-esc="o.amount_total_signed"
+                                                <span t-esc="o.amount_total_in_currency_signed"
                                                     t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
                                             </td>
                                         </tr>
