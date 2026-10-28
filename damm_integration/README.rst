@@ -17,7 +17,7 @@ Integració amb Damm
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github
-    :target: https://github.com/B10Serveis/odoo-B10/tree/15.0/damm_integration
+    :target: https://github.com/B10Serveis/odoo-B10/tree/16.0/damm_integration
     :alt: B10Serveis/odoo-B10
 
 |badge1| |badge2| |badge3|
@@ -109,13 +109,23 @@ Changelog
 * [FIX] Mostra valors negatius per a les factures rectificatives.
 * [IMP] Més filtres de comes en camps de factura.
 
+16.0.1.0.0 (2026-10-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Adaptació a Odoo 16.0: proveïdors de productes i vista de configuració.
+* [FIX] Els informes només inclouen factures de la companyia actual.
+* [FIX] El codi de client de les vendes coincideix amb el de l'informe de clients,
+  també quan la factura correspon a un contacte d'una empresa.
+* [FIX] Les condicions comercials conserven tots els clients d'una mateixa tarifa.
+* [IMP] Proves dels tres informes, abonaments i entorns multiempresa.
+
 Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues <https://github.com/B10Serveis/odoo-B10/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20damm_integration%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20damm_integration%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -137,6 +147,6 @@ Contributors
 Maintainers
 ~~~~~~~~~~~
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/15.0/damm_integration>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/16.0/damm_integration>`_ project on GitHub.
 
 You are welcome to contribute.

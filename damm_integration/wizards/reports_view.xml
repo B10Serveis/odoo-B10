@@ -11,7 +11,7 @@
         <field name="arch"
             type="xml">
             <form string="Generate Reports for Damm">
-                <p class="alert alert-warning"
+                <p class="alert alert-warning" role="alert"
                    attrs="{'invisible': [('damm_config_ok', '=', True)]}">
                 Your Damm integration configuration may be missing some values, please check it.
                 </p>

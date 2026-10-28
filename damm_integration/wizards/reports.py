@@ -4,7 +4,6 @@
 import base64
 import csv
 import io
-import itertools
 import urllib.parse
 
 from odoo import _, api, exceptions, models, fields
@@ -131,7 +130,7 @@ _report_formats = {
     ],
     "sales": [
         ("Distribuidor", 10, _g_damm_code, _f_str_or_empty),
-        ("Nº Cliente", 20, _g_field("partner_id.id"), _f_str_or_empty),
+        ("Nº Cliente", 20, _g_field("move_id.partner_id.id"), _f_str_or_empty),
         ("Nº Producto", 20, _g_field("product_id.id"), _f_str_or_empty),
         ("Nº Producto Damm", 20, _g_field("product_id.default_code"), _f_str_or_empty),
         ("Tipo documento venta", 2, _g_const("EN"), None),
@@ -169,8 +168,8 @@ _report_formats = {
         ("Motivo Obsequio", 10, _g_if_gift("ZH08"), None),
         ("Fecha aplicación cond. precio", 8, _g_field("date"), _f_date),
         ("Sin cargo", 2, _g_if_gift("OB", "NO"), None),
-        ("Prev. Habitual", 10, _g_field("partner_id.user_id.id"), _f_str_or_empty),
-        ("Prev. Documento", 10, _g_field("move_id.user_id.id"), _f_str_or_empty),
+        ("Prev. Habitual", 10, _g_field("move_id.partner_id.user_id.id"), _f_str_or_empty),
+        ("Prev. Documento", 10, _g_field("move_id.invoice_user_id.id"), _f_str_or_empty),
         ("SubDistribuidor", 10, _g_empty, None),
     ],
     "conditions": [
@@ -267,12 +266,12 @@ class DammReportsWizard(models.TransientModel):
     def _check_dates_range(self):
         for report in self:
             if report.date_start > report.date_end:
-                raise models.ValidationError(
+                raise exceptions.ValidationError(
                     _("Report end date must be greater than its start date.")
                 )
 
-    @api.model
-    def create(self, values):
+    @api.model_create_multi
+    def create(self, vals_list):
         company = self.env.company
         dealer_code = company.damm_dealer_code
         if not dealer_code:
@@ -284,7 +283,7 @@ class DammReportsWizard(models.TransientModel):
             raise exceptions.UserError(
                 _("Please configure which partner is the Damm company.")
             )
-        return super(DammReportsWizard, self).create(values)
+        return super().create(vals_list)
 
     def _search_report_items(self) -> dict[int, object]:
         company = self.env.company
@@ -295,6 +294,7 @@ class DammReportsWizard(models.TransientModel):
         is_product_by_damm = {}  # cache
         sales = self.env["account.move"].search(
             [
+                ("company_id", "=", company.id),
                 ("move_type", "in", ["out_invoice", "out_refund"]),
                 ("state", "=", "posted"),
                 ("invoice_date", ">=", self.date_start),
@@ -304,11 +304,13 @@ class DammReportsWizard(models.TransientModel):
         for sale in sales:
             customer = sale.partner_id
             for sale_line in sale.invoice_line_ids:
+                if sale_line.display_type != "product" or not sale_line.product_id:
+                    continue
                 product = sale_line.product_id
                 by_damm = is_product_by_damm.get(product.id)
                 if by_damm is None:  # cache whether product by Damm
                     is_product_by_damm[product.id] = by_damm = (
-                        damm_partner_id in product.mapped("seller_ids.name.id")
+                        damm_partner_id in product.seller_ids.partner_id.ids
                     )
                 if by_damm:
                     customers[customer.id] = customer
@@ -323,13 +325,11 @@ class DammReportsWizard(models.TransientModel):
         conditions = {}
         # Conditions for non-buyers are irrelevant,
         # filter by customers that did buy (and group them by pricelist).
-        plist_ids = dict(
-            (plist_id, list(custs))
-            for plist_id, custs in itertools.groupby(
-                customers.values(), lambda c: c.property_product_pricelist.id
-            )
-            if plist_id
-        )
+        plist_ids = {}
+        for customer in customers.values():
+            pricelist = customer.property_product_pricelist
+            if pricelist:
+                plist_ids.setdefault(pricelist.id, []).append(customer)
         plist_items = self.env["product.pricelist.item"].search(
             [
                 ("pricelist_id", "in", list(plist_ids)),
@@ -337,9 +337,7 @@ class DammReportsWizard(models.TransientModel):
         )
         for plist_item in plist_items:
             product = plist_item.product_tmpl_id
-            if damm_partner_id in product.mapped(
-                "seller_ids.name.id"
-            ):  # TODO: cache
+            if damm_partner_id in product.seller_ids.partner_id.ids:  # TODO: cache
                 # The condition must appear for each customer that it applies to,
                 # so decorate it with the customer id to tell them apart.
                 for plcust in plist_ids[plist_item.pricelist_id.id]:
