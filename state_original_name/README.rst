@@ -13,6 +13,12 @@ Creates a field on res.country.state to show the original name of spanish states
 Changelog
 =========
 
+1.0.3 (2026-10-29)
+~~~~~~~~~~~~~~~~~~
+
+* [IMP] Petites millores de sintaxi.
+* [IMP] Modificar index.html per a que sigui coherent.
+
 1.0.2 (2026-03-25)
 ~~~~~~~~~~~~~~~~~~
 
