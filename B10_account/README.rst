@@ -71,6 +71,11 @@ Changelog
 * [ADD] Modifica el filtre de 'Compte a pagar' perque mostri tots els comptes de tipus 'liability%'.
 
 
+17.0.1.3.3 (2026-11-01)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [REM] Eliminada la mesura de preu amb impostos inclosos de l'informe de factures.
+
 
 Bug Tracker
 ===========

@@ -24,3 +24,7 @@
 
 * [FIX] No es comprova el banc destinatari de la factura en canviar a un mode de pagament que no és per transferència bancària.
 
+17.0.1.3.3 (2026-11-01)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [REM] Eliminada la mesura de preu amb impostos inclosos de l'informe de factures.

@@ -17,11 +17,6 @@ msgstr ""
 "Language: es\n"
 
 #. module: B10_account
-#: model:ir.model,name:B10_account.model_account_invoice_report
-msgid "Invoices Statistics"
-msgstr "Estadísticas de facturas"
-
-#. module: B10_account
 #: code:addons/B10_account/models/B10_account_move.py:0
 #, python-format
 msgid ""
@@ -33,12 +28,6 @@ msgstr "Se debe establecer un banco destinatario que sea válido para el actual 
 #: model:ir.model,name:B10_account.model_account_move
 msgid "Journal Entry"
 msgstr "Asentamiento contable"
-
-#. module: B10_account
-#: model:ir.model.fields,field_description:B10_account.field_account_invoice_report__price_total_with_tax
-#: model_terms:ir.ui.view,arch_db:B10_account.view_account_invoice_report_pivot_inherit
-msgid "Total Price with Taxes"
-msgstr "Total con Impuestos"
 
 #. module: B10_account
 #: code:addons/B10_account/models/B10_account_move.py:0
