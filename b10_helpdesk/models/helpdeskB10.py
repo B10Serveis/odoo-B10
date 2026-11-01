@@ -1,4 +1,5 @@
 from odoo import api, models, fields, _
+from odoo.exceptions import ValidationError
 import logging
 
 
@@ -13,6 +14,23 @@ class helpdeksB10(models.Model):
         required=False,
     )
     related_contract = fields.Many2one("contract.contract", string="Contract")
+
+    @api.constrains("related_contract", "partner_id", "company_id")
+    def _check_related_contract(self):
+        for ticket in self:
+            contract = ticket.related_contract
+            if not contract:
+                continue
+            allowed_partners = ticket.partner_id | ticket.partner_id.commercial_partner_id
+            if not ticket.partner_id or contract.partner_id not in allowed_partners:
+                raise ValidationError(_(
+                    "The contract must belong to the ticket contact or its commercial entity."
+                ))
+            if contract.company_id and contract.company_id != ticket.company_id:
+                raise ValidationError(_(
+                    "The contract must belong to the same company as the ticket."
+                ))
+
     worked_hours = fields.Float(string="Worked Hours")
     stage_closed = fields.Boolean(string="Stage closed", related="stage_id.closed")
 
