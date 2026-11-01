@@ -6,7 +6,7 @@ class B10AccountMove(models.Model):
 
     # Similar to `b10_sales:sale.order:_check_nonempty_payment_journal()`,
     # but checking the actual value as the field has no domain restrictions.
-    @api.constrains("partner_bank_id")
+    @api.constrains("partner_bank_id", "payment_mode_id")
     def _check_transfer_partner_bank(self):
         bank_transfer = self.env.ref(
             "Dissenys_generics.account_payment_method_bank_transfer",
