@@ -14,8 +14,21 @@ class helpdeksB10Subscription(models.Model):
 
     @api.onchange("partner_id")
     def _onchange_partner_id(self):
-        return {
-            "domain": {
-                "related_subscription": [("partner_id", "=", self.partner_id.id)]
-            }
-        }
+        result = super()._onchange_partner_id()
+        if (
+            self.related_subscription
+            and self.related_subscription.partner_id != self.partner_id
+        ):
+            self.related_subscription = False
+        return result
+
+    @api.constrains("partner_id", "related_subscription")
+    def _check_subscription_partner(self):
+        for ticket in self:
+            if (
+                ticket.related_subscription
+                and ticket.related_subscription.partner_id != ticket.partner_id
+            ):
+                raise exceptions.ValidationError(
+                    _("The subscription must belong to the ticket customer.")
+                )
