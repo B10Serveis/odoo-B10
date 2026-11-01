@@ -10,8 +10,17 @@
                     t-value="25"/>
                 <t t-foreach="docs"
                     t-as="doc">
+                    <t t-set="lang"
+                        t-value="doc.partner_id.lang or user.lang or 'en_US'"/>
+                    <t t-call="b10_helpdesk.helpdesk_ticket_report_B10_document"
+                        t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+
+        <template id="helpdesk_ticket_report_B10_document">
                     <t t-set="doc"
-                        t-value="doc.with_context({'lang':doc.partner_id.lang})" />
+                        t-value="doc.with_context(lang=lang)" />
                     <!-- HEADER -->
                     <div class="header"
                         style="overflow: hidden;">
@@ -262,8 +271,6 @@
                             </div>
                         </div>
                     </div>
-                </t>
-            </t>
         </template>
     </data>
 </odoo>
