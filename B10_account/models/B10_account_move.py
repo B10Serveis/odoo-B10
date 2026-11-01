@@ -1,4 +1,4 @@
-from odoo import api, exceptions, models, fields, _
+from odoo import api, exceptions, models, _
 
 
 class B10AccountMove(models.Model):
@@ -72,29 +72,27 @@ class B10AccountMove(models.Model):
                   "please unset the bank first if you are sure."))
         self.partner_bank_id = new_partner_bank
 
-    @api.depends("bank_partner_id", "payment_mode_id")
+    @api.depends(
+        "bank_partner_id", "payment_mode_id",
+        "company_id.keep_partner_bank_without_payment_mode",
+    )
     def _compute_partner_bank_id(self):
+        res = super()._compute_partner_bank_id()
         bank_transfer = self.env.ref(
             "Dissenys_generics.account_payment_method_bank_transfer",
             raise_if_not_found=False,
         )
+        if not bank_transfer:
+            return res
+
         for move in self:
-            # This will get the bank account from the partner in an order with the trusted first
             payment_mode = move.payment_mode_id
-            def get_bank_id():
-                if not payment_mode:
-                    return False
-                if (
-                        not bank_transfer
-                        or payment_mode.payment_method_id != bank_transfer
-                ):
-                    return fields.first(move.bank_partner_id.bank_ids.filtered(
-                        lambda bank: not bank.company_id or bank.company_id == move.company_id
-                    ).sorted(lambda bank: not bank.allow_out_payment))
-                if payment_mode.bank_account_link == "fixed":
-                    return payment_mode.fixed_journal_id.bank_account_id
-                assert payment_mode.bank_account_link == "variable"
-                return payment_mode.variable_journal_ids[0].bank_account_id
-            # B10: Afegim condicional perque no reescrigui si ja n'hi ha
-            if not move.partner_bank_id:
-                move.partner_bank_id = get_bank_id()
+            if not payment_mode or payment_mode.payment_method_id != bank_transfer:
+                continue
+            if payment_mode.bank_account_link == "fixed":
+                move.partner_bank_id = payment_mode.fixed_journal_id.bank_account_id
+            elif payment_mode.bank_account_link == "variable":
+                allowed_banks = payment_mode.variable_journal_ids.mapped("bank_account_id")
+                if not move.partner_bank_id or move.partner_bank_id not in allowed_banks:
+                    move.partner_bank_id = allowed_banks[:1]
+        return res
