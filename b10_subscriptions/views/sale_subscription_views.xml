@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2026 Batista10 (https://www.batista10.cat/).
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="sale_subscription_form_b10_section_note" model="ir.ui.view">
+        <field name="name">sale.subscription.form.b10.section.note</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="subscription_oca.sale_subscription_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_subscription_line_ids']" position="attributes">
+                <attribute name="widget">section_and_note_one2many</attribute>
+            </xpath>
+            <xpath expr="//field[@name='sale_subscription_line_ids']/tree" position="attributes">
+                <attribute name="default_order">sequence, id</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='product_id']"
+                position="before"
+            >
+                <control>
+                    <create string="Add a line" />
+                    <create
+                        string="Add a section"
+                        context="{'default_display_type': 'line_section'}"
+                    />
+                    <create
+                        string="Add a note"
+                        context="{'default_display_type': 'line_note'}"
+                    />
+                </control>
+                <field name="company_id" column_invisible="True" />
+                <field name="display_type" column_invisible="True" />
+                <field name="sequence" widget="handle" />
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='product_id']"
+                position="attributes"
+            >
+                <attribute name="required">not display_type</attribute>
+                <attribute name="readonly">display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='name']"
+                position="attributes"
+            >
+                <attribute name="required">not display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='product_uom_qty']"
+                position="attributes"
+            >
+                <attribute name="required">0</attribute>
+                <attribute name="invisible">display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='price_unit']"
+                position="attributes"
+            >
+                <attribute name="required">0</attribute>
+                <attribute name="invisible">display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='discount']"
+                position="attributes"
+            >
+                <attribute name="required">0</attribute>
+                <attribute name="invisible">display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='tax_ids']"
+                position="attributes"
+            >
+                <attribute name="invisible">display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='tax_ids']"
+                position="before"
+            >
+                <field
+                    name="analytic_distribution"
+                    widget="analytic_distribution"
+                    options="{'product_field': 'product_id'}"
+                    groups="analytic.group_analytic_accounting"
+                    invisible="display_type"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='price_subtotal']"
+                position="attributes"
+            >
+                <attribute name="invisible">display_type</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='price_total']"
+                position="attributes"
+            >
+                <attribute name="invisible">display_type</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_subscription_line_form_b10_section_note" model="ir.ui.view">
+        <field name="name">sale.subscription.line.form.b10.section.note</field>
+        <field name="model">sale.subscription.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="company_id" invisible="1" />
+                    <field name="display_type" invisible="1" />
+                    <group invisible="display_type">
+                        <field name="product_id" required="not display_type" />
+                        <field
+                            name="analytic_distribution"
+                            widget="analytic_distribution"
+                            options="{'product_field': 'product_id'}"
+                            groups="analytic.group_analytic_accounting"
+                        />
+                        <field name="product_uom_qty" />
+                        <field name="price_unit" />
+                        <field name="discount" />
+                        <field name="tax_ids" widget="many2many_tags" />
+                    </group>
+                    <label
+                        for="name"
+                        string="Description"
+                        invisible="display_type"
+                    />
+                    <label
+                        for="name"
+                        string="Section"
+                        invisible="display_type != 'line_section'"
+                    />
+                    <label
+                        for="name"
+                        string="Note"
+                        invisible="display_type != 'line_note'"
+                    />
+                    <field name="name" nolabel="1" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
