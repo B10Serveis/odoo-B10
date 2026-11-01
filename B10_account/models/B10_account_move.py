@@ -38,6 +38,17 @@ class B10AccountMove(models.Model):
     @api.onchange("payment_mode_id")
     def _onchange_payment_mode_id_b10(self):
         payment_mode = self.payment_mode_id
+        bank_transfer = self.env.ref(
+            "Dissenys_generics.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if (
+            not self.is_inbound(include_receipts=True)
+            or not bank_transfer
+            or not payment_mode
+            or payment_mode.payment_method_id != bank_transfer
+        ):
+            return
         old_partner_bank = self.partner_bank_id
 
         assert (not payment_mode or not payment_mode.bank_account_link
@@ -56,16 +67,7 @@ class B10AccountMove(models.Model):
         else:  # old bank not among variable ones
             new_partner_bank = payment_mode.variable_journal_ids[0].bank_account_id
 
-        is_bank_transfer = False
-        bank_transfer = self.env.ref(
-            "Dissenys_generics.account_payment_method_bank_transfer",
-            raise_if_not_found=False,
-        )
-        if bank_transfer and payment_mode and payment_mode.payment_method_id == bank_transfer:
-            # The check only applies to bank transfer payments.
-            is_bank_transfer = True
-
-        if is_bank_transfer and old_partner_bank and new_partner_bank != old_partner_bank:
+        if old_partner_bank and new_partner_bank != old_partner_bank:
             raise exceptions.ValidationError(
                 _("The current recipient bank cannot be used "
                   "with the selected payment mode; "
