@@ -30,6 +30,7 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
                         context="{'default_display_type': 'line_note'}"
                     />
                 </control>
+                <field name="company_id" invisible="1" />
                 <field name="display_type" invisible="1" />
                 <field name="sequence" widget="handle" />
             </xpath>
@@ -77,6 +78,18 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
                 <attribute name="attrs">{'invisible': [('display_type', '!=', False)]}</attribute>
             </xpath>
             <xpath
+                expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='tax_ids']"
+                position="before"
+            >
+                <field
+                    name="analytic_distribution"
+                    widget="analytic_distribution"
+                    options="{'product_field': 'product_id'}"
+                    groups="analytic.group_analytic_accounting"
+                    attrs="{'invisible': [('display_type', '!=', False)]}"
+                />
+            </xpath>
+            <xpath
                 expr="//field[@name='sale_subscription_line_ids']/tree/field[@name='price_subtotal']"
                 position="attributes"
             >
@@ -97,9 +110,16 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <field name="company_id" invisible="1" />
                     <field name="display_type" invisible="1" />
                     <group attrs="{'invisible': [('display_type', '!=', False)]}">
                         <field name="product_id" required="1" />
+                        <field
+                            name="analytic_distribution"
+                            widget="analytic_distribution"
+                            options="{'product_field': 'product_id'}"
+                            groups="analytic.group_analytic_accounting"
+                        />
                         <field name="product_uom_qty" />
                         <field name="price_unit" />
                         <field name="discount" />

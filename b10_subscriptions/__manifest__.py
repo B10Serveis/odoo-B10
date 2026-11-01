@@ -3,13 +3,13 @@
 
 {
     "name": "Batista10 - Subscriptions",
-    "summary": "Add section and note lines to subscriptions",
+    "summary": "Add sections, notes and analytic distributions to subscriptions",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Sales/Subscriptions",
     "version": "16.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["subscription_oca"],
+    "depends": ["subscription_oca", "analytic", "product_analytic"],
     "data": [
         "views/sale_subscription_views.xml",
     ],
