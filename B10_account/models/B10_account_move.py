@@ -24,6 +24,7 @@ class B10AccountMove(models.Model):
                     not payment_mode
                     or payment_mode.payment_method_id != bank_transfer
                     or (payment_mode.bank_account_link == "fixed"
+                        and payment_mode.fixed_journal_id.bank_account_id
                         and partner_bank == payment_mode.fixed_journal_id.bank_account_id)
                     or (payment_mode.bank_account_link == "variable"
                         and partner_bank
