@@ -13,6 +13,11 @@ class helpdeksB10(models.Model):
         string="Closing Note",
         required=False,
     )
+    commercial_partner_id = fields.Many2one(
+        string="Commercial Partner",
+        related="partner_id.commercial_partner_id",
+        store=True,
+    )
     related_contract = fields.Many2one("contract.contract", string="Contract")
 
     @api.constrains("related_contract", "partner_id", "company_id")
