@@ -24,6 +24,7 @@ class B10AccountMove(models.Model):
                     not payment_mode
                     or payment_mode.payment_method_id != bank_transfer
                     or (payment_mode.bank_account_link == "fixed"
+                        and payment_mode.fixed_journal_id.bank_account_id
                         and partner_bank == payment_mode.fixed_journal_id.bank_account_id)
                     or (payment_mode.bank_account_link == "variable"
                         and partner_bank
@@ -94,6 +95,8 @@ class B10AccountMove(models.Model):
                 if payment_mode.bank_account_link == "fixed":
                     return payment_mode.fixed_journal_id.bank_account_id
                 assert payment_mode.bank_account_link == "variable"
+                if not payment_mode.variable_journal_ids:
+                    return False
                 return payment_mode.variable_journal_ids[0].bank_account_id
             # B10: Afegim condicional perque no reescrigui si ja n'hi ha
             if not move.partner_bank_id:
