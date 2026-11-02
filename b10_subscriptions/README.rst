@@ -4,7 +4,8 @@ Batista10 - Subscriptions
 Extensió del mòdul OCA ``subscription_oca`` que permet afegir seccions i notes a
 les línies d'una subscripció, conservar-ne l'ordre en les comandes i factures
 recurrents i informar manualment la distribució analítica nativa d'Odoo a cada
-línia de producte.
+línia de producte. També permet seleccionar una forma de pagament pròpia per a
+cada subscripció.
 
 Usage
 =====
@@ -12,6 +13,8 @@ Usage
 #. Instal·lar ``subscription_oca`` i ``b10_subscriptions``.
 #. A la pestanya de línies de la subscripció, afegir productes, seccions o notes.
 #. Reordenar les línies amb el control d'arrossegament.
+#. Seleccionar la forma de pagament a la subscripció. El valor triat es desa a
+   la subscripció i es traspassa a les factures que es generen.
 #. Si s'utilitza comptabilitat analítica, omplir la distribució de cada línia de
    producte. El mòdul OCA ``product_analytic`` defineix el compte analític
    d'ingressos del producte o de la seva categoria; en afegir el producte,
