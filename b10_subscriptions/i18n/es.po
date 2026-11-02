@@ -45,6 +45,12 @@ msgid "Display order on the subscription."
 msgstr "Orden de visualización en la suscripción."
 
 #. module: b10_subscriptions
+#: model_terms:ir.ui.view,arch_db:b10_subscriptions.sale_subscription_form_b10_section_note
+#: model:ir.model.fields,field_description:b10_subscriptions.field_sale_subscription__payment_mode_id
+msgid "Payment Mode"
+msgstr "Forma de pago"
+
+#. module: b10_subscriptions
 #: model:ir.model.fields,help:b10_subscriptions.field_sale_subscription_line__display_type
 msgid "Technical field for sorting lines in the user interface."
 msgstr "Campo técnico para ordenar las líneas en la interfaz de usuario."

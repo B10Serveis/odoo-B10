@@ -9,6 +9,9 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
         <field name="model">sale.subscription</field>
         <field name="inherit_id" ref="subscription_oca.sale_subscription_form" />
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="payment_mode_id" />
+            </xpath>
             <xpath expr="//field[@name='sale_subscription_line_ids']" position="attributes">
                 <attribute name="widget">section_and_note_one2many</attribute>
             </xpath>

@@ -9,7 +9,12 @@
     "category": "Sales/Subscriptions",
     "version": "17.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["subscription_oca", "analytic", "product_analytic"],
+    "depends": [
+        "subscription_oca",
+        "analytic",
+        "product_analytic",
+        "account_payment_sale",
+    ],
     "data": [
         "views/sale_subscription_views.xml",
     ],
