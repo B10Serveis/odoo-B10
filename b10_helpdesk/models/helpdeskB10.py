@@ -13,6 +13,10 @@ class helpdeksB10(models.Model):
         string="Closing Note",
         required=False,
     )
+    ticket_company_id = fields.Many2one(
+        comodel_name="res.company",
+        related="company_id",
+    )
     commercial_partner_id = fields.Many2one(
         string="Commercial Partner",
         related="partner_id.commercial_partner_id",

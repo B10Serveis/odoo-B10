@@ -6,11 +6,13 @@
             <field name="name">helpdeskB10</field>
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id"
-                ref="helpdesk_mgmt.helpdesk_ticket_view_form"/>
+                ref="helpdesk_mgmt.ticket_view_form"/>
             <field name="arch"
                 type="xml">
                 <xpath expr="//field[@name='partner_email']"
                     position="after">
+                    <field name="ticket_company_id"
+                        invisible="1"/>
                     <field name="company_id"
                         invisible="1"/>
                     <field name="current_time"
@@ -19,7 +21,7 @@
                         invisible="1"/>
                     <field name="related_contract"
                         options="{'color_field': 'color', 'no_create_edit': True}"
-                        domain="[('partner_id', 'in', [partner_id, commercial_partner_id]), '|', ('company_id', '=', company_id), ('company_id', '=', False), '|', ('date_end', '&gt;=', current_time), ('date_end', '=', False)]"/>
+                        domain="[('partner_id', 'in', [partner_id, commercial_partner_id]), '|', ('company_id', '=', ticket_company_id), ('company_id', '=', False), '|', ('date_end', '&gt;=', current_time), ('date_end', '=', False)]"/>
                 </xpath>
                 <xpath expr="//page[@name='description']"
                     position="after">
@@ -41,7 +43,8 @@
                     position="after">
                     <field name="stage_closed"
                         invisible="1"/>
-                    <field name="worked_hours" string="Worked Hours"
+                    <field name="worked_hours"
+                        string="Worked Hours"
                         modifiers="{'required': [['stage_closed', '=', True]]}"/>
                 </xpath>
             </field>
