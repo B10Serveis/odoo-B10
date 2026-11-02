@@ -24,6 +24,11 @@
 
 * [FIX] No es comprova el banc destinatari de la factura en canviar a un mode de pagament que no és per transferència bancària.
 
+17.0.1.3.2 (2026-02-13)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Modifica el filtre de 'Compte a pagar' perque mostri tots els comptes de tipus 'liability%'.
+
 17.0.1.3.3 (2026-11-01)
 ~~~~~~~~~~~~~~~~~~~~~~~
 

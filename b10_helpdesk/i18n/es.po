@@ -23,24 +23,24 @@ msgid "'Ticket_%s' % (object.name)"
 msgstr ""
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<span> (</span>"
 msgstr ""
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<span> - </span>"
 msgstr ""
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid ""
 "<span>)</span>\n"
 "                                            <br/>"
 msgstr ""
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid ""
 "<strong style=\"line-height: 1.2em;\">\n"
 "                                            Close notes: \n"
@@ -51,7 +51,7 @@ msgstr ""
 "                                        </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid ""
 "<strong style=\"line-height: 1.2em;\">\n"
 "                                            Description: \n"
@@ -62,52 +62,52 @@ msgstr ""
 "                                        </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Assigned user: </strong>"
 msgstr "<strong>Usuario asignado: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Category: </strong>"
 msgstr "<strong>Categoria: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Channel: </strong>"
 msgstr "<strong>Canal: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Created on: </strong>"
 msgstr "<strong>Creado el: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Email: </strong>"
 msgstr "<strong>Email: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Mobile: </strong>"
 msgstr "<strong>Movil: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Phone: </strong>"
 msgstr "<strong>Teléfono </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Priority: </strong>"
 msgstr "<strong>Prioridad: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "<strong>Team: </strong>"
 msgstr "<strong>Equipo: </strong>"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid ""
 "According to the GDPR, we inform you that we will process your personal data in order to carry out administrative, accounting and fiscal management. Data\n"
 "                                            proportionately, the time required by a legal obligation will be retained and will not be transferred to third parties except legal provision required, or if necessary, prior consent of\n"
@@ -147,7 +147,7 @@ msgid "Current time"
 msgstr "Hora actual"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "Email:"
 msgstr ""
 
@@ -177,12 +177,12 @@ msgid "Stage closed"
 msgstr "Cerrado"
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "Tel:"
 msgstr ""
 
 #. module: b10_helpdesk
-#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10
+#: model_terms:ir.ui.view,arch_db:b10_helpdesk.helpdesk_ticket_report_B10_document
 msgid "VAT:"
 msgstr "NIF:"
 
