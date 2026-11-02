@@ -22,6 +22,25 @@ class helpdeksB10Subscription(models.Model):
             self.related_subscription = False
         return result
 
+    @api.onchange("company_id")
+    def _onchange_subscription_company(self):
+        if (
+            self.related_subscription
+            and self.related_subscription.company_id != self.company_id
+        ):
+            self.related_subscription = False
+
+    @api.constrains("company_id", "related_subscription")
+    def _check_subscription_company(self):
+        for ticket in self:
+            if (
+                ticket.related_subscription
+                and ticket.related_subscription.company_id != ticket.company_id
+            ):
+                raise exceptions.ValidationError(
+                    _("The subscription must belong to the ticket company.")
+                )
+
     @api.constrains("partner_id", "related_subscription")
     def _check_subscription_partner(self):
         for ticket in self:

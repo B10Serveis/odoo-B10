@@ -16,3 +16,9 @@ msgstr ""
 #: code:addons/b10_helpdesk_subscription/models/ticket_subscription.py:0
 msgid "The subscription must belong to the ticket customer."
 msgstr "La suscripción debe pertenecer al cliente del ticket."
+
+#. module: b10_helpdesk_subscription
+#. odoo-python
+#: code:addons/b10_helpdesk_subscription/models/ticket_subscription.py:0
+msgid "The subscription must belong to the ticket company."
+msgstr "La suscripción debe pertenecer a la compañía del ticket."

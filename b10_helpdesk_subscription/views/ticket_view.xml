@@ -21,7 +21,7 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
                         invisible="1"/>
                     <field name="related_subscription"
                         options="{'color_field': 'color', 'no_create_edit': True}"
-                        domain="[('partner_id', '=', partner_id), '|', ('date', '&gt;=', current_time), ('date', '=', False)]"/>
+                        domain="[('partner_id', '=', partner_id), ('company_id', '=', company_id), '|', ('date', '&gt;=', current_time), ('date', '=', False)]"/>
                 </xpath>
             </field>
         </record>
