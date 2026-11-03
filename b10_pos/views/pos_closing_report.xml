@@ -1,66 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <template id="report_pos_closing_report">
-      <t t-call="web.html_container">
-        <t t-call="web.internal_layout">
-          <div class="page">
-            <div class="text-center">
-              <h2>POS CLOSING REPORT</h2>
-            </div>
-            <div><strong>Point of Sale: </strong><span t-esc="name"/><strong> Date Start: </strong><span t-esc="date_start" t-options="{'widget': 'date'}"/><strong> Date end: </strong><span t-esc="date_stop" t-options="{'widget': 'date'}"/></div>
-            <table class="table table-sm">
-              <thead>
-                <th>Session</th>
-                <th>Status</th>
-                <th>Date init</th>
-                <th>Date end</th>
-                <th class="text-right">Amount</th>
-              </thead>
-              <tbody>
-                <tr t-foreach="sessions" t-as="line_ids" style="background-color: lightgrey;">
-                  <td>
-                    <span t-esc="line_ids['session_name']"/>
-                  </td>
-                  <td>
-                    <span t-esc="line_ids['session_stat']"/>
-                  </td>
-                  <td>
-                    <span t-esc="line_ids['session_ini']" t-options="{'widget': 'date'}"/>
-                  </td>
-                  <td>
-                    <span t-esc="line_ids['session_fi']" t-options="{'widget': 'date'}"/>
-                  </td>
-                  <td class="text-right">
-                    <span t-esc="line_ids['session_amount']"/>
-                  </td>
-                  <tr>
-                  <th class="text-right" colspan="1">Payment Mode</th>
-                  <th class="text-right">Initial Amount</th>
-                  <th class="text-right">Declared</th>
-                  <th class="text-right">Real</th>
-                  </tr>
-                  <tr t-foreach="linies" t-as="line_pay" t-if="line_pay['session_nom'] == line_ids['session_name']" >
-                    <td class="text-right" colspan="1">
-                      <span t-esc="line_pay['fpago']" />
-                    </td>
-                    <td class="text-right"> 
-                        <span t-esc="line_pay['canvi']"/>
-                    </td>
-                    <td class="text-right"> 
-                        <span t-esc="line_pay['declarat']"/>
-                    </td>
-                    <td class="text-right"> 
-                        <span t-esc="line_pay['total']"/>
-                    </td>
-                  </tr>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </t>
-      </t>
-    </template>
-  </data>
-</odoo>
+    <data>
+        <template id="report_pos_closing_report">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <h2 class="text-center">POS CLOSING REPORT</h2>
+                        <p>
+                            <strong>Point of Sale: </strong>
+                            <span t-esc="config.name"/>
+                            <span class="mx-2">|</span>
+                            <strong>Period: </strong>
+                            <span t-esc="date_start" t-options="{'widget': 'date'}"/>
+                            <span> - </span>
+                            <span t-esc="date_stop" t-options="{'widget': 'date'}"/>
+                        </p>
 
+                        <t t-if="not sessions">
+                            <p>No closed sessions found for the selected period.</p>
+                        </t>
+                        <t t-foreach="sessions" t-as="row">
+                            <t t-set="session" t-value="row['session']"/>
+                            <table class="table table-sm mb-1">
+                                <thead>
+                                    <tr>
+                                        <th>Session</th>
+                                        <th>Opening Date</th>
+                                        <th>Closing Date</th>
+                                        <th>Point of Sale</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-secondary">
+                                        <td><span t-field="session.name"/></td>
+                                        <td><span t-field="session.start_at" t-options="{'widget': 'datetime'}"/></td>
+                                        <td><span t-field="session.stop_at" t-options="{'widget': 'datetime'}"/></td>
+                                        <td><span t-field="session.config_id"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-sm mb-4">
+                                <thead>
+                                    <tr>
+                                        <th>Payment Method</th>
+                                        <th class="text-right">Sold</th>
+                                        <th class="text-right">Declared</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="row['payments']" t-as="payment">
+                                        <td><span t-esc="payment['name']"/></td>
+                                        <td class="text-right">
+                                            <span t-esc="payment['sold']" t-options="{'widget': 'monetary', 'display_currency': session.currency_id}"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-if="payment['declared'] is not None" t-esc="payment['declared']" t-options="{'widget': 'monetary', 'display_currency': session.currency_id}"/>
+                                            <span t-else="">—</span>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="not row['payments']">
+                                        <td colspan="3">No payments recorded for this session.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

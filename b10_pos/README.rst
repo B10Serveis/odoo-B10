@@ -22,7 +22,8 @@ Batista10 - POS
 
 |badge1| |badge2| |badge3| |badge4| 
 
-Modifica product.product perque el POS vegi les existencies per Ubicació enlloc de per Magatzem.
+Personalitza la informació d'estoc que mostra el TPV per ubicació i incorpora
+un informe senzill de tancament de caixa per sessions.
 
 
 **Table of contents**
@@ -35,7 +36,17 @@ Usage
 
 Per fer servir el mòdul:
 
-#. 
+#. Obriu el menú **Punt de venda ‣ Informes ‣ POS Closing Report**.
+#. Seleccioneu el punt de venda i les dates inicial i final, i premeu **Imprimir**.
+#. L'informe inclou les sessions tancades dins del període segons la data de
+   tancament. Per a cada sessió mostra el número, les dates d'obertura i
+   tancament i el punt de venda.
+#. El detall agrupa els imports venuts per forma de pagament i mostra l'import
+   declarat quan Odoo en té un de registrat. «—» indica que no hi ha cap
+   recompte declarat desat per a aquella forma de pagament.
+
+Per a l'efectiu, l'import declarat correspon al recompte final del calaix i
+pot incloure el fons inicial i els moviments d'entrada o sortida d'efectiu.
 
 Known issues / Roadmap
 ======================
@@ -60,6 +71,11 @@ Changelog
 
 * [FIX] Substituida la classe deprecated `table-condensed` per `table-sm` de Bootstrap 4 en:
   - plantilla `views/pos_closing_report.xml`
+
+17.0.1.1.2 (2026-11-03)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [REF] Refet l'informe de tancament de caixa per seleccionar les sessions segons la data de tancament i mostrar els imports venuts i declarats per forma de pagament.
 
 Bug Tracker
 ===========

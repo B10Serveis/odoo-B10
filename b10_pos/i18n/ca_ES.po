@@ -104,7 +104,7 @@ msgstr "Última modificació el"
 #. module: b10_pos
 #: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
 msgid "POS CLOSING REPORT"
-msgstr "INFORME DE TANCAMENT DE TPV"
+msgstr "INFORME DE TANCAMENT DE CAIXA"
 
 #. module: b10_pos
 #: model:ir.actions.report,name:b10_pos.action_pos_closing_report
@@ -167,3 +167,38 @@ msgstr "Estat"
 #: model:ir.model,name:b10_pos.model_pos_closing_wizard
 msgid "Wizard POS Closing Report"
 msgstr "Assistent Informe de tancament de TPV"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Period:"
+msgstr "Període:"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Opening Date"
+msgstr "Data d'obertura"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Closing Date"
+msgstr "Data de tancament"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Payment Method"
+msgstr "Forma de pagament"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Sold"
+msgstr "Venut"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "No closed sessions found for the selected period."
+msgstr "No s'han trobat sessions tancades en el període seleccionat."
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "No payments recorded for this session."
+msgstr "No hi ha pagaments registrats en aquesta sessió."

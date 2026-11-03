@@ -26,7 +26,8 @@ class PosClosingWizard(models.TransientModel):
         data = {
             'date_start': self.start_date,
             'date_stop':  self.end_date,
-            'session_id': self.pos_session_id.id,
+            'config_id': self.pos_session_id.id,
         }
-        return self.env.ref('b10_pos.action_pos_closing_report') \
-                   .report_action(self, data=data)
+        return self.env.ref('b10_pos.action_pos_closing_report').report_action(
+            self.pos_session_id, data=data
+        )
