@@ -1,3 +1,5 @@
+from datetime import date
+
 from odoo import api, models, fields
 from itertools import groupby
 from operator import itemgetter
