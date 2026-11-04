@@ -15,3 +15,7 @@
 17.0.1.1.2 (2026-11-03)
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [REF] Refet l'informe de tancament de caixa per seleccionar les sessions segons la data de tancament i mostrar els imports venuts i declarats per forma de pagament.
+
+17.0.1.1.3 (2026-11-04)
+~~~~~~~~~~~~~~~~~~~~~~~
+* [IMP] Millora la presentació de l'informe de tancament de TPV i adapta-la al format de l'informe anterior.
