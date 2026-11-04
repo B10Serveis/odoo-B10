@@ -104,7 +104,7 @@ msgstr "Última actualización el"
 #. module: b10_pos
 #: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
 msgid "POS CLOSING REPORT"
-msgstr "INFORME DE CIERRE DE CAJA"
+msgstr "INFORME DE CIERRE DE TPV"
 
 #. module: b10_pos
 #: model:ir.actions.report,name:b10_pos.action_pos_closing_report
