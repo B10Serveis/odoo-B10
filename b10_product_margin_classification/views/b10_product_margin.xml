@@ -21,16 +21,19 @@
 
                     <!-- Primera linia: Preu de venda -->
                     <field name="list_price"
+                        string="Sales Price"
                         widget="monetary"
                         options="{'currency_field': 'currency_id', 'field_digits': True}"
                         on_change="1" />
 
                     <!-- Segona linia: Impostos -->
                     <field name="tax_string"
+                        string="Tax information"
                         field_id="tax_string_0"/>
 
                     <!-- Tercera linia: Classificació de marge -->
                     <field name="margin_classification_id"
+                        string="Margin Classification"
                         invisible="product_variant_count &gt; 1"
                         can_create="True"
                         can_write="True"
@@ -41,20 +44,21 @@
                         invisible="margin_state == 'correct' or product_variant_count &gt; 1"/>
                     <div invisible="margin_state == 'correct' or product_variant_count &gt; 1">
                         <field name="theoretical_price"
+                            string="Theoretical Price"
                             class="oe_inline"
                             field_id="theoretical_price_0"/>
                         <button name="use_theoretical_price"
-                            string="⇒ Incrementar el Precio"
+                            string="⇒ Increase price"
                             type="object"
                             class="oe_link"
                             invisible="margin_state != 'too_cheap'"
-                            help="Incrementar el Precio de Venta hasta el Precio Teórico"/>
+                            help="Set the sales price to the theoretical price."/>
                         <button name="use_theoretical_price"
-                            string="⇒ Decrementar el Precio"
+                            string="⇒ Decrease price"
                             type="object"
                             class="oe_link"
                             invisible="margin_state != 'too_expensive'"
-                            help="Decrementar el Precio de Venta hasta el Precio Teórico"/>
+                            help="Set the sales price to the theoretical price."/>
                     </div>
 
                     <!-- Camp invisible però necessari -->
