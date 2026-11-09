@@ -72,6 +72,12 @@ Changelog
 
 * [FIX] Descripcions més entenedores en la pantalla de configuració.
 
+17.0.1.0.2 (2026-11-09)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Valida la companyia del producte directament contra l’empresa destí en crear la comanda de compra intercompany.
+* [FIX] Actualitza la descripció del mòdul i corregeix la llista de passos de configuració.
+
 Bug Tracker
 ===========
 
