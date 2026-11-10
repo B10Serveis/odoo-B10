@@ -45,7 +45,7 @@ Per a permetre que la creació d’una comanda de venda a la companyia A cree un
 #. Escollir la companyia actual al menú superior d’Odoo (a la dreta, junt al nom d’usuari).
 #. Anar al menú *Configuració > Configuració General*.
 #. Sota la secció *Empreses*, apartat interempresa (*Inter Company*), sota *Venda / Compra* marcar l’opció primera, que habilita aquesta funció.
-#. El selector següent vos permetrà escollir un usuari que apareixerà com a creador d’aquestes comandes de compra. Si no n’escolliu cap, s’emprarà l’usuari que ha creat la comanda de venda. En qualsevol cas, caldrà que l’usuari emprat tinga permisos de creació de compres en aquesta companyia.
+#. El selector següent permet escollir l’usuari que crearà aquestes comandes de compra. És obligatori seleccionar-ne un quan s’activa aquesta funció, i ha de tindre permisos de creació de compres a la companyia B.
 #. Si marqueu l’opció de validació automàtica, quan valideu la comanda de venda a la companyia A amb la companyia B com a client, la comanda de compra es validarà automàticament a la companyia B.
 
 Caldrà repetir aquestes passes per a cada companyia on vulgueu admetre la creació d’aquest tipus de comandes de compra.
@@ -56,6 +56,7 @@ Known issues / Roadmap
 ======================
 
 * **Sync de quantitat/preu/impostos**: no hi ha sincronització posterior de quantitat/preu/impostos entre SO i PO. Si es canvia la quantitat o el preu a la SO, no s'actualitza al PO.
+* **Fusió de línies de factura**: no s'ha provat la compatibilitat amb l'addon OCA `account_invoice_merge` ni amb altres personalitzacions que fusionen línies de factura. En aquests casos, no es garanteix la vinculació entre la factura de proveïdor i les línies de comanda de compra. La creació de comandes de compra a partir de comandes de venda no depèn d'aquesta funcionalitat.
 
 Changelog
 =========
