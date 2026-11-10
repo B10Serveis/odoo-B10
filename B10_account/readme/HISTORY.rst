@@ -1,3 +1,8 @@
+16.0.1.4.0 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Balanç i pèrdues i guanys abreujats amb agrupació de comptes a tres dígits, adaptats de la versió 17.0.
+
 15.0.1.0.0 (2025-02-13)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
