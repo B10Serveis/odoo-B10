@@ -4,9 +4,11 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.10.0",
+    "version": "18.0.1.11.0",
     "depends": [
         "account",
+        "mis_builder",  # Motor dels informes MIS
+        "l10n_es_mis_report",  # Plantilles i estils PGCE
         "b10_base",
         "b10_mail",
         "l10n_es_partner",
@@ -29,5 +31,8 @@
         "views/invoice_report_pivot.xml",
         "data/account.payment.method.csv",
         "views/partner_form_inherit.xml",
+        "data/mis_report_styles.xml",
+        "data/mis_report_balance_abreviated_3digits.xml",
+        "data/mis_report_pyg_abreviated_3digits.xml",
     ],
 }

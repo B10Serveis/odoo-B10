@@ -1,3 +1,10 @@
+18.0.1.11.0 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Migració dels informes MIS de balanç abreujat i pèrdues i guanys abreujat amb comptes agrupats per 3 dígits des de la versió 17.
+* [ADD] Dependència de ``l10n_es_mis_report`` per carregar els estils PGCE i MIS Builder.
+* [ADD] Traducció al català dels noms de les plantilles MIS i de totes les línies dels informes de 3 dígits.
+
 18.0.1.0.0 (2025-08-04)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
