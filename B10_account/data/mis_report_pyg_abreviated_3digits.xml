@@ -1,0 +1,1745 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="mis_report_b10_pyg_abreviado_3digits" model="mis.report">
+        <field name="name">Pérdidas y ganancias abreviado (PGCE 2008) - cuentas agrupadas por 3 dígitos</field>
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_base" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10000</field>
+        <field name="name">es40100</field>
+        <field name="description">1. Importe neto de la cifra de negocios</field>
+        <field name="expression">-balp[700%,701%,702%,703%,704%,705%,706%,708%,709%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_700" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10001</field>
+        <field name="name">b10_es40100_g700</field>
+        <field name="description">700 - Ventas de mercaderías</field>
+        <field name="expression">(-balp[700%] if -balp[700%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_701" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10002</field>
+        <field name="name">b10_es40100_g701</field>
+        <field name="description">701 - Ventas de productos terminados</field>
+        <field name="expression">(-balp[701%] if -balp[701%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_702" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10003</field>
+        <field name="name">b10_es40100_g702</field>
+        <field name="description">702 - Ventas de productos semiterminados</field>
+        <field name="expression">(-balp[702%] if -balp[702%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_703" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10004</field>
+        <field name="name">b10_es40100_g703</field>
+        <field name="description">703 - Ventas de subproductos y residuos</field>
+        <field name="expression">(-balp[703%] if -balp[703%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_704" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10005</field>
+        <field name="name">b10_es40100_g704</field>
+        <field name="description">704 - Ventas de envases y embalajes</field>
+        <field name="expression">(-balp[704%] if -balp[704%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_705" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10006</field>
+        <field name="name">b10_es40100_g705</field>
+        <field name="description">705 - Prestaciones de servicios</field>
+        <field name="expression">(-balp[705%] if -balp[705%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_706" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10007</field>
+        <field name="name">b10_es40100_g706</field>
+        <field name="description">706 - Descuentos sobre ventas por pronto pago</field>
+        <field name="expression">(-balp[706%] if -balp[706%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_708" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10008</field>
+        <field name="name">b10_es40100_g708</field>
+        <field name="description">708 - Devoluciones de ventas y operaciones similares</field>
+        <field name="expression">(-balp[708%] if -balp[708%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40100_group_709" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">10009</field>
+        <field name="name">b10_es40100_g709</field>
+        <field name="description">709 - «Rappels» sobre ventas</field>
+        <field name="expression">(-balp[709%] if -balp[709%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20000</field>
+        <field name="name">es40200</field>
+        <field name="description">2. Variación de existencias de productos terminados y en curso de fabricación</field>
+        <field name="expression">-balp[6930%,71%,7930%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200_group_693" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20001</field>
+        <field name="name">b10_es40200_g693</field>
+        <field name="description">693 - Pérdidas por deterioro de existencias</field>
+        <field name="expression">(-balp[6930%] if -balp[6930%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200_group_710" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20002</field>
+        <field name="name">b10_es40200_g710</field>
+        <field name="description">710 - Variación de existencias de productos en curso</field>
+        <field name="expression">(-balp[710%] if -balp[710%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200_group_711" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20003</field>
+        <field name="name">b10_es40200_g711</field>
+        <field name="description">711 - Variación de existencias de productos semiterminados</field>
+        <field name="expression">(-balp[711%] if -balp[711%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200_group_712" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20004</field>
+        <field name="name">b10_es40200_g712</field>
+        <field name="description">712 - Variación de existencias de productos terminados</field>
+        <field name="expression">(-balp[712%] if -balp[712%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200_group_713" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20005</field>
+        <field name="name">b10_es40200_g713</field>
+        <field name="description">713 - Variación de existencias de subproductos, residuos y materiales recuperados</field>
+        <field name="expression">(-balp[713%] if -balp[713%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40200_group_793" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">20006</field>
+        <field name="name">b10_es40200_g793</field>
+        <field name="description">793 - Reversión del deterioro de existencias</field>
+        <field name="expression">(-balp[7930%] if -balp[7930%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40300" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">30000</field>
+        <field name="name">es40300</field>
+        <field name="description">3. Trabajos realizados por la empresa para su activo</field>
+        <field name="expression">-balp[73%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40300_group_730" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">30001</field>
+        <field name="name">b10_es40300_g730</field>
+        <field name="description">730 - Trabajos realizados para el inmovilizado intangible</field>
+        <field name="expression">(-balp[730%] if -balp[730%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40300_group_731" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">30002</field>
+        <field name="name">b10_es40300_g731</field>
+        <field name="description">731 - Trabajos realizados para el inmovilizado material</field>
+        <field name="expression">(-balp[731%] if -balp[731%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40300_group_732" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">30003</field>
+        <field name="name">b10_es40300_g732</field>
+        <field name="description">732 - Trabajos realizados en inversiones inmobiliarias</field>
+        <field name="expression">(-balp[732%] if -balp[732%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40300_group_733" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">30004</field>
+        <field name="name">b10_es40300_g733</field>
+        <field name="description">733 - Trabajos realizados para el inmovilizado material en curso</field>
+        <field name="expression">(-balp[733%] if -balp[733%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40000</field>
+        <field name="name">es40400</field>
+        <field name="description">4. Aprovisionamientos</field>
+        <field name="expression">-balp[600%,601%,602%,606%,607%,608%,609%,61%,6931%,6932%,6933%,7931%,7932%,7933%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_600" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40001</field>
+        <field name="name">b10_es40400_g600</field>
+        <field name="description">600 - Compras de mercaderías</field>
+        <field name="expression">(-balp[600%] if -balp[600%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_601" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40002</field>
+        <field name="name">b10_es40400_g601</field>
+        <field name="description">601 - Compras de materias primas</field>
+        <field name="expression">(-balp[601%] if -balp[601%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_602" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40003</field>
+        <field name="name">b10_es40400_g602</field>
+        <field name="description">602 - Compras de otros aprovisionamientos</field>
+        <field name="expression">(-balp[602%] if -balp[602%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_606" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40004</field>
+        <field name="name">b10_es40400_g606</field>
+        <field name="description">606 - Descuentos sobre compras por pronto pago</field>
+        <field name="expression">(-balp[606%] if -balp[606%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_607" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40005</field>
+        <field name="name">b10_es40400_g607</field>
+        <field name="description">607 - Trabajos realizados por otras empresas</field>
+        <field name="expression">(-balp[607%] if -balp[607%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_608" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40006</field>
+        <field name="name">b10_es40400_g608</field>
+        <field name="description">608 - Devoluciones de compras y operaciones similares</field>
+        <field name="expression">(-balp[608%] if -balp[608%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_609" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40007</field>
+        <field name="name">b10_es40400_g609</field>
+        <field name="description">609 - «Rappels» por compras</field>
+        <field name="expression">(-balp[609%] if -balp[609%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_610" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40008</field>
+        <field name="name">b10_es40400_g610</field>
+        <field name="description">610 - Variación de existencias de mercaderías</field>
+        <field name="expression">(-balp[610%] if -balp[610%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_611" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40009</field>
+        <field name="name">b10_es40400_g611</field>
+        <field name="description">611 - Variación de existencias de materias primas</field>
+        <field name="expression">(-balp[611%] if -balp[611%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_612" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40010</field>
+        <field name="name">b10_es40400_g612</field>
+        <field name="description">612 - Variación de existencias de otros aprovisionamientos</field>
+        <field name="expression">(-balp[612%] if -balp[612%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_693" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40011</field>
+        <field name="name">b10_es40400_g693</field>
+        <field name="description">693 - Pérdidas por deterioro de existencias</field>
+        <field name="expression">(-balp[6931%] -balp[6932%] -balp[6933%] if -balp[6931%] -balp[6932%] -balp[6933%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40400_group_793" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">40012</field>
+        <field name="name">b10_es40400_g793</field>
+        <field name="description">793 - Reversión del deterioro de existencias</field>
+        <field name="expression">(-balp[7931%] -balp[7932%] -balp[7933%] if -balp[7931%] -balp[7932%] -balp[7933%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50000</field>
+        <field name="name">es40500</field>
+        <field name="description">5. Otros ingresos de explotación</field>
+        <field name="expression">-balp[740%,747%,75%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_740" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50001</field>
+        <field name="name">b10_es40500_g740</field>
+        <field name="description">740 - Subvenciones, donaciones y legados a la explotación</field>
+        <field name="expression">(-balp[740%] if -balp[740%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_747" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50002</field>
+        <field name="name">b10_es40500_g747</field>
+        <field name="description">747 - Otras subvenciones, donaciones y legados transferidos al resultado del ejercicio</field>
+        <field name="expression">(-balp[747%] if -balp[747%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_751" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50003</field>
+        <field name="name">b10_es40500_g751</field>
+        <field name="description">751 - Resultados de operaciones en común</field>
+        <field name="expression">(-balp[751%] if -balp[751%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_752" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50004</field>
+        <field name="name">b10_es40500_g752</field>
+        <field name="description">752 - Ingresos por arrendamientos</field>
+        <field name="expression">(-balp[752%] if -balp[752%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_753" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50005</field>
+        <field name="name">b10_es40500_g753</field>
+        <field name="description">753 - Ingresos de propiedad industrial cedida en explotación</field>
+        <field name="expression">(-balp[753%] if -balp[753%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_754" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50006</field>
+        <field name="name">b10_es40500_g754</field>
+        <field name="description">754 - Ingresos por comisiones</field>
+        <field name="expression">(-balp[754%] if -balp[754%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_755" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50007</field>
+        <field name="name">b10_es40500_g755</field>
+        <field name="description">755 - Ingresos por servicios al personal</field>
+        <field name="expression">(-balp[755%] if -balp[755%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40500_group_759" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">50008</field>
+        <field name="name">b10_es40500_g759</field>
+        <field name="description">759 - Ingresos por servicios diversos</field>
+        <field name="expression">(-balp[759%] if -balp[759%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60000</field>
+        <field name="name">es40600</field>
+        <field name="description">6. Gastos de personal</field>
+        <field name="expression">-balp[64%,7950%,7957%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_640" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60001</field>
+        <field name="name">b10_es40600_g640</field>
+        <field name="description">640 - Sueldos y salarios</field>
+        <field name="expression">(-balp[640%] if -balp[640%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_641" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60002</field>
+        <field name="name">b10_es40600_g641</field>
+        <field name="description">641 - Indemnizaciones</field>
+        <field name="expression">(-balp[641%] if -balp[641%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_642" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60003</field>
+        <field name="name">b10_es40600_g642</field>
+        <field name="description">642 - Seguridad Social a cargo de la empresa</field>
+        <field name="expression">(-balp[642%] if -balp[642%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_643" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60004</field>
+        <field name="name">b10_es40600_g643</field>
+        <field name="description">643 - Retribuciones a largo plazo mediante sistemas de aportación definida</field>
+        <field name="expression">(-balp[643%] if -balp[643%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_644" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60005</field>
+        <field name="name">b10_es40600_g644</field>
+        <field name="description">644 - Retribuciones a largo plazo mediante sistemas de prestación definida</field>
+        <field name="expression">(-balp[644%] if -balp[644%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_645" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60006</field>
+        <field name="name">b10_es40600_g645</field>
+        <field name="description">645 - Retribuciones al personal mediante instrumentos de patrimonio</field>
+        <field name="expression">(-balp[645%] if -balp[645%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_649" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60007</field>
+        <field name="name">b10_es40600_g649</field>
+        <field name="description">649 - Otros gastos sociales</field>
+        <field name="expression">(-balp[649%] if -balp[649%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40600_group_795" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">60008</field>
+        <field name="name">b10_es40600_g795</field>
+        <field name="description">795 - Exceso de provisiones</field>
+        <field name="expression">(-balp[7950%] -balp[7957%] if -balp[7950%] -balp[7957%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70000</field>
+        <field name="name">es40700</field>
+        <field name="description">7. Otros gastos de explotación</field>
+        <field name="expression">-balp[62%,631%,634%,636%,639%,65%,694%,695%,794%,7954%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_620" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70001</field>
+        <field name="name">b10_es40700_g620</field>
+        <field name="description">620 - Gastos en investigación y desarrollo del ejercicio</field>
+        <field name="expression">(-balp[620%] if -balp[620%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_621" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70002</field>
+        <field name="name">b10_es40700_g621</field>
+        <field name="description">621 - Arrendamientos y cánones</field>
+        <field name="expression">(-balp[621%] if -balp[621%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_622" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70003</field>
+        <field name="name">b10_es40700_g622</field>
+        <field name="description">622 - Reparaciones y conservación</field>
+        <field name="expression">(-balp[622%] if -balp[622%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_623" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70004</field>
+        <field name="name">b10_es40700_g623</field>
+        <field name="description">623 - Servicios de profesionales independientes</field>
+        <field name="expression">(-balp[623%] if -balp[623%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_624" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70005</field>
+        <field name="name">b10_es40700_g624</field>
+        <field name="description">624 - Transportes</field>
+        <field name="expression">(-balp[624%] if -balp[624%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_625" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70006</field>
+        <field name="name">b10_es40700_g625</field>
+        <field name="description">625 - Primas de seguros</field>
+        <field name="expression">(-balp[625%] if -balp[625%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_626" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70007</field>
+        <field name="name">b10_es40700_g626</field>
+        <field name="description">626 - Servicios bancarios y similares</field>
+        <field name="expression">(-balp[626%] if -balp[626%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_627" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70008</field>
+        <field name="name">b10_es40700_g627</field>
+        <field name="description">627 - Publicidad, propaganda y relaciones públicas</field>
+        <field name="expression">(-balp[627%] if -balp[627%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_628" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70009</field>
+        <field name="name">b10_es40700_g628</field>
+        <field name="description">628 - Suministros</field>
+        <field name="expression">(-balp[628%] if -balp[628%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_629" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70010</field>
+        <field name="name">b10_es40700_g629</field>
+        <field name="description">629 - Otros servicios</field>
+        <field name="expression">(-balp[629%] if -balp[629%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_631" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70011</field>
+        <field name="name">b10_es40700_g631</field>
+        <field name="description">631 - Otros tributos</field>
+        <field name="expression">(-balp[631%] if -balp[631%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_634" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70012</field>
+        <field name="name">b10_es40700_g634</field>
+        <field name="description">634 - Ajustes negativos en la imposición indirecta</field>
+        <field name="expression">(-balp[634%] if -balp[634%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_636" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70013</field>
+        <field name="name">b10_es40700_g636</field>
+        <field name="description">636 - Devolución de impuestos</field>
+        <field name="expression">(-balp[636%] if -balp[636%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_639" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70014</field>
+        <field name="name">b10_es40700_g639</field>
+        <field name="description">639 - Ajustes positivos en la imposición indirecta</field>
+        <field name="expression">(-balp[639%] if -balp[639%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_650" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70015</field>
+        <field name="name">b10_es40700_g650</field>
+        <field name="description">650 - Pérdidas de créditos comerciales incobrables</field>
+        <field name="expression">(-balp[650%] if -balp[650%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_651" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70016</field>
+        <field name="name">b10_es40700_g651</field>
+        <field name="description">651 - Resultados de operaciones en común</field>
+        <field name="expression">(-balp[651%] if -balp[651%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_653" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70017</field>
+        <field name="name">b10_es40700_g653</field>
+        <field name="description">653 - Compensación de gastos por prestaciones de colaboración</field>
+        <field name="expression">(-balp[653%] if -balp[653%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_654" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70018</field>
+        <field name="name">b10_es40700_g654</field>
+        <field name="description">654 - Reembolsos de gastos al órgano de gobierno</field>
+        <field name="expression">(-balp[654%] if -balp[654%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_655" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70019</field>
+        <field name="name">b10_es40700_g655</field>
+        <field name="description">655 - Pérdidas de créditos incobrables derivados de la actividad</field>
+        <field name="expression">(-balp[655%] if -balp[655%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_656" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70020</field>
+        <field name="name">b10_es40700_g656</field>
+        <field name="description">656 - Resultados de operaciones en común</field>
+        <field name="expression">(-balp[656%] if -balp[656%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_658" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70021</field>
+        <field name="name">b10_es40700_g658</field>
+        <field name="description">658 - Reintegro de subvenciones, donaciones y legados recibidos, afectos a la actividad propia de la entidad</field>
+        <field name="expression">(-balp[658%] if -balp[658%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_659" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70022</field>
+        <field name="name">b10_es40700_g659</field>
+        <field name="description">659 - Otras pérdidas en gestión corriente</field>
+        <field name="expression">(-balp[659%] if -balp[659%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_694" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70023</field>
+        <field name="name">b10_es40700_g694</field>
+        <field name="description">694 - Pérdidas por deterioro de créditos por operaciones comerciales</field>
+        <field name="expression">(-balp[694%] if -balp[694%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_695" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70024</field>
+        <field name="name">b10_es40700_g695</field>
+        <field name="description">695 - Dotación a la provisión por operaciones comerciales</field>
+        <field name="expression">(-balp[695%] if -balp[695%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_794" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70025</field>
+        <field name="name">b10_es40700_g794</field>
+        <field name="description">794 - Reversión del deterioro de créditos por operaciones comerciales</field>
+        <field name="expression">(-balp[794%] if -balp[794%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40700_group_795" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">70026</field>
+        <field name="name">b10_es40700_g795</field>
+        <field name="description">795 - Exceso de provisiones</field>
+        <field name="expression">(-balp[7954%] if -balp[7954%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40800" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">80000</field>
+        <field name="name">es40800</field>
+        <field name="description">8. Amortización del inmovilizado</field>
+        <field name="expression">-balp[68%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40800_group_680" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">80001</field>
+        <field name="name">b10_es40800_g680</field>
+        <field name="description">680 - Amortización del inmovilizado intangible</field>
+        <field name="expression">(-balp[680%] if -balp[680%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40800_group_681" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">80002</field>
+        <field name="name">b10_es40800_g681</field>
+        <field name="description">681 - Amortización del inmovilizado material</field>
+        <field name="expression">(-balp[681%] if -balp[681%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40800_group_682" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">80003</field>
+        <field name="name">b10_es40800_g682</field>
+        <field name="description">682 - Amortización de las inversiones inmobiliarias</field>
+        <field name="expression">(-balp[682%] if -balp[682%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40900" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">90000</field>
+        <field name="name">es40900</field>
+        <field name="description">9. Imputación de subvenciones de inmovilizado no financiero y otras</field>
+        <field name="expression">-balp[7460%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_40900_group_746" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">90001</field>
+        <field name="name">b10_es40900_g746</field>
+        <field name="description">746 - Subvenciones, donaciones y legados de capital transferidos al resultado del ejercicio</field>
+        <field name="expression">(-balp[7460%] if -balp[7460%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41000" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">100000</field>
+        <field name="name">es41000</field>
+        <field name="description">10. Excesos de provisiones</field>
+        <field name="expression">-balp[7951%,7952%,7955%,7956%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41000_group_795" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">100001</field>
+        <field name="name">b10_es41000_g795</field>
+        <field name="description">795 - Exceso de provisiones</field>
+        <field name="expression">(-balp[7951%] -balp[7952%] -balp[7955%] -balp[7956%] if -balp[7951%] -balp[7952%] -balp[7955%] -balp[7956%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110000</field>
+        <field name="name">es41100</field>
+        <field name="description">11. Deterioro y resultado por enajenaciones del inmovilizado</field>
+        <field name="expression">-balp[670%,671%,672%,690%,691%,692%,770%,771%,772%,790%,791%,792%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_670" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110001</field>
+        <field name="name">b10_es41100_g670</field>
+        <field name="description">670 - Pérdidas procedentes del inmovilizado intangible</field>
+        <field name="expression">(-balp[670%] if -balp[670%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_671" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110002</field>
+        <field name="name">b10_es41100_g671</field>
+        <field name="description">671 - Pérdidas procedentes del inmovilizado material</field>
+        <field name="expression">(-balp[671%] if -balp[671%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_672" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110003</field>
+        <field name="name">b10_es41100_g672</field>
+        <field name="description">672 - Pérdidas procedentes de las inversiones inmobiliarias</field>
+        <field name="expression">(-balp[672%] if -balp[672%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_690" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110004</field>
+        <field name="name">b10_es41100_g690</field>
+        <field name="description">690 - Pérdidas por deterioro del inmovilizado intangible</field>
+        <field name="expression">(-balp[690%] if -balp[690%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_691" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110005</field>
+        <field name="name">b10_es41100_g691</field>
+        <field name="description">691 - Pérdidas por deterioro del inmovilizado material</field>
+        <field name="expression">(-balp[691%] if -balp[691%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_692" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110006</field>
+        <field name="name">b10_es41100_g692</field>
+        <field name="description">692 - Pérdidas por deterioro de las inversiones inmobiliarias</field>
+        <field name="expression">(-balp[692%] if -balp[692%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_770" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110007</field>
+        <field name="name">b10_es41100_g770</field>
+        <field name="description">770 - Beneficios procedentes del inmovilizado intangible</field>
+        <field name="expression">(-balp[770%] if -balp[770%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_771" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110008</field>
+        <field name="name">b10_es41100_g771</field>
+        <field name="description">771 - Beneficios procedentes del inmovilizado material</field>
+        <field name="expression">(-balp[771%] if -balp[771%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_772" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110009</field>
+        <field name="name">b10_es41100_g772</field>
+        <field name="description">772 - Beneficios procedentes de las inversiones inmobiliarias</field>
+        <field name="expression">(-balp[772%] if -balp[772%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_790" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110010</field>
+        <field name="name">b10_es41100_g790</field>
+        <field name="description">790 - Reversión del deterioro del inmovilizado intangible</field>
+        <field name="expression">(-balp[790%] if -balp[790%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_791" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110011</field>
+        <field name="name">b10_es41100_g791</field>
+        <field name="description">791 - Reversión del deterioro del inmovilizado material</field>
+        <field name="expression">(-balp[791%] if -balp[791%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41100_group_792" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">110012</field>
+        <field name="name">b10_es41100_g792</field>
+        <field name="description">792 - Reversión del deterioro de las inversiones inmobiliarias</field>
+        <field name="expression">(-balp[792%] if -balp[792%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41200" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">120000</field>
+        <field name="name">es41200</field>
+        <field name="description">12. Diferencia negativa de combinaciones de negocio</field>
+        <field name="expression">-balp[774%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41200_group_774" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">120001</field>
+        <field name="name">b10_es41200_g774</field>
+        <field name="description">774 - Diferencia negativa en combinaciones de negocios</field>
+        <field name="expression">(-balp[774%] if -balp[774%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41300" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">130000</field>
+        <field name="name">es41300</field>
+        <field name="description">13. Otros resultados</field>
+        <field name="expression">-balp[678%,778%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41300_group_678" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">130001</field>
+        <field name="name">b10_es41300_g678</field>
+        <field name="description">678 - Gastos excepcionales</field>
+        <field name="expression">(-balp[678%] if -balp[678%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41300_group_778" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">130002</field>
+        <field name="name">b10_es41300_g778</field>
+        <field name="description">778 - Ingresos excepcionales</field>
+        <field name="expression">(-balp[778%] if -balp[778%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_49100" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">140000</field>
+        <field name="name">es49100</field>
+        <field name="description">A) RESULTADO DE EXPLOTACIÓN (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13)</field>
+        <field name="expression">+es40100+es40200+es40300+es40400+es40500+es40600+es40700+es40800+es40900+es41000+es41100+es41200+es41300</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41400" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">150000</field>
+        <field name="name">es41400</field>
+        <field name="description">14. Ingresos financieros</field>
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+        <field name="expression">+es41430 +es41490</field>
+        <field name="auto_expand_accounts">False</field>
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41430" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">160000</field>
+        <field name="name">es41430</field>
+        <field name="description">a) Imputación de subvenciones, donaciones y legados de carácter financiero</field>
+        <field name="expression">-balp[7461%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41430_group_746" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">160001</field>
+        <field name="name">b10_es41430_g746</field>
+        <field name="description">746 - Subvenciones, donaciones y legados de capital transferidos al resultado del ejercicio</field>
+        <field name="expression">(-balp[7461%] if -balp[7461%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l5i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41490" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">170000</field>
+        <field name="name">es41490</field>
+        <field name="description">b) Otros ingresos financieros</field>
+        <field name="expression">-balp[760%,761%,762%,767%,769%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41490_group_760" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">170001</field>
+        <field name="name">b10_es41490_g760</field>
+        <field name="description">760 - Ingresos de participaciones en instrumentos de patrimonio</field>
+        <field name="expression">(-balp[760%] if -balp[760%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l5i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41490_group_761" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">170002</field>
+        <field name="name">b10_es41490_g761</field>
+        <field name="description">761 - Ingresos de valores representativos de deuda</field>
+        <field name="expression">(-balp[761%] if -balp[761%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l5i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41490_group_762" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">170003</field>
+        <field name="name">b10_es41490_g762</field>
+        <field name="description">762 - Ingresos de créditos</field>
+        <field name="expression">(-balp[762%] if -balp[762%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l5i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41490_group_767" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">170004</field>
+        <field name="name">b10_es41490_g767</field>
+        <field name="description">767 - Ingresos de activos afectos y de derechos de reembolso relativos a retribuciones a largo plazo</field>
+        <field name="expression">(-balp[767%] if -balp[767%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l5i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41490_group_769" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">170005</field>
+        <field name="name">b10_es41490_g769</field>
+        <field name="description">769 - Otros ingresos financieros</field>
+        <field name="expression">(-balp[769%] if -balp[769%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l5i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180000</field>
+        <field name="name">es41500</field>
+        <field name="description">15. Gastos financieros</field>
+        <field name="expression">-balp[660%,661%,662%,664%,665%,669%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500_group_660" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180001</field>
+        <field name="name">b10_es41500_g660</field>
+        <field name="description">660 - Gastos financieros por actualización de provisiones</field>
+        <field name="expression">(-balp[660%] if -balp[660%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500_group_661" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180002</field>
+        <field name="name">b10_es41500_g661</field>
+        <field name="description">661 - Intereses de obligaciones y bonos</field>
+        <field name="expression">(-balp[661%] if -balp[661%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500_group_662" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180003</field>
+        <field name="name">b10_es41500_g662</field>
+        <field name="description">662 - Intereses de deudas</field>
+        <field name="expression">(-balp[662%] if -balp[662%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500_group_664" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180004</field>
+        <field name="name">b10_es41500_g664</field>
+        <field name="description">664 - Gastos por dividendos de acciones o participaciones consideradas como pasivos financieros</field>
+        <field name="expression">(-balp[664%] if -balp[664%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500_group_665" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180005</field>
+        <field name="name">b10_es41500_g665</field>
+        <field name="description">665 - Intereses por descuento de efectos y operaciones de «factoring»</field>
+        <field name="expression">(-balp[665%] if -balp[665%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41500_group_669" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">180006</field>
+        <field name="name">b10_es41500_g669</field>
+        <field name="description">669 - Otros gastos financieros</field>
+        <field name="expression">(-balp[669%] if -balp[669%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41600" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">190000</field>
+        <field name="name">es41600</field>
+        <field name="description">16. Variación de valor razonable en instrumentos financieros</field>
+        <field name="expression">-balp[663%,763%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41600_group_663" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">190001</field>
+        <field name="name">b10_es41600_g663</field>
+        <field name="description">663 - Pérdidas por valoración de instrumentos financieros por su valor razonable</field>
+        <field name="expression">(-balp[663%] if -balp[663%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41600_group_763" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">190002</field>
+        <field name="name">b10_es41600_g763</field>
+        <field name="description">763 - Beneficios por valoración de instrumentos financieros por su valor razonable</field>
+        <field name="expression">(-balp[763%] if -balp[763%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41700" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">200000</field>
+        <field name="name">es41700</field>
+        <field name="description">17. Diferencias de cambio</field>
+        <field name="expression">-balp[668%,768%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41700_group_668" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">200001</field>
+        <field name="name">b10_es41700_g668</field>
+        <field name="description">668 - Diferencias negativas de cambio</field>
+        <field name="expression">(-balp[668%] if -balp[668%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41700_group_768" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">200002</field>
+        <field name="name">b10_es41700_g768</field>
+        <field name="description">768 - Diferencias positivas de cambio</field>
+        <field name="expression">(-balp[768%] if -balp[768%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210000</field>
+        <field name="name">es41800</field>
+        <field name="description">18. Deterioro y resultado por enajenaciones de instrumentos financieros</field>
+        <field name="expression">-balp[666%,667%,673%,675%,696%,697%,698%,699%,766%,773%,775%,796%,797%,798%,799%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_666" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210001</field>
+        <field name="name">b10_es41800_g666</field>
+        <field name="description">666 - Pérdidas en participaciones y valores representativos de deuda</field>
+        <field name="expression">(-balp[666%] if -balp[666%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_667" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210002</field>
+        <field name="name">b10_es41800_g667</field>
+        <field name="description">667 - Pérdidas de créditos no comerciales</field>
+        <field name="expression">(-balp[667%] if -balp[667%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_673" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210003</field>
+        <field name="name">b10_es41800_g673</field>
+        <field name="description">673 - Pérdidas procedentes de participaciones a largo plazo en partes vinculadas</field>
+        <field name="expression">(-balp[673%] if -balp[673%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_675" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210004</field>
+        <field name="name">b10_es41800_g675</field>
+        <field name="description">675 - Pérdidas por operaciones con obligaciones propias</field>
+        <field name="expression">(-balp[675%] if -balp[675%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_696" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210005</field>
+        <field name="name">b10_es41800_g696</field>
+        <field name="description">696 - Pérdidas por deterioro de participaciones y valores representativos de deuda a largo plazo</field>
+        <field name="expression">(-balp[696%] if -balp[696%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_697" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210006</field>
+        <field name="name">b10_es41800_g697</field>
+        <field name="description">697 - Pérdidas por deterioro de créditos a largo plazo</field>
+        <field name="expression">(-balp[697%] if -balp[697%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_698" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210007</field>
+        <field name="name">b10_es41800_g698</field>
+        <field name="description">698 - Pérdidas por deterioro de participaciones y valores representativos de deuda a corto plazo</field>
+        <field name="expression">(-balp[698%] if -balp[698%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_699" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210008</field>
+        <field name="name">b10_es41800_g699</field>
+        <field name="description">699 - Pérdidas por deterioro de créditos a corto plazo</field>
+        <field name="expression">(-balp[699%] if -balp[699%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_766" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210009</field>
+        <field name="name">b10_es41800_g766</field>
+        <field name="description">766 - Beneficios en participaciones y valores representativos de deuda</field>
+        <field name="expression">(-balp[766%] if -balp[766%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_773" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210010</field>
+        <field name="name">b10_es41800_g773</field>
+        <field name="description">773 - Beneficios procedentes de participaciones a largo plazo en partes vinculadas</field>
+        <field name="expression">(-balp[773%] if -balp[773%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_775" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210011</field>
+        <field name="name">b10_es41800_g775</field>
+        <field name="description">775 - Beneficios por operaciones con obligaciones propias</field>
+        <field name="expression">(-balp[775%] if -balp[775%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_796" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210012</field>
+        <field name="name">b10_es41800_g796</field>
+        <field name="description">796 - Reversión del deterioro de participaciones y valores representativos de deuda a largo plazo</field>
+        <field name="expression">(-balp[796%] if -balp[796%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_797" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210013</field>
+        <field name="name">b10_es41800_g797</field>
+        <field name="description">797 - Reversión del deterioro de créditos a largo plazo</field>
+        <field name="expression">(-balp[797%] if -balp[797%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_798" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210014</field>
+        <field name="name">b10_es41800_g798</field>
+        <field name="description">798 - Reversión del deterioro de participaciones y valores representativos de deuda a corto plazo</field>
+        <field name="expression">(-balp[798%] if -balp[798%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41800_group_799" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">210015</field>
+        <field name="name">b10_es41800_g799</field>
+        <field name="description">799 - Reversión del deterioro de créditos a corto plazo</field>
+        <field name="expression">(-balp[799%] if -balp[799%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_42100" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">220000</field>
+        <field name="name">es42100</field>
+        <field name="description">19. Otros ingresos y gastos de carácter financiero</field>
+        <field name="expression">+es42110+es42120+es42130</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_42110" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">230000</field>
+        <field name="name">es42110</field>
+        <field name="description">a) Incorporación al activo de gastos financieros</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_42120" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">240000</field>
+        <field name="name">es42120</field>
+        <field name="description">b) Ingresos financieros derivados de convenios de acreedores</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_42130" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">250000</field>
+        <field name="name">es42130</field>
+        <field name="description">c) Resto de ingresos y gastos</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l5" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_49200" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">260000</field>
+        <field name="name">es49200</field>
+        <field name="description">B) RESULTADO FINANCIERO (14 + 15 + 16 + 17 + 18 + 19)</field>
+        <field name="expression">+es41400+es41500+es41600+es41700+es41800+es42100</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_49300" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">270000</field>
+        <field name="name">es49300</field>
+        <field name="description">C) RESULTADO ANTES DE IMPUESTOS (A + B)</field>
+        <field name="expression">+es49100+es49200</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41900" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">280000</field>
+        <field name="name">es41900</field>
+        <field name="description">20. Impuestos sobre beneficios</field>
+        <field name="expression">-balp[6300%,6301%,633%,638%]</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l3" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41900_group_630" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">280001</field>
+        <field name="name">b10_es41900_g630</field>
+        <field name="description">630 - Impuesto sobre beneficios</field>
+        <field name="expression">(-balp[6300%] -balp[6301%] if -balp[6300%] -balp[6301%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41900_group_633" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">280002</field>
+        <field name="name">b10_es41900_g633</field>
+        <field name="description">633 - Ajustes negativos en la imposición sobre beneficios</field>
+        <field name="expression">(-balp[633%] if -balp[633%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_41900_group_638" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">280003</field>
+        <field name="name">b10_es41900_g638</field>
+        <field name="description">638 - Ajustes positivos en la imposición sobre beneficios</field>
+        <field name="expression">(-balp[638%] if -balp[638%] else AccountingNone)</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="style_id" ref="mis_report_style_b10_pgce_detail_l3i" />
+    </record>
+    <record id="mis_report_kpi_b10_pyg_abreviado_49500" model="mis.report.kpi">
+        <field name="report_id" ref="mis_report_b10_pyg_abreviado_3digits" />
+        <field name="type">num</field>
+        <field name="compare_method">pct</field>
+        <field name="sequence">290000</field>
+        <field name="name">es49500</field>
+        <field name="description">D) RESULTADO DEL EJERCICIO (C + 20)</field>
+        <field name="expression">+es49300+es41900</field>
+        <field name="auto_expand_accounts">False</field>
+        <field name="auto_expand_accounts_style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1i" />
+        <field name="style_id" ref="l10n_es_mis_report.mis_report_style_l10n_es_l1" />
+    </record>
+</odoo>

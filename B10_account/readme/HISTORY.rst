@@ -1,3 +1,18 @@
+17.0.1.5.0 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Plantilla MIS de pèrdues i guanys abreujat PGCE amb comptes agrupats per prefixos de tres dígits.
+
+17.0.1.4.1 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Amaga els grups de tres dígits amb import zero i els sagna sota la partida pare.
+
+17.0.1.4.0 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Plantilla MIS de balanç abreujat PGCE amb comptes agrupats per prefixos de tres dígits.
+
 17.0.1.0.0 (2025-03-03)
 ~~~~~~~~~~~~~~~~~~~~~~~
 

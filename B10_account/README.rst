@@ -34,10 +34,33 @@ Usage
 
 Per fer servir el mòdul:
 
-#. 
+#. Aneu a **Comptabilitat > Informes > MIS > Informes MIS** i creeu un informe.
+#. Trieu la plantilla **Balance abreviado (PGCE 2008) - cuentas agrupadas por 3 dígitos**
+   per al balanç o **Pérdidas y ganancias abreviado (PGCE 2008) - cuentas agrupadas
+   por 3 dígitos** per al compte de pèrdues i guanys.
+#. Les línies oficials de cada estat financer es mantenen; els grups de tres
+   dígits apareixen sagnats sota la partida corresponent i els grups amb import
+   zero s'amaguen.
+#. La plantilla està basada en el quadre de comptes espanyol estàndard. Si feu
+   servir prefixos personalitzats, comproveu que estiguin inclosos a la plantilla.
 
 Changelog
 =========
+
+17.0.1.5.0 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Plantilla MIS de pèrdues i guanys abreujat PGCE amb comptes agrupats per prefixos de tres dígits.
+
+17.0.1.4.1 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Amaga els grups de tres dígits amb import zero i els sagna sota la partida pare.
+
+17.0.1.4.0 (2026-11-10)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Plantilla MIS de balanç abreujat PGCE amb comptes agrupats per prefixos de tres dígits.
 
 17.0.1.0.0 (2025-03-03)
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,10 +123,13 @@ Contributors
 
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 * Ivan Vilata i Balaguer <ivan@batista10.cat> (https://www.batista10.cat)
+* Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
 
 
 Other credits
 ~~~~~~~~~~~~~
+
+The MIS balance and profit-and-loss templates are derived from ``l10n_es_mis_report`` in OCA/l10n-spain 17.0 (AGPL-3).
 
 
 The development of this module has been financially supported by:
