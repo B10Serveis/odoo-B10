@@ -28,21 +28,9 @@ class SaleOrder(models.Model):
         for order in self:
             order.intercompany_purchase_order_id = ids_dict.get(order.id, False)
 
-    def _get_user_domain(self, dest_company):
-        self.ensure_one()
-        group_purchase_user = self.env.ref("purchase.group_purchase_user")
-        return [
-            ("id", "!=", 1),
-            ("company_id", "=", dest_company.id),
-            ("id", "in", group_purchase_user.users.ids),
-        ]
-
     def _check_intercompany_product(self, dest_company):
-        domain = self._get_user_domain(dest_company)
-        dest_user = self.env["res.users"].search(domain, limit=1)
-        if dest_user:
-            for sale_line in self.order_line:
-                sale_line._check_intercompany_product(dest_user, dest_company)
+        for sale_line in self.order_line:
+            sale_line._check_intercompany_product(dest_company)
 
     def action_confirm(self):
         """When confirming a SO, if the customer is another company in the system

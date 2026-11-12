@@ -24,25 +24,31 @@ Permet crear automàticament una comanda de compra (PO) a la companyia B a parti
 <li><a class="reference internal" href="#changelog" id="toc-entry-3">Changelog</a><ul>
 <li><a class="reference internal" href="#section-1" id="toc-entry-4">17.0.1.0.0 (2025-08-13)</a></li>
 <li><a class="reference internal" href="#section-2" id="toc-entry-5">17.0.1.0.1 (2025-12-09)</a></li>
+<li><a class="reference internal" href="#section-3" id="toc-entry-6">17.0.1.0.2 (2026-11-09)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bug-tracker" id="toc-entry-6">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="toc-entry-7">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="toc-entry-8">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="toc-entry-9">Contributors</a></li>
-<li><a class="reference internal" href="#other-credits" id="toc-entry-10">Other credits</a></li>
-<li><a class="reference internal" href="#maintainers" id="toc-entry-11">Maintainers</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-7">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-8">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-9">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-10">Contributors</a></li>
+<li><a class="reference internal" href="#other-credits" id="toc-entry-11">Other credits</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-12">Maintainers</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="configuration-notes">
 <h2><a class="toc-backref" href="#toc-entry-1">Configuration notes</a></h2>
-<p>Per configurar aquest mòdul, cal:
-#. Anar al menú <em>Configuració &gt; Companyies &gt; Companyies</em>.
-#. Seleccionar una de les companyies.
-#. Anar a la pestanya Inter-Company i, dins del grup Sale To Purchase, activar l’opció Purchase from sale (po_from_so).
-#. Si marques l’opció Purchase Orders Auto Validation a la configuració de la companyia B, aleshores, quan validis una comanda de venda (SO) a la companyia A amb la companyia B com a client, la comanda de compra (PO) es validarà automàticament a la companyia B amb la companyia A com a proveïdor.</p>
+<p>Per a permetre que la creació d’una comanda de venda a la companyia A cree una comanda de compra associada a la companyia B, cal fer-ho a la configuració de la companyia B:</p>
+<ol class="arabic simple">
+<li>Escollir la companyia actual al menú superior d’Odoo (a la dreta, junt al nom d’usuari).</li>
+<li>Anar al menú <em>Configuració &gt; Configuració General</em>.</li>
+<li>Sota la secció <em>Empreses</em>, apartat interempresa (<em>Inter Company</em>), sota <em>Venda / Compra</em> marcar l’opció primera, que habilita aquesta funció.</li>
+<li>El selector següent vos permetrà escollir un usuari que apareixerà com a creador d’aquestes comandes de compra. Si no n’escolliu cap, s’emprarà l’usuari que ha creat la comanda de venda. En qualsevol cas, caldrà que l’usuari emprat tinga permisos de creació de compres en aquesta companyia.</li>
+<li>Si marqueu l’opció de validació automàtica, quan valideu la comanda de venda a la companyia A amb la companyia B com a client, la comanda de compra es validarà automàticament a la companyia B.</li>
+</ol>
+<p>Caldrà repetir aquestes passes per a cada companyia on vulgueu admetre la creació d’aquest tipus de comandes de compra.</p>
+<p><strong>Important:</strong> Habilitar per a una companyia l’opció de permetre la creació de comandes de compra associades a comandes de venda permetrà que açò es faça <em>des de qualsevol altra companyia</em> de l’Odoo (sempre que l’usuari creador tinga els permisos necessaris).</p>
 </div>
 <div class="section" id="known-issues-roadmap">
 <h2><a class="toc-backref" href="#toc-entry-2">Known issues / Roadmap</a></h2>
@@ -66,33 +72,40 @@ Permet crear automàticament una comanda de compra (PO) a la companyia B a parti
 <li>[FIX] Descripcions més entenedores en la pantalla de configuració.</li>
 </ul>
 </div>
+<div class="section" id="section-3">
+<h3><a class="toc-backref" href="#toc-entry-6">17.0.1.0.2 (2026-11-09)</a></h3>
+<ul class="simple">
+<li>[FIX] Valida la companyia del producte directament contra l’empresa destí en crear la comanda de compra intercompany.</li>
+<li>[FIX] Actualitza la descripció del mòdul i corregeix la llista de passos de configuració.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="bug-tracker">
-<h2><a class="toc-backref" href="#toc-entry-6">Bug Tracker</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-7">Bug Tracker</a></h2>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues">GitHub Issues</a>.
 Si us plau verifica si l’issue existeix abans de crear-ne un de nou.</p>
 </div>
 <div class="section" id="credits">
-<h2><a class="toc-backref" href="#toc-entry-7">Credits</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-8">Credits</a></h2>
 <div class="section" id="authors">
-<h3><a class="toc-backref" href="#toc-entry-8">Authors</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-9">Authors</a></h3>
 <ul class="simple">
 <li>Batista10</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h3><a class="toc-backref" href="#toc-entry-9">Contributors</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-10">Contributors</a></h3>
 <ul class="simple">
 <li>Pol Comas i Romero &lt;<a class="reference external" href="mailto:pol&#64;batista10.cat">pol&#64;batista10.cat</a>&gt;</li>
 <li>Ivan Vilata i Balaguer &lt;<a class="reference external" href="mailto:ivan&#64;batista10.cat">ivan&#64;batista10.cat</a>&gt;</li>
 </ul>
 </div>
 <div class="section" id="other-credits">
-<h3><a class="toc-backref" href="#toc-entry-10">Other credits</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-11">Other credits</a></h3>
 <p>El desenvolupament ha estat finançat per Batista10.</p>
 </div>
 <div class="section" id="maintainers">
-<h3><a class="toc-backref" href="#toc-entry-11">Maintainers</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-12">Maintainers</a></h3>
 <p>Aquest mòdul és mantingut per Batista10.</p>
 <a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
 <p>Part of <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/17.0/b10_sale_purchase_inter_company">B10Serveis/odoo-B10</a>.</p>
