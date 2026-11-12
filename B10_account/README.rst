@@ -141,4 +141,4 @@ Maintainers
 
 This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/17.0/B10_account>`_ project on GitHub.
 
-You are welcome to contribute.
+You are welcome to contribute
