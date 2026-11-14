@@ -1,41 +1,41 @@
 id,sequence,description,description@es,description@ca,invoice_label,invoice_label@es,invoice_label@ca,type_tax_use,name,amount,amount_type,tax_group_id,l10n_ad_type,tax_scope,repartition_line_ids/repartition_type,repartition_line_ids/tag_ids,repartition_line_ids/document_type,repartition_line_ids/account_id
-account_tax_template_s_igi9-5,0,"IGI 9,5%","IGI 9,5%","IGI 9,5%",,,,sale,"9,5% S",9.5,percent,tax_group_igi_9-5,subjecte,service,base,,invoice,
+account_tax_template_s_igi9-5,0,"IGI 9,5%","IGI 9,5%","IGI 9,5%",,,,sale,"9,5% S",9.5,percent,tax_group_igi_9-5,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_477
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_477
-account_tax_template_p_igi9-5,0,"IGI 9,5%","IGI 9,5%","IGI 9,5%",,,,purchase,"9,5% P",9.5,percent,tax_group_igi_9-5,subjecte,service,base,,invoice,
+account_tax_template_p_igi9-5,0,"IGI 9,5%","IGI 9,5%","IGI 9,5%",,,,purchase,"9,5% P",9.5,percent,tax_group_igi_9-5,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_472
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_472
-account_tax_template_p_igi0,,IGI 0%,IGI 0%,IGI 0%,,,,purchase,0% P,0.0,percent,tax_group_igi_0,subjecte,consu,base,,invoice,
+account_tax_template_p_igi0,,IGI 0%,IGI 0%,IGI 0%,,,,purchase,0% P,0.0,percent,tax_group_igi_0,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,
-account_tax_template_p_igi1,,IGI 1%,IGI 1%,IGI 1%,,,,purchase,1% P,1.0,percent,tax_group_igi_1,subjecte,consu,base,,invoice,
+account_tax_template_p_igi1,,IGI 1%,IGI 1%,IGI 1%,,,,purchase,1% P,1.0,percent,tax_group_igi_1,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_472
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_472
-account_tax_template_p_igi2-5,,"IGI 2,5%","IGI 2,5%","IGI 2,5%",,,,purchase,"2,5% P",2.5,percent,tax_group_igi_2-5,subjecte,consu,base,,invoice,
+account_tax_template_p_igi2-5,,"IGI 2,5%","IGI 2,5%","IGI 2,5%",,,,purchase,"2,5% P",2.5,percent,tax_group_igi_2-5,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_472
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_472
-account_tax_template_p_igi4-5,,"IGI 4,5%","IGI 4,5%","IGI 4,5%",,,,purchase,"4,5% P",4.5,percent,tax_group_igi_4-5,subjecte,consu,base,,invoice,
+account_tax_template_p_igi4-5,,"IGI 4,5%","IGI 4,5%","IGI 4,5%",,,,purchase,"4,5% P",4.5,percent,tax_group_igi_4-5,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_472
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_472
-account_tax_template_s_igi0,,IGI 0%,IGI 0%,IGI 0%,,,,sale,0% S,0.0,percent,tax_group_igi_0,subjecte,consu,base,,invoice,
+account_tax_template_s_igi0,,IGI 0%,IGI 0%,IGI 0%,,,,sale,0% S,0.0,percent,tax_group_igi_0,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,
-account_tax_template_s_igi1,,IGI 1%,IGI 1%,IGI 1%,,,,sale,1% S,1.0,percent,tax_group_igi_1,subjecte,consu,base,,invoice,
+account_tax_template_s_igi1,,IGI 1%,IGI 1%,IGI 1%,,,,sale,1% S,1.0,percent,tax_group_igi_1,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_477
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_477
-account_tax_template_s_igi2-5,,"IGI 2,5%","IGI 2,5%","IGI 2,5%",,,,sale,"2,5% S",2.5,percent,tax_group_igi_2-5,subjecte,consu,base,,invoice,
+account_tax_template_s_igi2-5,,"IGI 2,5%","IGI 2,5%","IGI 2,5%",,,,sale,"2,5% S",2.5,percent,tax_group_igi_2-5,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_477
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_477
-account_tax_template_s_igi4-5,,"IGI 4,5%","IGI 4,5%","IGI 4,5%",,,,sale,"4,5% S",4.5,percent,tax_group_igi_4-5,subjecte,consu,base,,invoice,
+account_tax_template_s_igi4-5,,"IGI 4,5%","IGI 4,5%","IGI 4,5%",,,,sale,"4,5% S",4.5,percent,tax_group_igi_4-5,subjecte,,base,,invoice,
 ,,,,,,,,,,,,,,,tax,,invoice,account_account_477
 ,,,,,,,,,,,,,,,base,,refund,
 ,,,,,,,,,,,,,,,tax,,refund,account_account_477
