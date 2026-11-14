@@ -44,8 +44,33 @@ Per fer servir el mòdul:
 #. La plantilla està basada en el quadre de comptes espanyol estàndard. Si feu
    servir prefixos personalitzats, comproveu que estiguin inclosos a la plantilla.
 
+Balanç de sumes i saldos per partner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Després d'actualitzar ``B10_account``, accediu a **Comptabilitat > Informes >
+Informes comptables OCA > Balanç de sumes i saldos per partner**.
+
+Seleccioneu empresa, dates, diaris i comptes, i trieu **Veure**, **Exportar PDF**
+o **Exportar XLSX**. Cada fila correspon a un compte i un partner, inclosos els
+comptes d'actiu, passiu, ingressos i despeses. Els moviments sense partner es
+mostren com a **Sense partner**. L'informe no filtra per partner.
+
+Els saldos inicials segueixen les regles fiscals de l'informe OCA. Quan
+correspon, els resultats d'exercicis anteriors s'incorporen al compte de
+resultats pendents mantenint-ne el desglossament per partner. L'opció d'amagar
+comptes a zero elimina les files sense saldo inicial, deure, haver ni saldo
+final; si hi ha activitat, la fila es manté encara que el saldo final sigui
+zero. La divisa segueix la configuració del compte.
+
 Changelog
 =========
+
+17.0.1.6.0 (2026-11-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Balanç de sumes i saldos per partner amb exportació HTML, PDF i XLSX.
+* [ADD] Dependència d'``account_financial_report`` per reutilitzar els filtres
+  i les regles de saldos inicials i resultats d'exercicis anteriors de l'OCA.
 
 17.0.1.5.0 (2026-11-10)
 ~~~~~~~~~~~~~~~~~~~~~~~

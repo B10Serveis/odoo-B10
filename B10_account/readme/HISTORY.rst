@@ -1,3 +1,10 @@
+17.0.1.6.0 (2026-11-14)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Balanç de sumes i saldos per partner amb exportació HTML, PDF i XLSX.
+* [ADD] Dependència d'``account_financial_report`` per reutilitzar els filtres
+  i les regles de saldos inicials i resultats d'exercicis anteriors de l'OCA.
+
 17.0.1.5.0 (2026-11-10)
 ~~~~~~~~~~~~~~~~~~~~~~~
 

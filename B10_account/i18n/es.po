@@ -2678,3 +2678,203 @@ msgid ""
 msgstr ""
 "746 - Subvenciones, donaciones y legados de capital transferidos al "
 "resultado del ejercicio"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner.py:0
+msgid "Sense partner"
+msgstr "Sin partner"
+
+#. module: B10_account
+#: model:ir.actions.act_window,name:B10_account.action_trial_balance_partner_wizard
+#: model:ir.actions.report,name:B10_account.action_trial_balance_partner_html
+#: model:ir.actions.report,name:B10_account.action_trial_balance_partner_pdf
+#: model:ir.actions.report,name:B10_account.action_trial_balance_partner_xlsx
+#: model:ir.model,name:B10_account.model_b10_trial_balance_partner_wizard
+#: model:ir.model,name:B10_account.model_report_b10_account_trial_balance_partner
+#: model:ir.ui.menu,name:B10_account.menu_trial_balance_partner
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Balanç de sumes i saldos per partner"
+msgstr "Balance de sumas y saldos por partner"
+
+#. module: B10_account
+#: model:ir.model,name:B10_account.model_report_b10_account_trial_balance_partner_xlsx
+msgid "Balanç de sumes i saldos per partner XLSX"
+msgstr "Balance de sumas y saldos por partner XLSX"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Code"
+msgstr "Código"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Initial balance"
+msgstr "Saldo inicial"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Debit"
+msgstr "Debe"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Credit"
+msgstr "Haber"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Period balance"
+msgstr "Saldo del período"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Ending balance"
+msgstr "Saldo final"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Initial balance in currency"
+msgstr "Saldo inicial en divisa"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Ending balance in currency"
+msgstr "Saldo final en divisa"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Company"
+msgstr "Empresa"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Date range filter"
+msgstr "Período"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#, python-format
+msgid "From: %(date_from)s To: %(date_to)s"
+msgstr "Desde: %(date_from)s Hasta: %(date_to)s"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Target moves filter"
+msgstr "Filtro de movimientos"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "All posted entries"
+msgstr "Todos los asientos publicados"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "All entries"
+msgstr "Todos los asientos"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Account at 0 filter"
+msgstr "Cuentas en cero"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Hide"
+msgstr "Ocultar"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Show"
+msgstr "Mostrar"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Show foreign currency"
+msgstr "Mostrar moneda extranjera"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Yes"
+msgstr "Sí"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "No"
+msgstr "No"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Compte"
+msgstr "Cuenta"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Nom del compte"
+msgstr "Nombre de la cuenta"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Del"
+msgstr "Desde"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "al"
+msgstr "hasta"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Assentaments publicats"
+msgstr "Asientos publicados"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Assentaments publicats i esborranys"
+msgstr "Asientos publicados y borradores"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Ocultar línies sense saldo ni moviments"
+msgstr "Ocultar líneas sin saldo ni movimientos"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Mostrar també comptes sense saldo ni moviments"
+msgstr "Mostrar también cuentas sin saldo ni movimientos"
+
+#. module: B10_account
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Divisa"
+msgstr "Divisa"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Saldo inicial en divisa"
+msgstr "Saldo inicial en divisa"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+msgid "Saldo final en divisa"
+msgstr "Saldo final en divisa"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+#: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+msgid "Total"
+msgstr "Total"
