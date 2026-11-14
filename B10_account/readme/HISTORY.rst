@@ -1,3 +1,9 @@
+16.0.1.5.0
+~~~~~~~~~~
+
+* Migra de 17.0 el balanç de sumes i saldos per partner, amb vista HTML i
+  exportacions PDF i XLSX.
+
 16.0.1.4.0 (2026-11-10)
 ~~~~~~~~~~~~~~~~~~~~~~~
 

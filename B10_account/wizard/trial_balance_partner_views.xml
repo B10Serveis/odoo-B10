@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="trial_balance_partner_wizard_view" model="ir.ui.view">
+        <field name="name">b10.trial.balance.partner.wizard.form</field>
+        <field name="model">b10.trial.balance.partner.wizard</field>
+        <field name="inherit_id" ref="account_financial_report.trial_balance_wizard"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='partner_filter']" position="replace"/>
+            <xpath expr="//field[@name='show_partner_details']" position="attributes">
+                <attribute name="attrs"/>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='grouped_by'][@groups]" position="attributes">
+                <attribute name="attrs"/>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='show_hierarchy']" position="attributes">
+                <attribute name="attrs"/>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='limit_hierarchy_level']" position="attributes">
+                <attribute name="attrs"/>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='show_hierarchy_level']" position="attributes">
+                <attribute name="attrs"/>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='hide_parent_hierarchy_level']" position="attributes">
+                <attribute name="attrs"/>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='hide_account_at_end_0']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="action_trial_balance_partner_wizard" model="ir.actions.act_window">
+        <field name="name">Balanç de sumes i saldos per partner</field>
+        <field name="res_model">b10.trial.balance.partner.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="trial_balance_partner_wizard_view"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="menu_trial_balance_partner" parent="account_financial_report.menu_oca_reports"
+              action="action_trial_balance_partner_wizard" sequence="21"
+              groups="account.group_account_readonly"/>
+</odoo>
