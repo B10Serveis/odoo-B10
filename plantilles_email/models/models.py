@@ -30,10 +30,9 @@ class AccountMove(models.Model):
 
     # Estableix la plantilla de correu electrònic per defecte de Factura
     def _get_mail_template(self):
-
-        template_ref = "plantilles_email.factura_email_template"
-
-        return template_ref
+        if all(move.move_type == "out_refund" for move in self):
+            return "account.email_template_edi_credit_note"
+        return "plantilles_email.factura_email_template"
 
 
 class StockPicking(models.Model):
