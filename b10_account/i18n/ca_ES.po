@@ -1064,9 +1064,11 @@ msgstr ""
 "pagament per transferència bancària."
 
 #. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:18
 #: model_terms:ir.ui.view,arch_db:b10_account.res_config_settings_view_form
 msgid "Account"
-msgstr ""
+msgstr "Compte"
 
 #. module: b10_account
 #: model:ir.model.constraint,message:b10_account.constraint_res_partner_bank_unique_number
@@ -3933,3 +3935,531 @@ msgstr "638 - Ajustos positius en la imposició sobre beneficis"
 #: model:mis.report.kpi,description:b10_account.mis_report_kpi_b10_pyg_abreviado_49500
 msgid "D) RESULTADO DEL EJERCICIO (C + 20)"
 msgstr "D) RESULTAT DE L'EXERCICI (C + 20)"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid ""
+"<i class=\"fa fa-exclamation-triangle mr-3\"/>\n"
+"                    Duplicate amounts may be shown because more than one analytical account may be defined in the journal items."
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle mr-3\"/>\n"
+"                    Es poden mostrar imports duplicats perquè es pot definir més d'un compte analític als apunts del diari."
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "<span class=\"oe_inline\">To</span>"
+msgstr "<span class=\"oe_inline\">A</span>"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__account_code_from
+msgid "Account Code From"
+msgstr "Codi de compte inicial"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__account_code_to
+msgid "Account Code To"
+msgstr "Codi de compte final"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:45
+#, python-format
+msgid "Account at 0 filter"
+msgstr "Comptes a zero"
+
+#. module: b10_account
+#: model:ir.model.fields.selection,name:b10_account.selection__b10_trial_balance_partner_wizard__target_move__all
+msgid "All Entries"
+msgstr "Tots els assentaments"
+
+#. module: b10_account
+#: model:ir.model.fields.selection,name:b10_account.selection__b10_trial_balance_partner_wizard__target_move__posted
+msgid "All Posted Entries"
+msgstr "Tots els assentaments publicats"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:44
+#, python-format
+msgid "All entries"
+msgstr "Tots els assentaments"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:43
+#, python-format
+msgid "All posted entries"
+msgstr "Tots els assentaments publicats"
+
+#. module: b10_account
+#: model:ir.model.fields.selection,name:b10_account.selection__b10_trial_balance_partner_wizard__grouped_by__analytic_account
+msgid "Analytic Account"
+msgstr "Compte analític"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Assentaments publicats"
+msgstr "Assentaments publicats"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Assentaments publicats i esborranys"
+msgstr "Assentaments publicats i esborranys"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:10
+#: model:ir.actions.act_window,name:b10_account.action_trial_balance_partner_wizard
+#: model:ir.actions.report,name:b10_account.action_trial_balance_partner_html
+#: model:ir.actions.report,name:b10_account.action_trial_balance_partner_pdf
+#: model:ir.actions.report,name:b10_account.action_trial_balance_partner_xlsx
+#: model:ir.model,name:b10_account.model_b10_trial_balance_partner_wizard
+#: model:ir.model,name:b10_account.model_report_b10_account_trial_balance_partner
+#: model:ir.ui.menu,name:b10_account.menu_trial_balance_partner
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+#, python-format
+msgid "Balanç de sumes i saldos per partner"
+msgstr "Balanç de sumes i saldos per partner"
+
+#. module: b10_account
+#: model:ir.model,name:b10_account.model_report_b10_account_trial_balance_partner_xlsx
+msgid "Balanç de sumes i saldos per partner XLSX"
+msgstr "Balanç de sumes i saldos per partner XLSX"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:18
+#, python-format
+msgid "Code"
+msgstr "Codi"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:39
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__company_id
+#, python-format
+msgid "Company"
+msgstr "Empresa"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Compte"
+msgstr "Compte"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__create_date
+msgid "Created on"
+msgstr "Creat a"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:20
+#, python-format
+msgid "Credit"
+msgstr "Haver"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__date_from
+msgid "Date From"
+msgstr "Data inicial"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__date_to
+msgid "Date To"
+msgstr "Data final"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__date_range_id
+msgid "Date range"
+msgstr "Rang de dates"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:40
+#, python-format
+msgid "Date range filter"
+msgstr "Període"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:19
+#, python-format
+msgid "Debit"
+msgstr "Deure"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Del"
+msgstr "Del"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Deure"
+msgstr "Deure"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__display_name
+msgid "Display Name"
+msgstr "Nom a mostrar"
+
+#. module: b10_account
+#: model:ir.model.fields,help:b10_account.field_b10_trial_balance_partner_wizard__foreign_currency
+msgid ""
+"Display foreign currency for move lines, unless account currency is not "
+"setup through chart of accounts will display initial and final balance in "
+"that currency."
+msgstr ""
+"Mostra la moneda estrangera per a les línies d'assentaments, llevat que la "
+"moneda del compte no estigui configurada a través de la llista de comptes "
+"mostrarà el saldo inicial i final en aquesta moneda."
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:34
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+#, python-format
+msgid "Divisa"
+msgstr "Divisa"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__hide_parent_hierarchy_level
+msgid "Do not display parent levels"
+msgstr "No mostrar nivells pare"
+
+#. module: b10_account
+#: model:ir.model.fields,help:b10_account.field_b10_trial_balance_partner_wizard__account_code_to
+msgid "Ending account in a range"
+msgstr "Darrer compte d'un rang"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:21
+#, python-format
+msgid "Ending balance"
+msgstr "Saldo final"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:23
+#, python-format
+msgid "Ending balance in currency"
+msgstr "Saldo final en divisa"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "Export PDF"
+msgstr "Exporta PDF"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "Export XLSX"
+msgstr "Exportar XLSX"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__account_ids
+msgid "Filter accounts"
+msgstr "Filtra comptes"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__partner_ids
+msgid "Filter partners"
+msgstr "Filtra partners"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "Filtered accounts (empty for all)"
+msgstr "Comptes seleccionats (buit per incloure’ls tots)"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "Filtered partners (empty for all)"
+msgstr "Partners seleccionats (buit per incloure’ls tots)"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "From Code"
+msgstr "Des de codi"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:40
+#, python-format
+msgid "From: %(date_from)s To: %(date_to)s"
+msgstr "Del: %(date_from)s Al: %(date_to)s"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__fy_start_date
+msgid "Fy Start Date"
+msgstr "Data inici exercici"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__grouped_by
+msgid "Grouped By"
+msgstr "Agrupat per"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Haver"
+msgstr "Haver"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:45
+#, python-format
+msgid "Hide"
+msgstr "Amagar"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__hide_account_at_0
+msgid "Hide accounts at 0"
+msgstr "Amaga comptes a 0"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__show_hierarchy_level
+msgid "Hierarchy Levels to display"
+msgstr "Nivells de jerarquia a mostrar"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:19
+#, python-format
+msgid "Initial balance"
+msgstr "Saldo inicial"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:22
+#, python-format
+msgid "Initial balance in currency"
+msgstr "Saldo inicial en divisa"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__journal_ids
+msgid "Journal"
+msgstr "Diari"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__label_text_limit
+msgid "Label Text Limit"
+msgstr "Límit de text de l'etiqueta"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualització a"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__limit_hierarchy_level
+msgid "Limit hierarchy levels"
+msgstr "Limita nivells de jerarquia"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Mostrar també comptes sense saldo ni moviments"
+msgstr "Mostrar també comptes sense saldo ni moviments"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:46
+#, python-format
+msgid "No"
+msgstr "No"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Nom del compte"
+msgstr "Nom del compte"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Ocultar línies sense saldo ni moviments"
+msgstr "Amagar línies sense saldo ni moviments"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__only_one_unaffected_earnings_account
+msgid "Only One Unaffected Earnings Account"
+msgstr "Només un compte de guanys no afectats"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:30
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+#, python-format
+msgid "Partner"
+msgstr "Partner"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__payable_accounts_only
+msgid "Payable Accounts Only"
+msgstr "Només comptes a pagar"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:20
+#, python-format
+msgid "Period balance"
+msgstr "Saldo del període"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__receivable_accounts_only
+msgid "Receivable Accounts Only"
+msgstr "Només comptes a cobrar"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Saldo del període"
+msgstr "Saldo del període"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Saldo final"
+msgstr "Saldo final"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Saldo final en divisa"
+msgstr "Saldo final en divisa"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Saldo inicial"
+msgstr "Saldo inicial"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "Saldo inicial en divisa"
+msgstr "Saldo inicial en divisa"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner.py:47
+#: code:addons/b10_account/report/trial_balance_partner.py:86
+#, python-format
+msgid "Sense partner"
+msgstr "Sense partner"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:45
+#, python-format
+msgid "Show"
+msgstr "Mostrar"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__show_partner_details
+msgid "Show Partner Details"
+msgstr "Mostrar detalls de partner"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:46
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__foreign_currency
+#, python-format
+msgid "Show foreign currency"
+msgstr "Mostrar divisa estrangera"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__show_hierarchy
+msgid "Show hierarchy"
+msgstr "Mostrar jerarquia"
+
+#. module: b10_account
+#: model:ir.model.fields,help:b10_account.field_b10_trial_balance_partner_wizard__account_code_from
+msgid "Starting account in a range"
+msgstr "Compte inicial del rang"
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__target_move
+msgid "Target Moves"
+msgstr "Assentaments a incloure"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:43
+#, python-format
+msgid "Target moves filter"
+msgstr "Assentaments a incloure"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:62
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:64
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+#, python-format
+msgid "Total"
+msgstr "Total"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid ""
+"Trial Balance can be computed only if selected company have only\n"
+"                        one unaffected earnings account."
+msgstr ""
+"El balanç de comprovació només es pot calcular si l'empresa seleccionada té només\n"
+"                        un compte de guanys no afectats."
+
+#. module: b10_account
+#: model:ir.model.fields,field_description:b10_account.field_b10_trial_balance_partner_wizard__unaffected_earnings_account
+msgid "Unaffected Earnings Account"
+msgstr "Compte de guanys no afectat"
+
+#. module: b10_account
+#: model:ir.model.fields,help:b10_account.field_b10_trial_balance_partner_wizard__show_hierarchy
+msgid "Use when your account groups are hierarchical"
+msgstr "Utilitzeu quan els vostres grups de comptes siguin jeràrquics"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "View"
+msgstr "Vista"
+
+#. module: b10_account
+#: model:ir.model.fields,help:b10_account.field_b10_trial_balance_partner_wizard__hide_account_at_0
+msgid ""
+"When this option is enabled, the trial balance will not display accounts "
+"that have initial balance = debit = credit = end balance = 0"
+msgstr ""
+"Quan s'habilita aquesta opció, el balanç de sumes i saldos no mostrarà "
+"comptes que tinguin saldo inicial = deure = haver = saldo final = 0"
+
+#. module: b10_account
+#. odoo-python
+#: code:addons/b10_account/report/trial_balance_partner_xlsx.py:46
+#, python-format
+msgid "Yes"
+msgstr "Sí"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "al"
+msgstr "al"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:account_financial_report.trial_balance_wizard
+msgid "or"
+msgstr "o"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
+msgid "·"
+msgstr "·"

@@ -4,9 +4,10 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.11.0",
+    "version": "18.0.1.12.1",
     "depends": [
         "account",
+        "account_financial_report",
         "mis_builder",  # Motor dels informes MIS
         "l10n_es_mis_report",  # Plantilles i estils PGCE
         "b10_base",
@@ -22,6 +23,9 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "security/ir.model.access.csv",
+        "wizard/trial_balance_partner_views.xml",
+        "report/trial_balance_partner.xml",
         "views/config_settings_view.xml",
         "views/account_move_inherit.xml",
         "report/factura_batista.xml",

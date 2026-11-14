@@ -1,3 +1,17 @@
+18.0.1.12.1 (2026-11-14)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Traduccions al català i al castellà del balanç de sumes i saldos per
+  partner, inclosos els filtres, els camps heretats i les capçaleres d'Excel.
+
+18.0.1.12.0 (2026-11-12)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Balanç de sumes i saldos per partner: taula plana per compte i partner
+  per a qualsevol tipus de compte, amb imports sense partner i exportació PDF/XLSX.
+* [ADD] Dependència d'``account_financial_report`` per reutilitzar els filtres
+  i les regles de saldos inicials i resultats d'exercicis anteriors de l'OCA.
+
 18.0.1.11.0 (2026-11-10)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

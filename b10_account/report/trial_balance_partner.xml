@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_trial_balance_partner_html" model="ir.actions.report">
+        <field name="name">Balanç de sumes i saldos per partner</field>
+        <field name="model">b10.trial.balance.partner.wizard</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">b10_account.trial_balance_partner</field>
+        <field name="report_file">b10_account.trial_balance_partner</field>
+    </record>
+    <record id="action_trial_balance_partner_pdf" model="ir.actions.report">
+        <field name="name">Balanç de sumes i saldos per partner</field>
+        <field name="model">b10.trial.balance.partner.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">b10_account.trial_balance_partner</field>
+        <field name="report_file">b10_account.trial_balance_partner</field>
+        <field name="paperformat_id" ref="account_financial_report.report_qweb_paperformat"/>
+    </record>
+    <record id="action_trial_balance_partner_xlsx" model="ir.actions.report">
+        <field name="name">Balanç de sumes i saldos per partner</field>
+        <field name="model">b10.trial.balance.partner.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">b10_account.trial_balance_partner_xlsx</field>
+        <field name="report_file">b10_account.trial_balance_partner_xlsx</field>
+    </record>
+    <template id="trial_balance_partner">
+        <t t-call="account_financial_report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="account_financial_report.internal_layout">
+                    <div class="page">
+                        <h3>Balanç de sumes i saldos per partner</h3>
+                        <p><span t-out="company_name"/> · <span t-out="currency_name"/></p>
+                        <p>
+                            Del <span t-out="date_from" t-options="{'widget': 'date'}"/>
+                            al <span t-out="date_to" t-options="{'widget': 'date'}"/> ·
+                            <t t-if="only_posted_moves">Assentaments publicats</t>
+                            <t t-else="">Assentaments publicats i esborranys</t> ·
+                            <t t-if="hide_account_at_0">Ocultar línies sense saldo ni moviments</t>
+                            <t t-else="">Mostrar també comptes sense saldo ni moviments</t>
+                        </p>
+                        <table class="table table-sm" style="font-size: 10px; width: 100%;">
+                            <thead style="display: table-header-group;">
+                                <tr>
+                                    <th>Compte</th><th>Nom del compte</th><th>Partner</th>
+                                    <th class="text-end">Saldo inicial</th>
+                                    <th class="text-end">Deure</th><th class="text-end">Haver</th>
+                                    <th class="text-end">Saldo del període</th>
+                                    <th class="text-end">Saldo final</th>
+                                    <t t-if="foreign_currency">
+                                        <th>Divisa</th><th class="text-end">Saldo inicial en divisa</th>
+                                        <th class="text-end">Saldo final en divisa</th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="partner_rows" t-as="line" style="page-break-inside: avoid;">
+                                    <td t-out="line['code']"/><td t-out="line['name']"/>
+                                    <td t-out="line['partner_name']"/>
+                                    <td class="text-end"><span t-out="line['initial_balance']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="line['debit']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="line['credit']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="line['balance']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="line['ending_balance']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <t t-if="foreign_currency">
+                                        <td t-out="line['currency_name'] or ''"/>
+                                        <td class="text-end"><span t-if="line['currency_id']" t-out="line['initial_currency_balance']" t-options="{'widget': 'monetary', 'display_currency': currency_model.browse(line['currency_id'])}"/></td>
+                                        <td class="text-end"><span t-if="line['currency_id']" t-out="line['ending_currency_balance']" t-options="{'widget': 'monetary', 'display_currency': currency_model.browse(line['currency_id'])}"/></td>
+                                    </t>
+                                </tr>
+                                <tr style="font-weight: bold;">
+                                    <td colspan="3">Total</td>
+                                    <td class="text-end"><span t-out="partner_totals['initial_balance']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="partner_totals['debit']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="partner_totals['credit']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="partner_totals['balance']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td class="text-end"><span t-out="partner_totals['ending_balance']" t-options="{'widget': 'monetary', 'display_currency': company_currency}"/></td>
+                                    <td t-if="foreign_currency" colspan="3"/>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -16,3 +16,22 @@ Després d'actualitzar ``b10_account``, crea un informe MIS des de
 
 Configura la companyia i els períodes que vulguis comparar. Les línies de detall
 agrupen els comptes pel prefix de 3 dígits del PGCE i s'oculten si el saldo és zero.
+
+Balanç de sumes i saldos per partner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Després d'actualitzar ``b10_account``, accedeix a **Comptabilitat → Informes →
+Informes comptables OCA → Balanç de sumes i saldos per partner**.
+
+Selecciona empresa, dates, diaris i comptes, i prem **Veure**, **Exportar PDF**
+o **Exportar XLSX**. Cada fila correspon a un compte i un partner, inclosos
+els comptes d'actius, amortitzacions, ingressos i despeses. Els moviments sense
+partner apareixen a la fila **Sense partner**. No hi ha filtre de partners.
+
+Els saldos inicials segueixen les regles fiscals de l'informe OCA. Quan correspon,
+els resultats d'exercicis anteriors s'incorporen al compte de resultats pendents
+mantenint-ne el desglossament per partner. L'opció d'ocultar comptes a zero només
+elimina les files sense saldo inicial, deure, haver ni saldo final; un saldo final
+zero amb activitat continua apareixent. La divisa segueix la configuració del compte.
+
+L'informe original de sumes i saldos es manté disponible.
