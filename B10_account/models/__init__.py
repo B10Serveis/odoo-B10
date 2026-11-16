@@ -33,3 +33,4 @@
 from . import B10_account_move
 from . import account_invoice_report
 from . import ir_actions_report
+from . import account_journal
