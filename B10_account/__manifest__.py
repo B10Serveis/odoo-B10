@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "17.0.1.6.0",
+    "version": "17.0.1.7.0",
     "depends": [
         "account",
         "account_financial_report",  # Trial balance partner report and XLSX export
@@ -18,6 +18,7 @@
         "security/ir.model.access.csv",
         "wizard/trial_balance_partner_views.xml",
         "report/trial_balance_partner.xml",
+        "views/account_journal_dashboard.xml",
         "views/partner_form_inherit.xml",
         "data/mis_report_styles.xml",
         "data/mis_report_balance_abreviated_3digits.xml",

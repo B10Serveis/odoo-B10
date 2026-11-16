@@ -32,6 +32,11 @@ msgid "Journal Entry"
 msgstr "Assentament comptable"
 
 #. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.account_journal_dashboard_kanban_view_ledger_balance
+msgid "Ledger Balance:"
+msgstr "Saldo al major:"
+
+#. module: B10_account
 #: code:addons/B10_account/models/B10_account_move.py:0
 #, python-format
 msgid ""

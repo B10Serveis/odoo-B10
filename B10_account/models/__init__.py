@@ -32,3 +32,4 @@
 ###############################################
 from . import B10_account_move
 from . import ir_actions_report
+from . import account_journal

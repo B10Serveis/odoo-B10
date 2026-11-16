@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_journal_dashboard_kanban_view_ledger_balance" model="ir.ui.view">
+        <field name="name">account.journal.dashboard.kanban.ledger.balance</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='dashboard_bank_cash_balance']/.." position="after">
+                <div class="row" t-if="dashboard.has_ledger_account">
+                    <div class="col overflow-hidden text-start">
+                        <span>Ledger Balance:</span>
+                    </div>
+                    <div class="col-auto text-end">
+                        <span class="o_kanban_monetary">
+                            <t t-out="dashboard.ledger_balance" />
+                        </span>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

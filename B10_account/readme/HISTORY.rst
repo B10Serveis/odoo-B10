@@ -1,3 +1,8 @@
+17.0.1.7.0 (2026-11-16)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Mostra el saldo del compte del llibre major al tauler dels diaris bancaris i de caixa.
+
 17.0.1.6.0 (2026-11-14)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
