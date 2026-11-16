@@ -121,3 +121,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Canvia la dependència de ``b10_settings_hub`` per ``b10_base``.
+
+18.0.1.13.0 (2026-11-16)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Recupera el saldo del llibre major als taulers dels diaris de banc i caixa de les versions 16 i 17: apunts publicats fins avui, en moneda de la companyia i amb saldos separats per companyia.

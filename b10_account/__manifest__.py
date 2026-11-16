@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.12.1",
+    "version": "18.0.1.13.0",
     "depends": [
         "account",
         "account_financial_report",
@@ -23,6 +23,7 @@
     "license": "AGPL-3",
     "application": True,
     "data": [
+        "views/account_journal_dashboard.xml",
         "security/ir.model.access.csv",
         "wizard/trial_balance_partner_views.xml",
         "report/trial_balance_partner.xml",

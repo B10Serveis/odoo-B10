@@ -35,3 +35,8 @@ elimina les files sense saldo inicial, deure, haver ni saldo final; un saldo fin
 zero amb activitat continua apareixent. La divisa segueix la configuració del compte.
 
 L'informe original de sumes i saldos es manté disponible.
+
+Saldo al major:
+
+* Al tauler de Comptabilitat, els diaris de banc i caixa amb un compte predeterminat mostren el seu saldo al major.
+* Inclou tots els apunts publicats d’aquest compte fins a la data actual, en la moneda de la companyia, encara que provinguin d’altres diaris.

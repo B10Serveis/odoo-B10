@@ -4463,3 +4463,8 @@ msgstr "o"
 #: model_terms:ir.ui.view,arch_db:b10_account.trial_balance_partner
 msgid "·"
 msgstr "·"
+
+#. module: b10_account
+#: model_terms:ir.ui.view,arch_db:b10_account.account_journal_dashboard_kanban_view_ledger_balance
+msgid "Ledger Balance:"
+msgstr "Saldo al major:"
