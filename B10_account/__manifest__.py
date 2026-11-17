@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "16.0.1.6.0",
+    "version": "16.0.1.7.0",
     "depends": [
         "account",
         "account_financial_report",  # Trial balance partner report and XLSX export
@@ -12,11 +12,18 @@
         "Dissenys_generics",  # account_payment_method_bank_transfer (ref)
         "l10n_es_mis_report",  # Spanish PGCE MIS templates and MIS Builder
     ],
+    "assets": {
+        "web.assets_backend": [
+            "B10_account/static/src/js/journal_ledger_report.esm.js",
+        ],
+    },
     "license": "AGPL-3",
     "application": True,
     "data": [
         "security/ir.model.access.csv",
         "wizard/trial_balance_partner_views.xml",
+        "wizard/journal_ledger_views.xml",
+        "report/journal_ledger.xml",
         "report/trial_balance_partner.xml",
         "views/invoice_report_pivot.xml",
         "views/account_journal_dashboard.xml",

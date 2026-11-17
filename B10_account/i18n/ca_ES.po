@@ -2723,6 +2723,7 @@ msgstr "Codi"
 
 #. module: B10_account
 #: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
 msgid "Account"
 msgstr "Compte"
 
@@ -2735,12 +2736,14 @@ msgstr "Saldo inicial"
 #. module: B10_account
 #: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
 msgid "Debit"
 msgstr "Deure"
 
 #. module: B10_account
 #: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
 #: model_terms:ir.ui.view,arch_db:B10_account.trial_balance_partner
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
 msgid "Credit"
 msgstr "Haver"
 
@@ -2768,6 +2771,7 @@ msgstr "Saldo final en divisa"
 
 #. module: B10_account
 #: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
 msgid "Partner"
 msgstr "Partner"
 
@@ -2893,3 +2897,145 @@ msgstr "Saldo final en divisa"
 #: code:addons/B10_account/report/trial_balance_partner_xlsx.py:0
 msgid "Total"
 msgstr "Total"
+
+#. module: B10_account
+#: model:ir.actions.report,name:B10_account.action_b10_journal_ledger_html
+#: model:ir.actions.report,name:B10_account.action_b10_journal_ledger_pdf
+#: model:ir.actions.report,name:B10_account.action_b10_journal_ledger_xlsx
+#: model:ir.ui.menu,name:B10_account.menu_b10_journal_ledger_wizard
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Mercantile Registry General Ledger"
+msgstr "Llibre Major Registre Mercantil"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+#, python-format
+msgid "Mercantile Registry General Ledger - %(year)s - %(company)s"
+msgstr "Llibre Major Registre Mercantil - %(year)s - %(company)s"
+
+#. module: B10_account
+#: model:ir.model.fields,field_description:B10_account.field_journal_ledger_report_wizard__year
+msgid "Fiscal year"
+msgstr "Exercici"
+
+#. module: B10_account
+#: code:addons/B10_account/wizard/journal_ledger.py:0
+msgid "Please enter a valid year."
+msgstr "Indiqueu un any vàlid."
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Number"
+msgstr "Número"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Date"
+msgstr "Data"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Journal entry"
+msgstr "Assentament"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Account name"
+msgstr "Nom del compte"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Label"
+msgstr "Concepte"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+msgid "Moves"
+msgstr "Moviments"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+msgid "Posted entries only"
+msgstr "Només assentaments validats"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+msgid "Order"
+msgstr "Ordre"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger_xlsx.py:0
+msgid "Date, entry number, and journal"
+msgstr "Data, número d'assentament i diari"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger.py:0
+#, python-format
+msgid "Opening for fiscal year %(year)s"
+msgstr "Obertura de l'exercici %(year)s"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger.py:0
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Opening entry"
+msgstr "Assentament d'obertura"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger.py:0
+msgid "Profit or loss for the year"
+msgstr "Resultat de l'exercici"
+
+#. module: B10_account
+#: code:addons/B10_account/report/journal_ledger.py:0
+msgid "No opening balances"
+msgstr "Sense saldos inicials"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.b10_journal_ledger_wizard_view
+msgid "Show the account name"
+msgstr "Mostrar el nom del compte"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.b10_journal_ledger_wizard_view
+msgid "View"
+msgstr "Veure"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.b10_journal_ledger_wizard_view
+msgid "Export PDF"
+msgstr "Exportar PDF"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.b10_journal_ledger_wizard_view
+msgid "Export XLSX"
+msgstr "Exportar Excel"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.b10_journal_ledger_wizard_view
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+#. module: B10_account
+#: model_terms:ir.ui.view,arch_db:B10_account.journal_ledger_report
+msgid "Fiscal year:"
+msgstr "Exercici:"
+
+#. module: B10_account
+#: model:ir.model,name:B10_account.model_report_b10_account_journal_ledger
+msgid "Mercantile Registry General Ledger Data"
+msgstr "Dades del Llibre Major Registre Mercantil"
+
+#. module: B10_account
+#: model:ir.model,name:B10_account.model_report_b10_account_journal_ledger_qweb
+msgid "Mercantile Registry General Ledger Report"
+msgstr "Informe del Llibre Major Registre Mercantil"
+
+#. module: B10_account
+#: model:ir.model,name:B10_account.model_report_b10_account_journal_ledger_xlsx
+msgid "Mercantile Registry General Ledger XLSX Report"
+msgstr "Informe Excel del Llibre Major Registre Mercantil"

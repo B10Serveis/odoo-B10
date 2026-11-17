@@ -34,10 +34,27 @@ Usage
 
 Per fer servir el mòdul:
 
-#. 
+#. Aneu a **Comptabilitat > Informes > Llibre Major Registre Mercantil**.
+#. Seleccioneu l'empresa i l'exercici anual. Activeu **Mostrar el nom del compte**
+   si voleu afegir aquesta columna.
+#. Trieu **Veure** per consultar el llibre en pantalla. Des de la previsualització
+   podeu exportar-lo a Excel o imprimir-lo en PDF; també teniu aquestes opcions
+   disponibles a l'assistent.
+
+El llibre inclou els assentaments validats de l'exercici, ordenats per data i
+numerats correlativament. El número 1 és una obertura virtual calculada amb els
+saldos anteriors a l'1 de gener. Els saldos dels comptes d'ingressos i despeses
+s'agrupen al compte 129; els saldos restants es mostren pels seus comptes.
+L'informe no crea assentaments a Odoo. El fitxer Excel es pot editar abans de
+presentar-lo.
 
 Changelog
 =========
+
+16.0.1.7.0 (2026-11-17)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Llibre Major Registre Mercantil en pantalla, PDF i Excel, amb assentament d'obertura virtual.
 
 15.0.1.0.0 (2025-02-13)
 ~~~~~~~~~~~~~~~~~~~~~~~
