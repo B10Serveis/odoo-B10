@@ -11,7 +11,7 @@ class AccountMove(models.Model):
         compute="_compute_l10n_ad_is_simplified",
         readonly=False, store=True)
 
-    @api.depends("partner_id")
+    @api.depends("partner_id", "move_type")
     def _compute_l10n_ad_is_simplified(self):
         simplified_partner = self.env.ref(
             "l10n_ad.partner_simplified", raise_if_not_found=False)
