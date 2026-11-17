@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="paperformat_b10_journal_ledger" model="report.paperformat">
+        <field name="name">Mercantile Registry General Ledger</field>
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">35</field>
+        <field name="margin_bottom">18</field>
+        <field name="margin_left">8</field>
+        <field name="margin_right">8</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">27</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="action_b10_journal_ledger_html" model="ir.actions.report">
+        <field name="name">Mercantile Registry General Ledger</field>
+        <field name="model">journal.ledger.report.wizard</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">b10_account.journal_ledger_report</field>
+        <field name="report_file">b10_account.journal_ledger_report</field>
+    </record>
+    <record id="action_b10_journal_ledger_pdf" model="ir.actions.report">
+        <field name="name">Mercantile Registry General Ledger</field>
+        <field name="model">journal.ledger.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">b10_account.journal_ledger_report</field>
+        <field name="report_file">b10_account.journal_ledger_report</field>
+        <field name="paperformat_id" ref="paperformat_b10_journal_ledger" />
+        <field name="print_report_name">
+            'Mercantile_Registry_General_Ledger_%s' % object.year
+        </field>
+    </record>
+    <record id="action_b10_journal_ledger_xlsx" model="ir.actions.report">
+        <field name="name">Mercantile Registry General Ledger</field>
+        <field name="model">journal.ledger.report.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">b10_account.journal_ledger_xlsx</field>
+        <field name="report_file">b10_account.journal_ledger_xlsx</field>
+        <field name="print_report_name">
+            'Mercantile_Registry_General_Ledger_%s' % object.year
+        </field>
+    </record>
+
+    <template id="journal_ledger_report">
+        <t t-call="account_financial_report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="account_financial_report.internal_layout">
+                    <div class="page">
+                        <h3>Mercantile Registry General Ledger</h3>
+                        <p>
+                            <span t-out="company.display_name" /> ·
+                            <span>Fiscal year:</span><span t-out="year" />
+                        </p>
+                        <table class="table table-sm" style="font-size: 9px; width: 100%;">
+                            <thead style="display: table-header-group;">
+                                <tr>
+                                    <th>Number</th>
+                                    <th>Date</th>
+                                    <th>Journal entry</th>
+                                    <th>Account</th>
+                                    <th t-if="with_account_name">Account name</th>
+                                    <th>Partner</th>
+                                    <th>Label</th>
+                                    <th class="text-end">Debit</th>
+                                    <th class="text-end">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    t-foreach="lines"
+                                    t-as="line"
+                                    style="page-break-inside: avoid;"
+                                >
+                                    <td t-out="line['sequence']" />
+                                    <td>
+                                        <span
+                                            t-out="line['date']"
+                                            t-options="{'widget': 'date'}"
+                                        />
+                                    </td>
+                                    <td t-out="line['entry']" />
+                                    <td t-out="line['account_code']" />
+                                    <td t-if="with_account_name" t-out="line['account_name']" />
+                                    <td t-out="line['partner']" />
+                                    <td t-out="line['label']" />
+                                    <td class="text-end">
+                                        <span
+                                            t-out="line['debit']"
+                                            t-options="{
+                                                'widget': 'monetary',
+                                                'display_currency': company_currency
+                                            }"
+                                        />
+                                    </td>
+                                    <td class="text-end">
+                                        <span
+                                            t-out="line['credit']"
+                                            t-options="{
+                                                'widget': 'monetary',
+                                                'display_currency': company_currency
+                                            }"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.13.0",
+    "version": "18.0.1.14.0",
     "depends": [
         "account",
         "account_financial_report",
@@ -22,7 +22,14 @@
     ],
     "license": "AGPL-3",
     "application": True,
+    "assets": {
+        "web.assets_backend": [
+            "b10_account/static/src/js/journal_ledger_report.esm.js",
+        ],
+    },
     "data": [
+        "wizard/journal_ledger_views.xml",
+        "report/journal_ledger.xml",
         "views/account_journal_dashboard.xml",
         "security/ir.model.access.csv",
         "wizard/trial_balance_partner_views.xml",

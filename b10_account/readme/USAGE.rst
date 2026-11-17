@@ -40,3 +40,18 @@ Saldo al major:
 
 * Al tauler de Comptabilitat, els diaris de banc i caixa amb un compte predeterminat mostren el seu saldo al major.
 * Inclou tots els apunts publicats d’aquest compte fins a la data actual, en la moneda de la companyia, encara que provinguin d’altres diaris.
+
+Llibre Major Registre Mercantil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Després d'actualitzar ``b10_account``, accedeix a **Comptabilitat → Informes →
+Llibre Major Registre Mercantil**. Selecciona empresa i exercici, i indica si
+vols mostrar el nom del compte. Pots consultar-lo en pantalla o exportar-lo
+a PDF (A4 apaïsat) i Excel.
+
+Inclou els assentaments publicats de tots els diaris de l'empresa, també els
+arxivats, ordenats per data i número d'assentament. La numeració correlativa
+comença amb un assentament d'obertura calculat amb els saldos anteriors a
+l'exercici. Els ingressos i despeses anteriors s'acumulen al compte 129;
+si no existeix, es mostra una línia sintètica amb aquest codi. Aquest
+assentament només forma part de l'informe i no crea apunts comptables.
