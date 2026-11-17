@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "17.0.1.7.0",
+    "version": "17.0.1.8.0",
     "depends": [
         "account",
         "account_financial_report",  # Trial balance partner report and XLSX export
@@ -14,9 +14,16 @@
     ],
     "license": "AGPL-3",
     "application": True,
+    "assets": {
+        "web.assets_backend": [
+            "B10_account/static/src/js/journal_ledger_report.esm.js",
+        ],
+    },
     "data": [
         "security/ir.model.access.csv",
         "wizard/trial_balance_partner_views.xml",
+        "wizard/journal_ledger_views.xml",
+        "report/journal_ledger.xml",
         "report/trial_balance_partner.xml",
         "views/account_journal_dashboard.xml",
         "views/partner_form_inherit.xml",

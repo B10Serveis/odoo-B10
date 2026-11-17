@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="b10_journal_ledger_wizard_view" model="ir.ui.view">
+        <field name="name">Mercantile Registry General Ledger</field>
+        <field name="model">journal.ledger.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Mercantile Registry General Ledger">
+                <sheet>
+                    <group>
+                        <field
+                            name="company_id"
+                            groups="base.group_multi_company"
+                        />
+                        <field name="year" />
+                        <field
+                            name="with_account_name"
+                            string="Show the account name"
+                        />
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="action_view_b10_journal_ledger"
+                        string="View"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="action_export_b10_journal_ledger_pdf"
+                        string="Export PDF"
+                        type="object"
+                    />
+                    <button
+                        name="action_export_b10_journal_ledger"
+                        string="Export XLSX"
+                        type="object"
+                    />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_b10_journal_ledger_wizard" model="ir.actions.act_window">
+        <field name="name">Mercantile Registry General Ledger</field>
+        <field name="res_model">journal.ledger.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="b10_journal_ledger_wizard_view" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_b10_journal_ledger_wizard"
+        name="Mercantile Registry General Ledger"
+        parent="account.menu_finance_reports"
+        action="action_b10_journal_ledger_wizard"
+        sequence="18"
+        groups="account.group_account_readonly"
+    />
+</odoo>

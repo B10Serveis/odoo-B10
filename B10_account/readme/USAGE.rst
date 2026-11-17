@@ -1,5 +1,19 @@
 Per fer servir el mòdul:
 
+Llibre Major Registre Mercantil
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Accediu a **Comptabilitat > Informes > Llibre Major Registre Mercantil**.
+Seleccioneu l'empresa i l'exercici anual; activeu **Mostrar el nom del compte**
+per incloure aquesta columna. Trieu **Veure** per consultar l'informe en pantalla
+o exporteu-lo a PDF o Excel des de l'assistent o la previsualització.
+
+El llibre inclou els assentaments validats de l'exercici, ordenats per data i
+numerats correlativament. El número 1 és una obertura virtual calculada amb els
+saldos anteriors a l'1 de gener. Els saldos dels comptes d'ingressos i despeses
+s'agrupen al compte 129; els altres saldos es mostren pels seus comptes. L'informe
+no crea assentaments a Odoo.
+
 #. Aneu a **Comptabilitat > Informes > MIS > Informes MIS** i creeu un informe.
 #. Trieu la plantilla **Balance abreviado (PGCE 2008) - cuentas agrupadas por 3 dígitos**
    per al balanç o **Pérdidas y ganancias abreviado (PGCE 2008) - cuentas agrupadas

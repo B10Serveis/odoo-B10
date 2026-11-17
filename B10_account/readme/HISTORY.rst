@@ -1,3 +1,8 @@
+17.0.1.8.0 (2026-11-17)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [ADD] Llibre Major Registre Mercantil en pantalla, PDF i Excel, amb assentament d'obertura virtual.
+
 17.0.1.7.0 (2026-11-16)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
