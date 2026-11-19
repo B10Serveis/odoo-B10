@@ -20,7 +20,7 @@ class B10AccountMove(models.Model):
 
     # Similar to `b10_sales:sale.order:_check_nonempty_payment_journal()`,
     # but checking the actual value as the field has no domain restrictions.
-    @api.constrains("partner_bank_id")
+    @api.constrains("partner_bank_id", "payment_mode_id")
     def _check_transfer_partner_bank(self):
         bank_transfer = self.env.ref(
             "b10_account.account_payment_method_bank_transfer",
@@ -42,6 +42,7 @@ class B10AccountMove(models.Model):
                 or payment_mode.payment_method_id != bank_transfer
                 or (
                     payment_mode.bank_account_link == "fixed"
+                    and payment_mode.fixed_journal_id.bank_account_id
                     and partner_bank == payment_mode.fixed_journal_id.bank_account_id
                 )
                 or (
@@ -63,6 +64,18 @@ class B10AccountMove(models.Model):
     @api.onchange("payment_mode_id")
     def _onchange_payment_mode_id_b10(self):
         payment_mode = self.payment_mode_id
+        bank_transfer = self.env.ref(
+            "b10_account.account_payment_method_bank_transfer",
+            raise_if_not_found=False,
+        )
+        if (
+            not self.is_inbound(include_receipts=True)
+            or not bank_transfer
+            or not payment_mode
+            or payment_mode.payment_method_id != bank_transfer
+        ):
+            return
+
         old_partner_bank = self.partner_bank_id
 
         assert (
@@ -84,24 +97,7 @@ class B10AccountMove(models.Model):
         else:  # old bank not among variable ones
             new_partner_bank = payment_mode.variable_journal_ids[0].bank_account_id
 
-        is_bank_transfer = False
-        bank_transfer = self.env.ref(
-            "b10_account.account_payment_method_bank_transfer",
-            raise_if_not_found=False,
-        )
-        if (
-            bank_transfer
-            and payment_mode
-            and payment_mode.payment_method_id == bank_transfer
-        ):
-            # The check only applies to bank transfer payments.
-            is_bank_transfer = True
-
-        if (
-            is_bank_transfer
-            and old_partner_bank
-            and new_partner_bank != old_partner_bank
-        ):
+        if old_partner_bank and new_partner_bank != old_partner_bank:
             raise exceptions.ValidationError(
                 _(
                     "The current recipient bank cannot be used "
@@ -134,6 +130,8 @@ class B10AccountMove(models.Model):
                 if payment_mode.bank_account_link == "fixed":
                     return payment_mode.fixed_journal_id.bank_account_id
                 assert payment_mode.bank_account_link == "variable"
+                if not payment_mode.variable_journal_ids:
+                    return False
                 return payment_mode.variable_journal_ids[0].bank_account_id
 
             # B10: Afegim condicional perque no reescrigui si ja n'hi ha
