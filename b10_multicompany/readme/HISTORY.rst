@@ -13,3 +13,9 @@
 
 * [FIX] Valida que els productes intercompany siguin compartits o pertanyin a
   l'empresa destinatària, independentment dels permisos dels usuaris de compres.
+
+18.0.1.1.2 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Implementa el càlcul de la línia de compra intercompany vinculada a cada
+  línia de venda, també quan l'usuari no té accés a l'empresa destinatària.

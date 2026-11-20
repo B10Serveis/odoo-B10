@@ -18,6 +18,18 @@ class SaleOrderLine(models.Model):
         copy=False,
     )
 
+    def _compute_intercompany_purchase_line_id(self):
+        """Find the purchase lines generated from these sale lines in a batch."""
+        purchase_lines = self.env["purchase.order.line"].search_read(
+            [("auto_sale_line_id", "in", self.ids)],
+            ["id", "auto_sale_line_id"],
+        )
+        purchase_by_sale = {
+            line["auto_sale_line_id"][0]: line["id"] for line in purchase_lines
+        }
+        for line in self:
+            line.intercompany_purchase_line_id = purchase_by_sale.get(line.id, False)
+
     def _check_intercompany_product(self, dest_company):
         for line in self:
             product_company = line.product_id.company_id
