@@ -97,6 +97,9 @@ Per fer servir aquest mòdul:
    - Ves a: Vendes > Configuració > Productes > Classificacions de Marges
    - Crea noves classificacions
    - Assigna classificacions als teus productes
+   - Al formulari del producte, trobaràs la classificació de marge sota el preu de venda i els impostos.
+   - Si el marge és incorrecte, el preu teòric i el botó per augmentar o reduir el preu apareixen a la mateixa línia.
+   - Aquests camps s'oculten al formulari de producte quan hi ha diverses variants.
 
 Correcció dels noms dels informes en instal·lacions existents
 -----------------------------------------------------------
@@ -207,6 +210,12 @@ Changelog
 
 * [FIX] Corregeix els enllaços de correu i web del peu de les plantilles de pressupost, comanda i proforma, incloses les traduccions catalanes i castellanes.
 * [FIX] Mostra la unitat de mesura al costat de la quantitat a l'informe de pressupost.
+
+18.0.1.10.0 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Reorganitza els camps de marge sota el preu de venda i els impostos del formulari de producte, amb el preu teòric i els botons d'ajust a la mateixa línia.
+* [IMP] Oculta el preu teòric i els botons quan el marge és correcte o el producte té diverses variants, seguint el comportament de 17.0.
 
 Bug Tracker
 ===========

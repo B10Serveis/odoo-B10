@@ -1213,6 +1213,7 @@ msgstr "Creado el"
 #. module: b10_sales
 #: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_form
 #: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_tree
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_template_form_margin_fields
 msgid "Decrease the Sale Price down to Theoretical Price"
 msgstr "Reducir el precio de venta hasta el precio teórico"
 
@@ -1291,6 +1292,7 @@ msgstr "Margen incorrecto"
 #. module: b10_sales
 #: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_form
 #: model_terms:ir.ui.view,arch_db:b10_sales.view_product_product_tree
+#: model_terms:ir.ui.view,arch_db:b10_sales.view_product_template_form_margin_fields
 msgid "Increase the Sale Price up to Theoretical Price"
 msgstr "Aumentar el precio de venta hasta el precio teórico"
 

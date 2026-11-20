@@ -23,6 +23,9 @@ Per fer servir aquest mòdul:
    - Ves a: Vendes > Configuració > Productes > Classificacions de Marges
    - Crea noves classificacions
    - Assigna classificacions als teus productes
+   - Al formulari del producte, trobaràs la classificació de marge sota el preu de venda i els impostos.
+   - Si el marge és incorrecte, el preu teòric i el botó per augmentar o reduir el preu apareixen a la mateixa línia.
+   - Aquests camps s'oculten al formulari de producte quan hi ha diverses variants.
 
 Correcció dels noms dels informes en instal·lacions existents
 -----------------------------------------------------------

@@ -94,3 +94,9 @@
 
 * [FIX] Corregeix els enllaços de correu i web del peu de les plantilles de pressupost, comanda i proforma, incloses les traduccions catalanes i castellanes.
 * [FIX] Mostra la unitat de mesura al costat de la quantitat a l'informe de pressupost.
+
+18.0.1.10.0 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Reorganitza els camps de marge sota el preu de venda i els impostos del formulari de producte, amb el preu teòric i els botons d'ajust a la mateixa línia.
+* [IMP] Oculta el preu teòric i els botons quan el marge és correcte o el producte té diverses variants, seguint el comportament de 17.0.

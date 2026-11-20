@@ -5,27 +5,33 @@
     <field name="model">product.template</field>
     <field name="inherit_id" ref="product.product_template_only_form_view"/>
     <field name="arch" type="xml">
-      <xpath expr="//sheet" position="inside">
-        <group string="Margin Classification">
-            <field name="margin_classification_id"
-                string="Margin Classification"
-                invisible="product_variant_count &gt; 1"/>
-            <field name="theoretical_price"
-                string="Theoretical Price"
-                widget="monetary"
-                options="{'currency_field': 'currency_id', 'field_digits': True}"
-                invisible="product_variant_count &gt; 1 or theoretical_difference == 0"/>
-            <button name="use_theoretical_price"
-                    type="object"
-                    string="⇒ Increase"
-                    class="btn-link"
-                    invisible="margin_state != 'too_cheap' or product_variant_count &gt; 1"/>
-            <button name="use_theoretical_price"
-                    type="object"
-                    string="⇒ Decrease"
-                    class="btn-link"
-                    invisible="margin_state != 'too_expensive' or product_variant_count &gt; 1"/>
-        </group>
+      <xpath expr="//div[@name='taxes_div']" position="after">
+        <field name="margin_classification_id"
+            string="Margin Classification"
+            invisible="product_variant_count &gt; 1"/>
+        <label for="theoretical_price"
+            invisible="margin_state not in ('too_cheap', 'too_expensive') or product_variant_count &gt; 1"/>
+        <div name="b10_theoretical_price" class="o_row"
+            invisible="margin_state not in ('too_cheap', 'too_expensive') or product_variant_count &gt; 1">
+          <field name="theoretical_price"
+              string="Theoretical Price"
+              class="oe_inline"
+              widget="monetary"
+              options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+          <button name="use_theoretical_price"
+              type="object"
+              string="⇒ Increase"
+              class="oe_link"
+              invisible="margin_state != 'too_cheap'"
+              help="Increase the Sale Price up to Theoretical Price"/>
+          <button name="use_theoretical_price"
+              type="object"
+              string="⇒ Decrease"
+              class="oe_link"
+              invisible="margin_state != 'too_expensive'"
+              help="Decrease the Sale Price down to Theoretical Price"/>
+        </div>
+        <field name="margin_state" invisible="1"/>
       </xpath>
     </field>
   </record>

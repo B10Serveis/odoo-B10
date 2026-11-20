@@ -5,7 +5,7 @@
 {
     "name": "Batista10 - Sales",
     "summary": "Personalització Vendes Batista10",
-    "version": "18.0.1.9.2",
+    "version": "18.0.1.10.0",
     "category": "Sales",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
