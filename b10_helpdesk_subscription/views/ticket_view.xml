@@ -16,9 +16,13 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
                 type="xml">
                 <xpath expr="//field[@name='partner_email']"
                     position="after">
+                    <field name="company_id"
+                        invisible="1"/>
+                    <field name="current_time"
+                        invisible="1"/>
                     <field name="related_subscription"
                         options="{'color_field': 'color', 'no_create_edit': True}"
-                        domain="['|', ('date', '&gt;=', current_time),('date', '=', False)]"/>
+                        domain="[('partner_id', '=', partner_id), ('company_id', '=', company_id), '|', ('date', '&gt;=', current_time), ('date', '=', False)]"/>
                 </xpath>
             </field>
         </record>

@@ -30,3 +30,15 @@ msgstr "Hora Actual"
 #: model:ir.model,name:b10_helpdesk_contract.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
 msgstr "Tiquet del centre d'assitència"
+
+#. module: b10_helpdesk_contract
+#. odoo-python
+#: code:addons/b10_helpdesk_contract/models/helpdeskB10.py:0
+msgid "The contract must belong to the ticket contact or its commercial entity."
+msgstr "El contrato debe pertenecer al contacto del ticket o a su entidad comercial."
+
+#. module: b10_helpdesk_contract
+#. odoo-python
+#: code:addons/b10_helpdesk_contract/models/helpdeskB10.py:0
+msgid "The contract must belong to the same company as the ticket."
+msgstr "El contrato debe pertenecer a la misma compañía que el ticket."

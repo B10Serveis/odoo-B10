@@ -6,3 +6,9 @@
 1.0.1 (2026-03-30)
 ~~~~~~~~~~~~~~~~~~
 * [IMP] Documentació separada en fitxers, resol nom de mòdul incorrecte en documents.
+
+1.0.2 (2026-11-20)
+~~~~~~~~~~~~~~~~~~
+
+* [FIX] Filtra contractes del contacte o de la seva entitat comercial i de la companyia del tiquet o sense companyia.
+* [FIX] Valida el contacte i la companyia del contracte també al servidor.

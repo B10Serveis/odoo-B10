@@ -11,11 +11,15 @@
                 type="xml">
                 <xpath expr="//field[@name='partner_email']"
                     position="after">
+                    <field name="company_id"
+                        invisible="1"/>
                     <field name="current_time"
+                        invisible="1"/>
+                    <field name="commercial_partner_id"
                         invisible="1"/>
                     <field name="related_contract"
                         options="{'color_field': 'color', 'no_create_edit': True}"
-                        domain="['|', ('date_end', '&gt;=', current_time),('date_end', '=', False)]"/>
+                        domain="[('partner_id', 'in', [partner_id, commercial_partner_id]), '|', ('company_id', '=', company_id), ('company_id', '=', False), '|', ('date_end', '&gt;=', current_time), ('date_end', '=', False)]"/>
                 </xpath>
             </field>
         </record>

@@ -50,3 +50,9 @@
 ~~~~~~~~~~~~~~~~~~
 
 * [IMP] Elimina la dependència de ``b10_settings_hub``.
+
+2.2.1 (2026-11-20)
+~~~~~~~~~~~~~~~~~~
+
+* [FIX] Capçalera de l’informe amb la companyia de cada tiquet.
+* [FIX] Informe traduït a l’idioma del contacte, amb alternativa a l’idioma de l’usuari.

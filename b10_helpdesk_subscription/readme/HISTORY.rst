@@ -20,3 +20,10 @@
 ~~~~~~~~~~~~~~~~~~
 
 * [IMP] No assumeix la presència d’informació de contracte, moguda al mòdul ``b10_helpdesk_contract``.
+
+2.0.1 (2026-11-20)
+~~~~~~~~~~~~~~~~~~
+
+* [FIX] Filtra i valida subscripcions del mateix client i companyia que el tiquet.
+* [FIX] Neteja subscripcions incompatibles en canviar el client o la companyia i conserva l’actualització del contacte del mòdul base.
+* [FIX] Inclou els camps necessaris per al domini a la vista de subscripcions.
