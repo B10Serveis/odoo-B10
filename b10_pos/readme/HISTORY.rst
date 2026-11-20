@@ -21,3 +21,17 @@
 * [FIX] Conserva els identificadors de tarifes i proveïdors que necessita el TPV.
 * [FIX] Mostra les ubicacions internes de l'empresa del TPV i les compartides,
   amb el nom complet i l'identificador, prioritzant la ubicació d'origen del TPV.
+
+18.0.1.3.0 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [IMP] Trasllada l'informe de tancament de caixa de 17.0: selecciona les sessions
+  tancades per data de tancament i zona horària i agrupa els pagaments per mètode.
+* [IMP] Mostra els imports venuts i declarats, amb format monetari, dates locals,
+  columnes alineades i missatges quan no hi ha sessions o pagaments.
+* [FIX] Conserva el signe de les devolucions i incorpora les diferències de
+  recompte dels pagaments bancaris separats, també si es van tancar en un altre idioma.
+* [FIX] Permet imprimir als usuaris de TPV sense permisos comptables generals,
+  limitant les consultes comptables a les sessions autoritzades.
+* [FIX] Corregeix el model de l'acció d'impressió i elimina la vinculació antiga
+  en actualitzar el mòdul. Incorpora traduccions al català i castellà i proves a 18.0.

@@ -1,18 +1,16 @@
-1. **Instal·lació**  
+Per generar l'informe de tancament de caixa:
 
-   - Ves a **Apps** i instal·la **Batista10 – POS**.  
-   - Assegura’t que l’usuari forma part del grup **Point of Sale / User** o **Manager**.
+#. Obriu **Punt de venda → Informes → POS Closing Report**.
+#. Seleccioneu el punt de venda i les dates inicial i final i premeu **Imprimir**.
+#. L'informe inclou les sessions tancades dins del període segons la data de
+   tancament i la zona horària de l'usuari, encara que s'obrissin abans.
+#. Per a cada sessió mostra el número, les dates d'obertura i tancament, el TPV i
+   els imports venuts i declarats agrupats per forma de pagament.
 
-2. **Generar Informe de tancament de caixa**  
+«—» indica que no hi ha cap import declarat registrat per a aquella forma de
+pagament. Les devolucions conserven el signe negatiu. Per a l'efectiu, el declarat
+és el recompte final del calaix: pot incloure el fons inicial i els moviments
+d'entrada o sortida i no ha de coincidir necessàriament amb l'import venut.
 
-   - Al menú **Point of Sale → Reporting → POS Closing Report**, obre el wizard.  
-   - Selecciona **Start Date**, **End Date** i la **POS Configuration**.  
-   - Prem **Print** per obtenir el PDF amb:  
-
-     - Llista de sessions dins l’interval (estat, dates, total per sessió).  
-     - Subtaules de pagaments per mètode (Declared, Real).  
-
-3. **Validar seguretat**  
-
-   - Accedeix amb un usuari sense permisos POS: no ha de poder obrir el wizard.  
-   - Amb un usuari POS User, el menú i el wizard han d’estar disponibles.
+Els usuaris i administradors de TPV poden generar l'informe de les empreses que
+tenen autoritzades, sense necessitar permisos comptables generals.

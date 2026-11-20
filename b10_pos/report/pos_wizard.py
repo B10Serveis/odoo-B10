@@ -1,96 +1,179 @@
-from datetime import timedelta
-import pytz
-from odoo import api, fields, models
+from datetime import datetime, time, timedelta
 
-class ReportPosReportClosing(models.AbstractModel):
-    _name = 'report.b10_pos.report_pos_closing_report'
-    _description = 'POS Closing Report'
+import pytz
+
+from odoo import _, api, fields, models
+from odoo.exceptions import AccessError, UserError
+
+
+class ReportPosClosing(models.AbstractModel):
+    _name = "report.b10_pos.report_pos_closing_report"
+    _description = "POS Closing Report"
 
     @api.model
-    def get_session(self, date_ini=False, date_fi=False, config_id=False):
-        # Obtenim el POS config
-        config = self.env['pos.config'].browse(config_id) if config_id else False
-
-        # Timezone de l'usuari
-        user_tz = pytz.timezone(self.env.context.get('tz') or self.env.user.tz or 'UTC')
-        today_local = fields.Datetime.context_timestamp(
-            self,
-            fields.Datetime.from_string(fields.Date.context_today(self))
+    def _date_to_utc(self, date_value, timezone, end=False):
+        date_value = fields.Date.to_date(date_value)
+        if end:
+            date_value += timedelta(days=1)
+        local_datetime = timezone.localize(
+            datetime.combine(date_value, time.min), is_dst=False
         )
-        # Convertim a UTC
-        today_utc = today_local.astimezone(pytz.UTC)
+        return local_datetime.astimezone(pytz.UTC).replace(tzinfo=None)
 
-        # Dates d'inici i fi
-        dt_ini = fields.Datetime.from_string(date_ini) if date_ini else today_utc
-        dt_fi  = fields.Datetime.from_string(date_fi) + timedelta(days=1, seconds=-1)  if date_fi  else today_utc + timedelta(days=1, seconds=-1)
-        dt_fi  = max(dt_fi, dt_ini)
+    @api.model
+    def get_session(self, date_start, date_stop, config_id):
+        if not self.env.user.has_group("point_of_sale.group_pos_user"):
+            raise AccessError(_("Only Point of Sale users can print this report."))
+        config = self.env["pos.config"].browse(config_id).exists()
+        if not config:
+            raise UserError(_("Select a point of sale to print the closing report."))
+        config.ensure_one()
+        config.check_access("read")
+        timezone = pytz.timezone(
+            self.env.context.get("tz") or self.env.user.tz or "UTC"
+        )
+        date_start = fields.Date.to_date(date_start or fields.Date.context_today(self))
+        date_stop = fields.Date.to_date(date_stop or date_start)
+        if date_stop < date_start:
+            date_stop = date_start
 
-        date_ini_str = fields.Datetime.to_string(dt_ini)
-        date_fi_str  = fields.Datetime.to_string(dt_fi)
+        start_utc = self._date_to_utc(date_start, timezone)
+        stop_utc = self._date_to_utc(date_stop, timezone, end=True)
+        sessions = self.env["pos.session"].search(
+            [
+                ("state", "=", "closed"),
+                ("config_id", "=", config_id),
+                ("stop_at", ">=", fields.Datetime.to_string(start_utc)),
+                ("stop_at", "<", fields.Datetime.to_string(stop_utc)),
+            ],
+            order="stop_at, id",
+        )
 
-        # Cerquem sessions dins l'interval
-        session_domain = [
-            ('start_at', '>=', date_ini_str),
-            ('start_at', '<=', date_fi_str),
-        ]
-        if config:
-            session_domain.append(('config_id', '=', config.id))
-        sessions = self.env['pos.session'].search(session_domain)
+        payment_groups = self.env["pos.payment"]._read_group(
+            [
+                ("session_id", "in", sessions.ids),
+                ("pos_order_id.state", "in", ["paid", "invoiced", "done"]),
+            ],
+            ["session_id", "payment_method_id"],
+            ["amount:sum"],
+        )
+        payments_by_session = {}
+        for session, payment_method, amount in payment_groups:
+            payments_by_session.setdefault(session.id, {})[
+                payment_method.id
+            ] = {"method": payment_method, "sold": amount or 0.0}
 
-        # Cerquem pagaments per aquestes sessions
-        payments = self.env['pos.payment'].search([
-            ('session_id', 'in', sessions.ids),
-            ('create_date', '>=', date_ini_str),
-            ('create_date', '<=', date_fi_str),
-        ])
+        # POS users can read these sessions without having accounting access.
+        # Elevate only this aggregation, scoped to the sessions found above.
+        declared_groups = self.env["account.payment"].sudo()._read_group(
+            [
+                ("pos_session_id", "in", sessions.ids),
+                ("company_id", "=", config.company_id.id),
+                ("state", "in", ["in_process", "paid"]),
+                ("pos_payment_method_id", "!=", False),
+            ],
+            ["pos_session_id", "pos_payment_method_id", "currency_id", "payment_type"],
+            ["amount:sum"],
+        )
+        declared_by_session = {}
+        for session, payment_method, currency, payment_type, amount in declared_groups:
+            signed_amount = (amount or 0.0) * (-1 if payment_type == "outbound" else 1)
+            signed_amount = currency._convert(
+                signed_amount, session.currency_id, session.company_id, session.stop_at
+            )
+            declared = declared_by_session.setdefault(session.id, {})
+            declared[payment_method.id] = (
+                declared.get(payment_method.id, 0.0) + signed_amount
+            )
 
-        # Agrupar imports per sessió
-        amount_map = {}
-        lines = []
-        for pay in payments:
-            sess_name = pay.session_id.name
-            method    = pay.payment_method_id.name
-            amount_map.setdefault(sess_name, 0.0)
-            amount_map[sess_name] += pay.amount
-            lines.append({
-                'fpago':       method,
-                'declarat':    pay.amount,
-                'canvi':       0.0,
-                'total':       pay.amount,
-                'session_nom': sess_name,
-            })
+        rows = []
+        for session in sessions:
+            session_payments = payments_by_session.get(session.id, {})
+
+            # Split bank payments record counting differences in a separate
+            # move, even when account payments exist for the same method.
+            for payment in session_payments.values():
+                method = payment["method"]
+                if method.type != "bank" or not method.split_transactions:
+                    continue
+                difference = self._get_counting_difference(session, method)
+                if difference is not None:
+                    declared_by_session.setdefault(session.id, {})[
+                        method.id
+                    ] = payment["sold"] + difference
+
+            payment_rows = []
+            for payment in session_payments.values():
+                method = payment["method"]
+                declared = None
+                if method.is_cash_count:
+                    declared = session.cash_register_balance_end_real
+                elif method.id in declared_by_session.get(session.id, {}):
+                    declared = declared_by_session[session.id][method.id]
+                payment_rows.append(
+                    {
+                        "name": method.name,
+                        "sold": payment["sold"],
+                        "declared": declared,
+                    }
+                )
+            payment_rows.sort(key=lambda payment: payment["name"].casefold())
+
+            rows.append({"session": session, "payments": payment_rows})
 
         return {
-            'ident':       config.id if config else False,
-            'name':        config.name if config else '',
-            'date_ini':    date_ini_str,
-            'date_fi':     date_fi_str,
-            'sessions': [{
-                'session_id':     s.id,
-                'session_name':   s.name,
-                'session_stat':   dict(
-                    self.env['pos.session']
-                        ._fields['state']
-                        ._description_selection(self.env)
-                )[s.state],
-                'session_ini':    s.start_at,
-                'session_fi':     s.stop_at,
-                'session_amount': amount_map.get(s.name, 0.0),
-            } for s in sessions],
-            'linies': lines,
+            "date_start": date_start,
+            "date_stop": date_stop,
+            "config": config,
+            "sessions": rows,
         }
+
+    @api.model
+    def _get_counting_difference(self, session, method):
+        # Odoo does not link these moves to the session. Reconstruct the
+        # standard reference in every installed language, including English
+        # references from older versions, independently of the report language.
+        languages = {code for code, _name in self.env["res.lang"].get_installed()}
+        languages.add("en_US")
+        references = {
+            session.with_context(lang=code)._get_diff_account_move_ref(
+                method.with_context(lang=code)
+            )
+            for code in languages
+        }
+        moves = self.env["account.move"].sudo().search(
+            [
+                ("ref", "in", list(references)),
+                ("journal_id", "=", method.journal_id.id),
+                ("company_id", "=", session.company_id.id),
+                ("state", "=", "posted"),
+            ]
+        )
+        journal = method.sudo().journal_id
+        accounts = journal.profit_account_id | journal.loss_account_id
+        lines = moves.line_ids.filtered(lambda line: line.account_id in accounts)
+        if not lines:
+            return None
+        return sum(
+            -line.amount_currency
+            if line.currency_id == session.currency_id
+            else session.company_id.currency_id._convert(
+                -line.balance, session.currency_id, session.company_id, session.stop_at
+            )
+            for line in lines
+        )
 
     @api.model
     def _get_report_values(self, docids, data=None):
         data = dict(data or {})
         report_data = self.get_session(
-            data.get('date_start'),
-            data.get('date_stop'),
-            data.get('session_id'),
+            data.get("date_start"),
+            data.get("date_stop"),
+            data.get("config_id") or (docids[0] if docids and len(docids) == 1 else False),
         )
         return {
-            'doc_ids':   docids,
-            'doc_model': 'pos.config',
-            'docs':      self.env['pos.config'].browse(data.get('session_id')),
+            "doc_ids": report_data["config"].ids,
+            "doc_model": "pos.config",
+            "docs": report_data["config"],
             **report_data,
         }

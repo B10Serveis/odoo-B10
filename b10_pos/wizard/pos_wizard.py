@@ -23,10 +23,12 @@ class PosClosingWizard(models.TransientModel):
             self.start_date = self.end_date
 
     def generate_report(self):
+        self.ensure_one()
         data = {
-            'date_start': self.start_date,
-            'date_stop':  self.end_date,
-            'session_id': self.pos_session_id.id,
+            'date_start': fields.Date.to_string(self.start_date),
+            'date_stop': fields.Date.to_string(self.end_date),
+            'config_id': self.pos_session_id.id,
         }
-        return self.env.ref('b10_pos.action_pos_closing_report') \
-                   .report_action(self, data=data)
+        return self.env.ref('b10_pos.action_pos_closing_report').report_action(
+            self.pos_session_id, data=data
+        )

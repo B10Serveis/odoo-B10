@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-13 20:02+0000\n"
 "PO-Revision-Date: 2025-07-13 20:02+0000\n"
@@ -167,3 +167,60 @@ msgstr "Estado"
 #: model:ir.model,name:b10_pos.model_pos_closing_wizard
 msgid "Wizard POS Closing Report"
 msgstr "Asistente de informe de cierre de TPV"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "<strong>Period: </strong>"
+msgstr "<strong>Periodo: </strong>"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Point of Sale"
+msgstr "Punto de venta"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Opening Date"
+msgstr "Fecha de apertura"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Closing Date"
+msgstr "Fecha de cierre"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Payment Method"
+msgstr "Forma de pago"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "Sold"
+msgstr "Vendido"
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "No closed sessions found for the selected period."
+msgstr "No se encontraron sesiones cerradas en el periodo seleccionado."
+
+#. module: b10_pos
+#: model_terms:ir.ui.view,arch_db:b10_pos.report_pos_closing_report
+msgid "No payments recorded for this session."
+msgstr "No hay pagos registrados en esta sesión."
+
+#. module: b10_pos
+#: model:ir.actions.report,name:b10_pos.action_pos_closing_report
+msgid "B10 - POS Closing Report"
+msgstr "B10 - Informe de cierre de TPV"
+
+#. module: b10_pos
+#. odoo-python
+#: code:addons/b10_pos/report/pos_wizard.py:0
+msgid "Only Point of Sale users can print this report."
+msgstr "Solo los usuarios del punto de venta pueden imprimir este informe."
+
+#. module: b10_pos
+#. odoo-python
+#: code:addons/b10_pos/report/pos_wizard.py:0
+msgid "Select a point of sale to print the closing report."
+msgstr "Seleccione un punto de venta para imprimir el informe de cierre."
