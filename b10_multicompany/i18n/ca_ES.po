@@ -101,13 +101,13 @@ msgstr "Línia comanda de venda"
 
 #. module: b10_multicompany
 #: model:ir.model.fields,field_description:b10_multicompany.field_sale_order__auto_purchase_order_id
-msgid "Source Purchase Order"
-msgstr "Comanda de compra objectiu"
+msgid "Linked Purchase Order"
+msgstr "Comanda de compra vinculada"
 
 #. module: b10_multicompany
 #: model:ir.model.fields,field_description:b10_multicompany.field_sale_order_line__auto_purchase_line_id
-msgid "Source Purchase Order Line"
-msgstr "Línia de comanda de compra objectiu"
+msgid "Linked Purchase Order Line"
+msgstr "Línia de comanda de compra vinculada"
 
 #. module: b10_multicompany
 #: model:ir.model.fields,field_description:b10_multicompany.field_purchase_order__auto_sale_order_id

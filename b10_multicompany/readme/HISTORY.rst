@@ -31,3 +31,13 @@
 
 * [FIX] Copia el descompte de venda a les línies de compra intercompany per
   conservar l'import net acordat, també si la tarifa del proveïdor és diferent.
+
+18.0.1.1.5 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Evita generar compres duplicades per a vendes ja vinculades i conserva
+  els enllaços d'origen de les vendes creades per l'OCA.
+* [FIX] Propaga la cancel·lació després de confirmar-la, amb protecció contra
+  reentrades entre les regles intercompany.
+* [ADD] Compatibilitat opcional ``b10_multicompany_purchase_sale``, instal·lada
+  automàticament quan també s'utilitza ``purchase_sale_inter_company`` de l'OCA.

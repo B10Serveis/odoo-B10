@@ -6,3 +6,7 @@ Imagina que tens la companyia A i la companyia B en la mateixa base de dades d�
 - La companyia A ven productes o serveis a la companyia B.
 - La companyia A crea una comanda de venda (SO) amb la companyia B com a client.
 - Aquest mòdul automatitza la creació de la comanda de compra (PO) a la companyia B amb la companyia A com a proveïdor.
+
+Si també s'utilitza ``purchase_sale_inter_company`` de l'OCA, el mòdul
+``b10_multicompany_purchase_sale`` s'instal·la automàticament per evitar bucles
+de generació i cancel·lació. L'OCA continua sent opcional.

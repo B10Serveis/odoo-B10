@@ -13,7 +13,7 @@ class SaleOrderLine(models.Model):
 
     auto_purchase_line_id = fields.Many2one(  
         comodel_name="purchase.order.line",
-        string="Target Purchase Order Line",
+        string="Linked Purchase Order Line",
         readonly=True,
         copy=False,
     )
