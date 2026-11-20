@@ -52,16 +52,15 @@ class SaleOrderLine(models.Model):
                     "warning": {
                         "title": _("Warning"),
                         "message": _(
-                            "Warning: changing the quantity here only updates the Sale Order (SO) "
-                            "and not the Purchase Order (PO). If you want the quantity to be updated "
-                            "in both synchronized orders, make the change in the PO."
+                            "Changing the quantity here does not update the linked purchase "
+                            "order. Review its quantity separately and adjust it if needed."
                         ),
                     }
                 }
     
-    @api.onchange("price_unit")
+    @api.onchange("price_unit", "discount")
     def _onchange_price_unit_warn_intercompany(self):
-        """Warns the user that changing the price in the SO does not synchronize the PO."""
+        """Warn that price and discount edits do not immediately update the purchase."""
         for line in self:
             # Only warn if it's an intercompany sale and there's a linked PO line
             if line.order_id.auto_purchase_order_id and line.auto_purchase_line_id:
@@ -69,9 +68,9 @@ class SaleOrderLine(models.Model):
                     "warning": {
                         "title": _("Warning"),
                         "message": _(
-                            "Warning: changing the price here only updates the Sale Order (SO) "
-                            "and not the Purchase Order (PO). If you want the price to be updated "
-                            "in both synchronized orders, make the change in the PO."
+                            "Changing the price or discount here does not immediately update "
+                            "the linked purchase order. Review its net amount separately "
+                            "and adjust it if needed."
                         ),
                     }
                 }
@@ -86,18 +85,16 @@ class SaleOrderLine(models.Model):
                     "warning": {
                         "title": _("Warning"),
                         "message": _(
-                            "Warning: changing the taxes here only updates the Sale Order (SO) "
-                            "and not the Purchase Order (PO). If you want the taxes to be updated "
-                            "in both synchronized orders, make the change in the PO."
+                            "Changing the taxes here does not update the linked purchase "
+                            "order. Review its taxes separately, according to that "
+                            "company's fiscal rules."
                         ),
                     }
                 }
             
     @api.onchange("product_id")
     def _onchange_product_added_warn_intercompany(self):
-        """Warns when a new line is added to an intercompany SO.
-        Does not warn if the change comes from a sync from the PO (_from_po_sync).
-        """
+        """Warn when adding a product without a linked purchase line."""
         for line in self:
             # Ignore sections/notes
             if line.display_type in ("line_section", "line_note"):
@@ -108,10 +105,9 @@ class SaleOrderLine(models.Model):
                     "warning": {
                         "title": _("Warning"),
                         "message": _(
-                            "Warning: adding a product to an intercompany Sale Order (SO).\n\n"
-                            "Important: this line will NOT be created or updated in the Purchase Order (PO).\n"
-                            "If you want the line to exist and be synchronized in both orders, "
-                            "add it to the PO."
+                            "Adding a product here does not create a line in the linked "
+                            "purchase order. Review the linked order before adding "
+                            "or changing its lines."
                         ),
                     }
                 }

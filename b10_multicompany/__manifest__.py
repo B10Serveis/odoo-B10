@@ -1,7 +1,7 @@
 {
     "name": "Batista10 - Multicompany",
     "summary": "Intercompany SO/PO rules",
-    "version": "18.0.1.1.5",
+    "version": "18.0.1.1.6",
     "category": "Sales Management",
     "website": "https://www.batista10.cat",
     "author": "Batista10",

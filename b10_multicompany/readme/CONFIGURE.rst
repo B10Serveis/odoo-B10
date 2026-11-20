@@ -1,6 +1,13 @@
-Per configurar aquest mòdul, cal: 
+Per configurar aquest mòdul, cal:
 
-#. Anar al menú *Configuració > Companyies > Companyies*. 
-#. Seleccionar una de les companyies. 
-#. Anar a la pestanya Inter-Company i, dins del grup Sale To Purchase, activar l’opció Purchase from sale (po_from_so).
-#. Si marques l’opció Purchase Orders Auto Validation a la configuració de la companyia B, aleshores, quan validis una comanda de venda (SO) a la companyia A amb la companyia B com a client, la comanda de compra (PO) es validarà automàticament a la companyia B amb la companyia A com a proveïdor.
+#. Seleccionar l'empresa que ha de rebre les compres al selector d'empreses.
+#. Anar a *Configuració > Ajustos > Batista10 (B10) > Multicompany*.
+#. Activar *Compra des de venda* i seleccionar l'usuari de compres intercompany.
+#. Activar *Validació automàtica de comandes de compra* si es vol que la compra
+   es confirmi automàticament. Si es deixa desactivada, es crea un pressupost
+   de compra pendent de confirmar.
+
+Per exemple, si s'activa aquesta regla a l'empresa B, confirmar una venda de
+l'empresa A amb B com a client genera una compra a B amb A com a proveïdor.
+La confirmació automàtica de la compra no implica que els canvis posteriors
+entre les dues comandes se sincronitzin.

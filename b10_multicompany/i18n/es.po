@@ -153,8 +153,8 @@ msgstr ""
 #: code:addons/b10_multicompany/models/sale_order.py:97
 #, python-format
 msgid ""
-"This purchase order has been automatically created from an intercompany sale "
-"order (%s)."
+"This purchase order has been automatically created from an intercompany sale"
+" order (%s)."
 msgstr ""
 "Esta orden de compra se ha creado automáticamente desde una orden de venta "
 "interempresa (%s)."
@@ -177,66 +177,54 @@ msgstr ""
 
 #. module: b10_multicompany
 #. odoo-python
-#: code:addons/b10_multicompany/models/sale_order_line.py:43
-#: code:addons/b10_multicompany/models/sale_order_line.py:60
-#: code:addons/b10_multicompany/models/sale_order_line.py:77
-#: code:addons/b10_multicompany/models/sale_order_line.py:99
+#: code:addons/b10_multicompany/models/sale_order_line.py:53
+#: code:addons/b10_multicompany/models/sale_order_line.py:69
+#: code:addons/b10_multicompany/models/sale_order_line.py:86
+#: code:addons/b10_multicompany/models/sale_order_line.py:106
 msgid "Warning"
 msgstr "Aviso"
 
 #. module: b10_multicompany
 #. odoo-python
-#: code:addons/b10_multicompany/models/sale_order_line.py:45
+#: code:addons/b10_multicompany/models/sale_order_line.py:54
 msgid ""
-"Warning: changing the quantity here only updates the Sale Order (SO) and not "
-"the Purchase Order (PO). If you want the quantity to be updated in both "
-"synchronized orders, make the change in the PO."
+"Changing the quantity here does not update the linked purchase order. Review"
+" its quantity separately and adjust it if needed."
 msgstr ""
-"Aviso: cambiar la cantidad aquí solo actualiza la orden de venta (SO) y no "
-"la orden de compra (PO). Si quieres que la cantidad se actualice en ambas "
-"órdenes sincronizadas, haz el cambio en la PO."
+"Cambiar la cantidad aquí no actualiza el pedido de compra vinculado. Revisa "
+"su cantidad por separado y ajústala si es necesario."
 
 #. module: b10_multicompany
 #. odoo-python
-#: code:addons/b10_multicompany/models/sale_order_line.py:62
+#: code:addons/b10_multicompany/models/sale_order_line.py:70
 msgid ""
-"Warning: changing the price here only updates the Sale Order (SO) and not "
-"the Purchase Order (PO). If you want the price to be updated in both "
-"synchronized orders, make the change in the PO."
+"Changing the price or discount here does not immediately update the linked "
+"purchase order. Review its net amount separately and adjust it if needed."
 msgstr ""
-"Aviso: cambiar el precio aquí solo actualiza la orden de venta (SO) y no la "
-"orden de compra (PO). Si quieres que el precio se actualice en ambas órdenes "
-"sincronizadas, haz el cambio en la PO."
+"Cambiar el precio o el descuento aquí no actualiza inmediatamente el pedido "
+"de compra vinculado. Revisa su importe neto por separado y ajústalo si es "
+"necesario."
 
 #. module: b10_multicompany
 #. odoo-python
-#: code:addons/b10_multicompany/models/sale_order_line.py:79
+#: code:addons/b10_multicompany/models/sale_order_line.py:87
 msgid ""
-"Warning: changing the taxes here only updates the Sale Order (SO) and not "
-"the Purchase Order (PO). If you want the taxes to be updated in both "
-"synchronized orders, make the change in the PO."
+"Changing the taxes here does not update the linked purchase order. Review "
+"its taxes separately, according to that company's fiscal rules."
 msgstr ""
-"Aviso: cambiar los impuestos aquí solo actualiza la orden de venta (SO) y no "
-"la orden de compra (PO). Si quieres que los impuestos se actualicen en ambas "
-"órdenes sincronizadas, haz el cambio en la PO."
+"Cambiar los impuestos aquí no actualiza el pedido de compra vinculado. "
+"Revisa sus impuestos por separado, según las reglas fiscales de su empresa."
 
 #. module: b10_multicompany
 #. odoo-python
-#: code:addons/b10_multicompany/models/sale_order_line.py:101
+#: code:addons/b10_multicompany/models/sale_order_line.py:107
 msgid ""
-"Warning: adding a product to an intercompany Sale Order (SO).\n"
-"\n"
-"Important: this line will NOT be created or updated in the Purchase Order "
-"(PO).\n"
-"If you want the line to exist and be synchronized in both orders, add it to "
-"the PO."
+"Adding a product here does not create a line in the linked purchase order. "
+"Review the linked order before adding or changing its lines."
 msgstr ""
-"Aviso: estás añadiendo un producto a una orden de venta (SO) interempresa.\n"
-"\n"
-"Importante: esta línea NO se creará ni actualizará en la orden de compra "
-"(PO).\n"
-"Si quieres que la línea exista y esté sincronizada en ambas órdenes, añádela "
-"a la PO."
+"Añadir un producto aquí no crea ninguna línea en el pedido de compra "
+"vinculado. Revisa el pedido vinculado antes de añadir o modificar sus "
+"líneas."
 
 #. module: b10_multicompany
 #. odoo-python

@@ -41,3 +41,11 @@
   reentrades entre les regles intercompany.
 * [ADD] Compatibilitat opcional ``b10_multicompany_purchase_sale``, instal·lada
   automàticament quan també s'utilitza ``purchase_sale_inter_company`` de l'OCA.
+
+18.0.1.1.6 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Corregeix els avisos de canvis a les vendes intercompany perquè no
+  prometin sincronització automàtica entre les dues comandes.
+* [IMP] Mostra també l'avís de preu en modificar el descompte i actualitza les
+  traduccions i la documentació de configuració i sincronització.
