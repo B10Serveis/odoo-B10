@@ -25,3 +25,9 @@
 
 * [FIX] Conserva la unitat de mesura de venda en crear les línies de compra
   intercompany, perquè la quantitat i el preu copiats mantinguin el seu significat.
+
+18.0.1.1.4 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Copia el descompte de venda a les línies de compra intercompany per
+  conservar l'import net acordat, també si la tarifa del proveïdor és diferent.
