@@ -202,6 +202,12 @@ Changelog
 * [FIX] Completa les traduccions catalanes dels noms dels quatre informes de venda i corregeix les castellanes, conservant el prefix B10.
 * [DOC] Documentada la importació amb sobreescriptura per corregir noms incorrectes en instal·lacions existents.
 
+18.0.1.9.2 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Corregeix els enllaços de correu i web del peu de les plantilles de pressupost, comanda i proforma, incloses les traduccions catalanes i castellanes.
+* [FIX] Mostra la unitat de mesura al costat de la quantitat a l'informe de pressupost.
+
 Bug Tracker
 ===========
 
