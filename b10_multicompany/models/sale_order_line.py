@@ -18,19 +18,17 @@ class SaleOrderLine(models.Model):
         copy=False,
     )
 
-    @api.model
-    def _check_intercompany_product(self, dest_user, dest_company):
-        if (
-            self.product_id.company_id
-            and self.product_id.company_id not in dest_user.company_ids
-        ):
-            raise UserError(
-                _(
-                    "You cannot create PO from SO because product '%s' "
-                    "is not intercompany"
+    def _check_intercompany_product(self, dest_company):
+        for line in self:
+            product_company = line.product_id.company_id
+            if product_company and product_company != dest_company:
+                raise UserError(
+                    _(
+                        "You cannot create PO from SO because product '%s' "
+                        "is not intercompany"
+                    )
+                    % line.product_id.name
                 )
-                % self.product_id.name
-            )
 
     @api.onchange("product_uom_qty")
     def _onchange_product_uom_qty_warn_intercompany(self):
@@ -105,4 +103,3 @@ class SaleOrderLine(models.Model):
                         ),
                     }
                 }
-            
