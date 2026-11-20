@@ -158,6 +158,7 @@ class SaleOrder(models.Model):
         # Override the values we want from the SO
         new_line.update(
             {
+                "product_uom": sale_line.product_uom.id,
                 "product_qty": sale_line.product_uom_qty,
                 "price_unit": sale_line.price_unit,
                 "auto_sale_line_id": sale_line.id,

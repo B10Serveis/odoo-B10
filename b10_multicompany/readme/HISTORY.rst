@@ -19,3 +19,9 @@
 
 * [FIX] Implementa el càlcul de la línia de compra intercompany vinculada a cada
   línia de venda, també quan l'usuari no té accés a l'empresa destinatària.
+
+18.0.1.1.3 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Conserva la unitat de mesura de venda en crear les línies de compra
+  intercompany, perquè la quantitat i el preu copiats mantinguin el seu significat.
