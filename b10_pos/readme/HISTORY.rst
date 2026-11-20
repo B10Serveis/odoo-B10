@@ -12,3 +12,12 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Elimina la dependència de ``b10_settings_hub``.
+
+18.0.1.2.1 (2026-11-20)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Reutilitza la informació de producte estàndard d'Odoo 18 per aplicar els
+  impostos de l'empresa del TPV i consultar els proveïdors amb dates de validesa.
+* [FIX] Conserva els identificadors de tarifes i proveïdors que necessita el TPV.
+* [FIX] Mostra les ubicacions internes de l'empresa del TPV i les compartides,
+  amb el nom complet i l'identificador, prioritzant la ubicació d'origen del TPV.
