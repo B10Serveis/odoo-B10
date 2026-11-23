@@ -32,28 +32,28 @@ class TrialBalancePartner(models.AbstractModel):
         account_ids = set()
 
         def accumulate(domain, initial=False, destination=False):
-            groups = self.env["account.move.line"].read_group(
-                domain, ["account_id", "partner_id", "balance:sum", "debit:sum",
-                         "credit:sum", "amount_currency:sum"],
-                ["account_id", "partner_id"], lazy=False,
+            groups = self.env["account.move.line"]._read_group(
+                domain=domain,
+                groupby=["account_id", "partner_id"],
+                aggregates=["balance:sum", "debit:sum", "credit:sum", "amount_currency:sum"],
             )
-            for group in groups:
-                account_id = destination or group["account_id"][0]
-                partner = group["partner_id"]
-                key = (account_id, partner[0] if partner else 0)
+            for account, partner, balance, debit, credit, amount_currency in groups:
+                account_id = destination or account.id
+                key = (account_id, partner.id if partner else 0)
                 account_ids.add(account_id)
                 row = rows.setdefault(key, dict(
                     {field: 0.0 for field in amount_fields},
-                    partner_id=key[1], partner_name=partner[1] if partner else _("Sense partner"),
+                    partner_id=key[1], partner_name=partner.display_name if partner else _("Sense partner"),
                 ))
                 if initial:
-                    row["initial_balance"] += group["balance"]
-                    row["initial_currency_balance"] += group["amount_currency"]
+                    row["initial_balance"] += balance
+                    row["initial_currency_balance"] += amount_currency
                 else:
-                    for field in ("debit", "credit", "balance"):
-                        row[field] += group[field]
-                row["ending_balance"] += group["balance"]
-                row["ending_currency_balance"] += group["amount_currency"]
+                    row["debit"] += debit
+                    row["credit"] += credit
+                    row["balance"] += balance
+                row["ending_balance"] += balance
+                row["ending_currency_balance"] += amount_currency
 
         accumulate(initial_bs, initial=True)
         accumulate(initial_pl, initial=True)

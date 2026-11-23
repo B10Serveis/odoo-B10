@@ -149,7 +149,7 @@
                                                         <!-- LOGO -->
                                                         <td valign="top"
                                                             align="right">
-                                                            <img t-attf-src="/logo.png?company={{ object.user_id.company_id.id }}"
+                                                            <img t-attf-src="/logo.png?company={{ object.company_id.id }}"
                                                                 style="padding: 0px; margin: 16px; height: auto; width: 100px;"
                                                                 t-att-alt="object.company_id.name"/>
                                                         </td>
@@ -202,7 +202,7 @@
                                                                 data-oe-t-group-active="true"
                                                                 data-oe-t-inline="true">
                                                                     |
-                                                                <a t-attf-href="'mailto:%s' % {{ user.email }}"
+                                                                <a t-att-href="'mailto:%s' % user.email"
                                                                     style="text-decoration:none; color: #454748;"
                                                                     t-out="user.email or '-'"
                                                                     contenteditable="false">
@@ -213,7 +213,7 @@
                                                                 data-oe-t-group-active="true"
                                                                 data-oe-t-inline="true">
                                                                     |
-                                                                <a t-attf-href="'%s' % {{ object.company_id.website }}"
+                                                                <a t-att-href="object.company_id.website"
                                                                     style="text-decoration:none; color: #454748;"
                                                                     t-out="object.company_id.website or '-'"
                                                                     contenteditable="false">

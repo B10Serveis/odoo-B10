@@ -74,7 +74,7 @@ class TestJournalLedger(TransactionCase):
         self.assertNotIn(self.expense.code, opening)
         self.assertEqual([line["sequence"] for line in lines
                           if line["sequence"] != "1"],
-                         [str(i) for i in range(2, 7) for _ in range(2)])
+                         [str(i) for i in range(2, 6) for _ in range(2)])
         self.assertAlmostEqual(sum(line["debit"] - line["credit"]
                                    for line in lines), 0)
 
@@ -99,7 +99,7 @@ class TestJournalLedger(TransactionCase):
         html, _ = action._render_qweb_html(action.report_name, wizard.ids, data=data)
         self.assertIn(b"210000", html)
         self.assertIn(b"Partner A", html)
-        self.assertEqual(wizard.action_export_b10_journal_ledger_pdf()["report_type"],
+        self.assertEqual(wizard.with_context(discard_logo_check=True).action_export_b10_journal_ledger_pdf()["report_type"],
                          "qweb-pdf")
         action = self.env.ref("b10_account.action_b10_journal_ledger_xlsx")
         content, _ = action._render_xlsx(action.report_name, wizard.ids, data=data)

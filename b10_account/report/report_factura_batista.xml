@@ -81,8 +81,8 @@
                                 <span t-if="company.city"
                                     t-field="company.city"/>
                                 <span> (</span>
-                                <t t-if="company.state_id.original_name">
-                                    <span t-esc="company.state_id.original_name"/>
+                                <t t-if="company.state_id.name">
+                                    <span t-field="company.state_id.name"/>
                                 </t>
                                 <span>)</span>
                                 <br/>

@@ -1,4 +1,5 @@
 from odoo import models, fields
+from odoo.tools import str2bool
 
 
 class ResConfigSettings(models.TransientModel):
@@ -18,15 +19,13 @@ class ResConfigSettings(models.TransientModel):
     # Modificacions per error de cron:
     # -Creem get_invoice_lines_by_origin() per poder obtenir el valor sense request.
     def get_invoice_lines_by_origin(self):
-        return (
-            self.env["ir.config_parameter"]
-            .sudo()
-            .get_param("b10_account.invoice_lines_by_origin", False)
+        value = self.env["ir.config_parameter"].sudo().get_param(
+            "b10_account.invoice_lines_by_origin", "False"
         )
+        return str2bool(value, default=False)
 
     def get_b10_display_payment_term_table(self):
-        return (
-            self.env["ir.config_parameter"]
-            .sudo()
-            .get_param("b10_account.b10_display_payment_term_table", False)
+        value = self.env["ir.config_parameter"].sudo().get_param(
+            "b10_account.b10_display_payment_term_table", "False"
         )
+        return str2bool(value, default=False)

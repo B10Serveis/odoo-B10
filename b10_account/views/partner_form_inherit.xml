@@ -10,7 +10,7 @@
             type="xml">
             <xpath expr="//field[@name='property_account_payable_id']"
                 position="attributes">
-                <attribute name="domain">[('account_type','ilike','liability'), ('deprecated','=',False)]</attribute>
+                <attribute name="domain">[('account_type','ilike','liability'), ('active','=',True)]</attribute>
             </xpath>
         </field>
     </record>

@@ -26,29 +26,26 @@ class B10JournalLedgerReport(models.AbstractModel):
     def _get_opening_lines(self, wizard):
         company = wizard.company_id
         start_date = date(wizard.year, 1, 1)
-        grouped = self.env["account.move.line"].read_group(
-            [
+        grouped = self.env["account.move.line"]._read_group(
+            domain=[
                 ("company_id", "=", company.id),
                 ("parent_state", "=", "posted"),
                 ("date", "<", start_date),
             ],
-            ["balance:sum"],
-            ["account_id"],
-            lazy=False,
+            groupby=["account_id"],
+            aggregates=["balance:sum"],
         )
-        account_ids = [row["account_id"][0] for row in grouped if row.get("account_id")]
+        account_ids = [account.id for account, _balance in grouped if account]
         accounts = {
             account.id: account
             for account in self.env["account.account"].browse(account_ids)
         }
         balances = {}
         profit_loss_balance = 0.0
-        for row in grouped:
-            account_ref = row.get("account_id")
-            if not account_ref:
+        for account, balance in grouped:
+            if not account:
                 continue
-            account = accounts[account_ref[0]]
-            balance = row.get("balance", 0.0)
+            account = accounts[account.id]
             if account.internal_group in ("income", "expense"):
                 profit_loss_balance += balance
             else:

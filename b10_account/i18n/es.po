@@ -1209,11 +1209,6 @@ msgid "Invoice:"
 msgstr "Factura:"
 
 #. module: b10_account
-#: model:ir.model,name:b10_account.model_account_invoice_report
-msgid "Invoices Statistics"
-msgstr "Estadísticas de facturas"
-
-#. module: b10_account
 #: model:ir.model,name:b10_account.model_account_move
 msgid "Journal Entry"
 msgstr "Asiento contable"
@@ -1272,12 +1267,6 @@ msgid ""
 msgstr ""
 "No se puede usar el banco destinatario actual con el modo de pago escogido; "
 "quite antes el banco si está seguro."
-
-#. module: b10_account
-#: model:ir.model.fields,field_description:b10_account.field_account_invoice_report__price_total_with_tax
-#: model_terms:ir.ui.view,arch_db:b10_account.view_account_invoice_report_pivot_inherit
-msgid "Total Price with Taxes"
-msgstr "Total con Impuestos"
 
 #. module: b10_account
 #: model_terms:ir.ui.view,arch_db:b10_account.report_factura_batista_document
