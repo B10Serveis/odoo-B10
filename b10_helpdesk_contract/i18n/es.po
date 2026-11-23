@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-08 08:46+0000\n"
 "PO-Revision-Date: 2025-08-08 08:46+0000\n"
@@ -22,9 +22,9 @@ msgid "Contract"
 msgstr "Contrato"
 
 #. module: b10_helpdesk_contract
-#: model:ir.model.fields,field_description:b10_helpdesk_contract.field_helpdesk_ticket__current_time
-msgid "Current time"
-msgstr "Hora Actual"
+#: model:ir.model.fields,field_description:b10_helpdesk_contract.field_helpdesk_ticket__current_date
+msgid "Current date"
+msgstr "Fecha actual"
 
 #. module: b10_helpdesk_contract
 #: model:ir.model,name:b10_helpdesk_contract.model_helpdesk_ticket

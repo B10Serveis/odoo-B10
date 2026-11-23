@@ -12,3 +12,9 @@
 
 * [FIX] Filtra contractes del contacte o de la seva entitat comercial i de la companyia del tiquet o sense companyia.
 * [FIX] Valida el contacte i la companyia del contracte també al servidor.
+
+19.0.1.0.0 (2026-11-23)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Adaptat el mòdul a Odoo 19 i activada la instal·lació.
+* [FIX] El filtre de contractes compara dates, de manera que inclou els contractes que caduquen avui.

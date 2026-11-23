@@ -4,12 +4,12 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "1.0.2",
-    "depends": ["b10_helpdesk","helpdesk_mgmt", "contract"],
+    "version": "19.0.1.0.0",
+    "depends": ["b10_helpdesk", "helpdesk_mgmt", "contract"],
     "license": "AGPL-3",
     "application": True,
     "data": [
         "views/helpdeskB10.xml",
     ],
-    "installable": False,
+    "installable": True,
 }

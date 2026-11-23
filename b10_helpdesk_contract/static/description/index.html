@@ -1,18 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils: https://docutils.sourceforge.io/" />
+<meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
 <title>Batista10 - Helpdesk-Contract</title>
 <style type="text/css">
 
 /*
 :Author: David Goodger (goodger@python.org)
-:Id: $Id: html4css1.css 9511 2024-01-13 09:50:07Z milde $
+:Id: $Id: html4css1.css 8954 2022-01-20 10:10:25Z milde $
 :Copyright: This stylesheet has been placed in the public domain.
 
 Default cascading style sheet for the HTML output of Docutils.
-Despite the name, some widely supported CSS2 features are used.
 
 See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
 customize this style sheet.
@@ -275,7 +275,7 @@ pre.literal-block, pre.doctest-block, pre.math, pre.code {
   margin-left: 2em ;
   margin-right: 2em }
 
-pre.code .ln { color: gray; } /* line numbers */
+pre.code .ln { color: grey; } /* line numbers */
 pre.code, code { background-color: #eeeeee }
 pre.code .comment, code .comment { color: #5C6576 }
 pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
@@ -301,7 +301,7 @@ span.option {
 span.pre {
   white-space: pre }
 
-span.problematic, pre.problematic {
+span.problematic {
   color: red }
 
 span.section-subtitle {
@@ -369,7 +369,7 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:2fd3a46b12678c580bbade22ddd98e038e5008b900aabb75afa402ecb53a7902
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_helpdesk_contract"><img alt="B10Serveis/odoo-B10" src="https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github" /></a></p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_helpdesk_contract"><img alt="B10Serveis/odoo-B10" src="https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github" /></a></p>
 <p>Afegeix el camp <strong>Contracte relacionat</strong> als tiquets de <em>Helpdesk</em>, permetent vincular un tiquet amb un contracte actiu o sense data de caducitat.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
@@ -379,14 +379,16 @@ ul.auto-toc {
 <li><a class="reference internal" href="#changelog" id="toc-entry-3">Changelog</a><ul>
 <li><a class="reference internal" href="#section-1" id="toc-entry-4">1.0.0 (2025-08-08)</a></li>
 <li><a class="reference internal" href="#section-2" id="toc-entry-5">1.0.1 (2026-03-30)</a></li>
+<li><a class="reference internal" href="#section-3" id="toc-entry-6">1.0.2 (2026-11-20)</a></li>
+<li><a class="reference internal" href="#section-4" id="toc-entry-7">19.0.1.0.0 (2026-11-23)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bug-tracker" id="toc-entry-6">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="toc-entry-7">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="toc-entry-8">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="toc-entry-9">Contributors</a></li>
-<li><a class="reference internal" href="#other-credits" id="toc-entry-10">Other credits</a></li>
-<li><a class="reference internal" href="#maintainers" id="toc-entry-11">Maintainers</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-8">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-9">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-10">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-11">Contributors</a></li>
+<li><a class="reference internal" href="#other-credits" id="toc-entry-12">Other credits</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-13">Maintainers</a></li>
 </ul>
 </li>
 </ul>
@@ -422,25 +424,39 @@ ul.auto-toc {
 <li>[IMP] Documentació separada en fitxers, resol nom de mòdul incorrecte en documents.</li>
 </ul>
 </div>
+<div class="section" id="section-3">
+<h2><a class="toc-backref" href="#toc-entry-6">1.0.2 (2026-11-20)</a></h2>
+<ul class="simple">
+<li>[FIX] Filtra contractes del contacte o de la seva entitat comercial i de la companyia del tiquet o sense companyia.</li>
+<li>[FIX] Valida el contacte i la companyia del contracte també al servidor.</li>
+</ul>
+</div>
+<div class="section" id="section-4">
+<h2><a class="toc-backref" href="#toc-entry-7">19.0.1.0.0 (2026-11-23)</a></h2>
+<ul class="simple">
+<li>[MIG] Adaptat el mòdul a Odoo 19 i activada la instal·lació.</li>
+<li>[FIX] El filtre de contractes compara dates, de manera que inclou els contractes que caduquen avui.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="bug-tracker">
-<h1><a class="toc-backref" href="#toc-entry-6">Bug Tracker</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-8">Bug Tracker</a></h1>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_helpdesk_contract%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_helpdesk_contract%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
-<h1><a class="toc-backref" href="#toc-entry-7">Credits</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-9">Credits</a></h1>
 <div class="section" id="authors">
-<h2><a class="toc-backref" href="#toc-entry-8">Authors</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-10">Authors</a></h2>
 <ul class="simple">
 <li>Batista10</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h2><a class="toc-backref" href="#toc-entry-9">Contributors</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-11">Contributors</a></h2>
 <ul class="simple">
 <li>Marc Tormo i Bochaca &lt;<a class="reference external" href="mailto:marc&#64;batista10.cat">marc&#64;batista10.cat</a>&gt; (<a class="reference external" href="https://www.batista10.cat">https://www.batista10.cat</a>)</li>
 <li>Joan Llimiñana i Sabaté &lt;<a class="reference external" href="mailto:joan&#64;batista10.cat">joan&#64;batista10.cat</a>&gt; (<a class="reference external" href="https://www.batista10.cat">https://www.batista10.cat</a>)</li>
@@ -448,15 +464,15 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 </ul>
 </div>
 <div class="section" id="other-credits">
-<h2><a class="toc-backref" href="#toc-entry-10">Other credits</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-12">Other credits</a></h2>
 <p>The development of this module has been financially supported by:</p>
 <ul class="simple">
 <li>Batista10</li>
 </ul>
 </div>
 <div class="section" id="maintainers">
-<h2><a class="toc-backref" href="#toc-entry-11">Maintainers</a></h2>
-<p>This module is part of the <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_helpdesk_contract">B10Serveis/odoo-B10</a> project on GitHub.</p>
+<h2><a class="toc-backref" href="#toc-entry-13">Maintainers</a></h2>
+<p>This module is part of the <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_helpdesk_contract">B10Serveis/odoo-B10</a> project on GitHub.</p>
 <p>You are welcome to contribute.</p>
 </div>
 </div>

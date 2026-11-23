@@ -13,13 +13,13 @@
                     position="after">
                     <field name="company_id"
                         invisible="1"/>
-                    <field name="current_time"
+                    <field name="current_date"
                         invisible="1"/>
                     <field name="commercial_partner_id"
                         invisible="1"/>
                     <field name="related_contract"
-                        options="{'color_field': 'color', 'no_create_edit': True}"
-                        domain="[('partner_id', 'in', [partner_id, commercial_partner_id]), '|', ('company_id', '=', company_id), ('company_id', '=', False), '|', ('date_end', '&gt;=', current_time), ('date_end', '=', False)]"/>
+                        options="{'no_create_edit': True}"
+                        domain="[('partner_id', 'in', [partner_id, commercial_partner_id]), '|', ('company_id', '=', company_id), ('company_id', '=', False), '|', ('date_end', '&gt;=', current_date), ('date_end', '=', False)]"/>
                 </xpath>
             </field>
         </record>
