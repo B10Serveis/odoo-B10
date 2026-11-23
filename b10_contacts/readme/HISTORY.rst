@@ -13,3 +13,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Elimina la dependència de ``b10_settings_hub``.
+
+19.0.1.0.0 (2026-11-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Migrat a Odoo 19 i adaptat ``create()`` per a la creació per lots.

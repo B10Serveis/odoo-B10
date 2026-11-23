@@ -1,7 +1,7 @@
 {
     "name": "Batista10 - Contactes",
     "summary": "Personalitzacions de contactes",
-    "version": "18.0.1.2.0",
+    "version": "19.0.1.0.0",
     "category": "Personalization",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
@@ -11,7 +11,7 @@
         "security/ir.model.access.csv",
         "data/res.country.state.csv",
     ],
-    "installable": False,
+    "installable": True,
     "application": True,
     "auto_install": False,
 }
