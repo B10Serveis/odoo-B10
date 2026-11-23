@@ -56,3 +56,9 @@
 
 * [FIX] Capçalera de l’informe amb la companyia de cada tiquet.
 * [FIX] Informe traduït a l’idioma del contacte, amb alternativa a l’idioma de l’usuari.
+
+19.0.1.0.0 (2026-11-23)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Migrat a Odoo 19 i adaptat l'informe als informes QWeb de la versió 19.
+* [FIX] Omet les seccions de notes buides a l'informe.

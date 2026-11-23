@@ -83,7 +83,10 @@
                         </div>
                     </div>
                     <!-- PAGE -->
-                    <div class="article">
+                    <div class="article"
+                        t-att-data-oe-model="doc._name"
+                        t-att-data-oe-id="doc.id"
+                        t-att-data-oe-lang="lang">
                         <div class="container"
                             style="margin-bottom:1em; font-size: 14px; padding-top:25px;">
                             <div class="row"
@@ -206,7 +209,7 @@
                                 </div>
                             </div>
                             <div class="row"
-                                t-if="doc.description != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'"
+                                t-if="not is_html_empty(doc.description)"
                                 id="b10_ticket_description"
                                 style="padding:1em;">
                                 <div class="col-2">
@@ -222,7 +225,7 @@
                                 </div>
                             </div>
                             <div class="row"
-                                t-if="doc.close_note != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'"
+                                t-if="not is_html_empty(doc.close_note)"
                                 id="b10_ticket_close_notes"
                                 style="border-bottom: 1px solid #c1c1c1; padding:1em;">
                                 <div class="col-2">
