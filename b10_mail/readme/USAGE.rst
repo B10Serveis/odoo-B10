@@ -1,5 +1,4 @@
-#. Instal·la **b10_mail** com a mòdul normal.  
-#. Afegeix-lo com a dependència en els manifests dels mòduls que envien emails.  
-#. Reinicia el servidor i actualitza el mòdul. A partir d’ara, tots els emails
-   basats en `mail.mail_notification_layout` utilitzaran el teu header i
-   no mostraran el footer d’Odoo.
+#. Instal·la **b10_mail** i configura un logotip propi a l’empresa.
+#. Afegeix-lo com a dependència dels mòduls que necessitin aquesta plantilla.
+#. Actualitza el mòdul després de canviar-ne el codi. Els correus basats en
+   `mail.mail_notification_layout` mostraran el logotip i no inclouran el peu.

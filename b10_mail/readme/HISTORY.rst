@@ -1,3 +1,9 @@
+19.0.1.0.0 (2026-11-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Adaptació de la capçalera i el peu de les notificacions a Odoo 19.
+* [IMP] Eliminada la dependència innecessària de `b10_contacts`.
+
 18.0.1.0.0 (2025-08-05)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
