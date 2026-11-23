@@ -11,7 +11,7 @@
             <field name="arch"
                    type="xml">
                 <!-- FER VISIBLE SI EL CAMP ÉS CADUCAT -->
-                <xpath expr="//field[@name='date_end']"
+                <xpath expr="//sheet/group[@invisible='line_recurrence']/group/field[@name='date_end']"
                        position="after">
                     <field name="contract_expiration"
                            string="Expiration date"
@@ -19,7 +19,7 @@
                            widget="remaining_days"/>
                 </xpath>
                 <!-- FER VISIBLE I EDITABLE EL CAMP LAST DATE INVOICED -->
-                <xpath expr="//field[@name='recurring_next_date']"
+                <xpath expr="//sheet/group[@invisible='line_recurrence']/group/field[@name='recurring_next_date']"
                        position="after">
                     <field name="last_date_invoiced"
                            string="Last date invoiced"
