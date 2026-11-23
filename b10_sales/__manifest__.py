@@ -56,7 +56,7 @@
             "b10_sales/static/src/css/form_stats.scss",
         ],
     },
-    "installable": True,
+    "installable": False,
     "application": True,
     "auto_install": False,
 }

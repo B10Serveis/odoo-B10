@@ -8,6 +8,6 @@
     "license": "AGPL-3",
     "depends": ["l10n_es_aeat", "base_automation"],
     "data": ["data/base_automation.xml"],
-    "installable": True,
+    "installable": False,
     "application": False,
 }

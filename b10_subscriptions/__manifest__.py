@@ -18,6 +18,6 @@
     "data": [
         "views/sale_subscription_views.xml",
     ],
-    "installable": True,
+    "installable": False,
     "application": False,
 }

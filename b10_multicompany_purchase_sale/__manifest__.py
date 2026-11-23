@@ -8,5 +8,5 @@
     "license": "AGPL-3",
     "depends": ["b10_multicompany", "purchase_sale_inter_company"],
     "auto_install": True,
-    "installable": True,
+    "installable": False,
 }

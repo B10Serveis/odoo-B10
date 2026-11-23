@@ -11,4 +11,5 @@
     "data": [
         "views/helpdeskB10.xml",
     ],
+    "installable": False,
 }

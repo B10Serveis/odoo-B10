@@ -11,4 +11,5 @@
     "data": [
         "views/contract.xml",
     ],
+    "installable": False,
 }

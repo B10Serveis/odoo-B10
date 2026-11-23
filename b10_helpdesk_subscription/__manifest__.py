@@ -8,7 +8,7 @@
     "author": "Batista10",
     "version": "2.0.1",
     "application": False,
-    "installable": True,
+    "installable": False,
     "license": "AGPL-3",
     "depends": [
         "base",

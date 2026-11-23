@@ -16,7 +16,7 @@
         "report/report_entrega_batista.xml",
         "views/email_entrega.xml",
     ],
-    "installable": True,
+    "installable": False,
     "application": True,
     "auto_install": False,
 }

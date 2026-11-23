@@ -26,4 +26,5 @@
         "views/B10_purchase_quotation_email.xml",
         "views/B10_purchase_order_email.xml",
     ],
+    "installable": False,
 }

@@ -9,4 +9,5 @@
     "application": True,
     "depends": ["sale_management", "sale", "purchase", "account_invoice_inter_company", "b10_base"],
     "data": ["views/res_config_view.xml"],
+    "installable": False,
 }

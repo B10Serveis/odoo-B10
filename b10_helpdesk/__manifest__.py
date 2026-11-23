@@ -13,4 +13,5 @@
         "report/helpdesk_ticket_action_B10.xml",
         "report/helpdesk_ticket_report_B10.xml",
     ],
+    "installable": False,
 }

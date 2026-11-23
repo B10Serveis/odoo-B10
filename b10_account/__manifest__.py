@@ -47,4 +47,5 @@
         "data/mis_report_balance_abreviated_3digits.xml",
         "data/mis_report_pyg_abreviated_3digits.xml",
     ],
+    "installable": False,
 }

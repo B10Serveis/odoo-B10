@@ -15,7 +15,7 @@
     "data": [
         "views/crm_lead_secondary_salesperson_view.xml",
     ],
-    "installable": True,
+    "installable": False,
     "application": True,
     "auto_install": False,
 }

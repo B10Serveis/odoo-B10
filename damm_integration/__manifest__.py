@@ -34,4 +34,5 @@ En particular, permet generar els següents informes en el format necessari per 
         "views/res_config_settings_view.xml",
         "wizards/reports_view.xml",
     ],
+    "installable": False,
 }

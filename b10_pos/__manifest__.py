@@ -14,5 +14,5 @@
         	'views/pos_closing_report.xml',
 			'wizard/pos_wizard_report.xml'
 			],
-	'installable': True,
+	'installable': False,
 }

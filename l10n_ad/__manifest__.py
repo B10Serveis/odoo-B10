@@ -29,4 +29,5 @@ Andorran Charts of Accounts
         'data/res_partner_data.xml',
     ],
     'license': 'LGPL-3',
+    "installable": False,
 }

@@ -13,4 +13,5 @@
             'cryptography'
         ],
     },
+    "installable": False,
 }

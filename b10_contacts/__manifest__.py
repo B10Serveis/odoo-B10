@@ -11,7 +11,7 @@
         "security/ir.model.access.csv",
         "data/res.country.state.csv",
     ],
-    "installable": True,
+    "installable": False,
     "application": True,
     "auto_install": False,
 }

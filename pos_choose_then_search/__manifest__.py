@@ -11,7 +11,7 @@
     "author": "Batista10",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": [
         "point_of_sale",
     ],

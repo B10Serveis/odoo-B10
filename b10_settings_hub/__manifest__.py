@@ -8,5 +8,5 @@
         "views/b10_res_config_settings_view.xml",
     ],
     "application": False,
-    "installable": True,
+    "installable": False,
 }
