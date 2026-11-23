@@ -5,14 +5,14 @@
 {
     "name": "Batista10 - Base",
     "summary": "Funcions comunes per a mòduls B10",
-    "version": "0.9.0",
+    "version": "19.0.0.9.0",
     "development_status": "Beta",
     "category": "Customizations",
     "author": "Batista10",
     "license": "AGPL-3",
     "website": "https://www.batista10.cat",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": ["base_setup"],
     "data": [
         "views/res_config_settings_views.xml",
