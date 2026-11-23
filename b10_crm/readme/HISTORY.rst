@@ -10,3 +10,9 @@
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 * [IMP] Elimina la dependència de ``b10_settings_hub``.
+
+19.0.1.0.0 (2026-11-23)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Migrat a Odoo 19 amb ``models.Constraint`` per mantenir la regla SQL.
+* [FIX] Mostra el comercial secundari tant a iniciatives com a oportunitats.

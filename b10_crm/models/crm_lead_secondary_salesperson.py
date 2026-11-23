@@ -3,17 +3,15 @@
 
 from odoo import fields, models
 
+
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
     secondary_user_id = fields.Many2one(
-        'res.users', string="Secondary Salesperson", tracking=True
+        "res.users", string="Secondary Salesperson", tracking=True
     )
 
-    _sql_constraints = [
-        (
-            "check_secondary_salesperson",
-            "CHECK((secondary_user_id IS NULL) OR (secondary_user_id != user_id))",
-            "El secondary salesperson ha de ser diferent del primary salesperson.",
-        ),
-    ]
+    _check_secondary_salesperson = models.Constraint(
+        "CHECK (secondary_user_id IS NULL OR secondary_user_id != user_id)",
+        "El secondary salesperson ha de ser diferent del primary salesperson.",
+    )
