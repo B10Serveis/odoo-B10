@@ -6,9 +6,9 @@
     "name": "Batista10 - Helpdesk Subscriptions",
     "summary": "Adds subscription relation in tickets",
     "author": "Batista10",
-    "version": "2.0.1",
+    "version": "19.0.1.0.0",
     "application": False,
-    "installable": False,
+    "installable": True,
     "license": "AGPL-3",
     "depends": [
         "base",

@@ -27,3 +27,9 @@
 * [FIX] Filtra i valida subscripcions del mateix client i companyia que el tiquet.
 * [FIX] Neteja subscripcions incompatibles en canviar el client o la companyia i conserva l’actualització del contacte del mòdul base.
 * [FIX] Inclou els camps necessaris per al domini a la vista de subscripcions.
+
+19.0.1.0.0 (2026-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Adaptat el mòdul a Odoo 19 i activada la instal·lació.
+* [FIX] El filtre inclou les subscripcions que vencen avui.

@@ -18,11 +18,11 @@ License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
                     position="after">
                     <field name="company_id"
                         invisible="1"/>
-                    <field name="current_time"
+                    <field name="subscription_current_date"
                         invisible="1"/>
                     <field name="related_subscription"
-                        options="{'color_field': 'color', 'no_create_edit': True}"
-                        domain="[('partner_id', '=', partner_id), ('company_id', '=', company_id), '|', ('date', '&gt;=', current_time), ('date', '=', False)]"/>
+                        options="{'no_create_edit': True}"
+                        domain="[('partner_id', '=', partner_id), ('company_id', '=', company_id), '|', ('date', '&gt;=', subscription_current_date), ('date', '=', False)]"/>
                 </xpath>
             </field>
         </record>
