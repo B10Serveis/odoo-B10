@@ -13,10 +13,10 @@ Usage
 #. A la pestanya de línies de la subscripció, afegir productes, seccions o notes.
 #. Reordenar les línies amb el control d'arrossegament.
 #. Si s'utilitza comptabilitat analítica, omplir la distribució de cada línia de
-   producte. A Odoo 18, el mòdul OCA ``product_analytic`` permet configurar models
-   de distribució analítica al producte o a la seva categoria. En afegir el
-   producte, s'apliquen els models coincidents segons el producte, la categoria,
-   el compte d'ingressos, el client i l'empresa. La distribució resultant es pot
+   producte. A Odoo 19, es poden configurar models de distribució analítica al
+   producte o a la seva categoria. En afegir el producte, s'apliquen els models
+   coincidents segons el producte, la categoria, el compte d'ingressos, el client
+   i l'empresa. La distribució resultant es pot
    editar manualment. La distribució es conserva a les factures directes i a les
    factures generades a partir d'una comanda recurrent.
 #. Seleccionar la forma de pagament de la subscripció; es trasllada a les
@@ -29,6 +29,13 @@ les regles automàtiques de la comanda.
 
 Changelog
 =========
+
+19.0.1.0.0 (2026-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* Migració a Odoo 19.0.
+* Es reutilitzen els models de distribució analítica per producte i categoria
+  disponibles a Odoo 19, sense dependre de ``product_analytic``.
 
 18.0.1.0.0 (2026-11-20)
 ~~~~~~~~~~~~~~~~~~~~~~~
