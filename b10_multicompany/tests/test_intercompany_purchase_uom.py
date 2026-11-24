@@ -36,7 +36,7 @@ class TestIntercompanyPurchaseUom(TransactionCase):
                     Command.create(
                         {
                             "product_id": self.product.id,
-                            "product_uom": uom.id,
+                            "product_uom_id": uom.id,
                             "product_uom_qty": quantity,
                             "price_unit": price,
                             "tax_id": [Command.clear()],
@@ -55,7 +55,7 @@ class TestIntercompanyPurchaseUom(TransactionCase):
             purchase_line,
             [
                 {
-                    "product_uom": sale_line.product_uom.id,
+                    "product_uom_id": sale_line.product_uom_id.id,
                     "product_qty": sale_line.product_uom_qty,
                     "price_unit": sale_line.price_unit,
                     "price_subtotal": sale_line.price_subtotal,
@@ -106,14 +106,14 @@ class TestIntercompanyPurchaseUom(TransactionCase):
                 {
                     "display_type": "line_section",
                     "name": "Section",
-                    "product_uom": False,
+                    "product_uom_id": False,
                     "product_qty": 0,
                     "price_unit": 0,
                 },
                 {
                     "display_type": "line_note",
                     "name": "Note",
-                    "product_uom": False,
+                    "product_uom_id": False,
                     "product_qty": 0,
                     "price_unit": 0,
                 },

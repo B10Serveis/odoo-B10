@@ -366,7 +366,7 @@ ul.auto-toc {
 !! changes will be overwritten.                   !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_multicompany"><img alt="B10Serveis/odoo-B10" src="https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github" /></a></p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_multicompany"><img alt="B10Serveis/odoo-B10" src="https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github" /></a></p>
 <p>Aquest mòdul és útil si hi ha diverses companyies en la mateixa base de dades d’Odoo i aquestes companyies es venen béns o serveis entre elles.
 Permet crear automàticament una comanda de compra (PO) a la companyia B a partir d’una comanda de venda (SO) feta a la companyia A.</p>
 <p>Imagina que tens la companyia A i la companyia B en la mateixa base de dades d’Odoo:</p>
@@ -375,9 +375,10 @@ Permet crear automàticament una comanda de compra (PO) a la companyia B a parti
 <li>La companyia A crea una comanda de venda (SO) amb la companyia B com a client.</li>
 <li>Aquest mòdul automatitza la creació de la comanda de compra (PO) a la companyia B amb la companyia A com a proveïdor.</li>
 </ul>
-<p>Si també s'utilitza <tt class="docutils literal">purchase_sale_inter_company</tt> de l'OCA, el mòdul
-<tt class="docutils literal">b10_multicompany_purchase_sale</tt> s'instal·la automàticament per evitar bucles
-de generació i cancel·lació. L'OCA continua sent opcional.</p>
+<p>La compatibilitat amb <tt class="docutils literal">purchase_sale_inter_company</tt> de l'OCA també està
+inclosa. El mòdul de l'OCA continua sent opcional; si està instal·lat, B10 evita
+que les regles dels dos mòduls generin documents duplicats o entrin en bucles de
+cancel·lació.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -392,14 +393,15 @@ de generació i cancel·lació. L'OCA continua sent opcional.</p>
 <li><a class="reference internal" href="#section-6" id="toc-entry-9">18.0.1.1.4 (2026-11-20)</a></li>
 <li><a class="reference internal" href="#section-7" id="toc-entry-10">18.0.1.1.5 (2026-11-20)</a></li>
 <li><a class="reference internal" href="#section-8" id="toc-entry-11">18.0.1.1.6 (2026-11-20)</a></li>
+<li><a class="reference internal" href="#section-9" id="toc-entry-12">19.0.1.0.0 (2026-11-24)</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#bug-tracker" id="toc-entry-12">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="toc-entry-13">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="toc-entry-14">Authors</a></li>
-<li><a class="reference internal" href="#contributors" id="toc-entry-15">Contributors</a></li>
-<li><a class="reference internal" href="#other-credits" id="toc-entry-16">Other credits</a></li>
-<li><a class="reference internal" href="#maintainers" id="toc-entry-17">Maintainers</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-13">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-14">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-15">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-16">Contributors</a></li>
+<li><a class="reference internal" href="#other-credits" id="toc-entry-17">Other credits</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-18">Maintainers</a></li>
 </ul>
 </li>
 </ul>
@@ -485,8 +487,7 @@ conservar l'import net acordat, també si la tarifa del proveïdor és diferent.
 els enllaços d'origen de les vendes creades per l'OCA.</li>
 <li>[FIX] Propaga la cancel·lació després de confirmar-la, amb protecció contra
 reentrades entre les regles intercompany.</li>
-<li>[ADD] Compatibilitat opcional <tt class="docutils literal">b10_multicompany_purchase_sale</tt>, instal·lada
-automàticament quan també s'utilitza <tt class="docutils literal">purchase_sale_inter_company</tt> de l'OCA.</li>
+<li>[ADD] Compatibilitat opcional amb <tt class="docutils literal">purchase_sale_inter_company</tt> de l'OCA.</li>
 </ul>
 </div>
 <div class="section" id="section-8">
@@ -498,36 +499,44 @@ prometin sincronització automàtica entre les dues comandes.</li>
 traduccions i la documentació de configuració i sincronització.</li>
 </ul>
 </div>
+<div class="section" id="section-9">
+<h2><a class="toc-backref" href="#toc-entry-12">19.0.1.0.0 (2026-11-24)</a></h2>
+<ul class="simple">
+<li>[MIG] Migració a Odoo 19.0.</li>
+<li>[IMP] Integra la compatibilitat amb <tt class="docutils literal">purchase_sale_inter_company</tt>; el mòdul
+de l'OCA continua sent opcional.</li>
+</ul>
+</div>
 </div>
 <div class="section" id="bug-tracker">
-<h1><a class="toc-backref" href="#toc-entry-12">Bug Tracker</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-13">Bug Tracker</a></h1>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_multicompany%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_multicompany%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
-<h1><a class="toc-backref" href="#toc-entry-13">Credits</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-14">Credits</a></h1>
 <div class="section" id="authors">
-<h2><a class="toc-backref" href="#toc-entry-14">Authors</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-15">Authors</a></h2>
 <ul class="simple">
 <li>Batista10</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h2><a class="toc-backref" href="#toc-entry-15">Contributors</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-16">Contributors</a></h2>
 <ul class="simple">
 <li>Pol Comas i Romero &lt;<a class="reference external" href="mailto:pol&#64;batista10.cat">pol&#64;batista10.cat</a>&gt;</li>
 </ul>
 </div>
 <div class="section" id="other-credits">
-<h2><a class="toc-backref" href="#toc-entry-16">Other credits</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-17">Other credits</a></h2>
 <p>El desenvolupament ha estat finançat per Batista10.</p>
 </div>
 <div class="section" id="maintainers">
-<h2><a class="toc-backref" href="#toc-entry-17">Maintainers</a></h2>
-<p>This module is part of the <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_multicompany">B10Serveis/odoo-B10</a> project on GitHub.</p>
+<h2><a class="toc-backref" href="#toc-entry-18">Maintainers</a></h2>
+<p>This module is part of the <a class="reference external" href="https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_multicompany">B10Serveis/odoo-B10</a> project on GitHub.</p>
 <p>You are welcome to contribute.</p>
 </div>
 </div>

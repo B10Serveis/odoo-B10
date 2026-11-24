@@ -16,7 +16,7 @@ Batista10 - Multicompany
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github
-    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_multicompany
+    :target: https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_multicompany
     :alt: B10Serveis/odoo-B10
 
 |badge1| |badge2| |badge3|
@@ -30,9 +30,10 @@ Imagina que tens la companyia A i la companyia B en la mateixa base de dades d�
 - La companyia A crea una comanda de venda (SO) amb la companyia B com a client.
 - Aquest mòdul automatitza la creació de la comanda de compra (PO) a la companyia B amb la companyia A com a proveïdor.
 
-Si també s'utilitza ``purchase_sale_inter_company`` de l'OCA, el mòdul
-``b10_multicompany_purchase_sale`` s'instal·la automàticament per evitar bucles
-de generació i cancel·lació. L'OCA continua sent opcional.
+La compatibilitat amb ``purchase_sale_inter_company`` de l'OCA també està
+inclosa. El mòdul de l'OCA continua sent opcional; si està instal·lat, B10 evita
+que les regles dels dos mòduls generin documents duplicats o entrin en bucles de
+cancel·lació.
 
 **Table of contents**
 
@@ -126,13 +127,20 @@ Changelog
 * [IMP] Mostra també l'avís de preu en modificar el descompte i actualitza les
   traduccions i la documentació de configuració i sincronització.
 
+19.0.1.0.0 (2026-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Migració a Odoo 19.0.
+* [IMP] Integra la compatibilitat amb ``purchase_sale_inter_company``; el mòdul
+  de l'OCA continua sent opcional.
+
 Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues <https://github.com/B10Serveis/odoo-B10/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_multicompany%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_multicompany%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -157,6 +165,6 @@ El desenvolupament ha estat finançat per Batista10.
 Maintainers
 ~~~~~~~~~~~
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_multicompany>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_multicompany>`_ project on GitHub.
 
 You are welcome to contribute.

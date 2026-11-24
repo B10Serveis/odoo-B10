@@ -140,7 +140,7 @@ class SaleOrder(models.Model):
                 "origin": origin_ref,
                 "auto_sale_order_id": self.id,
                 "dest_address_id": shipping_address.id if shipping_address else False,
-                "notes": self.note or False,
+                "note": self.note or False,
                 "partner_ref": self.name,
             }
         )
@@ -158,7 +158,7 @@ class SaleOrder(models.Model):
             {
                 "order_id": purchase_order.id,
                 "product_id": sale_line.product_id.id,
-                "product_uom": sale_line.product_uom.id,
+                "product_uom_id": sale_line.product_uom_id.id,
                 "display_type": sale_line.display_type,
             }
         )
@@ -170,7 +170,7 @@ class SaleOrder(models.Model):
         # Override the values we want from the SO
         new_line.update(
             {
-                "product_uom": sale_line.product_uom.id,
+                "product_uom_id": sale_line.product_uom_id.id,
                 "product_qty": sale_line.product_uom_qty,
                 "price_unit": sale_line.price_unit,
                 "discount": sale_line.discount,

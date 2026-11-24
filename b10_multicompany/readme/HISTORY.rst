@@ -49,3 +49,10 @@
   prometin sincronització automàtica entre les dues comandes.
 * [IMP] Mostra també l'avís de preu en modificar el descompte i actualitza les
   traduccions i la documentació de configuració i sincronització.
+
+19.0.1.0.0 (2026-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Migració a Odoo 19.0.
+* [IMP] Integra la compatibilitat amb ``purchase_sale_inter_company``; el mòdul
+  de l'OCA continua sent opcional.

@@ -37,7 +37,7 @@ class TestIntercompanyPurchaseLine(TransactionCase):
                         {
                             "product_id": cls.product.id,
                             "name": cls.product.name,
-                            "product_uom": cls.product.uom_id.id,
+                            "product_uom_id": cls.product.uom_id.id,
                             "product_qty": 1,
                             "price_unit": 10,
                             "date_planned": fields.Datetime.now(),
