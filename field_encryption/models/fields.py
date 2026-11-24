@@ -83,9 +83,9 @@ def _inverse_encrypt(self, records):
 class Encrypted(fields.Field):
     """ Encrypted fields provide the storage for encrypt fields. """
     type = 'encrypted'
-    column_type = ('bytea', 'bytea')
+    _column_type = ('bytea', 'bytea')
 
-    prefetch = False,
+    prefetch = False
 
     def convert_to_column(self, value, record, values=None, validate=True):
         return self.convert_to_cache(value, record, validate=validate)
