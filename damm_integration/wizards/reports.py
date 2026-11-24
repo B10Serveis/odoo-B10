@@ -283,7 +283,7 @@ class DammReportsWizard(models.TransientModel):
     def _check_dates_range(self):
         for report in self:
             if report.date_start > report.date_end:
-                raise models.ValidationError(
+                raise exceptions.ValidationError(
                     _("Report end date must be greater than its start date.")
                 )
 
@@ -388,7 +388,9 @@ class DammReportsWizard(models.TransientModel):
                     )
                 if formatter:
                     value = formatter(self, value)
-                value = (ffmt % value)[:maxlen]
+                value = ffmt % value
+                if maxlen is not None:
+                    value = value[:maxlen]
 
                 formatted_item[title] = value
             formatted_items.append(formatted_item)

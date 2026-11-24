@@ -10,25 +10,20 @@
     <field name="priority" eval="99"/>
     <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
     <field name="arch" type="xml">
-        <xpath expr="//block[@name='integration']" position="after">
-            <h2>Damm Integration</h2>
-            <div class="row mt16 o_settings_container" name="damm_integration">
-                <div class="col-12 col-lg-6 o_setting_box" id="damm_integration">
-                    <field class="o_setting_left_pane" name="group_damm_integration"/>
-                    <p class="o_setting_right_pane text-muted">
-                        Enable the creation of reports for sending to S.A. Damm;
-                        you will then need to configure settings below.
-                    </p>
-                    <div class="o_setting_right_pane" id="damm_dealer_code"
-                         groups="damm_integration.res_groups_damm_integration">
+        <xpath expr="//block[@name='integration']" position="inside">
+            <setting string="Damm Integration"
+                     help="Enable report creation for sending data to S.A. Damm."
+                     id="damm_integration">
+                <field name="group_damm_integration"/>
+                <div class="content-group" invisible="not group_damm_integration">
+                    <div class="mt16" groups="damm_integration.res_groups_damm_integration">
                         <label for="damm_dealer_code"/>
                         <field name="damm_dealer_code"/>
                         <div class="text-muted">
                             The code used by Damm to identify your company as a dealer of its products.
                         </div>
                     </div>
-                    <div class="o_setting_right_pane" id="damm_partner_id"
-                         groups="damm_integration.res_groups_damm_integration">
+                    <div class="mt16" groups="damm_integration.res_groups_damm_integration">
                         <label for="damm_partner_id"/>
                         <field name="damm_partner_id"/>
                         <div class="text-muted">
@@ -36,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </setting>
         </xpath>
     </field>
 </record>

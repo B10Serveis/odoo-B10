@@ -3,7 +3,7 @@
 {
     "name": "Integració amb Damm",
     "summary": "Integració de dades amb Damm",
-    "version": "0.9.4",
+    "version": "19.0.1.0.0",
     "development_status": "Beta",
     "category": "Sales",
     "website": "https://batista10.cat/",
@@ -34,5 +34,5 @@ En particular, permet generar els següents informes en el format necessari per 
         "views/res_config_settings_view.xml",
         "wizards/reports_view.xml",
     ],
-    "installable": False,
+    "installable": True,
 }
