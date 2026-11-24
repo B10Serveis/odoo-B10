@@ -7,7 +7,7 @@ class StockPicking(models.Model):
         self.ensure_one()
 
         # Estableix la plantilla de correu electrònic per defecte de Factura
-        template_ref = "b10_stock_picking.entrega_email_template"
+        template_ref = "b10_stock.entrega_email_template"
         template = self.env.ref(template_ref, raise_if_not_found=False)
 
         compose_form = self.env.ref(

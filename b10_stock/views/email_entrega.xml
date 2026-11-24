@@ -12,7 +12,7 @@
         <field name="auto_delete"
             eval="True" />
         <field name="report_template_ids"
-            eval="[(4, ref('b10_stock_picking.action_report_entrega_batista'))]"/>
+            eval="[(4, ref('b10_stock.action_report_entrega_batista'))]"/>
 
 
         <field name="body_html"
@@ -198,5 +198,5 @@
     <!-- WARNING: On module update, this will undo any manual changes to the template,
          regardless of its data entry `noupdate` status. -->
     <function name="reset_template" model="mail.template"
-              eval="[ref('b10_stock_picking.entrega_email_template')]"/>
+              eval="[ref('b10_stock.entrega_email_template')]"/>
 </odoo>

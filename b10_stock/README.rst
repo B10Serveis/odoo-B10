@@ -1,6 +1,6 @@
-=========================
-Batista10 - Stock Picking
-=========================
+==================
+Batista10 - Stock
+==================
 
 .. 
    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -17,7 +17,7 @@ Batista10 - Stock Picking
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-B10Serveis%2Fodoo--B10-lightgray.png?logo=github
-    :target: https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_stock_picking
+    :target: https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_stock
     :alt: B10Serveis/odoo-B10
 
 |badge1| |badge2| |badge3|
@@ -27,6 +27,20 @@ Personalització de l’impressió de les entregues i enviament per correu:
 - **Informe PDF QWeb** “Delivery Order (Batista10)” per a stock pickings (sortides i entrades) amb header corporatiu, dades de partner, llistat de línies (codi, descripció, quantitat i lots) i footer amb data programada.  
 - **Plantilla d’email** `entrega_email_template` sobre una entrega, incloent el report adjunt.  
 - **Botó Send by Email** sobre el picking (`action_picking_send`) que obre el composador amb la plantilla B10.  
+
+Migració des d’Odoo 18
+----------------------
+
+El nom tècnic passa de ``b10_stock_picking`` a ``b10_stock``. En les
+migracions d’OpenUpgrade d’Odoo 18 a 19, afegiu aquesta entrada a
+``renamed_modules`` del fitxer ``openupgrade_scripts/apriori.py`` abans
+d’executar la migració:
+
+.. code-block:: python
+
+   "b10_stock_picking": "b10_stock",
+
+Això conserva els XMLID i l’estat d’instal·lació del mòdul amb el nom nou.
 
 **Table of contents**
 
@@ -38,7 +52,7 @@ Usage
 
 1. **Instal·lació**  
 
-   - Des de **Apps**, instal·la **Batista10 – Stock Picking**.  
+   - Des de **Apps**, instal·la **Batista10 – Stock**.  
 
 2. **Enviar entrega per correu**  
 
@@ -54,8 +68,8 @@ Correcció dels noms dels informes en instal·lacions existents
 
 La versió 18.0.1.1.1 incorpora les traduccions corregides de l'informe d'entrega
 en català i castellà, amb el prefix «B10 -». Si una instal·lació conserva
-noms incorrectes, cal importar ``b10_stock_picking/i18n/ca_ES.po`` i
-``b10_stock_picking/i18n/es.po`` per als idiomes corresponents, marcant
+noms incorrectes, cal importar ``b10_stock/i18n/ca_ES.po`` i
+``b10_stock/i18n/es.po`` per als idiomes corresponents, marcant
 «Sobreescriure termes existents». Una actualització ordinària del mòdul pot
 conservar les traduccions incorrectes ja desades a la base de dades.
 
@@ -87,13 +101,18 @@ Changelog
 * [FIX] Ajusta la cadena original del nom de l'informe d'entrega a «B10 - Entrega Estandard» i les traduccions catalana i castellana.
 * [DOC] Documentada la importació amb sobreescriptura per corregir noms incorrectes en instal·lacions existents.
 
+19.0.1.0.0 (2026-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Migrat a Odoo 19 i reanomenat el mòdul tècnic a ``b10_stock``.
+
 Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues <https://github.com/B10Serveis/odoo-B10/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_stock_picking%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/B10Serveis/odoo-B10/issues/new?body=module:%20b10_stock%0Aversion:%2019.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -114,6 +133,6 @@ Contributors
 Maintainers
 ~~~~~~~~~~~
 
-This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/18.0/b10_stock_picking>`_ project on GitHub.
+This module is part of the `B10Serveis/odoo-B10 <https://github.com/B10Serveis/odoo-B10/tree/19.0/b10_stock>`_ project on GitHub.
 
 You are welcome to contribute.

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Batista10 - Stock Picking",
+    "name": "Batista10 - Stock",
     "summary": "Personalització de la impressió de les entregues",
-    "version": "18.0.1.1.1",
+    "version": "19.0.1.0.0",
     "category": "Warehouse/Reporting",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
@@ -16,7 +16,7 @@
         "report/report_entrega_batista.xml",
         "views/email_entrega.xml",
     ],
-    "installable": False,
+    "installable": True,
     "application": True,
     "auto_install": False,
 }
