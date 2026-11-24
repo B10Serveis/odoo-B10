@@ -4,11 +4,11 @@
     'name': 'Andorra - Accounting',
     'summary': ('Creation of account groups, general chart of accounts'
                 ' and Andorran taxes (IGI, IRPF)'),
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'countries': ['ad'],
     # TODO: Add ", Odoo Community Association (OCA)" when part of OCA.
     'author': 'Batista10',
-    # TODO: Replace with "https://github.com/OCA/<repo>/tree/18.0/<addon>"
+    # TODO: Replace with "https://github.com/OCA/<repo>/tree/19.0/<addon>"
     # when part of OCA.
     'website': 'https://batista10.cat',
     'category': 'Accounting/Localizations/Account Charts',
@@ -29,5 +29,5 @@ Andorran Charts of Accounts
         'data/res_partner_data.xml',
     ],
     'license': 'LGPL-3',
-    "installable": False,
+    "installable": True,
 }

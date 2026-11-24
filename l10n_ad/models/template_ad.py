@@ -36,7 +36,7 @@ class AccountChartTemplate(models.AbstractModel):
                 'default_cash_difference_expense_account_id': '678',
                 'account_sale_tax_id': 'account_tax_template_s_igi4-5',
                 'account_purchase_tax_id': 'account_tax_template_p_igi4-5',
-                'deferred_expense_account_id': '480',
-                'deferred_revenue_account_id': '485',
+                'expense_accrual_account_id': '480',
+                'revenue_accrual_account_id': '485',
             },
         }

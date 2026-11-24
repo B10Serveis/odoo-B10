@@ -1,4 +1,4 @@
-This module provides the Andorran accounting localization layer for Odoo 18. It adapts Odoo Accounting to businesses operating in Andorra with an Andorran chart of accounts, account groups, tax templates, and fiscal positions.
+This module provides the Andorran accounting localization layer for Odoo 19. It adapts Odoo Accounting to businesses operating in Andorra with an Andorran chart of accounts, account groups, tax templates, and fiscal positions.
 
 The module includes:
 
