@@ -211,7 +211,7 @@
 									<span t-field="l.price_subtotal" />
 								</td>
 							</t>
-							<t t-if="l.display_type == 'line_section'">
+							<t t-if="l.display_type in ('line_section', 'line_subsection')">
 								<td name="td_section_line"
 									colspan="99"
 									style=" background-color: rgba(0, 0, 0, 0.1);">

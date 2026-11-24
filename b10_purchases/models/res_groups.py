@@ -9,11 +9,11 @@ class ResGroups(models.Model):
         GroupMgr  = self.env.ref('b10_purchases.group_b10_pwd_manager')
         GroupRead = self.env.ref('b10_purchases.group_b10_pwd_reader')
 
-        # Només ens interessa si modifiquen la many2many 'users'
-        if 'users' in vals:
+        # Odoo 19 exposes explicit group membership through ``user_ids``.
+        if 'user_ids' in vals:
             # Extraiem els IDs d'usuaris que s'estan AFEGINT
             add_ids = []
-            for cmd in vals['users']:
+            for cmd in vals['user_ids']:
                 if cmd[0] == 4:      # (4, user_id, 0)
                     add_ids.append(cmd[1])
                 elif cmd[0] == 6:    # (6, 0, [ids])
@@ -21,18 +21,18 @@ class ResGroups(models.Model):
 
             # Si estem escrivint sobre el grup Manager, traiem aquests usuaris del Reader
             if self.filtered(lambda g: g.id == GroupMgr.id) and add_ids:
-                conflicte = GroupRead.users.filtered(lambda u: u.id in add_ids)
+                conflicte = GroupRead.user_ids.filtered(lambda u: u.id in add_ids)
                 if conflicte:
                     GroupRead.sudo().write({
-                        'users': [(3, u.id) for u in conflicte]
+                        'user_ids': [(3, u.id) for u in conflicte]
                     })
 
             # Si estem escrivint sobre el grup Reader, traiem aquests usuaris del Manager
             if self.filtered(lambda g: g.id == GroupRead.id) and add_ids:
-                conflicte = GroupMgr.users.filtered(lambda u: u.id in add_ids)
+                conflicte = GroupMgr.user_ids.filtered(lambda u: u.id in add_ids)
                 if conflicte:
                     GroupMgr.sudo().write({
-                        'users': [(3, u.id) for u in conflicte]
+                        'user_ids': [(3, u.id) for u in conflicte]
                     })
 
         return res

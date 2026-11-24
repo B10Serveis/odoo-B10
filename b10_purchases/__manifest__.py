@@ -4,12 +4,13 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.2.0",
+    "version": "19.0.1.0.0",
     "depends": [
         "base",
         "purchase",
         "field_encryption",
         "contacts",
+        "b10_contacts",
         "l10n_es_partner",
         "l10n_es_partner_mercantil",
         "b10_mail",
@@ -26,5 +27,5 @@
         "views/B10_purchase_quotation_email.xml",
         "views/B10_purchase_order_email.xml",
     ],
-    "installable": False,
+    "installable": True,
 }

@@ -1,4 +1,4 @@
-from odoo import _, models
+from odoo import models
 
 
 class PurchaseOrder(models.Model):
@@ -6,66 +6,17 @@ class PurchaseOrder(models.Model):
 
     # Override to set B10 email templates depending on the state of the PO (RFQ vs purchase order).
     def action_rfq_send(self):
-        """
-        This function opens a window to compose an email, with the B10 template loaded by default
-        """
+        """Open the standard Odoo composer with the matching B10 template."""
         self.ensure_one()
-        ir_model_data = self.env["ir.model.data"]
-        try:
-            if self.state in ["draft", "sent"]:
-                template_id = ir_model_data._xmlid_lookup(
-                    "b10_purchases.pressupost_email_template"
-                )[1]
-            else:
-                template_id = ir_model_data._xmlid_lookup(
-                    "b10_purchases.comanda_email_template"
-                )[1]
-        except ValueError:
-            template_id = False
-        try:
-            compose_form_id = ir_model_data._xmlid_lookup(
-                "mail.email_compose_message_wizard_form"
-            )[1]
-        except ValueError:
-            compose_form_id = False
-        ctx = dict(self.env.context or {})
-        ctx.update(
-            {
-                "default_model": "purchase.order",
-                "default_res_ids": self.ids,
-                "default_template_id": template_id,
-                "default_composition_mode": "comment",
-                "default_email_layout_xmlid": "mail.mail_notification_layout_with_responsible_signature",
-                "email_notification_allow_footer": True,
-                "force_email": True,
-                "mark_rfq_as_sent": True,
-            }
+        action = super().action_rfq_send()
+        template_xmlid = (
+            "b10_purchases.pressupost_email_template"
+            if self.state in ["draft", "sent"]
+            else "b10_purchases.comanda_email_template"
         )
-
-        # In the case of a RFQ or a PO, we want the "View..." button in line with the state of the
-        # object. Therefore, we pass the model description in the context, in the language in which
-        # the template is rendered.
-        lang = self.env.context.get("lang")
-        if {"default_template_id", "default_model", "default_res_id"} <= ctx.keys():
-            template = self.env["mail.template"].browse(ctx["default_template_id"])
-            if template and template.lang:
-                lang = template._render_lang([ctx["default_res_id"]])[
-                    ctx["default_res_id"]
-                ]
-
-        self = self.with_context(lang=lang)
-        if self.state in ["draft", "sent"]:
-            ctx["model_description"] = _("Request for Quotation")
-        else:
-            ctx["model_description"] = _("Purchase Order")
-
-        return {
-            "name": _("Compose Email"),
-            "type": "ir.actions.act_window",
-            "view_mode": "form",
-            "res_model": "mail.compose.message",
-            "views": [(compose_form_id, "form")],
-            "view_id": compose_form_id,
-            "target": "new",
-            "context": ctx,
-        }
+        template = self.env.ref(template_xmlid, raise_if_not_found=False)
+        action["context"] = dict(
+            action.get("context", {}),
+            default_template_id=template.id if template else False,
+        )
+        return action
