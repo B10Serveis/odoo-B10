@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.3.0",
+    "version": "19.0.1.0.0",
     "depends": ["point_of_sale"],
     "license": "AGPL-3",
     "application": True,
@@ -14,5 +14,5 @@
         	'views/pos_closing_report.xml',
 			'wizard/pos_wizard_report.xml'
 			],
-	'installable': False,
+	'installable': True,
 }

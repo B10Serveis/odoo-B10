@@ -43,8 +43,9 @@ class TestProductInfo(TestPointOfSaleCommon):
         )
 
     def test_taxes_use_pos_company(self):
-        info = self.product.with_company(self.other_company).get_product_info_pos(
-            100, 2, self.pos_config.id
+        info = (
+            self.product.product_tmpl_id.with_company(self.other_company)
+            .get_product_info_pos(100, 2, self.pos_config.id)
         )
         self.assertAlmostEqual(info["all_prices"]["price_without_tax"], 100)
         self.assertAlmostEqual(info["all_prices"]["price_with_tax"], 110)
@@ -64,7 +65,7 @@ class TestProductInfo(TestPointOfSaleCommon):
                 "payment_method_ids": [Command.clear()],
             }
         )
-        info = self.product.get_product_info_pos(100, 1, config.id)
+        info = self.product.product_tmpl_id.get_product_info_pos(100, 1, config.id)
         self.assertAlmostEqual(info["all_prices"]["price_with_tax"], 110)
         self.assertEqual(info["all_prices"]["tax_details"][0]["name"], self.tax.name)
 
@@ -105,7 +106,9 @@ class TestProductInfo(TestPointOfSaleCommon):
             "available_pricelist_ids": [Command.set(pricelists.ids)],
             "pricelist_id": pricelists[0].id,
         })
-        info = self.product.get_product_info_pos(100, 2, self.pos_config.id)
+        info = self.product.product_tmpl_id.get_product_info_pos(
+            100, 2, self.pos_config.id
+        )
         self.assertEqual(
             {supplier["id"] for supplier in info["suppliers"]}, set(sellers[:2].ids)
         )
@@ -134,8 +137,9 @@ class TestProductInfo(TestPointOfSaleCommon):
             self.env["stock.quant"]._update_available_quantity(
                 self.product, location, quantity
             )
-        info = self.product.with_context(warehouse_id=warehouse.id).get_product_info_pos(
-            100, 1, self.pos_config.id
+        info = (
+            self.product.product_tmpl_id.with_context(warehouse_id=warehouse.id)
+            .get_product_info_pos(100, 1, self.pos_config.id)
         )
         rows = {row["id"]: row for row in info["warehouses"]}
         self.assertEqual(info["warehouses"][0]["id"], source.id)

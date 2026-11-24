@@ -1,3 +1,9 @@
+19.0.1.0.0 (2026-11-24)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [MIG] Adapta `get_product_info_pos` a `product.template` i a l'API d'Odoo 19.
+* [FIX] Manté els identificadors de tarifes i l'estoc per ubicació del producte o variant seleccionat.
+
 18.0.1.0.0 (2025-02-05)
 ~~~~~~~~~~~~~~~~~~~~~~~
 * [MIG] Adaptat a Odoo 18.  
