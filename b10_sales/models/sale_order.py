@@ -94,7 +94,7 @@ class SaleOrder(models.Model):
                 )
             ):
                 continue
-            raise models.ValidationError(
+            raise exceptions.ValidationError(
                 _(
                     "A payment journal must be set with bank transfer payment modes "
                     "that have associated bank accounts."

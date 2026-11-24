@@ -5,7 +5,7 @@
 {
     "name": "Batista10 - Sales",
     "summary": "Personalització Vendes Batista10",
-    "version": "18.0.1.10.0",
+    "version": "19.0.1.0.0",
     "category": "Sales",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
@@ -56,6 +56,8 @@
             "b10_sales/static/src/css/form_stats.scss",
         ],
     },
+    # b10_account is still marked non-installable while its integrations are
+    # being migrated; this addon cannot be installed until that is resolved.
     "installable": False,
     "application": True,
     "auto_install": False,
