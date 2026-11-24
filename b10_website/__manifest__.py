@@ -1,13 +1,13 @@
 {
     "name": "Batista10 - Website",
     "summary": "Gestiona la marca de client anònim AEAT segons el NIF",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Website",
     "license": "AGPL-3",
     "depends": ["l10n_es_aeat", "base_automation"],
     "data": ["data/base_automation.xml"],
-    "installable": False,
+    "installable": True,
     "application": False,
 }

@@ -10,7 +10,7 @@
                 ('is_company', '=', False),
                 ('aeat_anonymous_cash_customer', '=', False)
             ]</field>
-            <!-- Odoo 18 infers trigger fields from the domain; watch all edits. -->
+            <!-- Keep the trigger field list empty so every edit is checked. -->
             <field name="trigger_field_ids" eval="[(5, 0, 0)]"/>
             <field name="active" eval="True"/>
         </record>
