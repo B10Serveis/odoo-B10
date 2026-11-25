@@ -230,7 +230,55 @@
                 </div>
 
                 <!-- Linies Factura -->
-                <table class="table table-condensed table-striped"
+                <style type="text/css">
+                    #b10_linetable {
+                        border: 0 !important;
+                        border-collapse: collapse !important;
+                    }
+                    #b10_linetable thead th {
+                        text-align: center !important;
+                        font-weight: bold !important;
+                        border: 0 !important;
+                        border-top: 1px solid #dee2e6 !important;
+                        border-bottom: 2px solid #000 !important;
+                    }
+                    #b10_linetable tbody td {
+                        border-top: 0 !important;
+                        border-right: 0 !important;
+                        border-bottom: 1px solid #dee2e6 !important;
+                        border-left: 0 !important;
+                        box-shadow: none !important;
+                    }
+                    #b10_linetable tbody tr.o_line_section td {
+                        background-color: #e9ecef !important;
+                        font-weight: bold !important;
+                    }
+                    #b10_linetable tbody tr.is-subtotal td {
+                        border-top: 1px solid #dee2e6 !important;
+                    }
+                    #total table {
+                        border: 0 !important;
+                        border-collapse: collapse !important;
+                    }
+                    #total table td {
+                        border-top: 0 !important;
+                        border-right: 0 !important;
+                        border-bottom: 1px solid #dee2e6 !important;
+                        border-left: 0 !important;
+                        box-shadow: none !important;
+                    }
+                    #total table tr:first-child td {
+                        border-top: 2px solid #000 !important;
+                    }
+                    #total table tr.o_subtotal td:first-child,
+                    #total table tr.o_total td:first-child {
+                        font-weight: bold !important;
+                    }
+                    #total table tr.o_total td:last-child strong {
+                        font-weight: normal !important;
+                    }
+                </style>
+                <table class="table table-condensed"
                     id="b10_linetable">
                     <!-- Comprovació si hi ha algun descompte -->
                     <t t-set="is_discount"
@@ -245,12 +293,12 @@
                     <!-- Fi Comprovació si hi ha algun descompte -->
                     <thead>
                         <tr>
-                            <th>Description</th>
-                            <th class="text-right">Quantity</th>
-                            <th class="text-right">Unit Price</th>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Unit Price</th>
                             <th t-if="is_discount"
-                                class="text-right">Disc.(%)</th>
-                            <th class="text-right">Price</th>
+                                class="text-center">Disc.(%)</th>
+                            <th class="text-center">Price</th>
                         </tr>
                     </thead>
                     <tbody class="invoice_tbody">
@@ -462,7 +510,7 @@
                             <div class="clearfix">
                                 <div id="total"
                                     class="row">
-                                    <table class="table table-condensed table-striped"
+                                    <table class="table table-condensed"
                                         style="page-break-inside: avoid;">
 
                                         <!--Tax totals-->

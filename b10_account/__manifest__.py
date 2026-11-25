@@ -4,7 +4,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Personalization",
-    "version": "18.0.1.14.0",
+    "version": "18.0.1.14.1",
     "depends": [
         "account",
         "account_financial_report",

@@ -155,6 +155,11 @@ Changelog
 
 * [ADD] Afegit camp de configuració per a la visualització de la taula de venciments.
 
+18.0.1.14.1 (2026-11-25)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* [FIX] Corregits els dissenys d'impressió de factures.
+
 Bug Tracker
 ===========
 
@@ -179,6 +184,7 @@ Contributors
 * Joan Llimiñana i Sabaté <joan@batista10.cat> (https://www.batista10.cat)
 * Pol Comas i Romero <pol@batista10.cat> (https://www.batista10.cat)
 * Ivan Vilata i Balaguer <ivan@batista10.cat> (https://www.batista10.cat)
+* Marc Tormo i Bochaca <marc@batista10.cat> (https://www.batista10.cat)
 
 Other credits
 ~~~~~~~~~~~~~
