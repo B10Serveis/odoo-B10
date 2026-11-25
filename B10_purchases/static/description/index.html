@@ -56,26 +56,9 @@ addons_path = /ruta/al/teu/addons, /altres/camins, ...
 server_wide_modules = web,web_kanban_gauge,field_encryption
 </pre>
 </li>
-<li><p class="first"><strong>IMPORTANT (Odoo 17 only)</strong>: obre  <cite>field_encryption/models/fields.py</cite>  i localitza el mètode <cite>_inverse_encrypt</cite>.
-Canvia aquesta línia:</p>
-<pre class="code diff literal-block">
-- value = self.convert_to_read(record[self.name], record, use_name_get=False)
-+ value = self.convert_to_read(record[self.name], record)
-</pre>
+<li><p class="first">Reinicia Odoo. Cada base de dades desa el paràmetre <cite>field_encryption.key_path</cite>, que apunta al fitxer compartit <cite>conf/field_encryption.key</cite>. El mòdul crea aquest fitxer automàticament; no el moguis ni el regeneris.</p>
 </li>
-<li><p class="first">Genera una clau d’encriptació segura de 32 bytes en Base64. Per exemple:</p>
-<pre class="code python literal-block">
-from cryptography.fernet import Fernet
-Fernet.generate_key().decode()
-</pre>
-</li>
-<li><p class="first">Afig la clau generada al <cite>odoo.conf</cite>:</p>
-<pre class="code ini literal-block">
-[options]
-encryption_key = &lt;la-teva-clau-base64-de-32-bytes&gt;
-</pre>
-</li>
-<li><p class="first">Reinicia Odoo i comprova que el mòdul <strong>field_encryption</strong> aparegui a la llista d’Apps.</p>
+<li><p class="first">En una instal·lació existent, actualitza <strong>field_encryption</strong> en cada base de dades perquè la migració torni a xifrar les dades sense perdre'n el contingut.</p>
 </li>
 </ol>
 <p>Un cop fet això, podràs instal·lar <strong>B10 Purchases</strong> amb la funcionalitat d’encriptació activada.</p>

@@ -59,29 +59,9 @@ El mòdul **field_encryption** és requereix per emmagatzemar i desxifrar el cam
       [options]
       server_wide_modules = web,web_kanban_gauge,field_encryption
 
-4. **IMPORTANT (Odoo 17 only)**: obre  `field_encryption/models/fields.py`  i localitza el mètode `_inverse_encrypt`.  
-   Canvia aquesta línia:
+4. Reinicia Odoo. Cada base de dades desa el paràmetre `field_encryption.key_path`, que apunta al fitxer global `conf/field_encryption.key`. El mòdul crea aquest fitxer automàticament; no el moguis ni el regeneris.
 
-   .. code-block:: diff
-
-      - value = self.convert_to_read(record[self.name], record, use_name_get=False)
-      + value = self.convert_to_read(record[self.name], record)
-
-5. Genera una clau d’encriptació segura de 32 bytes en Base64. Per exemple:
-
-   .. code-block:: python
-
-      from cryptography.fernet import Fernet
-      Fernet.generate_key().decode()
-
-6. Afig la clau generada al `odoo.conf`:
-
-   .. code-block:: ini
-
-      [options]
-      encryption_key = <la-teva-clau-base64-de-32-bytes>
-
-7. Reinicia Odoo i comprova que el mòdul **field_encryption** aparegui a la llista d’Apps.
+5. En una instal·lació existent, actualitza **field_encryption** en cada base de dades perquè la migració torni a xifrar les dades amb la clau nova sense perdre'n el contingut.
 
 Un cop fet això, podràs instal·lar **B10 Purchases** amb la funcionalitat d’encriptació activada.
 

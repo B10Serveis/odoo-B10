@@ -1,74 +1,97 @@
 .. image:: https://www.gnu.org/graphics/agplv3-with-text-162x68.png
    :target: https://www.gnu.org/licenses/agpl-3.0.html
-   :alt: License: LGPL-v3
+   :alt: Llicència AGPL-3.0
 
 ================
 Field Encryption
 ================
 
-With this module user can store encrypted field value in database.
-So no one can see the value from database.
-Multiple fields can be stored inside single Encrypted Field.
-Just before storing to database, fields gets serialized, and encrypted.
-On the other hand, after reading, encrypted field gets decrypted and
-deserialized and values are available in each field in original form.
+Fork de Batista10 del mòdul original ``field_encryption``, creat per Shah Alam
+Sumon. Aquesta versió s’adapta i evoluciona de manera independent per cobrir els
+requisits de les nostres instal·lacions d’Odoo.
 
-Requirements
+El mòdul permet desar valors de camps xifrats a la base de dades. Els valors es
+serialitzen abans de desar-los i es desxifren quan Odoo els llegeix. Diversos
+camps es poden guardar dins d’un mateix camp ``Encrypted``.
+
+Dependències
 ============
 
-    pip install cryptography
+Cal instal·lar la biblioteca Python ``cryptography``:
 
-Configuration
-=============
-Because this module extends odoo.fields module, it needs to be loaded as server wide module.
-This can be achieved by passing
+.. code-block:: console
 
-    --load="web,field_encryption"
+   pip install cryptography
 
-or by adding following line to the server config file:
+Configuració
+============
 
-    server_wide_modules = web,field_encryption
+Aquest mòdul modifica ``odoo.fields`` i s’ha de carregar com a mòdul global del
+servidor. Es pot fer amb l’opció:
 
-In order to set key for encryption/decryption, add following line to server config file:
+.. code-block:: console
 
-    encryption_key=<YOUR_KEY>
+   --load="web,field_encryption"
 
-You can generate key with python cryptography module like this:
+O bé afegint aquesta línia a la configuració d’Odoo:
 
-    from cryptography.fernet import Fernet
+.. code-block:: ini
 
-    Fernet.generate_key().decode()
+   server_wide_modules = web,field_encryption
 
-Usage
-=====
+Gestió de la clau
+-----------------
 
-Data encryption is using for protect sensitive data. If any outsiders get the access of
-database or can get backup database then sensitive data can be protected by encryption.
-Without key there is no way to access that field value.
+Cada base de dades desa la ruta absoluta del fitxer de clau al paràmetre de
+sistema ``field_encryption.key_path``. Per defecte, totes les bases de dades de
+la mateixa instància d’Odoo apunten al fitxer compartit ``field_encryption.key``
+del directori on hi ha el fitxer de configuració d’Odoo.
 
-Credits
+El mòdul crea el fitxer automàticament amb permisos només per al compte propietari.
+Tots els processos d’Odoo han de poder llegir-lo. No l’esborris ni el regeneris:
+les dades xifrades no es podran desxifrar sense la clau original.
+
+En una instal·lació existent, la clau configurada amb ``encryption_key`` o la
+clau predeterminada de versions anteriors es conserva temporalment per poder
+desxifrar les dades durant la migració. Cal actualitzar ``field_encryption`` en
+cada base de dades perquè la migració les torni a xifrar amb la clau nova. Un cop
+inicialitzat el fitxer, aquest és la font de veritat; ``encryption_key`` només
+s’utilitza per facilitar la transició.
+
+Si es restaura una base de dades en una instància amb un directori de configuració
+diferent, cal actualitzar ``field_encryption.key_path`` perquè apunti a la ruta
+absoluta nova, mantenint el mateix fitxer de clau.
+
+Ús i abast de la protecció
+==========================
+
+El xifrat protegeix les dades emmagatzemades davant d’algú que només tingui accés
+a la base de dades o a una còpia seva. Odoo necessita llegir el fitxer de clau per
+desxifrar els valors quan els usuaris autoritzats hi accedeixen des de l’aplicació.
+
+Changelog
+=========
+
+17.0.0.2 (2026-11-25)
+~~~~~~~~~~~~~~~~~~~~~
+
+* Desa a cada base de dades la ruta del fitxer de clau global de la instància.
+* Genera el fitxer de clau automàticament amb permisos restringits.
+* Afegeix una migració per tornar a xifrar les dades existents i conservar les
+  claus anteriors per a la transició.
+* Rebutja valors directes en clar als camps ``Encrypted`` i corregeix l’opció de
+  prefetch del camp.
+
+Crèdits
 =======
 
-Shah Alam Sumon
+Mòdul original: Shah Alam Sumon <sacsesumon@gmail.com>.
 
-Contributors
-------------
-* Shah Alam Sumon <sacsesumon@gmail.com>
+Fork i manteniment
+==================
 
-Maintainer
-----------
+Batista10 manté aquest fork i n’evoluciona el codi de manera independent.
 
-   :alt: Shah Alam Sumon
-   :target: https://github.com/ShahAlamSumon/field_encryption
+Autor: Marc Tormo i Bochaca <marc@batista10.cat>
 
-This module is maintained by Shah Alam Sumon.
-
-Modifier
---------
-
-   :alt: Shah Alam Sumon
-   :target: https://github.com/ShahAlamSumon/field_encryption
-
-This module is modified by Shah Alam Sumon.
-
-To contribute to this module, please visit https://github.com/ShahAlamSumon/field_encryption
+Projecte original: https://github.com/ShahAlamSumon/field_encryption

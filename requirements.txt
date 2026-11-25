@@ -1,0 +1,2 @@
+# Python dependencies required by the Odoo addons in this repository.
+cryptography
