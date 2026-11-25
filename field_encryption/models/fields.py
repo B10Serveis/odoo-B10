@@ -78,17 +78,19 @@ class Encrypted(fields.Field):
         return self.convert_to_cache(value, record, validate=validate)
 
     def convert_to_cache(self, value, record, validate=True):
-        fernet = get_fernet(record.env)
         if value is None or value is False:
             value = {}
         if isinstance(value, dict):
-            return fernet.encrypt(json.dumps(value).encode())
+            return get_fernet(record.env).encrypt(json.dumps(value).encode())
         if isinstance(value, (bytes, bytearray, memoryview)):
             token = bytes(value)
-            try:
-                fernet.decrypt(token)
-            except InvalidToken as error:
-                raise ValidationError(_("Encrypted field accepts only encrypted data.")) from error
+            if validate:
+                try:
+                    get_fernet(record.env).decrypt(token)
+                except InvalidToken as error:
+                    raise ValidationError(
+                        _("Encrypted field accepts only encrypted data.")
+                    ) from error
             return token
         raise ValidationError(_("Encrypted field value must be a dictionary."))
 

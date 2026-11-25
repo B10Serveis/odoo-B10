@@ -122,7 +122,11 @@ def get_fernet(env):
     parameters = env['ir.config_parameter'].sudo()
     key_path = parameters.get_param(KEY_PATH_PARAMETER)
     if not key_path:
-        key_path = ensure_database_key(env)
+        raise RuntimeError(
+            'Missing system parameter %s for database %s. Install or upgrade '
+            'field_encryption to initialize its key path.'
+            % (KEY_PATH_PARAMETER, env.cr.dbname)
+        )
     key_path = os.path.abspath(key_path)
     if not os.path.isfile(key_path):
         raise RuntimeError('field_encryption key file is missing: %s' % key_path)
