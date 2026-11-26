@@ -27,13 +27,16 @@
                 <dd>or by adding following line to the server config file:
                 </dd>
                 <dt>server_wide_modules = web,field_encryption</dt>
-                <dd>In order to set key for encryption/decryption, add following line to server config file:
-                </dd>
-                <dt>encryption_key='YOUR_KEY'</dt>
-                <dd>You can generate key with python cryptography module like this:
-                </dd>
-                <dt>from cryptography.fernet import Fernet</dt>
-                <dt>Fernet.generate_key().decode()</dt>
+                <dd>Each database stores the key-file path in
+                    <code>field_encryption.key_path</code>. By default, all
+                    databases in the Odoo instance use the shared
+                    <code>field_encryption.key</code> beside the configuration
+                    file. The key file is created automatically with restricted
+                    permissions. Keep it with your backups.</dd>
+                <dd>When updating an existing version 18 database, the configured
+                    <code>encryption_key</code> or legacy default key is retained
+                    for reading existing values. The update does not rewrite
+                    encrypted data.</dd>
             </dl>
         </div>
     </div>

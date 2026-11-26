@@ -1,21 +1,8 @@
 import json
-import logging
-from odoo.tools import config
-from odoo import models, fields, api, _
-
-_logger = logging.getLogger(__name__)
-try:
-    from cryptography.fernet import Fernet
-except (ImportError, IOError) as err:
-    _logger.debug(err)
-
-if config.get('encryption_key', False):
-    encryption_key = config.get('encryption_key', False).encode()
-else:
-    _logger.warning("encryption_key is not set in configuration parameters."
-                    "Using default key! This is not secure!")
-    encryption_key = "8Rr9SfNkzmJj-EqW4YPaQlCqBxbD_1Z7mjL8QOHAPuA==".encode()
-fernet = Fernet(encryption_key)
+from odoo import models, fields, _
+from odoo.exceptions import ValidationError
+from cryptography.fernet import InvalidToken
+from ..keyring import get_fernet
 
 
 def monkey_patch(cls):
@@ -85,20 +72,31 @@ class Encrypted(fields.Field):
     type = 'encrypted'
     column_type = ('bytea', 'bytea')
 
-    prefetch = False,
+    prefetch = False
 
     def convert_to_column(self, value, record, values=None, validate=True):
         return self.convert_to_cache(value, record, validate=validate)
 
     def convert_to_cache(self, value, record, validate=True):
-        # cache format: dict
-        value = value or {}
-        return fernet.encrypt(json.dumps(value).encode()) \
-            if isinstance(value, dict) else (value or None)
+        if value is None or value is False:
+            value = {}
+        if isinstance(value, dict):
+            return get_fernet(record.env).encrypt(json.dumps(value).encode())
+        if isinstance(value, (bytes, bytearray, memoryview)):
+            token = bytes(value)
+            if validate:
+                try:
+                    get_fernet(record.env).decrypt(token)
+                except InvalidToken as error:
+                    raise ValidationError(
+                        _("Encrypted field accepts only encrypted data.")
+                    ) from error
+            return token
+        raise ValidationError(_("Encrypted field value must be a dictionary."))
 
     def convert_to_record(self, value, record):
         if value:
-            return json.loads(fernet.decrypt(bytes(value)).decode())
+            return json.loads(get_fernet(record.env).decrypt(bytes(value)).decode())
 
 
 fields.Encrypted = Encrypted
