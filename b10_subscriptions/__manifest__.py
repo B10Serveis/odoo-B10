@@ -7,7 +7,7 @@
     "author": "Batista10",
     "website": "https://www.batista10.cat",
     "category": "Sales/Subscriptions",
-    "version": "16.0.2.0.0",
+    "version": "16.0.2.0.1",
     "license": "AGPL-3",
     "depends": [
         "subscription_oca",

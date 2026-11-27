@@ -36,3 +36,9 @@ History
 
 * Elimina la implementació de seccions, notes i ordenació de les línies de
   subscripció, ja incloses a ``subscription_oca`` v2.0.
+
+16.0.2.0.1 (2026-11-27)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* Inclou un script de migració que asegura que s’empra ``subscription_oca``
+  v2.0 com a mínim.
